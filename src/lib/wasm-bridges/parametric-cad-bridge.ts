@@ -494,8 +494,11 @@ export function evaluateParametricModel(
   const holes: { cx: number; cy: number; r: number; depth: number }[] = [];
   for (const f of activeFeatures) {
     if (f.type === 'hole') {
-      const hDia = Math.max(0.5, Number(f.params.holeDiameterMm) || 30);
-      const hR = Math.min(outerR - 1, hDia / 2);
+      const rawDia = f.params.holeDiameterMm !== undefined ? Number(f.params.holeDiameterMm) : 30;
+      if (!Number.isFinite(rawDia) || rawDia <= 0) continue;
+      const hDia = Math.max(0.1, rawDia);
+      const hR = Math.min(outerR - 0.5, hDia / 2);
+      if (hR <= 0) continue;
       const depth = f.params.holeThruAll ? heightMm : Math.min(heightMm, Math.max(1, Number(f.params.holeDepthMm) || heightMm));
       const count = Math.max(1, Math.min(36, Math.round(Number(f.params.holePatternCount) || 1)));
       const bcd = Math.max(0, Number(f.params.holeBoltCircleDiaMm) || 0);
@@ -806,11 +809,11 @@ export function evaluateParametricModel(
   }
 
   // Analytical B-Rep exact volume & surface area so cylindrical/fillet/hole numbers are exact to 0.01 mm^3
-  let exactBaseArea =
+  const exactBaseArea =
     profileType === 'rect-block'
       ? widthMm * lengthMm
       : Math.PI * outerR * outerR;
-  let exactPerimeter =
+  const exactPerimeter =
     profileType === 'rect-block'
       ? 2 * (widthMm + lengthMm)
       : 2 * Math.PI * outerR;

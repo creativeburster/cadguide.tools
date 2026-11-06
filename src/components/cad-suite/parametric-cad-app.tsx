@@ -1,14 +1,12 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useSyncExternalStore } from 'react';
 import {
-  Box,
   CheckCircle2,
   Compass,
   Download,
   Layers,
   Plus,
-  Ruler,
   Sliders,
   Sparkles,
 } from 'lucide-react';
@@ -32,6 +30,8 @@ import {
   SketchPlane,
 } from '@/lib/wasm-bridges/parametric-cad-bridge';
 
+const emptySubscribe = () => () => {};
+
 function triggerDownload(content: string | ArrayBuffer, filename: string, mime = 'text/plain;charset=utf-8') {
   const blob = new Blob([content], { type: mime });
   const url = URL.createObjectURL(blob);
@@ -45,6 +45,11 @@ function triggerDownload(content: string | ArrayBuffer, filename: string, mime =
 }
 
 export default function ParametricCadApp() {
+  const hydrated = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
   const [features, setFeatures] = useState<FeatureNode[]>(() => getDefaultFeatureTree());
   const [selectedFeatureId, setSelectedFeatureId] = useState<string>('feat-base-extrude');
   const [sketchPlane, setSketchPlane] = useState<SketchPlane>('XY');
@@ -60,6 +65,10 @@ export default function ParametricCadApp() {
   const [newConstraintType, setNewConstraintType] = useState<SketchConstraintType>('distance');
   const [newConstraintValue, setNewConstraintValue] = useState<number>(40);
 
+  const [outerDiaStr, setOuterDiaStr] = useState<string>('80');
+  const [heightStr, setHeightStr] = useState<string>('25');
+  const [holeDiaStr, setHoleDiaStr] = useState<string>('30');
+
   // Direct quick-access parameters bound to primary features for instant parametric editing
   const baseFeature = features.find((f) => f.id === 'feat-base-extrude') || features[0];
   const centerHoleFeature = features.find((f) => f.id === 'feat-center-hole') || features[1];
@@ -68,6 +77,32 @@ export default function ParametricCadApp() {
   const chamferFeature = features.find((f) => f.id === 'feat-chamfer') || features[4];
   const shellFeature = features.find((f) => f.id === 'feat-shell') || features[5];
   const booleanFeature = features.find((f) => f.id === 'feat-boolean') || features[6];
+
+  const parsedOuterDia = parseFloat(outerDiaStr);
+  const parsedHeight = parseFloat(heightStr);
+  const parsedHoleDia = parseFloat(holeDiaStr);
+  const isPrimaryInputValid =
+    outerDiaStr.trim() !== '' &&
+    heightStr.trim() !== '' &&
+    holeDiaStr.trim() !== '' &&
+    Number.isFinite(parsedOuterDia) &&
+    parsedOuterDia > 0 &&
+    Number.isFinite(parsedHeight) &&
+    parsedHeight > 0 &&
+    Number.isFinite(parsedHoleDia) &&
+    parsedHoleDia >= 0 &&
+    parsedHoleDia < parsedOuterDia;
+
+  const handleResetDefaults = () => {
+    setFeatures(getDefaultFeatureTree());
+    setSketchEntities(getDefaultSketchEntities());
+    setSketchConstraints(getDefaultSketchConstraints());
+    setSelectedFeatureId('feat-base-extrude');
+    setMaterialId('al-6061');
+    setOuterDiaStr('80');
+    setHeightStr('25');
+    setHoleDiaStr('30');
+  };
 
   const updateFeatureParam = (featId: string, key: keyof FeatureNode['params'], val: unknown) => {
     setFeatures((prev) =>
@@ -142,7 +177,7 @@ export default function ParametricCadApp() {
   };
 
   return (
-    <div className="space-y-8">
+    <div data-hydrated={hydrated ? 'true' : 'false'} className="space-y-8">
       {/* Top Studio Bar */}
       <div className="bg-white rounded-3xl border border-slate-200/80 p-5 shadow-sm flex flex-wrap items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-3">
@@ -190,6 +225,15 @@ export default function ParametricCadApp() {
 
         {/* Industrial CAD Export Bar */}
         <div className="flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            data-testid="btn-reset-parametric"
+            onClick={handleResetDefaults}
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition cursor-pointer"
+          >
+            Reset Defaults
+          </button>
+
           <button
             type="button"
             data-testid="export-step-btn"
@@ -299,11 +343,13 @@ export default function ParametricCadApp() {
                   min={10}
                   max={500}
                   step={1}
-                  value={baseFeature.params.outerDiameterMm || ''}
+                  value={outerDiaStr}
                   onChange={(e) => {
-                    const raw = e.target.value === '' ? 0 : Number(e.target.value);
-                    updateFeatureParam(baseFeature.id, 'outerDiameterMm', raw);
-                    if (raw > 0) {
+                    const str = e.target.value;
+                    setOuterDiaStr(str);
+                    const raw = parseFloat(str);
+                    if (Number.isFinite(raw) && raw > 0) {
+                      updateFeatureParam(baseFeature.id, 'outerDiameterMm', raw);
                       setSketchConstraints((prev) =>
                         prev.map((c) => (c.id === 'cst-1' ? { ...c, value: raw / 2 } : c))
                       );
@@ -325,11 +371,15 @@ export default function ParametricCadApp() {
                   type="number"
                   min={1}
                   max={300}
-                  step={1}
-                  value={baseFeature.params.heightMm || ''}
+                  step="any"
+                  value={heightStr}
                   onChange={(e) => {
-                    const raw = e.target.value === '' ? 0 : Number(e.target.value);
-                    updateFeatureParam(baseFeature.id, 'heightMm', raw);
+                    const str = e.target.value;
+                    setHeightStr(str);
+                    const raw = parseFloat(str);
+                    if (Number.isFinite(raw) && raw > 0) {
+                      updateFeatureParam(baseFeature.id, 'heightMm', raw);
+                    }
                   }}
                   className="w-full px-3 py-2 rounded-xl border border-slate-200 text-sm font-bold text-slate-900"
                 />
@@ -345,17 +395,21 @@ export default function ParametricCadApp() {
                 <input
                   id="param-hole-dia"
                   type="number"
-                  min={1}
+                  min={0}
                   max={400}
                   step={1}
-                  value={centerHoleFeature.params.holeDiameterMm || ''}
+                  value={holeDiaStr}
                   onChange={(e) => {
-                    const raw = e.target.value === '' ? 0 : Number(e.target.value);
-                    updateFeatureParam(centerHoleFeature.id, 'holeDiameterMm', raw);
-                    if (raw > 0) {
-                      setSketchConstraints((prev) =>
-                        prev.map((c) => (c.id === 'cst-2' ? { ...c, value: raw / 2 } : c))
-                      );
+                    const str = e.target.value;
+                    setHoleDiaStr(str);
+                    const raw = parseFloat(str);
+                    if (Number.isFinite(raw) && raw >= 0) {
+                      updateFeatureParam(centerHoleFeature.id, 'holeDiameterMm', raw);
+                      if (raw > 0) {
+                        setSketchConstraints((prev) =>
+                          prev.map((c) => (c.id === 'cst-2' ? { ...c, value: raw / 2 } : c))
+                        );
+                      }
                     }
                   }}
                   className="w-full px-3 py-2 rounded-xl border border-slate-200 text-sm font-bold text-slate-900"
@@ -722,10 +776,10 @@ export default function ParametricCadApp() {
                 data-testid="parametric-volume-mm3"
                 className="text-lg font-black text-slate-900 mt-1"
               >
-                {evaluation.massProps.volumeMm3.toFixed(2)} mm³
+                {isPrimaryInputValid ? `${evaluation.massProps.volumeMm3.toFixed(2)} mm³` : '—'}
               </div>
               <div className="text-xs font-semibold text-blue-600">
-                {evaluation.massProps.volumeCm3.toFixed(2)} cm³
+                {isPrimaryInputValid ? `${evaluation.massProps.volumeCm3.toFixed(2)} cm³` : '—'}
               </div>
             </div>
 
@@ -735,10 +789,10 @@ export default function ParametricCadApp() {
                 data-testid="parametric-area-mm2"
                 className="text-lg font-black text-slate-900 mt-1"
               >
-                {evaluation.massProps.surfaceAreaMm2.toFixed(2)} mm²
+                {isPrimaryInputValid ? `${evaluation.massProps.surfaceAreaMm2.toFixed(2)} mm²` : '—'}
               </div>
               <div className="text-xs font-semibold text-indigo-600">
-                {evaluation.massProps.surfaceAreaCm2.toFixed(2)} cm²
+                {isPrimaryInputValid ? `${evaluation.massProps.surfaceAreaCm2.toFixed(2)} cm²` : '—'}
               </div>
             </div>
 
@@ -748,7 +802,7 @@ export default function ParametricCadApp() {
                 data-testid="parametric-mass-grams"
                 className="text-lg font-black text-slate-900 mt-1"
               >
-                {evaluation.massProps.massGrams.toFixed(2)} g
+                {isPrimaryInputValid ? `${evaluation.massProps.massGrams.toFixed(2)} g` : '—'}
               </div>
               <div className="text-xs font-semibold text-emerald-600 truncate">
                 {activeMaterial.name}
@@ -758,7 +812,9 @@ export default function ParametricCadApp() {
             <div className="bg-white rounded-2xl border border-slate-200/80 p-4 shadow-sm">
               <div className="text-[11px] font-bold text-slate-500 uppercase">Center of Gravity</div>
               <div className="text-sm font-black text-slate-900 mt-1 font-mono">
-                ({evaluation.massProps.centerOfGravityMm.join(', ')}) mm
+                {isPrimaryInputValid
+                  ? `(${evaluation.massProps.centerOfGravityMm.join(', ')}) mm`
+                  : '—'}
               </div>
               <div className="text-xs font-semibold text-amber-600 mt-0.5">
                 {evaluation.massProps.triangleCount} Tris · Watertight

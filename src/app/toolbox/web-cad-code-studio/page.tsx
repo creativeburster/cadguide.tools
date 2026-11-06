@@ -27,7 +27,7 @@ export default function WebCadCodeStudioPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
 
-      <main className="min-h-screen bg-slate-50 print:bg-white print:min-h-0">
+      <div className="min-h-screen bg-slate-50 print:bg-white print:min-h-0">
         <section className="bg-slate-900 text-white py-14 relative overflow-hidden print:hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#a855f7_1px,transparent_1px)] [background-size:20px_20px]" />
@@ -49,7 +49,7 @@ export default function WebCadCodeStudioPage() {
           <CodeCadApp />
           <ToolboxEngineeringGuide slug="web-cad-code-studio" />
         </section>
-      </main>
+      </div>
     </>
   );
 }

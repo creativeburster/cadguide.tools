@@ -282,6 +282,220 @@ export function updateScriptParamInCode(source: string, paramName: string, newVa
   return source;
 }
 
+const BUILTIN_FUNCS = new Set([
+  'sin',
+  'cos',
+  'tan',
+  'sqrt',
+  'abs',
+  'min',
+  'max',
+  'round',
+  'floor',
+  'ceil',
+  'gear',
+  'flange',
+  'heatsink',
+  'enclosure',
+  'box',
+  'cylinder',
+  'export',
+]);
+
+/**
+ * Safe recursive-descent arithmetic & math function evaluator for Code-CAD DSL expressions.
+ * Supports +, -, *, /, %, parentheses, unary +/-, PI, and sin/cos/tan (degrees), sqrt, abs, min, max.
+ */
+export function evaluateDslExpression(
+  expr: string,
+  env: Map<string, number>,
+  lineNum: number,
+  rawLine: string,
+  diagnostics: CodeCadDiagnostic[]
+): number {
+  const s = expr.trim();
+  if (!s) return NaN;
+
+  // Tokenize
+  type Tok =
+    | { kind: 'num'; val: number; pos: number }
+    | { kind: 'ident'; name: string; pos: number }
+    | { kind: 'op'; ch: string; pos: number };
+
+  const tokens: Tok[] = [];
+  let i = 0;
+  while (i < s.length) {
+    const ch = s[i];
+    if (/\s/.test(ch)) {
+      i++;
+      continue;
+    }
+    if (/[0-9.]/.test(ch)) {
+      const start = i;
+      while (i < s.length && /[0-9.]/.test(s[i])) i++;
+      const numVal = Number(s.slice(start, i));
+      if (!Number.isFinite(numVal)) {
+        diagnostics.push({
+          line: lineNum,
+          column: Math.max(1, rawLine.indexOf(s.slice(start, i)) + 1),
+          severity: 'error',
+          message: `Malformed numeric literal '${s.slice(start, i)}'.`,
+        });
+        return NaN;
+      }
+      tokens.push({ kind: 'num', val: numVal, pos: start });
+      continue;
+    }
+    if (/[a-zA-Z_]/.test(ch)) {
+      const start = i;
+      while (i < s.length && /[a-zA-Z0-9_]/.test(s[i])) i++;
+      tokens.push({ kind: 'ident', name: s.slice(start, i), pos: start });
+      continue;
+    }
+    if ('+-*/%(),'.includes(ch)) {
+      tokens.push({ kind: 'op', ch, pos: i });
+      i++;
+      continue;
+    }
+    diagnostics.push({
+      line: lineNum,
+      column: Math.max(1, rawLine.indexOf(ch) + 1),
+      severity: 'error',
+      message: `Unexpected character '${ch}' in DSL expression.`,
+    });
+    return NaN;
+  }
+
+  let cursor = 0;
+  const peek = (): Tok | undefined => tokens[cursor];
+  const consume = (): Tok | undefined => tokens[cursor++];
+
+  const parseExpr = (): number => {
+    let val = parseTerm();
+    while (true) {
+      const t = peek();
+      if (t && t.kind === 'op' && (t.ch === '+' || t.ch === '-')) {
+        consume();
+        const rhs = parseTerm();
+        val = t.ch === '+' ? val + rhs : val - rhs;
+      } else {
+        break;
+      }
+    }
+    return val;
+  };
+
+  const parseTerm = (): number => {
+    let val = parseFactor();
+    while (true) {
+      const t = peek();
+      if (t && t.kind === 'op' && (t.ch === '*' || t.ch === '/' || t.ch === '%')) {
+        consume();
+        const rhs = parseFactor();
+        if (t.ch === '*') val = val * rhs;
+        else if (t.ch === '/') val = rhs !== 0 ? val / rhs : NaN;
+        else val = rhs !== 0 ? val % rhs : NaN;
+      } else {
+        break;
+      }
+    }
+    return val;
+  };
+
+  const parseFactor = (): number => {
+    const t = peek();
+    if (!t) return NaN;
+    if (t.kind === 'op' && (t.ch === '+' || t.ch === '-')) {
+      consume();
+      const v = parseFactor();
+      return t.ch === '-' ? -v : v;
+    }
+    if (t.kind === 'op' && t.ch === '(') {
+      consume();
+      const v = parseExpr();
+      const close = peek();
+      if (close && close.kind === 'op' && close.ch === ')') {
+        consume();
+      }
+      return v;
+    }
+    if (t.kind === 'num') {
+      consume();
+      return t.val;
+    }
+    if (t.kind === 'ident') {
+      consume();
+      const next = peek();
+      if (next && next.kind === 'op' && next.ch === '(') {
+        consume(); // '('
+        const args: number[] = [];
+        const firstCheck = peek();
+        if (!(firstCheck && firstCheck.kind === 'op' && firstCheck.ch === ')')) {
+          while (true) {
+            args.push(parseExpr());
+            const sep = peek();
+            if (sep && sep.kind === 'op' && sep.ch === ',') {
+              consume();
+            } else {
+              break;
+            }
+          }
+        }
+        const close = peek();
+        if (close && close.kind === 'op' && close.ch === ')') {
+          consume();
+        }
+        const fn = t.name.toLowerCase();
+        const a0 = args[0] ?? 0;
+        const a1 = args[1] ?? 0;
+        if (fn === 'sin') return Math.sin((a0 * Math.PI) / 180);
+        if (fn === 'cos') return Math.cos((a0 * Math.PI) / 180);
+        if (fn === 'tan') return Math.tan((a0 * Math.PI) / 180);
+        if (fn === 'sqrt') return a0 >= 0 ? Math.sqrt(a0) : NaN;
+        if (fn === 'abs') return Math.abs(a0);
+        if (fn === 'min') return Math.min(a0, a1);
+        if (fn === 'max') return Math.max(a0, a1);
+        if (fn === 'round') return Math.round(a0);
+        if (fn === 'floor') return Math.floor(a0);
+        if (fn === 'ceil') return Math.ceil(a0);
+        diagnostics.push({
+          line: lineNum,
+          column: Math.max(1, rawLine.indexOf(t.name) + 1),
+          severity: 'error',
+          message: `Unknown function '${t.name}()' in Code-CAD expression.`,
+        });
+        return NaN;
+      }
+
+      if (t.name === 'PI' || t.name === 'pi') return Math.PI;
+      if (env.has(t.name)) {
+        return env.get(t.name)!;
+      }
+      diagnostics.push({
+        line: lineNum,
+        column: Math.max(1, rawLine.indexOf(t.name) + 1),
+        severity: 'error',
+        message: `Undefined identifier '${t.name}' in DSL expression.`,
+      });
+      return NaN;
+    }
+    return NaN;
+  };
+
+  const result = parseExpr();
+  if (cursor < tokens.length) {
+    const leftover = tokens[cursor];
+    diagnostics.push({
+      line: lineNum,
+      column: Math.max(1, leftover.pos + 1),
+      severity: 'error',
+      message: `Unexpected token in expression near column ${leftover.pos + 1}.`,
+    });
+    return NaN;
+  }
+  return result;
+}
+
 /**
  * Compiles and evaluates the Code-CAD DSL script into a 3D B-Rep mesh, feature edges,
  * engineering readouts, and STEP/DXF exports.
@@ -299,6 +513,8 @@ export function compileCodeCadScript(source: string): CodeCadCompileResult {
 
   const lines = source.split(/\r?\n/);
   let parenDepth = 0;
+  let insideSolidCall = false;
+
   for (let idx = 0; idx < lines.length; idx++) {
     const raw = lines[idx];
     const clean = raw.replace(/\/\/.*$/, '').trim();
@@ -322,10 +538,46 @@ export function compileCodeCadScript(source: string): CodeCadCompileResult {
     if (letMatch) {
       const varName = letMatch[1];
       const expr = letMatch[2].trim();
-      const numVal = Number(expr);
-      if (Number.isFinite(numVal)) {
-        env.set(varName, numVal);
+      const evaluated = evaluateDslExpression(expr, env, idx + 1, raw, diagnostics);
+      if (Number.isFinite(evaluated)) {
+        env.set(varName, evaluated);
+        const paramObj = params.find((p) => p.name === varName);
+        if (paramObj) {
+          paramObj.value = evaluated;
+        }
       }
+      continue;
+    }
+
+    if (/^solid\s+[a-zA-Z_][a-zA-Z0-9_]*\s*=/.test(clean)) {
+      insideSolidCall = parenDepth > 0;
+      continue;
+    }
+    if (/^export\s*\(/.test(clean) || /^for\s+/.test(clean) || clean === ');' || clean === '}' || clean === '{') {
+      if (clean === ');') insideSolidCall = false;
+      continue;
+    }
+
+    // Named argument inside `solid main = gear(...)` block: e.g. `teeth = 32,`
+    const namedArgMatch = clean.match(/^([a-zA-Z_][a-zA-Z0-9_]*)\s*=\s*([^,;]+)[,;]?$/);
+    if (namedArgMatch && (insideSolidCall || parenDepth > 0)) {
+      const argKey = namedArgMatch[1];
+      const argExpr = namedArgMatch[2].trim();
+      const val = evaluateDslExpression(argExpr, env, idx + 1, raw, diagnostics);
+      if (Number.isFinite(val)) {
+        env.set(argKey, val);
+      }
+      continue;
+    }
+
+    // Unrecognized statement syntax
+    if (!insideSolidCall && !BUILTIN_FUNCS.has(clean.split(/\W+/)[0] || '')) {
+      diagnostics.push({
+        line: idx + 1,
+        column: Math.max(1, raw.search(/\S/) + 1),
+        severity: 'error',
+        message: `Unrecognized DSL statement syntax: '${clean.slice(0, 42)}'.`,
+      });
     }
   }
 
@@ -528,11 +780,21 @@ export function compileCodeCadScript(source: string): CodeCadCompileResult {
     ];
   } else {
     // Default: Involute Spur Gear (`gear(...)`)
-    const mod = Math.max(0.5, getNum('module_mm', 2.5));
-    const teeth = Math.max(6, Math.min(120, Math.round(getNum('teeth', 24))));
+    const mod = Math.max(0.5, getNum('module', getNum('module_mm', 2.5)));
+    const rawTeeth = Math.round(getNum('teeth', 24));
+    const teeth = Math.max(6, Math.min(240, rawTeeth));
     const alphaDeg = Math.min(30, Math.max(12, getNum('pressure_angle', 20)));
     thicknessMm = Math.max(1, getNum('thickness', 15));
-    const boreDia = Math.max(2, getNum('bore_dia', 16));
+    const boreDia = Math.max(2, getNum('bore', getNum('bore_dia', 16)));
+
+    if (rawTeeth > 120) {
+      diagnostics.push({
+        line: 1,
+        column: 1,
+        severity: 'warning',
+        message: `High tooth count (teeth = ${rawTeeth}): fine-pitch involute profile generated (${teeth} teeth).`,
+      });
+    }
 
     const pitchDia = wasm.eval_gear_pitch_diameter(mod, teeth);
     const baseDia = pitchDia * Math.cos((alphaDeg * Math.PI) / 180);

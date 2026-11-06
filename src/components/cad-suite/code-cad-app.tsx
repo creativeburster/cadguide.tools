@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useSyncExternalStore } from 'react';
 import {
   AlertTriangle,
   CheckCircle2,
@@ -22,6 +22,8 @@ import {
   updateScriptParamInCode,
 } from '@/lib/wasm-bridges/code-cad-bridge';
 
+const emptySubscribe = () => () => {};
+
 function triggerDownload(content: string | ArrayBuffer, filename: string, mime = 'text/plain;charset=utf-8') {
   const blob = new Blob([content], { type: mime });
   const url = URL.createObjectURL(blob);
@@ -35,6 +37,11 @@ function triggerDownload(content: string | ArrayBuffer, filename: string, mime =
 }
 
 export default function CodeCadApp() {
+  const hydrated = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
   const [activeTemplateId, setActiveTemplateId] = useState<CodeCadTemplate['id']>('spur-gear');
   const [code, setCode] = useState<string>(() => CODE_CAD_TEMPLATES[0].code);
 
@@ -52,7 +59,7 @@ export default function CodeCadApp() {
   const lineCount = useMemo(() => code.split(/\r?\n/).length, [code]);
 
   return (
-    <div className="space-y-8">
+    <div data-hydrated={hydrated ? 'true' : 'false'} className="space-y-8">
       {/* Top Studio Header & Template Switcher */}
       <div className="bg-white rounded-3xl border border-slate-200/80 p-5 shadow-sm space-y-4">
         <div className="flex flex-wrap items-center justify-between gap-4">
@@ -71,6 +78,19 @@ export default function CodeCadApp() {
 
           {/* Industrial Data Exporters */}
           <div className="flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              data-testid="btn-reset-code"
+              onClick={() => {
+                const tpl =
+                  CODE_CAD_TEMPLATES.find((t) => t.id === activeTemplateId) || CODE_CAD_TEMPLATES[0];
+                setCode(tpl.code);
+              }}
+              className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition cursor-pointer"
+            >
+              Reset Template
+            </button>
+
             <button
               type="button"
               data-testid="code-export-step-btn"
@@ -206,15 +226,16 @@ export default function CodeCadApp() {
                         id={`code-param-${p.name}`}
                         type="number"
                         min={p.min}
-                        max={p.max}
+                        max={p.max * 4}
                         step={p.step}
                         value={p.value}
                         onChange={(e) => {
-                          const v = Number(e.target.value);
-                          if (Number.isFinite(v)) {
+                          if (e.target.value.trim() === '') return;
+                          const v = parseFloat(e.target.value);
+                          if (Number.isFinite(v) && v > 0) {
                             handleParamChange(
                               p.name,
-                              Math.min(p.max * 2, Math.max(p.min * 0.2, v))
+                              Math.min(p.max * 4, Math.max(p.min * 0.2, v))
                             );
                           }
                         }}
@@ -274,7 +295,10 @@ export default function CodeCadApp() {
             </div>
 
             {/* Diagnostics Console */}
-            <div className="px-4 py-2.5 bg-slate-900 border-t border-slate-800 text-xs">
+            <div
+              data-testid="code-cad-diagnostics"
+              className="px-4 py-2.5 bg-slate-900 border-t border-slate-800 text-xs"
+            >
               {compiled.diagnostics.length === 0 ? (
                 <div className="flex items-center gap-2 text-emerald-400 font-semibold">
                   <Terminal className="w-3.5 h-3.5" />

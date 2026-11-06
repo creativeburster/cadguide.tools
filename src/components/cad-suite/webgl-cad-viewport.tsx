@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Eye, Layers, Maximize2, RotateCcw, Scissors } from 'lucide-react';
+import { Eye, Layers, RotateCcw, Scissors } from 'lucide-react';
 import type { Mesh } from '@/lib/cad-file-analysis';
 
 export interface WebGlCadViewportProps {

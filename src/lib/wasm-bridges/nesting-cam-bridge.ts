@@ -685,6 +685,19 @@ export function evaluateNestingAndCam(
     `<rect x="0" y="0" width="${sheetW}" height="${sheetH}" fill="#0f172a" stroke="#475569" stroke-width="2"/>`,
   ];
 
+  // Include unfolded sheet-metal bend lines on dedicated BEND_LINES layer
+  for (const [bx1, by1, bx2, by2] of unfold.bendLines) {
+    dxfLines.push(
+      '0', 'LINE',
+      '8', 'BEND_LINES',
+      '6', 'DASHED',
+      '10', bx1.toFixed(3),
+      '20', by1.toFixed(3),
+      '11', bx2.toFixed(3),
+      '21', by2.toFixed(3)
+    );
+  }
+
   for (const p of sheet1Parts) {
     dxfLines.push('0', 'LWPOLYLINE', '8', 'OUTER_CUT', '70', '1');
     const ptsStr = p.outerLoop.map(([x, y]) => `${x.toFixed(2)},${y.toFixed(2)}`).join(' ');
@@ -694,6 +707,17 @@ export function evaluateNestingAndCam(
     svgElements.push(
       `<polygon points="${ptsStr}" fill="${p.color}" fill-opacity="0.28" stroke="${p.color}" stroke-width="1.5"/>`
     );
+    if (p.shapeKind === 'l-bracket') {
+      const bendX = p.x + p.width * 0.6;
+      dxfLines.push(
+        '0', 'LINE',
+        '8', 'BEND_LINES',
+        '10', bendX.toFixed(3),
+        '20', p.y.toFixed(3),
+        '11', bendX.toFixed(3),
+        '21', (p.y + p.height).toFixed(3)
+      );
+    }
     for (const h of p.innerHoles) {
       dxfLines.push('0', 'CIRCLE', '8', 'INNER_HOLES', '10', h.cx.toFixed(3), '20', h.cy.toFixed(3), '40', h.r.toFixed(3));
       svgElements.push(
@@ -703,14 +727,23 @@ export function evaluateNestingAndCam(
   }
   dxfLines.push('0', 'ENDSEC', '0', 'EOF');
 
-  const rawSegs = sheet1Parts.reduce((s, p) => s + p.outerLoop.length + p.innerHoles.length * 8, 0);
+  // Collect all 2D contour segments across placed parts and run deterministic topology healing
+  const allSegs: { x1: number; y1: number; x2: number; y2: number }[] = [];
+  for (const p of sheet1Parts) {
+    for (let i = 0; i < p.outerLoop.length; i++) {
+      const [x1, y1] = p.outerLoop[i];
+      const [x2, y2] = p.outerLoop[(i + 1) % p.outerLoop.length];
+      allSegs.push({ x1, y1, x2, y2 });
+    }
+  }
+  const healed = healDxfSegmentsTopology(allSegs, config.snapToleranceMm || 0.05);
 
   return {
     unfold,
     topologyReport: {
-      rawSegmentCount: rawSegs + 14,
-      mergedEndpointCount: 9,
-      removedDuplicateCount: 5,
+      rawSegmentCount: healed.rawSegmentCount,
+      mergedEndpointCount: healed.mergedEndpointCount,
+      removedDuplicateCount: healed.removedDuplicateCount,
       closedOuterLoops: sheet1Parts.length,
       detectedInnerHoles: sheet1Parts.reduce((s, p) => s + p.innerHoles.length, 0),
     },
@@ -730,5 +763,68 @@ export function evaluateNestingAndCam(
     estimatedCycleSeconds: Number(estimatedCycleSeconds.toFixed(1)),
     nestedDxf: dxfLines.join('\n'),
     nestedSvg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 ${sheetW} ${sheetH}">${svgElements.join('')}</svg>`,
+  };
+}
+
+/**
+ * Performs 2D segment endpoint tolerance snapping and duplicate/degenerate segment purging.
+ */
+export function healDxfSegmentsTopology(
+  segments: { x1: number; y1: number; x2: number; y2: number }[],
+  snapToleranceMm = 0.05
+): {
+  rawSegmentCount: number;
+  mergedEndpointCount: number;
+  removedDuplicateCount: number;
+  cleanSegments: { x1: number; y1: number; x2: number; y2: number }[];
+} {
+  const tol = Math.max(1e-4, Number(snapToleranceMm) || 0.05);
+  const seenKeys = new Set<string>();
+  const cleanSegments: { x1: number; y1: number; x2: number; y2: number }[] = [];
+  let removedDuplicateCount = 0;
+  let mergedEndpointCount = 0;
+
+  const quantize = (v: number) => Math.round(v / tol) * tol;
+
+  for (const s of segments) {
+    const len = Math.hypot(s.x2 - s.x1, s.y2 - s.y1);
+    if (len < tol * 0.5) {
+      removedDuplicateCount++;
+      continue;
+    }
+    const qx1 = quantize(s.x1);
+    const qy1 = quantize(s.y1);
+    const qx2 = quantize(s.x2);
+    const qy2 = quantize(s.y2);
+
+    if (Math.hypot(qx1 - s.x1, qy1 - s.y1) > 1e-6 || Math.hypot(qx2 - s.x2, qy2 - s.y2) > 1e-6) {
+      mergedEndpointCount++;
+    }
+
+    const pA = `${qx1.toFixed(3)},${qy1.toFixed(3)}`;
+    const pB = `${qx2.toFixed(3)},${qy2.toFixed(3)}`;
+    const edgeKey = pA < pB ? `${pA}->${pB}` : `${pB}->${pA}`;
+    if (seenKeys.has(edgeKey)) {
+      removedDuplicateCount++;
+      continue;
+    }
+    seenKeys.add(edgeKey);
+    cleanSegments.push({ x1: qx1, y1: qy1, x2: qx2, y2: qy2 });
+  }
+
+  // Also count chained vertex closures across consecutive segments
+  for (let i = 0; i < cleanSegments.length; i++) {
+    const a = cleanSegments[i];
+    const b = cleanSegments[(i + 1) % cleanSegments.length];
+    if (Math.hypot(a.x2 - b.x1, a.y2 - b.y1) <= tol * 2) {
+      mergedEndpointCount++;
+    }
+  }
+
+  return {
+    rawSegmentCount: segments.length,
+    mergedEndpointCount,
+    removedDuplicateCount,
+    cleanSegments,
   };
 }

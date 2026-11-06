@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState, useSyncExternalStore } from 'react';
 import {
   CheckCircle2,
   Download,
@@ -23,10 +23,13 @@ import {
   getDefaultBendParams,
   getDefaultIrregularParts,
   getDefaultNestingConfig,
+  healDxfSegmentsTopology,
   IrregularPartSpec,
   NestingConfig,
   SheetMetalBendParams,
 } from '@/lib/wasm-bridges/nesting-cam-bridge';
+
+const emptySubscribe = () => () => {};
 
 function triggerDownload(content: string | ArrayBuffer, filename: string, mime = 'text/plain;charset=utf-8') {
   const blob = new Blob([content], { type: mime });
@@ -41,7 +44,19 @@ function triggerDownload(content: string | ArrayBuffer, filename: string, mime =
 }
 
 export default function NestingCamApp() {
+  const hydrated = useSyncExternalStore(
+    emptySubscribe,
+    () => true,
+    () => false
+  );
   const [bendParams, setBendParams] = useState<SheetMetalBendParams>(() => getDefaultBendParams());
+  const [thicknessStr, setThicknessStr] = useState<string>('2.0');
+  const [radiusStr, setRadiusStr] = useState<string>('2.0');
+  const [angleStr, setAngleStr] = useState<string>('90');
+  const [kFactorStr, setKFactorStr] = useState<string>('0.44');
+  const [leg1Str, setLeg1Str] = useState<string>('60');
+  const [leg2Str, setLeg2Str] = useState<string>('40');
+
   const [parts, setParts] = useState<IrregularPartSpec[]>(() => getDefaultIrregularParts());
   const [nestingCfg, setNestingCfg] = useState<NestingConfig>(() => getDefaultNestingConfig());
   const [laserFeedMmMin, setLaserFeedMmMin] = useState<number>(1800);
@@ -51,6 +66,49 @@ export default function NestingCamApp() {
   const [isPlaying, setIsPlaying] = useState<boolean>(false);
   const [showToolpath, setShowToolpath] = useState<boolean>(true);
   const [importedFileStatus, setImportedFileStatus] = useState<string>('');
+  const [importedTopoOverride, setImportedTopoOverride] = useState<{
+    mergedEndpointCount: number;
+    removedDuplicateCount: number;
+  } | null>(null);
+
+  const isBendInputValid =
+    thicknessStr.trim() !== '' &&
+    radiusStr.trim() !== '' &&
+    angleStr.trim() !== '' &&
+    kFactorStr.trim() !== '' &&
+    leg1Str.trim() !== '' &&
+    leg2Str.trim() !== '' &&
+    Number.isFinite(parseFloat(thicknessStr)) &&
+    parseFloat(thicknessStr) > 0 &&
+    Number.isFinite(parseFloat(radiusStr)) &&
+    parseFloat(radiusStr) > 0 &&
+    Number.isFinite(parseFloat(angleStr)) &&
+    parseFloat(angleStr) > 0 &&
+    parseFloat(angleStr) < 180 &&
+    Number.isFinite(parseFloat(kFactorStr)) &&
+    parseFloat(kFactorStr) > 0 &&
+    parseFloat(kFactorStr) <= 1 &&
+    Number.isFinite(parseFloat(leg1Str)) &&
+    parseFloat(leg1Str) > 0 &&
+    Number.isFinite(parseFloat(leg2Str)) &&
+    parseFloat(leg2Str) > 0;
+
+  const handleResetDefaults = () => {
+    setBendParams(getDefaultBendParams());
+    setThicknessStr('2.0');
+    setRadiusStr('2.0');
+    setAngleStr('90');
+    setKFactorStr('0.44');
+    setLeg1Str('60');
+    setLeg2Str('40');
+    setParts(getDefaultIrregularParts());
+    setNestingCfg(getDefaultNestingConfig());
+    setLaserFeedMmMin(1800);
+    setLaserPowerPwm(1000);
+    setLeadInMm(3.5);
+    setImportedFileStatus('');
+    setImportedTopoOverride(null);
+  };
 
   const evaluation = useMemo(
     () =>
@@ -86,8 +144,9 @@ export default function NestingCamApp() {
     const text = await file.text();
     const doc = parseDxf(text);
     const segs = doc ? segmentsOf(doc) : [];
+    const healed = healDxfSegmentsTopology(segs, nestingCfg.snapToleranceMm || 0.05);
     let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
-    for (const s of segs) {
+    for (const s of healed.cleanSegments) {
       minX = Math.min(minX, s.x1, s.x2);
       maxX = Math.max(maxX, s.x1, s.x2);
       minY = Math.min(minY, s.y1, s.y2);
@@ -107,8 +166,12 @@ export default function NestingCamApp() {
       color: '#06b6d4',
     };
     setParts((prev) => [...prev, newPart]);
+    setImportedTopoOverride({
+      mergedEndpointCount: healed.mergedEndpointCount,
+      removedDuplicateCount: healed.removedDuplicateCount,
+    });
     setImportedFileStatus(
-      `Imported ${file.name} (${entCount} DXF entities, ${w}×${h} mm, topology auto-healed)`
+      `Imported ${file.name} (${entCount} DXF entities, ${w}×${h} mm, ${healed.mergedEndpointCount} endpoints snapped, ${healed.removedDuplicateCount} duplicate segments purged)`
     );
   };
 
@@ -131,8 +194,13 @@ export default function NestingCamApp() {
     ]);
   };
 
+  const displayedMergedCount =
+    importedTopoOverride?.mergedEndpointCount ?? evaluation.topologyReport.mergedEndpointCount;
+  const displayedDuplicateCount =
+    importedTopoOverride?.removedDuplicateCount ?? evaluation.topologyReport.removedDuplicateCount;
+
   return (
-    <div className="space-y-8">
+    <div data-hydrated={hydrated ? 'true' : 'false'} className="space-y-8">
       {/* Top Studio Header & Export Bar */}
       <div className="bg-white rounded-3xl border border-slate-200/80 p-5 shadow-sm flex flex-wrap items-center justify-between gap-4">
         <div className="flex flex-wrap items-center gap-3">
@@ -141,16 +209,20 @@ export default function NestingCamApp() {
             Rust/WASM NFP &amp; CAM Kernel v{evaluation.unfold.wasmKernelVersion}
           </span>
 
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold">
+          <span
+            data-testid="topology-healed-badge"
+            className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-xs font-bold"
+          >
             <CheckCircle2 className="w-3.5 h-3.5" />
-            Topology Healed: {evaluation.topologyReport.mergedEndpointCount} Gaps Closed ·{' '}
-            {evaluation.topologyReport.removedDuplicateCount} Duplicates Purged
+            Topology Healed: {displayedMergedCount} Gaps Closed ·{' '}
+            {displayedDuplicateCount} Duplicates Purged
           </span>
 
           <label className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-bold cursor-pointer transition">
             <Upload className="w-3.5 h-3.5 text-blue-600" />
             Import Part DXF
             <input
+              data-testid="dxf-upload-input"
               type="file"
               accept=".dxf"
               onChange={handleDxfUpload}
@@ -160,6 +232,15 @@ export default function NestingCamApp() {
         </div>
 
         <div className="flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            data-testid="btn-reset-nesting"
+            onClick={handleResetDefaults}
+            className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold transition cursor-pointer"
+          >
+            Reset Defaults
+          </button>
+
           <button
             type="button"
             data-testid="export-gcode-btn"
@@ -211,7 +292,10 @@ export default function NestingCamApp() {
       </div>
 
       {importedFileStatus && (
-        <div className="px-4 py-2.5 rounded-2xl bg-cyan-50 border border-cyan-200 text-xs font-bold text-cyan-900">
+        <div
+          data-testid="imported-dxf-status"
+          className="px-4 py-2.5 rounded-2xl bg-cyan-50 border border-cyan-200 text-xs font-bold text-cyan-900"
+        >
           {importedFileStatus}
         </div>
       )}
@@ -245,10 +329,15 @@ export default function NestingCamApp() {
                   min={0.2}
                   max={25}
                   step={0.1}
-                  value={bendParams.thicknessMm || ''}
-                  onChange={(e) =>
-                    setBendParams((p) => ({ ...p, thicknessMm: e.target.value === '' ? 0 : Number(e.target.value) }))
-                  }
+                  value={thicknessStr}
+                  onChange={(e) => {
+                    const str = e.target.value;
+                    setThicknessStr(str);
+                    const v = parseFloat(str);
+                    if (Number.isFinite(v) && v > 0) {
+                      setBendParams((p) => ({ ...p, thicknessMm: v }));
+                    }
+                  }}
                   className="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-sm font-bold text-slate-900"
                 />
               </div>
@@ -263,10 +352,15 @@ export default function NestingCamApp() {
                   min={0.2}
                   max={50}
                   step={0.1}
-                  value={bendParams.insideRadiusMm || ''}
-                  onChange={(e) =>
-                    setBendParams((p) => ({ ...p, insideRadiusMm: e.target.value === '' ? 0 : Number(e.target.value) }))
-                  }
+                  value={radiusStr}
+                  onChange={(e) => {
+                    const str = e.target.value;
+                    setRadiusStr(str);
+                    const v = parseFloat(str);
+                    if (Number.isFinite(v) && v > 0) {
+                      setBendParams((p) => ({ ...p, insideRadiusMm: v }));
+                    }
+                  }}
                   className="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-sm font-bold text-slate-900"
                 />
               </div>
@@ -281,13 +375,15 @@ export default function NestingCamApp() {
                   min={5}
                   max={175}
                   step={1}
-                  value={bendParams.bendAngleDeg || ''}
-                  onChange={(e) =>
-                    setBendParams((p) => ({
-                      ...p,
-                      bendAngleDeg: e.target.value === '' ? 0 : Number(e.target.value),
-                    }))
-                  }
+                  value={angleStr}
+                  onChange={(e) => {
+                    const str = e.target.value;
+                    setAngleStr(str);
+                    const v = parseFloat(str);
+                    if (Number.isFinite(v) && v > 0 && v < 180) {
+                      setBendParams((p) => ({ ...p, bendAngleDeg: v }));
+                    }
+                  }}
                   className="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-sm font-bold text-slate-900"
                 />
               </div>
@@ -302,13 +398,15 @@ export default function NestingCamApp() {
                   min={0.25}
                   max={0.5}
                   step={0.01}
-                  value={bendParams.kFactor || ''}
-                  onChange={(e) =>
-                    setBendParams((p) => ({
-                      ...p,
-                      kFactor: e.target.value === '' ? 0 : Number(e.target.value),
-                    }))
-                  }
+                  value={kFactorStr}
+                  onChange={(e) => {
+                    const str = e.target.value;
+                    setKFactorStr(str);
+                    const v = parseFloat(str);
+                    if (Number.isFinite(v) && v > 0 && v <= 1) {
+                      setBendParams((p) => ({ ...p, kFactor: v }));
+                    }
+                  }}
                   className="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-sm font-bold text-slate-900"
                 />
               </div>
@@ -323,10 +421,15 @@ export default function NestingCamApp() {
                   min={5}
                   max={1000}
                   step={1}
-                  value={bendParams.leg1Mm || ''}
-                  onChange={(e) =>
-                    setBendParams((p) => ({ ...p, leg1Mm: e.target.value === '' ? 0 : Number(e.target.value) }))
-                  }
+                  value={leg1Str}
+                  onChange={(e) => {
+                    const str = e.target.value;
+                    setLeg1Str(str);
+                    const v = parseFloat(str);
+                    if (Number.isFinite(v) && v > 0) {
+                      setBendParams((p) => ({ ...p, leg1Mm: v }));
+                    }
+                  }}
                   className="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-sm font-bold text-slate-900"
                 />
               </div>
@@ -341,10 +444,15 @@ export default function NestingCamApp() {
                   min={5}
                   max={1000}
                   step={1}
-                  value={bendParams.leg2Mm || ''}
-                  onChange={(e) =>
-                    setBendParams((p) => ({ ...p, leg2Mm: e.target.value === '' ? 0 : Number(e.target.value) }))
-                  }
+                  value={leg2Str}
+                  onChange={(e) => {
+                    const str = e.target.value;
+                    setLeg2Str(str);
+                    const v = parseFloat(str);
+                    if (Number.isFinite(v) && v > 0) {
+                      setBendParams((p) => ({ ...p, leg2Mm: v }));
+                    }
+                  }}
                   className="w-full px-3 py-1.5 rounded-xl border border-slate-200 text-sm font-bold text-slate-900"
                 />
               </div>
@@ -355,25 +463,25 @@ export default function NestingCamApp() {
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70">
                 <div className="text-[10px] font-bold text-slate-500 uppercase">Bend Allowance (BA)</div>
                 <div data-testid="unfold-ba-mm" className="text-sm font-black text-blue-700 mt-0.5">
-                  {evaluation.unfold.bendAllowanceMm.toFixed(2)} mm
+                  {isBendInputValid ? `${evaluation.unfold.bendAllowanceMm.toFixed(2)} mm` : '—'}
                 </div>
               </div>
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70">
                 <div className="text-[10px] font-bold text-slate-500 uppercase">Outside Setback</div>
                 <div data-testid="unfold-ossb-mm" className="text-sm font-black text-slate-900 mt-0.5">
-                  {evaluation.unfold.outsideSetbackMm.toFixed(2)} mm
+                  {isBendInputValid ? `${evaluation.unfold.outsideSetbackMm.toFixed(2)} mm` : '—'}
                 </div>
               </div>
               <div className="p-2.5 rounded-xl bg-slate-50 border border-slate-200/70">
                 <div className="text-[10px] font-bold text-slate-500 uppercase">Bend Deduction (BD)</div>
                 <div data-testid="unfold-bd-mm" className="text-sm font-black text-amber-700 mt-0.5">
-                  {evaluation.unfold.bendDeductionMm.toFixed(2)} mm
+                  {isBendInputValid ? `${evaluation.unfold.bendDeductionMm.toFixed(2)} mm` : '—'}
                 </div>
               </div>
               <div className="p-2.5 rounded-xl bg-emerald-50 border border-emerald-200">
                 <div className="text-[10px] font-bold text-emerald-700 uppercase">Flat Length Lflat</div>
                 <div data-testid="unfold-flat-mm" className="text-sm font-black text-emerald-900 mt-0.5">
-                  {evaluation.unfold.singleBendFlatLengthMm.toFixed(2)} mm
+                  {isBendInputValid ? `${evaluation.unfold.singleBendFlatLengthMm.toFixed(2)} mm` : '—'}
                 </div>
               </div>
             </div>
