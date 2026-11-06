@@ -1,71 +1,178 @@
 'use client';
 
-import ShortcutDiffClient from '@/components/shortcut-diff-client';
+import ShortcutDiffClient, { DiffItem } from '@/components/shortcut-diff-client';
 
-const DIFF_DATA = [
+const DIFF_DATA: DiffItem[] = [
+  // 1. Core Identical 2D Drawing & Editing Aliases (100% Verified in acad.pgp & gcad.pgp)
   {
-    "shortcut": "L",
-    "primaryCmd": "LINE",
-    "secondaryCmd": "LINE",
-    "isSame": true,
-    "diffNote": "",
-    "useCase": "Draw ordinary two-dimensional straight line primitives."
+    shortcut: "L",
+    primaryCmd: "LINE",
+    secondaryCmd: "LINE",
+    isSame: true,
+    diffNote: "",
+    useCase: "Draw 2D straight line segments between picked coordinate points."
   },
   {
-    "shortcut": "C",
-    "primaryCmd": "CIRCLE",
-    "secondaryCmd": "CIRCLE",
-    "isSame": true,
-    "diffNote": "",
-    "useCase": "Draw a circle with a specified center radius."
+    shortcut: "C",
+    primaryCmd: "CIRCLE",
+    secondaryCmd: "CIRCLE",
+    isSame: true,
+    diffNote: "",
+    useCase: "Draw circles with specified center point and radius or diameter."
   },
   {
-    "shortcut": "GWS",
-    "primaryCmd": "N/A",
-    "secondaryCmd": "GSTARWORKSPACES",
-    "isSame": false,
-    "diffNote": "GstarCAD’s unique workspace configurator command. AutoCAD The corresponding use is the WSCURRENT command.",
-    "useCase": "Switch between the classic menu layout and the 2D sketch function panel area."
+    shortcut: "REC",
+    primaryCmd: "RECTANG",
+    secondaryCmd: "RECTANG",
+    isSame: true,
+    diffNote: "",
+    useCase: "Draw rectangular closed polyline boundaries."
   },
   {
-    "shortcut": "SPLAT",
-    "primaryCmd": "SPLINE",
-    "secondaryCmd": "SPLINE (SPLAT)",
-    "isSame": false,
-    "diffNote": "GstarCAD's unique spline special alias mapping supports inputting more suitable for spelling memory. SPLAT Quick execution.",
-    "useCase": "Draw a spline interpolation curve."
+    shortcut: "PL",
+    primaryCmd: "PLINE",
+    secondaryCmd: "PLINE",
+    isSame: true,
+    diffNote: "",
+    useCase: "Draw continuous 2D polyline segments combining straight and arc segments."
   },
   {
-    "shortcut": "VP",
-    "primaryCmd": "VPOINT",
-    "secondaryCmd": "VPOINT",
-    "isSame": true,
-    "diffNote": "",
-    "useCase": "Sets and locks the projection viewpoint in three-dimensional space."
+    shortcut: "M",
+    primaryCmd: "MOVE",
+    secondaryCmd: "MOVE",
+    isSame: true,
+    diffNote: "",
+    useCase: "Translate selected drawing entities by a displacement vector."
   },
   {
-    "shortcut": "EXPRINT",
-    "primaryCmd": "EXPORT",
-    "secondaryCmd": "EXPORTLAYOUT",
-    "isSame": false,
-    "diffNote": "GstarCAD provides a direct extension that independently outputs the current drawing space layout entities into ordinary model space drawings.",
-    "useCase": "Extract layout views and export as stand-alone DWG drawing files."
+    shortcut: "CO",
+    primaryCmd: "COPY",
+    secondaryCmd: "COPY",
+    isSame: true,
+    diffNote: "",
+    useCase: "Duplicate entities to specified base point and destination coordinates."
   },
   {
-    "shortcut": "CO",
-    "primaryCmd": "COPY",
-    "secondaryCmd": "COPY",
-    "isSame": true,
-    "diffNote": "",
-    "useCase": "Copy the selected drawing entities."
+    shortcut: "RO",
+    primaryCmd: "ROTATE",
+    secondaryCmd: "ROTATE",
+    isSame: true,
+    diffNote: "",
+    useCase: "Rotate objects about a specified base point by angle or reference."
   },
   {
-    "shortcut": "TR",
-    "primaryCmd": "TRIM",
-    "secondaryCmd": "TRIM",
-    "isSame": true,
-    "diffNote": "",
-    "useCase": "Trim excess intersecting line segments."
+    shortcut: "TR",
+    primaryCmd: "TRIM",
+    secondaryCmd: "TRIM",
+    isSame: true,
+    diffNote: "",
+    useCase: "Trim entities at cutting edges formed by intersecting geometry."
+  },
+  {
+    shortcut: "EX",
+    primaryCmd: "EXTEND",
+    secondaryCmd: "EXTEND",
+    isSame: true,
+    diffNote: "",
+    useCase: "Extend line or arc entities to meet defined boundary edges."
+  },
+  {
+    shortcut: "F",
+    primaryCmd: "FILLET",
+    secondaryCmd: "FILLET",
+    isSame: true,
+    diffNote: "",
+    useCase: "Round or tangent-fillet intersecting edges with specified radius."
+  },
+  {
+    shortcut: "MI",
+    primaryCmd: "MIRROR",
+    secondaryCmd: "MIRROR",
+    isSame: true,
+    diffNote: "",
+    useCase: "Create mirrored copies of geometry across a specified reflection axis."
+  },
+  {
+    shortcut: "O",
+    primaryCmd: "OFFSET",
+    secondaryCmd: "OFFSET",
+    isSame: true,
+    diffNote: "",
+    useCase: "Create concentric circles, parallel lines, or parallel curves at offset distance."
+  },
+  {
+    shortcut: "SPL",
+    primaryCmd: "SPLINE",
+    secondaryCmd: "SPLINE",
+    isSame: true,
+    diffNote: "",
+    useCase: "Create smooth non-uniform rational B-spline (NURBS) curves."
+  },
+  {
+    shortcut: "DI",
+    primaryCmd: "DIST",
+    secondaryCmd: "DIST",
+    isSame: true,
+    diffNote: "",
+    useCase: "Measure linear distance, delta X/Y/Z, and angles between two points."
+  },
+  {
+    shortcut: "E",
+    primaryCmd: "ERASE",
+    secondaryCmd: "ERASE",
+    isSame: true,
+    diffNote: "",
+    useCase: "Remove and purge selected drawing entities from current model or layout."
+  },
+  {
+    shortcut: "Z",
+    primaryCmd: "ZOOM",
+    secondaryCmd: "ZOOM",
+    isSame: true,
+    diffNote: "",
+    useCase: "Zoom display window (Extents, Window, Previous, Dynamic, Realtime)."
+  },
+  {
+    shortcut: "H",
+    primaryCmd: "HATCH",
+    secondaryCmd: "HATCH",
+    isSame: true,
+    diffNote: "",
+    useCase: "Fill enclosed boundary with standard ANSI/ISO vector hatch patterns."
+  },
+  {
+    shortcut: "MA",
+    primaryCmd: "MATCHPROP",
+    secondaryCmd: "MATCHPROP",
+    isSame: true,
+    diffNote: "",
+    useCase: "Copy layer, color, linetype, and lineweight properties to other objects."
+  },
+
+  // 2. Real GstarCAD Official Productive Commands & Differences (Verified in GstarCAD Official Manual & Guide)
+  {
+    shortcut: "AREASUM",
+    primaryCmd: "AREA",
+    secondaryCmd: "AREASUM",
+    isSame: false,
+    diffNote: "GstarCAD official AREASUM inquiry command automatically sums areas of multiple closed regions. AutoCAD AREA requires manual multi-picking addition/subtraction mode.",
+    useCase: "Batch floor plan area and room schedule square-meter accumulation."
+  },
+  {
+    shortcut: "MAGNIFIER",
+    primaryCmd: "N/A",
+    secondaryCmd: "MAGNIFIER",
+    isSame: false,
+    diffNote: "GstarCAD official interactive floating viewport lens (MAGNIFIER command, Ctrl+E). Allows real-time inspection, snapping, and editing of detail geometry without changing main viewport zoom.",
+    useCase: "Micro-detail drawing inspection and object snapping in complex plans."
+  },
+  {
+    shortcut: "BCOUNT",
+    primaryCmd: "BCOUNT (Express)",
+    secondaryCmd: "BCOUNT",
+    isSame: false,
+    diffNote: "GstarCAD integrates BCOUNT directly into core commands. In AutoCAD, BCOUNT requires the Express Tools extension to be loaded.",
+    useCase: "BOM block counting and valve/equipment schedule generation."
   }
 ];
 
@@ -76,5 +183,5 @@ export default function AutocadVsGstarcadShortcutsClient() {
       secondaryApp="GstarCAD"
       diffData={DIFF_DATA}
     />
-);
+  );
 }

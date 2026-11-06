@@ -41,6 +41,7 @@ export function DecisionWizardClient({ data }: { data: WizardData }) {
           {data.nodes.map((n, i) => (
             <button
               key={n.id}
+              data-testid={`scenario-btn-${n.id}`}
               onClick={() => setSelected(n.id === selected ? null : n.id)}
               className={`text-left p-5 rounded-2xl border transition-all ${
                 selected === n.id
@@ -58,7 +59,7 @@ export function DecisionWizardClient({ data }: { data: WizardData }) {
       {node && (
         <div className="space-y-6">
           {node.causes.map((c, i) => (
-            <div key={i} className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
+            <div key={i} data-testid="wizard-cause-card" className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
               <div className="flex items-start gap-3 mb-5">
                 <CheckCircle2 className="w-5 h-5 text-emerald-500 shrink-0 mt-0.5" />
                 <h3 className="text-base font-black text-slate-900 leading-snug">
@@ -78,6 +79,7 @@ export function DecisionWizardClient({ data }: { data: WizardData }) {
               {c.sourceUrl && c.sourceUrl !== 'not obtained' && (
                 <a
                   href={c.sourceUrl}
+                  data-testid="wizard-source-link"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 text-[11px] font-black text-blue-600 hover:underline uppercase tracking-wider"

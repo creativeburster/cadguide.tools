@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Search, Printer, AlertTriangle, Check, Sparkles } from 'lucide-react';
+import { Search, Printer, AlertTriangle, Check, Sparkles, Download } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
 export interface DiffItem {
@@ -53,6 +53,28 @@ export default function ShortcutDiffClient({
     window.print();
   };
 
+  const handleExportCsv = () => {
+    const headers = ['Command / Alias', `${primaryApp} Command`, `${secondaryApp} Command`, 'Status', 'Use Case', 'Difference Note'];
+    const rows = filteredData.map(item => [
+      `"${item.shortcut}"`,
+      `"${item.primaryCmd}"`,
+      `"${item.secondaryCmd}"`,
+      `"${item.isSame ? 'Identical' : 'Different'}"`,
+      `"${item.useCase.replace(/"/g, '""')}"`,
+      `"${item.diffNote.replace(/"/g, '""')}"`
+    ]);
+    const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `${primaryApp.toLowerCase()}-vs-${secondaryApp.toLowerCase()}-shortcuts.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
+  };
+
   const copyToClipboard = (text: string, rowIndex: number, app: 'primary' | 'secondary') => {
     navigator.clipboard.writeText(text);
     setCopiedIndex({ row: rowIndex, app });
@@ -64,7 +86,7 @@ export default function ShortcutDiffClient({
       {/* Comparison & Search Section */}
       <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm print:shadow-none print:border-none print:p-0">
         
-        {/* Control Panel: Search, Filter & Print */}
+        {/* Control Panel: Search, Filter, Export & Print */}
         <div className="flex flex-col md:flex-row gap-4 justify-between items-stretch md:items-center mb-6 print:hidden">
           <div className="relative flex-grow max-w-md">
             <span className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -72,6 +94,7 @@ export default function ShortcutDiffClient({
             </span>
             <input
               type="text"
+              data-testid="shortcut-search-input"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={`Search shortcuts or commands (e.g. L, Line, Copy)...`}
@@ -83,6 +106,7 @@ export default function ShortcutDiffClient({
             {/* View Mode Toggle */}
             <div className="flex items-center bg-slate-100 rounded-xl p-1 border border-slate-200/50">
               <button
+                data-testid="view-mode-card"
                 onClick={() => setViewMode('card')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-black flex items-center gap-1 transition-all cursor-pointer ${
                   viewMode === 'card'
@@ -93,6 +117,7 @@ export default function ShortcutDiffClient({
                 Cards
               </button>
               <button
+                data-testid="view-mode-table"
                 onClick={() => setViewMode('table')}
                 className={`px-3 py-1.5 rounded-lg text-xs font-black flex items-center gap-1 transition-all cursor-pointer ${
                   viewMode === 'table'
@@ -105,6 +130,16 @@ export default function ShortcutDiffClient({
             </div>
 
             <button
+              data-testid="btn-export-csv"
+              onClick={handleExportCsv}
+              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-black text-sm transition-all cursor-pointer h-11"
+            >
+              <Download className="w-4 h-4" />
+              Export CSV
+            </button>
+
+            <button
+              data-testid="btn-print-comparison"
               onClick={handlePrint}
               className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-sm shadow-md transition-all cursor-pointer h-11"
             >
@@ -117,6 +152,7 @@ export default function ShortcutDiffClient({
         {/* Difference Status Toggle Switch */}
         <div className="flex gap-2 mb-6 print:hidden">
           <button
+            data-testid="filter-all"
             onClick={() => setFilterType('all')}
             className={`px-4 py-2 rounded-xl text-xs font-black border transition-all cursor-pointer ${
               filterType === 'all'
@@ -127,6 +163,7 @@ export default function ShortcutDiffClient({
             All Commands ({diffData.length})
           </button>
           <button
+            data-testid="filter-diff"
             onClick={() => setFilterType('diff')}
             className={`px-4 py-2 rounded-xl text-xs font-black border transition-all cursor-pointer ${
               filterType === 'diff'
@@ -137,6 +174,7 @@ export default function ShortcutDiffClient({
             Differences Only ({diffData.filter((i) => !i.isSame).length})
           </button>
           <button
+            data-testid="filter-same"
             onClick={() => setFilterType('same')}
             className={`px-4 py-2 rounded-xl text-xs font-black border transition-all cursor-pointer ${
               filterType === 'same'
@@ -154,6 +192,7 @@ export default function ShortcutDiffClient({
             {filteredData.map((item, idx) => (
               <div
                 key={idx}
+                data-testid="shortcut-card-item"
                 className={`relative group border rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between min-h-[220px] ${
                   item.isSame ? 'bg-white border-slate-100 hover:border-blue-200' : 'bg-rose-50/20 border-rose-100/60 hover:border-rose-300'
                 }`}
@@ -233,7 +272,7 @@ export default function ShortcutDiffClient({
           <table className="w-full text-left border-collapse text-sm font-semibold text-slate-700">
             <thead>
               <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-xs tracking-wider font-bold">
-                <th className="py-3 px-4 w-[110px]">Alias</th>
+                <th className="py-3 px-4 w-[130px]">Command / Alias</th>
                 <th className="py-3 px-4 w-[160px]">{primaryApp} Cmd</th>
                 <th className="py-3 px-4 w-[160px]">{secondaryApp} Cmd</th>
                 <th className="py-3 px-4 w-[100px] text-center">Status</th>
@@ -244,6 +283,7 @@ export default function ShortcutDiffClient({
               {filteredData.map((item, idx) => (
                 <tr
                   key={idx}
+                  data-testid="shortcut-table-row"
                   className={`border-b border-slate-50 hover:bg-slate-50/40 transition-colors ${
                     !item.isSame ? 'bg-rose-50/10' : ''
                   }`}

@@ -21,7 +21,7 @@ export default function AutoCadFatalErrorWizardPage() {
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
-      <main className="min-h-screen bg-slate-50">
+      <div className="min-h-screen bg-slate-50">
         <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(#f43f5e_1px,transparent_1px)] [background-size:20px_20px]"></div>
@@ -45,7 +45,7 @@ export default function AutoCadFatalErrorWizardPage() {
           </div>
           <ToolboxEngineeringGuide slug="autocad-fatal-error-wizard" />
         </section>
-      </main>
+      </div>
     </>
   );
 }

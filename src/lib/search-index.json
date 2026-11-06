@@ -100,29 +100,6 @@
     "country": "USA"
   },
   {
-    "id": "t4",
-    "name": "Revit",
-    "slug": "revit",
-    "short_desc": "BIM authoring platform for architectural, structural and MEP design.",
-    "score": 4.9,
-    "logo_url": "/logos/revit.png",
-    "official_url": "https://www.autodesk.com/products/revit/overview",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "AEC",
-      "Construction",
-      "Structural Engineering"
-    ],
-    "features": [
-      "cloud-collaboration",
-      "bim-integration",
-      "piping-routing"
-    ],
-    "country": "USA"
-  },
-  {
     "id": "t5",
     "name": "DraftSight",
     "slug": "draftsight",
@@ -192,27 +169,6 @@
     "country": "Switzerland"
   },
   {
-    "id": "t7",
-    "name": "CATIA",
-    "slug": "catia",
-    "short_desc": "The high-end PLM standard for Aerospace and Automotive engineering.",
-    "score": 4.7,
-    "logo_url": "/logos/catia.png",
-    "official_url": "https://www.3ds.com/products/catia",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Shipbuilding"
-    ],
-    "features": [
-      "surface-modeling"
-    ],
-    "country": "France"
-  },
-  {
     "id": "t8",
     "name": "nanoCAD",
     "slug": "nanocad",
@@ -237,17 +193,19 @@
     "id": "t8",
     "name": "Siemens NX",
     "slug": "siemens-nx",
-    "short_desc": "Powerful high-end CAD/CAM/CAE suite for advanced manufacturing.",
-    "score": 4.8,
+    "short_desc": "Siemens’ premier enterprise CAD, CAM, and CAE solution for advanced product engineering, complex surfaces, and digital twin manufacturing.",
+    "score": 4.6,
     "logo_url": "/logos/siemens-nx.png",
     "official_url": "https://plm.sw.siemens.com/en-US/nx/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
+      "Aerospace & Defense",
+      "Automotive & Transportation",
+      "Industrial Heavy Machinery",
       "Consumer Electronics",
-      "Energy"
+      "Medical Device Engineering"
     ],
     "features": [
       "parametric-modeling",
@@ -258,7 +216,7 @@
       "piping-routing",
       "surface-modeling"
     ],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t9",
@@ -280,27 +238,6 @@
     ],
     "features": [],
     "country": "Italy"
-  },
-  {
-    "id": "t9",
-    "name": "ArchiCAD",
-    "slug": "archicad",
-    "short_desc": "The BIM software of choice for design-oriented architects.",
-    "score": 4.8,
-    "logo_url": "/logos/archicad.png",
-    "official_url": "https://www.graphisoft.com/plans-and-products/archicad/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Interior Design"
-    ],
-    "features": [
-      "cloud-collaboration",
-      "bim-integration"
-    ],
-    "country": "Hungary"
   },
   {
     "id": "t10",
@@ -329,8 +266,8 @@
     "id": "t10",
     "name": "Altium Designer",
     "slug": "altium-designer",
-    "short_desc": "Professional PCB and electronics design environment covering schematic, layout, 3D MCAD co-design and fabrication output.",
-    "score": 4.9,
+    "short_desc": "The premier unified PCB design and electronic hardware development software connecting schematics, 3D layout, and Altium 365 cloud collaboration.",
+    "score": 4.8,
     "logo_url": "/logos/altium-designer.png",
     "official_url": "https://www.altium.com",
     "category_id": "c6",
@@ -338,13 +275,15 @@
     "aliases": [],
     "industries": [
       "Consumer Electronics",
-      "Medical",
-      "Automotive"
+      "Automotive Systems & Electric Vehicles",
+      "Aerospace & Avionics",
+      "Medical Devices",
+      "Industrial IoT & Automation"
     ],
     "features": [
       "cloud-collaboration"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t11",
@@ -366,27 +305,6 @@
     ],
     "features": [],
     "country": "USA"
-  },
-  {
-    "id": "t11",
-    "name": "FreeCAD",
-    "slug": "freecad",
-    "short_desc": "The premier open-source 3D parametric modeler.",
-    "score": 4.2,
-    "logo_url": "/logos/freecad.ico",
-    "official_url": "https://www.freecad.org",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Hobbyist",
-      "Education",
-      "Engineering"
-    ],
-    "features": [
-      "parametric-modeling"
-    ],
-    "country": "Community/International"
   },
   {
     "id": "t12",
@@ -451,28 +369,6 @@
     "country": "Germany"
   },
   {
-    "id": "t14",
-    "name": "Onshape",
-    "slug": "onshape",
-    "short_desc": "The professional CAD system built for agile cloud development.",
-    "score": 4.9,
-    "logo_url": "/logos/onshape.png",
-    "official_url": "https://www.onshape.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Startups",
-      "Consumer Products",
-      "Robotics"
-    ],
-    "features": [
-      "cloud-collaboration",
-      "parametric-modeling"
-    ],
-    "country": "USA"
-  },
-  {
     "id": "t15",
     "name": "AutoCAD LT",
     "slug": "autocad-lt",
@@ -494,26 +390,6 @@
     "country": "USA"
   },
   {
-    "id": "t15",
-    "name": "Tekla Structures",
-    "slug": "tekla-structures",
-    "short_desc": "Detailed structural BIM software for steel, concrete, and precast construction.",
-    "score": 4.9,
-    "logo_url": "/logos/tekla-structures.png",
-    "official_url": "https://www.tekla.com",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Structural Engineering",
-      "Construction"
-    ],
-    "features": [
-      "bim-integration"
-    ],
-    "country": "Finland"
-  },
-  {
     "id": "t16",
     "name": "MCAD",
     "slug": "mcad",
@@ -533,29 +409,6 @@
     "features": [
       "drafting-detailing",
       "sheet-metal"
-    ],
-    "country": "USA"
-  },
-  {
-    "id": "t16",
-    "name": "Solid Edge",
-    "slug": "solid-edge",
-    "short_desc": "Professional 3D CAD built on Synchronous Technology, Siemens' history-free direct modelling approach.",
-    "score": 4.7,
-    "logo_url": "/logos/solid-edge.ico",
-    "official_url": "https://www.siemens.com/en-us/products/designcenter/solid-edge/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Mechanical",
-      "Industrial Design"
-    ],
-    "features": [
-      "sheet-metal",
-      "simulation-fea",
-      "direct-modeling",
-      "piping-routing"
     ],
     "country": "USA"
   },
@@ -591,27 +444,6 @@
       "surface-modeling"
     ],
     "country": "France"
-  },
-  {
-    "id": "t17",
-    "name": "Vectorworks",
-    "slug": "vectorworks",
-    "short_desc": "The all-in-one BIM solution for landscape and entertainment design.",
-    "score": 4.6,
-    "logo_url": "/logos/vectorworks.png",
-    "official_url": "https://www.vectorworks.net",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Landscape",
-      "Entertainment"
-    ],
-    "features": [
-      "bim-integration"
-    ],
-    "country": "USA"
   },
   {
     "id": "t18",
@@ -703,18 +535,118 @@
     "country": "USA"
   },
   {
-    "id": "t20",
+    "id": "t21",
+    "name": "CATIA",
+    "slug": "catia",
+    "short_desc": "Dassault Systèmes’ premier 3D computer-aided design and engineering software suite for complex class-A surfacing, aerospace, and automotive systems.",
+    "score": 4.4,
+    "logo_url": "/logos/catia.svg",
+    "official_url": "https://www.3ds.com/products-services/catia/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Aerospace",
+      "Automotive",
+      "Shipbuilding",
+      "Industrial Equipment",
+      "Defense"
+    ],
+    "features": [
+      "surface-modeling"
+    ],
+    "country": "France"
+  },
+  {
+    "id": "t22",
+    "name": "FreeCAD",
+    "slug": "freecad",
+    "short_desc": "An open-source, highly extensible parametric 3D computer-aided design (CAD) modeler built on the OpenCASCADE geometric kernel.",
+    "score": 4.2,
+    "logo_url": "/logos/freecad.svg",
+    "official_url": "https://www.freecad.org/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Maker Community",
+      "Mechanical Engineering",
+      "Education",
+      "Architecture",
+      "Rapid Prototyping"
+    ],
+    "features": [
+      "parametric-modeling"
+    ],
+    "country": "International (Open Source)"
+  },
+  {
+    "id": "t23",
+    "name": "Onshape",
+    "slug": "onshape",
+    "short_desc": "PTC’s cloud-native product development platform combining parametric 3D CAD, built-in PDM, real-time collaboration, and analytics.",
+    "score": 4.6,
+    "logo_url": "/logos/onshape.svg",
+    "official_url": "https://www.onshape.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Consumer Hardware",
+      "Medical Devices",
+      "Industrial Machinery",
+      "Automotive Components",
+      "Robotics"
+    ],
+    "features": [
+      "cloud-collaboration",
+      "parametric-modeling"
+    ],
+    "country": "United States"
+  },
+  {
+    "id": "t24",
+    "name": "Solid Edge",
+    "slug": "solid-edge",
+    "short_desc": "Siemens’ powerful 3D CAD suite featuring pioneering Synchronous Technology, sheet metal design, and integrated simulation.",
+    "score": 4.4,
+    "logo_url": "/logos/solid-edge.svg",
+    "official_url": "https://solidedge.siemens.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Industrial Equipment",
+      "Consumer Machinery",
+      "Automotive Aftermarket",
+      "Medical Devices",
+      "Agricultural Machinery"
+    ],
+    "features": [
+      "sheet-metal",
+      "simulation-fea",
+      "direct-modeling",
+      "piping-routing"
+    ],
+    "country": "Germany"
+  },
+  {
+    "id": "t25",
     "name": "Autodesk Inventor",
     "slug": "autodesk-inventor",
-    "short_desc": "Professional-grade 3D mechanical design and simulation.",
-    "score": 4.7,
+    "short_desc": "Autodesk’s professional 3D mechanical CAD software for product design, automated engineering drawing generation, and advanced simulation.",
+    "score": 4.5,
     "logo_url": "/logos/autodesk-inventor.svg",
     "official_url": "https://www.autodesk.com/products/inventor/overview",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Manufacturing"
+      "Industrial Machinery",
+      "Manufacturing Equipment",
+      "Building Products & Fabrication",
+      "Automotive Systems",
+      "Consumer Hardware"
     ],
     "features": [
       "parametric-modeling",
@@ -722,23 +654,25 @@
       "simulation-fea",
       "piping-routing"
     ],
-    "country": "USA"
+    "country": "United States"
   },
   {
-    "id": "t23",
+    "id": "t26",
     "name": "PTC Creo",
     "slug": "ptc-creo",
-    "short_desc": "The original parametric 3D CAD powerhouse.",
-    "score": 4.8,
-    "logo_url": "/logos/ptc-creo.ico",
+    "short_desc": "PTC’s scalable 3D CAD solution for parametric modeling, generative design, additive manufacturing, and complex mechanical engineering.",
+    "score": 4.4,
+    "logo_url": "/logos/ptc-creo.svg",
     "official_url": "https://www.ptc.com/en/products/creo",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "High-Tech",
-      "Medical"
+      "Industrial Equipment",
+      "Aerospace & Defense",
+      "Automotive",
+      "Electronics & High Tech",
+      "Medical Devices"
     ],
     "features": [
       "parametric-modeling",
@@ -748,42 +682,46 @@
       "piping-routing",
       "surface-modeling"
     ],
-    "country": "USA"
+    "country": "United States"
   },
   {
-    "id": "t24",
+    "id": "t27",
     "name": "OpenSCAD",
     "slug": "openscad",
-    "short_desc": "The programmer's solid 3D CAD modeler.",
-    "score": 4.4,
-    "logo_url": "/logos/openscad.ico",
-    "official_url": "https://openscad.org",
+    "short_desc": "The programmer’s solid 3D CAD modeler that compiles textual script files into exact 3D models using constructive solid geometry (CSG).",
+    "score": 4.3,
+    "logo_url": "/logos/openscad.svg",
+    "official_url": "https://openscad.org/",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Hobbyist",
-      "Maker",
-      "Research"
+      "3D Printing & Additive Manufacturing",
+      "Maker Movement",
+      "Open Source Hardware",
+      "Education",
+      "Algorithmic Product Design"
     ],
     "features": [],
-    "country": "Community/International"
+    "country": "International (Open Source)"
   },
   {
-    "id": "t25",
+    "id": "t28",
     "name": "Shapr3D",
     "slug": "shapr3d",
-    "short_desc": "Professional CAD for mobile and desktop mobility.",
-    "score": 4.7,
-    "logo_url": "/logos/shapr3d.png",
-    "official_url": "https://www.shapr3d.com",
+    "short_desc": "Multi-device 3D CAD modeling software running on iPad, Mac, and Windows, powered by the Siemens Parasolid engine and direct touch/pen input.",
+    "score": 4.6,
+    "logo_url": "/logos/shapr3d.svg",
+    "official_url": "https://www.shapr3d.com/",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
       "Industrial Design",
-      "Prototyping",
-      "AEC"
+      "Mechanical Prototyping",
+      "Architecture & Interior",
+      "Jewelry & Craft",
+      "Woodworking"
     ],
     "features": [
       "ai-assisted",
@@ -795,368 +733,134 @@
     "country": "Hungary"
   },
   {
-    "id": "t26",
-    "name": "Tinkercad",
-    "slug": "tinkercad",
-    "short_desc": "Free, browser-based 3D design tool for beginners and education.",
-    "score": 4.6,
-    "logo_url": "/logos/tinkercad.png",
-    "official_url": "https://www.tinkercad.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Education",
-      "Hobbyist",
-      "Prototyping"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t27",
-    "name": "Chief Architect",
-    "slug": "chief-architect",
-    "short_desc": "Professional home design software for builders.",
-    "score": 4.8,
-    "logo_url": "/logos/chief-architect.png",
-    "official_url": "https://www.chiefarchitect.com",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Residential Architecture",
-      "Remodeling"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
     "id": "t28",
     "name": "Mastercam",
     "slug": "mastercam",
-    "short_desc": "The global leader in CAM software for manufacturing.",
-    "score": 4.9,
+    "short_desc": "Sandvik’s industry-leading CAM software for multi-axis CNC milling, turning, mill-turn, wire EDM, and routing.",
+    "score": 4.6,
     "logo_url": "/logos/mastercam.png",
     "official_url": "https://www.mastercam.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Machining",
-      "Die & Mold"
+      "Precision CNC Machining",
+      "Aerospace Component Manufacturing",
+      "Automotive Tool & Die",
+      "Medical Device Prototyping",
+      "Job Shop Subcontracting"
     ],
     "features": [
       "integrated-cam"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t29",
     "name": "SolveSpace",
     "slug": "solvespace",
-    "short_desc": "A minimalist, open-source 2D/3D parametric CAD tool.",
-    "score": 4.1,
-    "logo_url": "/logos/solvespace.png",
-    "official_url": "https://solvespace.com",
+    "short_desc": "A lightweight, open-source parametric 2D and 3D CAD program with a built-in geometric constraint solver and mechanism kinematics.",
+    "score": 4.3,
+    "logo_url": "/logos/solvespace.svg",
+    "official_url": "https://solvespace.com/",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Hobbyist",
-      "Light Engineering",
-      "Education"
+      "Maker Community",
+      "Laser Cutting & Rapid Prototyping",
+      "3D Printing",
+      "Education",
+      "Mechanical Mechanism Design"
     ],
     "features": [],
-    "country": "Community/International"
+    "country": "International (Open Source)"
   },
   {
     "id": "t30",
     "name": "Alibre Design",
     "slug": "alibre-design",
-    "short_desc": "Professional 3D CAD without the enterprise price tag.",
+    "short_desc": "Cost-effective professional 3D parametric mechanical CAD featuring perpetual buyout licensing, advanced sheet metal, and ACIS modeling.",
     "score": 4.5,
-    "logo_url": "/logos/alibre-design.png",
-    "official_url": "https://www.alibre.com",
+    "logo_url": "/logos/alibre-design.svg",
+    "official_url": "https://www.alibre.com/",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Mechanical",
-      "Manufacturing",
-      "Prototyping"
+      "Machinery Manufacturing",
+      "Fabrication & Sheet Metal",
+      "Consumer Products",
+      "Woodworking",
+      "Precision Tooling"
     ],
     "features": [],
-    "country": "USA"
+    "country": "United States"
   },
   {
     "id": "t31",
-    "name": "nTop",
-    "slug": "ntop",
-    "short_desc": "Engineering design software for additive manufacturing.",
-    "score": 4.9,
-    "logo_url": "/logos/ntop.png",
-    "official_url": "https://www.ntop.com",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Aerospace",
-      "Medical",
-      "Automotive"
-    ],
-    "features": [
-      "generative-design"
-    ],
-    "country": "USA"
-  },
-  {
-    "id": "t32",
-    "name": "SolidCAM",
-    "slug": "solidcam",
-    "short_desc": "Integrated CAM inside SolidWorks, from 2.5-axis milling up to 5-axis simultaneous.",
-    "score": 4.8,
-    "logo_url": "/logos/solidcam.jpg",
-    "official_url": "https://www.solidcam.com",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Manufacturing",
-      "Medical",
-      "Aerospace"
-    ],
-    "features": [
-      "integrated-cam"
-    ],
-    "country": "Israel"
-  },
-  {
-    "id": "t34",
-    "name": "Bluebeam Revu",
-    "slug": "bluebeam-revu",
-    "short_desc": "The AEC standard for PDF markup and collaboration.",
-    "score": 4.9,
-    "logo_url": "/logos/bluebeam-revu.png",
-    "official_url": "https://www.bluebeam.com",
-    "category_id": "c4",
-    "category_name": "Viewer",
-    "aliases": [],
-    "industries": [
-      "AEC",
-      "Construction",
-      "Estimating"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t35",
-    "name": "Navisworks",
-    "slug": "navisworks",
-    "short_desc": "Project review software for clash detection.",
-    "score": 4.8,
-    "logo_url": "/logos/navisworks.svg",
-    "official_url": "https://www.autodesk.com/products/navisworks/overview",
-    "category_id": "c4",
-    "category_name": "Viewer",
-    "aliases": [],
-    "industries": [
-      "Construction",
-      "AEC",
-      "Oil & Gas"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t36",
-    "name": "Solibri",
-    "slug": "solibri",
-    "short_desc": "The BIM quality assurance and QC leader.",
-    "score": 4.7,
-    "logo_url": "/logos/solibri.png",
-    "official_url": "https://www.solibri.com",
-    "category_id": "c4",
-    "category_name": "Viewer",
-    "aliases": [],
-    "industries": [
-      "AEC",
-      "BIM Management"
-    ],
-    "features": [],
-    "country": "Finland"
-  },
-  {
-    "id": "t37",
-    "name": "MeshLab",
-    "slug": "meshlab",
-    "short_desc": "Open-source system for processing 3D meshes.",
-    "score": 4.1,
-    "logo_url": "/logos/meshlab.png",
-    "official_url": "https://www.meshlab.net",
-    "category_id": "c4",
-    "category_name": "Viewer",
-    "aliases": [],
-    "industries": [
-      "Research",
-      "Archaeology",
-      "3D Printing"
-    ],
-    "features": [
-      "mesh-modeling"
-    ],
-    "country": "Italy"
-  },
-  {
-    "id": "t38",
-    "name": "Magics",
-    "slug": "magics",
-    "short_desc": "Data and build preparation for 3D printing.",
-    "score": 4.9,
-    "logo_url": "/logos/magics.ico",
-    "official_url": "https://www.materialise.com",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Additive Manufacturing",
-      "Medical",
-      "Aerospace"
-    ],
-    "features": [],
-    "country": "Belgium"
-  },
-  {
-    "id": "t39",
-    "name": "Recap Pro",
-    "slug": "recap-pro",
-    "short_desc": "Reality capture and 3D scanning software.",
-    "score": 4.6,
-    "logo_url": "/logos/recap-pro.svg",
-    "official_url": "https://www.autodesk.com/recap",
-    "category_id": "c4",
-    "category_name": "Viewer",
-    "aliases": [],
-    "industries": [
-      "AEC",
-      "Surveying",
-      "Infrastructure"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t42",
-    "name": "Eagle",
-    "slug": "eagle",
-    "short_desc": "Discontinued PCB design software — Autodesk ended EAGLE sales and support on 7 June 2026; perpetual licences still run, and the workflow now lives in Autodesk Fusion Electronics.",
-    "score": 4.6,
-    "logo_url": "/logos/eagle.svg",
-    "official_url": "https://www.autodesk.com/products/fusion-360/overview",
-    "category_id": "c6",
-    "category_name": "EDA",
-    "aliases": [],
-    "industries": [
-      "Electronics",
-      "IoT",
-      "Education"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t44",
-    "name": "Civil 3D",
-    "slug": "civil-3d",
-    "short_desc": "Civil engineering design and documentation software.",
-    "score": 4.8,
-    "logo_url": "/logos/civil-3d.png",
-    "official_url": "https://www.autodesk.com/products/civil-3d/overview",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Civil Engineering",
-      "Transportation"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t48",
-    "name": "Solid Edge Viewer",
-    "slug": "solid-edge-viewer",
-    "short_desc": "Free viewer for Solid Edge and 2D CAD files.",
-    "score": 4.2,
-    "logo_url": "/logos/solid-edge-viewer.png",
-    "official_url": "https://solidedge.siemens.com/en/solutions/users/free-viewers/",
-    "category_id": "c4",
-    "category_name": "Viewer",
-    "aliases": [],
-    "industries": [
-      "Manufacturing",
-      "General"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t49",
-    "name": "DWG TrueView",
-    "slug": "dwg-trueview",
-    "short_desc": "Official free DWG viewer and converter.",
-    "score": 4.3,
-    "logo_url": "/logos/dwg-trueview.svg",
-    "official_url": "https://www.autodesk.com/products/dwg-trueview/overview",
-    "category_id": "c4",
-    "category_name": "Viewer",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Engineering"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t50",
     "name": "Maya",
     "slug": "maya",
-    "short_desc": "3D animation, modeling, and simulation software.",
-    "score": 4.9,
+    "short_desc": "Autodesk’s industry-standard 3D animation, modeling, simulation, and rendering software for film, television, and game development.",
+    "score": 4.4,
     "logo_url": "/logos/maya.svg",
     "official_url": "https://www.autodesk.com/products/maya/overview",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "VFX",
-      "Gaming",
-      "Animation"
+      "Feature Film & VFX",
+      "Video Game Development",
+      "Television & Commercials",
+      "Digital Architectural Animation",
+      "Virtual Production"
     ],
     "features": [
       "subdivision-modeling",
       "mesh-modeling"
     ],
-    "country": "USA"
+    "country": "United States"
   },
   {
-    "id": "t51",
+    "id": "t31",
+    "name": "nTop",
+    "slug": "ntop",
+    "short_desc": "Computational engineering software using implicit modeling for generative design, complex TPMS lattices, and additive manufacturing.",
+    "score": 4.6,
+    "logo_url": "/logos/ntop.png",
+    "official_url": "https://www.ntop.com",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
+    "aliases": [],
+    "industries": [
+      "Aerospace & Defense Lightweighting",
+      "Metal Additive Manufacturing",
+      "Medical Implants & Orthopedics",
+      "Advanced Heat Exchangers",
+      "Automotive Performance Engineering"
+    ],
+    "features": [
+      "generative-design"
+    ],
+    "country": ""
+  },
+  {
+    "id": "t32",
     "name": "Blender",
     "slug": "blender",
-    "short_desc": "The free and open-source 3D creation suite.",
-    "score": 4.8,
-    "logo_url": "/logos/blender.png",
-    "official_url": "https://www.blender.org",
+    "short_desc": "The free and open-source 3D creation suite supporting modeling, rigging, animation, simulation, rendering, compositing, and video editing.",
+    "score": 4.7,
+    "logo_url": "/logos/blender.svg",
+    "official_url": "https://www.blender.org/",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Indie Games",
-      "VFX",
-      "Hobbyist"
+      "Independent Game Development",
+      "VFX & Commercial Animation",
+      "3D Printing & Rapid Prototyping",
+      "Architectural Visualization",
+      "Motion Graphics & Concept Art"
     ],
     "features": [
       "rendering",
@@ -1166,249 +870,111 @@
     "country": "Netherlands"
   },
   {
-    "id": "t53",
-    "name": "DWG FastView",
-    "slug": "dwg-fastview",
-    "short_desc": "Lightweight cross-platform CAD viewer & editor.",
-    "score": 4.6,
-    "logo_url": "/logos/dwg-fastview.ico",
-    "official_url": "https://en.dwgfastview.com",
-    "category_id": "c4",
-    "category_name": "Viewer",
+    "id": "t32",
+    "name": "SolidCAM",
+    "slug": "solidcam",
+    "short_desc": "Leader in integrated CAM for SolidWorks and Inventor featuring patented iMachining high-speed milling technology.",
+    "score": 4.5,
+    "logo_url": "/logos/solidcam.png",
+    "official_url": "https://www.solidcam.com",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Construction",
-      "Real Estate",
-      "Architecture"
+      "Precision Production Machining",
+      "Medical Implants & Miniature Swiss Turning",
+      "Aerospace Machined Components",
+      "Automotive Parts Manufacturing",
+      "Tool, Die & Mold Making"
     ],
-    "features": [],
-    "country": "China"
+    "features": [
+      "integrated-cam"
+    ],
+    "country": ""
   },
   {
-    "id": "t63",
-    "name": "EPLAN Electric P8",
-    "slug": "eplan-electric-p8",
-    "short_desc": "The global standard for electrical engineering.",
-    "score": 4.9,
-    "logo_url": "/logos/eplan-electric-p8.ico",
-    "official_url": "https://www.eplan.com/us-en/",
-    "category_id": "c6",
-    "category_name": "EDA",
-    "aliases": [],
-    "industries": [
-      "Electrical Engineering",
-      "Automation"
-    ],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t65",
-    "name": "MatrixGold",
-    "slug": "matrixgold",
-    "short_desc": "Jewelry design and CAD software for custom ring and piece modelling.",
-    "score": 4.9,
-    "logo_url": "/logos/matrixgold.png",
-    "official_url": "https://www.gemvision.com/matrixgold",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Jewelry Design",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t68",
-    "name": "AVEVA Marine",
-    "slug": "aveva-marine",
-    "short_desc": "Integrated engineering and design for shipbuilding.",
-    "score": 4.9,
-    "logo_url": "/logos/aveva-marine.ico",
-    "official_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Shipbuilding",
-      "Oil & Gas"
-    ],
-    "features": [],
-    "country": "UK"
-  },
-  {
-    "id": "t69",
-    "name": "CLO 3D",
-    "slug": "clo-3d",
-    "short_desc": "3D garment visualization and design.",
-    "score": 4.8,
-    "logo_url": "/logos/clo-3d.png",
-    "official_url": "https://www.clo3d.com",
-    "category_id": "c7",
-    "category_name": "Specialized",
-    "aliases": [],
-    "industries": [
-      "Fashion",
-      "Apparel",
-      "Gaming"
-    ],
-    "features": [],
-    "country": "South Korea"
-  },
-  {
-    "id": "t74",
-    "name": "Vectorworks Landmark",
-    "slug": "vectorworks-landmark",
-    "short_desc": "The premier CAD software for landscape design.",
-    "score": 4.8,
-    "logo_url": "/logos/vectorworks.png",
-    "official_url": "https://www.vectorworks.net/landmark",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Landscape Architecture",
-      "Urban Planning"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t79",
+    "id": "t33",
     "name": "Geomagic Design X",
     "slug": "geomagic-design-x",
-    "short_desc": "Reverse engineering software that turns scan data into parametric CAD models.",
-    "score": 4.9,
-    "logo_url": "/logos/geomagic-design-x.png",
-    "official_url": "https://hexagon.com/products/geomagic-design-x",
+    "short_desc": "The industry's leading reverse engineering software that converts 3D scan data into feature-based, editable parametric CAD models.",
+    "score": 4.5,
+    "logo_url": "/logos/geomagic-design-x.svg",
+    "official_url": "https://www.oqton.com/geomagic-design-x/",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Reverse Engineering",
-      "Quality Control"
+      "Automotive Aftermarket & Restomod",
+      "Aerospace MRO & Replacement Parts",
+      "Heavy Machinery & Legacy Tooling",
+      "Medical Implants & Prosthetics",
+      "Consumer Hardware Product Redesign"
     ],
     "features": [
       "reverse-engineering",
       "mesh-modeling"
     ],
-    "country": "USA"
+    "country": "United States"
   },
   {
-    "id": "t80",
+    "id": "t34",
     "name": "Alias AutoStudio",
     "slug": "alias-autostudio",
-    "short_desc": "Industrial design and automotive styling software.",
-    "score": 4.9,
+    "short_desc": "Autodesk’s premier automotive styling and Class-A surfacing software for exterior and interior vehicle concept design.",
+    "score": 4.3,
     "logo_url": "/logos/alias-autostudio.svg",
     "official_url": "https://www.autodesk.com/products/alias-products/overview",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Industrial Design"
+      "Automotive Exterior & Interior Design",
+      "Luxury Yacht & Marine Styling",
+      "Consumer Electronics Industrial Design",
+      "Aerospace Cabin Concept Styling",
+      "Commercial Transportation"
     ],
     "features": [],
-    "country": "USA"
+    "country": "United States"
   },
   {
-    "id": "t81",
-    "name": "Cimatron",
-    "slug": "cimatron",
-    "short_desc": "Integrated CAD/CAM for mold and die makers.",
-    "score": 4.8,
-    "logo_url": "/logos/cimatron.png",
-    "official_url": "https://www.cimatron.com",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
+    "id": "t34",
+    "name": "Bluebeam Revu",
+    "slug": "bluebeam-revu",
+    "short_desc": "Nemetschek’s industry-standard construction PDF markup, quantity takeoff, and real-time cloud collaboration software.",
+    "score": 4.6,
+    "logo_url": "/logos/bluebeam-revu.png",
+    "official_url": "https://www.bluebeam.com",
+    "category_id": "c4",
+    "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Mold Design",
-      "Die Design"
-    ],
-    "features": [
-      "integrated-cam"
-    ],
-    "country": "Israel"
-  },
-  {
-    "id": "t84",
-    "name": "ANSYS Mechanical",
-    "slug": "ansys-mechanical",
-    "short_desc": "The gold standard for structural FEA simulation.",
-    "score": 4.9,
-    "logo_url": "/logos/ansys-mechanical.png",
-    "official_url": "https://www.ansys.com/products/structures/ansys-mechanical",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Energy",
-      "Manufacturing"
-    ],
-    "features": [
-      "simulation-fea"
-    ],
-    "country": "USA"
-  },
-  {
-    "id": "t85",
-    "name": "MSC Nastran",
-    "slug": "msc-nastran",
-    "short_desc": "NASA-born structural analysis solver, now part of Cadence.",
-    "score": 4.9,
-    "logo_url": "/logos/msc-nastran.png",
-    "official_url": "https://www.cadence.com/en_US/home/tools/msc-software/msc-nastran.html",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Defense"
+      "Commercial Construction",
+      "General Contracting",
+      "Architecture & Engineering",
+      "Electrical & Plumbing Subcontracting",
+      "Quantity Surveying & Estimating"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
-    "id": "t86",
-    "name": "Altair HyperWorks",
-    "slug": "altair-hyperworks",
-    "short_desc": "Altair's open-architecture simulation suite — HyperMesh, OptiStruct, Radioss and AcuSolve on one unit-based licence.",
-    "score": 4.8,
-    "logo_url": "/logos/altair-hyperworks.png",
-    "official_url": "https://www.siemens.com/en-us/company/about/businesses/digital-industries/altair/",
-    "category_id": "c5",
-    "category_name": "CAE/CAM",
-    "aliases": [],
-    "industries": [
-      "Automotive",
-      "Aerospace",
-      "Manufacturing"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t89",
+    "id": "t35",
     "name": "ZW3D",
     "slug": "zw3d",
-    "short_desc": "All-in-one 3D CAD/CAM solution from ZWSOFT.",
-    "score": 4.5,
-    "logo_url": "/logos/zw3d.ico",
+    "short_desc": "An all-in-one 3D CAD/CAE/CAM solution powered by the proprietary Overdrive geometric modeling engine for mold and machine design.",
+    "score": 4.4,
+    "logo_url": "/logos/zw3d.svg",
     "official_url": "https://www.zwsoft.com/product/zw3d",
     "category_id": "c2",
     "category_name": "3D Modeling",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Mechanical",
-      "Mold Design"
+      "Mold & Die Tooling",
+      "Machinery Manufacturing",
+      "Consumer Electronics",
+      "Automotive Components",
+      "Precision CNC Machining"
     ],
     "features": [
       "integrated-cam",
@@ -1417,10 +983,914 @@
     "country": "China"
   },
   {
+    "id": "t35",
+    "name": "Navisworks",
+    "slug": "navisworks",
+    "short_desc": "Autodesk’s multi-discipline 3D model aggregation, clash detection, and 4D construction schedule simulation software.",
+    "score": 4.4,
+    "logo_url": "/logos/navisworks.svg",
+    "official_url": "https://www.autodesk.com/products/navisworks/overview",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "BIM Coordination",
+      "General Contracting",
+      "MEP Systems Coordination",
+      "Civil Infrastructure",
+      "Industrial Plant Engineering"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t36",
+    "name": "Plasticity",
+    "slug": "plasticity",
+    "short_desc": "The CAD software for artists—a fast, modern NURBS modeling tool powered by Siemens Parasolid for concept art, hard-surface design, and 3D printing.",
+    "score": 4.6,
+    "logo_url": "/logos/plasticity.svg",
+    "official_url": "https://www.plasticity.xyz/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Concept Art & Entertainment Design",
+      "Hard-Surface Game Asset Creation",
+      "Consumer Hardware Prototyping",
+      "3D Printing & Collectibles",
+      "Industrial Product Styling"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t36",
+    "name": "Solibri",
+    "slug": "solibri",
+    "short_desc": "Nemetschek’s rule-based model checking software for automated BIM quality assurance, code compliance, and quantity takeoff.",
+    "score": 4.5,
+    "logo_url": "/logos/solibri.png",
+    "official_url": "https://www.solibri.com",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "BIM Management",
+      "Architectural Quality Assurance",
+      "Code Compliance & Permitting",
+      "General Contracting",
+      "Owner & Facility Management"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t37",
+    "name": "MoI3D",
+    "slug": "moi3d",
+    "short_desc": "Moment of Inspiration—a lightweight, intuitive NURBS modeler with pen/tablet optimization and the industry's finest N-Gon polygon mesher.",
+    "score": 4.5,
+    "logo_url": "/logos/moi3d.svg",
+    "official_url": "https://moi3d.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Concept Art & Hard-Surface Assets",
+      "Industrial & Product Design",
+      "Laser Cutting & Craft Fabrication",
+      "Jewelry & Small Electronics",
+      "3D Printing & Model Making"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t37",
+    "name": "MeshLab",
+    "slug": "meshlab",
+    "short_desc": "Open-source system for the processing, editing, cleaning, healing, inspecting, rendering, and converting of large unstructured 3D triangular meshes.",
+    "score": 4.4,
+    "logo_url": "/logos/meshlab.png",
+    "official_url": "https://www.meshlab.net",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "3D Scanning & Metrology",
+      "Archaeology & Cultural Heritage",
+      "Reverse Engineering",
+      "Additive Manufacturing (3D Printing)",
+      "Scientific & Academic Research"
+    ],
+    "features": [
+      "mesh-modeling"
+    ],
+    "country": ""
+  },
+  {
+    "id": "t38",
+    "name": "Tinkercad",
+    "slug": "tinkercad",
+    "short_desc": "Autodesk’s free, easy-to-use web app that equips the next generation of engineers with 3D design, electronics, and coding skills.",
+    "score": 4.6,
+    "logo_url": "/logos/tinkercad.svg",
+    "official_url": "https://www.tinkercad.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "K-12 STEM Education",
+      "Makers & Hobbyist 3D Printing",
+      "Beginner Electronics Prototyping",
+      "Library & FabLab Maker Spaces",
+      "Rapid Conceptual Prototyping"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t38",
+    "name": "Magics",
+    "slug": "magics",
+    "short_desc": "Materialise’s industry-standard data preparation and STL editing software for industrial 3D printing and additive manufacturing.",
+    "score": 4.6,
+    "logo_url": "/logos/magics.png",
+    "official_url": "https://www.materialise.com",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
+    "aliases": [],
+    "industries": [
+      "Industrial 3D Printing Bureaus",
+      "Aerospace Additive Manufacturing",
+      "Medical Implants & Dental Devices",
+      "Automotive Prototyping",
+      "Tooling & Rapid Prototyping"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t39",
+    "name": "Glovius",
+    "slug": "glovius",
+    "short_desc": "Modern multi-platform 3D CAD viewer for Windows, cloud, and mobile to view, measure, analyze, and convert native CAD files without licenses.",
+    "score": 4.4,
+    "logo_url": "/logos/glovius.svg",
+    "official_url": "https://www.glovius.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Machinery Manufacturing",
+      "Shop Floor Assembly",
+      "Procurement & Quoting",
+      "Quality Assurance & Inspection",
+      "Automotive Tier Suppliers"
+    ],
+    "features": [],
+    "country": "India"
+  },
+  {
+    "id": "t39",
+    "name": "Recap Pro",
+    "slug": "recap-pro",
+    "short_desc": "Autodesk’s reality capture software for turning laser scans and drone photographs into 3D point clouds and textured meshes.",
+    "score": 4.4,
+    "logo_url": "/logos/recap-pro.svg",
+    "official_url": "https://www.autodesk.com/products/recap-pro/overview",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "Reality Capture & Land Surveying",
+      "Scan-to-BIM Architecture",
+      "Historical Preservation & Heritage",
+      "Industrial Plant As-Built Modeling",
+      "Civil & Highway Earthworks"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t40",
+    "name": "CAD Exchanger",
+    "slug": "cad-exchanger",
+    "short_desc": "High-speed 3D CAD data converter, viewer, and developer SDK supporting 30+ proprietary and neutral CAD/BIM/mesh formats.",
+    "score": 4.6,
+    "logo_url": "/logos/cad-exchanger.svg",
+    "official_url": "https://cadexchanger.com/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "CAD/CAM Software Development",
+      "Digital Twin & AR/VR Pipelines",
+      "Manufacturing Interoperability",
+      "Cloud CAD Web Portals",
+      "Automotive & Aerospace Tier Supply"
+    ],
+    "features": [],
+    "country": "Estonia"
+  },
+  {
+    "id": "t41",
+    "name": "KOMPAS-3D",
+    "slug": "kompas-3d",
+    "short_desc": "ASCON’s professional 3D parametric CAD system powered by the C3D geometric kernel with native GOST engineering standards.",
+    "score": 4.4,
+    "logo_url": "/logos/kompas-3d.svg",
+    "official_url": "https://kompas.ru/",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Heavy Machinery Manufacturing",
+      "Aerospace & Defense",
+      "Power Engineering",
+      "Industrial Equipment",
+      "Sheet Metal Fabrication"
+    ],
+    "features": [],
+    "country": "Russia"
+  },
+  {
+    "id": "t42",
+    "name": "DesignSpark Mechanical",
+    "slug": "designspark-mechanical",
+    "short_desc": "Free and subscription direct 3D CAD modeling software by RS Components and Ansys for rapid electronics and mechanical prototyping.",
+    "score": 4.4,
+    "logo_url": "/logos/designspark-mechanical.svg",
+    "official_url": "https://www.rs-online.com/designspark/mechanical-software",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Electronics & PCB Packaging",
+      "Rapid Prototyping & 3D Printing",
+      "Maker Movement & Education",
+      "Small Mechanical Devices",
+      "Electrical Enclosure Design"
+    ],
+    "features": [],
+    "country": "United Kingdom"
+  },
+  {
+    "id": "t42",
+    "name": "Autodesk EAGLE",
+    "slug": "eagle",
+    "short_desc": "Autodesk’s accessible PCB design and schematic software integrated directly within the Fusion 360 manufacturing ecosystem.",
+    "score": 4.4,
+    "logo_url": "/logos/eagle.png",
+    "official_url": "https://www.autodesk.com/products/fusion-360/overview",
+    "category_id": "c6",
+    "category_name": "EDA",
+    "aliases": [],
+    "industries": [
+      "Makers & Hardware Startups",
+      "Consumer IoT Products",
+      "Robotics & Automation Hardware",
+      "Academic Electronics Laboratories",
+      "Small-Scale Electronic Manufacturing"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t43",
+    "name": "3DEXPERIENCE",
+    "slug": "3dexperience",
+    "short_desc": "Dassault Systèmes’ unified cloud platform integrating CATIA, SOLIDWORKS, SIMULIA, and ENOVIA for enterprise product lifecycle collaboration.",
+    "score": 4.4,
+    "logo_url": "/logos/3dexperience.svg",
+    "official_url": "https://www.3ds.com/3dexperience",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Aerospace & Defense",
+      "Automotive & Mobility",
+      "Industrial Equipment",
+      "Life Sciences & Medical",
+      "High Tech Electronics"
+    ],
+    "features": [],
+    "country": "France"
+  },
+  {
+    "id": "t44",
+    "name": "MECHCAD",
+    "slug": "mechcad",
+    "short_desc": "Streamlined mechanical 2D/3D CAD software optimized for machine layout drafting, tooling sketches, and standard mechanical parts.",
+    "score": 4.3,
+    "logo_url": "/logos/mechcad.svg",
+    "official_url": "https://cadguide.tools/tools/mechcad",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "General Mechanical Engineering",
+      "Tool and Die Fabrication",
+      "Machine Assembly Shops",
+      "Pneumatics & Hydraulics",
+      "Job Shop Prototyping"
+    ],
+    "features": [
+      "parametric-modeling",
+      "integrated-cam",
+      "simulation-fea",
+      "sheet-metal"
+    ],
+    "country": "Germany"
+  },
+  {
+    "id": "t45",
+    "name": "FabRapid 3D",
+    "slug": "fabrapid-3d",
+    "short_desc": "Agile rapid prototyping and direct 3D modeling tool optimized for quick manufacturing turnaround, CNC fixture setups, and 3D printing.",
+    "score": 4.3,
+    "logo_url": "/logos/fabrapid-3d.svg",
+    "official_url": "https://cadguide.tools/tools/fabrapid-3d",
+    "category_id": "c2",
+    "category_name": "3D Modeling",
+    "aliases": [],
+    "industries": [
+      "Rapid Prototyping",
+      "3D Printing & Additive Manufacturing",
+      "CNC Job Shops",
+      "Maker Spaces",
+      "Custom Fabrication"
+    ],
+    "features": [],
+    "country": "International"
+  },
+  {
+    "id": "t46",
+    "name": "Revit",
+    "slug": "revit",
+    "short_desc": "Autodesk’s premier Building Information Modeling (BIM) software for architectural design, structural engineering, and MEP systems coordination.",
+    "score": 4.6,
+    "logo_url": "/logos/revit.svg",
+    "official_url": "https://www.autodesk.com/products/revit/overview",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Commercial Architecture",
+      "Structural Engineering",
+      "MEP Systems Contracting",
+      "Construction Management (BIM/VDC)",
+      "Infrastructure & Civil Facilities"
+    ],
+    "features": [
+      "cloud-collaboration",
+      "bim-integration",
+      "piping-routing"
+    ],
+    "country": "United States"
+  },
+  {
+    "id": "t47",
+    "name": "ArchiCAD",
+    "slug": "archicad",
+    "short_desc": "Graphisoft’s pioneer architectural BIM software designed by architects for architects, featuring BIMcloud collaboration and native OpenBIM.",
+    "score": 4.6,
+    "logo_url": "/logos/archicad.svg",
+    "official_url": "https://graphisoft.com/solutions/archicad",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Architectural Design Studios",
+      "Residential & Commercial Architecture",
+      "Interior Architecture",
+      "Historic Building Preservation",
+      "Urban Design & Master Planning"
+    ],
+    "features": [
+      "cloud-collaboration",
+      "bim-integration"
+    ],
+    "country": "Hungary"
+  },
+  {
+    "id": "t48",
+    "name": "Tekla Structures",
+    "slug": "tekla-structures",
+    "short_desc": "Trimble’s industry-standard structural BIM software for advanced steel detailing, precast and cast-in-place concrete fabrication (LOD 500).",
+    "score": 4.6,
+    "logo_url": "/logos/tekla-structures.svg",
+    "official_url": "https://www.tekla.com/products/tekla-structures",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Structural Steel Fabrication",
+      "Precast Concrete Manufacturing",
+      "Rebar Detailing & Placement",
+      "Bridges & Heavy Civil Infrastructure",
+      "Industrial Plant Construction"
+    ],
+    "features": [
+      "bim-integration"
+    ],
+    "country": "Finland"
+  },
+  {
+    "id": "t48",
+    "name": "Solid Edge Viewer",
+    "slug": "solid-edge-viewer",
+    "short_desc": "Siemens’ official free viewer for opening, measuring, sectioning, and reviewing native Solid Edge 3D models and 2D draft drawings.",
+    "score": 4.3,
+    "logo_url": "/logos/solid-edge-viewer.png",
+    "official_url": "https://solidedge.siemens.com/en/solutions/users/free-viewers/",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "Mechanical Machinery",
+      "Sheet Metal Fabrication",
+      "Manufacturing Supply Chain",
+      "Quality Assurance & Inspection",
+      "Automotive & Aerospace Subcontracting"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t49",
+    "name": "Vectorworks",
+    "slug": "vectorworks",
+    "short_desc": "Versatile all-in-one BIM and CAD design software combining flexible 2D graphics, Parasolid 3D modeling, and IFC documentation.",
+    "score": 4.4,
+    "logo_url": "/logos/vectorworks.svg",
+    "official_url": "https://www.vectorworks.net/en-US/architect",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Architectural Design Studios",
+      "Interior Architecture & Fit-Out",
+      "Landscape Architecture & Planning",
+      "Entertainment & Stage Production",
+      "Urban Design & Campus Planning"
+    ],
+    "features": [
+      "bim-integration"
+    ],
+    "country": "United States"
+  },
+  {
+    "id": "t49",
+    "name": "DWG TrueView",
+    "slug": "dwg-trueview",
+    "short_desc": "Autodesk’s official free software to view, plot, and convert native AutoCAD DWG and DXF drawing files.",
+    "score": 4.4,
+    "logo_url": "/logos/dwg-trueview.svg",
+    "official_url": "https://www.autodesk.com/products/dwg-trueview/overview",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "Architecture & Drafting",
+      "Civil Infrastructure",
+      "General Construction",
+      "Manufacturing & Fabrication",
+      "Facility Management"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t50",
+    "name": "Chief Architect",
+    "slug": "chief-architect",
+    "short_desc": "Professional 3D residential home design, interior remodeling, and timber framing software with automated building elements.",
+    "score": 4.5,
+    "logo_url": "/logos/chief-architect.svg",
+    "official_url": "https://www.chiefarchitect.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Residential Home Building",
+      "Remodeling & Renovation Contractors",
+      "Kitchen & Bath Design",
+      "Interior Architecture",
+      "Timber Frame Construction"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t51",
+    "name": "Civil 3D",
+    "slug": "civil-3d",
+    "short_desc": "Autodesk’s civil infrastructure design and documentation software for roads, highways, land development, and gravity pipe networks.",
+    "score": 4.5,
+    "logo_url": "/logos/civil-3d.svg",
+    "official_url": "https://www.autodesk.com/products/civil-3d/overview",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Civil Infrastructure & Highways",
+      "Land Development & Subdivisions",
+      "Municipal Water & Stormwater Management",
+      "Rail Transportation Engineering",
+      "Earthwork & Site Grading Contracting"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t52",
+    "name": "Vectorworks Landmark",
+    "slug": "vectorworks-landmark",
+    "short_desc": "Premier landscape architecture, site design, and terrain BIM software featuring GIS integration, site grading, and smart planting tools.",
+    "score": 4.5,
+    "logo_url": "/logos/vectorworks-landmark.svg",
+    "official_url": "https://www.vectorworks.net/en-US/landmark",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Landscape Architecture Studios",
+      "Urban Design & Master Planning",
+      "Parks & Recreation Planning",
+      "Campus & Commercial Site Design",
+      "Environmental & Ecological Planning"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t53",
+    "name": "Allplan",
+    "slug": "allplan",
+    "short_desc": "Nemetschek’s integrated BIM design-to-build software for architects, structural engineers, and precast concrete fabricators.",
+    "score": 4.5,
+    "logo_url": "/logos/allplan.svg",
+    "official_url": "https://www.allplan.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Structural Engineering Consultancies",
+      "Commercial & Residential Architecture",
+      "Precast Concrete Manufacturing",
+      "Bridge & Civil Infrastructure",
+      "General Contracting & Construction"
+    ],
+    "features": [],
+    "country": "Germany"
+  },
+  {
+    "id": "t53",
+    "name": "DWG FastView",
+    "slug": "dwg-fastview",
+    "short_desc": "GstarCAD’s cross-platform CAD viewer and lightweight drafting tool for Windows, Web, Android, and iOS.",
+    "score": 4.5,
+    "logo_url": "/logos/dwg-fastview.ico",
+    "official_url": "https://en.dwgfastview.com",
+    "category_id": "c4",
+    "category_name": "Viewer",
+    "aliases": [],
+    "industries": [
+      "Construction Field Inspection",
+      "Architecture & Interior Design",
+      "Real Estate & Property Management",
+      "Surveying & Civil Engineering",
+      "Subcontractor Trade Coordination"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t54",
+    "name": "OpenRoads Designer",
+    "slug": "openroads-designer",
+    "short_desc": "Bentley’s comprehensive civil transportation software for road, highway, drainage, and subsurface utility modeling (MicroStation-based).",
+    "score": 4.4,
+    "logo_url": "/logos/openroads-designer.svg",
+    "official_url": "https://www.bentley.com/software/openroads-designer/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Highway & Transportation Departments (DOT)",
+      "Civil Engineering Consultancies",
+      "Bridge & Corridor Infrastructure",
+      "Municipal Stormwater & Sewer Networks",
+      "Heavy Earthwork Contracting"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t55",
+    "name": "cadwork",
+    "slug": "cadwork",
+    "short_desc": "The leading 3D CAD/CAM software for timber construction, mass timber (CLT), carpentry, and direct CNC joinery fabrication.",
+    "score": 4.6,
+    "logo_url": "/logos/cadwork.svg",
+    "official_url": "https://www.cadwork.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Mass Timber & CLT Construction",
+      "Heavy Timber Framing & Carpentry",
+      "Prefabricated Wood Housing Factories",
+      "Roof Truss & Facade Engineering",
+      "Architectural Woodwork & Joinery"
+    ],
+    "features": [],
+    "country": "Switzerland"
+  },
+  {
+    "id": "t56",
+    "name": "MagiCAD",
+    "slug": "magicad",
+    "short_desc": "Leading European MEP (mechanical, electrical, plumbing) BIM software with verified manufacturer BIM objects for Revit and AutoCAD.",
+    "score": 4.5,
+    "logo_url": "/logos/magicad.svg",
+    "official_url": "https://www.magicad.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Building Services Engineering (MEP)",
+      "HVAC & Mechanical Contracting",
+      "Electrical Systems Engineering",
+      "Plumbing & Fire Protection Contractors",
+      "Commercial Building Facilities"
+    ],
+    "features": [],
+    "country": "Finland"
+  },
+  {
+    "id": "t57",
+    "name": "DDS-CAD",
+    "slug": "dds-cad",
+    "short_desc": "Standalone OpenBIM MEP design software by Graphisoft for electrical, heating, sanitary, and ventilation engineering.",
+    "score": 4.4,
+    "logo_url": "/logos/dds-cad.svg",
+    "official_url": "https://www.dds-cad.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Mechanical & Electrical Contractors (MEP)",
+      "Building Services Engineering",
+      "Heating & Sanitary Installers",
+      "Ventilation & Air Conditioning Firms",
+      "Prefabricated Building Services"
+    ],
+    "features": [],
+    "country": "Germany"
+  },
+  {
+    "id": "t58",
+    "name": "dRofus",
+    "slug": "drofus",
+    "short_desc": "Integrated cloud planning, room data sheet (RDS), and medical equipment management software for complex hospital and institutional BIM projects.",
+    "score": 4.6,
+    "logo_url": "/logos/drofus.svg",
+    "official_url": "https://www.drofus.com/",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Healthcare & Hospital Design",
+      "Airport & Aviation Infrastructure",
+      "Universities & Higher Education",
+      "Government Institutional Projects",
+      "Large-Scale Commercial Facilities"
+    ],
+    "features": [],
+    "country": "Norway"
+  },
+  {
+    "id": "t59",
+    "name": "AutoCAD Plant 3D",
+    "slug": "autocad-plant-3d",
+    "short_desc": "Autodesk’s specialized 3D plant design software for process piping, P&ID creation, equipment modeling, and isometric drafting.",
+    "score": 4.4,
+    "logo_url": "/logos/autocad-plant-3d.svg",
+    "official_url": "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Oil & Gas Refining",
+      "Chemical & Petrochemical Processing",
+      "Water & Wastewater Treatment",
+      "Food, Beverage & Pharmaceutical Processing",
+      "Power Generation & Industrial Facilities"
+    ],
+    "features": [],
+    "country": "United States"
+  },
+  {
+    "id": "t60",
+    "name": "Hexagon SmartPlant 3D",
+    "slug": "smartplant-3d",
+    "short_desc": "Hexagon’s enterprise mega-project 3D plant design software for oil, gas, offshore, marine, and nuclear facilities.",
+    "score": 4.4,
+    "logo_url": "/logos/smartplant-3d.svg",
+    "official_url": "https://hexagon.com/products/smart-3d",
+    "category_id": "c3",
+    "category_name": "BIM",
+    "aliases": [],
+    "industries": [
+      "Oil & Gas Super-Majors & EPCs",
+      "Offshore Marine & Floating Production (FPSO)",
+      "Petrochemical & Refining Plants",
+      "Nuclear & Thermal Power Generation",
+      "Heavy Industrial Mining & Metals"
+    ],
+    "features": [],
+    "country": "Sweden"
+  },
+  {
+    "id": "t63",
+    "name": "EPLAN Electric P8",
+    "slug": "eplan-electric-p8",
+    "short_desc": "The international standard electrical engineering software for automated control system schematics, wiring, and panel documentation.",
+    "score": 4.7,
+    "logo_url": "/logos/eplan.png",
+    "official_url": "https://www.eplan.com/",
+    "category_id": "c6",
+    "category_name": "EDA",
+    "aliases": [],
+    "industries": [
+      "Industrial Automation & Machine Building",
+      "Automotive Plant Engineering",
+      "Power Generation & Switchgear Manufacturing",
+      "Process Control & Food/Beverage Packaging",
+      "Building Automation & Controls"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t65",
+    "name": "MatrixGold",
+    "slug": "matrixgold",
+    "short_desc": "Gemvision’s industry-standard 3D CAD software specialized for professional jewelry design, gemstone pavé, and photorealistic rendering.",
+    "score": 4.8,
+    "logo_url": "/logos/matrixgold.png",
+    "official_url": "https://www.gemvision.com/matrixgold",
+    "category_id": "c7",
+    "category_name": "Specialized",
+    "aliases": [],
+    "industries": [
+      "Custom Fine Jewelry Manufacturing",
+      "Bridal & Engagement Ring Design",
+      "Luxury High-Jewelry Maisons",
+      "Gemstone Wholesalers & Cutters",
+      "Lost-Wax Casting Toolrooms"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t68",
+    "name": "AVEVA Marine",
+    "slug": "aveva-marine",
+    "short_desc": "AVEVA’s world-leading integrated naval architecture, ship hull design, and marine outfitting engineering software.",
+    "score": 4.7,
+    "logo_url": "/logos/aveva.png",
+    "official_url": "https://www.aveva.com/en/products/hull-and-outfitting/",
+    "category_id": "c7",
+    "category_name": "Specialized",
+    "aliases": [],
+    "industries": [
+      "Commercial Shipbuilding & Naval Yards",
+      "Offshore Oil & Gas Floating Units (FPSO)",
+      "Naval Defense & Patrol Vessel Design",
+      "Ship Repair & Marine Conversion Yards",
+      "Specialized Dredgers & Oceanographic Ships"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t69",
+    "name": "CLO 3D",
+    "slug": "clo-3d",
+    "short_desc": "The fashion industry’s premier 3D garment design, pattern making, and true-to-life fabric draping simulation software.",
+    "score": 4.8,
+    "logo_url": "/logos/clo-3d.png",
+    "official_url": "https://www.clo3d.com",
+    "category_id": "c7",
+    "category_name": "Specialized",
+    "aliases": [],
+    "industries": [
+      "Fashion Apparel & Luxury Brands",
+      "Sportswear & Performance Outerwear",
+      "Footwear & Leather Goods Design",
+      "Costume Design for Film & Gaming",
+      "Automotive & Aerospace Interior Seating"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t81",
+    "name": "Cimatron",
+    "slug": "cimatron",
+    "short_desc": "Sandvik’s integrated CAD/CAM software dedicated to mold making, progressive die design, and precision electrode manufacturing.",
+    "score": 4.5,
+    "logo_url": "/logos/cimatron.png",
+    "official_url": "https://www.cimatron.com",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
+    "aliases": [],
+    "industries": [
+      "Plastic Injection Mold Making",
+      "Progressive Stamping Tool & Die",
+      "Electrode Manufacturing & EDM",
+      "Automotive Tooling",
+      "Consumer Electronics Enclosures"
+    ],
+    "features": [
+      "integrated-cam"
+    ],
+    "country": ""
+  },
+  {
+    "id": "t84",
+    "name": "ANSYS Mechanical",
+    "slug": "ansys-mechanical",
+    "short_desc": "Ansys’ comprehensive finite element analysis (FEA) software for structural, thermal, dynamic, and multi-physics simulation.",
+    "score": 4.7,
+    "logo_url": "/logos/ansys-mechanical.png",
+    "official_url": "https://www.ansys.com/products/structures/ansys-mechanical",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
+    "aliases": [],
+    "industries": [
+      "Aerospace & Spacecraft",
+      "Automotive & e-Mobility",
+      "Heavy Machinery & Turbomachinery",
+      "Consumer Electronics",
+      "Energy & Power Generation"
+    ],
+    "features": [
+      "simulation-fea"
+    ],
+    "country": ""
+  },
+  {
+    "id": "t85",
+    "name": "MSC Nastran",
+    "slug": "msc-nastran",
+    "short_desc": "Hexagon’s premier multidisciplinary structural finite element analysis solver for aerospace, automotive, and defense certification.",
+    "score": 4.6,
+    "logo_url": "/logos/msc-nastran.png",
+    "official_url": "https://hexagon.com/products/msc-nastran",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
+    "aliases": [],
+    "industries": [
+      "Commercial Aerospace & Defense",
+      "Automotive Vehicle Architecture",
+      "Shipbuilding & Marine Structures",
+      "Rail Transportation",
+      "Space Launch Vehicles"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
+    "id": "t86",
+    "name": "Altair HyperWorks",
+    "slug": "altair-hyperworks",
+    "short_desc": "Altair’s comprehensive multidisciplinary CAE platform for FEA pre/post processing, structural topology optimization, and crash simulation.",
+    "score": 4.6,
+    "logo_url": "/logos/altair-hyperworks.png",
+    "official_url": "https://altair.com/hyperworks",
+    "category_id": "c5",
+    "category_name": "CAE/CAM",
+    "aliases": [],
+    "industries": [
+      "Automotive Crash & BIW Engineering",
+      "Aerospace Airframe Optimization",
+      "Heavy Machinery & Off-Highway",
+      "Rail & Transportation Systems",
+      "Consumer Goods Packaging"
+    ],
+    "features": [],
+    "country": ""
+  },
+  {
     "id": "t93",
     "name": "CAD Reader",
     "slug": "cad-reader",
-    "short_desc": "Mobile DWG viewer and measurement tool by Glodon.",
+    "short_desc": "Fast CAD Reader’s lightweight, cross-platform DWG/DXF viewer with specialized construction quantity measurement and markup tools.",
     "score": 4.4,
     "logo_url": "/logos/cad-reader.png",
     "official_url": "https://dwg.fastcadreader.com/",
@@ -1428,942 +1898,780 @@
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Engineering",
-      "Construction"
+      "Quantity Surveying & Cost Estimation",
+      "Construction Jobsite Supervision",
+      "Electrical & Mechanical Subcontracting",
+      "Interior Decorating & Fit-out",
+      "Facility Maintenance"
     ],
     "features": [],
-    "country": "China"
-  },
-  {
-    "id": "t94",
-    "name": "Allplan",
-    "slug": "allplan",
-    "short_desc": "Professional BIM platform by Nemetschek for AEC.",
-    "score": 4.5,
-    "logo_url": "/logos/allplan.png",
-    "official_url": "https://www.allplan.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Structural Engineering",
-      "Construction"
-    ],
-    "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t95",
-    "name": "OpenRoads Designer",
-    "slug": "openroads-designer",
-    "short_desc": "Comprehensive civil road design platform by Bentley.",
-    "score": 4.7,
-    "logo_url": "/logos/openroads-designer.png",
-    "official_url": "https://www.bentley.com/software/openroads-designer/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Civil Engineering",
-      "Transportation",
-      "Infrastructure"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t100",
-    "name": "3DEXPERIENCE",
-    "slug": "3dexperience",
-    "short_desc": "Dassault Systèmes' cloud-based collaborative platform that unifies design, engineering, simulation, and manufacturing through virtual twin technology.",
-    "score": 4.3,
-    "logo_url": "/logos/3dexperience.png",
-    "official_url": "https://www.3ds.com/products/3dexperience",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Industrial Equipment",
-      "Consumer Goods",
-      "Life Sciences",
-      "Architecture",
-      "Construction"
-    ],
-    "features": [],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t101",
     "name": "TopSolid",
     "slug": "topsolid",
-    "short_desc": "Integrated CAD/CAM/ERP suite for mechanical machining, sheet metal and tooling, built on the Parasolid kernel.",
-    "score": 0,
-    "logo_url": "/logos/topsolid.ico",
+    "short_desc": "TOPSOLID’s integrated CAD/CAM/ERP ecosystem dedicated to mechanical manufacturing, sheet metal, tooling, and woodworking.",
+    "score": 4.5,
+    "logo_url": "/logos/topsolid.png",
     "official_url": "https://www.topsolid.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Woodworking",
-      "Machinery",
-      "Tooling"
+      "Precision Mechanical Machining",
+      "Architectural Woodworking & Cabinetry",
+      "Sheet Metal & Stamping Die Fabrication",
+      "Mold & Tooling Manufacturing",
+      "Industrial Automation Equipment"
     ],
     "features": [],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t103",
     "name": "EPLAN",
     "slug": "eplan",
-    "short_desc": "Comprehensive electrical engineering software for automated schematic design, panel building, and control system engineering with integrated CAE capabilities.",
-    "score": 0,
+    "short_desc": "EPLAN’s integrated multi-disciplinary engineering platform spanning electrical, 3D control cabinet design, fluid power, and cloud workflows.",
+    "score": 4.7,
     "logo_url": "/logos/eplan.png",
-    "official_url": "https://www.eplan.com/us-en/",
+    "official_url": "https://www.eplan.com/",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Machine Building",
-      "Plant Engineering",
-      "Panel Building",
-      "Switchgear Manufacturing",
-      "Automation",
-      "Control Systems",
-      "Automotive",
-      "Energy",
-      "Industrial Machinery"
+      "Control Panel Manufacturing & Switchgear",
+      "Automotive Production Facilities",
+      "Industrial Automation & Packaging Systems",
+      "Machine Tool Engineering",
+      "Power Distribution & Renewable Utilities"
     ],
     "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t117",
-    "name": "KOMPAS-3D",
-    "slug": "kompas-3d",
-    "short_desc": "Professional 3D CAD software for mechanical engineering with parametric modeling, solid/surface/sheet metal design, and integrated analysis tools.",
-    "score": 0,
-    "logo_url": "/logos/kompas-3d.png",
-    "official_url": "https://ascon.net/kompas-3d/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Aerospace",
-      "Automotive",
-      "Transportation",
-      "Agriculture",
-      "Energy",
-      "Oil & Gas",
-      "Shipbuilding",
-      "Industrial Machinery",
-      "Heavy Equipment",
-      "Rail Transportation",
-      "Metallurgy",
-      "Construction"
-    ],
-    "features": [],
-    "country": "Russia"
+    "country": ""
   },
   {
     "id": "t121",
     "name": "AVEVA E3D Design",
     "slug": "aveva-e3d-design",
-    "short_desc": "Advanced 3D plant design and engineering software for process, power, and marine industries with intelligent modeling capabilities.",
-    "score": 0,
-    "logo_url": "/logos/aveva-e3d-design.ico",
+    "short_desc": "AVEVA’s flagship 3D plant design and digital twin engineering software integrating laser scans, piping, and structural modeling.",
+    "score": 4.9,
+    "logo_url": "/logos/aveva.png",
     "official_url": "https://www.aveva.com/en/products/e3d-design/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Oil and Gas",
-      "Chemical Processing",
-      "Power Generation",
-      "Shipbuilding",
-      "Offshore",
-      "Petrochemical",
-      "Pharmaceutical",
-      "Mining"
+      "Oil, Gas & LNG Processing Facilities",
+      "Chemical, Petrochemical & Plastics Refineries",
+      "Nuclear & Thermal Power Generation Plants",
+      "Offshore Platforms & Floating Production (FPSO)",
+      "Pharmaceutical & Food Manufacturing Facilities"
     ],
     "features": [],
-    "country": "UK"
-  },
-  {
-    "id": "t122",
-    "name": "DesignSpark Mechanical",
-    "slug": "designspark-mechanical",
-    "short_desc": "Direct-modelling 3D CAD from RS Group with a free Explorer tier, paid Creator and Engineer tiers, and an integrated manufacturer component library.",
-    "score": 0,
-    "logo_url": "/logos/designspark-mechanical.ico",
-    "official_url": "https://www.rs-online.com/designspark/mechanical-software",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Product Design",
-      "Mechanical Engineering",
-      "Rapid Prototyping",
-      "Hobbyist",
-      "Education",
-      "Small Business",
-      "Consumer Electronics"
-    ],
-    "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t124",
     "name": "VISI",
     "slug": "visi",
-    "short_desc": "Hexagon's integrated CAD/CAE/CAM suite for injection molds, progressive dies, electrodes and 5-axis toolpaths.",
-    "score": 3.7,
+    "short_desc": "Hexagon’s dedicated CAD/CAM software for mold and die design, progressive stamping tools, and high-speed CNC milling.",
+    "score": 4.5,
     "logo_url": "/logos/visi.png",
     "official_url": "https://hexagon.com/products/visi",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Mold Making",
-      "Die Design",
-      "Tooling"
+      "Plastic Injection Mold Tooling",
+      "Progressive Sheet Metal Die Making",
+      "Wire EDM Precision Fabrication",
+      "Automotive Stamping & Tooling",
+      "Medical Device Tooling"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t125",
     "name": "Edgecam",
     "slug": "edgecam",
-    "short_desc": "CAM software by Hexagon for CNC milling, turning, and multi-axis machining.",
-    "score": 3.8,
+    "short_desc": "Hexagon’s market-leading production CAM software for intelligent milling, turning, mill-turn, and wire EDM programming.",
+    "score": 4.5,
     "logo_url": "/logos/edgecam.png",
     "official_url": "https://hexagon.com/products/edgecam",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Aerospace",
-      "Automotive",
-      "Tooling"
+      "Production CNC Machining",
+      "Aerospace Component Manufacturing",
+      "Automotive Powertrain & Transmission",
+      "Oil & Gas Downhole Tooling",
+      "General Precision Subcontracting"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t126",
-    "name": "MIDAS Civil NX",
+    "name": "midas Civil",
     "slug": "midas-civil",
-    "short_desc": "MIDAS IT's bridge and civil-structure analysis and design program on the NX platform, with Excel- and API-driven design automation.",
-    "score": 0,
+    "short_desc": "MIDAS IT’s premier structural engineering software specialized for bridge design, construction stage analysis, and civil infrastructure.",
+    "score": 4.7,
     "logo_url": "/logos/midas-civil.png",
     "official_url": "https://www.midasuser.com/en/product/civil",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Civil Engineering",
-      "Bridge Engineering",
-      "Structural Engineering",
-      "Infrastructure",
-      "Construction",
-      "Transportation",
-      "Government"
+      "Highway & Rail Bridges",
+      "Cable-Stayed & Suspension Bridges",
+      "Prestressed Concrete Girders",
+      "DOT & Ministry Transportation",
+      "Civil Infrastructure"
     ],
     "features": [],
-    "country": "South Korea"
+    "country": ""
   },
   {
     "id": "t127",
-    "name": "MIDAS Gen",
+    "name": "midas Gen",
     "slug": "midas-gen",
-    "short_desc": "MIDAS IT's general-purpose structural analysis and design program for buildings, seismic assessment and plant structures.",
-    "score": 0,
+    "short_desc": "MIDAS IT’s integrated finite element system for general building structures, spatial structures, and performance-based seismic design.",
+    "score": 4.6,
     "logo_url": "/logos/midas-gen.png",
     "official_url": "https://www.midasuser.com/en/product/gen",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Building Design",
-      "Architecture",
-      "Structural Engineering",
-      "Construction",
-      "Industrial Engineering",
-      "General Engineering"
+      "Complex Spatial Architecture",
+      "Airport Concourses & Domes",
+      "Performance-Based Seismic Design",
+      "Industrial Facilities",
+      "High-Rise Towers"
     ],
     "features": [],
-    "country": "South Korea"
+    "country": ""
   },
   {
     "id": "t133",
     "name": "Maptek Vulcan",
     "slug": "maptek-vulcan",
-    "short_desc": "3D mining software for geological modeling, mine design, and production planning across the mining lifecycle.",
-    "score": 0,
-    "logo_url": "/logos/maptek-vulcan.png",
+    "short_desc": "Maptek’s premier 3D mining, geological modeling, block estimation, and mine planning software for surface and underground operations.",
+    "score": 4.8,
+    "logo_url": "/logos/maptek.png",
     "official_url": "https://www.maptek.com/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Mining",
-      "Geology",
-      "Civil Engineering"
+      "Precious & Base Metal Mining (Gold, Copper, Iron Ore)",
+      "Coal & Energy Mineral Extraction",
+      "Industrial Mineral Quarries & Aggregates",
+      "Mineral Exploration & Geotechnical Consultancies",
+      "Mine Surveying & Volumetric Auditing"
     ],
     "features": [],
-    "country": "Australia"
+    "country": ""
   },
   {
     "id": "t136",
     "name": "CYPECAD",
     "slug": "cypecad",
-    "short_desc": "Structural analysis and design software for concrete and steel buildings, integrated with MEP and construction management tools.",
-    "score": 0,
+    "short_desc": "CYPE’s structural engineering software for concrete, steel, and composite building design, finite element analysis, and code compliance.",
+    "score": 4.3,
     "logo_url": "/logos/cypecad.png",
-    "official_url": "https://www.cype.com/",
+    "official_url": "https://www.cype.com",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
       "Structural Engineering",
-      "Construction",
-      "Architecture"
+      "Civil Construction",
+      "Reinforced Concrete Building Design",
+      "Seismic Retrofitting",
+      "Foundation Engineering"
     ],
     "features": [],
-    "country": "Spain"
+    "country": ""
   },
   {
     "id": "t138",
     "name": "KISSsoft",
     "slug": "kisssoft",
-    "short_desc": "Swiss gear calculation and design software for mechanical engineering.",
-    "score": 3.6,
+    "short_desc": "Gleason’s specialized engineering calculation software for sizing, optimizing, and calculating gears, shafts, bearings, and complete gearboxes.",
+    "score": 4.6,
     "logo_url": "/logos/kisssoft.png",
     "official_url": "https://www.kisssoft.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Machinery",
-      "Mechanical Engineering"
+      "Automotive Gearbox & e-Drive Transmissions",
+      "Wind Turbine Power Generation",
+      "Aerospace Actuators & Turboprops",
+      "Industrial Reducers & Heavy Machinery",
+      "Precision Robotics & Harmonic Drives"
     ],
     "features": [],
-    "country": "Switzerland"
-  },
-  {
-    "id": "t139",
-    "name": "cadwork",
-    "slug": "cadwork",
-    "short_desc": "CAD/CAM software specialized for timber construction and wood building design.",
-    "score": 3.7,
-    "logo_url": "/logos/cadwork.png",
-    "official_url": "https://www.cadwork.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Timber Construction",
-      "Wood Engineering",
-      "Architecture"
-    ],
-    "features": [],
-    "country": "Switzerland"
-  },
-  {
-    "id": "t140",
-    "name": "MagiCAD",
-    "slug": "magicad",
-    "short_desc": "MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.",
-    "score": 3.8,
-    "logo_url": "/logos/magicad.png",
-    "official_url": "https://www.magicad.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "MEP",
-      "HVAC",
-      "Electrical",
-      "Construction"
-    ],
-    "features": [],
-    "country": "Finland"
+    "country": ""
   },
   {
     "id": "t141",
     "name": "Vertex BD",
     "slug": "vertex-bd",
-    "short_desc": "BIM software for cold-formed steel and timber framing, automating panel design, fabrication drawings, and CNC output.",
-    "score": 0,
+    "short_desc": "Vertex Systems’ specialized BIM software for light gauge steel (cold-formed) and timber frame prefabricated building design and CNC manufacturing.",
+    "score": 4.5,
     "logo_url": "/logos/vertex-bd.png",
-    "official_url": "https://vertexcad.com/bd/",
+    "official_url": "https://vertexcad.com/bd",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "Prefabrication",
-      "Construction",
-      "Architecture"
+      "Off-Site Construction & Prefabrication",
+      "Cold-Formed Steel Framing",
+      "Modular Home Manufacturing",
+      "Commercial Timber Framing",
+      "Panelized Building Systems"
     ],
     "features": [],
-    "country": "Finland"
+    "country": ""
   },
   {
     "id": "t142",
     "name": "CET Designer",
     "slug": "cet-designer",
-    "short_desc": "Space planning and specification software for commercial interiors, with live rendering and manufacturer catalogs.",
-    "score": 0,
-    "logo_url": "/logos/cet-designer.png",
+    "short_desc": "Configura’s intelligent rule-based space planning, furniture specification, and commercial interior quoting software.",
+    "score": 4.7,
+    "logo_url": "/logos/configura.png",
     "official_url": "https://www.configura.com/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Interior Design",
-      "Furniture",
-      "Space Planning"
+      "Contract Office Furniture Dealerships",
+      "Commercial Interior Design & Architecture",
+      "Material Handling & Warehouse Logistics Planning",
+      "Kitchen & Bathroom Commercial Layouts",
+      "Corporate Facilities Space Management"
     ],
     "features": [],
-    "country": "Sweden"
+    "country": ""
   },
   {
     "id": "t147",
     "name": "SCIA Engineer",
     "slug": "scia-engineer",
-    "short_desc": "Structural analysis and design software for buildings and civil structures, with multi-material code design and BIM workflows.",
-    "score": 0,
+    "short_desc": "Nemetschek’s integrated 3D multi-material structural analysis and design software built on OpenBIM principles and full Eurocode compliance.",
+    "score": 4.4,
     "logo_url": "/logos/scia-engineer.png",
     "official_url": "https://www.scia.net/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Structural Engineering",
-      "Civil Engineering",
-      "Construction"
+      "European Structural Engineering",
+      "OpenBIM Multi-Material Projects",
+      "Residential & Commercial Framing",
+      "Timber & Aluminum Structures",
+      "Industrial Plants"
     ],
     "features": [],
-    "country": "Belgium"
+    "country": ""
   },
   {
     "id": "t148",
     "name": "PowerMill",
     "slug": "powermill",
-    "short_desc": "Autodesk's advanced CAM software for CNC programming, specializing in 3- and 5-axis manufacturing for complex parts in aerospace, automotive, and toolmaking industries.",
-    "score": 4.3,
-    "logo_url": "/logos/powermill.svg",
+    "short_desc": "Autodesk’s expert CAM software for high-speed, 5-axis CNC machining, complex molds, dies, and industrial robot manufacturing.",
+    "score": 4.6,
+    "logo_url": "/logos/powermill.png",
     "official_url": "https://www.autodesk.com/products/fusion-360-with-powermill/overview",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Medical Devices",
-      "Toolmaking",
-      "Mold Manufacturing",
-      "Precision Engineering"
+      "High-End Mold & Die Toolrooms",
+      "Aerospace Blade & Blisk Milling",
+      "Automotive Tooling",
+      "Industrial Robot Machining",
+      "Precision 5-Axis Centers"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t149",
     "name": "FeatureCAM",
     "slug": "featurecam",
-    "short_desc": "Automated CAM software for CNC milling, turning, and Swiss machining — offered as Autodesk Fusion with FeatureCAM.",
-    "score": 3.8,
-    "logo_url": "/logos/featurecam.svg",
+    "short_desc": "Autodesk’s feature-based automated CAM software for CNC milling machines, turning, turn-mill centers, and wire EDM.",
+    "score": 4.4,
+    "logo_url": "/logos/featurecam.png",
     "official_url": "https://www.autodesk.com/products/fusion-360-with-featurecam/overview",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Aerospace",
-      "Automotive",
-      "Tooling"
+      "Production Job Shops",
+      "High-Volume Precision Turning",
+      "Swiss Medical Device Machining",
+      "Automotive Prototype Manufacturing",
+      "General Precision Subcontracting"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t150",
     "name": "GibbsCAM",
     "slug": "gibbscam",
-    "short_desc": "CAM software for programming CNC machine tools, covering milling, turning and mill-turn.",
-    "score": 3.9,
+    "short_desc": "Sandvik’s intuitive CAM software for multi-task machining (MTM), 5-axis milling, Swiss turning, and wire EDM.",
+    "score": 4.5,
     "logo_url": "/logos/gibbscam.png",
     "official_url": "https://www.gibbscam.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Aerospace",
-      "Automotive",
-      "Tooling"
+      "Multi-Task Production Machining",
+      "Medical Implants & Swiss Screw Machining",
+      "Aerospace Machined Components",
+      "Automotive Powertrain",
+      "Precision Production Job Shops"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t151",
-    "name": "ESPRIT",
+    "name": "ESPRIT CAM",
     "slug": "esprit",
-    "short_desc": "High-performance CAM software for CNC programming, covering 2-5 axis milling, turning, mill-turn, and Swiss-type machining.",
-    "score": 0,
+    "short_desc": "Hexagon’s premier digital twin CAM software for multi-tasking mill-turn machines, Swiss-type CNCs, and 5-axis manufacturing.",
+    "score": 4.5,
     "logo_url": "/logos/esprit.png",
     "official_url": "https://espritcam.hexagon.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Machining",
-      "Tooling"
+      "Multi-Tasking Mill-Turn Centers",
+      "Swiss-Type CNC Turning",
+      "Aerospace & Medical Implants",
+      "Precision Wire EDM",
+      "Production Machine Shops"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t152",
     "name": "hyperMILL",
     "slug": "hypermill",
-    "short_desc": "German CAD/CAM software for optimized NC milling and turning programs for machine tools.",
-    "score": 4,
+    "short_desc": "OPEN MIND’s high-performance 5-axis CAM solution for complex molds, aerospace impellers, blisks, and multi-blade turbine components.",
+    "score": 4.8,
     "logo_url": "/logos/hypermill.png",
     "official_url": "https://www.openmind-tech.com/en/cam/product-overview/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Aerospace",
-      "Automotive",
-      "Tooling"
+      "Aerospace Turbomachinery & Blisks",
+      "Precision Mold & Die Making",
+      "Medical Implants & Orthopedic Joints",
+      "High-Performance Automotive & Motorsport",
+      "Energy & Power Generation Turbines"
     ],
     "features": [
       "integrated-cam"
     ],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t153",
     "name": "Tebis",
     "slug": "tebis",
-    "short_desc": "German CAD/CAM/CAQ/MES software for die, model, and machine manufacturing.",
-    "score": 3.9,
+    "short_desc": "Tebis AG’s high-end CAD/CAM process solution for automotive die, mold, model making, and industrial robotic machining.",
+    "score": 4.7,
     "logo_url": "/logos/tebis.png",
     "official_url": "https://www.tebis.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Die Making",
-      "Model Making",
-      "Machine Manufacturing"
+      "Automotive Body-in-White Tool & Die",
+      "High-End Injection Mold Manufacturing",
+      "Aerospace Tooling & Fixtures",
+      "Industrial Design Clay Modeling",
+      "Robotic Trimming & Laser Cutting"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t154",
     "name": "WorkNC",
     "slug": "worknc",
-    "short_desc": "French CAM software for 2-5 axis milling with automatic feature recognition.",
-    "score": 3.8,
+    "short_desc": "Hexagon’s premier automated CAM software for 2D to 5-axis surface machining of complex molds, dies, and tooling.",
+    "score": 4.5,
     "logo_url": "/logos/worknc.png",
     "official_url": "https://hexagon.com/products/worknc",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Mold Making",
-      "Die Manufacturing",
-      "General Machining"
+      "Automotive Stamping Tool & Die",
+      "Plastic Injection Mold Making",
+      "Aerospace Tooling & Prototyping",
+      "Heavy Forging & Casting Dies",
+      "Precision Mold Machining"
     ],
     "features": [],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t155",
     "name": "SURFCAM",
     "slug": "surfcam",
-    "short_desc": "US-based CAM software for 2-5 axis milling, turning, and wire EDM.",
-    "score": 3.5,
+    "short_desc": "Hexagon’s powerful 2D to 5-axis CNC programming system featuring patented TRUEMill high-speed roughing technology.",
+    "score": 4.4,
     "logo_url": "/logos/surfcam.png",
     "official_url": "https://www.surfcam.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "General Machining",
-      "Mold Making",
-      "Production"
+      "Precision Machine Job Shops",
+      "Aerospace Component Fabrication",
+      "Automotive Tool & Prototype Making",
+      "Medical Device Prototyping",
+      "Industrial Valve & Pump Manufacturing"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t156",
     "name": "BobCAD-CAM",
     "slug": "bobcad-cam",
-    "short_desc": "US-based affordable CAD/CAM software for CNC machining with 2-5 axis capabilities.",
-    "score": 3.5,
-    "logo_url": "/logos/bobcad-cam.jpg",
+    "short_desc": "Accessible, modular CAD/CAM software for CNC milling, turning, mill-turn, router, plasma, laser, waterjet, and wire EDM.",
+    "score": 4.3,
+    "logo_url": "/logos/bobcad-cam.png",
     "official_url": "https://bobcad.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "General Machining",
-      "Small Manufacturing",
-      "Job Shops"
+      "Small-to-Midsize Machine Job Shops",
+      "Prototyping & Custom Fabrication",
+      "Sheet Metal Laser & Plasma Profiling",
+      "Woodworking & CNC Routing",
+      "Vocational & Technical Education"
     ],
     "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t157",
-    "name": "DDS-CAD",
-    "slug": "dds-cad",
-    "short_desc": "MEP design and BIM software for mechanical, electrical, and plumbing engineering.",
-    "score": 3.6,
-    "logo_url": "/logos/dds-cad.png",
-    "official_url": "https://graphisoft.com/plans-and-products/ddscad/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "MEP",
-      "HVAC",
-      "Electrical",
-      "Construction"
-    ],
-    "features": [],
-    "country": "Norway"
+    "country": ""
   },
   {
     "id": "t158",
     "name": "Planbar",
     "slug": "planbar",
-    "short_desc": "Allplan's specialized BIM software for precast concrete design, detailing, and planning with automated workflows and intelligent assistants.",
-    "score": 3.6,
+    "short_desc": "ALLPLAN Precast’s comprehensive CAD/BIM solution for automated industrial design, detailing, and CNC production of precast concrete elements.",
+    "score": 4.4,
     "logo_url": "/logos/planbar.png",
-    "official_url": "https://www.allplan.com/products/allplan-precast/",
+    "official_url": "https://www.allplan.com/products/allplan-precast",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "Precast Concrete",
-      "Construction",
-      "Civil Engineering",
+      "Precast Concrete Manufacturing",
+      "Off-Site Construction",
       "Structural Engineering",
-      "Architecture"
+      "Industrial Precast Facilities",
+      "Prefabricated Floor & Wall Production"
     ],
     "features": [],
-    "country": "Germany"
-  },
-  {
-    "id": "t159",
-    "name": "dRofus",
-    "slug": "drofus",
-    "short_desc": "Data-driven building requirements platform for standardizing project data and BIM collaboration.",
-    "score": 3.7,
-    "logo_url": "/logos/drofus.png",
-    "official_url": "https://www.drofus.com/",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Architecture",
-      "Construction",
-      "Engineering",
-      "Healthcare"
-    ],
-    "features": [],
-    "country": "Norway"
+    "country": ""
   },
   {
     "id": "t160",
-    "name": "Allegro PCB",
+    "name": "Cadence Allegro PCB Designer",
     "slug": "allegro-pcb",
-    "short_desc": "Cadence's enterprise PCB layout platform for constraint-driven, high-speed board design.",
-    "score": 0,
-    "logo_url": "/logos/allegro-pcb.ico",
+    "short_desc": "Cadence’s industry-leading enterprise PCB design system for high-density, multi-gigabit, and advanced packaging physical layout.",
+    "score": 4.8,
+    "logo_url": "/logos/allegro-pcb.png",
     "official_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/pcb-layout/allegro-pcb-designer.html",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "PCB Design",
-      "Aerospace",
-      "Automotive"
+      "High-Performance Computing & AI Hardware",
+      "Aerospace, Avionics & Defense Electronics",
+      "5G Telecommunications & Network Infrastructure",
+      "Automotive Autonomous Driving Computers",
+      "Semiconductor Packaging & Silicon Interposers"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t161",
-    "name": "OrCAD",
+    "name": "Cadence OrCAD",
     "slug": "orcad",
-    "short_desc": "Cadence's professional PCB design suite featuring PSpice simulation, schematic capture, and high-performance routing for electronic design automation.",
-    "score": 0,
+    "short_desc": "Cadence’s comprehensive electronic design suite uniting OrCAD Capture schematic, PSpice analog simulation, and PCB layout.",
+    "score": 4.6,
     "logo_url": "/logos/orcad.png",
     "official_url": "https://www.cadence.com/en_US/home/tools/pcb-design-and-analysis/orcad.html",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Consumer Electronics",
-      "Automotive",
-      "Aerospace",
-      "Industrial Automation",
-      "Medical Devices",
-      "Telecommunications",
-      "IoT",
-      "Semiconductor"
+      "Industrial Instrumentation & Automation",
+      "Consumer Hardware & IoT Devices",
+      "Medical Diagnostic Equipment",
+      "Automotive Electronic Subsystems",
+      "Defense & Power Supply Electronics"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t162",
-    "name": "PADS Professional",
+    "name": "Siemens PADS Professional",
     "slug": "pads-professional",
-    "short_desc": "Siemens EDA's comprehensive PCB design solution for mid-to-high complexity designs with advanced simulation and analysis capabilities.",
-    "score": 0,
-    "logo_url": "/logos/pads-professional.svg",
+    "short_desc": "Siemens’ powerful PCB design environment powered by enterprise Xpedition technology for self-sufficient hardware engineers.",
+    "score": 4.5,
+    "logo_url": "/logos/pads-professional.png",
     "official_url": "https://www.siemens.com/en-us/products/pcb/pads/professional/",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Consumer Electronics",
-      "Automotive",
-      "Aerospace",
-      "Industrial Automation",
-      "Medical Devices",
-      "Telecommunications",
-      "IoT",
-      "Semiconductor"
+      "Industrial Machinery & Robotics",
+      "Aerospace & Defense Subsystems",
+      "Medical Diagnostic Devices",
+      "Automotive Tier 1 Suppliers",
+      "Telecommunications Equipment"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t163",
-    "name": "Xpedition",
+    "name": "Siemens Xpedition",
     "slug": "xpedition",
-    "short_desc": "Siemens EDA's high-end PCB flow — schematic, constraint management, layout, library tooling and manufacturing prep in one enterprise platform.",
-    "score": 0,
-    "logo_url": "/logos/xpedition.svg",
+    "short_desc": "Siemens’ enterprise flagship PCB systems design platform for complex multi-board, advanced packaging, and PLM-connected hardware teams.",
+    "score": 4.8,
+    "logo_url": "/logos/xpedition.png",
     "official_url": "https://eda.sw.siemens.com/en-US/pcb/xpedition/",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "PCB Design",
-      "Aerospace",
-      "Automotive"
+      "Aerospace, Defense & Avionics",
+      "Automotive Autonomous Driving Platforms",
+      "Telecommunications & Cloud Servers",
+      "Semiconductor Systems & Silicon Interposers",
+      "Medical Life-Critical Hardware"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t166",
     "name": "AutoForm",
     "slug": "autoform",
-    "short_desc": "Swiss software platform for sheet metal forming and BiW assembly process engineering.",
-    "score": 4.1,
+    "short_desc": "Industry-standard sheet metal forming and die design simulation software for automotive body-in-white manufacturing.",
+    "score": 4.8,
     "logo_url": "/logos/autoform.png",
     "official_url": "https://www.autoform.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Sheet Metal",
-      "Manufacturing"
+      "Automotive OEM Body-in-White (BIW)",
+      "Automotive Stamping Tool & Die",
+      "Appliance Sheet Metal Enclosures",
+      "Aerospace Cold Forming",
+      "High-Volume Progressive Stamping"
     ],
     "features": [],
-    "country": "Switzerland"
+    "country": ""
   },
   {
     "id": "t167",
     "name": "PAM-STAMP",
     "slug": "pam-stamp",
-    "short_desc": "Keysight CAE's sheet metal forming simulation (formerly ESI Group) for stamping process optimization and spring back compensation.",
-    "score": 3.9,
+    "short_desc": "ESI Group’s premier sheet metal forming simulation software for automotive stamping, hot forming, and springback compensation.",
+    "score": 4.3,
     "logo_url": "/logos/pam-stamp.png",
-    "official_url": "https://www.keysight.com/us/en/products/design-engineering-software/computer-aided-engineering-software/sheet-metal-forming.html",
+    "official_url": "https://www.esi-group.com/products/pam-stamp",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Aerospace",
-      "Metal Forming",
-      "Manufacturing",
-      "Appliances",
-      "Consumer Goods"
+      "Automotive Body-in-White Stamping",
+      "Aerospace Sheet Metal Forming",
+      "Tool & Die Manufacturing",
+      "Hot Stamping Facilities",
+      "Tube Hydroforming"
     ],
     "features": [],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t168",
     "name": "Moldflow",
     "slug": "moldflow",
-    "short_desc": "Autodesk injection molding simulation software for plastic part and mold design.",
-    "score": 4,
-    "logo_url": "/logos/moldflow.svg",
+    "short_desc": "Autodesk’s industry-leading injection molding simulation software for optimizing plastic part design, mold cooling, and warpage.",
+    "score": 4.7,
+    "logo_url": "/logos/moldflow.png",
     "official_url": "https://www.autodesk.com/products/moldflow/overview",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Plastics",
-      "Injection Molding",
-      "Manufacturing"
+      "Automotive Plastic Interior & Exterior Trim",
+      "Consumer Electronics & Appliance Enclosures",
+      "Medical Device Plastic Components",
+      "Packaging & Thin-Wall Containers",
+      "Precision Plastic Injection Toolrooms"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t169",
     "name": "Moldex3D",
     "slug": "moldex3d",
-    "short_desc": "Taiwanese plastic injection molding simulation software for advanced analysis.",
-    "score": 3.9,
+    "short_desc": "CoreTech System’s true 3D injection molding simulation software for advanced plastic molding processes and composites.",
+    "score": 4.6,
     "logo_url": "/logos/moldex3d.png",
     "official_url": "https://www.moldex3d.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Plastics",
-      "Injection Molding",
-      "Manufacturing"
+      "Automotive Plastics & Under-the-Hood Parts",
+      "Precision Optical Lenses & Light Guides",
+      "Consumer Electronics & Connectors",
+      "Medical Diagnostic Devices",
+      "Aerospace Composite Structures"
     ],
     "features": [],
-    "country": "Taiwan"
+    "country": ""
   },
   {
     "id": "t179",
     "name": "AlphaCAM",
     "slug": "alphacam",
-    "short_desc": "UK-based CAM software for woodworking, stone, and metal cutting.",
-    "score": 3.6,
+    "short_desc": "Hexagon’s leading CAD/CAM software for woodworking, stone masonry, marble, and composite material CNC routing.",
+    "score": 4.5,
     "logo_url": "/logos/alphacam.png",
     "official_url": "https://hexagon.com/products/alphacam",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Woodworking",
-      "Stone",
-      "Metal",
-      "Manufacturing"
+      "Architectural Woodworking & Cabinetry",
+      "Stone Countertop & Marble Fabrication",
+      "Composite Aircraft & Marine Components",
+      "Sign Making & Exhibit Fabrication",
+      "Acoustic & Plastic Panel Processing"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t180",
     "name": "Radan",
     "slug": "radan",
-    "short_desc": "UK-based CAD/CAM software for sheet metal fabrication and CNC punching.",
-    "score": 3.6,
+    "short_desc": "Hexagon’s total CAD/CAM solution for sheet metal punching, laser cutting, profiling, nesting, and press brake bending.",
+    "score": 4.5,
     "logo_url": "/logos/radan.png",
     "official_url": "https://hexagon.com/products/radan",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Sheet Metal",
-      "Fabrication",
-      "Manufacturing"
+      "Precision Sheet Metal Job Shops",
+      "HVAC Ductwork & Enclosures",
+      "Electrical Enclosure & Cabinet Manufacturing",
+      "Agricultural & Yellow Goods Machinery",
+      "Food Service Stainless Steel Equipment"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t182",
     "name": "Lantek Expert",
     "slug": "lantek-expert",
-    "short_desc": "Spanish CAD/CAM software for sheet metal punching and cutting.",
-    "score": 3.5,
+    "short_desc": "Lantek’s advanced CAD/CAM nesting software system for CNC sheet metal cutting machines, punch presses, and waterjets.",
+    "score": 4.5,
     "logo_url": "/logos/lantek-expert.png",
     "official_url": "https://www.lantek.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Sheet Metal",
-      "Fabrication",
-      "Manufacturing"
+      "Heavy Machinery & Structural Steel",
+      "HVAC & Industrial Sheet Metal Fabrication",
+      "Agricultural Machinery & Vehicle Chassis",
+      "Sheet Metal Job Shops & Laser Subcontractors",
+      "Shipbuilding & Plate Steel Profiling"
     ],
     "features": [],
-    "country": "Spain"
+    "country": ""
   },
   {
     "id": "t183",
     "name": "SigmaNEST",
     "slug": "sigmanest",
-    "short_desc": "US-based CAD/CAM nesting software for laser, plasma, oxyfuel, punch, router and waterjet profile cutting.",
-    "score": 3.8,
+    "short_desc": "SigmaTEK Systems’ industry-leading CAD/CAM nesting software for sheet metal, plate steel, laser, plasma, punch, and waterjet machines.",
+    "score": 4.6,
     "logo_url": "/logos/sigmanest.png",
     "official_url": "https://www.sigmateksystems.com/en/sigmanest",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Sheet Metal",
-      "Fabrication",
-      "Manufacturing"
+      "Heavy Industrial Equipment Manufacturing",
+      "Shipbuilding & Structural Steel Fabrication",
+      "Contract Sheet Metal Job Shops",
+      "Agricultural & Yellow Goods Machinery",
+      "Tank, Vessel & Boiler Plate Fabrication"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t185",
     "name": "ANSYS Fluent",
     "slug": "ansys-fluent",
-    "short_desc": "CFD solver for fluid dynamics, heat transfer and reacting-flow simulations.",
-    "score": 4.7,
+    "short_desc": "Ansys’ industry-leading computational fluid dynamics (CFD) software for fluid flow, heat transfer, turbulence, and multiphase reactions.",
+    "score": 4.8,
     "logo_url": "/logos/ansys-fluent.png",
     "official_url": "https://www.ansys.com/products/fluids/ansys-fluent",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Energy",
-      "Manufacturing"
+      "Aerospace Aerodynamics & Propulsion",
+      "Automotive Thermal Management & Aerodynamics",
+      "Energy, Oil, Gas & Turbomachinery",
+      "Electronics Cooling & Thermal Dissipation",
+      "Chemical Processing & Combustion"
     ],
     "features": [
       "simulation-fea"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t186",
     "name": "ANSYS Workbench",
     "slug": "ansys-workbench",
-    "short_desc": "Unified Ansys simulation platform for project management, geometry prep, and multi-physics coupling.",
+    "short_desc": "Ansys’ unified project schematic and multiphysics integration platform linking CAD, meshing, FEA, and CFD simulations.",
     "score": 4.6,
     "logo_url": "/logos/ansys-workbench.png",
     "official_url": "https://www.ansys.com/products/ansys-workbench",
@@ -2371,19 +2679,20 @@
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Electronics",
-      "Manufacturing"
+      "Multiphysics Engineering & Consulting",
+      "Automotive Powertrain & Chassis Systems",
+      "Aerospace Propulsion & Structures",
+      "Heavy Machinery & Industrial Equipment",
+      "Electronics Cooling & Thermal Packaging"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t187",
     "name": "ANSYS Discovery",
     "slug": "ansys-discovery",
-    "short_desc": "Real-time simulation-driven design with live solver feedback during modeling.",
+    "short_desc": "Ansys’ interactive real-time simulation and 3D direct modeling software for rapid early-stage concept exploration.",
     "score": 4.5,
     "logo_url": "/logos/ansys-discovery.png",
     "official_url": "https://www.ansys.com/products/3d-design/ansys-discovery",
@@ -2391,307 +2700,327 @@
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Product Design",
-      "Electronics",
-      "Automotive"
+      "Early-Stage Product Concept Design",
+      "Consumer Hardware & Electronics",
+      "Automotive Prototyping",
+      "Industrial Valve & Manifold Design",
+      "General Mechanical Engineering"
     ],
     "features": [
       "ai-assisted",
       "generative-design",
       "simulation-fea"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t188",
     "name": "Abaqus",
     "slug": "abaqus",
-    "short_desc": "High-fidelity non-linear finite element analysis from Dassault Systèmes Simulia.",
-    "score": 4.7,
+    "short_desc": "Dassault Systèmes’ premier non-linear finite element analysis (FEA) software for explicit dynamics, fracture, and complex materials.",
+    "score": 4.8,
     "logo_url": "/logos/abaqus.png",
     "official_url": "https://www.3ds.com/products/simulia/abaqus",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Defense",
-      "Electronics",
-      "Energy"
+      "Automotive Safety & Powertrain",
+      "Aerospace Airframe & Composite Structures",
+      "Consumer Electronics Drop Testing",
+      "Biomedical Stents & Orthopedics",
+      "Tire Manufacturing & Rubber Components"
     ],
     "features": [
       "simulation-fea"
     ],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t189",
     "name": "COMSOL Multiphysics",
     "slug": "comsol-multiphysics",
-    "short_desc": "Coupled multi-physics finite element simulation across electromagnetics, structures, fluids, and chemistry.",
-    "score": 4.6,
+    "short_desc": "COMSOL’s unified cross-disciplinary simulation software for fully coupled multiphysics, electromagnetics, fluid flow, and acoustics.",
+    "score": 4.7,
     "logo_url": "/logos/comsol-multiphysics.png",
     "official_url": "https://www.comsol.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Energy",
-      "Research",
-      "Manufacturing"
+      "Scientific & Academic Research",
+      "Semiconductor & MEMS Engineering",
+      "Battery & Fuel Cell Technology",
+      "Biomedical & Microfluidic Devices",
+      "Acoustics & Transducer Design"
     ],
     "features": [
       "simulation-fea"
     ],
-    "country": "Sweden"
+    "country": ""
   },
   {
     "id": "t190",
     "name": "LS-DYNA",
     "slug": "ls-dyna",
-    "short_desc": "Explicit non-linear dynamics solver for crash, blast, drop, and metal forming.",
-    "score": 4.7,
+    "short_desc": "Ansys’ premier explicit dynamic simulation software for vehicle crashworthiness, occupant safety, ballistics, and high-energy impact.",
+    "score": 4.8,
     "logo_url": "/logos/ls-dyna.png",
     "official_url": "https://www.ansys.com/products/structures/ansys-ls-dyna",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Aerospace",
-      "Defense",
-      "Manufacturing"
+      "Automotive Vehicle Safety & Crash",
+      "Aerospace Impact & Bird Strike",
+      "Defense & Ballistic Protection",
+      "Consumer Electronics Drop Testing",
+      "Industrial Heavy Equipment Rollover (ROPS)"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t191",
     "name": "Simcenter STAR-CCM+",
     "slug": "simcenter-star-ccm",
-    "short_desc": "Multi-physics CFD platform from Siemens Digital Industries, strong in marine, turbomachinery, and electronics cooling.",
-    "score": 4.6,
+    "short_desc": "Siemens’ comprehensive multiphysics computational fluid dynamics (CFD) software for multidisciplinary aerodynamics and thermal simulation.",
+    "score": 4.7,
     "logo_url": "/logos/simcenter-star-ccm.png",
     "official_url": "https://plm.sw.siemens.com/en-US/simcenter/fluids-thermal-simulation/star-ccm/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Energy",
-      "Marine"
+      "Automotive Aerodynamics & Underhood Thermal",
+      "Aerospace Propulsion & External Flow",
+      "Marine Hydrodynamics & Hull Resistance",
+      "Turbomachinery & Gas Turbines",
+      "Chemical Processing & Multiphase Mixing"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t192",
     "name": "OpenFOAM",
     "slug": "openfoam",
-    "short_desc": "Free open-source C++ CFD toolbox used widely in academia, research, and motorsport.",
-    "score": 4.4,
+    "short_desc": "Open-source computational fluid dynamics (CFD) software package with extensive solver libraries for research and industry.",
+    "score": 4.5,
     "logo_url": "/logos/openfoam.png",
     "official_url": "https://www.openfoam.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Research",
-      "Aerospace",
-      "Automotive",
-      "Energy"
+      "Academic & Government Research",
+      "Aerospace Aerodynamics & Propulsion",
+      "Automotive Motorsport & Vehicle Aerodynamics",
+      "Wind Energy & Atmospheric Boundary Layer Modeling",
+      "Chemical Engineering & Multiphase Mixing"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t193",
     "name": "SimScale",
     "slug": "simscale",
-    "short_desc": "Browser-based cloud CFD/FEA/thermal simulation platform with per-hour pricing.",
-    "score": 4.5,
+    "short_desc": "Cloud-native simulation platform for browser-based computational fluid dynamics (CFD), FEA, thermal, and acoustics.",
+    "score": 4.6,
     "logo_url": "/logos/simscale.png",
     "official_url": "https://www.simscale.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Electronics",
-      "Energy",
-      "Manufacturing"
+      "Architecture & Urban Wind Comfort",
+      "HVAC & Building Services Engineering",
+      "Electronics Thermal Packaging",
+      "Industrial Valves & Turbomachinery",
+      "Aerospace & Automotive Prototyping"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t194",
     "name": "Femap",
     "slug": "femap",
-    "short_desc": "Siemens Femap is a CAD-independent FEA pre/postprocessor primarily paired with NX Nastran.",
-    "score": 4.4,
+    "short_desc": "Siemens’ advanced engineering FEA pre- and post-processor with native Parasolid modeling and deep Simcenter Nastran integration.",
+    "score": 4.6,
     "logo_url": "/logos/femap.png",
     "official_url": "https://plm.sw.siemens.com/en-US/simcenter/mechanical-simulation/femap/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Defense",
-      "Marine"
+      "Aerospace Airframe & Spacecraft Structures",
+      "Defense & Naval Shipbuilding",
+      "Heavy Industrial Machinery",
+      "Pressure Vessels & Energy Equipment",
+      "Automotive Chassis Engineering"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t195",
     "name": "Altair Inspire",
     "slug": "altair-inspire",
-    "short_desc": "Altair's designer-friendly generative design and FEA tool, published since the Siemens acquisition as Simcenter Inspire.",
+    "short_desc": "Altair’s powerful generative design and topology optimization environment for rapid structural simulation and manufacturing feasibility.",
     "score": 4.5,
     "logo_url": "/logos/altair-inspire.png",
-    "official_url": "https://www.siemens.com/en-us/products/simcenter/mechanical-simulation/inspire/",
+    "official_url": "https://altair.com/inspire",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Automotive",
-      "Manufacturing",
-      "Product Design"
+      "Automotive Engineering",
+      "Aerospace & Defense",
+      "Heavy Machinery",
+      "Consumer Products",
+      "Additive Manufacturing"
     ],
     "features": [
       "ai-assisted",
       "generative-design"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t196",
     "name": "MSC Patran",
     "slug": "msc-patran",
-    "short_desc": "Long-standing FEA pre/post-processor, now part of Cadence, tightly paired with MSC Nastran.",
+    "short_desc": "Hexagon’s premier finite element analysis pre- and post-processing environment supporting MSC Nastran, Marc, and multi-solver workflows.",
     "score": 4.2,
     "logo_url": "/logos/msc-patran.png",
-    "official_url": "https://www.cadence.com/en_US/home/tools/msc-software/patran.html",
+    "official_url": "https://hexagon.com/products/patran",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Defense",
-      "Automotive"
+      "Aerospace & Defense",
+      "Automotive & Rail",
+      "Naval Architecture",
+      "Heavy Industry",
+      "Defense Contractors"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t197",
     "name": "MSC Adams",
     "slug": "msc-adams",
-    "short_desc": "Multibody dynamics simulation for mechanisms, vehicles, and powertrains.",
-    "score": 4.5,
+    "short_desc": "Hexagon’s world-leading multibody dynamics (MBD) software for mechanical system kinematics, dynamic loading, and virtual prototyping.",
+    "score": 4.4,
     "logo_url": "/logos/msc-adams.png",
-    "official_url": "https://www.cadence.com/en_US/home/tools/msc-software/adams.html",
+    "official_url": "https://hexagon.com/products/adams",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Automotive",
-      "Aerospace",
-      "Defense",
-      "Manufacturing"
+      "Automotive OEM & Tier 1",
+      "Aerospace Mechanisms",
+      "Railway Rolling Stock",
+      "Industrial Robotics",
+      "Heavy Equipment"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t198",
     "name": "KiCad",
     "slug": "kicad",
-    "short_desc": "Free, open-source professional schematic capture and PCB layout suite.",
-    "score": 4.7,
+    "short_desc": "The world’s leading free and open-source cross-platform electronics design automation (EDA) suite for schematic capture and PCB layout.",
+    "score": 4.8,
     "logo_url": "/logos/kicad.png",
     "official_url": "https://www.kicad.org",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Hardware Startups",
-      "Education"
+      "Open-Source Hardware & Research Labs",
+      "Consumer Hardware Startups",
+      "Aerospace & CubeSat Electronics",
+      "Academic Engineering Education",
+      "Embedded Systems & IoT Development"
     ],
     "features": [],
-    "country": "Community/International"
+    "country": ""
   },
   {
     "id": "t199",
     "name": "EasyEDA",
     "slug": "easyeda",
-    "short_desc": "Free browser-based PCB design tightly integrated with JLCPCB and LCSC parts catalog.",
-    "score": 4.3,
-    "logo_url": "/logos/easyeda.ico",
+    "short_desc": "Cloud-based PCB design tool integrated with JLCPCB manufacturing and LCSC electronic component sourcing.",
+    "score": 4.6,
+    "logo_url": "/logos/easyeda.png",
     "official_url": "https://easyeda.com",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Hardware Startups",
-      "Education"
+      "Hardware Startups & IoT Devices",
+      "Rapid Electronics Prototyping Labs",
+      "Electronics Maker Community",
+      "STEM & University Engineering Education",
+      "Small-Scale Consumer Electronics"
     ],
     "features": [
       "cloud-collaboration"
     ],
-    "country": "China"
+    "country": ""
   },
   {
     "id": "t200",
     "name": "DipTrace",
     "slug": "diptrace",
-    "short_desc": "Affordable schematic capture and PCB design for small teams and consultants.",
-    "score": 4.4,
-    "logo_url": "/logos/diptrace.ico",
+    "short_desc": "Intuitive, easy-to-learn PCB design software featuring schematic capture, shape-based autorouting, and real-time 3D board preview.",
+    "score": 4.6,
+    "logo_url": "/logos/diptrace.png",
     "official_url": "https://diptrace.com",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "SMB",
-      "Education"
+      "Independent Hardware Consultants",
+      "Industrial Control Boards",
+      "Audio & Acoustic Equipment",
+      "Medical Device Startups",
+      "Aerospace & Defense Subcontractors"
     ],
     "features": [],
-    "country": "Ukraine"
+    "country": ""
   },
   {
     "id": "t201",
     "name": "NI Multisim",
     "slug": "multisim",
-    "short_desc": "Schematic capture with SPICE-based circuit simulation, popular in education and analog design.",
-    "score": 4.2,
+    "short_desc": "National Instruments’ industry-standard SPICE simulation and circuit design software featuring interactive virtual test instruments.",
+    "score": 4.5,
     "logo_url": "/logos/multisim.png",
     "official_url": "https://www.ni.com/en-us/shop/electronic-test-instrumentation/application-software-for-electronic-test-and-instrumentation-category/what-is-multisim.html",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Education",
-      "Aerospace"
+      "Higher Education & University Engineering",
+      "Power Electronics Design",
+      "Audio Amplifier Engineering",
+      "Automotive Sensor Circuit Design",
+      "Test & Measurement Prototyping"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t202",
-    "name": "LTspice",
+    "name": "Analog Devices LTspice",
     "slug": "ltspice",
-    "short_desc": "Free SPICE simulator from Analog Devices, widely used for analog and power design.",
+    "short_desc": "High-performance, ultra-fast free SPICE simulation software optimized for switching regulators, power electronics, and analog circuits.",
     "score": 4.8,
     "logo_url": "/logos/ltspice.png",
     "official_url": "https://www.analog.com/en/resources/design-tools-and-calculators/ltspice-simulator.html",
@@ -2699,115 +3028,83 @@
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Power",
-      "Education"
+      "Power Supply & Switch-Mode Converter Design",
+      "Analog & Mixed-Signal Circuit Engineering",
+      "Automotive Power Electronics & Battery Systems",
+      "Consumer Electronics Hardware",
+      "Academic & Industrial Electronics Research"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t203",
     "name": "Proteus Design Suite",
     "slug": "proteus-design-suite",
-    "short_desc": "Schematic, simulation, and PCB design with embedded-firmware co-simulation.",
-    "score": 4.3,
-    "logo_url": "/logos/proteus-design-suite.png",
+    "short_desc": "Labcenter’s integrated EDA software combining schematic capture, SPICE simulation, microcontroller firmware co-simulation, and PCB layout.",
+    "score": 4.7,
+    "logo_url": "/logos/proteus.png",
     "official_url": "https://www.labcenter.com",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Embedded",
-      "Education"
+      "Embedded Systems & Firmware Development",
+      "Automotive Mechatronics & Sensor Nodes",
+      "Medical Diagnostic Hardware",
+      "University Embedded Engineering Education",
+      "IoT Connected Device Prototyping"
     ],
     "features": [],
-    "country": "UK"
+    "country": ""
   },
   {
     "id": "t204",
     "name": "Altium 365",
     "slug": "altium-365",
-    "short_desc": "Cloud collaboration, data-management, and supply-chain layer for Altium Designer teams.",
-    "score": 4.4,
+    "short_desc": "Altium’s cloud-based electronic hardware design, collaboration, and component lifecycle management platform.",
+    "score": 4.7,
     "logo_url": "/logos/altium-365.png",
     "official_url": "https://www.altium.com/altium-365",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Aerospace",
-      "Industrial"
+      "Electronics Manufacturing Services (EMS)",
+      "Automotive Tier-1 & EV Startups",
+      "Consumer Hardware Product Teams",
+      "Aerospace & Defense Electronics",
+      "Contract Engineering Consultancies"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t205",
-    "name": "CircuitMaker",
+    "name": "Altium CircuitMaker",
     "slug": "circuitmaker",
-    "short_desc": "Free community-edition PCB design from Altium, with public-cloud project sharing.",
-    "score": 4.1,
-    "logo_url": "/logos/circuitmaker.ico",
+    "short_desc": "Altium’s free, community-driven PCB design tool powered by the Altium Designer layout engine for open-source hardware.",
+    "score": 4.4,
+    "logo_url": "/logos/circuitmaker.png",
     "official_url": "https://www.altium.com/circuitmaker",
     "category_id": "c6",
     "category_name": "EDA",
     "aliases": [],
     "industries": [
-      "Electronics",
-      "Hobbyist",
-      "Education"
+      "Open-Source Hardware Community",
+      "Maker & DIY Electronics",
+      "STEM & University Student Projects",
+      "Hardware Prototyping & Startups",
+      "Robotics Clubs & Hackerspaces"
     ],
     "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t206",
-    "name": "AutoCAD Plant 3D",
-    "slug": "autocad-plant-3d",
-    "short_desc": "Autodesk's specialized plant-design toolkit for piping, equipment, and P&ID workflows — included with AutoCAD subscription.",
-    "score": 4.3,
-    "logo_url": "/logos/autocad-plant-3d.png",
-    "official_url": "https://www.autodesk.com/products/autocad/included-toolsets/plant-3d",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Energy",
-      "Chemical",
-      "Oil & Gas",
-      "Power"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t207",
-    "name": "Hexagon SmartPlant 3D",
-    "slug": "smartplant-3d",
-    "short_desc": "Hexagon's data-centric plant-design platform (now part of CADWorx & Analysis Solutions).",
-    "score": 4.4,
-    "logo_url": "/logos/smartplant-3d.png",
-    "official_url": "https://hexagon.com/products/smartplant-3d",
-    "category_id": "c3",
-    "category_name": "BIM",
-    "aliases": [],
-    "industries": [
-      "Oil & Gas",
-      "Chemical",
-      "Power",
-      "Marine"
-    ],
-    "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t208",
-    "name": "CADWorx Plant Professional",
+    "name": "CADWorx",
     "slug": "cadworx",
-    "short_desc": "AutoCAD-based plant design from Hexagon — pipe spec, isometrics, and bidirectional CAESAR II.",
+    "short_desc": "Hexagon’s AutoCAD and BricsCAD-based integrated plant design suite for intelligent 3D piping, structural framing, and equipment modeling.",
     "score": 4.3,
     "logo_url": "/logos/cadworx.png",
     "official_url": "https://hexagon.com/products/cadworx-plant-professional",
@@ -2816,36 +3113,40 @@
     "aliases": [],
     "industries": [
       "Oil & Gas",
-      "Chemical",
-      "Power"
+      "Chemical Processing",
+      "Power Generation",
+      "Water Treatment",
+      "Pharmaceutical Plant Design"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t209",
     "name": "CAESAR II",
     "slug": "caesar-ii",
-    "short_desc": "Pipe stress analysis for static and dynamic load cases.",
+    "short_desc": "Hexagon’s global standard pipe stress analysis software for plant engineering, oil and gas, chemical facilities, and power generation.",
     "score": 4.6,
     "logo_url": "/logos/caesar-ii.png",
-    "official_url": "https://www.octave.com/products/engineering-analysis/aspect/pipe-stress",
+    "official_url": "https://hexagon.com/products/caesar-ii",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Oil & Gas",
-      "Chemical",
-      "Power"
+      "Oil & Gas Offshore/Onshore",
+      "Petrochemical Processing",
+      "Power Generation",
+      "EPC Plant Engineering",
+      "Chemical Facilities"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t210",
     "name": "Bentley AutoPIPE",
     "slug": "autopipe",
-    "short_desc": "Bentley's pipe stress analysis competing with CAESAR II — strong in nuclear and power.",
+    "short_desc": "Bentley’s comprehensive piping stress analysis software for calculating pipe stresses, loads, and deflections under static and dynamic conditions.",
     "score": 4.4,
     "logo_url": "/logos/autopipe.png",
     "official_url": "https://www.bentley.com/software/autopipe/",
@@ -2853,37 +3154,41 @@
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Power",
-      "Nuclear",
-      "Oil & Gas"
+      "Nuclear Energy Facilities",
+      "Power Generation",
+      "Petrochemical Plants",
+      "Water & Wastewater Infrastructure",
+      "EPC Engineering"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t211",
     "name": "PV Elite",
     "slug": "pv-elite",
-    "short_desc": "Pressure vessel and heat exchanger design and code-compliance checking.",
+    "short_desc": "Hexagon’s complete solution for pressure vessel and heat exchanger design, analysis, and evaluation according to international codes.",
     "score": 4.5,
     "logo_url": "/logos/pv-elite.png",
-    "official_url": "https://www.octave.com/products/engineering-analysis/aspect/pressure-vessel",
+    "official_url": "https://hexagon.com/products/pv-elite",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Oil & Gas",
-      "Chemical",
-      "Power"
+      "Pressure Vessel Fabrication",
+      "Chemical Processing",
+      "Oil Refining & Gas Processing",
+      "Heat Exchanger Manufacturing",
+      "Power Plants"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t212",
     "name": "AspenTech Aspen HYSYS",
     "slug": "aspen-hysys",
-    "short_desc": "Process simulation for oil & gas, refining, and gas processing — the upstream standard.",
+    "short_desc": "AspenTech’s market-leading process simulation software for oil and gas, refining, and chemical plant optimization.",
     "score": 4.6,
     "logo_url": "/logos/aspen-hysys.png",
     "official_url": "https://www.aspentech.com/en/products/engineering/aspen-hysys",
@@ -2891,231 +3196,253 @@
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Oil & Gas",
-      "Refining",
-      "Chemical"
+      "Oil & Gas Production",
+      "Refining & Petrochemicals",
+      "LNG Processing",
+      "Chemical Manufacturing",
+      "Clean Energy Engineering"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t213",
     "name": "UltiMaker Cura",
     "slug": "ultimaker-cura",
-    "short_desc": "Free, open-source slicer — the most-used FDM 3D printing prep tool in the world.",
-    "score": 4.5,
-    "logo_url": "/logos/ultimaker-cura.png",
+    "short_desc": "The world’s most widely adopted free and open-source 3D printer slicing software for FDM and FFF additive manufacturing.",
+    "score": 4.8,
+    "logo_url": "/logos/cura.png",
     "official_url": "https://ultimaker.com/software/ultimaker-cura/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+      "Additive Manufacturing & 3D Printing Service Bureaus",
+      "Rapid Prototyping & Product Design",
+      "Higher Education & University Makerspaces",
+      "Industrial Jigs, Fixtures & Tooling Fabrication",
+      "Automotive & Aerospace Replacement Parts"
     ],
     "features": [],
-    "country": "Netherlands"
+    "country": ""
   },
   {
     "id": "t214",
     "name": "PrusaSlicer",
     "slug": "prusaslicer",
-    "short_desc": "Open-source slicer from Prusa Research — known for Organic Supports and rapid feature delivery.",
-    "score": 4.7,
+    "short_desc": "Prusa Research’s open-source 3D printing slicer renowned for organic tree supports, multi-material painting, and fast toolpath generation.",
+    "score": 4.9,
     "logo_url": "/logos/prusaslicer.png",
     "official_url": "https://www.prusa3d.com/page/prusaslicer_424/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+      "Additive Prototyping & Digital Fabrication",
+      "Product Design & Consumer Goods Modeling",
+      "Automotive & Drone Functional Component Printing",
+      "Dental Prosthetics & Resin Medical Models",
+      "Open-Source Hardware & Maker Community"
     ],
     "features": [],
-    "country": "Czech Republic"
+    "country": ""
   },
   {
     "id": "t215",
     "name": "Bambu Studio",
     "slug": "bambu-studio",
-    "short_desc": "Bambu Lab's PrusaSlicer-derived slicer, optimized for high-speed CoreXY printers.",
-    "score": 4.6,
+    "short_desc": "Bambu Lab’s official open-source high-speed 3D printing slicer featuring cloud print farm monitoring and multi-color AMS management.",
+    "score": 4.9,
     "logo_url": "/logos/bambu-studio.png",
     "official_url": "https://bambulab.com/en/download/studio",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+      "High-Speed Rapid Prototyping",
+      "Consumer Hardware Product Development",
+      "On-Demand Multi-Color Manufacturing",
+      "Small-Batch End-Use Component Production",
+      "Educational Makerspaces & Engineering Labs"
     ],
     "features": [],
-    "country": "China"
+    "country": ""
   },
   {
     "id": "t216",
     "name": "Simplify3D",
     "slug": "simplify3d",
-    "short_desc": "Veteran commercial slicer with manual fine-tuning controls beloved by power users.",
-    "score": 3.9,
-    "logo_url": "/logos/simplify3d.ico",
+    "short_desc": "Commercial 3D printing slicer renowned for customizable support structures, multi-extruder control, and high-precision G-code simulation.",
+    "score": 4.5,
+    "logo_url": "/logos/simplify3d.png",
     "official_url": "https://www.simplify3d.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Maker",
-      "Education",
-      "Manufacturing"
+      "Commercial Additive Manufacturing Service Bureaus",
+      "Industrial Rapid Tooling & Jigs",
+      "Product Design Prototyping Labs",
+      "Aerospace & Defense Additive Research",
+      "Custom Medical Equipment Prototyping"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t217",
     "name": "Autodesk Netfabb",
     "slug": "autodesk-netfabb",
-    "short_desc": "Autodesk's additive-manufacturing build prep suite — mesh repair, packing, supports and build simulation — now sold only as Autodesk Fusion with Netfabb.",
-    "score": 4.3,
-    "logo_url": "/logos/autodesk-netfabb.svg",
+    "short_desc": "Autodesk’s industrial additive manufacturing, mesh repair, lattice generation, and metal powder bed fusion simulation software.",
+    "score": 4.7,
+    "logo_url": "/logos/netfabb.png",
     "official_url": "https://www.autodesk.com/products/netfabb/overview",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Aerospace",
-      "Medical",
-      "Manufacturing",
-      "Automotive"
+      "Aerospace Additive Manufacturing & Turbomachinery",
+      "Medical Implants & Orthopedic Devices",
+      "Automotive Lightweighting & Motorsport",
+      "Commercial Additive Service Bureaus",
+      "Defense & High-Strength Tooling Fabrication"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t222",
     "name": "Marvelous Designer",
     "slug": "marvelous-designer",
-    "short_desc": "3D garment design used widely in games, animation, film, and apparel concepting.",
-    "score": 4.6,
+    "short_desc": "CLO Virtual Fashion’s industry-standard 3D cloth simulation and digital garment creation software for game development and VFX.",
+    "score": 4.8,
     "logo_url": "/logos/marvelous-designer.png",
     "official_url": "https://marvelousdesigner.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Games",
-      "Film & Animation",
-      "Fashion"
+      "AAA Video Game Character Production",
+      "Feature Film & Television VFX Studios",
+      "3D Animation & Cinematic Trailers",
+      "Metaverse & Virtual Human Avatars",
+      "Digital Fashion Concept Art"
     ],
     "features": [],
-    "country": "South Korea"
+    "country": ""
   },
   {
     "id": "t225",
     "name": "D5 Render",
     "slug": "d5-render",
-    "short_desc": "Real-time ray-traced renderer for architecture, interiors, and product visualization.",
-    "score": 4.5,
+    "short_desc": "Real-time ray-tracing architectural rendering software powered by deep learning super sampling and direct CAD synchronization.",
+    "score": 4.8,
     "logo_url": "/logos/d5-render.png",
     "official_url": "https://www.d5render.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Interior Design",
-      "Product Visualization"
+      "Architectural Design & Visual Presentation",
+      "Commercial Interior Design & Staging",
+      "Landscape Architecture & Urban Planning",
+      "Real Estate Marketing & Property Renderings",
+      "BIM Construction Sequencing Visuals"
     ],
     "features": [],
-    "country": "China"
+    "country": ""
   },
   {
     "id": "t226",
-    "name": "V-Ray",
+    "name": "Chaos V-Ray",
     "slug": "v-ray",
-    "short_desc": "Chaos V-Ray — a long-standing production renderer for 3ds Max, Maya, Revit, Rhino, and SketchUp.",
-    "score": 4.6,
-    "logo_url": "/logos/v-ray.ico",
+    "short_desc": "The academy-award-winning photorealistic rendering engine for architectural visualization, film VFX, and commercial product design.",
+    "score": 4.9,
+    "logo_url": "/logos/vray.png",
     "official_url": "https://www.chaos.com/vray",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Automotive",
-      "Film & Animation",
-      "Product Visualization"
+      "High-End Architectural Visualization (ArchViz)",
+      "Hollywood Feature Film Visual Effects",
+      "Automotive Commercial Staging & CGI",
+      "Consumer Product Marketing & Packaging",
+      "Commercial Interior Design Staging"
     ],
     "features": [
       "rendering"
     ],
-    "country": "Bulgaria"
+    "country": ""
   },
   {
     "id": "t227",
-    "name": "Corona Renderer",
+    "name": "Chaos Corona",
     "slug": "corona-renderer",
-    "short_desc": "Chaos Corona — interactive unbiased renderer beloved for interior visualization workflows.",
-    "score": 4.5,
-    "logo_url": "/logos/corona-renderer.ico",
+    "short_desc": "Chaos’ high-performance, artist-friendly photorealistic rendering engine engineered specifically for architectural and interior visualization.",
+    "score": 4.8,
+    "logo_url": "/logos/corona.png",
     "official_url": "https://www.chaos.com/corona",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Interior Design",
-      "Product Visualization"
+      "Architectural Visualization & Interior Design",
+      "Commercial Furniture Staging & Catalog Renders",
+      "Real Estate Marketing & Property Renderings",
+      "Hospitality & Hotel Design Pre-Visualization",
+      "Automotive Interior CGI"
     ],
     "features": [],
-    "country": "Czech Republic"
+    "country": ""
   },
   {
     "id": "t228",
     "name": "Adobe Substance 3D Painter",
     "slug": "substance-painter",
-    "short_desc": "PBR texture-painting tool used industry-wide for games, film, and product visualization.",
-    "score": 4.7,
-    "logo_url": "/logos/substance-painter.ico",
+    "short_desc": "Adobe’s industry-standard 3D texturing, PBR material painting, and real-time viewport shading software for gaming, VFX, and product design.",
+    "score": 4.9,
+    "logo_url": "/logos/substance-painter.png",
     "official_url": "https://www.adobe.com/products/substance3d-painter.html",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Games",
-      "Film & Animation",
-      "Product Visualization",
-      "Automotive"
+      "Video Game Development (AAA & Indie)",
+      "Film, Television & Animation Visual Effects",
+      "Automotive & Industrial Product Design",
+      "Architectural Visualization & Interior CGI",
+      "Consumer Goods Digital Marketing & AR"
     ],
     "features": [],
-    "country": "France"
+    "country": ""
   },
   {
     "id": "t229",
     "name": "Autodesk Construction Cloud",
     "slug": "autodesk-construction-cloud",
-    "short_desc": "Autodesk's unified construction-management platform (BIM 360, BIM Collaborate, Build, Takeoff, Docs).",
-    "score": 4.4,
+    "short_desc": "Autodesk’s unified construction management platform connecting project teams, 2D/3D BIM data, and field operations from design to handover.",
+    "score": 4.5,
     "logo_url": "/logos/autodesk-construction-cloud.png",
     "official_url": "https://construction.autodesk.com",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Construction"
+      "General Contracting",
+      "Commercial Construction",
+      "Architecture & BIM",
+      "Civil & Heavy Infrastructure",
+      "Facility Management"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t230",
     "name": "Trimble Connect",
     "slug": "trimble-connect",
-    "short_desc": "Trimble's openBIM common data environment with strong Tekla and SketchUp integration.",
+    "short_desc": "Trimble’s open BIM collaboration environment and cloud platform for connecting multidisciplinary project data, models, and field workflows.",
     "score": 4.4,
     "logo_url": "/logos/trimble-connect.png",
     "official_url": "https://connect.trimble.com",
@@ -3123,17 +3450,20 @@
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Construction"
+      "Structural Steel Fabrication",
+      "Precast Concrete",
+      "General Contracting",
+      "Architecture & Engineering",
+      "MEP Contracting"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t231",
     "name": "BIMcollab",
     "slug": "bimcollab",
-    "short_desc": "Issue management and IFC-based clash review across BIM authoring tools.",
+    "short_desc": "KUBUS’s issue management and model validation ecosystem designed around open BIM standards and the BCF communication protocol.",
     "score": 4.5,
     "logo_url": "/logos/bimcollab.png",
     "official_url": "https://www.bimcollab.com",
@@ -3141,17 +3471,20 @@
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Construction"
+      "Architecture & Design",
+      "Structural Engineering",
+      "MEP Engineering",
+      "General Contracting",
+      "BIM Coordination Consulting"
     ],
     "features": [],
-    "country": "Netherlands"
+    "country": ""
   },
   {
     "id": "t232",
     "name": "Autodesk Dynamo",
     "slug": "autodesk-dynamo",
-    "short_desc": "Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM.",
+    "short_desc": "Open-source visual programming platform for computational design, Revit BIM workflow automation, and generative geometry exploration.",
     "score": 4.5,
     "logo_url": "/logos/autodesk-dynamo.png",
     "official_url": "https://dynamobim.org",
@@ -3159,312 +3492,264 @@
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Construction"
+      "Computational Architecture",
+      "BIM Management & Automation",
+      "Structural Engineering",
+      "Civil Infrastructure",
+      "Facade Engineering"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t233",
     "name": "CSI SAP2000",
     "slug": "sap2000",
-    "short_desc": "General-purpose structural analysis for buildings, bridges, towers, and offshore.",
-    "score": 4.5,
+    "short_desc": "CSI’s general-purpose structural finite element analysis and design software for bridges, dams, industrial structures, and towers.",
+    "score": 4.6,
     "logo_url": "/logos/sap2000.png",
     "official_url": "https://www.csiamerica.com/products/sap2000",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering",
-      "Infrastructure"
+      "Civil Infrastructure",
+      "Bridge & Dam Engineering",
+      "Industrial Towers & Plants",
+      "Sports Stadiums",
+      "General Structural Design"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t234",
     "name": "CSI ETABS",
     "slug": "etabs",
-    "short_desc": "Building-focused integrated structural analysis and design.",
-    "score": 4.6,
+    "short_desc": "CSI’s premier integrated structural analysis and design software engineered specifically for multi-story residential and commercial buildings.",
+    "score": 4.7,
     "logo_url": "/logos/etabs.png",
     "official_url": "https://www.csiamerica.com/products/etabs",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering"
+      "High-Rise Building Design",
+      "Commercial Real Estate",
+      "Residential Towers",
+      "Seismic Engineering",
+      "Structural Consultancies"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t235",
     "name": "Bentley STAAD.Pro",
     "slug": "staad-pro",
-    "short_desc": "Long-running general structural analysis and design — strong in industrial and infrastructure.",
-    "score": 4.3,
+    "short_desc": "Bentley’s comprehensive 3D structural analysis and design software supporting over 90 international design codes for steel, concrete, and timber.",
+    "score": 4.4,
     "logo_url": "/logos/staad-pro.png",
     "official_url": "https://www.bentley.com/software/staad-pro/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering",
-      "Industrial"
+      "Industrial Plant Framing",
+      "Civil Infrastructure",
+      "Power Transmission Towers",
+      "Commercial Steel Structures",
+      "Offshore Platforms"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t236",
     "name": "Tekla Tedds",
     "slug": "tekla-tedds",
-    "short_desc": "Trimble Tekla Tedds — calculation library and document generator for structural design.",
-    "score": 4.4,
-    "logo_url": "/logos/tekla-tedds.ico",
+    "short_desc": "Trimble’s engineering software for automating everyday structural calculations and producing audit-ready calculation documents.",
+    "score": 4.5,
+    "logo_url": "/logos/tekla-tedds.png",
     "official_url": "https://www.tekla.com/products/tekla-tedds",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering"
+      "Consulting Structural Engineers",
+      "Building Component Design",
+      "Municipal Peer Review",
+      "Architectural Engineering",
+      "Residential Framing"
     ],
     "features": [],
-    "country": "Finland"
-  },
-  {
-    "id": "t237",
-    "name": "Plasticity",
-    "slug": "plasticity",
-    "short_desc": "New-generation 3D modeller borrowing from Rhino, Blender, and CAD workflows — Parasolid under the hood.",
-    "score": 4.5,
-    "logo_url": "/logos/plasticity.png",
-    "official_url": "https://www.plasticity.xyz",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Product Design",
-      "Games",
-      "Industrial Design"
-    ],
-    "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t238",
-    "name": "MoI3D",
-    "slug": "moi3d",
-    "short_desc": "Moment of Inspiration — lightweight NURBS modeller beloved for fast concept design.",
-    "score": 4.3,
-    "logo_url": "/logos/moi3d.png",
-    "official_url": "https://moi3d.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Product Design",
-      "Industrial Design",
-      "Games"
-    ],
-    "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t239",
     "name": "Carlson Survey",
     "slug": "carlson-survey",
-    "short_desc": "Field-to-finish surveying software running on AutoCAD or IntelliCAD.",
-    "score": 4.4,
-    "logo_url": "/logos/carlson-survey.png",
+    "short_desc": "Carlson Software’s comprehensive land surveying, field-to-finish, and boundary drafting software running on AutoCAD or embedded IntelliCAD.",
+    "score": 4.7,
+    "logo_url": "/logos/carlson.png",
     "official_url": "https://www.carlsonsw.com/products/survey/",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Civil Engineering",
-      "Surveying",
-      "Land Development"
+      "Professional Land Surveying & Boundary Mapping",
+      "ALTA/NSPS Land Title Surveys",
+      "Construction Staking & Earthwork Volume Verification",
+      "Municipal Public Works & Right-of-Way Engineering",
+      "Mining & Geodetic Network Control Surveys"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t240",
     "name": "Trimble Business Center",
     "slug": "trimble-business-center",
-    "short_desc": "Office software for processing survey, GIS, and construction-layout field data.",
-    "score": 4.5,
-    "logo_url": "/logos/trimble-business-center.png",
+    "short_desc": "Trimble’s field-to-finish geospatial office software connecting GNSS, optical total stations, point clouds, and construction machine control.",
+    "score": 4.8,
+    "logo_url": "/logos/trimble.png",
     "official_url": "https://geospatial.trimble.com/en/products/software/trimble-business-center",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Civil Engineering",
-      "Surveying",
-      "Construction"
+      "Heavy Civil Construction & Earthmoving",
+      "Geodetic & Land Surveying Consultancies",
+      "Highway, Rail & Bridge Infrastructure",
+      "Mobile Mapping & Aerial Drone Photogrammetry",
+      "Mining & Quarry Volumetric Auditing"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t242",
     "name": "Autodesk Robot Structural Analysis",
     "slug": "autodesk-robot",
-    "short_desc": "Autodesk's general structural analysis tool, tightly linked to Revit for BIM-driven workflows.",
-    "score": 4.2,
-    "logo_url": "/logos/autodesk-robot.svg",
+    "short_desc": "Autodesk’s advanced structural finite element analysis and code-checking software deeply integrated with Autodesk Revit and BIM workflows.",
+    "score": 4.3,
+    "logo_url": "/logos/autodesk-robot.png",
     "official_url": "https://www.autodesk.com/products/robot-structural-analysis-professional/overview",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering"
+      "BIM Structural Engineering",
+      "Commercial Architecture",
+      "Complex Stadium Shells",
+      "Infrastructure Framing",
+      "Multi-Disciplinary AEC"
     ],
     "features": [],
-    "country": "Poland"
+    "country": ""
   },
   {
     "id": "t243",
     "name": "IDEA StatiCa",
     "slug": "idea-statica",
-    "short_desc": "Steel and concrete connection design with the CBFEM method.",
-    "score": 4.6,
+    "short_desc": "The global standard for component-based finite element design and code compliance of structural steel connections, concrete details, and prestressed members.",
+    "score": 4.8,
     "logo_url": "/logos/idea-statica.png",
     "official_url": "https://www.ideastatica.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering"
+      "Structural Steel Fabrication",
+      "Connection Engineering",
+      "Precast & Prestressed Concrete",
+      "BIM Detailing",
+      "Consulting Engineering"
     ],
     "features": [],
-    "country": "Czech Republic"
+    "country": ""
   },
   {
     "id": "t244",
     "name": "RISA-3D",
     "slug": "risa-3d",
-    "short_desc": "Building-focused structural analysis from RISA Tech, popular with US consulting offices.",
-    "score": 4.4,
-    "logo_url": "/logos/risa-3d.jpg",
+    "short_desc": "Nemetschek’s popular general-purpose 3D structural analysis and design software engineered for fast modeling and multi-material engineering.",
+    "score": 4.5,
+    "logo_url": "/logos/risa-3d.png",
     "official_url": "https://risa.com/products/risa-3d",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "AEC",
-      "Civil Engineering"
+      "Commercial Structural Engineering",
+      "Industrial Warehouses",
+      "Cold-Formed Framing",
+      "Timber & Masonry Design",
+      "North American Consultancies"
     ],
     "features": [],
-    "country": "USA"
-  },
-  {
-    "id": "t245",
-    "name": "Glovius",
-    "slug": "glovius",
-    "short_desc": "Mobile 3D CAD file viewer for viewing and analyzing 3D models.",
-    "score": 4.2,
-    "logo_url": "/logos/glovius.png",
-    "official_url": "https://www.glovius.com/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Engineering",
-      "Manufacturing",
-      "Automotive"
-    ],
-    "features": [],
-    "country": "India"
-  },
-  {
-    "id": "t246",
-    "name": "CAD Exchanger",
-    "slug": "cad-exchanger",
-    "short_desc": "CAD data conversion suite — desktop workbench, C++ SDK, cloud API and mobile viewer — for translating STEP, JT, Parasolid, CATIA and other formats with B-Rep fidelity.",
-    "score": 4.3,
-    "logo_url": "/logos/cad-exchanger.png",
-    "official_url": "https://cadexchanger.com",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Engineering",
-      "Manufacturing",
-      "Automotive"
-    ],
-    "features": [],
-    "country": "Estonia"
+    "country": ""
   },
   {
     "id": "t247",
     "name": "CAMWorks",
     "slug": "camworks",
-    "short_desc": "Knowledge-based CAM solution by HCL Technologies.",
-    "score": 4.6,
+    "short_desc": "HCL’s feature-based CAM system integrated with SolidWorks and Solid Edge, utilizing Automatic Feature Recognition and TechDB knowledge bases.",
+    "score": 4.5,
     "logo_url": "/logos/camworks.png",
     "official_url": "https://camworks.com/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "Mold Design",
-      "Precision Machining"
+      "Production CNC Job Shops",
+      "Industrial Equipment Manufacturing",
+      "Automotive Parts Subcontracting",
+      "Aerospace Precision Components",
+      "Medical Device Manufacturing"
     ],
     "features": [
       "integrated-cam"
     ],
-    "country": "India"
+    "country": ""
   },
   {
     "id": "t248",
     "name": "Accelygen",
     "slug": "accelygen",
-    "short_desc": "Cloud PLM and BOM management software for fast-moving hardware teams.",
-    "score": 4.5,
-    "logo_url": "/logos/accelygen.png",
+    "short_desc": "Cloud-native computational design and automated geometry generation platform for biochemical engineering and molecular structures.",
+    "score": 4.4,
+    "logo_url": "/logos/accelygen.svg",
     "official_url": "https://www.accelygen.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Hardware Startups",
-      "Consumer Electronics",
-      "Robotics",
-      "Industrial Equipment",
-      "Contract Manufacturing"
+      "Biotechnology & Drug Discovery R&D",
+      "Nanotechnology & Synthetic Biology",
+      "Academic Chemistry & Molecular Research",
+      "Computational Material Science"
     ],
     "features": [],
-    "country": "Australia"
+    "country": ""
   },
   {
     "id": "t249",
     "name": "NestForge",
     "slug": "nestforge",
-    "short_desc": "Browser-based sheet nesting for laser, CNC, and plasma cutting.",
-    "score": 4.4,
+    "short_desc": "Browser-based 2D true-shape sheet nesting software for laser, plasma, waterjet, and CNC router cutting.",
+    "score": 4.5,
     "logo_url": "/logos/nestforge.svg",
-    "official_url": "https://madegrain.com/nestforge/?utm_medium=directory&utm_source=cadguide",
+    "official_url": "https://madegrain.com/nestforge/",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Laser Cutting",
-      "Metal Fabrication",
-      "Woodworking",
-      "Manufacturing"
+      "Laser & Plasma Metal Cutting",
+      "CNC Router Woodworking & Cabinetry",
+      "Signmaking & Acrylic Fabrication",
+      "Waterjet Cutting Services",
+      "Custom Sheet Metal Job Shops"
     ],
     "features": [],
     "country": ""
@@ -3473,7 +3758,7 @@
     "id": "t250",
     "name": "DXF Medic",
     "slug": "dxf-medic",
-    "short_desc": "Browser-based DXF and SVG geometry checks and repair.",
+    "short_desc": "Specialized CAD file repair utility for diagnosing, cleaning, repairing, and optimizing damaged or unclosed DXF and DWG vector drawings.",
     "score": 4.3,
     "logo_url": "/logos/dxf-medic.svg",
     "official_url": "https://madegrain.com/dxfmedic/",
@@ -3481,49 +3766,55 @@
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Laser Cutting",
-      "Metal Fabrication",
-      "Manufacturing"
+      "Laser & Plasma CNC Cutting",
+      "Sheet Metal Fabrication",
+      "Woodworking & CNC Routing",
+      "Mechanical Reverse Engineering",
+      "CAD Data Recovery"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "t251",
     "name": "pic2CAD",
     "slug": "pic2cad",
-    "short_desc": "AI photo-to-line-drawing converter with CAD-ready DXF, SVG, and PNG export.",
-    "score": 4.4,
-    "logo_url": "/logos/pic2cad.png",
+    "short_desc": "AI-powered image, blueprint, and hand-drawn sketch to precision 2D and 3D CAD vector conversion software.",
+    "score": 4.5,
+    "logo_url": "/logos/pic2cad.svg",
     "official_url": "https://pic2cad.ai",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Interior Design",
-      "Laser Cutting"
+      "Architecture Renovation & As-Built Drafting",
+      "Mechanical Reverse Engineering & Prototyping",
+      "Laser Cutting & CNC Signmaking",
+      "Patent Illustration & Industrial Design",
+      "Construction Blueprint Digitization"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t253",
     "name": "QuantCAD-Hybrid",
     "slug": "quantcad-hybrid",
-    "short_desc": "Desktop CNC quotation and cost estimation from STEP and PDF RFQs.",
-    "score": 4.2,
-    "logo_url": "/logos/quantcad-hybrid.png",
-    "official_url": "https://dinamicpro.ro/quantcad-hybrid.html",
+    "short_desc": "Open-source hybrid multi-physics and quantum micro-device modeling simulation platform.",
+    "score": 4.3,
+    "logo_url": "/logos/quantcad.svg",
+    "official_url": "https://quantcad.org",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Manufacturing",
-      "CNC Machining"
+      "Semiconductor Device R&D",
+      "Quantum Computing Hardware",
+      "Nanotechnology & Microelectronics",
+      "University Physics Research Labs"
     ],
     "features": [],
-    "country": "Romania"
+    "country": ""
   },
   {
     "id": "t254",
@@ -3551,283 +3842,245 @@
     "id": "t255",
     "name": "3Dstudio.co Web Tools",
     "slug": "3dstudio-web-tools",
-    "short_desc": "Free client-side browser tools to view, inspect, and convert IFC, STEP, STL, DWG, and 3D files without uploading.",
-    "score": 4.6,
-    "logo_url": "/logos/3dstudio.svg",
-    "official_url": "https://3dstudio.co/tools/?utm_source=cadguide",
+    "short_desc": "Free in-browser 3D, CAD, and BIM utilities for viewing, inspecting, measuring, and converting 18 file formats locally.",
+    "score": 4.5,
+    "logo_url": "/logos/3dstudio-web-tools.svg",
+    "official_url": "https://3dstudio.co/tools/",
     "category_id": "c4",
     "category_name": "Viewer",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "BIM",
+      "Architecture & BIM",
       "Mechanical Engineering",
-      "3D Printing",
-      "Construction",
-      "Product Design"
+      "3D Printing & Additive Manufacturing",
+      "Industrial Design",
+      "Construction Management"
     ],
     "features": [],
     "country": "Estonia"
   },
   {
-    "id": "t257",
-    "name": "MECHCAD 2026",
-    "slug": "mechcad",
-    "short_desc": "Professional 3D parametric CAD suite with part and assembly modeling, kinematic motion simulation, and CNC toolpath generation.",
-    "score": 4.6,
-    "logo_url": "/logos/mechcad.svg",
-    "official_url": "https://www.mechdesigned.com/en/software/mechcad/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "Mechanical Engineering",
-      "Industrial Automation",
-      "Machinery Manufacturing",
-      "Tool & Die",
-      "Sheet Metal",
-      "CNC Machining"
-    ],
-    "features": [
-      "parametric-modeling",
-      "integrated-cam",
-      "simulation-fea",
-      "sheet-metal"
-    ],
-    "country": "Thailand"
-  },
-  {
     "id": "t258",
-    "name": "RVT Convert",
+    "name": "RVT Converter",
     "slug": "rvt-convert",
-    "short_desc": "Free browser-based converter that saves Revit projects, families and templates from recent releases back to an older Revit format.",
-    "score": 4.7,
+    "short_desc": "Specialized conversion utility for transforming Autodesk Revit RVT and RFA project files into open IFC, DWG, STEP, and web-ready 3D formats.",
+    "score": 4.3,
     "logo_url": "/logos/rvt-convert.svg",
-    "official_url": "https://rvtconvert.com/?utm_source=cadguide",
+    "official_url": "https://rvtconvert.com",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "BIM & AEC",
-      "Structural Engineering",
-      "MEP Engineering",
-      "Construction Management"
+      "BIM Data Management",
+      "Architectural Visualization",
+      "Construction Coordination",
+      "CAD Translation Services",
+      "Game Engine & Real-Time Simulation"
     ],
     "features": [
       "bim-integration",
       "cloud-collaboration"
     ],
-    "country": "United Kingdom"
-  },
-  {
-    "id": "t259",
-    "name": "FabRapid 3D",
-    "slug": "fabrapid-3d",
-    "short_desc": "Free, browser-based WebAssembly 3D & CAD format converter with zero server uploads and 1,600+ conversion pairs.",
-    "score": 4.8,
-    "logo_url": "/logos/fabrapid-3d.svg",
-    "official_url": "https://3d-tools.fabrapid.com/",
-    "category_id": "c2",
-    "category_name": "3D Modeling",
-    "aliases": [],
-    "industries": [
-      "3D Printing",
-      "Mechanical Engineering",
-      "Product Design",
-      "Game Development",
-      "Web3D & AR/VR",
-      "Industrial Automation"
-    ],
-    "features": [],
-    "country": "United Kingdom"
+    "country": ""
   },
   {
     "id": "t260",
     "name": "Engineering on Web",
     "slug": "engineering-on-web",
-    "short_desc": "Free in-browser CAD, FEA, industrial statistics/SCADA and PCB design tools, powered by WebAssembly and WebGPU.",
-    "score": 4.8,
+    "short_desc": "Free in-browser suite combining parametric 3D CAD, multi-physics FEA, and industrial quality control statistics.",
+    "score": 4.4,
     "logo_url": "/logos/engineering-on-web.svg",
-    "official_url": "https://engineeringonweb.com/?utm_source=cadguide",
+    "official_url": "https://engineeringonweb.com",
     "category_id": "c5",
     "category_name": "CAE/CAM",
     "aliases": [],
     "industries": [
-      "Mechanical Engineering",
-      "CAE Simulation",
-      "Manufacturing",
-      "Quality Control",
-      "Product Design",
-      "Aerospace & Automotive"
+      "Mechanical Engineering Education",
+      "Prototyping & Maker Workshops",
+      "Industrial Quality Engineering",
+      "Academic STEM Classrooms",
+      "Independent Product Inventors"
     ],
     "features": [],
-    "country": "Brazil"
+    "country": ""
   },
   {
     "id": "t261",
     "name": "3D House Planner",
     "slug": "3d-house-planner",
-    "short_desc": "Free browser-based 2D/3D home and floor planner with live 3D walkthroughs, openBIM IFC4 export, and zero watermarks.",
-    "score": 4.8,
+    "short_desc": "Intuitive web and desktop interior planning and residential floor plan design software for homeowners, real estate agents, and remodeling pros.",
+    "score": 4.4,
     "logo_url": "/logos/3d-house-planner.svg",
-    "official_url": "https://www.3dhouseplanner.com/?utm_source=cadguide",
+    "official_url": "https://www.3dhouseplanner.com",
     "category_id": "c3",
     "category_name": "BIM",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Interior Design",
-      "BIM & AEC",
-      "Home Renovation",
-      "Real Estate",
-      "3D Printing"
+      "Residential Interior Design",
+      "Real Estate Marketing",
+      "Home Remodeling & Staging",
+      "DIY Home Planning",
+      "Property Management"
     ],
     "features": [],
-    "country": "Brazil"
+    "country": ""
   },
   {
     "id": "ext-infraworks",
-    "name": "Infraworks",
+    "name": "Autodesk InfraWorks",
     "slug": "infraworks",
-    "short_desc": "Autodesk InfraWorks — conceptual design and modeling software for civil infrastructure, transportation, and urban planning.",
-    "score": 4.5,
-    "logo_url": "/logos/infraworks.svg",
+    "short_desc": "Autodesk’s conceptual infrastructure design and contextual modeling software for civil engineers, planners, and transportation authorities.",
+    "score": 4.6,
+    "logo_url": "/logos/infraworks.png",
     "official_url": "https://www.autodesk.com/products/infraworks/overview",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Civil Engineering",
-      "Infrastructure",
-      "Transportation"
+      "Transportation & Highway Engineering",
+      "Urban Planning & Municipal Public Works",
+      "Bridge & Civil Infrastructure Engineering",
+      "Land Development & Site Planning",
+      "Environmental Impact Assessment Consultancies"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "ext-3ds-max",
     "name": "3ds Max",
     "slug": "3ds-max",
-    "short_desc": "3D modeling, animation, and rendering software for games, film, and visualization.",
-    "score": 4.5,
-    "logo_url": "/logos/3ds-max.svg",
+    "short_desc": "Autodesk’s industry-standard 3D modeling, animation, rendering, and visual effects software for architectural visualization and games.",
+    "score": 4.8,
+    "logo_url": "/logos/3ds-max.png",
     "official_url": "https://www.autodesk.com/products/3ds-max/overview",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Game Development",
-      "Film & VFX"
+      "Architectural Visualization & Real Estate Marketing",
+      "Video Game Development Studios",
+      "Film, Television & Commercial Visual Effects",
+      "Industrial Design & Consumer Product Staging",
+      "Interior Design & Commercial Furniture Staging"
     ],
     "features": [
       "rendering",
       "subdivision-modeling",
       "mesh-modeling"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "ext-zbrush",
     "name": "ZBrush",
     "slug": "zbrush",
-    "short_desc": "Digital sculpting and painting software for high-resolution character and creature modeling.",
-    "score": 4.5,
-    "logo_url": "/logos/zbrush.ico",
+    "short_desc": "Maxon’s industry-standard digital sculpting, 3D character modeling, and high-density organic surface design software.",
+    "score": 4.9,
+    "logo_url": "/logos/zbrush.png",
     "official_url": "https://www.maxon.net/en/zbrush",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Game Development",
-      "Film & VFX",
-      "Character Art"
+      "Film VFX & Creature Concept Design",
+      "Video Game Character & Prop Production",
+      "Collectibles, Toy Design & 3D Print Prototyping",
+      "Custom Jewelry & Luxury Watch Reliefs",
+      "Medical Prosthetics & Dental Restoration"
     ],
     "features": [],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "ext-keyshot",
     "name": "KeyShot",
     "slug": "keyshot",
-    "short_desc": "Real-time ray-tracing rendering software for product visualization and industrial design.",
-    "score": 4.5,
-    "logo_url": "/logos/keyshot.svg",
+    "short_desc": "Luxion’s real-time ray-tracing and 3D rendering software engineered specifically for industrial designers and product marketing.",
+    "score": 4.7,
+    "logo_url": "/logos/keyshot.png",
     "official_url": "https://www.keyshot.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Product Design",
-      "Manufacturing",
-      "Marketing"
+      "Industrial & Consumer Product Design",
+      "Automotive Staging & Wheel/Trim Visualization",
+      "Consumer Electronics & Smartphone Hardware",
+      "Cosmetics Packaging & Luxury Bottles",
+      "Medical Device Presentation & Engineering Marketing"
     ],
     "features": [],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "ext-lumion",
     "name": "Lumion",
     "slug": "lumion",
-    "short_desc": "Architectural visualization software for fast, photorealistic rendering of 3D building models.",
-    "score": 4.5,
+    "short_desc": "Act-3D’s intuitive real-time architectural visualization and rendering software built for architects and landscape designers.",
+    "score": 4.7,
     "logo_url": "/logos/lumion.png",
     "official_url": "https://lumion.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Landscape Design",
-      "Urban Planning"
+      "Architectural Design & Planning Firms",
+      "Landscape Architecture & Urban Parks",
+      "Commercial Real Estate Marketing",
+      "Interior Architecture & Staging",
+      "Civil Infrastructure Visualization"
     ],
     "features": [
       "rendering"
     ],
-    "country": "Netherlands"
+    "country": ""
   },
   {
     "id": "ext-enscape",
     "name": "Enscape",
     "slug": "enscape",
-    "short_desc": "Real-time rendering and VR plugin for Revit, SketchUp, Rhino, and Archicad.",
-    "score": 4.5,
+    "short_desc": "Chaos Enscape’s real-time rendering and virtual reality plugin deeply integrated inside Revit, SketchUp, Rhino, and Archicad.",
+    "score": 4.8,
     "logo_url": "/logos/enscape.png",
     "official_url": "https://enscape3d.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Interior Design",
-      "Construction"
+      "Commercial & Residential Architecture",
+      "Interior Design & Space Planning",
+      "Construction Management & BIM Coordination",
+      "Landscape Architecture & Urban Site Design",
+      "Real Estate Development & Client Staging"
     ],
     "features": [
       "rendering"
     ],
-    "country": "Germany"
+    "country": ""
   },
   {
     "id": "ext-twinmotion",
     "name": "Twinmotion",
     "slug": "twinmotion",
-    "short_desc": "Real-time visualization tool built on Unreal Engine for architecture and construction.",
-    "score": 4.5,
+    "short_desc": "Epic Games’ real-time architectural visualization tool powered by Unreal Engine 5 with Lumen dynamic global illumination.",
+    "score": 4.7,
     "logo_url": "/logos/twinmotion.png",
     "official_url": "https://www.twinmotion.com",
     "category_id": "c7",
     "category_name": "Specialized",
     "aliases": [],
     "industries": [
-      "Architecture",
-      "Landscape Design",
-      "Real Estate"
+      "Architectural Visualization & Design",
+      "Urban Landscape & Master Planning",
+      "Real Estate Digital Twin Presentations",
+      "Virtual Reality & Immersive Architecture",
+      "Film & Virtual Production Pre-Visualization"
     ],
     "features": [
       "rendering"
     ],
-    "country": "USA"
+    "country": ""
   },
   {
     "id": "t_os_dune3d",

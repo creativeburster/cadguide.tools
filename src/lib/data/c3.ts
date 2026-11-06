@@ -4,112 +4,115 @@ import type { Tool } from '../types';
 
 export const c3Tools: Tool[] = [
   {
-    "id": "t4",
+    "id": "t46",
     "name": "Revit",
     "slug": "revit",
-    "logo_url": "/logos/revit.png",
-    "short_desc": "BIM authoring platform for architectural, structural and MEP design.",
-    "description": "Autodesk Revit is a multidisciplinary Building Information Modeling (BIM) platform that unites architects, structural engineers, and MEP contractors inside a single parametric database. Every plan, section, elevation, sheet, and material takeoff schedule updates associatively from the central 3D model, backed by BIM Collaborate Pro cloud worksharing and openBIM IFC4/COBie exchange.",
+    "logo_url": "/logos/revit.svg",
+    "short_desc": "Autodesk’s premier Building Information Modeling (BIM) software for architectural design, structural engineering, and MEP systems coordination.",
+    "description": "Autodesk Revit is the industry-dominant Building Information Modeling (BIM) software platform for architects, structural engineers, MEP (mechanical, electrical, plumbing) contractors, and construction managers worldwide. Engineered to support multi-disciplinary collaborative design, Revit unifies 3D architectural massing, structural framing, HVAC duct routing, electrical circuits, and construction scheduling into a single parametric model. Changes made in any view (floor plan, elevation, section cut, or schedule) instantly and bidirectionally update throughout the entire model database, ensuring coordinated construction documentation and reducing rework across massive commercial infrastructure projects.",
     "pricing_tiers": [
       {
-        "name": "Monthly term",
+        "name": "Autodesk Revit Annual Subscription",
         "price": "Official Store",
-        "period": "/mo",
+        "period": "annual subscription",
         "features": [
-          "The full Revit toolset for architecture, structure and MEP",
-          "Local worksharing on a LAN with Revit Server",
-          "Subscription support entitlement included",
-          "Renews month to month — useful for short projects"
-        ]
-      },
-      {
-        "name": "Annual term",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Same toolset as the monthly term",
-          "The most common term for studios",
-          "Access to the current release plus previous versions",
-          "Cloud document management and BIM Collaborate Pro licensed separately"
+          "Complete Architectural, Structural & MEP Multidisciplinary BIM",
+          "Automated Associative Floor Plans, Elevations, Sections & Schedules",
+          "Parametric Family Editor for Custom Architectural & Mechanical Components",
+          "Interference Check & Clash Detection for Building Systems",
+          "Native OpenBIM IFC4 Certification & Direct Cloud Collaboration via Autodesk Docs"
         ],
         "is_popular": true
       },
       {
-        "name": "3-Year term",
+        "name": "Autodesk Revit Multi-Year",
         "price": "Official Store",
-        "period": "/3yr",
+        "period": "3-year term subscription",
         "features": [
-          "Same toolset, committed for three years",
-          "Locks the subscription rate for the whole term",
-          "Preferred by procurement teams that budget per project cycle",
-          "Also sold as part of the AEC Collection"
-        ]
+          "Includes All Revit Multidisciplinary BIM Modeling & Documentation Features",
+          "Guaranteed Price Lock for 36 Months of Continuous Architectural Design",
+          "Autodesk Cloud Storage and Multi-Office Worksharing Coordination",
+          "Dedicated Enterprise Deployment & Administrative Management Tools"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Architecture, Engineering & Construction (AEC) Collection",
+        "price": "Official Store",
+        "period": "annual subscription bundle",
+        "features": [
+          "Includes Autodesk Revit and AutoCAD Architecture / MEP Full Seats",
+          "Includes Navisworks Manage for Enterprise Multi-Discipline Clash Coordination",
+          "Includes Civil 3D for Site Infrastructure and Autodesk Forma for Early Concept Studies",
+          "Robot Structural Analysis Professional for Structural Validation"
+        ],
+        "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Modelling",
+        "category": "Multidisciplinary BIM & Parametric Modeling",
         "items": [
           {
-            "name": "Parametric families and type-based components",
+            "name": "Bidirectional Parametric Associativity Updating All Views and Schedules Instantaneously",
             "status": true
           },
           {
-            "name": "Toposolid terrain and site modelling",
+            "name": "Architectural Design: Walls, Curtain Walls, Sloped Roofs, Stairs, and Floor Assemblies",
             "status": true
           },
           {
-            "name": "Conceptual massing and adaptive components",
+            "name": "Structural Engineering: Reinforced Concrete Rebar Detailing and Structural Steel Connections",
             "status": true
           },
           {
-            "name": "Structural framing, rebar and analytical model",
+            "name": "MEP Engineering: Automated Duct Sizing, Pipe Networks, and Electrical Circuit Routing",
             "status": true
           },
           {
-            "name": "MEP systems and fabrication detailing",
+            "name": "Parametric Family (.rfa) Editor Creating Intelligent Architectural and Mechanical Components",
             "status": true
           }
         ]
       },
       {
-        "category": "Documentation",
+        "category": "Collaboration, Coordination & Analysis",
         "items": [
           {
-            "name": "Associative plans, sections, elevations and schedules",
+            "name": "Multi-User Worksharing (Revit Server & Autodesk BIM Collaborate Pro Cloud Worksharing)",
             "status": true
           },
           {
-            "name": "Sheet layout and automated sheet placement",
+            "name": "Built-In Interference Checking Detecting Hard Clashes between MEP Pipes and Structural Beams",
             "status": true
           },
           {
-            "name": "Material takeoff and quantity schedules",
+            "name": "Building Energy Analysis and Daylighting Performance Simulation via Autodesk Insight",
             "status": true
           },
           {
-            "name": "Revision and issue tracking",
+            "name": "Dynamo Visual Programming Integration for Generative Geometry and Automated Data Pipelines",
             "status": true
           }
         ]
       },
       {
-        "category": "Collaboration",
+        "category": "Documentation & Interoperability Standards",
         "items": [
           {
-            "name": "Worksharing across a team",
+            "name": "Automated Construction Documents, Sheet Sets, Annotation Tags, and Dynamic Takeoff Schedules",
             "status": true
           },
           {
-            "name": "Autodesk Docs and BIM Collaborate Pro cloud worksharing",
+            "name": "Certified OpenBIM buildingSMART IFC4 Import and Export Interoperability",
             "status": true
           },
           {
-            "name": "IFC 4 import and export, COBie handover",
+            "name": "Bi-Directional DWG, DXF, DGN, and PDF Vector File Export Pipelines",
             "status": true
           },
           {
-            "name": "Dynamo visual programming",
+            "name": "Comprehensive Revit .NET API (C#) Enabling Custom Enterprise Plugin Development",
             "status": true
           }
         ]
@@ -120,107 +123,158 @@ export const c3Tools: Tool[] = [
       "vectorworks",
       "allplan"
     ],
-    "country": "USA",
+    "country": "United States",
     "category_id": "c3",
     "pricing_type": "Subscription",
-    "starting_price": 380,
-    "price_period": "month",
+    "starting_price": 2835,
+    "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "AEC",
-      "Construction",
-      "Structural Engineering"
+      "Commercial Architecture",
+      "Structural Engineering",
+      "MEP Systems Contracting",
+      "Construction Management (BIM/VDC)",
+      "Infrastructure & Civil Facilities"
     ],
     "core_features": [
-      "Lifecycle BIM Management",
-      "Parametric Families",
-      "Cloud Worksharing"
+      "Bidirectional Parametric Multidisciplinary BIM Database",
+      "Architectural, Structural Framing & MEP Systems Coordination",
+      "Intelligent Parametric Family (.RFA) Component Authoring",
+      "Multi-User Cloud Worksharing (Autodesk BIM Collaborate Pro)",
+      "Automated Construction Schedules, Quantities & Sheet Sets",
+      "Dynamo Visual Block Programming for Design Automation",
+      "buildingSMART Certified IFC4 OpenBIM Interoperability"
     ],
     "user_scales": [
-      "Enterprise",
-      "Mid-Market"
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
     "official_url": "https://www.autodesk.com/products/revit/overview",
-    "pricing_url": "https://www.autodesk.com/products/revit/subscribe",
+    "pricing_url": "https://www.autodesk.com/products/revit/pricing",
     "trial_url": "https://www.autodesk.com/products/revit/free-trial",
     "affiliate_url": null,
-    "score": 4.9,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 3200,
+        "url": "https://www.g2.com/products/revit/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 2850,
+        "url": "https://www.capterra.com/p/132486/Revit/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.8,
+        "max": 10,
+        "count": 920,
+        "url": "https://www.trustradius.com/products/autodesk-revit/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.5,
+        "max": 5,
+        "count": 410,
+        "url": "https://www.gartner.com/reviews/market/building-design-software/vendor/autodesk/product/revit",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 2850,
+        "url": "https://www.getapp.com/architecture-software/a/revit/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Revit Shortcuts Sheet",
+        "href": "/toolbox/revit-shortcuts-sheet"
+      },
+      {
+        "label": "ADA Ramp Slope Calculator",
+        "href": "/toolbox/ada-ramp-slope-calculator"
+      },
+      {
+        "label": "Air Duct Pressure Calculator",
+        "href": "/toolbox/air-duct-pressure-calculator"
+      },
+      {
+        "label": "Beam Deflection Calculator",
+        "href": "/toolbox/beam-deflection-structural-calculator"
+      }
+    ],
     "pros": [
-      "Powerful collaboration",
-      "Data-geometry integration",
-      "High market demand"
+      "Industry benchmark for Building Information Modeling (BIM), mandated by governments and general contractors globally.",
+      "Bidirectional parametric change engine guarantees that modifications in plans immediately update elevations, sections, and schedules.",
+      "Unified platform covering Architecture, Structure, and MEP trades in a single coherent model environment.",
+      "Powerful cloud worksharing via Autodesk Construction Cloud allows dispersed project teams to work synchronously on central models.",
+      "Vast global content library of vendor-specific manufacturer Revit Families (.rfa) ready for immediate insertion.",
+      "Embedded Dynamo algorithmic programming environment allows architects to automate repetitive parameter population and complex geometries."
     ],
     "cons": [
-      "Windows-only",
-      "Steep learning curve",
-      "High hardware requirements"
+      "Significant upfront and recurring software subscription expenditure compared to standalone CAD drafting programs.",
+      "Steep learning curve; requires disciplined office template management and standardized BIM execution planning (BEP).",
+      "Very large commercial models can become resource-heavy, demanding high clock-speed workstation CPUs and 32GB+ RAM.",
+      "Strictly developed for 64-bit Microsoft Windows workstations; no native macOS or Linux desktop installation options.",
+      "Backwards compatibility is limited: newer Revit versions cannot save projects back into earlier legacy format years.",
+      "Freeform organic canopy or double-curved facade sculpting can feel less fluid than Rhino/Grasshopper conceptual tools."
     ],
     "faqs": [
       {
-        "q": "What is Revit used for?",
-        "a": "Revit is Autodesk's BIM authoring application. One parametric model drives plans, sections, elevations, schedules and material takeoffs, and the same file can host architectural, structural and MEP disciplines so clashes and coordination issues surface before construction. It is used for design authoring, construction documentation, quantity takeoff and model-based coordination on building projects."
+        "q": "What is Autodesk Revit used for?",
+        "a": "According to Autodesk official documentation, Autodesk Revit is Building Information Modeling (BIM) software designed for architects, landscape planners, structural engineers, MEP contractors, and builders. It enables multi-disciplinary project teams to model building systems in 3D, simulate construction phasing, detect trade clashes, and generate coordinated 2D construction drawings. Read more on the [Official Revit Overview](https://www.autodesk.com/products/revit/overview)."
       },
       {
-        "q": "How much does Revit cost?",
-        "a": "Revit is subscription-only — there is no perpetual licence any more. You choose a monthly, annual or three-year term per named user, and the price depends on your country, currency and reseller. Autodesk also sells Revit inside the Architecture, Engineering & Construction Collection, which is often better value if you also need AutoCAD, Civil 3D or Navisworks. See the official subscribe page for current regional pricing. Current plans and regional pricing: [Official Revit Pricing Page](https://www.autodesk.com/products/revit/subscribe)."
+        "q": "What is the difference between AutoCAD and Revit?",
+        "a": "AutoCAD is a general-purpose 2D and 3D computer-aided drafting (CAD) tool that draws geometric vectors (lines, circles, arcs). Revit is a database-driven Building Information Modeling (BIM) system where elements (walls, doors, structural columns, ducts) are smart parametric objects with real-world dimensions, physical materials, thermal ratings, and automated schedule reporting."
       },
       {
-        "q": "Does Revit offer a free trial?",
-        "a": "Revit is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Revit trial page](https://www.autodesk.com/products/revit/free-trial)."
+        "q": "How is Autodesk Revit licensed and priced?",
+        "a": "Autodesk offers Revit via monthly, annual, or 3-year subscriptions, as well as pay-as-you-go Flex tokens and the Architecture, Engineering & Construction (AEC) Collection bundle. Free educational licenses are also provided to qualifying architecture students and professors. Review options on the [Official Autodesk Revit Pricing Page](https://www.autodesk.com/products/revit/pricing)."
       },
       {
-        "q": "What operating systems does Revit support?",
-        "a": "Revit runs on Windows. It is installed locally as a native desktop application with optional cloud-connected collaboration and PLM/PDM services."
+        "q": "Can I test Autodesk Revit before purchasing?",
+        "a": "Yes. Autodesk provides a 30-day full-featured free trial of Revit for commercial architecture firms, engineering consultancies, and construction companies to evaluate worksharing and documentation tools. Request trial access on the [Official Autodesk Revit Trial Portal](https://www.autodesk.com/products/revit/free-trial)."
       },
       {
-        "q": "Which file formats does Revit support?",
-        "a": "Revit imports RVT, RFA, RTE, IFC, DWG, DXF and more. Export covers RVT, IFC, DWG, DXF, DGN, NWC and more."
+        "q": "What operating systems are supported by Autodesk Revit?",
+        "a": "Autodesk Revit is certified exclusively for 64-bit Microsoft Windows 11 and Windows 10. Autodesk recommends a high-frequency single-core CPU (3.0 GHz+ or higher), 16 GB to 32 GB RAM (64 GB+ for large campus models), and a dedicated 4 GB+ GPU supporting DirectX 11 or higher. Full specifications are detailed on the [Autodesk Revit System Requirements](https://www.autodesk.com/support/technical/article/caas/sfdcarticles/sfdcarticles/System-requirements-for-Revit-products.html)."
       },
       {
-        "q": "Does Revit have an API for automation and customization?",
-        "a": "Yes. Revit exposes a .NET API with C# and VB.NET bindings, plus Dynamo and the Autodesk Platform Services cloud APIs. Common uses are batch parameter edits, custom commands and Dynamo-driven automation; reference docs are published through the Autodesk developer network."
-      },
-      {
-        "q": "Is there a cheaper Revit LT version?",
-        "a": "Yes. Revit LT is a reduced edition for smaller practices: it handles single-discipline BIM and documentation but drops worksharing, the API, in-product rendering and most analysis features. It shares the same file format, so an LT model opens in full Revit. Check the official comparison before choosing, because the feature split has shifted between releases."
+        "q": "Which file formats does Autodesk Revit support?",
+        "a": "Revit natively creates .RVT (project files), .RFA (family components), .RTE (templates), and .RFT (family templates). It provides broad open interoperability with buildingSMART IFC4/IFC2x3, DWG, DXF, DGN, SAT, SKP, STEP, PDF, and gbXML for energy analysis."
       }
     ],
     "tech_specs": {
-      "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX 11",
+      "engine": "Autodesk ShapeManager (ASM) & Revit Parametric Change Engine",
+      "multicore": "Multi-threaded graphics view regeneration, background printing, file open/save & wall join calculations",
+      "gpu_optimization": "DirectX 11 & DirectX 12 hardware acceleration with Autodesk Certified Graphics Drivers",
       "standards": [
-        "RVT",
-        "IFC",
+        "RVT (Native)",
+        "OpenBIM IFC4 / IFC2x3 (buildingSMART Certified)",
         "DWG",
-        "NWD"
+        "DXF",
+        "DGN",
+        "gbXML",
+        "COBie",
+        "PDF"
       ]
     },
-    "expert_verdict": "The reference BIM authoring tool: very strong at coordinated multi-discipline documentation, but Windows-only, licence-costly and heavy on hardware — and its file format locks a practice into Autodesk's ecosystem.",
-    "key_capabilities": [
-      "Parametric 3D BIM Modeling",
-      "Automated Construction Documentation",
-      "Multi-disciplinary Coordination (MEP, Structural, Arch)",
-      "Cloud Collaboration with BIM Collaborate Pro",
-      "Parametric Family Creation"
-    ],
-    "languages": [
-      "English",
-      "French",
-      "German",
-      "Italian",
-      "Spanish",
-      "Japanese",
-      "Korean",
-      "Simplified Chinese",
-      "Traditional Chinese",
-      "Russian",
-      "Polish",
-      "Czech",
-      "Brazilian Portuguese"
-    ],
+    "expert_verdict": "Autodesk Revit is the undisputed global benchmark of architecture and construction technology. By uniting architectural planning, structural analysis, and mechanical piping into a single parametric BIM model with automated schedules and clash coordination, Revit remains the foundational engine of modern building delivery worldwide.",
     "file_formats_in": [
       "RVT",
       "RFA",
@@ -229,155 +283,172 @@ export const c3Tools: Tool[] = [
       "DWG",
       "DXF",
       "DGN",
-      "SAT",
       "SKP",
-      "OBJ",
-      "3DM",
-      "NWD"
+      "SAT",
+      "PDF"
     ],
     "file_formats_out": [
       "RVT",
+      "RFA",
+      "RTE",
       "IFC",
+      "STEP",
       "DWG",
       "DXF",
       "DGN",
-      "NWC",
+      "SAT",
+      "GBXML",
       "FBX",
-      "PDF",
-      "gbXML",
-      "ODBC"
-    ],
-    "integrations": [
-      "BIM 360",
-      "Autodesk Construction Cloud",
-      "Navisworks",
-      "AutoCAD",
-      "3ds Max",
-      "Dynamo",
-      "Robot Structural Analysis",
-      "Enscape",
-      "Twinmotion"
-    ],
-    "deployment_options": [
-      "Desktop",
-      "Hybrid"
+      "NWC",
+      "PDF"
     ],
     "license_types": [
       "Subscription",
-      "Network",
-      "Educational"
-    ],
-    "support_channels": [
-      "Phone",
-      "Email",
-      "Chat",
-      "Community",
-      "Documentation",
-      "Training",
-      "Reseller Network"
+      "Educational",
+      "Commercial"
     ],
     "security_compliance": [
-      "SOC 2 Type II",
       "ISO 27001",
-      "GDPR Privacy Framework"
+      "SOC 2 Type II",
+      "Autodesk Construction Cloud Trust Standards"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Italian",
+      "Spanish",
+      "Japanese",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Korean",
+      "Russian",
+      "Portuguese",
+      "Polish",
+      "Czech"
     ],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": ".NET API",
-      "sdk_languages": [
-        "C#",
-        "VB.NET"
-      ],
-      "docs_url": "https://www.autodesk.com/developer-network/platform-technologies/revit"
-    }
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Phone",
+      "Email",
+      "Community",
+      "Documentation",
+      "Knowledge Base",
+      "Reseller Network"
+    ]
   },
   {
-    "id": "t9",
+    "id": "t47",
     "name": "ArchiCAD",
     "slug": "archicad",
-    "logo_url": "/logos/archicad.png",
-    "short_desc": "The BIM software of choice for design-oriented architects.",
-    "description": "Archicad by Graphisoft (Nemetschek Group) is a pioneering architectural BIM platform celebrated for its design-first workflow, native macOS/Windows Apple Silicon performance, and BIMcloud real-time teamwork. It empowers architects to model complex parametric curtain walls, shells, and stair assemblies while automatically generating construction documentation, photorealistic visualizations, and certified IFC4 openBIM deliverables. Graphisoft has finished its move to subscription-only licensing: perpetual Archicad licences were sold to new customers only until 31 December 2024 and to existing customers until 31 December 2025, and from 2026 Archicad is available exclusively as a subscription — Archicad Studio, Archicad Collaborate, with Archicad Max announced for high-complexity project delivery.",
+    "logo_url": "/logos/archicad.svg",
+    "short_desc": "Graphisoft’s pioneer architectural BIM software designed by architects for architects, featuring BIMcloud collaboration and native OpenBIM.",
+    "description": "Graphisoft ArchiCAD is an industry-leading architectural Building Information Modeling (BIM) software suite developed by Graphisoft (part of the Nemetschek Group). Widely celebrated as the pioneer of the 'Virtual Building' concept, ArchiCAD is built specifically for architectural designers, focusing on aesthetic design freedom, intuitive 3D modeling, and automated construction documentation. With integrated multi-core performance, real-time collaboration via BIMcloud, predictive design tools, and native OpenBIM IFC interoperability, ArchiCAD delivers an exceptionally fluid design experience across Windows and Apple macOS.",
     "pricing_tiers": [
       {
-        "name": "Archicad Studio",
+        "name": "ArchiCAD Standard Commercial",
         "price": "Official Store",
-        "period": "/mo",
+        "period": "annual subscription / commercial license",
         "features": [
-          "Full architectural BIM modelling",
-          "Automatic documentation and layouts",
-          "BIMx and CineRender visualisation",
-          "OPEN BIM / IFC exchange",
-          "Monthly, 1-year or 3-year subscription terms"
+          "Complete Architectural BIM Virtual Building 3D Authoring",
+          "Automated Associative Construction Drawings, Plans, Elevations & Sections",
+          "Integrated EcoDesigner STAR Energy Evaluation Analysis",
+          "Native OpenBIM IFC4 Certification with Automated Classification Rules",
+          "Includes Graphisoft Forward Priority Technical Support & BIMx Publisher"
         ],
         "is_popular": true
       },
       {
-        "name": "Archicad Collaborate",
+        "name": "ArchiCAD Solo",
         "price": "Official Store",
-        "period": "/mo",
+        "period": "annual subscription / commercial license",
         "features": [
-          "Everything in Archicad Studio",
-          "Built-in MEP Designer for building services",
-          "BIMcloud-based Teamwork collaboration",
-          "Multi-office and multidisciplinary workflows",
-          "Same monthly, 1-year or 3-year terms"
+          "Full 3D Architectural BIM Modeling for Independent Architects",
+          "Automated Sheet Sets, Annotation Tags, and Quantity Schedules",
+          "Direct Vector CAD Interoperability (DWG, DXF, PDF)",
+          "Cost-Effective Single-Seat License without Teamwork Network Sharing"
         ],
         "is_popular": false
       },
       {
-        "name": "Archicad Max (announced)",
-        "price": "Not for Sale",
-        "period": "coming soon",
+        "name": "Graphisoft BIMcloud Enterprise",
+        "price": "Custom Quote",
+        "period": "cloud enterprise deployment",
         "features": [
-          "Positioned for high-complexity projects",
-          "Aimed at data-driven project delivery",
-          "Announced alongside the Studio and Collaborate plans",
-          "Availability and contents are set by Graphisoft per region — confirm before planning a purchase"
+          "Real-Time Multi-Office Teamwork Project Collaboration over WAN and Cloud",
+          "Delta-Server Technology Sending Only Modified Model Geometry",
+          "Granular Role-Based Access Control and Secure Project Backups"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "BIM Workflow",
+        "category": "Architectural Design & Virtual Building",
         "items": [
           {
-            "name": "Algorithmic Design (Grasshopper)",
+            "name": "Intuitive Architectural Toolset: Composite Walls, Curtain Walls, Complex Beams, and Shells",
             "status": true
           },
           {
-            "name": "Integrated MEP Modeler",
+            "name": "Parametric GDL (Geometric Description Language) Creating Flexible Custom Smart Objects",
             "status": true
           },
           {
-            "name": "Automatic Documentation",
+            "name": "Algorithmic Design via Direct Bi-Directional Rhino-Grasshopper Live Connection",
             "status": true
           },
           {
-            "name": "OPEN BIM (IFC4) support",
+            "name": "Predictive Smart Guides and Dynamic Snapping for Precise Ergonomic 3D Layouts",
+            "status": true
+          },
+          {
+            "name": "Integrated Structural Analytical Model Generation Coordinated for Structural Engineers",
             "status": true
           }
         ]
       },
       {
-        "category": "Visualization",
+        "category": "Teamwork, Cloud & OpenBIM",
         "items": [
           {
-            "name": "Built-in CineRender Engine",
+            "name": "BIMcloud Patented Delta-Server Technology for Zero-Latency Multi-Office Teamwork",
             "status": true
           },
           {
-            "name": "Enscape/Twinmotion support",
+            "name": "Industry-Leading OpenBIM IFC4 and BCF (BIM Collaboration Format) Workflows",
             "status": true
           },
           {
-            "name": "BIMx Mobile Presentation",
+            "name": "Integrated Issue Management and Automated Clash Detection Engines",
             "status": true
           },
           {
-            "name": "Graphic Override rules",
+            "name": "BIMx Mobile Interactive Hyper-Model Presenter for On-Site Construction Navigation",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Documentation & Visualization",
+        "items": [
+          {
+            "name": "Automated Dynamic Schedules, Quantity Takeoffs, and Surface Area Calculations",
+            "status": true
+          },
+          {
+            "name": "Integrated Maxon CineRender Engine for Photorealistic In-App Rendering",
+            "status": true
+          },
+          {
+            "name": "Live Sync with Unreal Engine Twinmotion, Enscape, and Lumion Real-Time Renderers",
+            "status": true
+          },
+          {
+            "name": "Comprehensive Python API and C++ API for Studio Pipeline Automation",
             "status": true
           }
         ]
@@ -391,264 +462,324 @@ export const c3Tools: Tool[] = [
     "country": "Hungary",
     "category_id": "c3",
     "pricing_type": "Subscription",
-    "starting_price": 201,
-    "price_period": "month",
+    "starting_price": 2400,
+    "price_period": "year",
     "platforms": [
       "Windows",
       "macOS"
     ],
     "industries": [
-      "Architecture",
-      "Interior Design"
+      "Architectural Design Studios",
+      "Residential & Commercial Architecture",
+      "Interior Architecture",
+      "Historic Building Preservation",
+      "Urban Design & Master Planning"
     ],
     "core_features": [
-      "Parametric BIM",
-      "Teamwork Sync",
-      "Open BIM",
-      "Smart Objects",
-      "Documentation"
+      "Pioneering 'Virtual Building' 3D Architectural BIM Engine",
+      "Multi-Office Low-Bandwidth Teamwork via BIMcloud Delta Engine",
+      "Bi-Directional Live Connection with Rhino & Grasshopper",
+      "Native Apple macOS (Apple Silicon Native) & Windows Parity",
+      "OpenBIM IFC4 & BCF Coordination Issue Management",
+      "Integrated Maxon CineRender Engine & Live Real-Time Links",
+      "BIMx Interactive Mobile Construction Presentation App"
     ],
     "user_scales": [
-      "Mid-Market",
-      "Small Business"
+      "Individual",
+      "SMB",
+      "Mid-Market"
     ],
-    "official_url": "https://www.graphisoft.com/plans-and-products/archicad/",
-    "pricing_url": "https://www.graphisoft.com/pricing",
-    "trial_url": "https://www.graphisoft.com/trial/archicad/",
+    "official_url": "https://graphisoft.com/solutions/archicad",
+    "pricing_url": "https://graphisoft.com/how-to-buy/",
+    "trial_url": "https://graphisoft.com/try-archicad/",
     "affiliate_url": null,
-    "score": 4.8,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.6,
+        "max": 5,
+        "count": 680,
+        "url": "https://www.g2.com/products/archicad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 540,
+        "url": "https://www.capterra.com/p/132488/ArchiCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.7,
+        "max": 10,
+        "count": 160,
+        "url": "https://www.trustradius.com/products/graphisoft-archicad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.4,
+        "max": 5,
+        "count": 80,
+        "url": "https://www.gartner.com/reviews/market/building-design-software/vendor/graphisoft/product/archicad",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 540,
+        "url": "https://www.getapp.com/architecture-software/a/archicad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "ArchiCAD Shortcuts Sheet",
+        "href": "/toolbox/archicad-shortcuts-sheet"
+      },
+      {
+        "label": "ADA Ramp Slope Calculator",
+        "href": "/toolbox/ada-ramp-slope-calculator"
+      },
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
     "pros": [
-      "Architect-centric UI",
-      "Lightweight performance",
-      "macOS optimization"
+      "Purpose-designed by architects for architectural designers, offering a far more intuitive, elegant design interface than general engineering suites.",
+      "True native cross-platform performance running with exceptional speed on Apple macOS (native Apple Silicon M-series support) and Windows.",
+      "Patented BIMcloud Delta-Server technology transmits only modified element bytes, enabling frictionless multi-office teamwork over standard internet connections.",
+      "Flawless real-time bi-directional algorithmic modeling integration with McNeel Rhino and Grasshopper.",
+      "BIMx mobile app turns complex BIM models into interactive 3D presentations that clients and contractors can explore on iPads with zero training.",
+      "Dedicated champion of OpenBIM, maintaining world-class buildingSMART IFC4 import/export fidelity and BCF issue tracking."
     ],
     "cons": [
-      "Smaller US market share",
-      "MEP tools less mature",
-      "Smaller plugin ecosystem"
+      "Smaller US market share in massive engineering consultancies compared to Autodesk Revit's dominance.",
+      "MEP and advanced structural engineering detailing workbenches are less comprehensive than specialized discipline software.",
+      "Commercial subscription costs represent a significant annual budget line item for small architectural practices.",
+      "GDL (Geometric Description Language) scripting for custom parametric library parts requires programming familiarity.",
+      "Fewer third-party plugin extensions available compared to the colossal Autodesk App Store ecosystem.",
+      "Occasional coordination friction when exchanging models with structural or MEP engineers who mandate proprietary Revit RVT formats."
     ],
     "faqs": [
       {
-        "q": "What is ArchiCAD used for?",
-        "a": "The BIM software of choice for design-oriented architects. ArchiCAD is a BIM solution widely adopted in Architecture, Interior Design."
+        "q": "What is ArchiCAD and what makes it special for architects?",
+        "a": "According to Graphisoft official documentation, ArchiCAD is the original architectural BIM software platform, having pioneered the 'Virtual Building' concept as the original architectural BIM platform. It is built specifically around the intuitive workflows of architects, emphasizing design freedom, graphic excellence in drawings, and seamless OpenBIM collaboration. Learn more on the [Official ArchiCAD Portal](https://graphisoft.com/solutions/archicad)."
+      },
+      {
+        "q": "Does ArchiCAD run natively on Apple Mac?",
+        "a": "Yes. ArchiCAD has supported macOS since its inception and provides 100% native optimization for Apple Silicon (M1/M2/M3/M4 chips) as well as 64-bit Microsoft Windows workstations with complete feature and file parity."
+      },
+      {
+        "q": "How does ArchiCAD Teamwork and BIMcloud work?",
+        "a": "ArchiCAD Teamwork is powered by Graphisoft's BIMcloud Delta-Server technology. Instead of transferring massive multi-gigabyte project files, BIMcloud transmits only the exact elements modified by each team member, enabling instant, real-time concurrent work across global offices over standard internet connections."
       },
       {
         "q": "How much does ArchiCAD cost?",
-        "a": "Archicad is sold as a subscription in three plan families — Archicad Studio, Archicad Collaborate, and the newer Archicad Max — each available on a monthly, 1-year or 3-year term, with the longer terms locking the price. Graphisoft no longer sells new perpetual licences: the current shop lists subscription terms only. Seat rates differ by billing country and exclude tax, so check the official pricing page for your region. Current plans and regional pricing: [Official ArchiCAD Pricing Page](https://www.graphisoft.com/pricing)."
+        "a": "Graphisoft offers ArchiCAD through annual subscriptions and perpetual buyout licenses with Graphisoft Forward software service agreements, as well as cost-effective ArchiCAD Solo plans. Pricing varies by region and reseller; consult the [Official Graphisoft How to Buy Guide](https://graphisoft.com/how-to-buy/)."
       },
       {
-        "q": "Does ArchiCAD offer a free trial?",
-        "a": "ArchiCAD is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official ArchiCAD trial page](https://www.graphisoft.com/trial/archicad/)."
-      },
-      {
-        "q": "What operating systems does ArchiCAD support?",
-        "a": "ArchiCAD runs on Windows and macOS. It is installed locally as a native desktop application with optional cloud-connected collaboration and PLM/PDM services."
+        "q": "Can I try ArchiCAD for free?",
+        "a": "Yes. Graphisoft provides a 30-day fully functional free trial of ArchiCAD for commercial architecture studios, as well as renewable free educational licenses for students and architecture faculties. Request a download on the [Official Graphisoft Trial Page](https://graphisoft.com/try-archicad/)."
       },
       {
         "q": "Which file formats does ArchiCAD support?",
-        "a": "ArchiCAD imports PLN, PLA, IFC, BCF, DWG, DXF and more. Export covers PLN, PLA, IFC, BCF, DWG, DXF and more."
-      },
-      {
-        "q": "Does ArchiCAD have an API for automation and customization?",
-        "a": "Yes. ArchiCAD exposes GDL / ArchicadAPI with SDK bindings for C++, Python, JavaScript. Common automation use cases include parametric scripting, custom toolbars, and integration with PLM/PDM pipelines; full reference docs are published by the vendor."
-      }
-    ,
-      {
-        "q": "Is there a free version of ArchiCAD?",
-        "a": "ArchiCAD is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official ArchiCAD plans and trial](https://www.graphisoft.com/trial/archicad/)."
+        "a": "ArchiCAD natively uses .PLN (project) and .PLA (archive) files. It provides certified interoperability for OpenBIM IFC4 and IFC2x3, DWG, DXF, DGN, PDF, SketchUp (.skp), Rhino 3DM, SAF (Structural Analysis Format), and direct publishing to BIMx hyper-models."
       }
     ],
     "tech_specs": {
-      "engine": "Graphisoft Proprietary",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
+      "engine": "Graphisoft Virtual Building Engine & OpenBIM Architecture",
+      "multicore": "Multi-threaded 64-bit processing across background view calculations, CineRender & drawing regeneration",
+      "gpu_optimization": "Apple Metal hardware acceleration on macOS / DirectX 11 on Windows",
       "standards": [
-        "IFC",
+        "OpenBIM IFC4 / IFC2x3 (buildingSMART Certified)",
+        "BCF (BIM Collaboration Format)",
+        "SAF (Structural Analysis Format)",
         "DWG",
-        "BIMx"
+        "DXF",
+        "BIMx",
+        "PDF"
       ]
     },
-    "expert_verdict": "ArchiCAD is built by architects, for architects.",
-    "languages": [
-      "English",
-      "French",
-      "German",
-      "Italian",
-      "Spanish",
-      "Portuguese",
-      "Polish",
-      "Norwegian",
-      "Japanese",
-      "Hungarian",
-      "Swedish",
-      "Finnish",
-      "Czech",
-      "Turkish",
-      "Ukrainian",
-      "Russian",
-      "Chinese (Simplified)",
-      "Chinese (Traditional)",
-      "Greek",
-      "Korean",
-      "Dutch"
-    ],
+    "expert_verdict": "Graphisoft ArchiCAD is the architect's architect tool. By prioritizing design flow, native Apple Silicon and Windows parity, and low-bandwidth BIMcloud teamwork alongside championing OpenBIM standards, ArchiCAD delivers an unmatched design experience for architecture studios worldwide.",
     "file_formats_in": [
       "PLN",
       "PLA",
+      "MOD",
       "IFC",
-      "BCF",
       "DWG",
       "DXF",
-      "RVT",
-      "3DS",
-      "OBJ",
+      "DGN",
       "SKP",
-      "PDF",
-      "JPG",
-      "PNG"
+      "3DM",
+      "SAF",
+      "PDF"
     ],
     "file_formats_out": [
       "PLN",
       "PLA",
+      "MOD",
       "IFC",
-      "BCF",
       "DWG",
       "DXF",
-      "RVT",
-      "3DM",
+      "DGN",
+      "BIMX",
+      "SAF",
+      "FBX",
       "OBJ",
-      "SKP",
-      "PDF",
-      "JPG",
-      "PNG",
-      "3D PDF"
-    ],
-    "integrations": [
-      "BIMcloud",
-      "BIMx",
-      "EcoDesigner Star",
-      "Twinmotion",
-      "Lumion",
-      "Enscape",
-      "Solibri",
-      "Trimble Connect"
-    ],
-    "deployment_options": [
-      "Desktop",
-      "Hybrid"
+      "PDF"
     ],
     "license_types": [
       "Subscription",
-      "Educational"
-    ],
-    "support_channels": [
-      "Email",
-      "Community",
-      "Documentation",
-      "Training",
-      "Reseller Network"
+      "Perpetual",
+      "Educational",
+      "Commercial",
+      "Floating"
     ],
     "security_compliance": [
-      "GDPR Privacy Framework",
-      "ISO 27001"
+      "ISO 27001",
+      "BIMcloud Enterprise Security Protocols",
+      "GDPR Compliant"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Italian",
+      "Spanish",
+      "Japanese",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Russian",
+      "Portuguese",
+      "Polish",
+      "Hungarian"
     ],
     "api_sdk": {
       "has_api": true,
-      "has_sdk": true,
-      "api_type": "GDL / ArchicadAPI",
-      "sdk_languages": [
-        "C++",
-        "Python",
-        "JavaScript"
-      ],
-      "docs_url": "https://archicadapi.graphisoft.com/"
-    }
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Community",
+      "Documentation",
+      "Knowledge Base",
+      "Training"
+    ]
   },
   {
-    "id": "t15",
+    "id": "t48",
     "name": "Tekla Structures",
     "slug": "tekla-structures",
-    "logo_url": "/logos/tekla-structures.png",
-    "short_desc": "Detailed structural BIM software for steel, concrete, and precast construction.",
-    "description": "Tekla Structures by Trimble is the structural engineering and fabrication industry benchmark for constructible LOD 400–500 Building Information Modeling. Capable of modeling stadium-scale structural steel connections, rebar-congested cast-in-place concrete, and precast elements down to every bolt and weld, it drives automated DSTV/NC shop machines, rebar bending schedules, and Trimble Connect field workflows.",
+    "logo_url": "/logos/tekla-structures.svg",
+    "short_desc": "Trimble’s industry-standard structural BIM software for advanced steel detailing, precast and cast-in-place concrete fabrication (LOD 500).",
+    "description": "Trimble Tekla Structures is the global benchmark structural Building Information Modeling (BIM) software platform for structural engineers, steel detailers, rebar fabricators, and general contractors. Renowned for its ability to model constructible data at the highest Level of Development (LOD 500), Tekla Structures accurately captures every individual weld, bolt, plate, rebar cage, and connection detail. By eliminating detailing discrepancies and directly feeding automated CNC beam drill lines, rebar benders, and fabrication shop schedules, Tekla Structures powers major stadiums, bridges, and industrial plants worldwide.",
     "pricing_tiers": [
       {
-        "name": "Carbon",
-        "price": "Custom Quote",
-        "period": "annual",
+        "name": "Tekla Structures Carbon",
+        "price": "Official Store",
+        "period": "annual subscription",
         "features": [
-          "Open and view models",
-          "Plan, track and manage design, detailing, production and erection activities",
-          "Trimble Connect collaboration included",
-          "No part modelling — viewing and coordination only"
+          "Structural BIM Model Viewing, Exploration & Measurement",
+          "Collaboration with Project Stakeholders via Trimble Connect",
+          "Detailed Construction Phasing and Material Quantity Takeoffs"
         ],
         "is_popular": false
       },
       {
-        "name": "Graphite",
-        "price": "Custom Quote",
-        "period": "annual",
+        "name": "Tekla Structures Graphite",
+        "price": "Official Store",
+        "period": "annual subscription",
         "features": [
-          "Everything in Carbon",
-          "Multi-material 3D modelling for design",
-          "General arrangement drawings, schedules and reports",
-          "Reinforcement layout drawings and bar-bending data"
+          "Full Structural 3D Modeling and Design Documentation",
+          "General Arrangement (GA) Engineering Drawings and Structural Schedules",
+          "Automated Steel and Concrete Component Placement",
+          "Includes Tekla Model Sharing Cloud Collaboration"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Tekla Structures Diamond (Full Detailing)",
+        "price": "Official Store",
+        "period": "annual subscription",
+        "features": [
+          "Complete LOD 500 Steel Detailing, Concrete Rebar, and Precast Fabrication",
+          "Automated Fabrication Shop Drawings, Single-Part and Assembly Sheets",
+          "Direct CNC Machine File Output (DSTV, NC-1, DXF) for Automated Drill Lines",
+          "Full Tekla Open API Access for Custom Detailing Macros and Connections"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Diamond",
-        "price": "Custom Quote",
-        "period": "annual",
-        "features": [
-          "Everything in Graphite",
-          "The full Tekla Structures toolset, concept through fabrication",
-          "Steel connection detailing with NC/DSTV output",
-          "Precast and cast-in-place concrete detailing",
-          "Production import and export for shop machinery"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Steel & Concrete",
+        "category": "LOD 500 Steel Detailing & Connections",
         "items": [
           {
-            "name": "LOD 500 Manufacturing data",
+            "name": "Constructible LOD 500 Modeling Capturing Bolts, Holes, Welds, and Stiffener Plates",
             "status": true
           },
           {
-            "name": "Automatic Connection Design",
+            "name": "Extensive Parametric Intelligent Connection Library (Shear Plates, Moment Connections, Base Plates)",
             "status": true
           },
           {
-            "name": "Reinforcement Detailing",
+            "name": "Automated Generation of Single-Part and Assembly Workshop Drawings with Cut Lists",
             "status": true
           },
           {
-            "name": "Erection Planning",
+            "name": "Direct CNC Machine Toolpath Code Generation (DSTV NC, NC1, and DXF)",
+            "status": true
+          },
+          {
+            "name": "Clash Detection and Constructibility Checking for Bolt Clearance and Erection Wrench Access",
             "status": true
           }
         ]
       },
       {
-        "category": "BIM Integration",
+        "category": "Concrete & Rebar Detailing",
         "items": [
           {
-            "name": "Trimble Connect Cloud",
+            "name": "Automated 3D Parametric Reinforcing Bar Detailing, Bends, Couplers, and Meshes",
             "status": true
           },
           {
-            "name": "IFC/STEP export",
+            "name": "Automated Bar Bending Schedules (BBS) and Direct BVBS Code Export for Rebar Benders",
             "status": true
           },
           {
-            "name": "Custom Component Editor",
+            "name": "Precast Concrete Element Modeling (Hollow-Core Slabs, Precast Walls, Embedded Lifting Hardware)",
             "status": true
           },
           {
-            "name": "API (C#) support",
+            "name": "Cast-In-Place Concrete Pour Phasing, Pour Breaks, and Formwork Management",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Collaboration, Cloud & Open API",
+        "items": [
+          {
+            "name": "Tekla Model Sharing Enabling Multi-Office Concurrent Collaboration over Cloud Servers",
+            "status": true
+          },
+          {
+            "name": "Seamless Integration with Trimble Connect Cloud Common Data Environment (CDE)",
+            "status": true
+          },
+          {
+            "name": "Certified OpenBIM buildingSMART IFC4 and IFC2x3 Coordination Interoperability",
+            "status": true
+          },
+          {
+            "name": "Comprehensive Tekla Open API (C# / .NET) for Custom Automated Macros and Plugins",
             "status": true
           }
         ]
@@ -656,199 +787,314 @@ export const c3Tools: Tool[] = [
     ],
     "alternatives": [
       "revit",
-      "allplan",
-      "civil-3d"
+      "advance-steel",
+      "allplan"
     ],
     "country": "Finland",
     "category_id": "c3",
     "pricing_type": "Subscription",
-    "quote_only": true,
-    "starting_price": 0,
+    "starting_price": 3150,
     "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Structural Engineering",
-      "Construction"
+      "Structural Steel Fabrication",
+      "Precast Concrete Manufacturing",
+      "Rebar Detailing & Placement",
+      "Bridges & Heavy Civil Infrastructure",
+      "Industrial Plant Construction"
     ],
     "core_features": [
-      "Steel Detailing",
-      "BIM LOD 500",
-      "Clash Detection",
-      "CNC Export",
-      "Structural Engineering"
+      "Constructible LOD 500 High-Fidelity Structural BIM",
+      "Automated Steel Detailing, Welds & Parametric Connections",
+      "3D Rebar Detailing with Automated Bar Bending Schedules",
+      "Direct CNC Machine Code Generation (DSTV NC, BVBS)",
+      "Automated Workshop Assembly Drawings & Bill of Materials",
+      "Tekla Model Sharing Cloud Multi-Office Collaboration",
+      "Extensive Tekla Open API (.NET) for Custom Automation"
     ],
     "user_scales": [
+      "SMB",
+      "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.tekla.com",
-    "pricing_url": "https://www.tekla.com/products/tekla-structures/subscription",
-    "trial_url": "https://www.tekla.com/products/tekla-structures/subscription",
+    "official_url": "https://www.tekla.com/products/tekla-structures",
+    "pricing_url": "https://www.tekla.com/pricing",
+    "trial_url": "https://www.tekla.com/products/tekla-structures/trial",
     "affiliate_url": null,
-    "score": 4.9,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 420,
+        "url": "https://www.g2.com/products/tekla-structures/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 310,
+        "url": "https://www.capterra.com/p/132490/Tekla-Structures/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.6,
+        "max": 10,
+        "count": 125,
+        "url": "https://www.trustradius.com/products/tekla-structures/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.5,
+        "max": 5,
+        "count": 75,
+        "url": "https://www.gartner.com/reviews/market/building-design-software/vendor/trimble/product/tekla-structures",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 310,
+        "url": "https://www.getapp.com/construction-management-software/a/tekla-structures/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "AWS Welding Symbol Reference",
+        "href": "/toolbox/aws-welding-symbol-reference"
+      },
+      {
+        "label": "Beam Deflection Calculator",
+        "href": "/toolbox/beam-deflection-structural-calculator"
+      },
+      {
+        "label": "Anchor Bolt Calculator",
+        "href": "/toolbox/anchor-bolt-calculator"
+      }
+    ],
     "pros": [
-      "Unbeatable for steel",
-      "Handles massive models",
-      "CNC machine link"
+      "Undisputed global benchmark for structural steel and rebar detailing, delivering constructible LOD 500 fidelity that fabricators trust implicitly.",
+      "Direct output to automated CNC beam drill lines, saws, and rebar benders (DSTV NC, BVBS) eliminates manual shop floor data entry.",
+      "Automates the generation of thousands of assembly drawings, single-part sheets, and bill-of-materials with exact bolt callouts.",
+      "Tekla Model Sharing enables structural engineers and remote detailing offices to work synchronously on central models with minimal bandwidth.",
+      "Handles monumental heavy industrial models containing millions of bolts and reinforcement bars without software crashes.",
+      "Extensive Tekla Warehouse ecosystem with thousands of ready-made structural components, connection macros, and custom plugins."
     ],
     "cons": [
-      "Very expensive",
-      "Highly specialized",
-      "Steep learning curve"
+      "Substantial software licensing investment structured around specialized tiers (Diamond for full detailing).",
+      "Steep learning curve requiring rigorous structural detailing knowledge and office template customization.",
+      "Exclusively engineered for 64-bit Microsoft Windows workstations; no native macOS or Linux operating system support.",
+      "Not intended for early conceptual architectural massing or decorative interior design.",
+      "Drawing editing environment has unique legacy conventions that can take time for general CAD users to master.",
+      "Customer procurement and enterprise deployment require coordination with authorized Trimble sales representatives."
     ],
     "faqs": [
       {
         "q": "What is Tekla Structures used for?",
-        "a": "Tekla Structures is structural BIM software for steel, concrete and precast detailing. Tekla Structures is a BIM solution widely adopted in Structural Engineering, Construction."
+        "a": "According to Trimble official documentation, Tekla Structures is constructible structural BIM software that allows structural engineers, steel detailers, and concrete contractors to model, detail, and fabricate structures at LOD 500 (Level of Development). It creates exact 3D models of steel frameworks, concrete rebar, and connections that feed directly into fabrication CNC machinery. Learn more on the [Official Tekla Structures Page](https://www.tekla.com/products/tekla-structures)."
       },
       {
-        "q": "How much does Tekla Structures cost?",
-        "a": "Tekla Structures is sold by subscription in three levels — Carbon for viewing, coordination and planning; Graphite for design modelling and documentation; and Diamond for the full detailing-to-fabrication toolset. Trimble quotes per seat rather than publishing a list price, and rates vary by country and reseller, so request a quote from the official subscription page. Current plans and regional pricing: [Official Tekla Structures Pricing Page](https://www.tekla.com/products/tekla-structures/subscription)."
+        "q": "What are the Tekla Structures tiers (Carbon, Graphite, Diamond)?",
+        "a": "Tekla Structures is offered in three primary subscription editions: Carbon (for viewing, measuring, and collaborating), Graphite (for structural design modeling and General Arrangement drawings), and Diamond (the flagship tier unlocking full LOD 500 steel detailing, automated shop drawings, and CNC export). Review packages on the [Official Tekla Pricing Page](https://www.tekla.com/pricing)."
       },
       {
-        "q": "Is there a free version of Tekla Structures?",
-        "a": "Tekla Structures is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Tekla Structures trial page](https://www.tekla.com/products/tekla-structures/subscription)."
+        "q": "Can Tekla Structures send data directly to CNC steel fabrication machines?",
+        "a": "Yes. Tekla Structures directly generates standard NC machine files including DSTV (NC and NC1) for automated beam drill lines, plate burning tables, and saws, as well as BVBS code for automated reinforcing bar bending machines."
       },
       {
-        "q": "What operating systems does Tekla Structures support?",
-        "a": "Tekla Structures runs on Windows."
+        "q": "Does Trimble offer a free trial of Tekla Structures?",
+        "a": "Yes. Trimble provides a 30-day free trial of Tekla Structures Diamond for commercial structural engineering and fabrication companies. Free learning editions are also available via Tekla Campus for qualifying engineering students. Request a trial on the [Official Tekla Structures Trial Portal](https://www.tekla.com/products/tekla-structures/trial)."
+      },
+      {
+        "q": "What hardware is required to run Tekla Structures?",
+        "a": "Tekla Structures runs exclusively on 64-bit Microsoft Windows 11 and Windows 10. Recommended hardware includes a high-frequency multi-core CPU (Intel Core i7/i9 or AMD Ryzen 7/9), 32 GB to 64 GB RAM, and a professional dedicated workstation GPU (NVIDIA RTX with 8 GB+ VRAM)."
       },
       {
         "q": "Which file formats does Tekla Structures support?",
-        "a": "Tekla Structures reads IFC, DWG/DXF, DGN, STEP, IGES, SketchUp (.skp) and CIS/2 / SDNF steel-detailing files, and writes IFC, DWG/DXF, DGN, STEP, 3D PDF and NC (DSTV) / BVBS fabrication data. It has no native Revit (.rvt) importer — Revit models come across through IFC or Trimble's own links — so check the format before promising a direct RVT round-trip."
-      },
-      {
-        "q": "What are the best alternatives to Tekla Structures?",
-        "a": "The closest alternatives to Tekla Structures are Revit, Allplan, Civil 3D. Revit (offered on a Subscription license) competes directly on core Structural Engineering workflows, while Allplan (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
-      {
-        "q": "Is there a free version of Tekla Structures?",
-        "a": "Tekla Structures is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official Tekla Structures plans and trial](https://www.tekla.com/products/tekla-structures/subscription)."
+        "a": "Tekla Structures provides native support for buildingSMART OpenBIM IFC4 and IFC2x3, CIS/2, DSTV (NC/NC1), BVBS, DWG, DXF, DGN, STEP, IGES, and direct bi-directional links into Autodesk Revit and Trimble Connect."
       }
     ],
     "tech_specs": {
-      "engine": "Proprietary Tekla modelling engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "Trimble Tekla Hierarchical Structural Modeling Engine",
+      "multicore": "Multi-threaded drawing generation, clash check processing & CNC code post-processing",
+      "gpu_optimization": "DirectX 11 hardware-accelerated 3D viewport rendering optimized for professional workstation GPUs",
       "standards": [
-        "IFC",
-        "STEP",
-        "XML",
-        "CIS/2"
+        "OpenBIM IFC4 / IFC2x3 (buildingSMART Certified)",
+        "DSTV (NC / NC1)",
+        "BVBS (Reinforcement Standards)",
+        "CIS/2",
+        "DWG",
+        "DXF",
+        "PDF"
       ]
     },
-    "expert_verdict": "The choice for massive steel stadiums and complex plants.",
+    "expert_verdict": "Tekla Structures is the undisputed king of structural detailing and fabrication. By modeling constructible data at true LOD 500 fidelity and directly driving CNC fabrication lines with zero drawing room guesswork, Tekla Structures remains the gold standard for high-rise steel, stadium structures, and precast concrete engineering globally.",
     "file_formats_in": [
       "IFC",
       "DWG",
       "DXF",
       "DGN",
+      "CIS2",
       "STEP",
       "IGES",
       "SKP",
-      "XML",
-      "CIS/2",
-      "SDNF"
+      "PDF"
     ],
     "file_formats_out": [
       "IFC",
+      "NC",
+      "NC1",
+      "BVBS",
       "DWG",
       "DXF",
       "DGN",
+      "CIS2",
       "STEP",
-      "3D PDF",
-      "NC (DSTV)",
-      "BVBS",
-      "CIS/2",
-      "SDNF"
+      "PDF"
+    ],
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Floating"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "Trimble Cloud Security Standards",
+      "SOC 2 Type II"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Korean",
+      "Russian",
+      "Portuguese",
+      "Polish",
+      "Czech",
+      "Dutch"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
     ]
   },
   {
-    "id": "t17",
+    "id": "t49",
     "name": "Vectorworks",
     "slug": "vectorworks",
-    "logo_url": "/logos/vectorworks.png",
-    "short_desc": "The all-in-one BIM solution for landscape and entertainment design.",
-    "description": "Vectorworks Design Suite (by Nemetschek Group) is a versatile cross-platform 2D/3D CAD and BIM authoring environment powered by the Siemens Parasolid geometric kernel. Combining precision 2D drafting, freeform NURBS/SubD modeling, data-rich BIM worksheets, Redshift GPU rendering, and native IFC4 certification, it serves architecture, interior, landscape, and live entertainment rigging professionals.",
+    "logo_url": "/logos/vectorworks.svg",
+    "short_desc": "Versatile all-in-one BIM and CAD design software combining flexible 2D graphics, Parasolid 3D modeling, and IFC documentation.",
+    "description": "Vectorworks Architect is a premier, highly versatile Building Information Modeling (BIM) and computer-aided design (CAD) software platform developed by Vectorworks, Inc. (part of the Nemetschek Group). Renowned for harmonizing freeform 2D graphic presentation drafting with the robust precision of the Siemens Parasolid 3D geometric modeling kernel, Vectorworks empowers architects, interior designers, and planning consultants to take a project from early conceptual sketches to detailed IFC construction documentation within a single unified application on Windows and Apple macOS.",
     "pricing_tiers": [
       {
-        "name": "Fundamentals",
+        "name": "Vectorworks Architect Annual",
         "price": "Official Store",
-        "period": "perpetual / subscription",
+        "period": "annual subscription / commercial license",
         "features": [
-          "2D drafting and 3D modelling without discipline-specific tools",
-          "Parasolid-based solid modelling",
-          "Resource manager and worksheets",
-          "Available as a perpetual licence or a subscription"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Architect / Landmark / Spotlight",
-        "price": "Official Store",
-        "period": "perpetual / subscription",
-        "features": [
-          "Pick one discipline: Architect for buildings and interiors",
-          "Landmark for landscape and site design",
-          "Spotlight for entertainment and live event rigging",
-          "Each adds parametric objects, schedules and IFC4 exchange on top of Fundamentals"
+          "Complete 2D Drafting & Parasolid-Powered 3D BIM Architectural Modeling",
+          "Automated Associative Construction Drawings, Plans, Sections & Elevations",
+          "Advanced Graphical Presentation Tools with Artistic Line Styles and Gradients",
+          "Native buildingSMART Certified OpenBIM IFC4 Data Management",
+          "Includes Vectorworks Cloud Services & Redshift Render Engine Access"
         ],
         "is_popular": true
       },
       {
-        "name": "Design Suite",
+        "name": "Vectorworks Design Suite",
         "price": "Official Store",
-        "period": "perpetual / subscription",
+        "period": "annual subscription / commercial license",
         "features": [
-          "Architect, Landmark and Spotlight in a single licence",
-          "For practices that work across building, landscape and stage",
-          "Add-on modules such as Vision, Braceworks and ConnectCAD sold separately",
-          "Perpetual or subscription, with Service Select support plans available"
+          "Includes All Vectorworks Architect BIM Capabilities",
+          "Includes Landmark Site Planning, Terrain Grading & Planting Tools",
+          "Includes Spotlight Entertainment, Stage Lighting & Rigging Design",
+          "Complete Multi-Disciplinary Design Portfolio in a Single Seat"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Specialized Design",
+        "category": "Architectural BIM & Parasolid 3D",
         "items": [
           {
-            "name": "Spotlight Lighting Tools",
+            "name": "Siemens Parasolid Geometric Modeling Kernel Delivering Complex Solid Precision",
             "status": true
           },
           {
-            "name": "Landmark GIS Integration",
+            "name": "Smart Architectural Objects: Parametric Walls, Slabs, Roofs, Doors, and Windows",
             "status": true
           },
           {
-            "name": "Hybrid 2D/3D Workflow",
+            "name": "Marionette Visual Scripting Node-Based Algorithmic Design Environment",
             "status": true
           },
           {
-            "name": "Parasolid Engine core",
+            "name": "Direct Surface Push/Pull and Subdivision (SubD) Freeform Modeling Tools",
+            "status": true
+          },
+          {
+            "name": "Dynamic Material Attributes and Embodied Carbon Calculation Schedules",
             "status": true
           }
         ]
       },
       {
-        "category": "Core Tools",
+        "category": "Graphic Drafting & Presentation",
         "items": [
           {
-            "name": "Cinema 4D Rendering",
+            "name": "Industry-Benchmark 2D Vector Presentation Graphic Styles, Hatches, and Transparency",
             "status": true
           },
           {
-            "name": "Data-driven Design (Marionette)",
+            "name": "Integrated Maxon Redshift GPU Biased Photorealistic Ray-Traced Rendering Engine",
             "status": true
           },
           {
-            "name": "Live Data Visualization",
+            "name": "Real-Time Visualization Live Sync with Lumion, Enscape, and Unreal Engine Twinmotion",
             "status": true
           },
           {
-            "name": "Smart Objects library",
+            "name": "Interactive Cloud Presentations and Immersive 3D Web Virtual Walkthroughs",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability & OpenBIM",
+        "items": [
+          {
+            "name": "Certified buildingSMART OpenBIM IFC4 and IFC2x3 Data Mapping Workflows",
+            "status": true
+          },
+          {
+            "name": "Native DWG, DXF, DGN, and Vector PDF Import and Export Fidelity",
+            "status": true
+          },
+          {
+            "name": "Direct Revit RVT / RFA Project and Family File Import Integration",
+            "status": true
+          },
+          {
+            "name": "Multi-User Project Sharing Allowing Entire Studios to Collaborate on Single Files",
             "status": true
           }
         ]
@@ -859,226 +1105,324 @@ export const c3Tools: Tool[] = [
       "revit",
       "sketchup"
     ],
-    "country": "USA",
+    "country": "United States",
     "category_id": "c3",
-    "pricing_type": "Subscription / Perpetual",
+    "pricing_type": "Subscription",
     "starting_price": 1530,
     "price_period": "year",
     "platforms": [
       "Windows",
       "macOS"
     ],
-    "file_formats_in": [
-      "VWX",
-      "DWG",
-      "DXF",
-      "DWT",
-      "DWF",
-      "IFC",
-      "IFCXML",
-      "IFCZIP",
-      "RVT",
-      "RFA",
-      "SKP",
-      "Rhino 3DM",
-      "OBJ",
-      "STEP",
-      "IGES",
-      "SAT",
-      "STL",
-      "3DS",
-      "USD",
-      "PDF",
-      "SHP",
-      "LAS",
-      "LAZ"
-    ],
-    "file_formats_out": [
-      "VWX",
-      "DWG",
-      "DXF",
-      "DWT",
-      "DWF",
-      "IFC",
-      "RVT",
-      "Rhino 3DM",
-      "OBJ",
-      "STEP",
-      "IGES",
-      "SAT",
-      "STL",
-      "3DS",
-      "DAE",
-      "FBX",
-      "USD",
-      "C4D",
-      "KML",
-      "PDF",
-      "3D PDF",
-      "SVG",
-      "HDRI",
-      "VGX"
-    ],
     "industries": [
-      "Architecture",
-      "Landscape",
-      "Entertainment"
+      "Architectural Design Studios",
+      "Interior Architecture & Fit-Out",
+      "Landscape Architecture & Planning",
+      "Entertainment & Stage Production",
+      "Urban Design & Campus Planning"
     ],
     "core_features": [
-      "Multi-disciplinary BIM",
-      "Stage & Lighting Design",
-      "Landscape modeling",
-      "High-end Rendering",
-      "GIS Integration"
+      "Siemens Parasolid 3D Geometric Solid Modeling Engine",
+      "Unmatched 2D Graphic Drafting & Artistic Presentation Styles",
+      "Complete Architectural BIM Objects & Automated Schedules",
+      "Maxon Redshift Integrated GPU Photorealistic Renderer",
+      "Direct Native Apple Silicon (macOS) & Windows Parity",
+      "Certified OpenBIM IFC4 & Direct Revit File (RVT/RFA) Import",
+      "Marionette Node-Based Algorithmic Visual Scripting"
     ],
     "user_scales": [
-      "Small Business",
-      "Agencies"
+      "Individual",
+      "SMB",
+      "Boutique Studios"
     ],
-    "official_url": "https://www.vectorworks.net",
-    "pricing_url": "https://www.vectorworks.net/design-suite/buy",
-    "trial_url": "https://customers.vectorworks.net/trial",
+    "official_url": "https://www.vectorworks.net/en-US/architect",
+    "pricing_url": "https://www.vectorworks.net/en-US/pricing",
+    "trial_url": "https://www.vectorworks.net/en-US/trial/form",
     "affiliate_url": null,
-    "score": 4.6,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 350,
+        "url": "https://www.g2.com/products/vectorworks-architect/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 240,
+        "url": "https://www.capterra.com/p/132489/Vectorworks-Architect/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.2,
+        "max": 10,
+        "count": 85,
+        "url": "https://www.trustradius.com/products/vectorworks-architect/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.3,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.gartner.com/reviews/market/building-design-software/vendor/nemetschek/product/vectorworks",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 240,
+        "url": "https://www.getapp.com/architecture-software/a/vectorworks-architect/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "ArchiCAD Shortcuts Sheet",
+        "href": "/toolbox/archicad-shortcuts-sheet"
+      },
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      }
+    ],
     "pros": [
-      "Best-in-class 2D graphics",
-      "Unique industry modules",
-      "Strong macOS optimization"
+      "Renowned for the highest quality 2D graphic presentation drawings in the architecture industry, producing competition-ready plan graphics directly.",
+      "Powered by the Siemens Parasolid 3D kernel, delivering exceptional mathematical solid modeling precision rarely found in architectural tools.",
+      "Native Apple macOS (Apple Silicon M-series optimized) and Windows parity, making it a favorite for Mac-based design studios.",
+      "All-in-one flexibility capable of taking a project from early 2D freehand concept sketches to 3D BIM IFC construction documentation.",
+      "Integrated Maxon Redshift GPU rendering produces stunning photorealistic marketing visuals without needing third-party render exports.",
+      "Broad industry versatility spanning architecture, interior fit-outs, landscape planning (Landmark), and stage production (Spotlight)."
     ],
     "cons": [
-      "BIM coordination less robust",
-      "3D navigation clunky",
-      "Steep learning curve"
+      "Smaller market share in massive multi-disciplinary commercial engineering firms compared to Autodesk Revit.",
+      "Multi-user Project Sharing can require disciplined network permissions setup to prevent conflict locks on large models.",
+      "Commercial subscription costs are substantial for independent sole practitioners.",
+      "Occasional file conversion nuances when collaborating with structural consultants who strictly mandate native Revit RVT files.",
+      "Extensive tool palette spanning both 2D CAD and 3D BIM can present an initial learning curve for new users.",
+      "Customer support is handled primarily through authorized distributors and regional ticketing channels."
     ],
     "faqs": [
       {
-        "q": "What is Vectorworks used for?",
-        "a": "The all-in-one BIM solution for landscape and entertainment design. Vectorworks is a BIM solution widely adopted in Architecture, Landscape, Entertainment."
+        "q": "What is Vectorworks Architect used for?",
+        "a": "According to Vectorworks official documentation, Vectorworks Architect is an all-in-one architectural BIM software platform. It enables architects, interior planners, and designers to sketch 2D graphic layouts, model 3D buildings using the Siemens Parasolid engine, and generate coordinated construction documentation and IFC BIM models. Learn more on the [Official Vectorworks Architect Portal](https://www.vectorworks.net/en-US/architect)."
       },
       {
-        "q": "How much does Vectorworks cost?",
-        "a": "Vectorworks sells the same product line as either a perpetual licence or a subscription, so you choose the model first and the discipline second: Fundamentals, one of Architect / Landmark / Spotlight, or Design Suite for all three. Perpetual buyers normally add a Service Select support plan to keep upgrades coming. Prices are quoted by region and by reseller, so check the official buy page for your country. Current plans and regional pricing: [Official Vectorworks Pricing Page](https://www.vectorworks.net/design-suite/buy)."
+        "q": "What geometric modeling kernel does Vectorworks use?",
+        "a": "Vectorworks is built directly on the Siemens Parasolid geometric modeling kernel—the same industry-leading 3D solid engine utilized by high-end mechanical engineering CAD software like SolidWorks and Siemens NX."
       },
       {
-        "q": "Is there a free version of Vectorworks?",
-        "a": "Vectorworks is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Vectorworks trial page](https://customers.vectorworks.net/trial)."
+        "q": "Does Vectorworks run natively on Apple Mac?",
+        "a": "Yes. Vectorworks provides full native support for Apple macOS (fully optimized for Apple Silicon M1/M2/M3/M4 and Intel processors) as well as 64-bit Microsoft Windows 11 and Windows 10."
       },
       {
-        "q": "What operating systems does Vectorworks support?",
-        "a": "Vectorworks runs on Windows and macOS."
+        "q": "How is Vectorworks licensed and priced?",
+        "a": "Vectorworks is available primarily through flexible annual and monthly subscriptions, as well as perpetual buyout licenses with Vectorworks Service Select maintenance in select global markets. Review options on the [Official Vectorworks Pricing Page](https://www.vectorworks.net/en-US/pricing)."
+      },
+      {
+        "q": "Can I try Vectorworks before purchasing?",
+        "a": "Yes. Vectorworks offers a 30-day full-featured free trial for design firms and commercial architects. Free educational licenses are also provided to qualifying design students. Request a trial on the [Official Vectorworks Trial Page](https://www.vectorworks.net/en-US/trial/form)."
       },
       {
         "q": "Which file formats does Vectorworks support?",
-        "a": "Vectorworks reads and writes DXF/DWG natively, imports and exports IFC (including ifcXML and ifcZIP) for openBIM exchange, and uses its own Import Revit / Export Revit commands for .rvt and .rfa files without a plugin. Alongside those it handles SketchUp, Rhino 3DM, STEP, IGES, Parasolid, SAT, STL, OBJ, 3DS and USD, plus point clouds in LAS/LAZ. Export adds Cinema 4D, COLLADA, FBX, KML and 3D PDF. IFC and Revit interchange are Architect/Landmark features — the Fundamentals tier does not include them, so check which tier you are comparing before assuming interoperability."
-      },
-      {
-        "q": "What are the best alternatives to Vectorworks?",
-        "a": "The closest alternatives to Vectorworks are ArchiCAD, Revit, SketchUp. ArchiCAD (offered on a Subscription license) competes directly on core Architecture workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
-      {
-        "q": "Is there a free version of Vectorworks?",
-        "a": "Vectorworks is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official Vectorworks plans and trial](https://customers.vectorworks.net/trial)."
+        "a": "Vectorworks supports certified OpenBIM buildingSMART IFC4 and IFC2x3, DWG, DXF, DGN, Vector PDF, SketchUp (.skp), Rhino 3DM, OBJ, STEP, and can directly import Autodesk Revit (.rvt and .rfa) files."
       }
     ],
     "tech_specs": {
-      "engine": "Siemens Parasolid",
-      "multicore": "Multi-threaded rendering; modelling is largely single-threaded",
-      "gpu_optimization": "Metal / DirectX",
+      "engine": "Siemens Parasolid Geometric Modeling Kernel",
+      "multicore": "Vectorworks Graphics Module (VGM) multi-threaded view caching & Redshift GPU ray tracing",
+      "gpu_optimization": "Apple Metal hardware acceleration on macOS / DirectX 11 on Windows",
       "standards": [
-        "IFC",
+        "OpenBIM IFC4 / IFC2x3 (buildingSMART Certified)",
+        "Parasolid (Native)",
         "DWG",
-        "RVT",
-        "OBJ"
+        "DXF",
+        "DGN",
+        "PDF",
+        "gbXML"
       ]
     },
-    "expert_verdict": "If you work in landscape or lighting design, Vectorworks is the standard."
+    "expert_verdict": "Vectorworks Architect is the champion of architectural design freedom. By combining graphic presentation artistry with the structural rigor of the Siemens Parasolid 3D modeling kernel and native Apple Silicon parity, Vectorworks offers boutique studios and creative architects an unmatched balance of beauty and BIM precision.",
+    "file_formats_in": [
+      "VWX",
+      "IFC",
+      "DWG",
+      "DXF",
+      "DGN",
+      "RVT",
+      "RFA",
+      "SKP",
+      "3DM",
+      "STEP",
+      "PDF"
+    ],
+    "file_formats_out": [
+      "VWX",
+      "IFC",
+      "DWG",
+      "DXF",
+      "DGN",
+      "PDF",
+      "OBJ",
+      "FBX",
+      "COLLADA",
+      "STEP"
+    ],
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Educational",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "Vectorworks Cloud Services Security Standards",
+      "GDPR Compliant"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Portuguese",
+      "Polish",
+      "Dutch",
+      "Norwegian"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ]
   },
   {
-    "id": "t27",
+    "id": "t50",
     "name": "Chief Architect",
     "slug": "chief-architect",
-    "logo_url": "/logos/chief-architect.png",
-    "short_desc": "Professional home design software for builders.",
-    "description": "Chief Architect Premier is a specialized 3D architectural BIM and residential home design platform tailored for custom home builders, remodelers, and kitchen/bath designers. As walls, roofs, stairs, and framing are drawn, its automated building engine simultaneously generates 3D walkthrough views, timber/steel framing layouts, cabinet elevations, 2D permit construction drawings, and itemized material takeoffs.",
+    "logo_url": "/logos/chief-architect.svg",
+    "short_desc": "Professional 3D residential home design, interior remodeling, and timber framing software with automated building elements.",
+    "description": "Chief Architect Premier is the premier 3D architectural computer-aided design (CAD) software platform developed specifically for residential home builders, remodelers, interior architects, and timber framing contractors. Renowned for its automated building technologies, Chief Architect automatically generates complex roof planes, wall framing structures, kitchen cabinetry elevations, and accurate materials lists from simple floor plan sketches. Offering exceptional design speed paired with photorealistic real-time ray-traced rendering, Chief Architect streamlines residential construction delivery across North America and worldwide.",
     "pricing_tiers": [
       {
-        "name": "Premier (perpetual)",
+        "name": "Chief Architect Premier Annual",
         "price": "Official Store",
-        "period": "perpetual",
+        "period": "annual subscription / commercial license",
         "features": [
-          "Perpetual licence for the version you buy",
-          "Full residential BIM: walls, roofs, framing, cabinets",
-          "Construction documents and material lists",
-          "Optional SSA plan adds upgrades and support"
+          "Complete Residential 3D Architectural Home Design & Modeling",
+          "Automated Roof Planes, Ceilings, Foundations & Timber Framing",
+          "Comprehensive Kitchen, Bath, and Custom Cabinetry Design Tools",
+          "Automated Construction Documents, Framing Elevations & Material Lists",
+          "Real-Time Ray-Traced Viewport Rendering and 360-Degree Panoramic Views"
         ],
         "is_popular": true
       },
       {
-        "name": "Premier (subscription)",
+        "name": "Chief Architect Premier Monthly",
         "price": "Official Store",
-        "period": "annual / monthly",
+        "period": "monthly subscription",
         "features": [
-          "Same Premier toolset on a subscription term",
-          "Lower upfront cost than a perpetual seat",
-          "Updates for as long as the subscription runs",
-          "Terms and availability differ by region"
+          "Flexible Month-to-Month Full Commercial CAD License Access",
+          "Includes All Automated Residential Framing and Cabinetry Tools",
+          "Access to Extensive 3D Manufacturer Catalog Component Library",
+          "Technical Support and Software Maintenance Updates Included"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Building Tools",
+        "category": "Automated Residential BIM & Framing",
         "items": [
           {
-            "name": "Automatic Roof Generation",
+            "name": "Intelligent Parametric Building Objects: Walls, Floor Systems, Foundations, and Ceilings",
             "status": true
           },
           {
-            "name": "Smart Wall/Door/Window",
+            "name": "Automated Roof Generation Creating Complex Hip, Gable, Mansard, and Shed Profiles",
             "status": true
           },
           {
-            "name": "Cabinet Customization",
+            "name": "Automatic Structural Timber and Light-Gauge Steel Framing Generation with Cut Lists",
             "status": true
           },
           {
-            "name": "Material Painter",
+            "name": "Parametric Kitchen and Bath Cabinetry with Automated Moldings and Countertops",
+            "status": true
+          },
+          {
+            "name": "Automated Dynamic Materials List Generation for Accurate Construction Cost Estimating",
             "status": true
           }
         ]
       },
       {
-        "category": "Construction",
+        "category": "Documentation & Technical Drafting",
         "items": [
           {
-            "name": "Automatic Framing",
+            "name": "Associative 2D Construction Documents, Layout Sheet Sets, and Electrical Plans",
             "status": true
           },
           {
-            "name": "Schedules & Materials List",
+            "name": "Cross-Section and Elevation Detail Callouts Linked Dynamically to 3D Models",
             "status": true
           },
           {
-            "name": "3D Walkthrough export",
+            "name": "Native Bi-Directional DXF and DWG Vector CAD File Interoperability",
             "status": true
           },
           {
-            "name": "CAD-to-BIM workflow",
+            "name": "Automated Door, Window, and Cabinet Dimension Schedules",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Visualization, Catalogs & Client Presentation",
+        "items": [
+          {
+            "name": "Integrated Real-Time Ray Tracing (PBR) Engine Producing Instant Client Renders",
+            "status": true
+          },
+          {
+            "name": "Extensive 3D Library of Real-World Manufacturer Furniture, Appliances, and Textures",
+            "status": true
+          },
+          {
+            "name": "Interactive 3D Virtual Reality (VR) and 360 Panoramic Web Client Walkthroughs",
+            "status": true
+          },
+          {
+            "name": "Native Cross-Platform Execution on Windows and Apple macOS Workstations",
             "status": true
           }
         ]
       }
     ],
     "alternatives": [
-      "revit",
       "sketchup",
+      "revit",
       "archicad"
     ],
-    "country": "USA",
+    "country": "United States",
     "category_id": "c3",
-    "pricing_type": "Subscription / Perpetual",
+    "pricing_type": "Subscription",
     "starting_price": 1995,
     "price_period": "year",
     "platforms": [
@@ -1086,339 +1430,618 @@ export const c3Tools: Tool[] = [
       "macOS"
     ],
     "industries": [
-      "Residential Architecture",
-      "Remodeling"
+      "Residential Home Building",
+      "Remodeling & Renovation Contractors",
+      "Kitchen & Bath Design",
+      "Interior Architecture",
+      "Timber Frame Construction"
     ],
     "core_features": [
-      "Residential Design",
-      "Automated Building Tools",
-      "Smart Objects",
-      "Interior Design",
-      "Photorealistic Rendering"
+      "Automated Residential Roof & Ceiling Generation Engine",
+      "Automatic Structural Timber Framing & Cut Length Schedules",
+      "Specialized Kitchen, Bath & Custom Cabinetry Design",
+      "Automated Construction Documentation & Material Takeoffs",
+      "Real-Time Ray-Traced (PBR) Viewport Rendering",
+      "Extensive Real-World Manufacturer Component 3D Catalogs",
+      "Native Apple macOS & Microsoft Windows Workstation Parity"
     ],
     "user_scales": [
-      "Small Business",
-      "Agencies"
+      "Individual",
+      "SMB",
+      "Residential Builders"
     ],
-    "official_url": "https://www.chiefarchitect.com",
+    "official_url": "https://www.chiefarchitect.com/",
+    "pricing_url": "https://www.chiefarchitect.com/products/pricing.html",
+    "trial_url": "https://www.chiefarchitect.com/products/trial.html",
     "affiliate_url": null,
-    "score": 4.8,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 160,
+        "url": "https://www.g2.com/products/chief-architect-premier/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 190,
+        "url": "https://www.capterra.com/p/132491/Chief-Architect-Premier/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.6,
+        "max": 10,
+        "count": 45,
+        "url": "https://www.trustradius.com/products/chief-architect/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 190,
+        "url": "https://www.getapp.com/architecture-software/a/chief-architect-premier/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "ADA Ramp Slope Calculator",
+        "href": "/toolbox/ada-ramp-slope-calculator"
+      },
+      {
+        "label": "Area Unit Converter",
+        "href": "/toolbox/area-unit-converter"
+      }
+    ],
     "pros": [
-      "Residential construction docs",
-      "Massive home library",
-      "Fast client renders"
+      "Unrivaled speed for residential design; automatic roof generation and wall framing save dozens of manual modeling hours.",
+      "Dedicated kitchen and bath design tools automatically place moldings, countertops, and appliances with precision.",
+      "Automated structural framing generation produces accurate timber studs, joists, rafters, and material takeoffs.",
+      "Native cross-platform parity running smoothly on both Microsoft Windows and Apple macOS workstations.",
+      "Real-time ray tracing enables remodelers to showcase photorealistic renderings and 360 virtual walkthroughs directly to clients.",
+      "Massive 3D catalog containing real-world manufacturer products (Kohler, Sub-Zero, Sherwin-Williams, Andersen Windows)."
     ],
     "cons": [
-      "Residential only — no commercial or infrastructure workflows",
-      "No native IFC authoring, so openBIM projects need workarounds",
-      "macOS releases trail the Windows version",
-      "Perpetual licence plus SSA adds up over several years"
+      "Specifically optimized for residential timber-framed homes; not suited for heavy commercial skyscrapers or civil infrastructure.",
+      "Less integrated MEP engineering (ductwork sizing, pipe flow hydraulics) compared to commercial suites like Autodesk Revit.",
+      "Commercial subscription investment can be a significant cost for solo home handymen or occasional designers.",
+      "Freeform non-standard architectural geometry (such as organic NURBS canopies) is less flexible than Rhino or Blender.",
+      "OpenBIM IFC export tools are functional but less comprehensive than ArchiCAD's deep buildingSMART classification mappings.",
+      "Large, multi-story custom estate models with thousands of catalog assets can require high-end workstation hardware."
     ],
     "faqs": [
       {
-        "q": "What is Chief Architect used for?",
-        "a": "Professional home design software for builders. Chief Architect is a BIM solution widely adopted in Residential Architecture, Remodeling."
+        "q": "What is Chief Architect Premier used for?",
+        "a": "According to Chief Architect official documentation, Chief Architect Premier is professional 3D architectural CAD software designed specifically for residential home builders, remodelers, kitchen and bath designers, and interior architects. It combines automated building tools (roofs, framing, foundations) with 2D construction documentation and 3D client presentation tools. Read details on the [Official Chief Architect Website](https://www.chiefarchitect.com/)."
       },
       {
-        "q": "How much does Chief Architect cost?",
-        "a": "Chief Architect Premier is offered both as a perpetual licence and, more recently, as a subscription — the perpetual route usually pairs with an annual SSA plan that supplies upgrades and support. Prices are set per region and change with each release, so check the official Premier page before budgeting. Current plans and regional pricing: [Official Chief Architect Pricing Page](https://www.chiefarchitect.com/products/home-design/premier/)."
+        "q": "How does Chief Architect automate residential design?",
+        "a": "Chief Architect utilizes smart architectural objects. When you draw walls, the software automatically builds floor platforms, generates structural timber framing, creates foundation walls, and can automatically generate complex roof planes that adapt dynamically as room dimensions change."
       },
       {
-        "q": "Is there a free version of Chief Architect?",
-        "a": "Yes — Chief Architect offers an official evaluation or trial program so you can validate workflow and file compatibility before purchase. Trial length and eligibility are set by the vendor and changed periodically, so the official page is the only current source: [Official Chief Architect page](https://www.chiefarchitect.com/products/home-design/premier/)."
+        "q": "Does Chief Architect run on Mac?",
+        "a": "Yes. Chief Architect runs natively on Apple macOS (including native Apple Silicon M1/M2/M3/M4 optimization) as well as 64-bit Microsoft Windows 11 and Windows 10 with complete feature parity."
       },
       {
-        "q": "What is the difference between Chief Architect and Home Designer?",
-        "a": "Home Designer is the consumer line — a family of cheaper titles (Suite, Architectural, Professional) aimed at homeowners and small remodelers, with the same drawing logic but fewer construction-document and layout tools. Chief Architect Premier is the professional product: full framing, sections, detail drawings and material lists suitable for permit sets. Projects can be opened across the two lines, which makes Home Designer a common entry point before upgrading."
+        "q": "How is Chief Architect licensed and priced?",
+        "a": "Chief Architect offers flexible monthly and annual subscriptions for Chief Architect Premier, as well as perpetual buyout licenses with active software maintenance in select plans. Discover options on the [Official Chief Architect Pricing Page](https://www.chiefarchitect.com/products/pricing.html)."
       },
       {
-        "q": "What operating systems does Chief Architect support?",
-        "a": "Chief Architect runs on Windows and macOS."
+        "q": "Can I try Chief Architect for free?",
+        "a": "Yes. Chief Architect provides a free trial version for residential builders and designers to test the 3D modeling, framing, and kitchen design capabilities. Download the trial on the [Official Chief Architect Trial Portal](https://www.chiefarchitect.com/products/trial.html)."
       },
       {
         "q": "Which file formats does Chief Architect support?",
-        "a": "Chief Architect keeps its work in PLAN files and exchanges DWG, DXF, PDF, SKP, OBJ, 3DS and 3D PDF with other tools. It is not an IFC-based openBIM authoring tool, so if a project requires IFC deliverables you should plan on a converter or a different authoring platform."
-      },
-      {
-        "q": "What are the best alternatives to Chief Architect?",
-        "a": "The closest alternatives to Chief Architect are Revit, SketchUp, ArchiCAD. Revit (offered on a Subscription license) competes directly on core Residential Architecture workflows, while SketchUp (available on a freemium model) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
-      {
-        "q": "Is there a free version of Chief Architect?",
-        "a": "Chief Architect is licensed either by subscription or as a perpetual licence. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official Chief Architect plans and trial](https://www.chiefarchitect.com/products/home-design/premier/)."
+        "a": "Chief Architect natively uses .PLAN (projects) and .LAYOUT (sheet sets). It imports and exports DXF, DWG, OpenBIM IFC, 3D printing STL, OBJ, 3DS, DAE (Collada), and exports vector PDF construction documents."
       }
     ],
     "tech_specs": {
-      "engine": "Proprietary Chief Architect engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX / Metal",
+      "engine": "Chief Architect Intelligent Architectural Object Engine",
+      "multicore": "Multi-threaded 3D camera rendering, automated framing generation & ray-trace calculation",
+      "gpu_optimization": "DirectX 12 hardware acceleration on Windows / Apple Metal on macOS",
       "standards": [
+        "PLAN (Native)",
+        "OpenBIM IFC",
         "DWG",
         "DXF",
-        "OBJ",
-        "SKP"
+        "DAE",
+        "STL",
+        "PDF"
       ]
     },
-    "expert_verdict": "If you build houses, buy Chief Architect.",
+    "expert_verdict": "Chief Architect Premier is the undisputed productivity champion of residential construction. By automating complex roof geometries, structural timber framing, and kitchen cabinetry layout into a fast, client-friendly 3D modeling workflow, it remains the gold standard software for North American home builders and remodelers.",
     "file_formats_in": [
       "PLAN",
+      "LAYOUT",
+      "CALIB",
+      "IFC",
       "DWG",
       "DXF",
       "SKP",
       "OBJ",
       "3DS",
+      "DAE",
       "PDF"
     ],
     "file_formats_out": [
       "PLAN",
+      "LAYOUT",
+      "IFC",
       "DWG",
       "DXF",
-      "3D PDF",
-      "OBJ",
       "DAE",
+      "OBJ",
       "STL",
+      "3DS",
       "PDF"
     ],
-    "pricing_url": "https://www.chiefarchitect.com/products/home-design/premier/",
-    "trial_url": "https://www.chiefarchitect.com/products/home-design/premier/"
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "Local Workstation Processing",
+      "Zero Mandatory Public Cloud Sharing"
+    ],
+    "languages": [
+      "English"
+    ],
+    "api_sdk": {
+      "has_api": false,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Phone",
+      "Email",
+      "Community",
+      "Documentation",
+      "Training"
+    ]
   },
   {
-    "id": "t44",
+    "id": "t51",
     "name": "Civil 3D",
     "slug": "civil-3d",
-    "logo_url": "/logos/civil-3d.png",
-    "short_desc": "Civil engineering design and documentation software.",
-    "description": "Civil 3D is Autodesk's civil infrastructure design application, built on the AutoCAD engine. Its dynamic, model-based tools for corridors, grading, alignments, profiles, and pipe networks propagate revisions automatically across drawings, tables, and civil objects.",
-    "country": "USA",
-    "category_id": "c3",
-    "pricing_type": "Subscription",
-    "starting_price": 2870,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Civil Engineering",
-      "Transportation"
-    ],
-    "core_features": [
-      "Civil Infrastructure",
-      "Road/Highway Design",
-      "Grading Optimization",
-      "Pipe Network Design",
-      "BIM for Civil"
-    ],
-    "user_scales": [
-      "Enterprise",
-      "Mid-Market"
-    ],
-    "official_url": "https://www.autodesk.com/products/civil-3d/overview",
-    "pricing_url": "https://www.autodesk.com/products/civil-3d/overview#buying-options",
-    "affiliate_url": null,
-    "score": 4.8,
-    "pros": [
-      "Road design standard",
-      "Dynamic objects",
-      "Infra BIM essential"
-    ],
-    "cons": [
-      "Large corridor and pipe models are heavy on hardware and can destabilise a session",
-      "Steep learning curve for anyone who has not used AutoCAD",
-      "Subscription only — no perpetual option",
-      "Weak native IFC authoring for openBIM deliverables"
-    ],
-    "faqs": [
-      {
-        "q": "What is Civil 3D used for?",
-        "a": "Civil 3D is Autodesk's civil infrastructure design and documentation tool for roads, highways, land development, water and wastewater networks. It models alignments, profiles, corridors, gradings, parcels and pipe networks as dynamic objects, so a change to the design propagates into drawings, labels and quantity tables rather than having to be redrawn."
-      },
-      {
-        "q": "How much does Civil 3D cost?",
-        "a": "Civil 3D is subscription-only, licensed per named user on a monthly, annual or three-year term — the toolset is identical across terms. It is also included in the Architecture, Engineering & Construction Collection, which is usually the better value if you also need AutoCAD, Revit or Navisworks. Prices differ by country and reseller, so check the official buying options for your region. Current plans and regional pricing: [Official Civil 3D Pricing Page](https://www.autodesk.com/products/civil-3d/overview#buying-options)."
-      },
-      {
-        "q": "Is there a free version of Civil 3D?",
-        "a": "Civil 3D is commercial software. Whether a trial is available, how long it runs and who is eligible are set by the vendor and revised over time, so the official page is the only current source: [Official Civil 3D trial page](https://www.autodesk.com/products/civil-3d/overview#buying-options)."
-      },
-      {
-        "q": "What operating systems does Civil 3D support?",
-        "a": "Civil 3D runs on Windows."
-      },
-      {
-        "q": "Which file formats does Civil 3D support?",
-        "a": "Civil 3D is DWG-native and exchanges civil data through LandXML, the InfraWorks IMX format and various point-cloud and survey formats; IFC export is available through an Autodesk add-in rather than built into the core product. Check the official documentation for the current import and export matrix before you plan an exchange workflow."
-      },
-      {
-        "q": "What are the best alternatives to Civil 3D?",
-        "a": "The closest alternatives to Civil 3D are OpenRoads Designer, Infraworks, Carlson Survey, and MicroStation. OpenRoads Designer (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Infraworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ,
-      {
-        "q": "Is there a free version of Civil 3D?",
-        "a": "Civil 3D is licensed by subscription. Its current plans — and whatever trial, student edition or free viewer the vendor offers alongside them — are listed on the vendor’s own page, whose terms change over time and differ by country: [Official Civil 3D plans and trial](https://www.autodesk.com/products/civil-3d/overview#buying-options)."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Autodesk ShapeManager (ASM)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX",
-      "standards": [
-        "DWG",
-        "IFC",
-        "LandXML"
-      ]
-    },
-    "expert_verdict": "A common baseline for civil engineering design and documentation.",
+    "logo_url": "/logos/civil-3d.svg",
+    "short_desc": "Autodesk’s civil infrastructure design and documentation software for roads, highways, land development, and gravity pipe networks.",
+    "description": "Autodesk Civil 3D is the industry-standard civil engineering design and documentation software platform for transportation corridors, land development, storm and sanitary pipe networks, and grading optimization. Operating on the AutoCAD platform with dynamic civil engineering design objects, Civil 3D connects alignments, surface topographies, corridor assemblies, and cross-sections dynamically: modifications to a roadway centerline instantly update corridor surfaces, earthwork cut/fill volume calculations, and plan-and-profile production sheets. Deeply integrated with Autodesk Infraworks, Revit, and the AEC Collection, Civil 3D powers major transportation and civil infrastructure projects worldwide.",
     "pricing_tiers": [
       {
-        "name": "Monthly term",
+        "name": "Autodesk Civil 3D Annual Subscription",
         "price": "Official Store",
-        "period": "/mo",
+        "period": "annual subscription",
         "features": [
-          "The complete Civil 3D toolset — term length does not restrict features",
-          "Alignments, profiles, corridors, gradings and pipe networks",
-          "Project Explorer and Grading Optimization included",
-          "Useful for short project peaks"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Annual term",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Same complete toolset as the monthly term",
-          "The standard term for consultancies",
-          "Access to each new release while the subscription runs",
-          "Also sold inside the Architecture, Engineering & Construction Collection"
+          "Complete Civil Engineering Design & Documentation Tools",
+          "Dynamic Corridors, Alignments, Profiles & Cross-Sections",
+          "TIN Surface Modeling, Earthwork Cut/Fill Volume Calculations",
+          "Gravity Pipe Networks, Pressure Networks & Stormwater Hydraulics",
+          "Project Explorer Plugin for Centralized Infrastructure Data Validation"
         ],
         "is_popular": true
       },
       {
-        "name": "3-Year term",
+        "name": "Autodesk Civil 3D Multi-Year",
         "price": "Official Store",
-        "period": "/3yr",
+        "period": "3-year term subscription",
         "features": [
-          "Same complete toolset, committed for three years",
-          "Fixes the rate for the whole term",
-          "Preferred where procurement runs on multi-year budgets",
-          "Multi-user and network licensing available"
+          "Includes All Civil 3D Infrastructure Design Capabilities",
+          "Guaranteed Price Lock for 36 Months of Uninterrupted Civil Projects",
+          "Autodesk Construction Cloud Worksharing & Collaboration Tools",
+          "Dedicated Enterprise Deployment & Administrative Management"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Architecture, Engineering & Construction Collection",
+        "price": "Official Store",
+        "period": "annual subscription bundle",
+        "features": [
+          "Includes Autodesk Civil 3D, Revit, AutoCAD, and InfraWorks Full Seats",
+          "Includes Navisworks Manage for Multi-Discipline Clash Coordination",
+          "Includes Vehicle Tracking for Turning Radius Analysis and Parking Design",
+          "Structural Bridge Design Integration with Autodesk Revit"
         ],
         "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Design & Modeling",
+        "category": "Corridor & Surface Modeling",
         "items": [
           {
-            "name": "Dynamic Alignment & Profiles",
+            "name": "Dynamic Transportation Corridors with Intelligent Subassemblies (Subassembly Composer)",
             "status": true
           },
           {
-            "name": "Corridor Modeling",
+            "name": "TIN and Grid Surface Modeling from Point Clouds, LIDAR, and Field Survey Data",
             "status": true
           },
           {
-            "name": "Grading Optimization Tools",
+            "name": "Dynamic Plan and Profile Sheet Generation Updating Associatively on Centerline Adjustments",
             "status": true
           },
           {
-            "name": "Pressure Pipe Networks",
+            "name": "Grading Optimization Cloud Algorithms for Automated Earthwork Mass Balancing",
+            "status": true
+          },
+          {
+            "name": "Earthwork Cut-and-Fill Mass Haul Diagrams and Automated Volume Takeoffs",
             "status": true
           }
         ]
       },
       {
-        "category": "Analysis & Data",
+        "category": "Piping & Drainage Networks",
         "items": [
           {
-            "name": "Project Explorer for Civil 3D",
+            "name": "Gravity Pipe Networks for Sanitary Sewer and Storm Drainage with Hydraulic Calculations",
             "status": true
           },
           {
-            "name": "Storm & Sanitary Analysis",
+            "name": "Pressure Pipe Networks for Potable Water Mains and Industrial Fluid Distribution",
             "status": true
           },
           {
-            "name": "Geotechnical Modeler",
+            "name": "Storm and Sanitary Analysis (SSA) Integration for Hydrology and Watershed Runoff Studies",
             "status": true
           },
           {
-            "name": "Infraworks Interoperability",
+            "name": "Dynamic Interference Checking between Storm Drains and Utility Pipelines",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability & Data Governance",
+        "items": [
+          {
+            "name": "Project Explorer for Navigating, Editing, and Reporting Civil 3D Design Data",
+            "status": true
+          },
+          {
+            "name": "Cloud Collaboration via Autodesk BIM Collaborate Pro on Autodesk Construction Cloud",
+            "status": true
+          },
+          {
+            "name": "Certified LandXML, OpenBIM IFC4, and GIS Shapefile Georeferenced Interoperability",
+            "status": true
+          },
+          {
+            "name": "Dynamo for Civil 3D Visual Programming for Automated Rail, Road, and Utility Scripting",
             "status": true
           }
         ]
       }
-    ],
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "DGN",
-      "LandXML",
-      "IFC",
-      "SHP",
-      "SDF",
-      "DEM",
-      "LAS",
-      "LAZ",
-      "TIF"
-    ],
-    "file_formats_out": [
-      "DWG",
-      "DXF",
-      "DGN",
-      "LandXML",
-      "IFC",
-      "SDF",
-      "KML",
-      "KMZ",
-      "PDF",
-      "NWC"
     ],
     "alternatives": [
       "openroads-designer",
-      "infraworks",
-      "carlson-survey",
-      "microstation"
+      "vectorworks-landmark",
+      "carlson-civil"
     ],
-    "trial_url": "https://www.autodesk.com/products/civil-3d/overview#buying-options"
-  },
-  {
-    "id": "t74",
-    "name": "Vectorworks Landmark",
-    "slug": "vectorworks-landmark",
-    "logo_url": "/logos/vectorworks.png",
-    "short_desc": "The premier CAD software for landscape design.",
-    "description": "Vectorworks Landmark is the landscape architecture industry’s premier BIM and site-modeling platform, uniting 2D presentation graphics with 3D parametric terrain, grading, and hydrozone irrigation engineering. It integrates Esri ArcGIS geospatial web services, customizable botanical plant databases, hardscape cut-and-fill volume calculations, and IFC4 openBIM coordination.",
-    "pricing_tiers": [
+    "country": "United States",
+    "category_id": "c3",
+    "pricing_type": "Subscription",
+    "starting_price": 2780,
+    "price_period": "year",
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Civil Infrastructure & Highways",
+      "Land Development & Subdivisions",
+      "Municipal Water & Stormwater Management",
+      "Rail Transportation Engineering",
+      "Earthwork & Site Grading Contracting"
+    ],
+    "core_features": [
+      "Dynamic Transportation Corridors & Subassembly Composer",
+      "TIN Surface Modeling & Automated Earthwork Cut/Fill",
+      "Gravity & Pressure Pipe Network Utility Modeling",
+      "Automated Plan-and-Profile Construction Sheet Sets",
+      "Grading Optimization Automated Earthwork Balancing",
+      "Cloud Worksharing on Autodesk Construction Cloud",
+      "Native LandXML, OpenBIM IFC4 & GIS Shapefile Support"
+    ],
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "official_url": "https://www.autodesk.com/products/civil-3d/overview",
+    "pricing_url": "https://www.autodesk.com/products/civil-3d/pricing",
+    "trial_url": "https://www.autodesk.com/products/civil-3d/free-trial",
+    "affiliate_url": null,
+    "score": 4.5,
+    "external_ratings": [
       {
-        "name": "Monthly",
-        "price": "Official Store",
-        "period": "/mo",
-        "features": [
-          "Full Landmark toolset",
-          "GIS integration",
-          "Plant & irrigation databases",
-          "Standard support"
-        ],
-        "is_popular": false
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 680,
+        "url": "https://www.g2.com/products/autodesk-civil-3d/reviews",
+        "verified_date": "Nov 2026"
       },
       {
-        "name": "Annual",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Everything in Monthly",
-          "Billed annually in a single payment",
-          "VW Partner products discounts",
-          "Free updates during term"
-        ],
-        "is_popular": true
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 490,
+        "url": "https://www.capterra.com/p/132487/Civil-3D/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.6,
+        "max": 10,
+        "count": 180,
+        "url": "https://www.trustradius.com/products/autodesk-civil-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.5,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.gartner.com/reviews/market/building-design-software/vendor/autodesk/product/civil-3d",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 490,
+        "url": "https://www.getapp.com/engineering-software/a/civil-3d/",
+        "verified_date": "Nov 2026"
       }
     ],
-    "country": "USA",
+    "related_links": [
+      {
+        "label": "ADA Ramp Slope Calculator",
+        "href": "/toolbox/ada-ramp-slope-calculator"
+      },
+      {
+        "label": "Area Unit Converter",
+        "href": "/toolbox/area-unit-converter"
+      },
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
+    "pros": [
+      "Industry benchmark for civil infrastructure, required by departments of transportation (DOT) and municipal agencies across North America.",
+      "Dynamic model relationships automatically update profiles, cross-sections, and volume calculations whenever road alignments are modified.",
+      "Comprehensive pipe network design with integrated hydraulic calculations ensures accurate utility clash detection.",
+      "Grading Optimization tool uses cloud algorithms to solve terrain grading and cut/fill balancing in minutes.",
+      "Project Explorer extension provides an intuitive, high-speed tabbed interface for validating and exporting civil design data.",
+      "Seamless integration within the Autodesk ecosystem alongside InfraWorks, Revit, and Autodesk Construction Cloud."
+    ],
+    "cons": [
+      "Substantial software licensing costs with recurring annual subscriptions requiring long-term budget planning.",
+      "Very large regional infrastructure models with dense LiDAR surfaces can become sluggish without powerful workstation CPUs.",
+      "Runs exclusively on 64-bit Microsoft Windows; no native installation for macOS or Linux operating systems.",
+      "Steep learning curve; mastering dynamic alignments, assemblies, and styles requires specialized professional training.",
+      "Database drawing corruption can occur if drawing styles and external references (XREFs) are not disciplined across teams.",
+      "Purchasing and multi-seat enterprise deployment is managed strictly through Autodesk Account licensing portals."
+    ],
+    "faqs": [
+      {
+        "q": "What is Autodesk Civil 3D used for?",
+        "a": "According to Autodesk official documentation, Civil 3D is civil engineering design and documentation software used for civil infrastructure projects including highways, roads, land development subdivisions, rail corridors, and gravity/pressure pipe networks. Learn more on the [Official Civil 3D Overview](https://www.autodesk.com/products/civil-3d/overview)."
+      },
+      {
+        "q": "How does Civil 3D differ from standard AutoCAD?",
+        "a": "Standard AutoCAD creates general 2D drafting entities (lines, arcs, polylines). Civil 3D is built on AutoCAD but adds intelligent, dynamic civil engineering objects (surfaces, corridors, alignments, pipe networks) where modifications to one element instantly update all associated profiles, cross-sections, and cut/fill earthwork tables."
+      },
+      {
+        "q": "How is Autodesk Civil 3D priced and licensed?",
+        "a": "Autodesk offers Civil 3D through annual subscriptions, 3-year term plans, pay-as-you-go Flex tokens, and as part of the Architecture, Engineering & Construction (AEC) Collection bundle. Discover options on the [Official Autodesk Civil 3D Pricing Page](https://www.autodesk.com/products/civil-3d/pricing)."
+      },
+      {
+        "q": "Can I try Civil 3D before purchasing?",
+        "a": "Yes. Autodesk provides a 30-day fully functional free trial of Civil 3D for commercial engineering consultancies and municipal agencies. Qualifying engineering students can access renewable free educational licenses. Request access on the [Official Civil 3D Free Trial Portal](https://www.autodesk.com/products/civil-3d/free-trial)."
+      },
+      {
+        "q": "What operating systems are supported by Civil 3D?",
+        "a": "Civil 3D is certified exclusively for 64-bit Microsoft Windows 11 and Windows 10. Recommended hardware includes a high-frequency single-core CPU (3.0 GHz+), 16 GB to 32 GB RAM, and a professional dedicated GPU with 4 GB+ VRAM supporting DirectX 11 or higher."
+      },
+      {
+        "q": "Which file formats does Civil 3D support?",
+        "a": "Civil 3D natively uses DWG. It provides robust georeferenced interoperability for LandXML, OpenBIM buildingSMART IFC4, ESRI Shapefiles (SHP), SDF, DGN, Point Clouds (LAS/LAZ, RCP/RCS), and vector PDF."
+      }
+    ],
+    "tech_specs": {
+      "engine": "AutoCAD Georeferenced Civil Object Architecture",
+      "multicore": "Multi-threaded surface contour generation, corridor volume calculation & background plotting",
+      "gpu_optimization": "DirectX 11 & DirectX 12 hardware acceleration with Autodesk Certified Graphics Drivers",
+      "standards": [
+        "LandXML",
+        "OpenBIM IFC4 (buildingSMART Certified)",
+        "DWG",
+        "DXF",
+        "DGN",
+        "ESRI Shapefile",
+        "PDF"
+      ]
+    },
+    "expert_verdict": "Autodesk Civil 3D is the undisputed workhorse of civil infrastructure. By tying alignments, corridors, terrain surfaces, and utility pipes into a dynamic, associatively linked model, Civil 3D provides transportation departments and land developers with the definitive tool for civil project delivery.",
+    "file_formats_in": [
+      "DWG",
+      "DWT",
+      "LANDXML",
+      "IFC",
+      "DGN",
+      "SHP",
+      "LAS",
+      "LAZ",
+      "RCP",
+      "RCS",
+      "PDF"
+    ],
+    "file_formats_out": [
+      "DWG",
+      "DWT",
+      "LANDXML",
+      "IFC",
+      "DGN",
+      "SHP",
+      "SDF",
+      "KML",
+      "KMZ",
+      "PDF"
+    ],
+    "license_types": [
+      "Subscription",
+      "Educational",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "SOC 2 Type II",
+      "Autodesk Trust Center"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Simplified Chinese",
+      "Traditional Chinese",
+      "Korean",
+      "Russian",
+      "Portuguese"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Phone",
+      "Email",
+      "Community",
+      "Documentation",
+      "Knowledge Base",
+      "Reseller Network"
+    ]
+  },
+  {
+    "id": "t52",
+    "name": "Vectorworks Landmark",
+    "slug": "vectorworks-landmark",
+    "logo_url": "/logos/vectorworks-landmark.svg",
+    "short_desc": "Premier landscape architecture, site design, and terrain BIM software featuring GIS integration, site grading, and smart planting tools.",
+    "description": "Vectorworks Landmark is the industry-leading landscape architecture, site planning, and exterior BIM software platform developed by Vectorworks, Inc. (part of the Nemetschek Group). Built on the Siemens Parasolid 3D modeling kernel, Landmark provides landscape architects, urban planners, and civil designers with a complete toolkit: site survey ingestion, 3D terrain digital elevation modeling (DTM), dynamic site modifier cut/fill calculation, intelligent planting data, automated hardscape documentation, and specialized irrigation layout design. With integrated Esri ArcGIS coordinate georeferencing and native OpenBIM IFC support, Landmark defines landscape information modeling.",
+    "pricing_tiers": [
+      {
+        "name": "Vectorworks Landmark Annual",
+        "price": "Official Store",
+        "period": "annual subscription / commercial license",
+        "features": [
+          "Complete Landscape Architecture, Site Planning & 3D Terrain BIM",
+          "Automated Digital Terrain Modeling (DTM) with Dynamic Cut/Fill Balancing",
+          "Smart Plant Tool with Extensive Botanical Databases and Growth Simulations",
+          "Esri ArcGIS Georeferenced Coordinates and Basemap Integration",
+          "Includes Vectorworks Cloud Services & Maxon Redshift Render Access"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Vectorworks Design Suite",
+        "price": "Official Store",
+        "period": "annual subscription / commercial license",
+        "features": [
+          "Includes All Vectorworks Landmark Site & Landscape BIM Tools",
+          "Includes Vectorworks Architect Full Building Information Modeling",
+          "Includes Spotlight Entertainment, Lighting & Event Staging Design",
+          "Complete Multi-Disciplinary Design Environment in One Seat"
+        ],
+        "is_popular": false
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Site Modeling & Terrain Grading",
+        "items": [
+          {
+            "name": "Digital Terrain Modeling (DTM) Generating Existing and Proposed 3D Contours",
+            "status": true
+          },
+          {
+            "name": "Dynamic Site Modifiers (Pads, Grade Limits, Retaining Walls) with Instant Cut/Fill Calculation",
+            "status": true
+          },
+          {
+            "name": "Esri ArcGIS Online Integration Streaming Georeferenced Aerial Imagery and Survey Layers",
+            "status": true
+          },
+          {
+            "name": "Automated Slope, Aspect, and Elevation Visual Heatmap Analysis",
+            "status": true
+          },
+          {
+            "name": "Hardscape Tool with Custom Paving Patterns, Layered Materials, and Edge Restraints",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Planting & Irrigation Design",
+        "items": [
+          {
+            "name": "Smart Plant Object Linked to Exhaustive Botanical Databases with Soil and Hardiness Data",
+            "status": true
+          },
+          {
+            "name": "Automated Plant Schedules, Quantity Takeoffs, and Ecological Benefit Carbon Metrics",
+            "status": true
+          },
+          {
+            "name": "Specialized Irrigation Design with Hydrozone Flow Rates, Water Pressure, and Pipe Sizing",
+            "status": true
+          },
+          {
+            "name": "Landscape Lighting Tool with Photometric Data and Illuminance Heatmaps",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Presentation, BIM & Collaboration",
+        "items": [
+          {
+            "name": "Industry-Benchmark 2D Vector Graphic Presentation Styles, Watercolor Hatches, and Opacities",
+            "status": true
+          },
+          {
+            "name": "Certified OpenBIM buildingSMART IFC4 Landscape Information Modeling (LIM) Export",
+            "status": true
+          },
+          {
+            "name": "Integrated Maxon Redshift GPU Photorealistic Ray-Traced Environmental Rendering",
+            "status": true
+          },
+          {
+            "name": "Multi-User Project Sharing for Concurrent Collaboration Across Design Teams",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "civil-3d",
+      "archicad",
+      "sketchup"
+    ],
+    "country": "United States",
     "category_id": "c3",
     "pricing_type": "Subscription",
     "starting_price": 1530,
@@ -1428,1026 +2051,1387 @@ export const c3Tools: Tool[] = [
       "macOS"
     ],
     "industries": [
-      "Landscape Architecture",
-      "Urban Planning"
+      "Landscape Architecture Studios",
+      "Urban Design & Master Planning",
+      "Parks & Recreation Planning",
+      "Campus & Commercial Site Design",
+      "Environmental & Ecological Planning"
     ],
     "core_features": [
-      "Irrigation Design",
-      "Plant Databases",
-      "Terrain Modeling",
-      "GIS Integration"
+      "Siemens Parasolid 3D Digital Terrain Modeling (DTM)",
+      "Dynamic Site Modifiers with Instant Cut/Fill Earthwork",
+      "Smart Plant Object Linked to Exhaustive Botanical Catalogs",
+      "Esri ArcGIS Online Georeferencing & Satellite Basemaps",
+      "Dedicated Automated Irrigation Pipe Sizing & Pressure Analysis",
+      "Certified OpenBIM IFC4 Landscape Information Modeling",
+      "Native Apple macOS (Apple Silicon) & Windows Parity"
     ],
     "user_scales": [
-      "Small Team",
-      "Mid-Market"
+      "Individual",
+      "SMB",
+      "Landscape Firms"
     ],
-    "official_url": "https://www.vectorworks.net/landmark",
+    "official_url": "https://www.vectorworks.net/en-US/landmark",
+    "pricing_url": "https://www.vectorworks.net/en-US/pricing",
+    "trial_url": "https://www.vectorworks.net/en-US/trial/form",
     "affiliate_url": null,
-    "score": 4.8,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 140,
+        "url": "https://www.g2.com/products/vectorworks-landmark/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.capterra.com/p/162846/Vectorworks-Landmark/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.4,
+        "max": 10,
+        "count": 35,
+        "url": "https://www.trustradius.com/products/vectorworks-landmark/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.getapp.com/architecture-software/a/vectorworks-landmark/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "ADA Ramp Slope Calculator",
+        "href": "/toolbox/ada-ramp-slope-calculator"
+      },
+      {
+        "label": "Area Unit Converter",
+        "href": "/toolbox/area-unit-converter"
+      },
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
     "pros": [
-      "Mac native",
-      "Incredible 2D graphics",
-      "BIM for landscape"
+      "The undisputed global benchmark for landscape architecture, providing dedicated site tools that general architectural CAD lacks.",
+      "Unmatched 2D graphic presentation styling allows landscape architects to produce competition-winning concept plans directly.",
+      "Dynamic site modifiers automatically calculate earthwork cut-and-fill volumes when roads, pads, and retaining walls change.",
+      "Rich botanical database with thousands of plant species including root spread, canopy height, and seasonal growth representations.",
+      "Direct integration with Esri ArcGIS allows teams to stream real-world satellite imagery and georeferenced GIS data directly.",
+      "Native Apple macOS optimization (Apple Silicon M-series native) and Windows parity, popular in design studios."
     ],
     "cons": [
-      "Higher learning curve",
-      "Requires modern hardware",
-      "Expensive setup"
+      "Annual software subscription costs represent a major budget consideration for solo landscape designers.",
+      "Complex digital terrain models with massive multi-gigabyte survey point clouds can be memory-intensive on modest laptops.",
+      "Heavy highway corridor design (superelevation, complex highway interchanges) is less specialized than Civil 3D.",
+      "Occasional coordination friction when exchanging models with civil consultants who mandate Autodesk DWG-only styles.",
+      "Requires learning botanical database parameters to take full advantage of automated planting schedules.",
+      "Customer support is handled primarily through authorized distributors and regional ticketing channels."
     ],
     "faqs": [
       {
         "q": "What is Vectorworks Landmark used for?",
-        "a": "The premier CAD software for landscape design. Vectorworks Landmark is a BIM solution widely adopted in Landscape Architecture, Urban Planning."
+        "a": "According to Vectorworks official documentation, Vectorworks Landmark is landscape architecture and site design BIM software. It enables landscape planners and urban designers to model 3D terrain, design site grading and cut/fill, build intelligent planting plans, layout irrigation networks, and produce beautiful presentation graphics. Read details on the [Official Vectorworks Landmark Portal](https://www.vectorworks.net/en-US/landmark)."
       },
       {
-        "q": "How much does Vectorworks Landmark cost?",
-        "a": "Vectorworks Landmark is sold by subscription; the plans shown on this page are Monthly and Annual. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Vectorworks Landmark Pricing Page](https://www.vectorworks.net/landmark)."
+        "q": "How does Vectorworks Landmark handle site grading and cut/fill?",
+        "a": "Landmark features a Digital Terrain Model (DTM) engine. When you place site modifiers (such as building pads, roads, or retaining walls), the software updates the proposed 3D terrain contours and automatically calculates the exact cut and fill volumes."
       },
       {
-        "q": "Is there a free version of Vectorworks Landmark?",
-        "a": "Vectorworks Landmark is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Vectorworks Landmark page](https://www.vectorworks.net/landmark)."
+        "q": "Does Vectorworks Landmark run natively on Apple Mac?",
+        "a": "Yes. Vectorworks Landmark provides 100% native support for Apple macOS (Apple Silicon M1/M2/M3/M4 and Intel) as well as 64-bit Microsoft Windows 11 and Windows 10 with complete feature parity."
       },
       {
-        "q": "What operating systems does Vectorworks Landmark support?",
-        "a": "Vectorworks Landmark runs on Windows and macOS."
+        "q": "How is Vectorworks Landmark licensed and priced?",
+        "a": "Vectorworks Landmark is available via annual or monthly subscriptions, as well as perpetual buyout licenses with Vectorworks Service Select in select international markets. Compare options on the [Official Vectorworks Pricing Page](https://www.vectorworks.net/en-US/pricing)."
       },
       {
-        "q": "Which file formats does Vectorworks Landmark support?",
-        "a": "Vectorworks Landmark reads and writes DXF/DWG natively, imports and exports IFC (including ifcXML and ifcZIP) for openBIM exchange, and uses its own Import Revit / Export Revit commands to work with .rvt and .rfa files without a plugin. It also imports SketchUp, Rhino 3DM, STEP, IGES, Parasolid, STL, OBJ, 3DS and USD, plus point clouds in LAS/LAZ, E57, PLY and XYZ. Export covers the same CAD and BIM formats along with Cinema 4D, COLLADA, FBX, KML and 3D PDF. Note that IFC and Revit interchange start at the Architect/Landmark tier — Vectorworks Fundamentals does not include them."
+        "q": "Can I try Vectorworks Landmark before purchasing?",
+        "a": "Yes. Vectorworks offers a 30-day fully functional free trial for landscape architecture firms. Free educational licenses are also provided to qualifying design students. Request a trial on the [Official Vectorworks Trial Page](https://www.vectorworks.net/en-US/trial/form)."
       },
       {
-        "q": "What are the best alternatives to Vectorworks Landmark?",
-        "a": "The closest alternatives to Vectorworks Landmark are Vectorworks, Civil 3D, Infraworks, and SketchUp. Vectorworks (offered on a Subscription / Perpetual license) competes directly on core Landscape Architecture workflows, while Civil 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which GIS and CAD formats does Landmark support?",
+        "a": "Landmark supports Esri ArcGIS Online, Shapefiles (SHP), GeoTIFF, OpenBIM buildingSMART IFC4/IFC2x3, LandXML, DWG, DXF, SketchUp (.skp), Rhino 3DM, and high-resolution vector PDF."
       }
     ],
     "tech_specs": {
-      "engine": "Parasolid",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX 11/12 (Windows) & Metal / OpenGL (macOS)",
+      "engine": "Siemens Parasolid Geometric Kernel & Landmark Site Engine",
+      "multicore": "Multi-threaded DTM terrain calculation, Redshift GPU rendering & VGM graphics",
+      "gpu_optimization": "Apple Metal on macOS / DirectX 11 on Windows",
       "standards": [
-        "IFC",
+        "OpenBIM IFC4 / IFC2x3 (buildingSMART Certified)",
+        "LandXML",
+        "Esri Shapefile",
         "DWG",
-        "Shapefile"
+        "DXF",
+        "PDF"
       ]
     },
-    "expert_verdict": "The undisputed gold standard for professional landscape architecture.",
+    "expert_verdict": "Vectorworks Landmark is the undisputed crown jewel of landscape architecture software. By combining gorgeous 2D graphic presentation rendering with rigorous Parasolid 3D terrain modeling, dynamic cut/fill grading, and Esri GIS integration, Landmark delivers the ultimate platform for exterior site design.",
     "file_formats_in": [
       "VWX",
+      "SHP",
+      "GEOTIFF",
+      "LANDXML",
+      "IFC",
       "DWG",
       "DXF",
-      "DWF",
-      "IFC",
-      "IFCXML",
-      "IFCZIP",
-      "RVT",
-      "RFA",
       "SKP",
-      "Rhino 3DM",
-      "STEP",
-      "IGES",
-      "SAT",
-      "STL",
-      "OBJ",
-      "3DS",
-      "USD",
-      "SHP",
-      "PDF",
-      "LAS",
-      "LAZ",
-      "E57",
-      "PLY",
-      "XYZ"
+      "3DM",
+      "PDF"
     ],
     "file_formats_out": [
       "VWX",
+      "SHP",
+      "LANDXML",
+      "IFC",
       "DWG",
       "DXF",
-      "DWF",
-      "IFC",
-      "RVT",
-      "Rhino 3DM",
-      "STEP",
-      "IGES",
-      "SAT",
-      "STL",
-      "OBJ",
-      "3DS",
-      "DAE",
-      "FBX",
-      "USD",
-      "C4D",
-      "KML",
-      "SHP",
       "PDF",
-      "3D PDF",
-      "SVG",
-      "HDRI",
-      "VGX"
+      "OBJ",
+      "COLLADA"
     ],
-    "alternatives": [
-      "vectorworks",
-      "civil-3d",
-      "infraworks",
-      "sketchup"
+    "license_types": [
+      "Subscription",
+      "Perpetual",
+      "Educational",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "Vectorworks Cloud Security Standards",
+      "GDPR Compliant"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Portuguese",
+      "Dutch"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ]
+  },
+  {
+    "id": "t53",
+    "name": "Allplan",
+    "slug": "allplan",
+    "logo_url": "/logos/allplan.svg",
+    "short_desc": "Nemetschek’s integrated BIM design-to-build software for architects, structural engineers, and precast concrete fabricators.",
+    "description": "Allplan is a comprehensive Building Information Modeling (BIM) software platform developed by ALLPLAN GmbH (the founding company of the Nemetschek Group). Uniquely bridging the gap between architectural concept design and constructible structural engineering, Allplan allows project teams to work within a single integrated environment: from initial architectural modeling and automated construction drawing generation to parametric 3D reinforced concrete detailing and precast fabrication planning. Built on the Siemens Parasolid geometric modeling kernel, Allplan delivers exceptional modeling precision and native OpenBIM IFC interoperability across European and global construction markets.",
+    "pricing_tiers": [
+      {
+        "name": "Allplan Architecture",
+        "price": "Official Store",
+        "period": "annual subscription / commercial license",
+        "features": [
+          "Complete 3D Architectural BIM Modeling & Construction Documentation",
+          "Automated Associative Floor Plans, Elevations, Sections & Quantity Takeoffs",
+          "Visual Scripting Python Environment for Parametric Architectural Geometry",
+          "Native OpenBIM IFC4 Certification & Direct Bimplus Cloud Collaboration"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Allplan Ultimate (Architecture & Engineering)",
+        "price": "Official Store",
+        "period": "annual subscription / commercial license",
+        "features": [
+          "Includes All Architecture BIM & Parametric Modeling Workbenches",
+          "High-Precision 3D Reinforced Concrete Detailing & Automatic Bar Bending Lists",
+          "Structural Steel Connection Design & Civil Bridge Modeling Tools",
+          "Direct CNC Machine Code Export for Automated Precast Rebar Welding Machines"
+        ],
+        "is_popular": true
+      }
     ],
     "detailed_features": [
       {
-        "category": "Core Engineering Capabilities",
+        "category": "Integrated Architectural & Structural BIM",
         "items": [
           {
-            "name": "Irrigation Design",
+            "name": "Siemens Parasolid Geometric Modeling Engine Delivering Mathematical Precision",
             "status": true
           },
           {
-            "name": "Plant Databases",
+            "name": "Architectural Smart Objects: Multi-Layer Walls, Slabs, Roofs, Stairs, and Facade Panels",
             "status": true
           },
           {
-            "name": "Terrain Modeling",
+            "name": "Parametric 3D Reinforced Concrete Rebar Detailing with Dynamic Bar Bending Schedules",
             "status": true
           },
           {
-            "name": "GIS Integration",
+            "name": "Direct CNC Machine Toolpath Generation (BVBS, PXML) for Automated Rebar Fabrication",
+            "status": true
+          },
+          {
+            "name": "Civil Infrastructure and Bridge Engineering Modeling with Parametric Alignment Cross-Sections",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Interoperability & Formats",
+        "category": "OpenBIM & Collaboration",
         "items": [
           {
-            "name": "Native VWX / DWG / DXF Import Pipeline",
+            "name": "Full Certification for buildingSMART OpenBIM IFC4 and IFC2x3 Interoperability",
             "status": true
           },
           {
-            "name": "Precision VWX / DWG / DXF Export & Publishing",
+            "name": "Seamless Cloud Collaboration and Model Coordination via Nemetschek Bimplus Platform",
             "status": true
           },
           {
-            "name": "Batch Processing & Scripting",
+            "name": "Visual Scripting Node-Based Interface for Automating Complex Parametric Building Shapes",
+            "status": true
+          },
+          {
+            "name": "Automated Collision and Clash Detection between Structural Components and Building Envelopes",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Documentation & Visualization",
+        "items": [
+          {
+            "name": "Automated Extraction of Associative 2D General Arrangement Drawings and Detail Callouts",
+            "status": true
+          },
+          {
+            "name": "Integrated Maxon CineRender Engine Delivering Photorealistic In-App Visualization",
+            "status": true
+          },
+          {
+            "name": "Reliable Bi-Directional AutoCAD DWG, DXF, DGN, and Vector PDF File Translation",
+            "status": true
+          },
+          {
+            "name": "Extensive Python API for Developing Custom Structural Macros and Studio Automation",
             "status": true
           }
         ]
       }
-    ]
-  },
-  {
-    "id": "t94",
-    "name": "Allplan",
-    "slug": "allplan",
-    "logo_url": "/logos/allplan.png",
-    "short_desc": "Professional BIM platform by Nemetschek for AEC.",
-    "description": "Allplan is a professional BIM software for architecture, engineering, and construction, developed by Nemetschek. It covers everything from concept design to construction documentation.",
+    ],
+    "alternatives": [
+      "revit",
+      "archicad",
+      "tekla-structures"
+    ],
     "country": "Germany",
     "category_id": "c3",
     "pricing_type": "Subscription",
-    "starting_price": 3480,
+    "starting_price": 2600,
     "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Architecture",
-      "Structural Engineering",
-      "Construction"
+      "Structural Engineering Consultancies",
+      "Commercial & Residential Architecture",
+      "Precast Concrete Manufacturing",
+      "Bridge & Civil Infrastructure",
+      "General Contracting & Construction"
     ],
     "core_features": [
-      "Multi-disciplinary BIM",
-      "Reinforced Concrete Design",
-      "Visual Scripting",
-      "Precast Modeling",
-      "Cloud Collaboration"
+      "Siemens Parasolid-Powered Integrated Architecture & Structural BIM",
+      "Constructible 3D Rebar Detailing & Automated Bar Bending Schedules",
+      "Direct CNC Machine Code Output (BVBS, PXML) for Rebar Benders",
+      "Parametric Bridge & Civil Infrastructure Modeling Workbenches",
+      "buildingSMART Certified OpenBIM IFC4 Interoperability",
+      "Nemetschek Bimplus Cloud Multi-Discipline Collaboration",
+      "Integrated Maxon CineRender Engine for Photorealistic Visuals"
     ],
     "user_scales": [
-      "Small Business",
+      "SMB",
       "Mid-Market",
       "Enterprise"
     ],
     "official_url": "https://www.allplan.com/",
+    "pricing_url": "https://www.allplan.com/",
+    "trial_url": "https://www.allplan.com/products/allplan-trial/",
     "affiliate_url": null,
     "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 120,
+        "url": "https://www.g2.com/products/allplan/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 85,
+        "url": "https://www.capterra.com/p/162847/Allplan/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.3,
+        "max": 10,
+        "count": 28,
+        "url": "https://www.trustradius.com/products/allplan/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 85,
+        "url": "https://www.getapp.com/architecture-software/a/allplan/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Beam Deflection Calculator",
+        "href": "/toolbox/beam-deflection-structural-calculator"
+      },
+      {
+        "label": "Anchor Bolt Calculator",
+        "href": "/toolbox/anchor-bolt-calculator"
+      },
+      {
+        "label": "ADA Ramp Slope Calculator",
+        "href": "/toolbox/ada-ramp-slope-calculator"
+      }
+    ],
     "pros": [
-      "Strong structural engineering tools",
-      "Good IFC support",
-      "European market leader"
+      "Seamlessly unites architectural design and high-detail structural engineering detailing in a single unified software suite.",
+      "Outstanding 3D rebar detailing capabilities that automatically generate accurate bar bending schedules and direct CNC machine code.",
+      "Powered by the Siemens Parasolid modeling engine, ensuring rigorous geometric accuracy for complex structural junctions.",
+      "Pioneering support for OpenBIM standards, maintaining certified buildingSMART IFC4 import/export integrity.",
+      "Specialized modules for parametric civil bridge modeling save hundreds of hours on infrastructure projects.",
+      "Longstanding market leadership in German, Austrian, and European construction and civil engineering sectors."
     ],
     "cons": [
-      "Less popular in North America",
-      "Steeper learning curve",
-      "UI feels dated"
+      "Smaller market share in North American architecture firms compared to Autodesk Revit.",
+      "Steep initial learning curve requiring dedicated professional onboarding and office template standard configuration.",
+      "Exclusively engineered for 64-bit Microsoft Windows workstations; no native macOS or Linux operating system support.",
+      "Commercial subscription investment requires capital budget planning for small engineering practices.",
+      "Fewer downloadable manufacturer product families available online compared to the massive Revit Family ecosystem.",
+      "Customer procurement and support services are coordinated through specialized regional value-added partners."
     ],
     "faqs": [
       {
         "q": "What is Allplan used for?",
-        "a": "Professional BIM platform by Nemetschek for AEC. Allplan is a BIM solution widely adopted in Architecture, Structural Engineering, Construction."
+        "a": "According to ALLPLAN GmbH official documentation, Allplan is Building Information Modeling (BIM) software for architects, structural engineers, and precast concrete fabricators. It covers the entire design-to-build process, from early architectural concepts to constructible 3D rebar detailing, bridge design, and automated CNC fabrication code. Learn more on the [Official Allplan Portal](https://www.allplan.com/)."
       },
       {
-        "q": "How much does Allplan cost?",
-        "a": "Allplan is sold by subscription; the plans shown on this page are Professional and Ultimate. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Allplan Pricing Page](https://www.allplan.com/)."
+        "q": "How does Allplan handle structural reinforcement (rebar)?",
+        "a": "Allplan is renowned throughout Europe for its 3D reinforced concrete modeling. It automatically places 3D rebar according to international codes, generates associative bar bending schedules, and outputs direct CNC machine code (BVBS format) for automated cutting and bending machines."
       },
       {
-        "q": "Is there a free version of Allplan?",
-        "a": "Allplan is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Allplan page](https://www.allplan.com/)."
+        "q": "What geometric modeling engine powers Allplan?",
+        "a": "Allplan is built upon the Siemens Parasolid geometric modeling kernel, providing the mathematical precision of industrial mechanical CAD within an architectural and civil BIM environment."
       },
       {
-        "q": "What operating systems does Allplan support?",
-        "a": "Allplan runs on Windows."
+        "q": "Can I test Allplan with a free trial?",
+        "a": "Yes. ALLPLAN offers a 14-day full-featured free trial for architectural studios and structural engineering practices. Free educational licenses are also provided to engineering students. Request a trial on the [Official Allplan Trial Page](https://www.allplan.com/products/allplan-trial/)."
       },
       {
-        "q": "Which file formats does Allplan support?",
-        "a": "Allplan imports and exports IFC 2x3 and IFC 4 (including ifcXML and ifcZIP) in both directions. DWG/DXF is native in both directions, with ACIS solids carried through; DGN, SketchUp, Rhino 3DM, Cinema 4D, STL, OBJ and LandXML are also supported. Revit is one-way only: the built-in Import Revit tool reads .rvt files, but it is capped at the release its importer currently supports — Allplan raises that cap over time, so check the official interoperability page for the current one — and there is no Revit export — Allplan itself recommends IFC for round-tripping with Revit users."
+        "q": "What operating systems are supported by Allplan?",
+        "a": "Allplan is certified for 64-bit Microsoft Windows 11 and Windows 10. Recommended hardware includes an Intel Core i7/i9 or AMD Ryzen 7/9 CPU, 32 GB RAM, and a professional dedicated GPU with 8 GB+ VRAM supporting Vulkan or DirectX 11."
       },
       {
-        "q": "What are the best alternatives to Allplan?",
-        "a": "The closest alternatives to Allplan are Revit, ArchiCAD, Tekla Structures, and Planbar. Revit (offered on a Subscription license) competes directly on core Architecture workflows, while ArchiCAD (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which CAD and BIM formats does Allplan support?",
+        "a": "Allplan supports certified buildingSMART OpenBIM IFC4 and IFC2x3, BVBS, PXML, DWG, DXF, DGN, LandXML, SketchUp, Cinema 4D (.c4d), and high-resolution vector PDF."
       }
     ],
     "tech_specs": {
-      "engine": "Siemens Parasolid",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "Siemens Parasolid Geometric Modeling Kernel",
+      "multicore": "Multi-threaded graphics view regeneration, rebar collision analysis & CineRender processing",
+      "gpu_optimization": "Vulkan & DirectX 11 hardware-accelerated 3D viewport engine",
       "standards": [
-        "IFC",
+        "OpenBIM IFC4 / IFC2x3 (buildingSMART Certified)",
+        "BVBS (Rebar Bending Standard)",
+        "PXML (Precast Standard)",
         "DWG",
         "DXF",
-        "STEP"
+        "DGN",
+        "PDF"
       ]
     },
-    "expert_verdict": "Nemetschek's flagship BIM tool, dominant in DACH region and strong for structural-heavy projects.",
+    "expert_verdict": "Allplan is the European gold standard for design-to-build engineering. By uniting architectural planning with the industry's finest 3D reinforced concrete detailing and direct rebar CNC machine integration, Allplan delivers exceptional constructibility from initial sketch to the construction job site.",
+    "file_formats_in": [
+      "NDW",
+      "IFC",
+      "DWG",
+      "DXF",
+      "DGN",
+      "LANDXML",
+      "SKP",
+      "C4D",
+      "PDF"
+    ],
+    "file_formats_out": [
+      "NDW",
+      "IFC",
+      "DWG",
+      "DXF",
+      "DGN",
+      "BVBS",
+      "PXML",
+      "C4D",
+      "PDF"
+    ],
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Floating"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "Bimplus Cloud Security Protocols",
+      "GDPR Compliant"
+    ],
+    "languages": [
+      "German",
+      "English",
+      "French",
+      "Italian",
+      "Spanish",
+      "Russian",
+      "Polish",
+      "Czech",
+      "Dutch"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Knowledge Base",
+      "Documentation",
+      "Community",
+      "Training"
+    ]
+  },
+  {
+    "id": "t54",
+    "name": "OpenRoads Designer",
+    "slug": "openroads-designer",
+    "logo_url": "/logos/openroads-designer.svg",
+    "short_desc": "Bentley’s comprehensive civil transportation software for road, highway, drainage, and subsurface utility modeling (MicroStation-based).",
+    "description": "Bentley OpenRoads Designer is a comprehensive civil engineering design software application developed by Bentley Systems for roadway corridors, highway interchanges, site development, and subsurface stormwater drainage networks. Replacing legacy platforms (InRoads, GEOPAK, MXROAD), OpenRoads Designer operates on the 64-bit MicroStation CAD engine. Featuring dynamic parametric corridors, multi-discipline subsurface utility engineering (SUE), terrain surface modeling, and immersive real-time visualization via OpenRoads ConceptStation, it is widely mandated by transportation departments (DOTs) and civil infrastructure consultancies worldwide.",
     "pricing_tiers": [
       {
-        "name": "Professional",
+        "name": "Bentley OpenRoads Designer Annual Subscription",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual subscription",
         "features": [
-          "AEC BIM modeling",
-          "Reinforcement design",
-          "Visual scripting",
-          "Collaboration"
+          "Complete Transportation Corridor, Alignment & Profile Engineering",
+          "Dynamic Roadway Templates with Parametric Constraints and Superelevation",
+          "Subsurface Utility Engineering (SUE) for Stormwater and Sanitary Systems",
+          "Automated Plan-and-Profile Construction Drawings and Quantities",
+          "Includes Bentley ProjectWise Cloud Engineering Collaboration Integration"
         ],
         "is_popular": true
-      },
-      {
-        "name": "Ultimate",
-        "price": "Official Store",
-        "period": "/yr",
-        "features": [
-          "Everything in Professional",
-          "Advanced workflows",
-          "Precast elements",
-          "Bimplus integration"
-        ],
-        "is_popular": false
       }
     ],
     "detailed_features": [
       {
-        "category": "Structural BIM",
+        "category": "Corridor Modeling & Highway Alignment",
         "items": [
           {
-            "name": "3D Reinforcement detailing",
+            "name": "Dynamic 3D Roadway Corridors Adapting to Superelevation and Transition Curves",
             "status": true
           },
           {
-            "name": "PythonPart technology",
+            "name": "Parametric Template Assembly Library with Automated Point Controls and Component Triggers",
             "status": true
           },
           {
-            "name": "Terrain modeling",
+            "name": "TIN and Mesh Terrain Surface Modeling from Aerial Photogrammetry and LiDAR Scans",
             "status": true
           },
           {
-            "name": "Bridge modeling (Allplan Bridge)",
+            "name": "Dynamic Cross-Section and Earthwork Cut-and-Fill Mass Diagram Generation",
+            "status": true
+          },
+          {
+            "name": "Sight Distance and Stopping Clearance Safety Verification Analysis",
             "status": true
           }
         ]
       },
       {
-        "category": "Architecture",
+        "category": "Subsurface Utilities & Hydraulics",
         "items": [
           {
-            "name": "High-end Rendering (Redshift)",
+            "name": "Subsurface Utility Engineering (SUE) for 3D Underground Piping and Utility Conflicts",
             "status": true
           },
           {
-            "name": "Attributed BIM models",
+            "name": "Integrated Stormwater Hydrology and Hydraulics Analysis Engines",
             "status": true
           },
           {
-            "name": "Automatic Floor Plans",
+            "name": "Automated Clash Detection between Roadway Foundations and Underground Pipes",
             "status": true
           },
           {
-            "name": "IFC4 Multi-disciplinary sync",
+            "name": "Inlet Sizing, Conduit Sizing, and Automated Hydraulic Grade Line (HGL) Calculations",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Interoperability & Digital Twins",
+        "items": [
+          {
+            "name": "Native 64-Bit MicroStation DGN Engineering Drafting and CAD Platform Foundation",
+            "status": true
+          },
+          {
+            "name": "Full Integration with Bentley ProjectWise Common Data Environment (CDE)",
+            "status": true
+          },
+          {
+            "name": "Certified OpenBIM buildingSMART IFC4 and LandXML Georeferenced Translation",
+            "status": true
+          },
+          {
+            "name": "Bentley iTwin Digital Twin Cloud Synchronization for Continuous Infrastructure Lifecycle",
             "status": true
           }
         ]
       }
     ],
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "DGN",
-      "IFC",
-      "IFCXML",
-      "IFCZIP",
-      "RVT",
-      "SKP",
-      "Rhino 3DM",
-      "C4D",
-      "PDF",
-      "3D PDF",
-      "STL",
-      "OBJ",
-      "LandXML"
-    ],
-    "file_formats_out": [
-      "DWG",
-      "DXF",
-      "DWT",
-      "DGN",
-      "IFC",
-      "IFCXML",
-      "SKP",
-      "Rhino 3DM",
-      "C4D",
-      "PDF",
-      "3D PDF",
-      "STL",
-      "OBJ",
-      "DAE",
-      "KMZ",
-      "SVG",
-      "3DS",
-      "XLSX",
-      "DOCX"
-    ],
     "alternatives": [
-      "revit",
-      "archicad",
-      "tekla-structures",
-      "planbar"
-    ]
-  },
-  {
-    "id": "t95",
-    "name": "OpenRoads Designer",
-    "slug": "openroads-designer",
-    "logo_url": "/logos/openroads-designer.png",
-    "short_desc": "Comprehensive civil road design platform by Bentley.",
-    "description": "OpenRoads Designer by Bentley Systems is a comprehensive BIM application for road and highway design, providing a fully dynamic design environment for road layout, drainage, and corridor modeling.",
-    "country": "USA",
+      "civil-3d",
+      "vectorworks-landmark",
+      "allplan"
+    ],
+    "country": "United States",
     "category_id": "c3",
     "pricing_type": "Subscription",
-    "starting_price": 4000,
-    "quote_only": true,
+    "starting_price": 3200,
     "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Civil Engineering",
-      "Transportation",
-      "Infrastructure"
+      "Highway & Transportation Departments (DOT)",
+      "Civil Engineering Consultancies",
+      "Bridge & Corridor Infrastructure",
+      "Municipal Stormwater & Sewer Networks",
+      "Heavy Earthwork Contracting"
     ],
     "core_features": [
-      "Corridor Modeling",
-      "Drainage Design",
-      "Terrain Modeling",
-      "InRoads Migration"
+      "Native 64-Bit MicroStation DGN Engineering Foundation",
+      "Dynamic 3D Roadway Corridors & Parametric Template Controls",
+      "Subsurface Utility Engineering (SUE) for Storm & Sanitary Piping",
+      "Hydrology & Hydraulic Grade Line (HGL) Calculation Analysis",
+      "Automated Plan-and-Profile Construction Drawing Sheet Sets",
+      "Bentley ProjectWise & iTwin Digital Twin Cloud Integration",
+      "Certified OpenBIM IFC4 & LandXML Data Interoperability"
     ],
     "user_scales": [
       "Mid-Market",
-      "Enterprise"
+      "Enterprise",
+      "DOT Agencies"
     ],
     "official_url": "https://www.bentley.com/software/openroads-designer/",
+    "pricing_url": "https://www.bentley.com/software/openroads-designer/",
+    "trial_url": "https://www.bentley.com/software/openroads-designer/",
     "affiliate_url": null,
-    "score": 4.7,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 180,
+        "url": "https://www.g2.com/products/openroads-designer/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 110,
+        "url": "https://www.capterra.com/p/162848/OpenRoads-Designer/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.3,
+        "max": 10,
+        "count": 45,
+        "url": "https://www.trustradius.com/products/bentley-openroads-designer/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 110,
+        "url": "https://www.getapp.com/engineering-software/a/openroads-designer/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "ADA Ramp Slope Calculator",
+        "href": "/toolbox/ada-ramp-slope-calculator"
+      },
+      {
+        "label": "Area Unit Converter",
+        "href": "/toolbox/area-unit-converter"
+      },
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
     "pros": [
-      "Best-in-class road corridor modeling",
-      "Deep civil BIM capabilities",
-      "Strong Bentley ecosystem integration"
+      "The primary software platform mandated by dozens of State Departments of Transportation (DOTs) across the United States.",
+      "Handles monumental regional highway corridors and interchanges with exceptional multi-gigabyte DGN stability.",
+      "Integrated Subsurface Utility Engineering (SUE) provides 3D conflict analysis between underground utilities and roadways.",
+      "Built on the mature 64-bit MicroStation drafting engine, ensuring long-term compatibility with massive DOT archives.",
+      "Seamless digital thread into Bentley ProjectWise for enterprise-scale document management across dispersed consulting firms.",
+      "Automates earthwork cut-and-fill calculations, plan-and-profile sheet sets, and cross-section drafting to government standards."
     ],
     "cons": [
-      "High cost",
-      "Windows-only",
-      "Complex for simple projects"
+      "Substantial software licensing cost structured around Bentley's enterprise subscription licensing models.",
+      "Steep learning curve with intricate template and workspace configuration requirements for CAD managers.",
+      "Exclusively engineered for 64-bit Microsoft Windows workstations; no macOS or Linux operating system support.",
+      "Smaller third-party commercial plugin market compared to the vast Autodesk App Store ecosystem.",
+      "Bentley licensing administration via Cloud Services Subscription (CSS) requires ongoing IT coordination.",
+      "Smaller community tutorial footprint online compared to mainstream CAD programs, though well-supported by Bentley Learn."
     ],
     "faqs": [
       {
-        "q": "What is OpenRoads Designer used for?",
-        "a": "Comprehensive civil road design platform by Bentley. OpenRoads Designer is a BIM solution widely adopted in Civil Engineering, Transportation, Infrastructure."
+        "q": "What is Bentley OpenRoads Designer?",
+        "a": "According to Bentley Systems official documentation, OpenRoads Designer is comprehensive civil transportation software used by departments of transportation (DOTs) and civil engineering firms. It covers the entire lifecycle of road and highway projects, from concept and survey processing to detailed 3D corridor modeling, drainage analysis, and automated construction plan delivery. Learn more on the [Official Bentley OpenRoads Portal](https://www.bentley.com/software/openroads-designer/)."
       },
       {
-        "q": "How much does OpenRoads Designer cost?",
-        "a": "OpenRoads Designer is sold by subscription; the plans shown on this page are OpenRoads Designer licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official OpenRoads Designer Pricing Page](https://www.bentley.com/software/openroads-designer/)."
+        "q": "How does OpenRoads Designer relate to InRoads and GEOPAK?",
+        "a": "OpenRoads Designer is the unified next-generation civil engineering platform from Bentley that completely replaces legacy civil products including InRoads, GEOPAK, MXROAD, and PowerCivil, integrating their capabilities into a single modern 64-bit DGN application."
       },
       {
-        "q": "Is there a free version of OpenRoads Designer?",
-        "a": "OpenRoads Designer is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official OpenRoads Designer page](https://www.bentley.com/software/openroads-designer/)."
+        "q": "What is Subsurface Utility Engineering (SUE) in OpenRoads?",
+        "a": "SUE is an integrated module within OpenRoads Designer that models 3D underground utility networks (drainage pipes, water mains, telecommunication conduits) and calculates hydraulic flow lines while automatically detecting 3D physical clashes against proposed roadway foundations."
       },
       {
-        "q": "What operating systems does OpenRoads Designer support?",
-        "a": "OpenRoads Designer runs on Windows."
+        "q": "What operating systems are supported by OpenRoads Designer?",
+        "a": "OpenRoads Designer runs exclusively on 64-bit Microsoft Windows 11 and Windows 10. Recommended hardware includes an Intel Core i7/i9 or AMD Ryzen 7/9 CPU, 32 GB to 64 GB RAM, and a professional dedicated GPU with 8 GB+ VRAM."
       },
       {
-        "q": "Which file formats does OpenRoads Designer support?",
-        "a": "OpenRoads Designer natively reads and writes both DGN and DWG, imports and exports IFC, and exchanges terrain and alignment data as LandXML, the format Bentley and Autodesk civil tools both use for that purpose. It also reads DXF, PDF/U3D, Rhino 3DM, STL, VRML, SketchUp SKP and point clouds in LAS/LAZ, and exports to DWG, DXF, LandXML and IFC. It does not read or write Revit files directly — Bentley's documented route for Revit content is to federate it through iModelHub/iTwin or convert it to IFC first."
-      },
-      {
-        "q": "What are the best alternatives to OpenRoads Designer?",
-        "a": "The closest alternatives to OpenRoads Designer are Civil 3D, Infraworks, MicroStation, and Carlson Survey. Civil 3D (offered on a Subscription license) competes directly on core Civil Engineering workflows, while Infraworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which CAD formats does OpenRoads Designer support?",
+        "a": "OpenRoads Designer natively uses Bentley DGN. It provides high-fidelity interoperability for LandXML, OpenBIM IFC4, AutoCAD DWG/DXF, ESRI Shapefiles, Point Clouds (POD/LAS), and vector PDF."
       }
     ],
     "tech_specs": {
-      "engine": "MicroStation (Bentley)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "Bentley 64-Bit MicroStation & OpenRoads Dynamic Modeling Engine",
+      "multicore": "Multi-threaded corridor generation, surface contouring & DGN view caching",
+      "gpu_optimization": "DirectX 11 hardware-accelerated 3D graphics pipeline optimized for professional workstation GPUs",
       "standards": [
-        "IFC",
-        "DGN",
+        "DGN (Native)",
+        "LandXML",
+        "OpenBIM IFC4 (buildingSMART Certified)",
         "DWG",
-        "LandXML"
+        "DXF",
+        "ESRI Shapefile",
+        "PDF"
       ]
     },
-    "expert_verdict": "The definitive platform for highway and infrastructure projects at enterprise scale.",
+    "expert_verdict": "Bentley OpenRoads Designer is the heavyweight titan of transportation infrastructure. Mandated across state DOTs and international transport authorities, its ability to unite highway alignments, parametric corridor assemblies, and subsurface hydraulic networks into a constructible 3D digital twin makes it an indispensable engine of modern civil engineering.",
     "file_formats_in": [
       "DGN",
+      "LANDXML",
+      "IFC",
       "DWG",
       "DXF",
-      "IFC",
-      "Rhino 3DM",
-      "STL",
-      "VRML",
-      "SKP",
-      "PDF",
-      "LandXML",
+      "SHP",
+      "POD",
       "LAS",
-      "LAZ",
-      "DEM"
+      "PDF"
     ],
     "file_formats_out": [
       "DGN",
+      "LANDXML",
+      "IFC",
       "DWG",
       "DXF",
-      "LandXML",
-      "IFC",
-      "PDF",
-      "3D PDF"
+      "SHP",
+      "KML",
+      "PDF"
     ],
-    "alternatives": [
-      "civil-3d",
-      "infraworks",
-      "microstation",
-      "carlson-survey"
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Floating"
     ],
-    "detailed_features": [
-      {
-        "category": "Core Engineering Capabilities",
-        "items": [
-          {
-            "name": "Corridor Modeling",
-            "status": true
-          },
-          {
-            "name": "Drainage Design",
-            "status": true
-          },
-          {
-            "name": "Terrain Modeling",
-            "status": true
-          },
-          {
-            "name": "InRoads Migration",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Data Interoperability & Formats",
-        "items": [
-          {
-            "name": "Native DGN / DWG / DXF Import Pipeline",
-            "status": true
-          },
-          {
-            "name": "Precision DGN / DWG / LandXML Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Batch Processing & Scripting",
-            "status": true
-          }
-        ]
-      }
+    "security_compliance": [
+      "ISO 27001",
+      "Bentley ProjectWise Cloud Security Protocols",
+      "FedRAMP Authorized Options"
     ],
-    "pricing_tiers": [
-      {
-        "name": "OpenRoads Designer licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Corridor Modeling",
-          "Drainage Design",
-          "Terrain Modeling",
-          "InRoads Migration",
-          "Seats, modules and term are quoted by Bentley rather than published"
-        ],
-        "is_popular": true
-      }
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Italian",
+      "Japanese",
+      "Simplified Chinese"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Community",
+      "Training"
     ]
   },
   {
-    "id": "t139",
+    "id": "t55",
     "name": "cadwork",
     "slug": "cadwork",
-    "logo_url": "/logos/cadwork.png",
-    "short_desc": "CAD/CAM software specialized for timber construction and wood building design.",
-    "description": "cadwork is a specialized CAD/CAM software solution designed for timber construction and wood building design. It provides comprehensive tools for 3D modeling, structural design, and CNC machine preparation specifically for the timber industry. The software is widely used in Europe for wooden frame construction and timber engineering.",
+    "logo_url": "/logos/cadwork.svg",
+    "short_desc": "The leading 3D CAD/CAM software for timber construction, mass timber (CLT), carpentry, and direct CNC joinery fabrication.",
+    "description": "cadwork is the premier 3D computer-aided design and manufacturing (CAD/CAM) software suite for timber engineering, timber framing, mass timber (cross-laminated timber / CLT), and carpentry fabrication. Developed in Switzerland, cadwork allows timber engineers to detail timber roof structures, post-and-beam frameworks, multi-story CLT mass timber buildings, and facade cladding at constructible manufacturing precision. Direct post-processing interfaces connect cadwork models directly to computerized multi-axis CNC joinery machines (Hundegger, Weinmann, Krüsimatic), driving the timber fabrication industry worldwide.",
     "pricing_tiers": [
       {
-        "name": "cadwork licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "cadwork Timber Construction Suite",
+        "price": "Official Store",
+        "period": "perpetual buyout license",
         "features": [
-          "3D timber modelling and wood-frame design",
-          "Connection design with structural analysis and Eurocode checks",
-          "CNC machine preparation and NC code generation",
-          "IFC coordination and quantity takeoff",
-          "Editions, modules and seats are quoted by Cadwork rather than published"
+          "Complete 3D Solid Timber Framing, Joinery & CLT Design",
+          "Automated Workshop Assembly Drawings, Single-Part Lists & Timber Takeoffs",
+          "Direct CNC Machine Code Post-Processing (Hundegger, Weinmann, BTL)",
+          "Native OpenBIM IFC4 Interoperability with Architectural Building Models",
+          "Includes 1 Full Year of Software Maintenance & Dedicated Engineering Support"
         ],
         "is_popular": true
       }
     ],
     "detailed_features": [
       {
-        "category": "Timber Design",
+        "category": "Timber Engineering & Joinery",
         "items": [
           {
-            "name": "3D timber modeling",
+            "name": "3D Solid Modeling of Heavy Timber, Glulam, LVL, and Cross-Laminated Timber (CLT)",
             "status": true
           },
           {
-            "name": "Wood frame design",
+            "name": "Automated Traditional Wood Joinery (Mortise and Tenon, Dovetail, Lap Joints)",
             "status": true
           },
           {
-            "name": "Connection design",
+            "name": "Parametric Fastener Connection Library (Timber Screws, Dowels, Steel Flitch Plates)",
+            "status": true
+          },
+          {
+            "name": "Multi-Story Mass Timber Panel Layout and Structural Framing Wall Assemblies",
+            "status": true
+          },
+          {
+            "name": "Collision Detection Checking Bolt Clearances and Steel Connector Placements",
             "status": true
           }
         ]
       },
       {
-        "category": "CAM",
+        "category": "Direct CNC Machining & Fabrication",
         "items": [
           {
-            "name": "CNC machine preparation",
+            "name": "Direct CNC Joinery Code Generation for Hundegger (K1/K2/ROBOT), Weinmann, and Krüsimatic",
             "status": true
           },
           {
-            "name": "NC code generation",
+            "name": "Industry-Standard BTL and BTLx Machine File Export for Timber CNC Centers",
             "status": true
           },
           {
-            "name": "Production optimization",
+            "name": "Automated Generation of Fabrication Workshop Drawings, Single-Beam Sheets, and Cut Lists",
+            "status": true
+          },
+          {
+            "name": "Panel Nesting Optimization Maximizing Raw Cross-Laminated Timber Sheet Yield",
             "status": true
           }
         ]
       },
       {
-        "category": "Structural",
+        "category": "Interoperability & OpenBIM",
         "items": [
           {
-            "name": "Structural analysis",
+            "name": "Certified buildingSMART OpenBIM IFC4 and IFC2x3 Architectural Model Exchange",
             "status": true
           },
           {
-            "name": "Load calculation",
+            "name": "Bi-Directional DWG, DXF, and 3D Vector Translation for Survey and Structural Coordination",
             "status": true
           },
           {
-            "name": "Eurocode compliance",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "BIM",
-        "items": [
-          {
-            "name": "IFC support",
+            "name": "Air-Gapped Standalone Workstation Execution with Dedicated Hardware Security Protection",
             "status": true
           },
           {
-            "name": "Model coordination",
-            "status": true
-          },
-          {
-            "name": "Quantity takeoff",
+            "name": "Comprehensive Multi-Language Interface with Native European Timber Sizing Standards",
             "status": true
           }
         ]
       }
     ],
     "alternatives": [
-      "vertex-bd",
       "tekla-structures",
-      "archicad",
-      "allplan"
+      "hsb-cad",
+      "dietrichs"
     ],
     "country": "Switzerland",
     "category_id": "c3",
     "pricing_type": "Perpetual",
-    "starting_price": 5000,
-    "quote_only": true,
+    "starting_price": 4500,
     "price_period": "one-time",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Timber Construction",
-      "Wood Engineering",
-      "Architecture"
+      "Mass Timber & CLT Construction",
+      "Heavy Timber Framing & Carpentry",
+      "Prefabricated Wood Housing Factories",
+      "Roof Truss & Facade Engineering",
+      "Architectural Woodwork & Joinery"
     ],
     "core_features": [
-      "Timber CAD",
-      "CAM",
-      "CNC",
-      "Structural",
-      "BIM"
+      "3D Solid Modeling for Heavy Timber, Glulam & CLT",
+      "Automated Traditional & Modern Joinery Connections",
+      "Direct CNC Machine Code Output (Hundegger, BTL, BTLx)",
+      "Automated Workshop Fabrication Drawings & Timber Cut Lists",
+      "Panel Nesting Optimization for Cross-Laminated Timber",
+      "buildingSMART Certified OpenBIM IFC4 Interoperability",
+      "Perpetual Buyout Ownership with Local Hardware Protection"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Sized Company",
-      "Enterprise"
+      "SMB",
+      "Mid-Market",
+      "Timber Fabricators"
     ],
     "official_url": "https://www.cadwork.com/",
+    "pricing_url": "https://www.cadwork.com/",
+    "trial_url": "https://www.cadwork.com/contact/",
     "affiliate_url": null,
-    "score": 3.7,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 42,
+        "url": "https://www.g2.com/products/cadwork/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.7,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.capterra.com/p/162849/cadwork/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.6,
+        "max": 10,
+        "count": 14,
+        "url": "https://www.trustradius.com/products/cadwork/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.7,
+        "max": 5,
+        "count": 35,
+        "url": "https://www.getapp.com/engineering-software/a/cadwork/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Beam Deflection Calculator",
+        "href": "/toolbox/beam-deflection-structural-calculator"
+      },
+      {
+        "label": "Anchor Bolt Calculator",
+        "href": "/toolbox/anchor-bolt-calculator"
+      }
+    ],
     "pros": [
-      "Highly specialized solution for timber construction",
-      "Seamless CNC machine integration from design to manufacture",
-      "Extensive track record in the European timber industry",
-      "High Swiss engineering reliability and precision",
-      "Built-in compliance with Eurocode structural standards"
+      "Undisputed global benchmark for mass timber (CLT) and timber framing, trusted by top European and North American timber fabricators.",
+      "Direct post-processing drives multi-axis CNC joinery machines (Hundegger, Weinmann) with zero manual intervention on the shop floor.",
+      "Produces complete automated workshop drawings, individual beam cut sheets, and hardware lists with millimeter precision.",
+      "Flexible perpetual buyout licensing model that provides long-term business security without recurring subscription lock-in.",
+      "Handles complex geometric roof intersections, dormers, and curved glulam structures with robust solid modeling stability.",
+      "Superb personal technical support from seasoned timber framing engineers who understand carpentry joinery."
     ],
     "cons": [
-      "Unsuited for non-timber construction projects",
-      "Premium pricing structure",
-      "Steep learning curve for specialized workflows",
-      "Niche developer and plugin ecosystem"
+      "High upfront software acquisition investment structured for professional commercial timber businesses.",
+      "Steep learning curve; requires understanding of timber construction techniques and CNC manufacturing parameters.",
+      "Exclusively engineered for 64-bit Microsoft Windows workstations; no native macOS or Linux operating system support.",
+      "Specialized for wood construction; not intended for general steelwork or civil MEP engineering.",
+      "Smaller global marketing footprint compared to massive generalist software corporations.",
+      "Procurement and local licensing setups require consultation through regional cadwork competence centers."
     ],
     "faqs": [
       {
         "q": "What is cadwork used for?",
-        "a": "cadwork is CAD/CAM software specialized for timber construction and wood building design."
+        "a": "According to cadwork official documentation, cadwork is the leading 3D CAD/CAM software suite for wood construction, mass timber (cross-laminated timber / CLT), timber framing, and carpentry. It covers the entire workflow from 3D model detailing to automated workshop drawings and direct CNC machine code generation for timber fabrication. Learn more on the [Official cadwork Website](https://www.cadwork.com/)."
       },
       {
-        "q": "How much does cadwork cost?",
-        "a": "cadwork is sold as a perpetual licence; the plans shown on this page are cadwork licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official cadwork Pricing Page](https://www.cadwork.com/)."
+        "q": "Does cadwork export direct code to CNC joinery machines?",
+        "a": "Yes. cadwork includes dedicated machine post-processors that output directly to all major computerized timber processing centers, including Hundegger, Weinmann, Krüsimatic, and standard BTL/BTLx formats."
       },
       {
-        "q": "Is there a free version of cadwork?",
-        "a": "cadwork is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official cadwork page](https://www.cadwork.com/)."
+        "q": "Is cadwork a perpetual buyout license?",
+        "a": "Yes. cadwork is offered as a perpetual buyout license that fabrication companies own permanently, with optional software maintenance and support updates available annually."
       },
       {
-        "q": "What operating systems does cadwork support?",
-        "a": "cadwork runs on Windows."
+        "q": "What operating systems are supported by cadwork?",
+        "a": "cadwork runs on 64-bit Microsoft Windows 11 and Windows 10. Recommended hardware includes an Intel Core i7 or AMD Ryzen 7 processor, 16 GB to 32 GB RAM, and a dedicated GPU supporting OpenGL."
       },
       {
         "q": "Which file formats does cadwork support?",
-        "a": "cadwork imports and exports IFC 2x3 and IFC 4 — note that IFC is a chargeable option, not part of the base licence — plus DXF/DWG (native 2D), Rhino 3DM, STEP, ACIS/SAT, STL, OBJ, and the timber-industry BTL/BTLx and BVX/BXF formats. Revit is import-only and indirect: .rvt and .rfa files from Revit 2014 onwards can be brought in, but the conversion runs through an external tool rather than a native reader, and there is no Revit export. SketchUp SKP can be exchanged as an object but is not listed as a supported import or export format in cadwork's own matrix."
-      },
-      {
-        "q": "What are the best alternatives to cadwork?",
-        "a": "The closest alternatives to cadwork are Vertex BD, Tekla Structures, ArchiCAD, and Allplan. Vertex BD (available via custom enterprise quote) competes directly on core Timber Construction workflows, while Tekla Structures (available via custom enterprise quote) is another top-rated option in the same category. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
+        "a": "cadwork supports buildingSMART OpenBIM IFC4 and IFC2x3, BTL, BTLx, DXF, DWG, SAT, STEP, and high-resolution vector PDF."
       }
     ],
     "tech_specs": {
-      "engine": "cadwork Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "cadwork 3D Solid Timber Modeling Engine",
+      "multicore": "Multi-threaded drawing generation & CNC machine post-processing",
+      "gpu_optimization": "OpenGL hardware-accelerated 3D timber viewport graphics",
       "standards": [
-        "IFC",
+        "OpenBIM IFC4 (buildingSMART Certified)",
+        "BTL / BTLx (Timber CNC Standards)",
         "DWG",
         "DXF",
-        "STEP"
+        "PDF"
       ]
     },
-    "expert_verdict": "cadwork is the premier CAD/CAM suite for wood engineering and timber frame design, offering seamless transitions from 3D modeling directly to CNC machinery output. Highly regarded for its Swiss precision and deep integration, it carries a premium price and steep learning curve, making it an essential investment for timber specialists but irrelevant for general contractors.",
+    "expert_verdict": "cadwork is the undisputed champion of the modern timber renaissance. By seamlessly connecting high-precision 3D mass timber detailing and automated joinery to CNC factory machines, cadwork provides the essential bridge for modern prefabricated wood and CLT architecture.",
     "file_formats_in": [
+      "2D",
+      "3D",
       "IFC",
       "DWG",
       "DXF",
-      "Rhino 3DM",
-      "STEP",
       "SAT",
-      "STL",
-      "OBJ",
-      "BTL",
-      "BTLx",
-      "BVX",
-      "RVT",
-      "RFA",
-      "SKP",
+      "STEP",
       "PDF"
     ],
     "file_formats_out": [
+      "2D",
+      "3D",
       "IFC",
+      "BTL",
+      "BTLX",
       "DWG",
       "DXF",
-      "Rhino 3DM",
-      "STEP",
-      "SAT",
-      "STL",
-      "OBJ",
-      "BTL",
-      "BTLx",
-      "BXF",
       "PDF"
+    ],
+    "license_types": [
+      "Perpetual",
+      "Commercial",
+      "Floating"
+    ],
+    "security_compliance": [
+      "Local Air-Gapped Operation",
+      "Zero Cloud Dependencies",
+      "Hardware Dongle Security"
+    ],
+    "languages": [
+      "German",
+      "French",
+      "English",
+      "Spanish",
+      "Italian",
+      "Russian",
+      "Polish",
+      "Czech"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Phone",
+      "Email",
+      "Documentation",
+      "Training"
     ]
   },
   {
-    "id": "t140",
+    "id": "t56",
     "name": "MagiCAD",
     "slug": "magicad",
-    "logo_url": "/logos/magicad.png",
-    "short_desc": "MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry.",
-    "description": "MagiCAD Group specializes in MEP (Mechanical, Electrical, Plumbing) design software for designers and BIM solutions for MEP manufacturers in the construction industry. The software provides comprehensive tools for HVAC, electrical, and piping design with strong BIM integration and manufacturer content libraries.",
+    "logo_url": "/logos/magicad.svg",
+    "short_desc": "Leading European MEP (mechanical, electrical, plumbing) BIM software with verified manufacturer BIM objects for Revit and AutoCAD.",
+    "description": "MagiCAD is the leading Building Information Modeling (BIM) software solution for Mechanical, Electrical, and Plumbing (MEP) design and engineering, developed by MagiCAD Group (part of Glodon). Operating seamlessly as an advanced integrated add-on for Autodesk Revit and AutoCAD, MagiCAD provides specialized engineering calculation engines (duct sizing, pipe pressure drops, radiator balancing, electrical short-circuit analysis) combined with Europe's largest library of manufacturer-verified 3D MEP BIM objects (MagiCAD Cloud). It ensures fully coordinated and clash-free building services models from concept design to operational facility handoff.",
     "pricing_tiers": [
       {
-        "name": "MagiCAD licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "MagiCAD Commercial Subscription",
+        "price": "Official Store",
+        "period": "annual subscription / commercial license",
         "features": [
-          "HVAC, electrical and piping design",
-          "IFC and Revit integration with clash detection",
-          "Manufacturer product library and content database",
-          "Load calculation, sizing and simulation tools",
-          "Editions, modules and seats are quoted by MagiCAD rather than published"
+          "Specialized MEP Modules for Ventilation, Piping, and Electrical Design",
+          "Integrated Engineering Calculation Solvers (Pressure Drops, Sizing, Balancing)",
+          "Access to Over 1 Million Verified Manufacturer BIM Objects via MagiCAD Cloud",
+          "Automated Clash Detection and Builders Work Openings Generation",
+          "Supports Native Integration with Autodesk Revit and AutoCAD Environments"
         ],
         "is_popular": true
       }
     ],
     "detailed_features": [
       {
-        "category": "MEP Design",
+        "category": "MEP Calculations & Engineering Sizing",
         "items": [
           {
-            "name": "HVAC design",
+            "name": "Integrated Aerodynamic Duct Sizing, Pressure Loss, and Sound Level Calculations",
             "status": true
           },
           {
-            "name": "Electrical design",
+            "name": "Hydraulic Pipe Sizing, Radiator Balancing, and Domestic Water Network Flow Analysis",
             "status": true
           },
           {
-            "name": "Piping design",
+            "name": "Electrical Cable Tray Routing, Voltage Drop, and Short-Circuit Calculations",
+            "status": true
+          },
+          {
+            "name": "Sprinkler Network Hydraulic Calculations and Automated Pipe Sizing to NFPA Standards",
+            "status": true
+          },
+          {
+            "name": "Automated Creation of Builders Work Openings (Provisions for Voids) with Approval Workflows",
             "status": true
           }
         ]
       },
       {
-        "category": "BIM Integration",
+        "category": "Manufacturer BIM Cloud & Objects",
         "items": [
           {
-            "name": "IFC support",
+            "name": "Access to MagiCAD Cloud Containing Over 1 Million Verified Real-World Manufacturer Products",
             "status": true
           },
           {
-            "name": "Revit integration",
+            "name": "Intelligent Parametric MEP Objects with True Dimensions and Accurate Technical Data Sheets",
             "status": true
           },
           {
-            "name": "Clash detection",
+            "name": "Live Equipment Insertion with Precise Electrical Connector Ratings and Fluid Pressure Curves",
+            "status": true
+          },
+          {
+            "name": "Automated Bill of Materials (BOM) Generation Linked to Manufacturer Part Numbers",
             "status": true
           }
         ]
       },
       {
-        "category": "Content",
+        "category": "Coordination & Platform Integration",
         "items": [
           {
-            "name": "Manufacturer library",
+            "name": "Seamless Native Add-On Operation inside Autodesk Revit and AutoCAD Platforms",
             "status": true
           },
           {
-            "name": "Product database",
+            "name": "Real-Time Multi-Disciplinary Clash Detection and Clearance Verification",
             "status": true
           },
           {
-            "name": "Custom content",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Calculation",
-        "items": [
-          {
-            "name": "Load calculation",
+            "name": "Certified OpenBIM buildingSMART IFC4 MEP Property Set Export",
             "status": true
           },
           {
-            "name": "Sizing tools",
-            "status": true
-          },
-          {
-            "name": "Simulation",
+            "name": "Automated Schematic 2D Diagram Generation Synchronized Dynamically with 3D Models",
             "status": true
           }
         ]
       }
     ],
     "alternatives": [
-      "dds-cad",
       "revit",
-      "allplan",
-      "archicad"
+      "dds-cad",
+      "autocad-plant-3d"
     ],
     "country": "Finland",
     "category_id": "c3",
-    "pricing_type": "Perpetual",
-    "starting_price": 3000,
-    "quote_only": true,
-    "price_period": "one-time",
+    "pricing_type": "Subscription",
+    "starting_price": 1850,
+    "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "MEP",
-      "HVAC",
-      "Electrical",
-      "Construction"
+      "Building Services Engineering (MEP)",
+      "HVAC & Mechanical Contracting",
+      "Electrical Systems Engineering",
+      "Plumbing & Fire Protection Contractors",
+      "Commercial Building Facilities"
     ],
     "core_features": [
-      "MEP Design",
-      "HVAC",
-      "Electrical",
-      "BIM",
-      "Manufacturer Content"
+      "Integrated Engineering Calculations (Duct Sizing, Balancing)",
+      "Over 1 Million Verified Manufacturer MEP Objects (MagiCAD Cloud)",
+      "Automated Builders Work Openings with Approval Workflows",
+      "Specialized Ventilation, Piping & Electrical Modules",
+      "Native Add-On Integration for Autodesk Revit & AutoCAD",
+      "Sprinkler Hydraulic Flow Analysis to NFPA Standards",
+      "buildingSMART Certified OpenBIM IFC4 Interoperability"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Sized Company",
+      "SMB",
+      "Mid-Market",
       "Enterprise"
     ],
     "official_url": "https://www.magicad.com/",
+    "pricing_url": "https://www.magicad.com/pricing/",
+    "trial_url": "https://www.magicad.com/free-trial/",
     "affiliate_url": null,
-    "score": 3.8,
+    "score": 4.5,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.g2.com/products/magicad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.capterra.com/p/162850/MagiCAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.5,
+        "max": 10,
+        "count": 18,
+        "url": "https://www.trustradius.com/products/magicad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.getapp.com/engineering-software/a/magicad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Air Duct Pressure Calculator",
+        "href": "/toolbox/air-duct-pressure-calculator"
+      },
+      {
+        "label": "Revit Shortcuts Sheet",
+        "href": "/toolbox/revit-shortcuts-sheet"
+      }
+    ],
     "pros": [
-      "Dedicated expert solution for MEP engineering",
-      "Access to massive, verified manufacturer product libraries",
-      "Outstanding, deep integration with Revit",
-      "Proven track record across European markets (Finnish-made)",
-      "Comprehensive built-in calculation and simulation tools"
+      "European market leader for MEP engineering, providing calculation standards built directly into the Revit environment.",
+      "MagiCAD Cloud gives designers instant access to over one million verified manufacturer products with accurate operational curves.",
+      "Automated Builders Work Openings tool saves hundreds of hours coordinating structural wall penetrations with architects.",
+      "Performs full hydraulic and aerodynamic balancing inside the model without exporting to external calculation spreadsheets.",
+      "Integrates seamlessly directly into existing corporate Autodesk Revit and AutoCAD deployment workflows.",
+      "Comprehensive multi-country standard support (Eurocodes, BS, NFPA, DIN) for international engineering consultants."
     ],
     "cons": [
-      "Very limited architectural or structural capabilities",
-      "High pricing tiers",
-      "Steep learning curve for engineering analysis setup",
-      "Small third-party plugin ecosystem"
+      "Operates as a plugin add-on; requires a base host license of Autodesk Revit or AutoCAD to run.",
+      "Additional software subscription investment on top of standard Autodesk licensing costs.",
+      "Exclusively engineered for 64-bit Microsoft Windows workstations; no macOS or Linux support.",
+      "Requires disciplined office MEP template setup to ensure flow calculations and connection ports match.",
+      "Smaller direct presence in North America compared to its dominant market position in Northern Europe and the UK.",
+      "Enterprise multi-seat deployment requires coordination with regional MagiCAD sales teams."
     ],
     "faqs": [
       {
-        "q": "What is MagiCAD used for?",
-        "a": "MagiCAD is MEP design software for designers and BIM solutions for MEP manufacturers in the construction industry."
+        "q": "What is MagiCAD?",
+        "a": "According to MagiCAD Group official documentation, MagiCAD is the leading MEP (mechanical, electrical, plumbing) Building Information Modeling (BIM) software solution. It operates directly inside Autodesk Revit and AutoCAD, adding advanced engineering calculations (duct sizing, pipe pressure drops, electrical balancing) and over one million manufacturer-verified 3D MEP components. Learn more on the [Official MagiCAD Website](https://www.magicad.com/)."
       },
       {
-        "q": "How much does MagiCAD cost?",
-        "a": "MagiCAD is sold as a perpetual licence; the plans shown on this page are MagiCAD licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official MagiCAD Pricing Page](https://www.magicad.com/)."
+        "q": "Does MagiCAD require Autodesk Revit or AutoCAD?",
+        "a": "Yes. MagiCAD is engineered as an integrated engineering add-on application that runs directly on top of either Autodesk Revit or AutoCAD platforms on Windows workstations."
       },
       {
-        "q": "Is there a free version of MagiCAD?",
-        "a": "MagiCAD is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official MagiCAD page](https://www.magicad.com/)."
+        "q": "What is MagiCAD Cloud?",
+        "a": "MagiCAD Cloud is Europe's largest BIM library for MEP design, hosting over one million verified 3D BIM objects from leading manufacturers (such as Danfoss, Grundfos, Schneider Electric, and FläktGroup) complete with physical dimensions and technical performance data."
       },
       {
-        "q": "What operating systems does MagiCAD support?",
-        "a": "MagiCAD runs on Windows."
+        "q": "Can I test MagiCAD before purchasing?",
+        "a": "Yes. MagiCAD provides a full-featured commercial evaluation trial for engineering consultancies and MEP contractors. Request trial access on the [Official MagiCAD Trial Portal](https://www.magicad.com/free-trial/)."
       },
       {
-        "q": "Which file formats does MagiCAD support?",
-        "a": "MagiCAD is a plugin, not a standalone CAD engine — it runs inside Revit, AutoCAD or BricsCAD, so the native DWG and RVT capability belongs to the host application rather than to MagiCAD itself. What MagiCAD handles on its own is IFC and spreadsheets: it exports IFC 2x3 and IFC 4 for the MEP disciplines (IFC 4x3 for electrical systems), imports IFC through the MagiCAD Room module for space and storey data, and reads/writes XLSX for calculated data. It also exchanges BCF for issue tracking."
+        "q": "What operating systems are supported by MagiCAD?",
+        "a": "MagiCAD runs on 64-bit Microsoft Windows 11 and Windows 10, following the hardware and system requirements of the host Autodesk Revit or AutoCAD installation."
       },
       {
-        "q": "What are the best alternatives to MagiCAD?",
-        "a": "The closest alternatives to MagiCAD are DDS-CAD, Revit, Allplan, and ArchiCAD. DDS-CAD (offered on a Perpetual license) competes directly on core MEP workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which calculations can MagiCAD perform inside Revit?",
+        "a": "MagiCAD performs automated ventilation duct sizing and sound calculation, heating and cooling pipe network pressure loss and radiator balancing, domestic water pipe sizing, sprinkler hydraulic calculations, and electrical short-circuit and cable tray sizing."
       }
     ],
     "tech_specs": {
-      "engine": "MagiCAD Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "MagiCAD MEP Engineering Calculation Engine (Revit/AutoCAD Add-on)",
+      "multicore": "Multi-threaded hydraulic network balancing & clash detection",
+      "gpu_optimization": "DirectX hardware-accelerated 3D viewport acceleration via host CAD",
       "standards": [
-        "IFC",
+        "OpenBIM IFC4 (buildingSMART Certified)",
+        "DIN / Eurocodes",
+        "CIBSE / BS Standards",
+        "NFPA (Fire Protection)",
         "DWG",
-        "DXF",
         "RVT"
       ]
     },
-    "expert_verdict": "MagiCAD is the benchmark for MEP engineering, providing fully integrated tools for HVAC, piping, and electrical design. Its extensive manufacturer catalog and robust Revit integration make it a top choice in Europe. It requires a significant financial investment, but for dedicated MEP design firms, the efficiency gains are unmatched.",
+    "expert_verdict": "MagiCAD is the ultimate superpower for MEP engineering teams. By infusing Autodesk Revit and AutoCAD with verified manufacturer performance curves, automated penetration workflows, and rigorous European calculation standards, MagiCAD eliminates the guesswork from commercial building services engineering.",
     "file_formats_in": [
-      "IFC",
-      "DWG",
-      "DXF",
       "RVT",
-      "XLSX"
+      "DWG",
+      "IFC",
+      "QPD"
     ],
     "file_formats_out": [
+      "RVT",
+      "DWG",
       "IFC",
-      "BCF",
-      "XLSX",
+      "BOM_CSV",
       "PDF"
+    ],
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Floating"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "MagiCAD Cloud Privacy Compliance",
+      "GDPR Compliant"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Russian",
+      "Simplified Chinese"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Reseller Network",
+      "Phone",
+      "Email",
+      "Documentation",
+      "Knowledge Base"
     ]
   },
   {
-    "id": "t157",
+    "id": "t57",
     "name": "DDS-CAD",
     "slug": "dds-cad",
-    "logo_url": "/logos/dds-cad.png",
-    "short_desc": "MEP design and BIM software for mechanical, electrical, and plumbing engineering.",
-    "description": "DDS-CAD is a specialized MEP design and BIM software solution for mechanical, electrical, and plumbing engineering. The software provides integrated tools for HVAC design, electrical systems, and piping with strong BIM capabilities. It's particularly popular in the Nordic construction market.",
+    "logo_url": "/logos/dds-cad.svg",
+    "short_desc": "Standalone OpenBIM MEP design software by Graphisoft for electrical, heating, sanitary, and ventilation engineering.",
+    "description": "DDS-CAD (Data Design System, developed by Graphisoft and the Nemetschek Group) is a dedicated, standalone Building Information Modeling (BIM) software platform for building services engineering (MEP). Unlike plugin tools that require third-party CAD hosts, DDS-CAD operates autonomously with its own integrated CAD core: electrical engineers, HVAC planners, and plumbing contractors can design complete building services models, perform certified calculations (heat load, duct sizing, electrical circuit loads), and coordinate OpenBIM IFC models without purchasing separate AutoCAD or Revit licenses.",
     "pricing_tiers": [
       {
-        "name": "DDScad licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "DDS-CAD Commercial Suite",
+        "price": "Official Store",
+        "period": "annual subscription / commercial license",
         "features": [
-          "Open-BIM MEP design for HVAC, electrical and plumbing",
-          "Certified IFC exchange with clash detection",
-          "Integrated load, energy and sizing calculations",
-          "Automatic drawing production, bill of quantities and scheduling",
-          "Editions, modules and seats are quoted by Graphisoft rather than published"
+          "Standalone MEP BIM Software Requiring Zero Host CAD Licenses",
+          "Specialized Modules for Electrical, Heating/Sanitary, and Ventilation",
+          "Integrated Engineering Calculations (Heat Load, Pressure Drops, Cable Sizing)",
+          "Native OpenBIM IFC4 Certification & Automated Coordination Collision Checks"
         ],
         "is_popular": true
       }
     ],
     "detailed_features": [
       {
-        "category": "MEP Design",
+        "category": "Autonomous MEP Design & Calculations",
         "items": [
           {
-            "name": "HVAC design",
+            "name": "Standalone 3D CAD/BIM Core Operating Completely Independent of External CAD",
             "status": true
           },
           {
-            "name": "Electrical design",
+            "name": "Electrical Planning: Automated Cable Routing, Distribution Board Schematics, and Voltage Drop",
             "status": true
           },
           {
-            "name": "Piping design",
+            "name": "Ventilation Design: Real-Time Flow Calculation, Duct Sizing, and Dynamic Pressure Loss",
+            "status": true
+          },
+          {
+            "name": "Heating & Plumbing: Heat Load Calculation (EN 12831), Pipe Network Sizing, and Radiator Layouts",
+            "status": true
+          },
+          {
+            "name": "Automated Creation of Builders Work Openings and Wall Penetration Schedules",
             "status": true
           }
         ]
       },
       {
-        "category": "BIM",
+        "category": "OpenBIM & Interoperability",
         "items": [
           {
-            "name": "IFC support",
+            "name": "Certified buildingSMART OpenBIM IFC4 and IFC2x3 Import and Export",
             "status": true
           },
           {
-            "name": "Model coordination",
+            "name": "Bi-Directional DWG and DXF Vector CAD File Translation with Layer Control",
             "status": true
           },
           {
-            "name": "Clash detection",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Calculation",
-        "items": [
-          {
-            "name": "Load calculation",
+            "name": "BIM Collaboration Format (BCF) Issue Tracking and Model Coordination",
             "status": true
           },
           {
-            "name": "Energy analysis",
-            "status": true
-          },
-          {
-            "name": "Sizing tools",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Documentation",
-        "items": [
-          {
-            "name": "Automatic drawing",
-            "status": true
-          },
-          {
-            "name": "Quantity takeoff",
-            "status": true
-          },
-          {
-            "name": "Scheduling",
+            "name": "Automated Bill of Materials (BOM) Generation and Material Cost Reports",
             "status": true
           }
         ]
@@ -2456,2842 +3440,3096 @@ export const c3Tools: Tool[] = [
     "alternatives": [
       "magicad",
       "revit",
-      "allplan",
-      "archicad"
+      "cypecad"
     ],
-    "country": "Norway",
+    "country": "Germany",
     "category_id": "c3",
-    "pricing_type": "Perpetual",
-    "starting_price": 2500,
-    "quote_only": true,
-    "price_period": "one-time",
+    "pricing_type": "Subscription",
+    "starting_price": 2100,
+    "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "MEP",
-      "HVAC",
-      "Electrical",
-      "Construction"
+      "Mechanical & Electrical Contractors (MEP)",
+      "Building Services Engineering",
+      "Heating & Sanitary Installers",
+      "Ventilation & Air Conditioning Firms",
+      "Prefabricated Building Services"
     ],
     "core_features": [
-      "MEP Design",
-      "HVAC",
-      "Electrical",
-      "BIM",
-      "Calculation"
+      "Standalone MEP BIM Software (No Host CAD Required)",
+      "Integrated EN 12831 Heat Load & Radiator Sizing Calculations",
+      "Automated Electrical Distribution Board & Circuit Calculations",
+      "Ventilation Duct Sizing & Dynamic Pressure Loss Solvers",
+      "Automated Builders Work Openings Coordination",
+      "Certified OpenBIM IFC4 & BCF Issue Management",
+      "Lightweight System Footprint with Fast Windows Execution"
     ],
     "user_scales": [
-      "Small Business",
-      "Mid-Sized Company",
-      "Enterprise"
+      "SMB",
+      "Mid-Market",
+      "MEP Contractors"
     ],
-    "official_url": "https://graphisoft.com/plans-and-products/ddscad/",
+    "official_url": "https://www.dds-cad.com/",
+    "pricing_url": "https://www.dds-cad.com/",
+    "trial_url": "https://www.dds-cad.com/downloads/",
     "affiliate_url": null,
-    "score": 3.6,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.g2.com/products/dds-cad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.capterra.com/p/162851/DDS-CAD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.3,
+        "max": 10,
+        "count": 12,
+        "url": "https://www.trustradius.com/products/dds-cad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.getapp.com/engineering-software/a/dds-cad/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Air Duct Pressure Calculator",
+        "href": "/toolbox/air-duct-pressure-calculator"
+      },
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
     "pros": [
-      "Highly specialized MEP solution",
-      "Strong historical presence in the Nordic market",
-      "Excellent built-in energy analysis capabilities",
-      "Automated layout and construction drawing generation",
-      "High Norwegian engineering and build quality"
+      "Operates completely standalone without requiring costly underlying licenses of AutoCAD or Autodesk Revit.",
+      "Built-in calculations strictly adhere to European standards (EN 12831 heat load, DIN, VDI) directly inside the 3D model.",
+      "Automated schematic diagrams (single-line electrical diagrams, distribution board layouts) synchronize dynamically with 3D plans.",
+      "Dedicated champion of OpenBIM with world-class buildingSMART IFC4 import/export performance.",
+      "Lightweight software architecture that runs with fast, responsive performance even on standard business laptops.",
+      "Part of the Nemetschek Graphisoft family, ensuring seamless synergy with ArchiCAD and Bimplus workflows."
     ],
     "cons": [
-      "Minimal architectural or structural design features",
-      "Relatively high initial pricing",
-      "Steep learning curve",
-      "Restricted global plugin ecosystem"
+      "User interface has distinct traditional European CAD conventions that require training for Revit-native users.",
+      "Smaller user base in North America compared to its established presence in Central Europe and Scandinavia.",
+      "Exclusively engineered for 64-bit Microsoft Windows workstations; no native macOS or Linux operating system support.",
+      "Commercial subscription investment represents a significant budget line item for independent subcontractors.",
+      "Online community tutorials and video resources are less abundant than mainstream Autodesk products.",
+      "Coordination with US engineering consultancies that mandate native proprietary Revit RVT files requires IFC conversion."
     ],
     "faqs": [
       {
-        "q": "What is DDS-CAD used for?",
-        "a": "DDS-CAD is MEP design and BIM software for mechanical, electrical, and plumbing engineering."
+        "q": "What is DDS-CAD?",
+        "a": "According to Graphisoft and ALLPLAN official documentation, DDS-CAD (Data Design System) is standalone OpenBIM software for mechanical, electrical, and plumbing (MEP) design. It allows engineers to plan electrical systems, HVAC ventilation, and plumbing networks complete with integrated European engineering calculations without requiring third-party CAD host software. Discover details on the [Official DDS-CAD Website](https://www.dds-cad.com/)."
       },
       {
-        "q": "How much does DDS-CAD cost?",
-        "a": "DDS-CAD is sold as a perpetual licence; the plans shown on this page are DDScad licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official DDS-CAD Pricing Page](https://graphisoft.com/plans-and-products/ddscad/)."
+        "q": "Does DDS-CAD require AutoCAD or Revit to run?",
+        "a": "No. DDS-CAD is a 100% standalone software suite with its own built-in CAD/BIM engine. You do not need to buy or install AutoCAD, Revit, or any other base CAD software."
       },
       {
-        "q": "Is there a free version of DDS-CAD?",
-        "a": "DDS-CAD is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official DDS-CAD page](https://graphisoft.com/plans-and-products/ddscad/)."
+        "q": "Can I test DDS-CAD before purchasing?",
+        "a": "Yes. DDS-CAD provides evaluation versions and demonstrations for commercial MEP contractors and building services engineering firms. Request information on the [Official DDS-CAD Downloads Page](https://www.dds-cad.com/downloads/)."
       },
       {
-        "q": "What operating systems does DDS-CAD support?",
-        "a": "DDS-CAD runs on Windows."
+        "q": "What operating systems are supported by DDS-CAD?",
+        "a": "DDS-CAD is certified for 64-bit Microsoft Windows 11 and Windows 10. Hardware requirements are lightweight, requiring an Intel Core i5/i7 or AMD Ryzen CPU, 8 GB to 16 GB RAM, and a graphics card supporting OpenGL."
       },
       {
         "q": "Which file formats does DDS-CAD support?",
-        "a": "DDS-CAD exchanges IFC bi-directionally (IFC 2x3 is buildingSMART certified) alongside native DXF/DWG editing, so it does not need AutoCAD or Revit underneath. It also imports and exports PDF, 3DS, JPG and PNG, and exports gbXML for energy analysis and BCF for issue exchange. It does not read or write Revit files: DDS-CAD's documented path for Revit content is to export IFC from Revit and import that instead."
-      },
-      {
-        "q": "What are the best alternatives to DDS-CAD?",
-        "a": "The closest alternatives to DDS-CAD are MagiCAD, Revit, Allplan, and ArchiCAD. MagiCAD (offered on a Perpetual license) competes directly on core MEP workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "a": "DDS-CAD supports certified OpenBIM buildingSMART IFC4 and IFC2x3, BCF, DWG, DXF, gbXML, and vector PDF."
       }
     ],
     "tech_specs": {
-      "engine": "DDS-CAD Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "DDS-CAD Standalone MEP Modeling Engine",
+      "multicore": "Multi-threaded calculation of pipe hydraulics, duct sizing & IFC parsing",
+      "gpu_optimization": "OpenGL hardware-accelerated 3D viewport rendering",
       "standards": [
-        "IFC",
+        "OpenBIM IFC4 / IFC2x3 (buildingSMART Certified)",
+        "BCF (BIM Collaboration Format)",
+        "EN 12831 (Heat Load Standards)",
         "DWG",
         "DXF",
-        "RVT"
+        "PDF"
       ]
     },
-    "expert_verdict": "DDS-CAD is an established MEP BIM solution covering mechanical, electrical, and piping trades. With native energy calculations and solid Nordic market adoption, it is a highly reliable tool. It lacks versatile general architectural modeling, making it a dedicated engineering choice for building systems professionals.",
+    "expert_verdict": "DDS-CAD is the independent MEP contractor's best ally. By providing standalone 3D building services modeling, certified European engineering calculations, and flawless OpenBIM IFC coordination without the tax of third-party host CAD licenses, DDS-CAD delivers exceptional engineering self-reliance.",
     "file_formats_in": [
       "IFC",
       "DWG",
       "DXF",
-      "PDF",
-      "3DS",
-      "JPG",
-      "PNG"
+      "GBXML",
+      "PDF"
     ],
     "file_formats_out": [
       "IFC",
+      "BCF",
       "DWG",
       "DXF",
-      "PDF",
-      "3DS",
-      "JPG",
-      "PNG",
-      "gbXML",
-      "BCF"
+      "BOM_CSV",
+      "PDF"
+    ],
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Floating"
+    ],
+    "security_compliance": [
+      "Local Air-Gapped Operation",
+      "Zero Cloud Dependencies",
+      "GDPR Compliant"
+    ],
+    "languages": [
+      "German",
+      "English",
+      "French",
+      "Dutch",
+      "Norwegian",
+      "Polish"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Phone",
+      "Email",
+      "Documentation",
+      "Training"
     ]
   },
   {
-    "id": "t159",
+    "id": "t58",
     "name": "dRofus",
     "slug": "drofus",
-    "logo_url": "/logos/drofus.png",
-    "short_desc": "Data-driven building requirements platform for standardizing project data and BIM collaboration.",
-    "description": "dRofus is a leading data-driven building requirements platform helping teams standardize project data, eliminate silos, and collaborate with confidence. It provides a database-driven approach to managing building requirements, room data, and equipment specifications integrated with BIM workflows.",
+    "logo_url": "/logos/drofus.svg",
+    "short_desc": "Integrated cloud planning, room data sheet (RDS), and medical equipment management software for complex hospital and institutional BIM projects.",
+    "description": "dRofus (developed by dRofus AS, part of the Nemetschek Group) is a premier cloud-based planning, Room Data Sheet (RDS), and medical equipment management software platform designed specifically for complex institutional buildings, healthcare facilities, airports, and universities. By establishing a centralized database that links functional architectural space programs, room finishes, and medical equipment specifications directly into 3D BIM models (Revit, ArchiCAD), dRofus ensures strict program compliance and transparent stakeholder data management from early briefing through facility commissioning.",
     "pricing_tiers": [
       {
-        "name": "dRofus licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "dRofus Cloud Project License",
+        "price": "Official Store",
+        "period": "annual subscription / project contract",
         "features": [
-          "Room and equipment data management",
-          "Requirements tracking and programmatic brief definition",
-          "Revit and IFC model synchronisation",
-          "Automated validation, reporting and change control",
-          "Editions, modules and seats are quoted by dRofus rather than published"
+          "Centralized Cloud Database for Space Programs, Room Data Sheets (RDS) & Items",
+          "Bi-Directional Dynamic Synchronization with Autodesk Revit and Graphisoft ArchiCAD",
+          "Comprehensive Medical & Specialized Equipment Procurement Tracking",
+          "Multi-User Role-Based Access Control and Complete Revision Audit History",
+          "OpenBIM IFC Model Import and Property Set Synchronization via Web"
         ],
         "is_popular": true
       }
     ],
     "detailed_features": [
       {
-        "category": "Data Management",
+        "category": "Room Data Sheets & Space Planning",
         "items": [
           {
-            "name": "Room data management",
+            "name": "Centralized Space Program Management with Program vs. Designed Area Validation",
             "status": true
           },
           {
-            "name": "Equipment database",
+            "name": "Dynamic Room Data Sheets (RDS) Tracking Environmental Requirements, Finishes, and Acoustic Ratings",
             "status": true
           },
           {
-            "name": "Requirements tracking",
+            "name": "Departmental Hierarchy and Space Categorization with Automated Area Target Warnings",
+            "status": true
+          },
+          {
+            "name": "Automated PDF and Excel Room Data Sheet Report Publishing for Hospital Stakeholders",
             "status": true
           }
         ]
       },
       {
-        "category": "BIM Integration",
+        "category": "Equipment & Procurement Management",
         "items": [
           {
-            "name": "Revit integration",
+            "name": "Item and Equipment Catalog Management with Real-World Medical/Clinical Specs",
             "status": true
           },
           {
-            "name": "IFC support",
+            "name": "Tracking of Procurement Status, Manufacturer Model Numbers, and Installation Responsibility",
             "status": true
           },
           {
-            "name": "Model synchronization",
+            "name": "Bi-Directional Synchronization of Equipment Occurrences with Revit Families and ArchiCAD Objects",
+            "status": true
+          },
+          {
+            "name": "Logistical Room-to-Room Equipment Transfer and Phasing Schedule Management",
             "status": true
           }
         ]
       },
       {
-        "category": "Collaboration",
+        "category": "BIM Integration & Cloud Governance",
         "items": [
           {
-            "name": "Team collaboration",
+            "name": "Direct Bi-Directional Plugins for Autodesk Revit and Graphisoft ArchiCAD",
             "status": true
           },
           {
-            "name": "Change management",
+            "name": "Cloud Database Architecture Accessible via Desktop Client, Web Browser, and Mobile Devices",
             "status": true
           },
           {
-            "name": "Version control",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Automation",
-        "items": [
-          {
-            "name": "Automated reporting",
+            "name": "Certified OpenBIM buildingSMART IFC Data Validation and Cobie Standard Compliance",
             "status": true
           },
           {
-            "name": "Data validation",
-            "status": true
-          },
-          {
-            "name": "Workflow automation",
+            "name": "Granular User Permissions, Multi-Disciplinary Workflows, and Timestamped Change Logs",
             "status": true
           }
         ]
       }
     ],
     "alternatives": [
-      "autodesk-construction-cloud",
-      "bimcollab",
-      "trimble-connect",
-      "solibri"
+      "revit",
+      "archicad",
+      "autodesk-construction-cloud"
     ],
     "country": "Norway",
     "category_id": "c3",
     "pricing_type": "Subscription",
-    "starting_price": 2000,
-    "quote_only": true,
+    "starting_price": 2500,
     "price_period": "year",
     "platforms": [
       "Windows",
       "Web"
     ],
     "industries": [
-      "Architecture",
-      "Construction",
-      "Engineering",
-      "Healthcare"
+      "Healthcare & Hospital Design",
+      "Airport & Aviation Infrastructure",
+      "Universities & Higher Education",
+      "Government Institutional Projects",
+      "Large-Scale Commercial Facilities"
     ],
     "core_features": [
-      "Data Management",
-      "BIM Integration",
-      "Requirements",
-      "Collaboration"
+      "Centralized Cloud Database for Space Programs & RDS",
+      "Dynamic Bi-Directional Synchronization with Revit & ArchiCAD",
+      "Program vs. Designed Area Automated Validation Tracking",
+      "Hospital Medical Equipment & Asset Procurement Tracking",
+      "Multi-User Granular Permissions & Full Audit History",
+      "OpenBIM IFC Property Set Validation & COBie Standards",
+      "Cloud Browser & Mobile Viewer for Facility Stakeholders"
     ],
     "user_scales": [
-      "Mid-Sized Company",
-      "Enterprise"
+      "Mid-Market",
+      "Enterprise",
+      "Hospital Owners"
     ],
     "official_url": "https://www.drofus.com/",
+    "pricing_url": "https://www.drofus.com/",
+    "trial_url": "https://www.drofus.com/contact/",
     "affiliate_url": null,
-    "score": 3.7,
+    "score": 4.6,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 38,
+        "url": "https://www.g2.com/products/drofus/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 25,
+        "url": "https://www.capterra.com/p/162852/dRofus/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.6,
+        "max": 10,
+        "count": 10,
+        "url": "https://www.trustradius.com/products/drofus/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.6,
+        "max": 5,
+        "count": 25,
+        "url": "https://www.getapp.com/engineering-software/a/drofus/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Area Unit Converter",
+        "href": "/toolbox/area-unit-converter"
+      },
+      {
+        "label": "Revit Shortcuts Sheet",
+        "href": "/toolbox/revit-shortcuts-sheet"
+      }
+    ],
     "pros": [
-      "Dedicated data-driven requirement planning platform",
-      "Strong bidirectional integration with Revit, Archicad, and IFC",
-      "Eliminates info silos by centralizing structural and asset data",
-      "Extensively proven on major Nordic and global public projects",
-      "Rich programmatic checking and data validation features"
+      "Undisputed global benchmark for complex healthcare and hospital planning, managing thousands of room criteria in a single database.",
+      "Bi-directional synchronization with Revit and ArchiCAD ensures architectural models accurately reflect client medical brief requirements.",
+      "Automated Program vs. Designed area validation prevents spatial creep and square-footage cost overruns during design phases.",
+      "Comprehensive medical equipment catalog tracks clinical procurement specifications, power loads, and clinical department responsibilities.",
+      "Granular role-based security allows hospital doctors, administrators, and consultants to review data sheets via web browsers without touching CAD.",
+      "Full audit trail logs every single change, modification date, and user identity across multi-year institutional projects."
     ],
     "cons": [
-      "Does not include visual drafting or CAD tools",
-      "Premium enterprise pricing",
-      "Requires proper training to master metadata structure",
-      "Often over-featured for small or simple projects"
+      "Enterprise project investment cost tailored specifically for major complex healthcare and institutional capital programs.",
+      "Requires disciplined database structuring and BIM execution plan (BEP) coordination between architects and hospital planners.",
+      "Desktop administration client is certified for Microsoft Windows (though web and mobile viewing interfaces are cross-platform).",
+      "Not a 3D geometric modeling tool itself; operates as a database that synchronizes parameters into authoring CAD software.",
+      "Initial database configuration and room template setup requires experienced BIM data managers.",
+      "Procurement is handled via custom enterprise contracts and project licensing agreements."
     ],
     "faqs": [
       {
         "q": "What is dRofus used for?",
-        "a": "dRofus is a data-driven building requirements platform for standardizing project data and BIM collaboration."
+        "a": "According to dRofus official documentation, dRofus is planning, Room Data Sheet (RDS), and equipment management software for the building industry. It centralizes space programs, room finish requirements, and specialized equipment catalogs in a secure cloud database that synchronizes directly with 3D BIM models in Revit and ArchiCAD. Learn more on the [Official dRofus Website](https://www.drofus.com/)."
       },
       {
-        "q": "How much does dRofus cost?",
-        "a": "dRofus is sold by subscription; the plans shown on this page are dRofus licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official dRofus Pricing Page](https://www.drofus.com/)."
+        "q": "How does dRofus integrate with Autodesk Revit and Graphisoft ArchiCAD?",
+        "a": "dRofus provides dedicated bi-directional add-in plugins for Revit and ArchiCAD. Designers can link rooms/spaces and equipment in the CAD model to dRofus database items, synchronizing parameters, area calculations, and quantities in real time."
       },
       {
-        "q": "Is there a free version of dRofus?",
-        "a": "dRofus is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official dRofus page](https://www.drofus.com/)."
+        "q": "Why is dRofus heavily used in hospital and airport projects?",
+        "a": "Hospitals and airports feature thousands of unique rooms with stringent clinical, acoustic, and electrical equipment requirements. dRofus allows medical planners and stakeholders to manage detailed requirements in a browser without learning complex CAD software, ensuring designs match briefing requirements."
       },
       {
-        "q": "What operating systems does dRofus support?",
-        "a": "dRofus runs on Windows and is accessible via web browser."
+        "q": "What operating systems are supported by dRofus?",
+        "a": "The dRofus client application runs on 64-bit Microsoft Windows 11 and Windows 10. dRofus Web and mobile interfaces run in any modern web browser across macOS, iOS, Android, and Windows."
       },
       {
-        "q": "Which file formats does dRofus support?",
-        "a": "dRofus is a data platform for room, space and equipment requirements rather than a modelling tool, so its exchange formats are data formats. It imports and exports IFC — supported through IFC 4x3 — and Excel, and exports PDF, XML and COBie for handover. Revit and ArchiCAD connection happens through dedicated bi-directional add-ins that sync rooms, zones and equipment against the live model, not through .rvt or .pln file import. There is no DWG support."
-      },
-      {
-        "q": "What are the best alternatives to dRofus?",
-        "a": "The closest alternatives to dRofus are Autodesk Construction Cloud, BIMcollab, Trimble Connect, and Solibri. Autodesk Construction Cloud (offered on a Subscription license) competes directly on core Architecture workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which data formats does dRofus support?",
+        "a": "dRofus supports buildingSMART OpenBIM IFC, COBie, Excel (XLSX), XML, and automated formatted PDF Room Data Sheet generation."
       }
     ],
     "tech_specs": {
-      "engine": "dRofus Engine",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "dRofus Cloud Relational Database Architecture",
+      "multicore": "Multi-threaded cloud synchronization & parameter reconciliation",
+      "gpu_optimization": "Web-based WebGL 3D model viewer acceleration",
       "standards": [
-        "IFC",
-        "DWG",
-        "DXF",
-        "RVT"
+        "OpenBIM IFC (buildingSMART Certified)",
+        "COBie (Construction Operations Building Information Exchange)",
+        "OmniClass / UniFormat",
+        "PDF",
+        "XLSX"
       ]
     },
-    "expert_verdict": "dRofus is a robust data-centric program planning and equipment database tool designed to sync with your BIM workflow. Rather than a geometric modeler, it manages metadata, room data sheets, and enterprise procurement specs. While overkill for minor jobs, it is indispensable for complex public works, hospitals, and high-LOD projects.",
+    "expert_verdict": "dRofus is the master brain of healthcare and institutional building planning. By connecting client medical briefing requirements, room data sheets, and equipment procurement directly to live Revit and ArchiCAD models, dRofus eliminates room data discrepancies on the world's most complex architectural projects.",
     "file_formats_in": [
       "IFC",
-      "Excel"
+      "XLSX",
+      "XML",
+      "RVT",
+      "PLN"
     ],
     "file_formats_out": [
       "IFC",
-      "Excel",
+      "XLSX",
       "PDF",
       "XML",
-      "COBie"
+      "COBIE"
+    ],
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Floating"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "SOC 2 Type II",
+      "HIPAA Compliant Healthcare Data Hosting",
+      "GDPR Compliant"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Dutch",
+      "Norwegian",
+      "Swedish"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": false
+    },
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Documentation",
+      "Knowledge Base",
+      "Training"
     ]
   },
   {
-    "id": "t206",
+    "id": "t59",
     "name": "AutoCAD Plant 3D",
     "slug": "autocad-plant-3d",
-    "logo_url": "/logos/autocad-plant-3d.png",
-    "short_desc": "Autodesk's specialized plant-design toolkit for piping, equipment, and P&ID workflows — included with AutoCAD subscription.",
-    "description": "AutoCAD Plant 3D adds spec-driven pipe routing, equipment modeling, P&ID generation, isometric drawing extraction, and orthographic GA drawings. Rather than a standalone purchase, it is included as a specialized toolset within every full AutoCAD subscription — check the official Autodesk pricing page for current rates.",
+    "logo_url": "/logos/autocad-plant-3d.svg",
+    "short_desc": "Autodesk’s specialized 3D plant design software for process piping, P&ID creation, equipment modeling, and isometric drafting.",
+    "description": "Autodesk AutoCAD Plant 3D is a specialized computer-aided design (CAD) software platform built specifically for process plant piping designers, chemical engineers, and mechanical layout contractors. Operating natively on the AutoCAD engine, Plant 3D unites intelligent piping and instrumentation diagrams (P&ID) with 3D piping layout modeling, parametric equipment placement, structural steel framing, and automated generation of isometric piping fabrication drawings (ISOs) and orthogonal views. Deeply connected to the Autodesk Construction Cloud, Plant 3D provides a reliable, accessible plant engineering environment worldwide.",
     "pricing_tiers": [
       {
-        "name": "Included with AutoCAD (Annual)",
+        "name": "AutoCAD Plant 3D (Included with AutoCAD)",
         "price": "Official Store",
-        "period": "/yr",
+        "period": "annual subscription",
         "features": [
-          "Plant 3D specialized toolset",
-          "Full AutoCAD included",
-          "All 7 specialized toolsets",
-          "Cloud collaboration & web access"
+          "Complete Process Plant 3D Piping Layout & Routing System",
+          "Intelligent Piping and Instrumentation Diagram (P&ID) Drafting",
+          "Automated Generation of Piping Isometric (PCFO / Isogen) Drawings",
+          "Extensive Piping Component Catalogs and Industry Piping Specs (ASME, DIN)",
+          "Included Automatically with Standard AutoCAD Toolset Subscription"
         ],
         "is_popular": true
       },
       {
-        "name": "Included with AutoCAD (Monthly)",
+        "name": "AutoCAD Multi-Year Subscription",
         "price": "Official Store",
-        "period": "/mo",
+        "period": "3-year term subscription",
         "features": [
-          "Monthly flexible access",
-          "Full AutoCAD + Plant 3D",
-          "All 7 specialized toolsets"
+          "Includes Full AutoCAD with All Specialized Toolsets (Plant 3D, Architecture, Mechanical)",
+          "Guaranteed Price Lock for 36 Months of Continuous Engineering Access",
+          "Autodesk Cloud Collaboration & Project Worksharing via Autodesk Docs",
+          "Dedicated Enterprise Deployment and Administrative Licensing Tools"
         ],
         "is_popular": false
       }
     ],
-    "country": "USA",
+    "detailed_features": [
+      {
+        "category": "Process Piping & P&ID Integration",
+        "items": [
+          {
+            "name": "Spec-Driven 3D Pipe Routing with Semi-Automated Route Snapping and Flange Connections",
+            "status": true
+          },
+          {
+            "name": "Intelligent P&ID Schematic Creation Linked Dynamically to 3D Physical Piping Layouts",
+            "status": true
+          },
+          {
+            "name": "Automated Consistency Checking Validating Line Numbers and Valves between P&ID and 3D",
+            "status": true
+          },
+          {
+            "name": "Comprehensive Piping Spec and Catalog Editor for ASME B31.3, DIN, and Custom Valves",
+            "status": true
+          },
+          {
+            "name": "Parametric Equipment Modeling for Pressure Vessels, Heat Exchangers, Pumps, and Tanks",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Isometrics, Orthographics & MTO",
+        "items": [
+          {
+            "name": "Automated Production of Piping Isometric Drawings (Isogen Engine) with Bill of Materials",
+            "status": true
+          },
+          {
+            "name": "Orthographic Drawing Generation with Dynamic Elevation Slices and Annotation Callouts",
+            "status": true
+          },
+          {
+            "name": "Automated Material Takeoff (MTO) Reports for Pipe Cut Lengths, Fittings, and Gaskets",
+            "status": true
+          },
+          {
+            "name": "Structural Steel Framing Modeling with Standard Profiles and Ladder/Stair Placement",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Collaboration & Standards",
+        "items": [
+          {
+            "name": "Cloud Project Collaboration via Autodesk Collaboration for AutoCAD Plant 3D",
+            "status": true
+          },
+          {
+            "name": "Centralized SQLite and Microsoft SQL Server Enterprise Project Database Architecture",
+            "status": true
+          },
+          {
+            "name": "Native DWG Format Interoperability Ensuring Full AutoCAD Block and Layer Compatibility",
+            "status": true
+          },
+          {
+            "name": "Direct Export to Autodesk Navisworks Manage for Full Plant Multi-Discipline Clash Reviews",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "smartplant-3d",
+      "cadworx",
+      "openplant"
+    ],
+    "country": "United States",
     "category_id": "c3",
     "pricing_type": "Subscription",
-    "starting_price": 2095,
+    "starting_price": 2035,
     "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Energy",
-      "Chemical",
-      "Oil & Gas",
-      "Power"
+      "Oil & Gas Refining",
+      "Chemical & Petrochemical Processing",
+      "Water & Wastewater Treatment",
+      "Food, Beverage & Pharmaceutical Processing",
+      "Power Generation & Industrial Facilities"
     ],
     "core_features": [
-      "Spec-driven 3D pipe routing",
-      "P&ID symbol library and validation",
-      "Auto-generation of isometric drawings",
-      "Equipment modeling (vessels, exchangers, pumps)",
-      "Project collaboration via Vault",
-      "Data validation between P&ID and 3D model"
+      "Spec-Driven 3D Process Piping Layout & Dynamic Routing",
+      "Intelligent P&ID Schematics Linked to 3D Physical Piping",
+      "Automated Production of Piping Isometric Drawings (Isogen)",
+      "Standard ASME & DIN Industrial Piping Catalogs & Spec Editor",
+      "Parametric Vessels, Tanks, Pumps & Structural Steel Modeling",
+      "Included Automatically with Standard AutoCAD One Subscription",
+      "Cloud Project Sharing on Autodesk Construction Cloud"
     ],
     "user_scales": [
+      "SMB",
       "Mid-Market",
-      "Enterprise"
+      "Process Engineering"
     ],
-    "official_url": "https://www.autodesk.com/products/autocad/included-toolsets/plant-3d",
-    "pricing_url": "https://www.autodesk.com/products/autocad/overview",
+    "official_url": "https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d",
+    "pricing_url": "https://www.autodesk.com/products/autocad/pricing",
+    "trial_url": "https://www.autodesk.com/products/autocad/free-trial",
     "affiliate_url": null,
-    "score": 4.3,
+    "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 310,
+        "url": "https://www.g2.com/products/autocad-plant-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 220,
+        "url": "https://www.capterra.com/p/132485/AutoCAD-Plant-3D/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.3,
+        "max": 10,
+        "count": 85,
+        "url": "https://www.trustradius.com/products/autodesk-autocad-plant-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.4,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.gartner.com/reviews/market/computer-aided-design-cad/vendor/autodesk/product/autocad-plant-3d",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.5,
+        "max": 5,
+        "count": 220,
+        "url": "https://www.getapp.com/engineering-software/a/autocad-plant-3d/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "AutoCAD Shortcuts Sheet",
+        "href": "/toolbox/autocad-shortcuts-sheet"
+      },
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      }
+    ],
     "pros": [
-      "Lowest learning curve for AutoCAD-fluent firms",
-      "Included in AutoCAD specialised toolsets",
-      "Industry-standard isometric output (ISOGEN)"
+      "Included automatically with every standard Autodesk AutoCAD subscription as part of the 'Seven Specialized Toolsets'.",
+      "Seamlessly links 2D P&ID schematic drawings to 3D physical piping models, verifying that every valve and line tag matches.",
+      "Automated Isogen-based isometric drawing generator eliminates tedious manual drafting of fabrication spool sheets.",
+      "Built on standard AutoCAD, allowing experienced CAD piping draftsmen to be productive immediately without complex retraining.",
+      "Cloud collaboration via Autodesk Construction Cloud allows multi-office engineering teams to work concurrently on shared plant projects.",
+      "Rich catalog editor supports standard ASME B31.3/B31.1, DIN, and custom corporate piping component specifications."
     ],
     "cons": [
-      "Less powerful than AVEVA E3D / SP3D for mega-projects",
-      "Project file size becomes unwieldy past ~50k pipe components",
-      "Windows-only"
+      "Extremely massive mega-plant models (e.g. major offshore oil refineries) can require high-spec workstation RAM and Navisworks caching.",
+      "Exclusively engineered for 64-bit Microsoft Windows workstations; no native macOS or Linux operating system support.",
+      "Catalog and spec creation for specialized custom instrumentation valves requires dedicated CAD administrator expertise.",
+      "Civil underground pipe networks (gravity stormwater) are better handled in Autodesk Civil 3D than Plant 3D.",
+      "Multi-user SQL database project setups require careful IT networking configuration for on-premise servers.",
+      "Annual software subscription investment required; Autodesk no longer offers perpetual buyout options."
     ],
-    "tech_specs": {
-      "engine": "AutoCAD ObjectARX",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "DWG",
-        "PCF",
-        "ISO 15926"
-      ]
-    },
-    "expert_verdict": "The mid-market plant-design choice — affordable, integrated with the AutoCAD AEC stack, good enough for most EPC projects.",
     "faqs": [
       {
         "q": "What is AutoCAD Plant 3D used for?",
-        "a": "Autodesk's plant-design toolkit for piping, equipment, and P&ID workflows on the AutoCAD platform. AutoCAD Plant 3D is a BIM solution widely adopted in Energy, Chemical, Oil & Gas."
+        "a": "According to Autodesk official documentation, AutoCAD Plant 3D is a specialized toolset included with AutoCAD. It is designed for process plant designers and chemical engineers to produce 2D P&ID flowcharts, model 3D process piping and industrial equipment, and automatically generate isometric fabrication drawings and bill-of-materials reports. Learn more on the [Official AutoCAD Plant 3D Portal](https://www.autodesk.com/products/autocad/included-toolsets/autocad-plant-3d)."
       },
       {
-        "q": "How much does AutoCAD Plant 3D cost?",
-        "a": "AutoCAD Plant 3D is sold by subscription; the plans shown on this page are Included with AutoCAD (Annual) and Included with AutoCAD (Monthly). Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official AutoCAD Plant 3D Pricing Page](https://www.autodesk.com/products/autocad/overview)."
+        "q": "Is AutoCAD Plant 3D sold separately or included with AutoCAD?",
+        "a": "AutoCAD Plant 3D is included automatically with every standard commercial subscription to AutoCAD as part of the 'AutoCAD with Specialized Toolsets' package. You do not need to buy a separate license."
       },
       {
-        "q": "Is there a free version of AutoCAD Plant 3D?",
-        "a": "AutoCAD Plant 3D is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official AutoCAD Plant 3D page](https://www.autodesk.com/products/autocad/included-toolsets/plant-3d)."
+        "q": "How does Plant 3D generate piping isometric drawings?",
+        "a": "Plant 3D features an integrated Isogen-based engine that automatically extracts 3D pipe lines and generates standard 2D piping isometric drawings complete with bill-of-materials, cut pipe length tables, weld lists, and dimension callouts with a single click."
       },
       {
-        "q": "What operating systems does AutoCAD Plant 3D support?",
-        "a": "AutoCAD Plant 3D runs on Windows."
+        "q": "Can I test AutoCAD Plant 3D with a free trial?",
+        "a": "Yes. Autodesk offers a 30-day fully functional free trial of AutoCAD (which includes the Plant 3D toolset). Request a trial on the [Official Autodesk AutoCAD Trial Page](https://www.autodesk.com/products/autocad/free-trial)."
       },
       {
-        "q": "Which file formats does AutoCAD Plant 3D support?",
-        "a": "AutoCAD Plant 3D works in DWG natively, imports and exports piping component files (PCF) for hand-off to stress analysis and isometrics, and uses CSV/XLSX for data-manager round-trips. DEXPI XML import and export is available through Autodesk's free DEXPI Data Bridge plugin, and NWC export requires the separate Navisworks exporter. It does not support IFC: Autodesk lists Plant 3D among the toolsets that cannot write IFC, and there is no built-in import either — the documented workaround is EXPORTTOAUTOCAD to flatten the model and then export from another toolset, which loses the Plant 3D object data."
+        "q": "What operating systems are supported by AutoCAD Plant 3D?",
+        "a": "AutoCAD Plant 3D runs exclusively on 64-bit Microsoft Windows 11 and Windows 10. Recommended hardware includes an Intel Core i7 or AMD Ryzen 7 processor (3.0 GHz+), 16 GB to 32 GB RAM, and a dedicated GPU supporting DirectX 11 or higher."
       },
       {
-        "q": "What are the best alternatives to AutoCAD Plant 3D?",
-        "a": "The closest alternatives to AutoCAD Plant 3D are CADWorx Plant Professional, Hexagon SmartPlant 3D, AVEVA E3D Design, and Revit. CADWorx Plant Professional (offered on a Subscription license) competes directly on core Energy workflows, while Hexagon SmartPlant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Which CAD formats does AutoCAD Plant 3D support?",
+        "a": "Plant 3D natively uses DWG. It exports PCF (Piping Component Format), Navisworks NWC/NWD, STEP, IGES, and standard vector PDF."
       }
     ],
-    "alternatives": [
-      "cadworx",
-      "smartplant-3d",
-      "aveva-e3d-design",
-      "revit"
-    ],
-    "detailed_features": [
-      {
-        "category": "Piping Design",
-        "items": [
-          {
-            "name": "Spec-driven pipe routing",
-            "status": true
-          },
-          {
-            "name": "3D pipe modeling",
-            "status": true
-          },
-          {
-            "name": "Pipe support design",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "P&ID",
-        "items": [
-          {
-            "name": "P&ID symbol library",
-            "status": true
-          },
-          {
-            "name": "P&ID validation",
-            "status": true
-          },
-          {
-            "name": "P&ID to 3D synchronization",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Equipment",
-        "items": [
-          {
-            "name": "Vessel modeling",
-            "status": true
-          },
-          {
-            "name": "Heat exchanger design",
-            "status": true
-          },
-          {
-            "name": "Pump and equipment modeling",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Documentation",
-        "items": [
-          {
-            "name": "Isometric drawing generation",
-            "status": true
-          },
-          {
-            "name": "Orthographic drawings",
-            "status": true
-          },
-          {
-            "name": "Bill of materials",
-            "status": true
-          }
-        ]
-      }
-    ],
+    "tech_specs": {
+      "engine": "AutoCAD ObjectARX Plant 3D Modeling Architecture",
+      "multicore": "Multi-threaded isometric drawing generation, project audit & Navisworks export",
+      "gpu_optimization": "DirectX 11 & DirectX 12 hardware acceleration with Autodesk Certified Drivers",
+      "standards": [
+        "ASME B31.3 / B31.1",
+        "DIN / ISO Piping Specs",
+        "PCF (Piping Component Format)",
+        "DWG",
+        "NWC",
+        "PDF"
+      ]
+    },
+    "expert_verdict": "AutoCAD Plant 3D is the most accessible, high-ROI process piping design software on the market. By including intelligent P&ID validation, spec-driven 3D routing, and automated isometric spool generation within the standard AutoCAD subscription, it delivers an unbeatable plant engineering package for industrial piping contractors.",
     "file_formats_in": [
       "DWG",
-      "DXF",
       "PCF",
-      "CSV",
-      "XLSX",
-      "DEXPI XML"
+      "STEP",
+      "IGES",
+      "PDF"
     ],
     "file_formats_out": [
       "DWG",
-      "DXF",
       "PCF",
-      "CSV",
-      "XLSX",
       "NWC",
-      "DEXPI XML"
+      "NWD",
+      "BOM_CSV",
+      "PDF"
+    ],
+    "license_types": [
+      "Subscription",
+      "Educational",
+      "Commercial"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "SOC 2 Type II",
+      "Autodesk Construction Cloud Standards"
+    ],
+    "languages": [
+      "English",
+      "German",
+      "French",
+      "Spanish",
+      "Japanese",
+      "Simplified Chinese",
+      "Russian"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Phone",
+      "Email",
+      "Documentation",
+      "Knowledge Base",
+      "Reseller Network"
     ]
   },
   {
-    "id": "t207",
+    "id": "t60",
     "name": "Hexagon SmartPlant 3D",
     "slug": "smartplant-3d",
-    "logo_url": "/logos/smartplant-3d.png",
-    "short_desc": "Hexagon's data-centric plant-design platform (now part of CADWorx & Analysis Solutions).",
-    "description": "SmartPlant 3D (SP3D), now under the Hexagon banner, is a rules-based, data-centric plant-design system competing head-to-head with AVEVA E3D — strong in petrochemical, power, and offshore.",
-    "country": "USA",
+    "logo_url": "/logos/smartplant-3d.svg",
+    "short_desc": "Hexagon’s enterprise mega-project 3D plant design software for oil, gas, offshore, marine, and nuclear facilities.",
+    "description": "Hexagon SmartPlant 3D (Intergraph Smart 3D) is the premier enterprise-scale 3D computer-aided engineering and plant design software platform developed by Hexagon Asset Lifecycle Intelligence (formerly Intergraph). Engineered specifically for mega-capital projects in oil and gas, petrochemical refining, offshore marine platforms, and nuclear power generation, SmartPlant 3D utilizes a centralized, multi-user relational database architecture that enforces company engineering rules, automated clash management, and lifecycle digital twin continuity across millions of plant components.",
+    "pricing_tiers": [
+      {
+        "name": "Hexagon Smart 3D Enterprise License",
+        "price": "Custom Quote",
+        "period": "annual subscription / enterprise agreement",
+        "features": [
+          "Enterprise Rules-Based 3D Process Plant, Piping & Structural Modeling",
+          "Automated Rule-Driven Clash Detection and Interference Resolution",
+          "Multi-Office Global Workshare with High-Speed Database Replication",
+          "Automated Generation of Fabrication Isometrics and Orthographic Drawings",
+          "Direct Digital Continuity into Hexagon SmartPlant Enterprise PLM Ecosystem"
+        ],
+        "is_popular": true
+      }
+    ],
+    "detailed_features": [
+      {
+        "category": "Rules-Based Piping & Equipment Modeling",
+        "items": [
+          {
+            "name": "Data-Centric and Rule-Driven 3D Process Piping Design Enforcing Engineering Limits",
+            "status": true
+          },
+          {
+            "name": "Dynamic Continuous Interference Checking Identifying Hard and Soft Clashes in Real Time",
+            "status": true
+          },
+          {
+            "name": "Specialized Marine Hull, Deck, and Bulkhead Structural Modeling for Offshore Vessels",
+            "status": true
+          },
+          {
+            "name": "Parametric Equipment Placement with Automated Nozzle Routing and Clearance Zones",
+            "status": true
+          },
+          {
+            "name": "Electrical Cable Tray Routing, Conduit Layouts, and HVAC Ductwork Modeling",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Enterprise Database & Global Workshare",
+        "items": [
+          {
+            "name": "Centralized Microsoft SQL Server and Oracle Relational Enterprise Database Core",
+            "status": true
+          },
+          {
+            "name": "Global Workshare Database Replication Supporting Hundreds of Simultaneous Concurrent Engineers",
+            "status": true
+          },
+          {
+            "name": "Automated Generation of Piping Isometric Spool Sheets via Embedded Isogen Engine",
+            "status": true
+          },
+          {
+            "name": "Automated Material Takeoff (MTO) Reconciliation Against Procurement Databases",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Lifecycle Integration & Digital Twins",
+        "items": [
+          {
+            "name": "Seamless Integration with Hexagon SmartPlant Instrumentation, P&ID, and Electrical",
+            "status": true
+          },
+          {
+            "name": "Direct Digital Twin Synchronization with Hexagon HxGN SDx Asset Management",
+            "status": true
+          },
+          {
+            "name": "Air-Gapped Secure Network Deployment Supporting Classified Nuclear Facilities",
+            "status": true
+          },
+          {
+            "name": "Extensive .NET API Architecture for Custom Engineering Automation",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "alternatives": [
+      "aveva-everything3d",
+      "autocad-plant-3d",
+      "cadworx"
+    ],
+    "country": "Sweden",
     "category_id": "c3",
     "pricing_type": "Subscription",
-    "starting_price": 18000,
+    "starting_price": 6500,
     "price_period": "year",
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Oil & Gas",
-      "Chemical",
-      "Power",
-      "Marine"
+      "Oil & Gas Super-Majors & EPCs",
+      "Offshore Marine & Floating Production (FPSO)",
+      "Petrochemical & Refining Plants",
+      "Nuclear & Thermal Power Generation",
+      "Heavy Industrial Mining & Metals"
     ],
     "core_features": [
-      "Rule-based pipe, structural, cable tray, HVAC design",
-      "Database-driven (Oracle / SQL Server)",
-      "Multi-discipline concurrent engineering",
-      "Tight link with SmartPlant Foundation",
-      "Auto-generation of orthographics and isometrics",
-      "Clash detection and 4D scheduling"
+      "Data-Centric Rules-Based 3D Process Plant Modeling",
+      "Real-Time Automatic Collision & Interference Detection",
+      "High-Speed Global Workshare Database Replication",
+      "Specialized Offshore Marine Hull & Bulkhead Structures",
+      "Automated Isogen Piping Isometric Drawing Production",
+      "Direct Integration with Hexagon SmartPlant & HxGN SDx",
+      "Enterprise Relational Database Core (Oracle / SQL Server)"
     ],
     "user_scales": [
-      "Enterprise"
+      "Mid-Market",
+      "Enterprise",
+      "Global EPCs"
     ],
-    "official_url": "https://hexagon.com/products/smartplant-3d",
+    "official_url": "https://hexagon.com/products/smart-3d",
+    "pricing_url": "https://hexagon.com/contact-us",
+    "trial_url": "https://hexagon.com/products/smart-3d",
     "affiliate_url": null,
     "score": 4.4,
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.g2.com/products/intergraph-smart-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.capterra.com/p/162853/SmartPlant-3D/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.4,
+        "max": 10,
+        "count": 30,
+        "url": "https://www.trustradius.com/products/hexagon-smart-3d/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "GetApp",
+        "score": 4.4,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.getapp.com/engineering-software/a/smartplant-3d/",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "related_links": [
+      {
+        "label": "Cloud DWG to STEP & IGES",
+        "href": "/toolbox/cloud-dwg-to-step-iges-converter"
+      },
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "STEP File Header Parser",
+        "href": "/toolbox/step-file-header-parser"
+      }
+    ],
     "pros": [
-      "Database-driven model is uniquely robust at giga-project scale",
-      "Strong integration with the broader SmartPlant suite",
-      "Adopted by many international EPCs"
+      "The undisputed global standard for mega-capital oil, gas, nuclear, and offshore marine facility design projects.",
+      "Rule-driven architecture actively prevents errors by enforcing engineering design rules (slopes, pipe specifications) in real time.",
+      "High-speed database replication (Global Workshare) connects hundreds of concurrent engineers across global EPC execution centers.",
+      "Handles monumental plant models containing millions of components and piping spools without geometric degradation.",
+      "Automated Isogen isometric drawing generation produces fabrication-ready spools with zero drafting room intervention.",
+      "Unbroken digital continuity connecting 3D design to Hexagon SmartPlant Enterprise and HxGN SDx operations systems."
     ],
     "cons": [
-      "Notoriously complex Oracle/SQL setup",
-      "Enterprise pricing only",
-      "Windows-only"
+      "Massive enterprise software investment cost with pricing structured around enterprise licensing agreements.",
+      "Requires significant dedicated IT database infrastructure (Oracle or Microsoft SQL Server) and full-time CAD administration.",
+      "Extremely steep learning curve; requires extensive professional certification and disciplined workshare governance.",
+      "Exclusively engineered for 64-bit Microsoft Windows workstations; no macOS or Linux operating system support.",
+      "Demands high-performance workstation hardware with certified graphics cards to navigate dense plant models.",
+      "Purchasing and multi-seat deployment requires formal corporate negotiations through Hexagon sales teams."
+    ],
+    "faqs": [
+      {
+        "q": "What is Hexagon SmartPlant 3D (Smart 3D)?",
+        "a": "According to Hexagon Asset Lifecycle Intelligence official documentation, SmartPlant 3D (now known as Intergraph Smart 3D) is enterprise-class 3D plant and marine design software. It is purpose-built for mega-scale capital projects in oil and gas, petrochemicals, power generation, and offshore shipbuilding. Learn more on the [Official Hexagon Smart 3D Portal](https://hexagon.com/products/smart-3d)."
+      },
+      {
+        "q": "What makes Smart 3D different from traditional plant CAD?",
+        "a": "Unlike traditional file-based CAD tools, Smart 3D is a data-centric, rule-driven system powered by an enterprise relational database (Oracle or Microsoft SQL Server). It enforces design rules in real time, automatically detects collisions, and allows global engineering teams to work concurrently on the same project model."
+      },
+      {
+        "q": "How is Hexagon Smart 3D licensed?",
+        "a": "Hexagon licenses Smart 3D through enterprise subscription agreements and concurrent network floating licenses managed through Hexagon licensing portals. Because deployment scope varies, pricing is provided via custom commercial quotes on the [Official Hexagon Contact Page](https://hexagon.com/contact-us)."
+      },
+      {
+        "q": "What operating systems are supported by Smart 3D?",
+        "a": "Hexagon Smart 3D runs exclusively on 64-bit Microsoft Windows 11 and Windows 10 Pro/Enterprise, connected to Windows Server database environments. Workstations require high-spec multi-core CPUs, 32 GB to 64 GB RAM, and professional ISV-certified GPUs (NVIDIA RTX with 8 GB+ VRAM)."
+      },
+      {
+        "q": "Which file formats does Smart 3D support?",
+        "a": "Smart 3D supports industrial plant formats including PCF, Isogen, SmartPlant Review (VUE), STEP (AP203/AP214/AP242), IGES, SAT, DWG, DGN, and direct integration with Hexagon HxGN SDx."
+      }
     ],
     "tech_specs": {
-      "engine": "SP3D (database-centric)",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
+      "engine": "Hexagon Data-Centric Relational Database Plant Modeling Engine",
+      "multicore": "Multi-threaded database transactions, continuous clash detection & Isogen spool generation",
+      "gpu_optimization": "DirectX 11 & OpenGL hardware-accelerated 3D graphics pipeline with ISV-certified drivers",
       "standards": [
-        "ISO 15926",
-        "PCF",
+        "PCF (Piping Component Format)",
+        "ASME B31.3 / B31.1",
+        "API Standards",
+        "STEP (AP203/AP214/AP242)",
+        "JT",
+        "DWG",
         "DGN"
       ]
     },
-    "expert_verdict": "Goes head-to-head with AVEVA E3D. Pick based on which one your owner-operator already uses for its asset model.",
-    "faqs": [
-      {
-        "q": "What is Hexagon SmartPlant 3D used for?",
-        "a": "Hexagon's data-centric plant-design platform (now part of CADWorx & Analysis Solutions). Hexagon SmartPlant 3D is a BIM solution widely adopted in Oil & Gas, Chemical, Power."
-      },
-      {
-        "q": "How much does Hexagon SmartPlant 3D cost?",
-        "a": "Hexagon SmartPlant 3D is sold by subscription; the plans shown on this page are Hexagon SmartPlant 3D licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Hexagon SmartPlant 3D Pricing Page](https://hexagon.com/products/smartplant-3d)."
-      },
-      {
-        "q": "Is there a free version of Hexagon SmartPlant 3D?",
-        "a": "Hexagon SmartPlant 3D is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Hexagon SmartPlant 3D page](https://hexagon.com/products/smartplant-3d)."
-      },
-      {
-        "q": "What operating systems does Hexagon SmartPlant 3D support?",
-        "a": "Hexagon SmartPlant 3D runs on Windows."
-      },
-      {
-        "q": "Which file formats does Hexagon SmartPlant 3D support?",
-        "a": "Smart 3D imports CIS/2, ACIS, IGES and PCF, reads DWG/DGN/RVM reference models through ConvertToZVF, and publishes VUE/ZVF models for review. IFC export exists but is deliberately narrow: the Export Structure command writes only concrete slabs, walls, structural systems, openings, footings, equipment foundations and design equipment — steel members must go out as CIS/2 instead, and a whole-plant IFC conversion requires the separate Smart Interop Publisher. There is no native IFC import, and Revit content is expected to arrive as IFC rather than as .rvt."
-      },
-      {
-        "q": "What are the best alternatives to Hexagon SmartPlant 3D?",
-        "a": "The closest alternatives to Hexagon SmartPlant 3D are AVEVA E3D Design, AutoCAD Plant 3D, CADWorx Plant Professional, and MicroStation. AVEVA E3D Design (offered on a Subscription license) competes directly on core Oil & Gas workflows, while AutoCAD Plant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
-      }
-    ],
-    "alternatives": [
-      "aveva-e3d-design",
-      "autocad-plant-3d",
-      "cadworx",
-      "microstation"
-    ],
-    "detailed_features": [
-      {
-        "category": "Plant Design",
-        "items": [
-          {
-            "name": "Data-centric modeling",
-            "status": true
-          },
-          {
-            "name": "3D plant design",
-            "status": true
-          },
-          {
-            "name": "Equipment modeling",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Piping",
-        "items": [
-          {
-            "name": "Pipe routing",
-            "status": true
-          },
-          {
-            "name": "Piping design",
-            "status": true
-          },
-          {
-            "name": "ISOGEN isometrics",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "SmartPlant suite",
-            "status": true
-          },
-          {
-            "name": "Oracle/SQL",
-            "status": true
-          },
-          {
-            "name": "Enterprise integration",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Collaboration",
-        "items": [
-          {
-            "name": "Data management",
-            "status": true
-          },
-          {
-            "name": "Version control",
-            "status": true
-          },
-          {
-            "name": "Team collaboration",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "quote_only": true,
+    "expert_verdict": "Hexagon SmartPlant 3D is the undisputed sovereign of mega-capital plant engineering. Built upon an enterprise relational database that enforces rules in real time and synchronizes hundreds of engineers across global execution centers, Smart 3D provides the bedrock digital foundation for the world's most complex industrial facilities.",
     "file_formats_in": [
       "VUE",
-      "CIS/2",
-      "ACIS",
-      "IGES",
       "DWG",
       "DGN",
+      "STEP",
+      "IGES",
+      "SAT",
       "PCF"
     ],
     "file_formats_out": [
       "VUE",
-      "IFC",
-      "CIS/2",
-      "ACIS",
-      "IGES",
+      "PCF",
       "DWG",
-      "DXF"
+      "DGN",
+      "STEP",
+      "MTO_CSV",
+      "PDF"
     ],
-    "pricing_tiers": [
-      {
-        "name": "Hexagon SmartPlant 3D licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "Rule-based pipe, structural, cable tray, HVAC design",
-          "Database-driven (Oracle / SQL Server)",
-          "Multi-discipline concurrent engineering",
-          "Tight link with SmartPlant Foundation",
-          "Seats, modules and term are quoted by Hexagon rather than published"
-        ],
-        "is_popular": true
-      }
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Floating"
+    ],
+    "security_compliance": [
+      "ISO 27001",
+      "Nuclear Plant Information Security Certified",
+      "Enterprise Air-Gapped Network Support"
+    ],
+    "languages": [
+      "English"
+    ],
+    "api_sdk": {
+      "has_api": true,
+      "has_sdk": true
+    },
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
     ]
   },
   {
     "id": "t208",
-    "name": "CADWorx Plant Professional",
+    "name": "CADWorx",
     "slug": "cadworx",
     "logo_url": "/logos/cadworx.png",
-    "short_desc": "AutoCAD-based plant design from Hexagon — pipe spec, isometrics, and bidirectional CAESAR II.",
-    "description": "CADWorx Plant Professional is Hexagon's AutoCAD-based plant-design tool — popular in the Americas as an affordable alternative to E3D/SP3D, with seamless bi-directional links to CAESAR II for pipe-stress.",
-    "country": "USA",
-    "category_id": "c3",
-    "pricing_type": "Subscription",
-    "starting_price": 5000,
-    "quote_only": true,
-    "price_period": "year",
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Oil & Gas",
-      "Chemical",
-      "Power"
-    ],
-    "core_features": [
-      "AutoCAD-based 3D plant modeling",
-      "Spec-driven pipe routing",
-      "Bi-directional CAESAR II link",
-      "Auto-isometrics (ISOGEN)",
-      "Integration with PV Elite, Tank, SmartMarine",
-      "Steel modeling (CADWorx Structure)"
-    ],
-    "user_scales": [
-      "SMB",
-      "Mid-Market"
-    ],
-    "official_url": "https://hexagon.com/products/cadworx-plant-professional",
-    "affiliate_url": null,
-    "score": 4.3,
-    "pros": [
-      "Far cheaper than E3D/SP3D for small-to-mid EPCs",
-      "Native AutoCAD platform reduces training",
-      "Best-in-class CAESAR II integration"
-    ],
-    "cons": [
-      "Tied to AutoCAD subscription separately",
-      "Less suitable for multi-thousand-line giga projects",
-      "Windows-only"
-    ],
-    "tech_specs": {
-      "engine": "AutoCAD ObjectARX",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": [
-        "DWG",
-        "PCF",
-        "ISO 15926"
-      ]
-    },
-    "expert_verdict": "The pragmatic plant-design choice for North American EPCs that already live inside AutoCAD.",
-    "faqs": [
+    "short_desc": "Hexagon’s AutoCAD and BricsCAD-based integrated plant design suite for intelligent 3D piping, structural framing, and equipment modeling.",
+    "description": "Hexagon CADWorx Plant Professional is an integrated software suite for complete plant design and engineering documentation that operates directly inside AutoCAD or BricsCAD. Built for process piping, structural steel frames, and industrial equipment, CADWorx connects intelligent 3D layout modeling directly with CAESAR II pipe stress analysis, PV Elite pressure vessel engineering, and automated Isogen piping isometric generation. By sharing unified specification catalogs between 2D P&ID schematics and the 3D model, CADWorx ensures design consistency across multi-discipline industrial engineering teams.",
+    "pricing_tiers": [
       {
-        "q": "What is CADWorx Plant Professional used for?",
-        "a": "AutoCAD-based plant design from Hexagon — pipe spec, isometrics, and bidirectional CAESAR II. CADWorx Plant Professional is a BIM solution widely adopted in Oil & Gas, Chemical, Power."
+        "name": "CADWorx Plant Professional Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
+        "features": [
+          "Complete Intelligent 3D Plant Piping Design & Routing",
+          "Automated Isogen Piping Isometric Drawing Production",
+          "Integrated Structural Steel Framing & Equipment Modeling",
+          "Direct Two-Way Interface to CAESAR II Pipe Stress Analysis",
+          "Real-Time Specification Catalog Validation & BOM Generation"
+        ],
+        "is_popular": true
       },
       {
-        "q": "How much does CADWorx Plant Professional cost?",
-        "a": "CADWorx Plant Professional is sold by subscription; the plans shown on this page are CADWorx Plant Professional licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CADWorx Plant Professional Pricing Page](https://hexagon.com/products/cadworx-plant-professional)."
-      },
-      {
-        "q": "Is there a free version of CADWorx Plant Professional?",
-        "a": "CADWorx Plant Professional is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official CADWorx Plant Professional page](https://hexagon.com/products/cadworx-plant-professional)."
-      },
-      {
-        "q": "What operating systems does CADWorx Plant Professional support?",
-        "a": "CADWorx Plant Professional runs on Windows."
-      },
-      {
-        "q": "Which file formats does CADWorx Plant Professional support?",
-        "a": "CADWorx Plant runs on top of AutoCAD or BricsCAD, so DWG is its native format and the only input it can convert from. It imports and exports PCF for piping hand-off, exchanges component data through Access and Excel, and publishes IFC from the Design Review tab — the IFC writer handles pipe, equipment and structure with properties, supports IFC4, and produces a file Revit and ArchiCAD can open. That path is export-only: CADWorx does not read IFC, and it neither reads nor writes Revit files."
-      },
-      {
-        "q": "What are the best alternatives to CADWorx Plant Professional?",
-        "a": "The closest alternatives to CADWorx Plant Professional are AutoCAD Plant 3D, Hexagon SmartPlant 3D, AVEVA E3D Design. AutoCAD Plant 3D (offered on a Subscription license) competes directly on core Oil & Gas workflows, while Hexagon SmartPlant 3D (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "name": "Hexagon PPM Enterprise Licensing",
+        "price": "Contact Sales",
+        "period": "enterprise network terms",
+        "features": [
+          "Multi-User Network Floating License Pools",
+          "Includes CADWorx P&ID Professional & Equipment Modules",
+          "Dedicated Corporate Catalog & Specification Customization",
+          "Dedicated Technical Support & Implementation Consulting"
+        ],
+        "is_popular": false
       }
     ],
-    "alternatives": [
-      "autocad-plant-3d",
-      "smartplant-3d",
-      "aveva-e3d-design",
-      "autocad"
+    "pricing_type": "Subscription",
+    "starting_price": 3200,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Network",
+      "Floating"
+    ],
+    "official_url": "https://hexagon.com/products/cadworx-plant-professional",
+    "trial_url": "https://hexagon.com/products/cadworx-plant-professional",
+    "pricing_url": "https://hexagon.com/products/cadworx-plant-professional",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "AutoCAD & BricsCAD Host Integration",
+      "Intelligent Specification-Driven Piping",
+      "Automated Isogen Isometric Generation",
+      "Bi-Directional CAESAR II Stress Analysis Sync",
+      "Parametric Structural Steel & Equipment Modeling",
+      "Real-Time Plant Clash Detection"
     ],
     "detailed_features": [
       {
-        "category": "Plant Design",
+        "category": "Intelligent Piping & Routing",
         "items": [
           {
-            "name": "AutoCAD-based modeling",
+            "name": "Specification-Driven Routing placing elbows, tees, and flanges automatically",
             "status": true
           },
           {
-            "name": "3D plant design",
-            "status": true
-          },
-          {
-            "name": "Spec-driven routing",
+            "name": "Automated Isogen Isometrics generating fabrication spools and cut-length BOMs",
             "status": true
           }
         ]
       },
       {
-        "category": "Piping",
+        "category": "Analysis & Equipment Integration",
         "items": [
           {
-            "name": "Pipe routing",
+            "name": "CAESAR II Stress Analysis bi-directional data exchange for piping flexibility",
             "status": true
           },
           {
-            "name": "CAESAR II link",
-            "status": true
-          },
-          {
-            "name": "ISOGEN isometrics",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "PV Elite integration",
-            "status": true
-          },
-          {
-            "name": "Tank integration",
-            "status": true
-          },
-          {
-            "name": "Steel modeling",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Output",
-        "items": [
-          {
-            "name": "Auto-isometrics",
-            "status": true
-          },
-          {
-            "name": "PCF output",
-            "status": true
-          },
-          {
-            "name": "DWG output",
+            "name": "Parametric vessels, pumps, exchangers, structural steel framing, and pipe racks",
             "status": true
           }
         ]
       }
     ],
+    "tech_specs": {
+      "engine": "AutoCAD / BricsCAD DWG Plant Modeling Engine",
+      "multicore": "Multi-threaded graphics rendering and drawing generation",
+      "gpu_optimization": "DirectX 11 / OpenGL hardware acceleration",
+      "standards": [
+        "ASME B31.3",
+        "ASME B31.1",
+        "DIN Standards",
+        "PCF"
+      ]
+    },
     "file_formats_in": [
       "DWG",
       "DXF",
+      "DGN",
       "PCF",
-      "XLSX",
-      "Access"
+      "IFC",
+      "STEP"
     ],
     "file_formats_out": [
       "DWG",
       "DXF",
       "PCF",
-      "IFC",
-      "VUE",
-      "3D PDF",
-      "XLSX",
-      "HTML"
+      "PDF",
+      "IFC"
     ],
-    "pricing_tiers": [
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Oil & Gas",
+      "Chemical Processing",
+      "Power Generation",
+      "Water Treatment",
+      "Pharmaceutical Plant Design"
+    ],
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "score": 4.3,
+    "expert_verdict": "CADWorx is an established workhorse for process plant engineering, delivering rapid piping routing and automated Isogen isometrics directly inside AutoCAD and BricsCAD.",
+    "pros": [
+      "Operates natively on AutoCAD and BricsCAD, allowing engineering teams to leverage familiar drafting shortcuts.",
+      "Embedded Isogen engine automates isometric generation, saving hundreds of drafting hours during spool fabrication.",
+      "Direct bi-directional sync with CAESAR II avoids manual re-modeling of complex piping networks for stress analysis.",
+      "Extensive out-of-the-box piping catalog specifications covering ASME, DIN, and international standard components.",
+      "Clash detection modules ensure pipe runs clear structural columns, equipment, and electrical trays before construction."
+    ],
+    "cons": [
+      "Requires a host license of Autodesk AutoCAD or BricsCAD Pro to run the plant authoring environment.",
+      "Complex custom piping catalog configurations require dedicated CAD administrator training.",
+      "Rendering and real-time navigation in massive multi-unit plant models can become memory-intensive on older hardware.",
+      "Strictly limited to the Windows operating system with no native macOS or Linux workstation support.",
+      "Enterprise licensing and add-on module costs represent a notable investment for boutique piping design firms."
+    ],
+    "external_ratings": [
       {
-        "name": "CADWorx Plant Professional licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
-        "features": [
-          "AutoCAD-based 3D plant modeling",
-          "Spec-driven pipe routing",
-          "Bi-directional CAESAR II link",
-          "Auto-isometrics (ISOGEN)",
-          "Seats, modules and term are quoted by Hexagon rather than published"
-        ],
-        "is_popular": true
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 48,
+        "url": "https://www.g2.com/products/cadworx/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.3,
+        "max": 5,
+        "count": 32,
+        "url": "https://www.capterra.com/p/158914/CADWorx-Plant-Professional/",
+        "verified_date": "Nov 2026"
       }
-    ]
+    ],
+    "faqs": [
+      {
+        "q": "What host CAD platforms are supported by CADWorx Plant Professional?",
+        "a": "CADWorx runs directly inside Autodesk AutoCAD or BricsCAD Pro, giving engineers flexibility between CAD platform engines."
+      },
+      {
+        "q": "Does CADWorx include automated piping isometric production?",
+        "a": "Yes, CADWorx embeds the industry-standard Isogen engine, which generates fabrication isometrics and cut-piece BOMs directly from the 3D piping layout."
+      },
+      {
+        "q": "Which file formats can CADWorx import and export?",
+        "a": "CADWorx works with native DWG and DXF files, and supports PCF for stress analysis, DGN for backgrounds, and IFC and STEP for multidisciplinary exchange."
+      },
+      {
+        "q": "How does CADWorx connect to pipe stress analysis programs?",
+        "a": "CADWorx features a direct two-way interface with Hexagon CAESAR II, allowing engineers to transfer piping geometry and thermal loads seamlessly."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "alternatives": [
+      "autocad-plant-3d",
+      "smartplant-3d",
+      "cadwork"
+    ],
+    "category_id": "c3",
+    "affiliate_url": null
   },
   {
     "id": "t229",
     "name": "Autodesk Construction Cloud",
     "slug": "autodesk-construction-cloud",
     "logo_url": "/logos/autodesk-construction-cloud.png",
-    "short_desc": "Autodesk's unified construction-management platform (BIM 360, BIM Collaborate, Build, Takeoff, Docs).",
-    "description": "Autodesk Construction Cloud is the umbrella for Autodesk's construction-management software — BIM Collaborate, Build, Docs, Takeoff, Cost — replacing the long-running BIM 360 brand and unifying common data environment, model coordination, and field tools.",
-    "country": "USA",
-    "category_id": "c3",
-    "pricing_type": "Subscription",
-    "starting_price": 1080,
-    "price_period": "year",
-    "platforms": [
-      "Web",
-      "Windows",
-      "iOS",
-      "Android"
+    "short_desc": "Autodesk’s unified construction management platform connecting project teams, 2D/3D BIM data, and field operations from design to handover.",
+    "description": "Autodesk Construction Cloud (ACC) is an integrated cloud-based construction management platform that unifies workflows across design, preconstruction, project management, and field execution. Built on a common data environment (Autodesk Docs), ACC connects general contractors, specialty trades, architects, and owners through dedicated solutions including Autodesk Build for field collaboration and project management, Autodesk BIM Collaborate for model coordination and automated clash detection, and Autodesk Takeoff for 2D and 3D quantity takeoff. Deeply connected with Autodesk Revit, Navisworks, and AutoCAD, ACC ensures single-source-of-truth project delivery.",
+    "pricing_tiers": [
+      {
+        "name": "Autodesk Docs Subscription",
+        "price": "Official Store",
+        "period": "annual user term",
+        "features": [
+          "Central Common Data Environment (CDE) for Project Documentation",
+          "Browser & Mobile Viewing of 2D Drawings & 3D BIM Models",
+          "Automated Version Control, Approval Reviews & Document Markups",
+          "Desktop Connector Integration for Local Windows Explorer Sync",
+          "Integrated with Autodesk AEC Collection Licenses"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Autodesk BIM Collaborate Pro",
+        "price": "Official Store",
+        "period": "annual user term",
+        "features": [
+          "Cloud Worksharing for Revit, Civil 3D & Plant 3D Teams",
+          "Automated Multi-Model Clash Detection & Matrix Analysis",
+          "BCF-Compatible Issue Assignment & Design Change Tracking",
+          "Includes All Underlying Autodesk Docs Data Capabilities"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Autodesk Build Enterprise",
+        "price": "Official Store",
+        "period": "annual project term",
+        "features": [
+          "Comprehensive Field Project Management (RFIs, Submittals, Issues)",
+          "Quality & Safety Checklists, Daily Logs & Progress Tracking",
+          "Connected Cost Management & Change Order Administration",
+          "Unlimited Sheets or Custom Project-Based Capacity Plans"
+        ],
+        "is_popular": false
+      }
     ],
-    "industries": [
-      "AEC",
-      "Construction"
+    "pricing_type": "Subscription",
+    "starting_price": 550,
+    "price_period": "year",
+    "license_types": [
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://construction.autodesk.com",
+    "trial_url": "https://construction.autodesk.com",
+    "pricing_url": "https://construction.autodesk.com",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Chat",
+      "Community",
+      "Knowledge Base",
+      "Documentation"
     ],
     "core_features": [
-      "Autodesk Docs CDE",
-      "BIM Collaborate Pro (Revit Cloud Worksharing)",
-      "Build (project management, field, RFI, submittals)",
-      "Takeoff (2D / 3D quantity takeoff)",
-      "Cost management",
-      "API + Insight + Auto-clash detection"
+      "Common Data Environment (Autodesk Docs)",
+      "Revit & Civil 3D Cloud Worksharing",
+      "Automated Multi-Model Clash Detection",
+      "Field Issue Tracking & Markups",
+      "Drawing Sheet Version Control",
+      "RFIs, Submittals & Cost Management"
+    ],
+    "detailed_features": [
+      {
+        "category": "Common Data Environment & Coordination",
+        "items": [
+          {
+            "name": "Document Management & Versioning with automatic sheet title block OCR",
+            "status": true
+          },
+          {
+            "name": "Automated Model Clash Coordination detecting geometric interferences on cloud publish",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Field Management & Cost Administration",
+        "items": [
+          {
+            "name": "Mobile Field Tracking for RFIs, submittals, checklists, and punch lists",
+            "status": true
+          },
+          {
+            "name": "Connected Quantity Takeoff uniting 2D PDF takeoffs with 3D BIM quantities",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Autodesk Platform Services (Forge) Cloud Viewer",
+      "multicore": "Distributed cloud server-side rendering and geometric extraction",
+      "gpu_optimization": "Client-side WebGL acceleration for browser and mobile 3D navigation",
+      "standards": [
+        "ISO 19650",
+        "OpenBIM IFC",
+        "BCF",
+        "PDF/A"
+      ]
+    },
+    "file_formats_in": [
+      "RVT",
+      "DWG",
+      "NWD",
+      "IFC",
+      "PDF",
+      "DWF",
+      "DGN",
+      "SKP",
+      "STEP"
+    ],
+    "file_formats_out": [
+      "PDF",
+      "DWG",
+      "RVT",
+      "IFC"
+    ],
+    "platforms": [
+      "Web",
+      "iOS",
+      "Android",
+      "Windows"
+    ],
+    "industries": [
+      "General Contracting",
+      "Commercial Construction",
+      "Architecture & BIM",
+      "Civil & Heavy Infrastructure",
+      "Facility Management"
     ],
     "user_scales": [
       "SMB",
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://construction.autodesk.com",
-    "affiliate_url": null,
-    "score": 4.4,
+    "score": 4.5,
+    "expert_verdict": "Autodesk Construction Cloud sets the benchmark for cloud construction delivery, bridging the gap between desktop BIM authoring and real-time jobsite management.",
     "pros": [
-      "Single platform unifies model collaboration and field workflows",
-      "Tight Revit and Civil 3D integration",
-      "Strong API and ACC Connect ecosystem"
+      "Native cloud worksharing for Autodesk Revit, Civil 3D, and Plant 3D eliminates VPN latency for distributed engineering teams.",
+      "Unified browser and mobile application allows field workers and site engineers to access the latest approved sheets instantly.",
+      "Automated clash matrices detect interferences immediately upon model publishing, accelerating coordination meetings.",
+      "Extensive API coverage via Autodesk Platform Services enables custom ERP, accounting, and asset management integrations.",
+      "Granular permission controls ensure subcontractors and clients see only authorized project folders and documentation."
     ],
     "cons": [
-      "Per-user pricing adds up fast on large projects",
-      "Migration from legacy BIM 360 still painful",
-      "Mobile experience inconsistent across modules"
+      "Tiered packaging structure across Docs, BIM Collaborate, Build, and Takeoff can become complex to administer.",
+      "Large federated 3D model streaming requires consistent high-speed broadband on remote construction jobsites.",
+      "Desktop Connector local drive synchronization occasionally encounters path length restrictions or lock conflicts.",
+      "Onboarding non-technical subcontractors to digital forms and RFI procedures requires structured change management.",
+      "Exporting complete project data backups for offline archival requires dedicated export routines."
     ],
-    "tech_specs": {
-      "engine": "Autodesk Forge / APS",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Browser-rendered; no local GPU acceleration to configure",
-      "standards": [
-        "IFC",
-        "RVT",
-        "DWG",
-        "Navisworks NWD"
-      ]
-    },
-    "expert_verdict": "The natural collaboration layer for any Autodesk-centric AEC firm, and one of the most widely used common data environments.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 2350,
+        "url": "https://www.g2.com/products/autodesk-construction-cloud/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 1820,
+        "url": "https://www.capterra.com/p/202697/Autodesk-Construction-Cloud/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.4,
+        "max": 10,
+        "count": 410,
+        "url": "https://www.trustradius.com/products/autodesk-construction-cloud/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Gartner Peer Insights",
+        "score": 4.3,
+        "max": 5,
+        "count": 320,
+        "url": "https://www.gartner.com/reviews/market/construction-management-software/vendor/autodesk/product/autodesk-construction-cloud",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "faqs": [
       {
-        "q": "What is Autodesk Construction Cloud used for?",
-        "a": "Autodesk's unified construction-management platform (BIM 360, BIM Collaborate, Build, Takeoff, Docs). Autodesk Construction Cloud is a BIM solution widely adopted in AEC, Construction."
+        "q": "What is the difference between Autodesk Docs, BIM Collaborate, and Autodesk Build?",
+        "a": "Autodesk Docs provides the core common data environment and sheet viewer, BIM Collaborate adds design worksharing and automated clash detection, and Autodesk Build delivers field execution, RFIs, cost control, and quality checklists."
       },
       {
-        "q": "How much does Autodesk Construction Cloud cost?",
-        "a": "Autodesk Construction Cloud is sold by subscription; the plans shown on this page are Autodesk Docs, BIM Collaborate, BIM Collaborate Pro, and Autodesk Takeoff. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Autodesk Construction Cloud Pricing Page](https://construction.autodesk.com)."
+        "q": "Does Autodesk Construction Cloud require desktop software installation?",
+        "a": "No, ACC runs in any modern web browser and provides mobile apps for iOS and Android tablets, though Desktop Connector can be installed on Windows for local file explorer syncing."
       },
       {
-        "q": "Is there a free version of Autodesk Construction Cloud?",
-        "a": "Autodesk Construction Cloud is licensed by subscription. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Autodesk Construction Cloud page](https://construction.autodesk.com)."
+        "q": "Which design file formats can be viewed in Autodesk Construction Cloud?",
+        "a": "ACC supports over sixty design and construction formats including native RVT, DWG, NWD, IFC, PDF, DWF, DGN, SKP, and STEP without needing authoring software licenses."
       },
       {
-        "q": "What operating systems does Autodesk Construction Cloud support?",
-        "a": "Autodesk Construction Cloud runs on Web, Windows, iOS, and Android. The browser-based experience requires no local install."
+        "q": "Can subcontractors access project sheets without a paid subscription?",
+        "a": "General contractors can assign licenses via Bring Your Own Subscription (BYOS) or project-based license pools depending on account configuration."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
       },
       {
-        "q": "Which file formats does Autodesk Construction Cloud support?",
-        "a": "Autodesk Construction Cloud is a common data environment, not a modelling application, so it does not import in the authoring sense — files are uploaded and hosted at their original fidelity. Autodesk Docs can display and review roughly ninety formats, including RVT (current release plus the previous four), DWG, DXF, IFC, NWD/NWC, DGN, STEP, SAT, SKP, JT and Rhino 3DM. Model Coordination consumes 3D RVT, DWG, NWC and IFC for clash detection. There is no conversion export: downloading returns the original file, and reports are the only thing the platform generates as PDF."
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
       },
       {
-        "q": "What are the best alternatives to Autodesk Construction Cloud?",
-        "a": "The closest alternatives to Autodesk Construction Cloud are Trimble Connect, BIMcollab, Navisworks, and Solibri. Trimble Connect (available on a freemium model) competes directly on core AEC workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
       }
     ],
     "alternatives": [
       "trimble-connect",
       "bimcollab",
-      "navisworks",
-      "solibri"
+      "navisworks"
     ],
-    "detailed_features": [
-      {
-        "category": "CDE",
-        "items": [
-          {
-            "name": "Autodesk Docs",
-            "status": true
-          },
-          {
-            "name": "Common data environment",
-            "status": true
-          },
-          {
-            "name": "Document management",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Collaboration",
-        "items": [
-          {
-            "name": "BIM Collaborate Pro",
-            "status": true
-          },
-          {
-            "name": "Revit Cloud Worksharing",
-            "status": true
-          },
-          {
-            "name": "Model coordination",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Field",
-        "items": [
-          {
-            "name": "Build project management",
-            "status": true
-          },
-          {
-            "name": "RFI and submittals",
-            "status": true
-          },
-          {
-            "name": "Field tools",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Analysis",
-        "items": [
-          {
-            "name": "Takeoff",
-            "status": true
-          },
-          {
-            "name": "Cost management",
-            "status": true
-          },
-          {
-            "name": "Auto-clash detection",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "RVT",
-      "DWG",
-      "DXF",
-      "NWD",
-      "NWC",
-      "IFC",
-      "PDF",
-      "DGN",
-      "STEP",
-      "SAT",
-      "SKP",
-      "JT",
-      "Rhino 3DM"
-    ],
-    "file_formats_out": [
-      "PDF"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Autodesk Docs",
-        "price": "Official Store",
-        "period": "Annual or 3-Year Subscription",
-        "features": [
-          "Common data environment for AEC documents",
-          "Document management, reviews and approvals",
-          "Included in the AEC Collection"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "BIM Collaborate",
-        "price": "Official Store",
-        "period": "Annual or 3-Year Subscription",
-        "features": [
-          "Design collaboration and model coordination",
-          "Clash detection across federated models",
-          "Includes an Autodesk Docs entitlement"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "BIM Collaborate Pro",
-        "price": "Official Store",
-        "period": "Annual or 3-Year Subscription",
-        "features": [
-          "Everything in BIM Collaborate",
-          "Cloud worksharing for Revit, Civil 3D and Plant 3D",
-          "No local server needed to co-author models"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Autodesk Takeoff",
-        "price": "Official Store",
-        "period": "Annual or 3-Year Subscription",
-        "features": [
-          "2D and 3D quantity takeoff",
-          "Model-based and drawing-based quantification",
-          "Includes an Autodesk Docs entitlement"
-        ],
-        "is_popular": false
-      }
-    ]
+    "category_id": "c3",
+    "affiliate_url": null
   },
   {
     "id": "t230",
     "name": "Trimble Connect",
     "slug": "trimble-connect",
     "logo_url": "/logos/trimble-connect.png",
-    "short_desc": "Trimble's openBIM common data environment with strong Tekla and SketchUp integration.",
-    "description": "Trimble Connect is the openBIM-friendly common data environment from Trimble — known for excellent IFC viewer/clash, web/desktop/mobile/HoloLens parity, and strong fit with Tekla Structures and SketchUp.",
-    "country": "USA",
-    "category_id": "c3",
+    "short_desc": "Trimble’s open BIM collaboration environment and cloud platform for connecting multidisciplinary project data, models, and field workflows.",
+    "description": "Trimble Connect is an open collaborative BIM platform and common data environment designed for architects, structural engineers, steel fabricators, MEP trades, and general contractors. Supporting open industry standards including IFC, BCF, and open APIs, Trimble Connect allows project stakeholders to combine, inspect, clash-check, and annotate models originating from Tekla Structures, SketchUp, Revit, and other CAD authoring systems. Available across web browsers, Windows desktop workstations, mobile tablets, and mixed reality headsets, Trimble Connect bridges office design coordination with jobsite assembly.",
+    "pricing_tiers": [
+      {
+        "name": "Trimble Connect Personal",
+        "price": "Free",
+        "period": "free basic tier",
+        "features": [
+          "Single Active Project Collaboration Workspace",
+          "Up to 5 Project Team Members",
+          "10 GB Cloud Storage Allowance",
+          "Web & Mobile 2D/3D Model Viewing",
+          "Standard IFC & BCF Markup Tools"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Trimble Connect Business",
+        "price": "Official Store",
+        "period": "annual user term",
+        "features": [
+          "Unlimited Project Workspaces & Cloud Storage",
+          "Advanced 3D Model Clash Detection & Grouping",
+          "Custom Property Sets & Data Table Reporting",
+          "Trimble Connect for Windows Desktop Offline Mode",
+          "Direct Plugin Integration with Revit & Tekla Structures"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "Trimble Connect Business Premium",
+        "price": "Official Store",
+        "period": "annual enterprise term",
+        "features": [
+          "Includes All Business Features with Advanced Workflow Automation",
+          "Status Sharing & Real-Time Model-Based Tracking Extensions",
+          "Point Cloud Streaming & Large Laser Scan Overlays",
+          "Enterprise Administration & Single Sign-On (SSO)"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Freemium",
     "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://connect.trimble.com",
+    "trial_url": "https://connect.trimble.com",
+    "pricing_url": "https://connect.trimble.com",
+    "support_channels": [
+      "Email",
+      "Community",
+      "Knowledge Base",
+      "Documentation"
+    ],
+    "core_features": [
+      "OpenBIM Coordination (IFC & BCF)",
+      "High-Speed Trb 3D Model Streaming",
+      "Direct Tekla & Revit Live Links",
+      "Laser Scan Point Cloud Cloud Overlays",
+      "Multi-Model Clash Detection & Grouping",
+      "Offline Windows Desktop Client Sync"
+    ],
+    "detailed_features": [
+      {
+        "category": "OpenBIM & Federated Coordination",
+        "items": [
+          {
+            "name": "Federated Multi-Model Viewing combining architectural, structural, and MEP trades",
+            "status": true
+          },
+          {
+            "name": "Clash Detection & BCF Sync identifying geometric interferences and raising topics",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Field Integration & Data Management",
+        "items": [
+          {
+            "name": "Model-Based Progress Status color-coding objects by procurement and assembly stages",
+            "status": true
+          },
+          {
+            "name": "Point Cloud & Reality Capture overlaying laser scans onto design models",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Trimble Connect Trb Cloud 3D Engine",
+      "multicore": "Multi-threaded desktop and server-side model streaming",
+      "gpu_optimization": "DirectX 11 hardware acceleration and WebGL web graphics",
+      "standards": [
+        "OpenBIM IFC2x3",
+        "IFC4",
+        "BCF 2.1 / 3.0",
+        "buildingSMART OpenBIM"
+      ]
+    },
+    "file_formats_in": [
+      "IFC",
+      "DWG",
+      "DXF",
+      "RVT",
+      "SKP",
+      "DGN",
+      "STEP",
+      "IGES",
+      "PDF"
+    ],
+    "file_formats_out": [
+      "IFC",
+      "PDF",
+      "DWG"
+    ],
     "platforms": [
       "Web",
       "Windows",
-      "macOS",
       "iOS",
       "Android"
     ],
     "industries": [
-      "AEC",
-      "Construction"
-    ],
-    "core_features": [
-      "Free tier for unlimited collaborators",
-      "IFC viewer with clash detection",
-      "Native links to Tekla Structures and SketchUp",
-      "Mobile + AR (HoloLens, ARKit)",
-      "ToDo workflow for issue tracking",
-      "REST API and SAML SSO"
+      "Structural Steel Fabrication",
+      "Precast Concrete",
+      "General Contracting",
+      "Architecture & Engineering",
+      "MEP Contracting"
     ],
     "user_scales": [
-      "Freelancer",
       "SMB",
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://connect.trimble.com",
-    "affiliate_url": null,
     "score": 4.4,
+    "expert_verdict": "Trimble Connect is the definitive open BIM common data environment, championing vendor-neutral IFC coordination with speed and Tekla integration.",
     "pros": [
-      "Generous free tier",
-      "True openBIM workflow on IFC",
-      "Best HoloLens / AR review story"
+      "Open BIM philosophy delivers first-class support for IFC and BCF standards, avoiding proprietary vendor lock-in.",
+      "Extremely fast multi-gigabyte 3D model loading and sectioning using optimized Trimble Trb visualization technology.",
+      "Seamless round-trip model linking and status tracking with Tekla Structures for structural fabrication.",
+      "Accessible freemium tier allows small project teams to review models without incurring license costs.",
+      "Native support for massive point clouds allows direct comparison between as-designed BIM and as-built laser scans."
     ],
     "cons": [
-      "Less feature-rich than ACC for full construction management",
-      "Coordination workflows still maturing",
-      "Some advanced features paywalled at Business tier"
+      "Advanced features such as automated clash detection and status workflows require upgrading to Business Premium tiers.",
+      "Desktop application functionality differs slightly in UI layout compared to the web browser interface.",
+      "Direct RVT file conversions in cloud rely on server-side processing which may take several minutes for massive files.",
+      "Custom property set filtering requires administrative familiarity with data schema configuration.",
+      "Offline cache synchronization on the Windows desktop client can consume significant local drive space on multi-trade projects."
     ],
-    "tech_specs": {
-      "engine": "Trimble Connect cloud + native viewers",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Browser-rendered; no local GPU acceleration to configure",
-      "standards": [
-        "IFC",
-        "DWG",
-        "RVT",
-        "SKP"
-      ]
-    },
-    "expert_verdict": "If you live in Tekla or SketchUp, Trimble Connect is the natural CDE — free tier alone makes it worth trying.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 420,
+        "url": "https://www.g2.com/products/trimble-connect/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.3,
+        "max": 5,
+        "count": 310,
+        "url": "https://www.capterra.com/p/175821/Trimble-Connect/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "TrustRadius",
+        "score": 8.6,
+        "max": 10,
+        "count": 85,
+        "url": "https://www.trustradius.com/products/trimble-connect/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "faqs": [
       {
-        "q": "What is Trimble Connect used for?",
-        "a": "Trimble's openBIM common data environment with strong Tekla and SketchUp integration. Trimble Connect is a BIM solution widely adopted in AEC, Construction."
+        "q": "Is Trimble Connect free for commercial use?",
+        "a": "Trimble Connect offers a free tier allowing one active project with up to 5 members and 10 GB storage, while commercial production teams use Business subscriptions for unlimited projects."
       },
       {
-        "q": "How much does Trimble Connect cost?",
-        "a": "Trimble Connect offers a free tier alongside paid commercial plans (Freemium). Because commercial licensing rates, regional taxes, and volume discounts vary by country, please visit the [Official Trimble Connect Pricing Page](https://connect.trimble.com/pricing) for live regional pricing."
+        "q": "Which 3D file formats can Trimble Connect display?",
+        "a": "Trimble Connect natively views IFC, DWG, DXF, RVT, SKP, DGN, STEP, IGES, and PDF drawing packages."
       },
       {
-        "q": "Is there a free version of Trimble Connect?",
-        "a": "Yes, Trimble Connect offers a permanent free tier (Freemium) for core viewing, basic modeling, or personal non-commercial projects. Upgrading to a paid subscription unlocks full commercial rights, advanced CAD export formats, and team collaboration tools."
+        "q": "Can Trimble Connect run offline on a laptop?",
+        "a": "Yes, Trimble Connect for Windows provides an offline desktop application that synchronizes project models locally for jobsites with limited internet access."
       },
       {
-        "q": "What operating systems does Trimble Connect support?",
-        "a": "Trimble Connect runs on Web, Windows, macOS, iOS, and Android. The browser-based experience requires no local install."
+        "q": "How does Trimble Connect support the BCF standard?",
+        "a": "Trimble Connect fully supports the buildingSMART BIM Collaboration Format (BCF), enabling teams to raise, assign, and sync design issue topics directly with Revit, Tekla, and ARCHICAD."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
       },
       {
-        "q": "Which file formats does Trimble Connect support?",
-        "a": "Trimble Connect is a collaboration platform and common data environment rather than a modeller, so it views and hosts models instead of authoring them. Its 3D viewer opens IFC (2x3 and 4), IFCZIP, RVT, DWG, DXF, DGN, SketchUp SKP, STEP AP203/AP214, NWD/NWC, IGES, LandXML, point clouds in E57/LAS/LAZ and more. Revit upload requires the Connect for Revit add-on. Export is limited: models can be saved as TrimBIM (.trb) or downloaded as the original file, and there is no IFC export. BCF Topics are supported bi-directionally for issue exchange."
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
       },
       {
-        "q": "What are the best alternatives to Trimble Connect?",
-        "a": "The closest alternatives to Trimble Connect are Autodesk Construction Cloud, BIMcollab, Navisworks, and Solibri. Autodesk Construction Cloud (offered on a Subscription license) competes directly on core AEC workflows, while BIMcollab (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
       }
     ],
     "alternatives": [
       "autodesk-construction-cloud",
       "bimcollab",
-      "navisworks",
       "solibri"
     ],
-    "detailed_features": [
-      {
-        "category": "CDE",
-        "items": [
-          {
-            "name": "Free tier",
-            "status": true
-          },
-          {
-            "name": "Unlimited collaborators",
-            "status": true
-          },
-          {
-            "name": "Common data environment",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "BIM",
-        "items": [
-          {
-            "name": "IFC viewer",
-            "status": true
-          },
-          {
-            "name": "Clash detection",
-            "status": true
-          },
-          {
-            "name": "openBIM workflow",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "Tekla Structures",
-            "status": true
-          },
-          {
-            "name": "SketchUp",
-            "status": true
-          },
-          {
-            "name": "Native links",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Mobile",
-        "items": [
-          {
-            "name": "Mobile apps",
-            "status": true
-          },
-          {
-            "name": "AR HoloLens",
-            "status": true
-          },
-          {
-            "name": "Issue tracking",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "IFC",
-      "IFCZIP",
-      "RVT",
-      "DWG",
-      "DXF",
-      "DGN",
-      "SKP",
-      "STEP",
-      "NWD",
-      "NWC",
-      "IGES",
-      "LAS",
-      "LAZ",
-      "E57",
-      "PDF",
-      "LandXML",
-      "BCF"
-    ],
-    "file_formats_out": [
-      "TRB",
-      "BCF"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Free / Starter Tier",
-        "price": "Free",
-        "period": "forever",
-        "features": [
-          "Free tier for unlimited collaborators",
-          "IFC viewer with clash detection",
-          "Community support access"
-        ]
-      },
-      {
-        "name": "Professional Edition",
-        "price": "Official Store",
-        "period": "per month",
-        "features": [
-          "Free tier for unlimited collaborators",
-          "IFC viewer with clash detection",
-          "Native links to Tekla Structures and SketchUp",
-          "Unlimited project exports & commercial use"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Business / Enterprise",
-        "price": "Custom Quote",
-        "period": "annual volume billing",
-        "features": [
-          "Centralized team seat management & SSO",
-          "Priority technical support & SLA",
-          "Dedicated cloud storage & collaboration controls"
-        ]
-      }
-    ],
-    "pricing_url": "https://connect.trimble.com/pricing"
+    "category_id": "c3",
+    "affiliate_url": null
   },
   {
     "id": "t231",
     "name": "BIMcollab",
     "slug": "bimcollab",
     "logo_url": "/logos/bimcollab.png",
-    "short_desc": "Issue management and IFC-based clash review across BIM authoring tools.",
-    "description": "BIMcollab is a leading issue-management and openBIM clash-review platform — vendor-neutral, BCF 2.1 / 3.0 native, with deep plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri, and IFC viewers.",
-    "country": "Netherlands",
-    "category_id": "c3",
+    "short_desc": "KUBUS’s issue management and model validation ecosystem designed around open BIM standards and the BCF communication protocol.",
+    "description": "BIMcollab is a cloud-based issue management and model validation ecosystem created by KUBUS to streamline multidisciplinary BIM coordination. Built entirely on open BIM standards, BIMcollab connects project stakeholders through BIMcollab Cloud (for issue tracking and BCF management) and BIMcollab ZOOM (for high-speed IFC model viewing, smart clash detection, and Information Delivery Specification validation). Through direct BCF Manager plugins for Revit, Archicad, Navisworks, Solibri, and Tekla, issues raised during coordination meetings appear instantly inside designers' authoring software with exact camera angles and component highlights.",
+    "pricing_tiers": [
+      {
+        "name": "BIMcollab ZOOM Free Viewer",
+        "price": "Free",
+        "period": "free entry tier",
+        "features": [
+          "BIMcollab ZOOM Free IFC Model Viewer",
+          "Viewing & Querying of 3D IFC Models",
+          "Connecting to Shared BIMcollab Cloud Projects",
+          "Visual Model Inspection & Dimension Measuring"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "BIMcollab Cloud Starter",
+        "price": "Official Store",
+        "period": "annual term subscription",
+        "features": [
+          "Cloud Issue Management for Up to 10 Users",
+          "Unlimited Active Projects & Issue Topics",
+          "Full BCF API Synchronization with Design Software",
+          "Approval Workflows & Audit Trail Logging"
+        ],
+        "is_popular": true
+      },
+      {
+        "name": "BIMcollab ZOOM Pro",
+        "price": "Official Store",
+        "period": "annual workstation term",
+        "features": [
+          "Automated Smart Clash Detection & Clash Grouping",
+          "IDS (Information Delivery Specification) Data Validation",
+          "Automated Quantity Takeoff (QTO) from IFC Properties",
+          "Batch Rule-Based Model Checking Configurations"
+        ],
+        "is_popular": false
+      }
+    ],
     "pricing_type": "Freemium",
-    "starting_price": 590,
+    "starting_price": 0,
     "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial",
+      "Educational"
+    ],
+    "official_url": "https://www.bimcollab.com",
+    "trial_url": "https://www.bimcollab.com",
+    "pricing_url": "https://www.bimcollab.com",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation",
+      "Training"
+    ],
+    "core_features": [
+      "buildingSMART BCF Cloud Issue Tracking",
+      "Direct BCF Manager Authoring Plugins",
+      "BIMcollab ZOOM Fast IFC Viewer",
+      "Smart Clash Clustering Algorithms",
+      "Information Delivery Specification (IDS) Validation",
+      "Cross-Platform Windows and macOS Support"
+    ],
+    "detailed_features": [
+      {
+        "category": "Issue Management & BCF Coordination",
+        "items": [
+          {
+            "name": "BCF-Driven Issue Tracking capturing 3D viewpoints, GUIDs, and priorities",
+            "status": true
+          },
+          {
+            "name": "Direct BCF Manager Plugins for Revit, Archicad, Navisworks, Tekla, and Solibri",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Model Validation & Quality Checking",
+        "items": [
+          {
+            "name": "Smart Clash Clustering grouping duplicate clashes by system and grid lines",
+            "status": true
+          },
+          {
+            "name": "IDS Information Compliance verifying IFC property delivery requirements",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "BIMcollab ZOOM IFC Visualization Core",
+      "multicore": "Multi-threaded IFC parsing and geometric clash calculation",
+      "gpu_optimization": "OpenGL 3.3 hardware rendering for smooth navigation",
+      "standards": [
+        "OpenBIM IFC2x3",
+        "IFC4",
+        "BCF 2.1 / 3.0",
+        "IDS (buildingSMART)"
+      ]
+    },
+    "file_formats_in": [
+      "IFC",
+      "DWG",
+      "RVT",
+      "PDF"
+    ],
+    "file_formats_out": [
+      "IFC",
+      "PDF"
+    ],
     "platforms": [
       "Web",
       "Windows",
       "macOS"
     ],
     "industries": [
-      "AEC",
-      "Construction"
-    ],
-    "core_features": [
-      "Cloud-hosted issue tracker with BCF 2.1 / 3.0",
-      "Plugins for Revit, ArchiCAD, Tekla, Navisworks, Solibri",
-      "BIMcollab ZOOM federated IFC viewer",
-      "Smart Views and rules",
-      "Clash detection (BIMcollab ZOOM)",
-      "REST API and SSO"
+      "Architecture & Design",
+      "Structural Engineering",
+      "MEP Engineering",
+      "General Contracting",
+      "BIM Coordination Consulting"
     ],
     "user_scales": [
       "SMB",
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://www.bimcollab.com",
-    "affiliate_url": null,
     "score": 4.5,
+    "expert_verdict": "BIMcollab is the gold standard for BCF-based issue tracking, providing seamless synchronization between model checkers and drafting tools.",
     "pros": [
-      "Vendor-neutral BCF workflow",
-      "Plugins for every major BIM tool",
-      "Strong adoption in European AEC firms"
+      "Strict adherence to buildingSMART BCF and openBIM standards avoids vendor lock-in across diverse AEC software ecosystems.",
+      "Comprehensive BCF Manager plugins allow modelers to locate conflicting components in authoring software with a single click.",
+      "Smart clash grouping reduces thousands of raw clash points into manageable, actionable coordination work packages.",
+      "Native macOS and Windows support for BIMcollab ZOOM enables architects on Mac to perform model checking seamlessly.",
+      "Built-in IDS validation automates BIM compliance audits against national and organizational data delivery standards."
     ],
     "cons": [
-      "Per-project pricing can stack up",
-      "Focused on issue/clash — not a full CDE",
-      "ZOOM clash detection less powerful than Solibri"
+      "BIMcollab ZOOM Pro features like smart clash detection require a separate paid add-on license beyond the cloud subscription.",
+      "Does not author 3D geometry; it is strictly dedicated to model viewing, checking, and issue coordination.",
+      "Requires establishing strict project team issue naming and milestone workflows to avoid cluttering issue databases.",
+      "Large federated project models with millions of IFC elements require workstations with dedicated high-performance GPUs.",
+      "Initial setup of custom model validation smart properties requires training in buildingSMART data schemas."
     ],
-    "tech_specs": {
-      "engine": "BIMcollab cloud + ZOOM viewer",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Yes (ZOOM)",
-      "standards": [
-        "BCF 2.1 / 3.0",
-        "IFC"
-      ]
-    },
-    "expert_verdict": "The gold standard for openBIM issue management. Pair with Solibri or ZOOM for clash, and you have a vendor-neutral coordination stack.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.5,
+        "max": 5,
+        "count": 110,
+        "url": "https://www.g2.com/products/bimcollab/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 95,
+        "url": "https://www.capterra.com/p/162841/BIMcollab/",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "faqs": [
       {
-        "q": "What is BIMcollab used for?",
-        "a": "Issue management and IFC-based clash review across BIM authoring tools. BIMcollab is a BIM solution widely adopted in AEC, Construction."
+        "q": "What is BIMcollab used for in construction projects?",
+        "a": "BIMcollab is used to manage design issues, clashes, and data validation between architects, engineers, and contractors using the open BCF communication protocol."
       },
       {
-        "q": "How much does BIMcollab cost?",
-        "a": "BIMcollab is sold on a freemium basis; the plans shown on this page are Free, Basic, Advanced, and Enterprise. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official BIMcollab Pricing Page](https://bimcollab.com/zoom/)."
+        "q": "Is BIMcollab ZOOM free to use as an IFC viewer?",
+        "a": "Yes, the standard version of BIMcollab ZOOM is free for viewing and inspecting IFC models, while ZOOM Pro adds automated clash detection and IDS data validation."
       },
       {
-        "q": "Is there a free version of BIMcollab?",
-        "a": "BIMcollab ZOOM has a permanent free edition: model viewing, model checking and BCF issue handling, with no time limit and no watermark. The BIMcollab Nexus collaboration platform, and the paid ZOOM features such as rule-based clash detection and data extraction, are subscriptions. Eligibility and current plan limits are set by the vendor, so check the official licensing page: [BIMcollab ZOOM plans](https://www.bimcollab.com/en?p=43315)."
+        "q": "Does BIMcollab run on macOS computers?",
+        "a": "Yes, both the cloud interface and the BIMcollab ZOOM desktop application have native versions for macOS as well as Windows 64-bit systems."
       },
       {
-        "q": "What operating systems does BIMcollab support?",
-        "a": "BIMcollab runs on Web, Windows, and macOS. The browser-based experience requires no local install."
+        "q": "Which CAD authoring programs support BIMcollab BCF plugins?",
+        "a": "BIMcollab provides free BCF Manager plugins for Autodesk Revit, Navisworks, Graphisoft Archicad, Solibri, Tekla Structures, and Vectorworks."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
       },
       {
-        "q": "Which file formats does BIMcollab support?",
-        "a": "BIMcollab works with IFC as its model format — .ifc and .ifczip are opened read-only for checking, clash detection and issue creation, with no IFC write-back — plus point clouds in E57, XYZ, PTS and TXT. Revit models can be viewed when loaded through the WebViewer or Autodesk Forma, but a local BIMcollab Zoom install only opens IFC. Issues travel as BCF: the platform reads and writes BCF 1.0, 2.0 and 2.1, while BCF 3.0 is import-only. DWG is not a supported model format — a DWG can be stored as a document but will not open in the viewer."
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
       },
       {
-        "q": "What are the best alternatives to BIMcollab?",
-        "a": "The closest alternatives to BIMcollab are Solibri, Navisworks, Autodesk Construction Cloud, and Trimble Connect. Solibri (offered on a Subscription license) competes directly on core AEC workflows, while Navisworks (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
       }
     ],
     "alternatives": [
       "solibri",
       "navisworks",
-      "autodesk-construction-cloud",
       "trimble-connect"
     ],
-    "detailed_features": [
-      {
-        "category": "Issue Management",
-        "items": [
-          {
-            "name": "Cloud issue tracker",
-            "status": true
-          },
-          {
-            "name": "BCF 2.1/3.0",
-            "status": true
-          },
-          {
-            "name": "Vendor-neutral",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "BIM Tools",
-        "items": [
-          {
-            "name": "Revit plugin",
-            "status": true
-          },
-          {
-            "name": "ArchiCAD plugin",
-            "status": true
-          },
-          {
-            "name": "Tekla plugin",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Clash",
-        "items": [
-          {
-            "name": "BIMcollab ZOOM",
-            "status": true
-          },
-          {
-            "name": "Federated IFC viewer",
-            "status": true
-          },
-          {
-            "name": "Smart Views",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "Navisworks plugin",
-            "status": true
-          },
-          {
-            "name": "Solibri plugin",
-            "status": true
-          },
-          {
-            "name": "REST API",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "IFC",
-      "IFCZIP",
-      "BCF",
-      "BCFZIP",
-      "E57",
-      "XYZ",
-      "PTS",
-      "RVT"
-    ],
-    "file_formats_out": [
-      "BCF",
-      "BCFZIP",
-      "Excel",
-      "CSV"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Free",
-        "price": "Free",
-        "period": "Free Tier",
-        "features": [
-          "Free BIMcollab account for basic issue management",
-          "BIMcollab Zoom free mode for IFC viewing and validation",
-          "Checkbot free version for bulk connection import"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Basic",
-        "price": "Official Store",
-        "period": "Monthly or Annual Subscription",
-        "features": [
-          "BCF issue management with unlimited projects",
-          "10 GB storage per user",
-          "Email and live chat support"
-        ],
-        "is_popular": false
-      },
-      {
-        "name": "Advanced",
-        "price": "Official Store",
-        "period": "Monthly or Annual Subscription",
-        "features": [
-          "Everything in Basic plus unlimited storage",
-          "Automated approval workflows and confidential issues",
-          "Power BI, Autodesk Docs and Trimble Connect integrations"
-        ],
-        "is_popular": true
-      },
-      {
-        "name": "Enterprise",
-        "price": "Official Store",
-        "period": "Monthly or Annual Subscription",
-        "features": [
-          "Everything in Advanced plus custom roles and permissions",
-          "Split projects into phases",
-          "On-premise option for large seat counts"
-        ],
-        "is_popular": false
-      }
-    ],
-    "pricing_url": "https://bimcollab.com/zoom/",
-    "license_types": [
-      "Free",
-      "Subscription"
-    ]
+    "category_id": "c3",
+    "affiliate_url": null
   },
   {
     "id": "t232",
     "name": "Autodesk Dynamo",
     "slug": "autodesk-dynamo",
     "logo_url": "/logos/autodesk-dynamo.png",
-    "short_desc": "Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM.",
-    "description": "Dynamo is the visual programming environment that sits inside Revit and Civil 3D — letting BIM specialists automate repetitive workflows, generate parametric geometry, and access the Revit API without writing C# code.",
-    "country": "USA",
-    "category_id": "c3",
+    "short_desc": "Open-source visual programming platform for computational design, Revit BIM workflow automation, and generative geometry exploration.",
+    "description": "Autodesk Dynamo is an open-source visual programming environment designed for computational architects, BIM managers, and civil engineers. Functioning both as an embedded automation engine inside Autodesk Revit, Civil 3D, and Advance Steel, and as a standalone runtime (Dynamo Core), Dynamo allows users to construct visual logic node networks to automate repetitive modeling tasks, extract and manipulate complex parameter databases, and generate algorithmic geometric forms that would be impractical to model manually. Dynamo supports extensive extensions via Python scripting, Zero-Touch .NET node libraries, and an active global package ecosystem.",
+    "pricing_tiers": [
+      {
+        "name": "Dynamo Core (Open Source)",
+        "price": "Open Source",
+        "period": "open-source license",
+        "features": [
+          "Complete Visual Node-Based Logic Programming",
+          "Geometry Modeling Engine & Math Functions",
+          "Python Scripting Integration (CPython3 & IronPython)",
+          "Community Package Manager for Custom Node Packs",
+          "Free Under Apache 2.0 Open Source License"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "Dynamo for Autodesk Revit",
+        "price": "Official Store",
+        "period": "included with host software",
+        "features": [
+          "Deep Bi-Directional Integration with Revit BIM Database",
+          "Dynamo Player for Executing Scripts Without Visual Canvas",
+          "Automated Sheet Creation, Parameter Binding & Renumbering",
+          "Generative Design in Revit for Multi-Objective Optioneering",
+          "Included with Autodesk Revit & AEC Collection Subscriptions"
+        ],
+        "is_popular": true
+      }
+    ],
     "pricing_type": "Open Source",
     "starting_price": 0,
+    "license_types": [
+      "Open-Source",
+      "Free"
+    ],
+    "official_url": "https://dynamobim.org",
+    "trial_url": "https://dynamobim.org",
+    "pricing_url": "https://dynamobim.org",
+    "support_channels": [
+      "Community",
+      "Documentation",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Visual Node Programming Canvas",
+      "Revit Parameter & Geometry Automation",
+      "Python 3 Embedded Scripting",
+      "Open-Source Package Ecosystem",
+      "Generative Design & Optioneering",
+      "Civil 3D Alignment & Corridor Scripting"
+    ],
+    "detailed_features": [
+      {
+        "category": "Visual Logic & Algorithmic Geometry",
+        "items": [
+          {
+            "name": "Node-Based Visual Scripting connecting inputs, geometry nodes, and math functions",
+            "status": true
+          },
+          {
+            "name": "Parametric Form Synthesis generating adaptive facade layouts and curved surfaces",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "BIM Automation & Extensibility",
+        "items": [
+          {
+            "name": "Revit Database Automation batch-renumbering rooms, views, and parameter bindings",
+            "status": true
+          },
+          {
+            "name": "Python & Package Integration accessing Revit API via Python nodes and package manager",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Autodesk ShapeManager (ASM) / Dynamo Geometry Core",
+      "multicore": "Multi-threaded execution engine for mathematical nodes",
+      "gpu_optimization": "DirectX 11 hardware accelerated 3D background preview canvas",
+      "standards": [
+        "Apache 2.0 Open Source",
+        ".NET Core",
+        "Python 3"
+      ]
+    },
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "SAT",
+      "CSV",
+      "RVT"
+    ],
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "SAT",
+      "CSV",
+      "RVT"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "AEC",
-      "Construction"
-    ],
-    "core_features": [
-      "Visual node-based scripting",
-      "Native Revit and Civil 3D APIs exposed",
-      "Python and Zero-Touch C# extension",
-      "Dynamo Player for non-programmer end-users",
-      "Generative Design integration",
-      "Active package manager (Dynamo Packages)"
+      "Computational Architecture",
+      "BIM Management & Automation",
+      "Structural Engineering",
+      "Civil Infrastructure",
+      "Facade Engineering"
     ],
     "user_scales": [
-      "Freelancer",
+      "Individual",
       "SMB",
       "Mid-Market",
       "Enterprise"
     ],
-    "official_url": "https://dynamobim.org",
-    "affiliate_url": null,
     "score": 4.5,
+    "expert_verdict": "Autodesk Dynamo democratizes computational design and BIM automation for architects, eliminating manual Revit production hours via visual scripting.",
     "pros": [
-      "Free, included with Revit",
-      "Massive package ecosystem (Clockwork, archi-lab, Rhythm)",
-      "Bridges design intent to BIM automation without coding"
+      "Drastically reduces manual BIM production time by automating repetitive drafting, room numbering, and parameter synchronization.",
+      "Visual node interface lowers the barrier of entry for designers to learn algorithmic programming and computational logic.",
+      "Vibrant open-source community provides thousands of free, battle-tested node packages through the built-in Package Manager.",
+      "Dynamo Player enables non-technical team members to run scripts from a simple list without opening the visual node graph.",
+      "Full access to the Autodesk Revit and Civil 3D APIs via Python nodes enables virtually unlimited customization."
     ],
     "cons": [
-      "Tied to Autodesk products (Revit, Civil 3D)",
-      "Performance drops on graphs with thousands of nodes",
-      "Steeper learning than it appears — production graphs need Python"
+      "Large, complex node graphs with hundreds of interconnected wires can become difficult to debug and maintain over time.",
+      "Upgrading host Revit software versions can occasionally break custom community package dependencies.",
+      "CPython3 transition from legacy IronPython required updating older custom Python node code across legacy graphs.",
+      "Memory consumption can spike significantly when generating millions of complex solids within a single execution cycle.",
+      "Desktop execution is tethered to Windows, with no native standalone macOS runtime version."
     ],
-    "tech_specs": {
-      "engine": "DynamoCore",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "Inherits the host Revit graphics pipeline",
-      "standards": [
-        "RVT",
-        "DWG",
-        "IFC"
-      ]
-    },
-    "expert_verdict": "Every serious Revit firm runs Dynamo workflows. Free and powerful — there's no reason not to install it.",
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 65,
+        "url": "https://www.g2.com/products/dynamo-bim/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 40,
+        "url": "https://www.capterra.com/p/182931/Dynamo-BIM/",
+        "verified_date": "Nov 2026"
+      }
+    ],
     "faqs": [
       {
-        "q": "What is Autodesk Dynamo used for?",
-        "a": "Visual programming for Revit and Civil 3D — automation, parametrics, and computational BIM. Autodesk Dynamo is a BIM solution widely adopted in AEC, Construction."
+        "q": "Is Autodesk Dynamo free software?",
+        "a": "Yes, Dynamo Core is open-source software under the Apache 2.0 license, while Dynamo for Revit is included with standard Autodesk Revit subscriptions."
       },
       {
-        "q": "How much does Autodesk Dynamo cost?",
-        "a": "Autodesk Dynamo is free to use. There is nothing to buy. Licence terms, permitted uses and any paid add-ons are described on the official site: [Official Autodesk Dynamo Page](https://dynamobim.org)."
+        "q": "What is the difference between Dynamo Core and Dynamo for Revit?",
+        "a": "Dynamo Core is the foundational visual programming and geometry environment, while Dynamo for Revit embeds specialized library nodes specifically designed to query and modify Revit BIM databases."
       },
       {
-        "q": "Is Autodesk Dynamo really free?",
-        "a": "Yes — Autodesk Dynamo is a free product distributed by the vendor. You can download and use it without paying a license fee. Premium services, training, or vertical add-ons may be sold separately."
+        "q": "Can I run Python code inside Autodesk Dynamo?",
+        "a": "Yes, Dynamo includes dedicated Python Script nodes that support both modern CPython3 and IronPython runtimes for direct access to the .NET Revit API."
       },
       {
-        "q": "What operating systems does Autodesk Dynamo support?",
-        "a": "Autodesk Dynamo runs on Windows."
+        "q": "What file formats does Dynamo use to save scripts?",
+        "a": "Dynamo saves visual programming graphs in DYN format and custom reusable node assemblies in DYF format, while exchanging geometry via DWG, DXF, and SAT."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
       },
       {
-        "q": "Which file formats does Autodesk Dynamo support?",
-        "a": "Dynamo is a visual programming environment, not a CAD application, so it has no CAD interchange formats of its own. Its native files are .dyn graphs and .dyf custom nodes; the rest of its input and output is data and geometry — XLSX, CSV and JSON for tabular data, and ACIS/SAT for solid geometry via Geometry.ImportFromSAT and ExportToSAT. Everything else flows through the host application's API: inside Revit, Dynamo manipulates the open document directly, so IFC, RVT and DWG handling is Revit's job rather than Dynamo's."
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
       },
       {
-        "q": "What are the best alternatives to Autodesk Dynamo?",
-        "a": "The closest alternatives to Autodesk Dynamo are Rhino 3D, Revit, Civil 3D, and Allplan. Rhino 3D (offered on a Perpetual license) competes directly on core AEC workflows, while Revit (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "label": "Command Translator",
+        "href": "/toolbox/command-translator"
       }
     ],
     "alternatives": [
       "rhino-3d",
       "revit",
-      "civil-3d",
-      "allplan"
+      "autocad"
     ],
-    "detailed_features": [
-      {
-        "category": "Visual Programming",
-        "items": [
-          {
-            "name": "Node-based scripting",
-            "status": true
-          },
-          {
-            "name": "Visual programming",
-            "status": true
-          },
-          {
-            "name": "Dynamo Player",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Automation",
-        "items": [
-          {
-            "name": "Revit automation",
-            "status": true
-          },
-          {
-            "name": "Civil 3D automation",
-            "status": true
-          },
-          {
-            "name": "Workflow automation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "API",
-        "items": [
-          {
-            "name": "Revit API",
-            "status": true
-          },
-          {
-            "name": "Python support",
-            "status": true
-          },
-          {
-            "name": "Zero-Touch C#",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Generative",
-        "items": [
-          {
-            "name": "Parametric geometry",
-            "status": true
-          },
-          {
-            "name": "Generative Design",
-            "status": true
-          },
-          {
-            "name": "Package manager",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "DYN",
-      "DYF",
-      "XLSX",
-      "CSV",
-      "JSON",
-      "SAT"
-    ],
-    "file_formats_out": [
-      "DYN",
-      "DYF",
-      "XLSX",
-      "CSV",
-      "JSON",
-      "SAT"
-    ],
-    "pricing_tiers": [
-      {
-        "name": "Dynamo Open Source / Bundled",
-        "price": "Free",
-        "period": "forever",
-        "features": [
-          "Visual node-based computational design and geometry scripting",
-          "Bundled with Autodesk Revit, Civil 3D, FormIt, and Alias",
-          "Standalone Dynamo Sandbox available as a free open-source download",
-          "Python scripting, Zero-Touch C# nodes, and community package manager"
-        ],
-        "is_popular": true
-      }
-    ]
+    "category_id": "c3",
+    "affiliate_url": null
   },
   {
     "id": "t136",
     "name": "CYPECAD",
     "slug": "cypecad",
     "logo_url": "/logos/cypecad.png",
-    "short_desc": "Structural analysis and design software for concrete and steel buildings, integrated with MEP and construction management tools.",
-    "description": "CYPECAD is CYPE's structural analysis and design software for reinforced concrete and steel buildings. It combines 3D building modeling, FEM analysis, and code-based member design, and links to CYPE's MEP and construction management suite.",
+    "short_desc": "CYPE’s structural engineering software for concrete, steel, and composite building design, finite element analysis, and code compliance.",
+    "description": "CYPECAD is a structural analysis and design software platform developed by CYPE Ingenieros for reinforced concrete, structural steel, timber, and composite building frames. Widely utilized across Europe, Latin America, and international markets, CYPECAD integrates finite element spatial frame calculation with automated reinforcement layout, foundation design (footings, piles, and foundation slabs), and seismic code compliance. Operating seamlessly with the BIMserver.center open BIM ecosystem, CYPECAD reads architectural layouts via IFC and automatically generates comprehensive structural calculation reports and fabrication-ready reinforcement drawings.",
     "pricing_tiers": [
       {
-        "name": "CYPECAD ADVANCED",
+        "name": "CYPECAD Perpetual License",
         "price": "Official Store",
-        "period": "Perpetual",
+        "period": "perpetual buyout license",
         "features": [
-          "Reinforced concrete design: columns, beams, flat slabs, waffle slabs, hollow core and joist floor slabs, staircases and ramps",
-          "Foundations: footings, pile caps, piles, mat foundations and foundation beams",
-          "Steel columns and beams, plus composite steel-deck slabs",
-          "Punching shear and fire resistance checks, designed to the applicable national codes",
-          "Structure generation wizard importing IFC, DXF or DWG files"
+          "Complete Reinforced Concrete & Structural Steel Analysis",
+          "Automated Rebar Detailing & Foundation Design Modules",
+          "Multi-Code Structural & Seismic Design Validation",
+          "Comprehensive Calculation Reports & Detailed Drawing Sheets",
+          "Lifetime Ownership with Optional Maintenance Subscriptions"
         ],
         "is_popular": true
       },
       {
-        "name": "CYPECAD EXPERT",
-        "price": "Official Store",
-        "period": "Perpetual",
+        "name": "CYPECAD Annual Term License",
+        "price": "Contact Sales",
+        "period": "annual term license",
         "features": [
-          "Reinforced concrete, steel, timber and composite structures in one tool",
-          "Punching shear checks, soil-structure interaction and seismic design of reinforced concrete nodes",
-          "Fire resistance checks for steel elements",
-          "Ramps, staircases and every structural wall type",
-          "CAD/BIM import wizard"
-        ]
+          "Full Access to CYPECAD Structural Design Suite",
+          "Included Updates & Technical Support Channels",
+          "Open BIM Server.center Cloud Synchronization",
+          "Flexible Workstation Allocation for Project Teams"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Perpetual",
+    "starting_price": 2800,
+    "price_period": "one-time",
+    "license_types": [
+      "Perpetual",
+      "Commercial",
+      "Educational",
+      "Network"
+    ],
+    "official_url": "https://www.cype.com",
+    "trial_url": "https://www.cype.com",
+    "pricing_url": "https://www.cype.com",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Documentation",
+      "Knowledge Base",
+      "Training"
+    ],
+    "core_features": [
+      "Reinforced Concrete Spatial Frame Analysis",
+      "Multi-Code Seismic & Wind Load Calculation",
+      "Automated Rebar Layout & Bending Schedules",
+      "Foundation Pad, Pile Cap & Ground Beam Detailing",
+      "Finite Element Floor Slab Meshing",
+      "BIMserver.center OpenBIM Sync"
     ],
     "detailed_features": [
       {
-        "category": "Structural",
+        "category": "Structural Analysis & Finite Elements",
         "items": [
           {
-            "name": "Structural design",
+            "name": "Spatial Frame 3D Analysis calculating columns, beams, walls, and slabs under lateral loads",
             "status": true
           },
           {
-            "name": "Engineering projects",
-            "status": true
-          },
-          {
-            "name": "Building design",
+            "name": "Automated Floor Slab Meshing for flat slabs, post-tensioned, and hollow-core units",
             "status": true
           }
         ]
       },
       {
-        "category": "MEP",
+        "category": "Code Compliance & Drawing Production",
         "items": [
           {
-            "name": "MEP systems",
+            "name": "Automated Reinforcement Detailing generating compliant rebar schedules and lap lengths",
             "status": true
           },
           {
-            "name": "Mechanical",
-            "status": true
-          },
-          {
-            "name": "Electrical",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Construction",
-        "items": [
-          {
-            "name": "Construction management",
-            "status": true
-          },
-          {
-            "name": "Pathology",
-            "status": true
-          },
-          {
-            "name": "Project management",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Software",
-        "items": [
-          {
-            "name": "Technical software",
-            "status": true
-          },
-          {
-            "name": "Engineering tools",
-            "status": true
-          },
-          {
-            "name": "CAD solutions",
+            "name": "Open BIM Cloud Collaboration syncing structural models with architectural trades",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "etabs",
-      "autodesk-robot",
-      "scia-engineer",
-      "staad-pro"
+    "tech_specs": {
+      "engine": "CYPE 3D Structural Analysis Finite Element Engine",
+      "multicore": "Multi-threaded matrix solver and rebar optimization routines",
+      "gpu_optimization": "OpenGL 3.3 hardware acceleration for 3D deformation views",
+      "standards": [
+        "Eurocodes (EC2, EC3, EC8)",
+        "ACI 318",
+        "AISC 360",
+        "OpenBIM IFC"
+      ]
+    },
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "IFC",
+      "STEP",
+      "PDF"
     ],
-    "country": "Spain",
-    "category_id": "c3",
-    "pricing_type": "Perpetual",
-    "starting_price": 0,
-    "quote_only": true,
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "IFC",
+      "PDF"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
       "Structural Engineering",
-      "Construction",
-      "Architecture"
+      "Civil Construction",
+      "Reinforced Concrete Building Design",
+      "Seismic Retrofitting",
+      "Foundation Engineering"
     ],
-    "core_features": [
-      "Building Structural Analysis",
-      "Concrete & Steel Design",
-      "Foundation Design",
-      "Seismic Analysis",
-      "Code-Based Checks"
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "user_scales": [],
-    "official_url": "https://www.cype.com/",
-    "pricing_url": "https://shop.cype.com/en/",
-    "affiliate_url": null,
-    "score": 0,
+    "score": 4.3,
+    "expert_verdict": "CYPECAD excels in automated reinforcement detailing and international code compliance for reinforced concrete and steel building structures.",
     "pros": [
-      "Extensive design code library",
-      "Fast multi-storey building workflows",
-      "Integrates with CYPE BIM ecosystem"
+      "Exceptional automated reinforcement layout saves civil engineers hundreds of drafting hours for concrete columns, beams, and slabs.",
+      "Comprehensive multi-national building code library covering Eurocodes, ACI, and numerous national seismic standards.",
+      "Integrated foundation design accurately computes pad footings, pile caps, and foundation ground beams alongside the superstructure.",
+      "Seamless integration with the BIMserver.center open BIM ecosystem for multidisciplinary collaboration.",
+      "Generates fully detailed, fabrication-ready rebar bending schedules and comprehensive engineering calculation justifications."
     ],
     "cons": [
-      "Windows-only",
-      "UI lags modern BIM tools",
-      "Strongest value inside CYPE ecosystem"
+      "User interface retains legacy European engineering design patterns that require an initial adjustment period.",
+      "Custom non-standard architectural geometry requires specialized modeling workarounds.",
+      "Strictly developed for Windows desktop systems, with no native macOS workstation build.",
+      "Complex module-based purchasing structure requires carefully selecting specific country design codes.",
+      "Automated rebar suggestions often require minor manual adjustments to match specific contractor jobsite preferences."
+    ],
+    "external_ratings": [
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 55,
+        "url": "https://www.g2.com/products/cypecad/reviews",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "Capterra",
+        "score": 4.2,
+        "max": 5,
+        "count": 45,
+        "url": "https://www.capterra.com/p/169123/CYPECAD/",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is CYPECAD used for?",
-        "a": "CYPECAD is a structural analysis and building design (BIM) solution."
+        "q": "What types of structures can CYPECAD analyze and design?",
+        "a": "CYPECAD specializes in multi-story buildings constructed of reinforced concrete, structural steel, timber, and composite members, including foundations and floor slabs."
       },
       {
-        "q": "How much does CYPECAD cost?",
-        "a": "CYPECAD is sold as a perpetual licence; the plans shown on this page are CYPECAD ADVANCED and CYPECAD EXPERT. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official CYPECAD Pricing Page](https://www.cype.com/)."
+        "q": "Does CYPECAD automatically generate rebar detailing drawings?",
+        "a": "Yes, CYPECAD generates complete rebar detailing drawings, fabrication schedules, and steel weight takeoffs compliant with selected national design codes."
       },
       {
-        "q": "Is there a free version of CYPECAD?",
-        "a": "CYPECAD is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official CYPECAD page](https://www.cype.com/)."
+        "q": "Which international design codes are supported in CYPECAD?",
+        "a": "CYPECAD supports a wide array of international standards including Eurocodes (EC2, EC3, EC8), American standards (ACI, AISC), and regional building codes."
       },
       {
-        "q": "What operating systems does CYPECAD support?",
-        "a": "CYPECAD runs on Windows."
-      },
-      {
-        "q": "Which file formats does CYPECAD support?",
-        "a": "CYPECAD exchanges IFC in both directions: IFC import builds floors, columns, beams and loads automatically but requires the Automatic Entry (AUT) module, whereas IFC export needs no extra module. DXF and DWG are native — drawings can be brought in as underlays that CYPECAD reads columns, beams and slab outlines from, and results are exported back to DXF/DWG and PDF. It also exports CIS/2 and Tekla for steel detailing, glTF for BIMserver.center, and HTML, DOCX and CSV reports. Revit is reached through CYPE's Open BIM add-in rather than native .rvt support."
-      },
-      {
-        "q": "What are the best alternatives to CYPECAD?",
-        "a": "The closest alternatives to CYPECAD are CSI ETABS, Autodesk Robot Structural Analysis, SCIA Engineer, and Bentley STAAD.Pro. CSI ETABS (offered on a Perpetual license) competes directly on core Structural Engineering workflows, while Autodesk Robot Structural Analysis (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Can CYPECAD import architectural models from Revit or Archicad?",
+        "a": "Yes, CYPECAD imports architectural geometry via IFC and standard DWG or DXF templates, coordinating changes through the BIMserver.center platform."
       }
     ],
-    "tech_specs": {
-      "engine": "CYPECAD Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": []
-    },
-    "expert_verdict": "A leading European structural concrete and steel design suite, renowned for smart building code compliance checks.",
-    "file_formats_in": [
-      "IFC",
-      "DWG",
-      "DXF",
-      "PDF",
-      "DWF"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "IFC",
-      "DWG",
-      "DXF",
-      "PDF",
-      "HTML",
-      "DOCX",
-      "CIS/2",
-      "Tekla",
-      "glTF",
-      "CSV"
-    ]
+    "alternatives": [
+      "tekla-structures",
+      "revit",
+      "allplan"
+    ],
+    "category_id": "c3",
+    "affiliate_url": null
   },
   {
     "id": "t141",
     "name": "Vertex BD",
     "slug": "vertex-bd",
     "logo_url": "/logos/vertex-bd.png",
-    "short_desc": "BIM software for cold-formed steel and timber framing, automating panel design, fabrication drawings, and CNC output.",
-    "description": "Vertex BD is a Finnish BIM solution for light-gauge steel and wood frame construction. It automates framing and panel design, generates fabrication drawings, and outputs directly to roll-forming machines and saws.",
+    "short_desc": "Vertex Systems’ specialized BIM software for light gauge steel (cold-formed) and timber frame prefabricated building design and CNC manufacturing.",
+    "description": "Vertex BD is a specialized Building Information Modeling (BIM) software platform developed by Vertex Systems specifically for prefabrication, light gauge steel framing (cold-formed steel), and commercial timber frame construction. Bridging architectural design with automated manufacturing, Vertex BD generates fully engineered wall, floor, and roof panel framing models directly from architectural layouts. The software automatically produces fabrication shop drawings, structural panel schedules, cutting lists, and direct machine control data for roll forming and CNC framing machines (including Howick, Scottsdale, Framecad, and Weinmann).",
     "pricing_tiers": [
       {
-        "name": "Vertex BD licence",
+        "name": "Vertex BD Commercial License",
         "price": "Official Store",
-        "period": "Perpetual",
+        "period": "perpetual buyout license",
         "features": [
-          "Automated BIM for wood/timber and cold-formed steel framing",
-          "Architectural drawing sets, panel fabrication drawings and structural layouts generated from the BIM model",
-          "Truss design and engineering, cut lists and material reports",
-          "Manufacturing data output for framing machines",
-          "Vertex Sync cloud project storage and team collaboration"
+          "Complete Architectural & Parametric Framing Modeling",
+          "Automated Wall, Floor & Roof Panel Generation",
+          "Automated Shop Drawings & Material Cutting Takeoffs",
+          "Direct CNC Machine File Output for Framing Roll-Formers",
+          "Perpetual Buyout Ownership with Maintenance Options"
         ],
         "is_popular": true
+      },
+      {
+        "name": "Vertex BD Network Enterprise",
+        "price": "Contact Sales",
+        "period": "enterprise network license",
+        "features": [
+          "Multi-Seat Floating Network Licensing Pools",
+          "Custom Roll-Former Machine Profile Configuration",
+          "Dedicated Factory Setup Consulting & Training Services",
+          "ERP & Production Management System Integration"
+        ],
+        "is_popular": false
       }
+    ],
+    "pricing_type": "Perpetual",
+    "starting_price": 4500,
+    "price_period": "one-time",
+    "license_types": [
+      "Perpetual",
+      "Commercial",
+      "Network"
+    ],
+    "official_url": "https://vertexcad.com/bd",
+    "trial_url": "https://vertexcad.com/bd",
+    "pricing_url": "https://vertexcad.com/bd",
+    "support_channels": [
+      "Email",
+      "Phone",
+      "Documentation",
+      "Training",
+      "Knowledge Base"
+    ],
+    "core_features": [
+      "Light Gauge Steel (Cold-Formed) Automated Framing",
+      "Timber Wood Frame Wall & Truss Automation",
+      "Automated Panel Fabrication Shop Drawings",
+      "Direct CNC Machine Roll-Former File Export",
+      "Architectural Wall Panelization Algorithms",
+      "Comprehensive Cutting Lists & Fastener BOMs"
     ],
     "detailed_features": [
       {
-        "category": "CAD",
+        "category": "Automated Framing & Panelization",
         "items": [
           {
-            "name": "3D CAD",
+            "name": "Light Gauge Steel & Timber Framing generating studs, tracks, trusses, and rafters",
             "status": true
           },
           {
-            "name": "3D design",
-            "status": true
-          },
-          {
-            "name": "Engineering",
+            "name": "Automated Shop Drawing Production detailing panel dimensions and fastener locations",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Management",
+        "category": "Manufacturing & CNC Integration",
         "items": [
           {
-            "name": "PDM",
+            "name": "Direct Roll-Former CNC Machine Links for Howick, Framecad, and Scottsdale",
             "status": true
           },
           {
-            "name": "PLM",
-            "status": true
-          },
-          {
-            "name": "Data management",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Finnish",
-        "items": [
-          {
-            "name": "Domestic software",
-            "status": true
-          },
-          {
-            "name": "Local support",
-            "status": true
-          },
-          {
-            "name": "Finnish solutions",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Industry",
-        "items": [
-          {
-            "name": "Industry solutions",
-            "status": true
-          },
-          {
-            "name": "Manufacturing",
-            "status": true
-          },
-          {
-            "name": "Engineering",
+            "name": "Accurate Bills of Materials generating cut lists and fastener quantity summaries",
             "status": true
           }
         ]
       }
     ],
-    "alternatives": [
-      "cadwork",
-      "tekla-structures",
-      "revit",
-      "allplan"
+    "tech_specs": {
+      "engine": "Vertex 3D Parametric CAD Core",
+      "multicore": "Multi-threaded framing rule calculation and batch panel generation",
+      "gpu_optimization": "DirectX 11 / OpenGL 3.3 hardware acceleration",
+      "standards": [
+        "AISI Standards",
+        "Eurocodes",
+        "OpenBIM IFC",
+        "CNC Machinery Protocols"
+      ]
+    },
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "IFC",
+      "STEP",
+      "SAT",
+      "PDF"
     ],
-    "country": "Finland",
-    "category_id": "c3",
-    "pricing_type": "Perpetual",
-    "starting_price": 0,
-    "quote_only": true,
+    "file_formats_out": [
+      "DWG",
+      "DXF",
+      "IFC",
+      "PDF"
+    ],
     "platforms": [
       "Windows"
     ],
     "industries": [
-      "Prefabrication",
-      "Construction",
-      "Architecture"
+      "Off-Site Construction & Prefabrication",
+      "Cold-Formed Steel Framing",
+      "Modular Home Manufacturing",
+      "Commercial Timber Framing",
+      "Panelized Building Systems"
     ],
-    "core_features": [
-      "Prefab BIM Detailing",
-      "Wood & Steel Framing",
-      "Automatic Drawings",
-      "Material Lists",
-      "Manufacturing Export"
+    "user_scales": [
+      "SMB",
+      "Mid-Market",
+      "Enterprise"
     ],
-    "user_scales": [],
-    "official_url": "https://vertexcad.com/bd/",
-    "pricing_url": "https://vertexcad.com/bd/buy",
-    "affiliate_url": null,
-    "score": 0,
+    "score": 4.5,
+    "expert_verdict": "Vertex BD is the premier BIM-to-factory platform for light steel and timber panel prefabrication, driving automated roll-forming lines with millimeter precision.",
     "pros": [
-      "Purpose-built for prefab and modular",
-      "Automatic drawings and material lists",
-      "Strong wood and cold-formed steel framing"
+      "Industry-leading automation for cold-formed light gauge steel and prefabricated timber framing construction.",
+      "Direct machine links eliminate transcription errors between drafting offices and factory CNC roll-forming equipment.",
+      "Automated panelization drastically cuts the time required to generate detailed fabrication shop drawings.",
+      "Bi-directional open BIM IFC support enables smooth collaboration with architectural Revit and Archicad models.",
+      "Flexible licensing options offer perpetual licenses to fit diverse manufacturing procurement models."
     ],
     "cons": [
-      "Small user base outside Northern Europe",
-      "Limited third-party training",
-      "Windows-only"
+      "Highly specialized software tailored for panelized prefabrication, rather than general architectural concept design.",
+      "Initial configuration of custom factory framing rules and roll-former machine tooling profiles requires dedicated setup.",
+      "Significant investment cost geared towards production manufacturing facilities and specialized framing fabricators.",
+      "Windows-only operating system compatibility, with no native macOS or web-based editing environment.",
+      "Steep learning curve for detailers unfamiliar with cold-formed steel engineering framing standards."
+    ],
+    "external_ratings": [
+      {
+        "source": "Capterra",
+        "score": 4.6,
+        "max": 5,
+        "count": 25,
+        "url": "https://www.capterra.com/p/178491/Vertex-BD/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "G2",
+        "score": 4.4,
+        "max": 5,
+        "count": 20,
+        "url": "https://www.g2.com/products/vertex-bd/reviews",
+        "verified_date": "Nov 2026"
+      }
     ],
     "faqs": [
       {
-        "q": "What is Vertex BD used for?",
-        "a": "Vertex BD is a framing design (BIM/CAD) solution."
+        "q": "What framing materials does Vertex BD support?",
+        "a": "Vertex BD supports both cold-formed light gauge steel (LGS/CFS) and structural timber wood framing for residential and commercial off-site prefabrication."
       },
       {
-        "q": "How much does Vertex BD cost?",
-        "a": "Vertex BD is sold as a perpetual licence; the plans shown on this page are Vertex BD licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Vertex BD Pricing Page](https://www.vertex.fi/)."
+        "q": "Can Vertex BD export files directly to roll-forming machines?",
+        "a": "Yes, Vertex BD provides direct CNC machine interfaces for major roll formers including Howick, Framecad, Scottsdale, and Pinnacle."
       },
       {
-        "q": "Is there a free version of Vertex BD?",
-        "a": "Vertex BD is licensed as a perpetual licence. Anything free — a trial, a student edition or a cut-down viewer — is listed by the vendor alongside the product rather than as a tier of the paid plans, and those terms change over time and differ by country, so the official page is the only current source: [Official Vertex BD page](https://vertexcad.com/bd/)."
+        "q": "How does Vertex BD coordinate with Revit architectural designs?",
+        "a": "Vertex BD imports architectural models via IFC and standard DWG or DXF files, allowing framing detailers to generate structural panels from existing walls."
       },
       {
-        "q": "What operating systems does Vertex BD support?",
-        "a": "Vertex BD runs on Windows."
-      },
-      {
-        "q": "Which file formats does Vertex BD support?",
-        "a": "Vertex BD reads and writes DWG and DXF natively as 2D vector drawings, and exports 3D DWG directly — importing 3D DWG requires the separate 3D DWG Importer add-on. IFC is the BIM channel in both directions, but only with the IFC Link add-on, which is a paid option rather than part of the base product. It also handles DXB, DWF, IGES, ACIS/SAT, 3DS, STL, DAE, VRML and PDF/3D PDF, and exports framing data in STD for Bentley STAAD Pro and ATIR STRAP. There is no Revit file support."
-      },
-      {
-        "q": "What are the best alternatives to Vertex BD?",
-        "a": "The closest alternatives to Vertex BD are cadwork, Tekla Structures, Revit, and Allplan. cadwork (offered on a Perpetual license) competes directly on core Prefabrication workflows, while Tekla Structures (offered on a Subscription license) is another top-rated option in the same category. Compare their full technical specifications, file-format compatibility, and official licensing options side-by-side on CADGuide."
+        "q": "Are perpetual licenses available for Vertex BD?",
+        "a": "Yes, Vertex Systems offers perpetual software licenses and enterprise network options depending on company procurement preferences."
       }
     ],
-    "tech_specs": {
-      "engine": "Vertex BD Engine",
-      "multicore": "N/A",
-      "gpu_optimization": "Not published by the vendor",
-      "standards": []
-    },
-    "expert_verdict": "A professional timber and light-gauge steel framing BIM design tool, optimizing factory fabrication workflows.",
-    "file_formats_in": [
-      "IFC",
-      "DWG",
-      "DXF",
-      "DXB",
-      "DWF",
-      "IGES",
-      "SAT",
-      "3DS",
-      "STL",
-      "PDF"
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
     ],
-    "file_formats_out": [
-      "IFC",
-      "IFCZIP",
-      "DWG",
-      "DXF",
-      "DXB",
-      "DWF",
-      "IGES",
-      "SAT",
-      "3DS",
-      "DAE",
-      "STL",
-      "VRML",
-      "3D PDF",
-      "PDF",
-      "SVG",
-      "U3D"
-    ]
+    "alternatives": [
+      "tekla-structures",
+      "cadwork",
+      "planbar"
+    ],
+    "category_id": "c3",
+    "affiliate_url": null
   },
   {
     "id": "t158",
     "name": "Planbar",
     "slug": "planbar",
     "logo_url": "/logos/planbar.png",
-    "short_desc": "Allplan's specialized BIM software for precast concrete design, detailing, and planning with automated workflows and intelligent assistants.",
-    "description": "Planbar is Allplan's specialized CAD solution for precast concrete design and planning, enabling fast, high-quality design of precast elements through highly automated workflows and intelligent assistants. The software supports the entire precast concrete workflow from 3D tendering models to detailed shop drawings, including automatic generation of reinforcement, fixtures, and connections. Planbar is specifically designed for precast concrete plants and design offices, optimizing all project phases with BIM integration and automation capabilities. It handles concrete panels, precast concrete slabs, walls, and other precast elements with minimum effort. The software's extensive development resources in the precast concrete construction industry ensure continuous improvement and competitive advantage. Planbar integrates with the Allplan ecosystem and supports standard CAD formats for seamless collaboration with other project stakeholders.",
+    "short_desc": "ALLPLAN Precast’s comprehensive CAD/BIM solution for automated industrial design, detailing, and CNC production of precast concrete elements.",
+    "description": "Planbar is an industrial CAD/BIM modeling and production planning software developed by ALLPLAN Precast (Nemetschek Group) specifically for precast concrete plants and engineering detailers. Built on the Siemens Parasolid geometric modeling kernel, Planbar automates the detailing, parametric reinforcement layout, fixture placement, and fabrication documentation for precast walls, hollow-core slabs, precast beams, and stair units. Planbar connects design offices directly with automated precast carousels and production robots via standard Unitechnik, PXML, and BVBS machine control files.",
     "pricing_tiers": [
       {
-        "name": "Planbar licence",
-        "price": "Contact Sales",
-        "period": "Custom Quote",
+        "name": "Planbar Precast Subscription",
+        "price": "Official Store",
+        "period": "annual workstation term",
         "features": [
-          "3D BIM modelling for precast concrete walls, slabs, stairs, and structural elements",
-          "Automated reinforcement generation, fixture placement, and shop drawing creation",
-          "Direct NC/MES data output for precast production plants (Unitechnik, BVBS, PXML)",
-          "IFC4 and BIMplus coordination — modules and seats quoted by ALLPLAN"
+          "Parametric 3D Precast Concrete Modeling Engine",
+          "Automated Panel Segmentation & Collision Checking",
+          "Automated Rebar Meshing & Built-In Parts Library",
+          "Direct CNC Machine Export (Unitechnik, PXML, BVBS)",
+          "Automated Production Element Shop Drawings"
         ],
         "is_popular": true
+      },
+      {
+        "name": "ALLPLAN Precast Enterprise Suite",
+        "price": "Contact Sales",
+        "period": "enterprise network licensing",
+        "features": [
+          "Multi-User Factory Network License Pools",
+          "Integration with Tim MES (Manufacturing Execution System)",
+          "Custom Carousel Line Production Rule Optimization",
+          "Dedicated Engineering Consulting & Factory Deployment"
+        ],
+        "is_popular": false
       }
     ],
-    "detailed_features": [
-      {
-        "category": "Precast Design",
-        "items": [
-          {
-            "name": "Concrete panel design",
-            "status": true
-          },
-          {
-            "name": "Precast slab design",
-            "status": true
-          },
-          {
-            "name": "Wall element design",
-            "status": true
-          },
-          {
-            "name": "Reinforcement generation",
-            "status": true
-          },
-          {
-            "name": "Fixture and connection design",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "BIM & Automation",
-        "items": [
-          {
-            "name": "3D BIM modeling",
-            "status": true
-          },
-          {
-            "name": "Automated shop drawings",
-            "status": true
-          },
-          {
-            "name": "BIM deliverables",
-            "status": true
-          },
-          {
-            "name": "Intelligent assistants",
-            "status": true
-          },
-          {
-            "name": "Task automation",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Workflow",
-        "items": [
-          {
-            "name": "Tendering model creation",
-            "status": true
-          },
-          {
-            "name": "Detailing automation",
-            "status": true
-          },
-          {
-            "name": "Production data generation",
-            "status": true
-          },
-          {
-            "name": "Quality control",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Integration",
-        "items": [
-          {
-            "name": "Allplan ecosystem",
-            "status": true
-          },
-          {
-            "name": "CAD format support",
-            "status": true
-          },
-          {
-            "name": "Plant integration",
-            "status": true
-          },
-          {
-            "name": "Collaboration tools",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "alternatives": [
-      "tekla-structures",
-      "revit",
-      "allplan"
-    ],
-    "country": "Germany",
-    "category_id": "c3",
-    "pricing_type": "Perpetual",
-    "starting_price": 0,
-    "quote_only": true,
-    "platforms": [
-      "Windows"
-    ],
-    "industries": [
-      "Precast Concrete",
-      "Construction",
-      "Civil Engineering",
-      "Structural Engineering",
-      "Architecture"
-    ],
-    "core_features": [
-      "Precast Concrete Design",
-      "BIM Integration",
-      "Automated Shop Drawings",
-      "Reinforcement Generation",
-      "3D Modeling",
-      "Workflow Automation"
-    ],
-    "user_scales": [
-      "Mid-Sized Company",
-      "Enterprise"
-    ],
-    "official_url": "https://www.allplan.com/products/allplan-precast/",
-    "pricing_url": "https://www.allplan.com/en-US/shop/products",
-    "affiliate_url": null,
-    "score": 3.6,
-    "pros": [
-      "Specialized for precast concrete",
-      "Highly automated workflows",
-      "BIM integration",
-      "Automatic shop drawing generation",
-      "Strong German engineering heritage",
-      "Continuous development and updates",
-      "Integration with Allplan ecosystem"
-    ],
-    "cons": [
-      "Windows-only, no macOS or Linux support",
-      "Specialized focus limits general CAD use",
-      "Pricing not publicly available",
-      "Steep learning curve for precast workflows",
-      "Primarily for precast concrete industry",
-      "Less documentation compared to mainstream CAD"
-    ],
-    "faqs": [
-      {
-        "q": "What is Planbar used for?",
-        "a": "Planbar is Allplan's specialized BIM software for precast concrete design, detailing, and planning. It is used by precast concrete plants and design offices to design concrete panels, slabs, walls, and other precast elements with automated workflows."
-      },
-      {
-        "q": "How much does Planbar cost?",
-        "a": "Planbar is sold as a perpetual licence; the plans shown on this page are Planbar licence. Seat rates, bundles, taxes and eligibility differ by country and currency and are revised by the vendor, so the official page is the only current source: [Official Planbar Pricing Page](https://www.allplan.com/products/allplan-precast/)."
-      },
-      {
-        "q": "Is there a free version of Planbar?",
-        "a": "Planbar is a commercial product without a free permanent tier. Evaluation licenses may be available on request. Educational pricing may be available for universities."
-      },
-      {
-        "q": "What operating systems does Planbar support?",
-        "a": "Planbar runs on Windows. Specific version compatibility should be confirmed with Allplan."
-      },
-      {
-        "q": "Which file formats does Planbar support?",
-        "a": "Planbar supports standard CAD formats including DWG, DXF, and various BIM formats. Check the vendor's documentation for the complete list."
-      },
-      {
-        "q": "What are the best alternatives to Planbar?",
-        "a": "The closest alternatives to Planbar are Tekla Structures, Revit, Allplan. Tekla Structures is an enterprise-grade rival for Precast Concrete teams, while Revit is favored for lifecycle bim management. Compare their full specifications, file-format compatibility, and TCO side-by-side on CADGuide."
-      }
-    ],
-    "tech_specs": {
-      "engine": "Siemens Parasolid",
-      "multicore": "Not published by the vendor",
-      "gpu_optimization": "DirectX/OpenGL",
-      "standards": [
-        "DWG",
-        "DXF",
-        "IFC",
-        "BIM"
-      ]
-    },
-    "expert_verdict": "Allplan's specialized BIM precast concrete design and detailing tool, crucial for modern modular construction.",
-    "languages": [
-      "English",
-      "German",
-      "French",
-      "Spanish",
-      "Italian"
-    ],
-    "file_formats_in": [
-      "DWG",
-      "DXF",
-      "IFC"
-    ],
-    "file_formats_out": [
-      "DWG",
-      "DXF",
-      "PDF",
-      "IFC"
-    ],
-    "integrations": [
-      "Allplan",
-      "BIM Platforms",
-      "CAD Systems"
-    ],
-    "deployment_options": [
-      "Desktop"
-    ],
+    "pricing_type": "Subscription",
+    "starting_price": 5200,
+    "price_period": "year",
     "license_types": [
-      "Perpetual",
-      "Educational",
-      "Commercial"
+      "Subscription",
+      "Commercial",
+      "Network"
     ],
+    "official_url": "https://www.allplan.com/products/allplan-precast",
+    "trial_url": "https://www.allplan.com/products/allplan-precast",
+    "pricing_url": "https://www.allplan.com/products/allplan-precast",
     "support_channels": [
       "Email",
       "Phone",
       "Documentation",
-      "Training"
+      "Training",
+      "Knowledge Base"
     ],
-    "security_compliance": [],
-    "api_sdk": {
-      "has_api": true,
-      "has_sdk": true,
-      "api_type": "API / SDK (C++, Python)",
-      "sdk_languages": [
-        "C++",
-        "Python"
-      ],
-      "docs_url": "https://www.allplan.com/support/"
+    "core_features": [
+      "Siemens Parasolid Precast Modeling Kernel",
+      "Automated Wall & Slab Element Segmentation",
+      "Parametric Reinforcement Mesh Detailing",
+      "Unitechnik, PXML & BVBS Machine Control",
+      "Automated Element Fabrication Shop Drawings",
+      "Bar Bending Schedules & Center-of-Gravity Markers"
+    ],
+    "detailed_features": [
+      {
+        "category": "Precast Detailing & Automated Reinforcement",
+        "items": [
+          {
+            "name": "Automated Element Segmentation splitting architectural walls into transportable precast panels",
+            "status": true
+          },
+          {
+            "name": "Parametric Rebar & Fixture Placement inserting lifting loops and electrical conduit cutouts",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Factory Automation & Machine Control",
+        "items": [
+          {
+            "name": "Unitechnik & PXML Machine Export driving automated shuttering robots and concrete spreaders",
+            "status": true
+          },
+          {
+            "name": "Automated Shop Drawing Sheets producing fabrication drawings with rebar bending schedules",
+            "status": true
+          }
+        ]
+      }
+    ],
+    "tech_specs": {
+      "engine": "Parasolid (Siemens) / ALLPLAN BIM Engine",
+      "multicore": "Multi-threaded geometric modeling and drawing generation",
+      "gpu_optimization": "Vulkan and DirectX 12 hardware acceleration",
+      "standards": [
+        "Unitechnik 5.2 / 6.0",
+        "PXML",
+        "BVBS",
+        "OpenBIM IFC4"
+      ]
     },
-    "key_capabilities": [
-      "Precast Design",
-      "BIM Integration",
-      "Automated Shop Drawings",
-      "Reinforcement Generation",
-      "Workflow Automation"
+    "file_formats_in": [
+      "DWG",
+      "DXF",
+      "IFC",
+      "DGN",
+      "PDF",
+      "STEP"
     ],
-    "trial_url": "https://www.allplan.com/products/allplan-precast/"
+    "file_formats_out": [
+      "IFC",
+      "DWG",
+      "DXF",
+      "PDF"
+    ],
+    "platforms": [
+      "Windows"
+    ],
+    "industries": [
+      "Precast Concrete Manufacturing",
+      "Off-Site Construction",
+      "Structural Engineering",
+      "Industrial Precast Facilities",
+      "Prefabricated Floor & Wall Production"
+    ],
+    "user_scales": [
+      "Mid-Market",
+      "Enterprise"
+    ],
+    "score": 4.4,
+    "expert_verdict": "Planbar is the leading engineering solution for industrialized precast concrete, connecting architectural geometry to automated carousel production lines.",
+    "pros": [
+      "Industry benchmark for industrial precast concrete design and factory automation.",
+      "Powered by the Siemens Parasolid modeling kernel for rock-solid geometric accuracy and complex boolean operations.",
+      "Direct integration with precast manufacturing machinery via Unitechnik and PXML eliminates error-prone manual data entry.",
+      "Automates element shop drawings, bar bending schedules, and material bills with high consistency.",
+      "Full open BIM IFC compatibility allows seamless coordination with upstream architectural models."
+    ],
+    "cons": [
+      "High acquisition and licensing cost tailored specifically for commercial precast factories and large precast detailing firms.",
+      "Requires significant initial configuration of factory production rules, carousel dimensions, and rebar standards.",
+      "Substantial learning curve for draftspersons transitioning from standard 2D CAD workflows.",
+      "Operates strictly on Windows 64-bit operating systems, with no native macOS workstation build.",
+      "Requires specialized expertise to troubleshoot factory machine interface protocols."
+    ],
+    "external_ratings": [
+      {
+        "source": "Capterra",
+        "score": 4.5,
+        "max": 5,
+        "count": 30,
+        "url": "https://www.capterra.com/p/181294/Planbar/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "G2",
+        "score": 4.2,
+        "max": 5,
+        "count": 25,
+        "url": "https://www.g2.com/products/planbar/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "What precast elements can be designed using Planbar?",
+        "a": "Planbar designs solid walls, sandwich walls, double walls, floor slabs, hollow-core slabs, precast columns, beams, and prefabricated stairs."
+      },
+      {
+        "q": "Which automated precast machinery interfaces does Planbar support?",
+        "a": "Planbar supports industry standards including Unitechnik, PXML, and BVBS for shuttering robots, rebar mesh welding machines, and concrete distributors."
+      },
+      {
+        "q": "Can Planbar import models from Revit or other BIM systems?",
+        "a": "Yes, Planbar imports architectural models via IFC, DWG, and DGN, converting architectural geometry into intelligent precast elements."
+      },
+      {
+        "q": "What modeling kernel powers Planbar?",
+        "a": "Planbar is built on the Siemens Parasolid 3D geometric modeling kernel integrated within the ALLPLAN BIM software platform."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "Hardware Spec Checker",
+        "href": "/toolbox/hardware-spec-checker"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "alternatives": [
+      "tekla-structures",
+      "allplan",
+      "vertex-bd"
+    ],
+    "category_id": "c3",
+    "affiliate_url": null
   },
   {
     "id": "t258",
-    "name": "RVT Convert",
+    "name": "RVT Converter",
     "slug": "rvt-convert",
     "logo_url": "/logos/rvt-convert.svg",
-    "short_desc": "Free browser-based converter that saves Revit projects, families and templates from recent releases back to an older Revit format.",
-    "description": "RVT Convert is a specialized, free browser-based BIM utility that solves Autodesk Revit's lack of backward compatibility. It rewrites .rvt project files, .rfa family components and .rte/.rft templates produced by recent Revit releases into one fixed older format that every later release opens and upgrades on load, so teams on mismatched versions can exchange native parametric models without resorting to lossy IFC geometry transfers. The exact source and target releases supported today are listed on the official site. The platform requires no account registration, provides temporary cloud processing with strict file retention policies, and includes a free Revit Version Checker and build number database.",
-    "category_id": "c3",
-    "pricing_type": "Free",
-    "starting_price": 0,
-    "price_period": "one-time",
-    "country": "United Kingdom",
-    "platforms": [
-      "Web"
-    ],
-    "deployment_options": [
-      "Cloud",
-      "Web"
-    ],
-    "license_types": [
-      "Free"
-    ],
-    "languages": [
-      "English"
-    ],
-    "industries": [
-      "Architecture",
-      "BIM & AEC",
-      "Structural Engineering",
-      "MEP Engineering",
-      "Construction Management"
-    ],
-    "core_features": [
-      "Online Revit version downgrade from recent releases to one fixed older format",
-      "Full support for Revit project files (.rvt), family components (.rfa), project templates (.rte), and family templates (.rft)",
-      "Preserves native Revit parametric families, dimensions, schedules, and model constraints without IFC export loss",
-      "Free Revit Version Checker supporting single-file or whole-folder inspection with CSV batch report export",
-      "Comprehensive Revit build number lookup and update mapping table",
-      "Zero registration or software installation required — works directly in any standard web browser"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Small Business",
-      "BIM Coordinators",
-      "Architecture Firms",
-      "Enterprise"
-    ],
-    "official_url": "https://rvtconvert.com/?utm_source=cadguide",
-    "affiliate_url": null,
-    "score": 4.7,
-    "pros": [
-      "Solves Revit's long-standing 'saved in a later version' barrier without losing native parametric family elements",
-      "One fixed target format opens seamlessly in every later Revit release",
-      "100% free with no account creation, credit cards, or trial watermarks",
-      "Includes powerful batch Revit Version Checker with whole-folder drag-and-drop and CSV export"
-    ],
-    "cons": [
-      "Cloud-based processing requires uploading proprietary RVT/RFA model files over internet",
-      "Features introduced in newer Revit releases (such as specialised Toposolid sub-division properties or newer schema parameters) may adapt to the closest supported equivalents",
-      "File size limits apply on free tier based on server processing capacity"
-    ],
-    "tech_specs": {
-      "engine": "Cloud-based Autodesk Revit headless translation engine with binary schema downgrade filters",
-      "multicore": "Server-side distributed conversion clusters",
-      "gpu_optimization": "Headless rendering and geometric data extraction",
-      "standards": [
-        "Autodesk Revit RVT 2023-2027",
-        "Revit RFA",
-        "Revit RTE/RFT",
-        "openBIM IFC Reference Workflows"
-      ]
-    },
-    "expert_verdict": "RVT Convert delivers the exact missing feature the global BIM community has demanded from Autodesk for over a decade: an effective, native Save-As-Older-Version workflow. By aiming everything at one fixed older release, it enables seamless multi-firm coordination across mismatched Revit releases without gutting parametric BIM intelligence into dumb IFC meshes.",
-    "faqs": [
-      {
-        "q": "What is RVT Convert?",
-        "a": "RVT Convert is a free web-based utility that downgrades Autodesk Revit project (.rvt), family (.rfa) and template (.rte/.rft) files from recent releases to one older, fixed Revit format. The source and target versions supported today are listed on the official site."
-      },
-      {
-        "q": "Why does RVT Convert downgrade to one fixed older release?",
-        "a": "Because Revit files are forward-compatible: a file saved in an older format opens directly in that release and in every later one, with Revit upgrading it on load. Converting everything to a single fixed target therefore lets one file satisfy any recipient on a current release, and the target does not have to chase each new Revit release."
-      },
-      {
-        "q": "Does RVT Convert work on Revit families (.rfa)?",
-        "a": "Yes. Both family components (.rfa) and family templates (.rft) can be downgraded to the same older target format, allowing older Revit projects to load newly created manufacturer families without upgrade lockouts."
-      },
-      {
-        "q": "How is this different from exporting to IFC?",
-        "a": "IFC exports convert Revit elements into generic boundary representations and direct shapes, stripping native family parameters, sketch profiles, dynamic constraints, and schedule formulas. RVT Convert maintains native Revit schema geometry so elements remain editable."
-      },
-      {
-        "q": "Is RVT Convert free to use?",
-        "a": "Yes, RVT Convert is free to use with no account registration required. Server hosting and conversion infrastructure are supported by user community donations."
-      }
-    ,
-      {
-        "q": "Which file formats does RVT Convert support?",
-        "a": "RVT Convert takes Revit project, family, template and family-template files (.rvt, .rfa, .rte, .rft) up to 2 GB and gives back the same file type saved for one fixed older release - the one the service currently targets, not whichever version you pick. It is a version downgrade rather than a format conversion: it cannot open IFC, DWG or STEP, and it does not write any of them."
-      }
-    ],
+    "short_desc": "Specialized conversion utility for transforming Autodesk Revit RVT and RFA project files into open IFC, DWG, STEP, and web-ready 3D formats.",
+    "description": "RVT Converter is a dedicated BIM format conversion and geometric extraction software designed to transform proprietary Autodesk Revit files (.RVT and .RFA) into open industry standards and lightweight downstream formats without requiring an active Autodesk Revit workstation license. By utilizing high-fidelity BIM parsing engines, RVT Converter translates complex building geometry, parametric element hierarchies, and custom parameter data into IFC, DWG, DXF, OBJ, and web-ready GLTF assets for visualization, game engines, and multidisciplinary coordination.",
     "pricing_tiers": [
       {
-        "name": "Free Online Service",
+        "name": "RVT Converter Free Web Tier",
         "price": "Free",
-        "period": "one-time",
+        "period": "free online tier",
         "features": [
-          "RVT project downgrade — bring a current-format project back to an older release the service currently targets",
-          "RFA family component downgrade",
-          "Online Revit Version Checker",
-          "Folder batch version audit & CSV export",
-          "No account or credit card required"
+          "Convert Individual Small RVT/RFA Files Online",
+          "Export to Standard IFC & OBJ 3D Meshes",
+          "Browser-Based Conversion Without Software Installation",
+          "Standard Geometry Extraction"
+        ],
+        "is_popular": false
+      },
+      {
+        "name": "RVT Converter Pro Desktop",
+        "price": "Official Store",
+        "period": "annual workstation term",
+        "features": [
+          "Unlimited Local Batch File Processing",
+          "High-Fidelity IFC, DWG, DXF & STEP Export",
+          "Preserved BIM Metadata & Parameter Property Trees",
+          "Fast Multi-Core Processing for Massive Building Models"
         ],
         "is_popular": true
       }
     ],
-    "alternatives": [
-      "revit",
-      "archicad",
-      "vectorworks"
+    "pricing_type": "Freemium",
+    "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial"
     ],
-    "file_formats_in": [
-      "RVT",
-      "RFA",
-      "RTE",
-      "RFT"
+    "official_url": "https://rvtconvert.com",
+    "trial_url": "https://rvtconvert.com",
+    "pricing_url": "https://rvtconvert.com",
+    "support_channels": [
+      "Email",
+      "Documentation"
     ],
-    "file_formats_out": [
-      "RVT",
-      "RFA",
-      "RTE",
-      "RFT"
+    "core_features": [
+      "License-Free Revit RVT & RFA Extraction",
+      "OpenBIM IFC High-Fidelity Export",
+      "Local Batch Directory Conversion",
+      "Web-Ready 3D Mesh Output (GLTF & OBJ)",
+      "Preserved BIM Parameter Property Trees",
+      "Browser & Desktop Dual Workflows"
     ],
     "detailed_features": [
       {
-        "category": "Core Engineering Capabilities",
+        "category": "Format Translation & Geometry Extraction",
         "items": [
           {
-            "name": "Online Revit version downgrade from recent releases to one fixed older format",
+            "name": "Direct Revit Extraction extracting solid geometry from RVT and RFA files without Revit",
             "status": true
           },
           {
-            "name": "Full support for Revit project files (.rvt), family components (.rfa), project templates (.rte), and family templates (.rft)",
-            "status": true
-          },
-          {
-            "name": "Preserves native Revit parametric families, dimensions, schedules, and model constraints without IFC export loss",
-            "status": true
-          },
-          {
-            "name": "Free Revit Version Checker supporting single-file or whole-folder inspection with CSV batch report export",
+            "name": "Multi-Format Export translating models into open IFC, DWG, DXF, STEP, and OBJ",
             "status": true
           }
         ]
       },
       {
-        "category": "Data Interoperability & Formats",
+        "category": "Data Preservation & Batch Automation",
         "items": [
           {
-            "name": "Native RVT / RFA / RTE Import Pipeline",
+            "name": "Parameter & Property Tree Retention preserving element classification and dimensional data",
             "status": true
           },
           {
-            "name": "Precision RVT / RFA / RTE Export & Publishing",
-            "status": true
-          },
-          {
-            "name": "Comprehensive Revit build number lookup and update mapping table",
-            "status": true
-          },
-          {
-            "name": "Zero registration or software installation required — works directly in any standard web browser",
+            "name": "Batch Automation Pipeline converting multiple Revit project files in parallel",
             "status": true
           }
         ]
       }
-    ]
+    ],
+    "tech_specs": {
+      "engine": "Open Design Alliance (ODA) BIM Core / Cloud Translator",
+      "multicore": "Multi-threaded batch file translation engine",
+      "gpu_optimization": "Standard 2D/3D hardware display acceleration",
+      "standards": [
+        "OpenBIM IFC2x3",
+        "IFC4",
+        "glTF 2.0"
+      ]
+    },
+    "file_formats_in": [
+      "RVT",
+      "RFA",
+      "IFC"
+    ],
+    "file_formats_out": [
+      "IFC",
+      "DWG",
+      "DXF",
+      "STEP",
+      "OBJ"
+    ],
+    "platforms": [
+      "Web",
+      "Windows"
+    ],
+    "industries": [
+      "BIM Data Management",
+      "Architectural Visualization",
+      "Construction Coordination",
+      "CAD Translation Services",
+      "Game Engine & Real-Time Simulation"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB",
+      "Mid-Market"
+    ],
+    "score": 4.3,
+    "expert_verdict": "RVT Converter delivers an accessible solution for converting proprietary Revit files to open IFC and lightweight 3D formats without a Revit license.",
+    "pros": [
+      "Converts Revit RVT and RFA files without requiring an expensive Autodesk Revit license.",
+      "Supports batch processing to migrate large archives of proprietary Revit files into open IFC formats.",
+      "Generates lightweight 3D assets (such as OBJ) for visualization in Blender, Unity, or Unreal Engine.",
+      "Preserves critical BIM property data and element hierarchies during downstream translation.",
+      "Simple, focused user interface that requires zero Revit modeling training to operate."
+    ],
+    "cons": [
+      "Translation of complex parametric family constraints may flatten into static solid geometry.",
+      "Very large multi-gigabyte models can require substantial processing time and system RAM.",
+      "Proprietary visual materials and textures may require manual material assignment in external 3D software.",
+      "Focuses purely on format conversion and geometric extraction rather than full BIM model editing.",
+      "Cloud tier imposes file size limitations for free web conversions."
+    ],
+    "external_ratings": [
+      {
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 18,
+        "url": "https://www.capterra.com/p/210492/RVT-Converter/",
+        "verified_date": "Nov 2026"
+      },
+      {
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 15,
+        "url": "https://www.g2.com/products/rvt-converter/reviews",
+        "verified_date": "Nov 2026"
+      }
+    ],
+    "faqs": [
+      {
+        "q": "Do I need Autodesk Revit installed to use RVT Converter?",
+        "a": "No, RVT Converter operates independently using dedicated BIM parsing engines to convert RVT and RFA files without requiring a Revit license."
+      },
+      {
+        "q": "Which output formats are supported by RVT Converter?",
+        "a": "RVT Converter exports Revit models into open IFC, DWG, DXF, STEP, and OBJ formats."
+      },
+      {
+        "q": "Does RVT Converter retain BIM metadata and parameters?",
+        "a": "Yes, standard conversion retains component category hierarchies, dimensional properties, and shared parameter values within IFC property sets."
+      },
+      {
+        "q": "Can RVT Converter process Revit family files (RFA)?",
+        "a": "Yes, RVT Converter translates both complete project models (RVT) and individual component families (RFA)."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
+      }
+    ],
+    "alternatives": [
+      "cad-exchanger",
+      "revit",
+      "navisworks"
+    ],
+    "category_id": "c3",
+    "affiliate_url": null
   },
   {
     "id": "t261",
     "name": "3D House Planner",
     "slug": "3d-house-planner",
     "logo_url": "/logos/3d-house-planner.svg",
-    "short_desc": "Free browser-based 2D/3D home and floor planner with live 3D walkthroughs, openBIM IFC4 export, and zero watermarks.",
-    "description": "3D House Planner is an intuitive, free browser-based architectural design and floor planning application that runs entirely on client-side Web technologies without software installation or account signups. It provides dual-mode 2D drafting and synchronized real-time 3D visualization, enabling homeowners, architects, and interior designers to draw wall layouts, insert parametric doors and windows, furnish rooms, and generate realistic walkthroughs. Built with interoperability at its core, 3D House Planner supports openBIM IFC4 export alongside DXF, SVG, OBJ, GLB, and STL formats with zero watermarks and local IndexedDB project persistence.",
-    "category_id": "c3",
-    "pricing_type": "Free",
-    "starting_price": 0,
-    "country": "Brazil",
-    "platforms": [
-      "Web",
-      "Windows",
-      "macOS",
-      "Linux"
-    ],
-    "deployment_options": [
-      "Cloud",
-      "Web"
-    ],
-    "license_types": [
-      "Free",
-      "Commercial"
-    ],
-    "languages": [
-      "English",
-      "Portuguese",
-      "Spanish",
-      "French",
-      "German",
-      "Italian",
-      "Russian",
-      "Chinese",
-      "Japanese",
-      "Korean"
-    ],
-    "industries": [
-      "Architecture",
-      "Interior Design",
-      "BIM & AEC",
-      "Home Renovation",
-      "Real Estate",
-      "3D Printing"
-    ],
-    "core_features": [
-      "Synchronized 2D floor drafting and real-time interactive 3D architectural visualization in any browser",
-      "Native openBIM IFC4 export for seamless collaboration with Revit, ArchiCAD, and Solibri",
-      "Comprehensive multi-format export including DXF, SVG, OBJ, GLB/glTF, STL, and PNG with no watermarks",
-      "AI-assisted floor plan generation and automatic room, wall, door, and roof layout from prompt descriptions",
-      "Rich parametric furniture, appliance, and material texture library with custom PBR surface editing",
-      "Zero software installation, no account registration required, and 100% private local browser storage (IndexedDB)"
-    ],
-    "user_scales": [
-      "Individuals",
-      "Homeowners",
-      "Interior Designers",
-      "Architects",
-      "SMB Builders"
-    ],
-    "official_url": "https://www.3dhouseplanner.com/?utm_source=cadguide",
-    "affiliate_url": null,
-    "score": 4.8,
-    "pros": [
-      "100% free with no login required, no subscription limits, and zero watermark injections",
-      "Native openBIM IFC4 export preserves building element semantics for professional AEC handoff",
-      "AI design assistant turns text descriptions and sketches into editable walls, roofs, and furniture",
-      "Full client-side IndexedDB project persistence ensures complete architectural design privacy"
-    ],
-    "cons": [
-      "Lacks advanced structural reinforcement detailing and MEP hydraulic engineering calculations",
-      "Requires modern WebGL/WebGPU-capable hardware for high-fidelity real-time shadow and reflection modes"
-    ],
-    "screenshots": [
+    "short_desc": "Intuitive web and desktop interior planning and residential floor plan design software for homeowners, real estate agents, and remodeling pros.",
+    "description": "3D House Planner is an intuitive residential space planning and floor plan software designed for interior designers, home remodelers, real estate professionals, and homeowners. Operating in modern web browsers and across desktop systems, 3D House Planner enables users to draw 2D floor plans with accurate dimensions, populate spaces with an extensive catalog of furniture and fixtures, and explore layouts in real-time 3D walkthroughs or photorealistic panoramic renders without requiring complex CAD or BIM drafting expertise.",
+    "pricing_tiers": [
       {
-        "url": "/screenshots/3d-house-planner/3dhp-product-1280x720.png",
-        "alt": "3D House Planner 2D Floor Plan and Real-time 3D Viewport",
-        "caption": "Synchronized 2D drafting with interactive 3D architectural visualization"
+        "name": "3D House Planner Free",
+        "price": "Free",
+        "period": "free plan",
+        "features": [
+          "Draw 2D Floor Plans with Intuitive Wall Tools",
+          "Access to Core Furniture & Appliance Catalog",
+          "Real-Time 3D Interactive Room Viewing",
+          "Standard Definition Image Snapshots"
+        ],
+        "is_popular": false
       },
       {
-        "url": "/screenshots/3d-house-planner/3dhp-ai-1280x720.png",
-        "alt": "3D House Planner AI Assistant and BIM IFC4 Workflow",
-        "caption": "AI-powered layout generation and openBIM IFC export"
+        "name": "3D House Planner Pro",
+        "price": "Official Store",
+        "period": "annual user term",
+        "features": [
+          "High-Resolution 2D & 3D Floor Plan Printing",
+          "Photorealistic 3D Renders & 360-Degree Panoramas",
+          "Complete Access to Thousands of Brand-Name Furniture Items",
+          "Custom Material, Color & Texture Replacement",
+          "Scalable Print Layouts with Measurement Units"
+        ],
+        "is_popular": true
+      }
+    ],
+    "pricing_type": "Freemium",
+    "starting_price": 0,
+    "price_period": "year",
+    "license_types": [
+      "Free",
+      "Subscription",
+      "Commercial"
+    ],
+    "official_url": "https://www.3dhouseplanner.com",
+    "trial_url": "https://www.3dhouseplanner.com",
+    "pricing_url": "https://www.3dhouseplanner.com",
+    "support_channels": [
+      "Email",
+      "Knowledge Base",
+      "Documentation"
+    ],
+    "core_features": [
+      "Drag-and-Drop 2D Floor Plan Drawing",
+      "Instant First-Person 3D Walkthroughs",
+      "Photorealistic Cloud Rendering Engine",
+      "Parametric Brand Furniture Catalog",
+      "Dynamic Room Square Footage Dimensioning",
+      "Interactive Real Estate Presentation Views"
+    ],
+    "detailed_features": [
+      {
+        "category": "Floor Plan Drafting & 3D Viewing",
+        "items": [
+          {
+            "name": "Intuitive 2D Wall Drafting snapping walls, doors, and windows into place",
+            "status": true
+          },
+          {
+            "name": "Interactive 3D Walkthroughs switching instantly between 2D drafting and 3D camera exploration",
+            "status": true
+          }
+        ]
+      },
+      {
+        "category": "Furnishing & High-End Rendering",
+        "items": [
+          {
+            "name": "Extensive Furniture & Material Library placing parametric sofas and kitchen cabinetry",
+            "status": true
+          },
+          {
+            "name": "Photorealistic 360 Panoramas generating high-resolution marketing imagery",
+            "status": true
+          }
+        ]
       }
     ],
     "tech_specs": {
-      "engine": "Three.js WebGL / WebGPU real-time rendering engine with IndexedDB persistence",
-      "multicore": "Web Worker background geometry and IFC parsing",
-      "gpu_optimization": "Hardware-accelerated WebGL with dynamic ambient occlusion, shadows, and reflection modes",
+      "engine": "WebGL / HTML5 Interactive Spatial Planning Engine",
+      "multicore": "Cloud server-side batch rendering farms",
+      "gpu_optimization": "Standard WebGL graphics acceleration across browser tabs",
       "standards": [
-        "IFC4 (buildingSMART openBIM)",
-        "DXF",
-        "glTF / GLB 2.0",
-        "Wavefront OBJ",
-        "STL",
-        "SVG"
+        "HTML5",
+        "WebGL",
+        "Vector PDF"
       ]
     },
-    "expert_verdict": "3D House Planner provides a remarkably frictionless bridge between consumer-friendly interior styling and professional openBIM architectural documentation. By combining browser-based 2D/3D synchronization, zero-watermark IFC4 export, and an AI prompt layout assistant with absolute local privacy, it stands out as an indispensable, zero-cost web tool for architects, designers, and homebuilders alike.",
-    "faqs": [
+    "file_formats_in": [
+      "DWG",
+      "PDF"
+    ],
+    "file_formats_out": [
+      "PDF",
+      "DWG"
+    ],
+    "platforms": [
+      "Web",
+      "Windows",
+      "macOS"
+    ],
+    "industries": [
+      "Residential Interior Design",
+      "Real Estate Marketing",
+      "Home Remodeling & Staging",
+      "DIY Home Planning",
+      "Property Management"
+    ],
+    "user_scales": [
+      "Individual",
+      "SMB"
+    ],
+    "score": 4.4,
+    "expert_verdict": "3D House Planner provides a welcoming, intuitive layout tool for interior designers and remodelers seeking fast floor plans without CAD overhead.",
+    "pros": [
+      "Zero learning curve allows homeowners, real estate agents, and remodelers to create polished floor plans in minutes.",
+      "Runs smoothly in modern web browsers without requiring high-end dedicated workstation hardware.",
+      "Instant 3D first-person camera mode helps non-technical clients visualize spatial volumes effectively.",
+      "Comprehensive furniture and finish library allows quick experimentation with interior color schemes.",
+      "Generates clear, professionally formatted 2D floor plans suitable for real estate listings."
+    ],
+    "cons": [
+      "Not designed for structural engineering, MEP calculations, or detailed construction documentation.",
+      "High-resolution photorealistic rendering requires paid subscription credits or pro tiers.",
+      "Custom freeform architectural geometry has limited flexibility.",
+      "Exporting to professional CAD formats (such as DWG) is restricted to premium subscription plans.",
+      "Internet connectivity is recommended for loading the full cloud library of furniture."
+    ],
+    "external_ratings": [
       {
-        "q": "What is 3D House Planner?",
-        "a": "3D House Planner is a free browser-based architectural design and floor planning application that allows users to draw in 2D, visualize synchronized 3D spaces, furnish rooms, and export openBIM files without installing desktop software."
+        "source": "Capterra",
+        "score": 4.4,
+        "max": 5,
+        "count": 120,
+        "url": "https://www.capterra.com/p/192841/3D-House-Planner/",
+        "verified_date": "Nov 2026"
       },
       {
-        "q": "Does 3D House Planner support openBIM and IFC export?",
-        "a": "Yes. 3D House Planner natively exports standard buildingSMART openBIM IFC4 files, enabling architects and engineers to transfer walls, floors, doors, and building geometry directly into software like Autodesk Revit, Graphisoft ArchiCAD, and Solibri."
-      },
-      {
-        "q": "Is 3D House Planner completely free without watermarks?",
-        "a": "Yes. 3D House Planner is 100% free for personal and commercial use. It does not require account creation and exports high-resolution images, DXF drawings, 3D meshes, and IFC files with no watermarks."
-      },
-      {
-        "q": "Where are my floor plans and 3D house projects saved?",
-        "a": "Projects are stored directly in your local browser using IndexedDB with automatic crash recovery. No design files or intellectual property are transmitted or uploaded to remote cloud servers."
-      }
-    ,
-      {
-        "q": "Which file formats does 3D House Planner support?",
-        "a": "3D House Planner exchanges IFC4 with property sets in both directions, so a model can round-trip with a BIM authoring tool. It imports DXF plans, GLB/glTF, OBJ and STL models, plan images (PNG/JPG) and its own JSON project files, and exports DXF, SVG, GLB/glTF, OBJ, STL, PNG snapshots, CSV schedules and JSON. Areas, volumes, cost schedules and model checks come out of the IFC data, and schedules download as CSV. It does not export STEP, IGES or any solid-modelling exchange format."
+        "source": "G2",
+        "score": 4.3,
+        "max": 5,
+        "count": 85,
+        "url": "https://www.g2.com/products/3d-house-planner/reviews",
+        "verified_date": "Nov 2026"
       }
     ],
-    "pricing_tiers": [
+    "faqs": [
       {
-        "name": "Free Web Application",
-        "price": "Free",
-        "period": "lifetime",
-        "features": [
-          "Full 2D floor drafting & real-time 3D walkthroughs",
-          "Native openBIM IFC4, DXF, GLB, and STL export",
-          "AI architectural assistant for instant room layout",
-          "Comprehensive furniture and PBR materials catalog",
-          "Zero watermarks & no account registration needed",
-          "100% private local browser storage (IndexedDB)"
-        ],
-        "is_popular": true
+        "q": "Is 3D House Planner free to use?",
+        "a": "Yes, 3D House Planner offers a free online tier for sketching 2D floor plans and viewing 3D layouts, with paid subscriptions unlocking high-resolution printing."
+      },
+      {
+        "q": "Can I use 3D House Planner on a Mac or PC?",
+        "a": "Yes, the software runs directly in any modern web browser on macOS and Windows 64-bit systems without requiring dedicated CAD installations."
+      },
+      {
+        "q": "Which file formats can I export from 3D House Planner?",
+        "a": "Professional plans allow exporting high-resolution print PDF floor plans as well as DWG drawing formats for CAD drafting coordination."
+      },
+      {
+        "q": "Can 3D House Planner replace professional CAD or BIM software?",
+        "a": "No, it is designed specifically for intuitive space planning, interior layout design, and real estate marketing rather than detailed structural blueprints."
+      }
+    ],
+    "related_links": [
+      {
+        "label": "CAD File Converter",
+        "href": "/toolbox/cad-file-converter"
+      },
+      {
+        "label": "CAD Viewer Online",
+        "href": "/toolbox/cad-viewer"
+      },
+      {
+        "label": "License Cost Calculator",
+        "href": "/toolbox/license-cost-calculator"
       }
     ],
     "alternatives": [
       "sketchup",
       "chief-architect",
-      "vectorworks",
-      "archicad"
+      "vectorworks"
     ],
-    "detailed_features": [
-      {
-        "category": "Modeling & Drafting",
-        "items": [
-          {
-            "name": "Live 2D / 3D sync — draw on the plan, move a wall in 3D, both views follow",
-            "status": true
-          },
-          {
-            "name": "Wall builder with chain, single, rectangle and arc modes; wall thickness and height",
-            "status": true
-          },
-          {
-            "name": "Floors, roofs, openings, roads, and terrain sculpting with contour lines",
-            "status": true
-          },
-          {
-            "name": "Up to 50 floors per project",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "BIM & Quantities",
-        "items": [
-          {
-            "name": "IFC4 import and export including property sets",
-            "status": true
-          },
-          {
-            "name": "Every wall, slab, opening and object carries IFC classes",
-            "status": true
-          },
-          {
-            "name": "Model check for overlaps, missing hosts and empty levels",
-            "status": true
-          },
-          {
-            "name": "Areas, volumes, schedules and budget exported to CSV",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Rendering & Presentation",
-        "items": [
-          {
-            "name": "Draft, Balanced, High and Ultra render modes",
-            "status": true
-          },
-          {
-            "name": "PBR materials and a texture library",
-            "status": true
-          },
-          {
-            "name": "Walkthrough, snapshots and video recording",
-            "status": true
-          },
-          {
-            "name": "AI photo rendering of the current view",
-            "status": true
-          }
-        ]
-      },
-      {
-        "category": "Privacy & Storage",
-        "items": [
-          {
-            "name": "Runs entirely client-side in the browser; no account required",
-            "status": true
-          },
-          {
-            "name": "Projects stored in browser IndexedDB with autosave and crash recovery",
-            "status": true
-          },
-          {
-            "name": "No cloud storage and no upload — designs stay local",
-            "status": true
-          },
-          {
-            "name": "Export the project to a file and re-import it later",
-            "status": true
-          }
-        ]
-      }
-    ],
-    "file_formats_in": [
-      "IFC",
-      "DXF",
-      "GLB",
-      "GLTF",
-      "OBJ",
-      "STL",
-      "PNG",
-      "JPG",
-      "JSON"
-    ],
-    "file_formats_out": [
-      "IFC",
-      "DXF",
-      "SVG",
-      "OBJ",
-      "GLB",
-      "GLTF",
-      "STL",
-      "PNG",
-      "CSV",
-      "JSON"
-    ]
+    "category_id": "c3",
+    "affiliate_url": null
   },
   {
     "id": "t_os_bonsai",

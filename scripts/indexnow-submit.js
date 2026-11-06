@@ -190,6 +190,17 @@ async function main() {
   console.log(`Key location: ${INDEXNOW_KEY_LOCATION}`);
   console.log('');
 
+  // Protect search engine quotas: only submit automatically on production cloud builds or when explicitly forced
+  // Cloudflare Pages sets CF_PAGES=1 and CF_PAGES_BRANCH; only the production branch (main) submits.
+  const isCloudflareProd = process.env.CF_PAGES === '1' && process.env.CF_PAGES_BRANCH === 'main';
+  const isVercel = process.env.VERCEL === '1';
+  const forceSubmit = process.argv.includes('--force') || process.argv.includes('--submit') || process.env.SUBMIT_INDEXNOW === '1';
+  if (!isCloudflareProd && !isVercel && !forceSubmit && !isDryRun) {
+    console.log('[IndexNow Shield] Local build detected. Skipping submission to protect search engine quotas.');
+    console.log('To force submission locally, run: node scripts/indexnow-submit.js --force');
+    return;
+  }
+
   const urls = collectUrls();
   console.log(`Collected ${urls.length} URLs to submit`);
 

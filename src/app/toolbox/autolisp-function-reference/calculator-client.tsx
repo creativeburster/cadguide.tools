@@ -43,7 +43,6 @@ const SHORTCUTS = [
   { keys: '(polar pt ang dist)', command: 'Polar Point', category: 'geo', description: 'Returns a point at given angle (radians) and distance from pt. (polar \'(0 0) 0.0 5.0) → (5.0 0.0). Extremely useful for calculating points in AutoLISP.' },
   { keys: '(inters l1p1 l1p2 l2p1 l2p2)', command: 'Intersection', category: 'geo', description: 'Returns intersection point of two lines defined by point pairs. Optional 5th arg nil extends lines. (inters \'(0 0) \'(10 10) \'(0 10) \'(10 0)) → (5.0 5.0).' },
   { keys: '(osnap pt mode)', command: 'Object Snap', category: 'geo', description: 'Returns snap point using OSNAP mode string. (osnap pt "midp") returns midpoint of nearest entity. Modes: "endp","midp","cen","int","nea","nod","qua","tan","per","ins","app". Returns nil if no snap found.' },
-  { keys: '(angle p1 p2)', command: 'Angle in Radians', category: 'geo', description: 'Returns angle from p1 to p2 in radians (XY plane). To convert to degrees: (* (/ (angle p1 p2) pi) 180).' },
   { keys: '(cvunit val from to)', command: 'Unit Conversion', category: 'geo', description: 'Converts value between units. (cvunit 1 "inch" "mm") → 25.4. Uses acad.unt file. Supports distance, area, volume, angle, mass, and temperature units.' },
   { keys: '(trans pt from to)', command: 'Coordinate Transform', category: 'geo', description: 'Transforms point between coordinate systems. from/to can be: 0=WCS, 1=UCS, 2=DCS, or an entity name. (trans pt 1 0) converts from UCS to WCS.' },
 
@@ -138,6 +137,9 @@ export default function AutoLispReferenceClient() {
       categories={CATEGORIES}
       shortcuts={SHORTCUTS}
       tips={TIPS}
+      mode="reference"
+      columnHeaders={['Function Call / Syntax', 'Function Name', 'Description & Example']}
+      searchPlaceholder="Search AutoLISP functions (e.g. defun, entget, ssget, distance)..."
     />
   );
 }

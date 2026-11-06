@@ -1,43 +1,47 @@
 {
   "3d-print-cost-time-estimator": {
     "title": "3D Print Cost & Time Estimator",
-    "description": "Estimate 3D printing time and filament cost from model volume, infill percentage, layer height, print speed, and material price.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "V_filament = V_model × (Infill% + ShellFactor) • Mass = V_filament × ρ • Cost = Mass × ($/kg) + Power × Time × ($/kWh)",
+    "description": "Estimate 3D printing time, bead path length, 1.75mm spool consumption, and filament cost from model volume, infill percentage, layer height, and print speed.",
+    "discipline": "Additive Manufacturing & Rapid Prototyping",
+    "standards": "ISO/ASTM 52900 (Additive Manufacturing - General Principles), ISO/ASTM 52920 (Additive Manufacturing - Requirements for Industrial Sites)",
+    "cadContext": "Estimates fused deposition modeling (FDM/FFF) filament material consumption and manufacturing run times from CAD solid volumes before G-code compilation.",
+    "formula": "V_print = V_model × [f_shell + (1 - f_shell) × Infill%] • L_fil = V_print / [π × (d_fil / 2)²] • L_bead = V_print / (h_layer × w_nozzle) • Cost = M_fil × Price/kg + P_printer × t × $/kWh",
     "inputs": [
       {
         "label": "Material",
-        "val": "PLA"
+        "val": "PLA (1.24 g/cm³, $20/kg)"
       },
       {
-        "label": "Model Volume (cm³)",
-        "val": "20"
+        "label": "Model Volume",
+        "val": "20 cm³"
       },
       {
-        "label": "Infill Density: 20 %",
-        "val": "20"
+        "label": "Infill Density",
+        "val": "20 %"
       },
       {
         "label": "Shell Layers",
         "val": "3"
       },
       {
-        "label": "Layer Height (mm)",
-        "val": "0.2"
+        "label": "Layer Height",
+        "val": "0.2 mm"
       },
       {
-        "label": "Print Speed (mm/s)",
-        "val": "60"
+        "label": "Print Speed",
+        "val": "60 mm/s"
       },
       {
-        "label": "Nozzle (mm)",
-        "val": "0.4"
+        "label": "Nozzle Width",
+        "val": "0.4 mm"
       },
       {
-        "label": "Printer Power (W)",
-        "val": "120"
+        "label": "Printer Power",
+        "val": "120 W"
+      },
+      {
+        "label": "Electricity Cost",
+        "val": "$0.15 / kWh"
       }
     ],
     "outputs": [
@@ -47,14 +51,18 @@
       },
       {
         "label": "Total Cost",
-        "val": "$ 0.23"
+        "val": "$0.23"
       },
       {
         "label": "Filament Weight",
         "val": "10.9 g"
       },
       {
-        "label": "Extrusion Length",
+        "label": "1.75mm Spool Length",
+        "val": "3.66 m"
+      },
+      {
+        "label": "Bead Path Length",
         "val": "110.0 m"
       },
       {
@@ -62,22 +70,22 @@
         "val": "$0.22"
       },
       {
-        "label": "Electricity",
+        "label": "Electricity Cost",
         "val": "$0.01"
       }
     ]
   },
   "3d-print-layer-time-calculator": {
-    "title": "3D Print Layer Time Calculator",
-    "description": "Calculate time per layer and total print time from layer parameters.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "t_layer = perimeter/v + infill_area/(v*nozzle)",
+    "title": "3D Print Layer Time & Filament Sizing Calculator",
+    "description": "Calculate layer toolpath duration, total print time, and 1.75mm filament mass using perimeter shells and solid/sparse infill kinematics.",
+    "discipline": "CAD Interoperability, Additive Manufacturing & Rapid Prototyping",
+    "standards": "ISO/ASTM 52900 (Additive manufacturing — General principles), ISO/ASTM 52920",
+    "cadContext": "Validate model surface watertightness and manifold geometry before slicing. Export STL with chordal sagitta < 0.05mm to prevent polygon facet artifacts on cylindrical bearing seats.",
+    "formula": "t_layer = (perimeter · wallCount)/v + (infillArea · density)/(v · nozzle) • t_total = (t_solid · n_solid + t_sparse · n_sparse) · (1 + overhead)",
     "inputs": [
       {
         "label": "Layer Height (mm)",
-        "val": "0.2"
+        "val": "0.20"
       },
       {
         "label": "Print Speed (mm/s)",
@@ -88,7 +96,11 @@
         "val": "500"
       },
       {
-        "label": "Infill Area (mm2)",
+        "label": "Perimeter Wall Count",
+        "val": "2"
+      },
+      {
+        "label": "Infill Area (mm²)",
         "val": "10000"
       },
       {
@@ -96,22 +108,34 @@
         "val": "20"
       },
       {
+        "label": "Solid Layers (Top/Bottom)",
+        "val": "4"
+      },
+      {
         "label": "Total Layers",
         "val": "200"
+      },
+      {
+        "label": "Travel & Accel Overhead (%)",
+        "val": "25"
       }
     ],
     "outputs": [
       {
-        "label": "Time per Layer",
-        "val": "110.00 s"
+        "label": "Total Estimated Print Time",
+        "val": "8h 53m"
       },
       {
-        "label": "Total Time",
-        "val": "366.67 min"
+        "label": "Filament Length (1.75mm)",
+        "val": "42.6 m"
       },
       {
-        "label": "Filament Used",
-        "val": "88.000 m"
+        "label": "Estimated PLA Mass",
+        "val": "127.0 g"
+      },
+      {
+        "label": "Average Time per Layer",
+        "val": "128.0 s"
       }
     ]
   },
@@ -119,20 +143,45 @@
     "title": "Chordal Deviation STL Mesh Quality Calculator",
     "description": "Calculate chordal sagitta deviation to optimize STEP/IGES to STL export quality. Predict faceted stepping on circular holes and cylinders before 3D printing.",
     "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Chordal Deviation STL Mesh Quality Calculator",
+    "standards": "ISO/ASTM 52900 (Additive Manufacturing), ISO 10303-21 (STEP AP242 BREP Tessellation), ASME Y14.5M",
+    "cadContext": "When exporting parametric NURBS/BREP surfaces from SolidWorks, Inventor, or Fusion 360 to faceted STL/OBJ meshes, chordal sagitta controls the maximum radial deviation between the ideal curved surface and the tessellated flat facet.",
+    "formula": "Sagitta S = R · (1 - cos(θ / 2)) = R · (1 - cos(π / N)) • Chord C = 2R · sin(θ / 2) • Min Segments N_min = ⌈π / acos(1 - Tol / R)⌉",
     "inputs": [
       {
-        "label": "1. Feature Radius (mm) 5 mm",
-        "val": "5"
+        "label": "Feature Radius R (mm)",
+        "val": "5.0 mm"
       },
       {
-        "label": "2. Angular Step (°) 10 °",
-        "val": "10"
+        "label": "Angular Step θ (°)",
+        "val": "10°"
+      },
+      {
+        "label": "Printer Tolerance Limit",
+        "val": "0.30 mm (FDM Standard)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Sagitta (Chordal Deviation)",
+        "val": "0.0190 mm"
+      },
+      {
+        "label": "Polygon Segments (N)",
+        "val": "36 segments"
+      },
+      {
+        "label": "Chord Length (C)",
+        "val": "0.8716 mm"
+      },
+      {
+        "label": "Arc-to-Chord Error",
+        "val": "0.127 %"
+      },
+      {
+        "label": "Quality Verdict",
+        "val": "Excellent (Sagitta ≤ 0.3 × Tol)"
+      }
+    ]
   },
   "3dsmax-shortcuts-sheet": {
     "title": "3ds Max Hotkeys Complete Reference",
@@ -148,68 +197,97 @@
     "title": "AutoCAD PGP Shortcut Key Alias Editor",
     "description": "Edit, validate, and compile AutoCAD acad.pgp or GstarCAD/ZWCAD command alias files online. Instant duplicate shortcut conflict detection and one-click PGP export — 100% client-side in your browser.",
     "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for AutoCAD PGP Shortcut Key Alias Editor",
+    "standards": "AutoCAD PGP Syntax Specification, ISO 128 (Technical Drawings), GstarCAD / ZWCAD Configuration Protocols",
+    "cadContext": "AutoCAD acad.pgp and GstarCAD gcad.pgp define keyboard command aliases. Custom alias definitions appended to the bottom override standard definitions upon reinitialization (REINIT command or restart).",
+    "formula": "Syntax: <Alias>, *<Command> • Conflict Evaluation: Distinct(Alias) vs Count(Alias) • Compiler: ASCII/UTF-8 PGP Output",
     "inputs": [
       {
-        "label": "Point to CAD command (Such as: CIRCLE)",
-        "val": "Standard"
-      }
-    ],
-    "outputs": []
-  },
-  "acoustic-decibel-calculator": {
-    "title": "Acoustic Decibel Calculator",
-    "description": "Calculate sound pressure level, decibel addition, and distance attenuation.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "SPL = 20*log10(p/p0), attenuation = 6dB per doubling distance",
-    "inputs": [
-      {
-        "label": "Sound Pressure (Pa)",
-        "val": "0.5"
+        "label": "Active Alias Set",
+        "val": "AutoCAD 2024 / GstarCAD Default Preset"
       },
       {
-        "label": "Reference p0 (uPa)",
-        "val": "20"
+        "label": "Configured Hotkeys",
+        "val": "28 Standard Alias Items"
       },
       {
-        "label": "Distance 1 (m)",
-        "val": "1"
-      },
-      {
-        "label": "Distance 2 (m)",
-        "val": "10"
+        "label": "Target Editor Mode",
+        "val": "Visual Keymap + Terminal Simulator"
       }
     ],
     "outputs": [
       {
-        "label": "SPL at d1",
-        "val": "87.959 dB"
+        "label": "Hotkey Conflict Status",
+        "val": "0 Duplicate Collisions Detected"
       },
       {
-        "label": "SPL at d2",
-        "val": "67.959 dB"
+        "label": "PGP Compilation Output",
+        "val": "Ready for 1-Click acad.pgp Export"
       },
       {
-        "label": "Attenuation",
-        "val": "20.000 dB"
+        "label": "Wallpaper Reference Engine",
+        "val": "Rendered for 4K / 1080p / Mobile"
+      }
+    ]
+  },
+  "acoustic-decibel-calculator": {
+    "title": "Acoustic Decibel & Multi-Source Calculator",
+    "description": "Calculate sound pressure level distance attenuation, NIOSH exposure limits, and logarithmic decibel addition across multiple sources.",
+    "discipline": "Engineering Metrology, Applied Acoustics & Environmental Physics",
+    "standards": "ISO 9613-2 (Acoustics — Attenuation of sound during propagation outdoors), ISO 1999 (Determination of occupational noise exposure), NIOSH Criteria for a Recommended Standard (Publication No. 98-126)",
+    "cadContext": "Incorporate outdoor sound propagation contours and acoustic enclosure insertion loss directly into architectural site plans and mechanical room layouts to verify OSHA/NIOSH boundary compliance.",
+    "formula": "SPL₂ = SPL₁ - 20·log₁₀(d₂/d₁) • L_total = 10·log₁₀(Σ 10^(Lᵢ/10)) • T_max = 8 / 2^((SPL-85)/3) hrs (NIOSH REL 3dB exchange rate)",
+    "inputs": [
+      {
+        "label": "Source SPL at d1 (dB)",
+        "val": "85"
+      },
+      {
+        "label": "Reference Distance d1 (m)",
+        "val": "1"
+      },
+      {
+        "label": "Target Distance d2 (m)",
+        "val": "10"
+      },
+      {
+        "label": "Sound Source 1 (dB)",
+        "val": "85"
+      },
+      {
+        "label": "Sound Source 2 (dB)",
+        "val": "85"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "SPL at Target Distance (10m)",
+        "val": "65.0 dB"
+      },
+      {
+        "label": "Distance Attenuation",
+        "val": "20.00 dB"
+      },
+      {
+        "label": "NIOSH Recommended Exposure",
+        "val": "> 24 hrs"
+      },
+      {
+        "label": "Combined Level (85 + 85 dB)",
+        "val": "88.0 dB"
       }
     ]
   },
   "ada-ramp-slope-calculator": {
     "title": "ADA Ramp Slope & Landing Calculator",
-    "description": "Calculate ADA-compliant ramp slope, run length, landing dimensions, and handrail requirements.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "L_run = Rise × SlopeRatio (max 1:12 per ADA §405.2) • N_landings = ceil(Rise / 30 in) - 1",
+    "description": "Calculate ADA-compliant ramp slope, run length, landing dimensions, and continuous handrail requirements per Section 405.",
+    "discipline": "Architectural Accessibility, Civil Site Planning & Building Code Compliance",
+    "standards": "2010 ADA Standards for Accessible Design (Section 405 & 505), ICC A117.1-2017, IBC 2024 (Section 1012)",
+    "cadContext": "Verify ramp slope callouts, 36-inch minimum clear width between handrails, 60x60-inch landing turn dimensions, and 12-inch handrail extensions on architectural site and section sheets.",
+    "formula": "L_run = Rise * SlopeRatio / 12 (max 1:12 per ADA Section 405.2); N_landings = max(0, ceil(Rise / 30 in) - 1); L_handrail = 2 * (Footprint + 2 ft)",
     "inputs": [
       {
         "label": "Total Rise (inches)",
-        "val": "24"
+        "val": "28"
       },
       {
         "label": "Ramp Slope Ratio (1:X)",
@@ -223,7 +301,7 @@
     "outputs": [
       {
         "label": "Total Ramp Horizontal Run",
-        "val": "24.0 ft"
+        "val": "28.0 ft"
       },
       {
         "label": "Intermediate Landings (60\"x60\")",
@@ -231,24 +309,24 @@
       },
       {
         "label": "Total Footprint with Landings",
-        "val": "24.0 ft"
+        "val": "28.0 ft"
       },
       {
         "label": "Min Continuous Handrail Length",
-        "val": "48.0 ft"
+        "val": "60.0 ft"
       }
     ]
   },
   "aeration-tank-calculator": {
     "title": "Aeration Tank Oxygen Requirement Calculator",
-    "description": "Calculate oxygen requirement, air flow rate, and blower sizing for activated sludge.",
+    "description": "Calculate biological basin volume, actual oxygen demand, field air flow rate, and blower sizing for activated sludge.",
     "discipline": "Environmental Process, Hydrology & Open-Channel Hydraulics",
-    "standards": "WEF Manual of Practice No. 8 (MOP 8), Metcalf & Eddy Wastewater Engineering, ASCE/EWRI Urban Drainage Guidelines, International Plumbing Code (IPC)",
-    "cadContext": "Check hydraulic grade line (HGL), invert elevations, freeboard clearances, and peak diurnal flow peaking factors across all connected P&ID and civil site utility profiles.",
-    "formula": "V = (Q · ΔBOD · SRT) / (0.6 · MLSS) • HRT = (V / Q) × 24h (Metcalf & Eddy Wastewater Engineering)",
+    "standards": "Metcalf & Eddy Wastewater Engineering (5th Edition), WEF Manual of Practice No. 8 (MOP 8), Recommended Standards for Wastewater Facilities (Ten States Standards)",
+    "cadContext": "Check hydraulic grade line (HGL), basin invert elevations, diffuser submergence depth, and blower discharge manifold layout in Civil 3D and Revit MEP models.",
+    "formula": "V = (P_x,VSS · SRT · 1000) / (0.75 · MLSS) • HRT = (V / Q) × 24h • AOR = 1.2 · ΔBOD_kg • Airflow = AOR / (0.2793 · Field_OTE)",
     "inputs": [
       {
-        "label": "Design Inflow Q (m³/d)",
+        "label": "Design Daily Inflow Q (m³/d)",
         "val": "5000"
       },
       {
@@ -260,74 +338,98 @@
         "val": "15"
       },
       {
-        "label": "MLSS Concentration (mg/L)",
+        "label": "Aeration Tank MLSS (mg/L)",
         "val": "3000"
       },
       {
         "label": "Sludge Age SRT (days)",
+        "val": "10"
+      },
+      {
+        "label": "Basin Liquid Depth (m)",
+        "val": "4.5"
+      },
+      {
+        "label": "Field OTE α·F·SOTE (%)",
         "val": "10"
       }
     ],
     "outputs": [
       {
         "label": "Aeration Basin Volume",
-        "val": "5694 m³"
+        "val": "1708 m³"
       },
       {
         "label": "Hydraulic Retention Time (HRT)",
-        "val": "27.3 hours"
+        "val": "8.2 hours"
       },
       {
         "label": "Food-to-Microorganism (F/M)",
-        "val": "0.064 kg BOD/kg MLSS·d"
+        "val": "0.215 kg BOD/kg MLSS·d"
       },
       {
-        "label": "Daily Oxygen Demand",
+        "label": "Daily Oxygen Demand (AOR)",
         "val": "1230.0 kg O₂/d"
+      },
+      {
+        "label": "Required Air Flow Rate",
+        "val": "30.6 Nm³/min"
+      },
+      {
+        "label": "Estimated Blower Motor Power",
+        "val": "35.7 kW"
       }
     ]
   },
   "air-duct-pressure-calculator": {
     "title": "Air Duct Pressure Drop Calculator",
-    "description": "Calculate pressure drop in HVAC ducts from friction and dynamic losses.",
+    "description": "Calculate pressure drop in HVAC ducts from Darcy-Weisbach friction and dynamic fitting losses.",
     "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "dP = f*L/D*0.5*rho*v^2 + sum(C*0.5*rho*v^2)",
+    "standards": "ASHRAE Handbook — Fundamentals (Chapter 21 Duct Design), SMACNA HVAC Duct Construction Standards (Metal and Flexible), ISO 6946",
+    "cadContext": "Coordinate ductwork aspect ratios, turning vane radii, and branch takeoff pressure drops within Revit MEP federated models to balance static fan requirements.",
+    "formula": "ΔPf = f · (L / D) · 0.5·ρ·v² (Swamee-Jain explicit Colebrook-White friction) + ΣK · 0.5·ρ·v²",
     "inputs": [
       {
         "label": "Duct Length (m)",
         "val": "20"
       },
       {
-        "label": "Duct Dia (mm)",
+        "label": "Duct Internal Diameter (mm)",
         "val": "300"
       },
       {
         "label": "Air Velocity (m/s)",
-        "val": "5"
+        "val": "5.0"
       },
       {
-        "label": "Friction f",
-        "val": "0.02"
+        "label": "Duct Material",
+        "val": "Galvanized Sheet Steel (0.09 mm)"
       },
       {
-        "label": "Fitting Losses K",
-        "val": "2"
+        "label": "Fitting Loss Coefficient ΣK",
+        "val": "2.0"
       }
     ],
     "outputs": [
       {
-        "label": "Friction Loss",
-        "val": "20.000 Pa"
+        "label": "Total Pressure Loss (SI)",
+        "val": "49.7 Pa"
       },
       {
-        "label": "Dynamic Loss",
-        "val": "30.000 Pa"
+        "label": "Total Pressure Loss (Imperial)",
+        "val": "0.200 in. w.g."
       },
       {
-        "label": "Total Loss",
-        "val": "50.000 Pa"
+        "label": "Friction Pressure Loss ΔPf",
+        "val": "19.6 Pa"
+      },
+      {
+        "label": "Dynamic Fitting Loss ΔPd",
+        "val": "30.1 Pa"
+      },
+      {
+        "label": "Reynolds Number (Re)",
+        "val": "98945"
       }
     ]
   },
@@ -342,70 +444,90 @@
     "outputs": []
   },
   "anchor-bolt-calculator": {
-    "title": "Anchor Bolt Pull-out Strength Calculator",
-    "description": "Calculate anchor bolt pull-out and shear capacity in concrete per ACI 318.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "Nn = 0.5*sqrt(fc)*hef^1.5*pi",
+    "title": "Anchor Bolt Conceptual Capacity Estimator",
+    "description": "Preliminary sizing of single cast-in anchor bolt concrete breakout and steel tensile/shear capacity for conceptual planning.",
+    "discipline": "Structural Fastener Mechanics & Concrete Anchor Engineering",
+    "standards": "Concrete Capacity Design (CCD) Method, ISO 898-1 (Mechanical Properties of Carbon Steel Fasteners), AISC Design Guide 1 (Base Plate and Anchor Rod Design)",
+    "cadContext": "Verify minimum concrete edge distances (c1, c2 ≥ 1.5 hef) and anchor bolt center-to-center spacing (s ≥ 3.0 hef) in structural column base plate details.",
+    "formula": "N_b = k_c · √(f'c) · h_ef^1.5 (k_c = 10.0 for cast-in in SI) • N_sa = A_se · f_uta • V_sa = 0.6 · A_se · f_uta (unfactored nominal capacity)",
     "inputs": [
       {
-        "label": "Concrete fc (MPa)",
+        "label": "Concrete f'c (MPa)",
         "val": "25"
       },
       {
-        "label": "Embedment hef (mm)",
+        "label": "Effective Embedment Depth h_ef (mm)",
         "val": "100"
       },
       {
-        "label": "Bolt Dia (mm)",
+        "label": "Bolt Nominal Diameter d (mm)",
         "val": "16"
       },
       {
-        "label": "Steel fy (MPa)",
-        "val": "400"
+        "label": "Steel Yield Strength fy (MPa)",
+        "val": "640"
+      },
+      {
+        "label": "Steel Ultimate Strength fu (MPa)",
+        "val": "800"
       }
     ],
     "outputs": [
       {
-        "label": "Pull-out Nn",
-        "val": "248.36 kN"
+        "label": "Governing Nominal Tension",
+        "val": "50.00 kN"
       },
       {
-        "label": "Steel Capacity",
-        "val": "72.382 kN"
+        "label": "Concrete Cone Breakout (Nb)",
+        "val": "50.00 kN"
       },
       {
-        "label": "Shear Vn",
-        "val": "48.255 kN"
+        "label": "Steel Tensile Rupture (Nsa)",
+        "val": "125.4 kN"
+      },
+      {
+        "label": "Steel Shear Capacity (Vsa)",
+        "val": "75.27 kN"
       }
     ]
   },
   "angle-unit-converter": {
     "title": "Angle Unit Converter",
-    "description": "Convert between degrees, radians, gradians, arc minutes, and arc seconds.",
+    "description": "Convert between degrees, radians, milliradians, gradians, arcminutes, arcseconds, revolutions, and NATO mils.",
     "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 rad = 57.296 deg = 63.662 grad",
+    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-3 (Space and Time), BIPM SI Brochure (9th Edition)",
+    "cadContext": "Maintain full double-precision floating-point accuracy during angular transformations (DXF 50-group angular codes, Euler angles, STEP Cartesian transformation matrices).",
+    "formula": "1 rad = 180/π deg ≈ 57.29578° • 1 gon = 0.9° • 1 mil = 360/6400° = 0.05625° • 1 MOA = 1/60°",
     "inputs": [
       {
-        "label": "Value",
+        "label": "Value to Convert",
         "val": "90"
       },
       {
-        "label": "From",
-        "val": "deg"
+        "label": "From Unit",
+        "val": "Degree (°)"
       },
       {
-        "label": "To",
-        "val": "rad"
+        "label": "To Unit",
+        "val": "Radian (rad)"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "1.571"
+        "label": "Converted Result",
+        "val": "1.570796 rad"
+      },
+      {
+        "label": "Base Degrees",
+        "val": "90°"
+      },
+      {
+        "label": "Quadrant",
+        "val": "Positive Y-Axis (90°)"
+      },
+      {
+        "label": "Revolutions (Turns)",
+        "val": "0.2500 rev"
       }
     ]
   },
@@ -420,46 +542,54 @@
     "outputs": []
   },
   "arc-flash-calculator": {
-    "title": "Arc Flash Incident Energy Calculator (NFPA 70E)",
-    "description": "Calculate arc flash incident energy, PPE category, and flash protection boundary per NFPA 70E.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "E = 4.184 · Cf · Ibf^x · (t/0.2) · (610/D)^y • AFB = 610 · (E/1.2)^(1/y) (IEEE 1584-2018 / NFPA 70E)",
+    "title": "Arc Flash Incident Energy Calculator",
+    "description": "Preliminary screening of arc flash incident energy, arcing current, and flash boundary distance using IEEE 1584-2002 empirical equations.",
+    "discipline": "Electrical Power Systems, Industrial Safety & Substation Engineering",
+    "standards": "IEEE Std 1584-2002 (IEEE Guide for Performing Arc-Flash Hazard Calculations), NFPA 70E Annex D (Incident Energy Calculation Methods)",
+    "cadContext": "Record calculated incident energy, protective clearing times, and arc flash boundary distances on electrical single-line CAD schematics and panelboard warning label schedules.",
+    "formula": "lg(Ia) = f(V, Ibf, G) • lg(En) = K1 + K2 + 1.081·lg(Ia) + 0.0011·G • E = 4.184·Cf·En·(t/0.2)·(610^x / D^x) • AFB = 610·(E_cal / 1.2)^(1/x)",
     "inputs": [
       {
-        "label": "System Voltage (kV)",
-        "val": "480V (Low Voltage Switchgear)"
+        "label": "System Voltage V (kV)",
+        "val": "0.48"
       },
       {
-        "label": "Bolted Fault Current (kA)",
+        "label": "Equipment Class",
+        "val": "MCCs & Panelboards (≤ 1 kV)"
+      },
+      {
+        "label": "Grounding Type",
+        "val": "Solidly Grounded"
+      },
+      {
+        "label": "Bolted Fault Current Ibf (kA)",
         "val": "25"
       },
       {
-        "label": "Arc Clearing Time (seconds)",
+        "label": "Arc Clearing Time t (s)",
         "val": "0.12"
       },
       {
-        "label": "Working Distance (mm)",
+        "label": "Working Distance D (mm)",
         "val": "455"
       }
     ],
     "outputs": [
       {
-        "label": "Incident Energy at Working Dist",
-        "val": "124.41 cal/cm²"
+        "label": "Predicted Arcing Current Ia",
+        "val": "14.34 kA"
+      },
+      {
+        "label": "Incident Energy (E)",
+        "val": "5.94 cal/cm²"
+      },
+      {
+        "label": "Incident Energy (SI)",
+        "val": "24.8 J/cm²"
       },
       {
         "label": "Arc Flash Boundary (AFB)",
-        "val": "13462 mm"
-      },
-      {
-        "label": "NFPA 70E PPE Category",
-        "val": "Extreme Risk (>40 cal)"
-      },
-      {
-        "label": "Normalized Working Distance",
-        "val": "455 mm"
+        "val": "1615 mm"
       }
     ]
   },
@@ -475,11 +605,11 @@
   },
   "area-unit-converter": {
     "title": "Area Unit Converter",
-    "description": "Convert between m2, cm2, mm2, ft2, in2, acre, hectare, and km2.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 m2 = 10.764 ft2, 1 acre = 4047 m2",
+    "description": "Convert between m2, cm2, mm2, ft2, in2, yd2, acre, hectare, and km2 with exact NIST SP 811 metrology conversion factors.",
+    "discipline": "Engineering Metrology, Geodesy & Architecture",
+    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-3 (Quantities and Units - Space and Time), BIPM SI Brochure (9th Edition)",
+    "cadContext": "Maintain double-precision floating-point accuracy during geometric area calculations in CAD/GIS, applying rounding only to final drawing schedule callouts.",
+    "formula": "Exact factors: 1 ft2 = 0.09290304 m2, 1 in2 = 0.00064516 m2, 1 yd2 = 0.83612736 m2, 1 acre = 4046.8564224 m2, 1 ha = 10000 m2",
     "inputs": [
       {
         "label": "Value",
@@ -497,34 +627,49 @@
     "outputs": [
       {
         "label": "Result",
-        "val": "10.764"
+        "val": "10.764 ft²"
       }
     ]
   },
   "autocad-fatal-error-wizard": {
     "title": "AutoCAD Fatal Error Diagnostic Wizard",
-    "description": "Interactive decision tree for AutoCAD",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "AutoCAD Exception 0xC0000005 / 0xE06D7363 Stack Trace & Graphics Hardware Acceleration (3DCONFIG) Triage",
-    "inputs": [],
-    "outputs": []
+    "description": "Interactive decision tree for troubleshooting AutoCAD \"FATAL ERROR: Unhandled Access Violation\" crashes across drawing corruption, startup, and plotting.",
+    "discipline": "AutoCAD System Administration & Technical Troubleshooting",
+    "standards": "Autodesk Knowledge Base (AKB) Technical Documentation, Microsoft Windows Error Handling & Event Viewer Diagnostics",
+    "cadContext": "When AutoCAD crashes with fatal access violations (0xC0000005), run AUDIT, RECOVERALL, and PURGE on problematic DWGs, and verify 3D graphics hardware acceleration (3DCONFIG) before editing production drawings.",
+    "formula": "Autodesk KB Diagnostic Decision Tree for Exception 0xC0000005 / Drawing Corruption / Graphics Conflicts",
+    "inputs": [
+      {
+        "label": "Diagnostic Scenarios",
+        "val": "5 Scenarios"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Documented Causes & Verified Fixes",
+        "val": "13 Documented Causes & Fixes"
+      }
+    ]
   },
   "autocad-registry-clean-generator": {
     "title": "AutoCAD Clean Registry Reset Generator",
     "description": "Generate a safe Windows cmd batch script (.bat) to reset AutoCAD settings, clean orphaned registry paths, and flush local licensing cache files for clean reinstallation.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Standardized parametric evaluation for AutoCAD Clean Registry Reset Generator",
+    "discipline": "AutoCAD IT Administration & Deployment Engineering",
+    "standards": "Microsoft Windows Registry Guidelines, Autodesk Deployment & Clean Uninstall Standard Practice",
+    "cadContext": "Before running registry reset scripts, always export a full registry backup (.reg) to restore custom CUI menus, tool palettes, and PGP aliases if needed.",
+    "formula": "Windows Batch Automation: reg export (backup) -> reg delete (HKCU/HKLM) -> rmdir AppData cache folders",
     "inputs": [
       {
         "label": "Target CAD software version",
-        "val": "AutoCAD 2024"
+        "val": "AutoCAD 2024 (R24.3)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Generated Script",
+        "val": "reset_autocad_AutoCAD_2024.bat"
+      }
+    ]
   },
   "autocad-shortcuts-sheet": {
     "title": "AutoCAD Shortcut Keys & Command Aliases Cheat Sheet",
@@ -538,311 +683,506 @@
   },
   "autocad-vs-gstarcad-shortcuts": {
     "title": "AutoCAD vs. GstarCAD Command Alias Diff Table",
-    "description": "Detailed command mapping and alias comparison diff table between AutoCAD and GstarCAD Lite/Pro versions. Fast migration search.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for AutoCAD vs. GstarCAD Command Alias Diff Table",
-    "inputs": [],
-    "outputs": []
+    "description": "Side-by-side command mapping and PGP alias diff table between AutoCAD and GstarCAD Lite/Pro. Fast migration reference.",
+    "discipline": "CAD Interoperability & Drafting Systems",
+    "standards": "Autodesk AutoCAD acad.pgp Reference Guide, GstarCAD Command Specification (gcad.pgp), ASME Y14.2 / ISO 128 Drafting Standards",
+    "cadContext": "Facilitates seamless workstation migration between AutoCAD and GstarCAD by comparing standard drawing aliases against proprietary GstarCAD productivity tools (AREASUM, MAGNIFIER, BCOUNT).",
+    "formula": "Alias mapping: Command_Alt = Map(Alias) vs. Command_ACAD = Map(Alias)",
+    "inputs": [
+      {
+        "label": "Command Query / Filter",
+        "val": "All 21 Verified PGP Aliases & Commands"
+      },
+      {
+        "label": "CAD Engine Pair",
+        "val": "AutoCAD 2024 vs. GstarCAD 2024 Pro"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Identical PGP Commands",
+        "val": "18 Core Drawing Aliases (L, C, REC, PL, M, CO, RO, TR, EX, F, MI, O, SPL, DI, E, Z, H, MA)"
+      },
+      {
+        "label": "Proprietary Enhancements",
+        "val": "3 Official GstarCAD Commands (AREASUM, MAGNIFIER, BCOUNT)"
+      }
+    ]
   },
   "autocad-vs-zwcad-shortcuts": {
-    "title": "AutoCAD vs. ZWCAD Command alias difference table",
+    "title": "AutoCAD vs. ZWCAD Command Alias Difference Table",
     "description": "Compare command alias mappings between AutoCAD and ZWCAD. Verify smart command exceptions for seamless transitions.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for AutoCAD vs. ZWCAD Command alias difference table",
-    "inputs": [],
-    "outputs": []
+    "discipline": "CAD Interoperability & Drafting Systems",
+    "standards": "Autodesk AutoCAD acad.pgp Reference Guide, ZWCAD Official Command & PGP System Specification (zwcad.pgp), ASME Y14.2 / ISO 128 Drafting Standards",
+    "cadContext": "Facilitates migration from AutoCAD to ZWCAD by mapping classical shortcuts and highlighting innovative proprietary ZWCAD features (SmartSelect/SMARTSEL, FileCompare/FCMP, SmartVoice, SmartPlot).",
+    "formula": "Alias mapping: Command_ZWCAD = Map(Alias) vs. Command_ACAD = Map(Alias)",
+    "inputs": [
+      {
+        "label": "Command Query / Filter",
+        "val": "All 22 Verified PGP Aliases & Commands"
+      },
+      {
+        "label": "CAD Engine Pair",
+        "val": "AutoCAD 2024 vs. ZWCAD 2025 Pro"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Identical PGP Commands",
+        "val": "18 Core Drawing Aliases (L, C, REC, PL, M, CO, RO, TR, EX, F, MI, O, SPL, DI, E, Z, H, MA)"
+      },
+      {
+        "label": "Proprietary Enhancements",
+        "val": "4 Official ZWCAD Smart Commands (SMARTSEL, FCMP, SMARTVOICE, SMARTPLOT)"
+      }
+    ]
   },
   "autolisp-function-reference": {
     "title": "AutoLISP Function Quick Reference",
-    "description": "Complete AutoLISP function reference: math, geometry, entity access, selection sets, list manipulation, and command execution for AutoCAD scripting.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for AutoLISP Function Quick Reference",
-    "inputs": [],
-    "outputs": []
+    "description": "Comprehensive cheat sheet and syntax reference for 90+ AutoLISP and Visual LISP functions across math, geometry, entity manipulation (entget/entmake), selection sets, and system variables.",
+    "discipline": "CAD Customization & AutoLISP Automation",
+    "standards": "Autodesk AutoLISP Reference Guide, AutoCAD Customization Standards, Visual LISP (VLISP) Developer Reference",
+    "cadContext": "Enables CAD engineers and developers to automate drafting routines, manipulate DXF entity association lists, manage OSNAP/coordinate conversions, and extend DWG drawing commands.",
+    "formula": "(defun c:cmd () (setq ent (entget (car (entsel)))) ...) • S-expression evaluation in AutoLISP/Visual LISP engine",
+    "inputs": [
+      {
+        "label": "Standard Function Library",
+        "val": "90+ Built-in AutoLISP & Visual LISP Functions"
+      },
+      {
+        "label": "Category Coverage",
+        "val": "Math, Geometry, Selection Sets, DXF Entity Lists, System Vars"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Code Template & Syntax",
+        "val": "Verified S-expression Syntax & Return Types"
+      },
+      {
+        "label": "Interactive Search & Filter",
+        "val": "Real-time Fuzzy Search across Names and Categories"
+      }
+    ]
   },
   "aws-welding-symbol-reference": {
     "title": "Welding Symbol Reference Guide",
-    "description": "Complete AWS A2.4 welding symbol reference: groove, fillet, plug, surfacing welds with supplementary symbols and tail notes.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "Standardized parametric evaluation for Welding Symbol Reference Guide",
-    "inputs": [],
-    "outputs": []
+    "description": "Standardized welding symbol reference mapping fillet, groove (square, V, bevel, U, J), supplementary symbols, finish methods, and welding processes (SMAW, GMAW, GTAW, FCAW, SAW).",
+    "discipline": "Welding Engineering & Structural Joint Detailing",
+    "standards": "AWS A2.4:2020 (Standard Symbols for Welding, Brazing, and Nondestructive Examination), ISO 2553 (Welded joints - Symbolic representation on drawings)",
+    "cadContext": "Used by structural detailers and mechanical drafters to decode and annotate blueprint welding reference lines, arrow side/other side conventions, and tail specifications.",
+    "formula": "Reference Line + Arrow + Basic Weld Symbol + Dimensions (Size S, Length L, Pitch P) + Tail Process Specification (AWS A2.4 / ISO 2553)",
+    "inputs": [
+      {
+        "label": "Joint & Symbol Taxonomy",
+        "val": "Fillet, Groove (Square, V, Bevel, U, J), Plug/Slot, Stud"
+      },
+      {
+        "label": "Welding Process Library",
+        "val": "SMAW, GMAW, GTAW, FCAW, SAW, OAW, PAW"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Symbol & Cross-Section",
+        "val": "Standardized Blueprint Visual Representation"
+      },
+      {
+        "label": "Tail Specification Data",
+        "val": "Process Code, Reference Standard & NDT Examination"
+      }
+    ]
   },
   "ball-screw-calculator": {
     "title": "Ball Screw Torque & Efficiency Calculator",
-    "description": "Calculate ball screw drive torque, efficiency, and backdriving torque.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "T = F*lead/(2*pi*eta), eta up to 90%+",
+    "description": "Calculate ball screw direct drive torque, motor power demand, holding backdriving torque, and linear travel velocity per ISO 3408.",
+    "discipline": "Mechanical Power Transmission & Precision Kinematics",
+    "standards": "ISO 3408-1 (Ball screws - Part 1: Vocabulary and designations), ISO 3408-5 (Part 5: Static and dynamic axial load ratings), DIN 69051",
+    "cadContext": "Verify ball screw lead angle, critical rotational speed (whipping frequency), and end-support bearing fixity (Fixed-Supported vs Fixed-Fixed) in your 3D CAD machine layout.",
+    "formula": "T_drive = F * l / (2 * pi * eta1); P_drive = T_drive * 2 * pi * n / 60; T_backdrive = F * l * eta2 / (2 * pi); v = n * l / 60 mm/s",
     "inputs": [
       {
-        "label": "Axial Load (N)",
+        "label": "Axial Thrust Load (N)",
         "val": "5000"
       },
       {
-        "label": "Lead (mm)",
+        "label": "Screw Lead (mm)",
         "val": "10"
       },
       {
-        "label": "Efficiency",
-        "val": "0.9"
+        "label": "Forward Efficiency (eta1)",
+        "val": "0.90"
       },
       {
-        "label": "Speed (RPM)",
+        "label": "Backdrive Efficiency (eta2)",
+        "val": "0.80"
+      },
+      {
+        "label": "Rotational Speed (RPM)",
         "val": "1000"
       }
     ],
     "outputs": [
       {
-        "label": "Drive Torque",
+        "label": "Direct Drive Torque",
         "val": "8.842 Nm"
       },
       {
-        "label": "Drive Power",
+        "label": "Drive Mechanical Power",
         "val": "925.93 W"
       },
       {
-        "label": "Backdrive Torque",
-        "val": "7.162 Nm"
+        "label": "Backdrive Holding Torque",
+        "val": "6.366 Nm"
+      },
+      {
+        "label": "Linear Travel Speed",
+        "val": "166.7 mm/s (10.0 m/min)"
       }
     ]
   },
   "battery-capacity-calculator": {
-    "title": "Battery Capacity Calculator",
-    "description": "Calculate battery Ah capacity from load power, backup time, and system voltage.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Ah = P*t/(V*DoD*eff)",
+    "title": "Battery Capacity & Energy Storage Calculator",
+    "description": "Calculate battery Ah capacity, gross energy storage, and continuous DC discharge current from load power, backup autonomy time, and system DC voltage.",
+    "discipline": "Electrical Power Systems, NEC Compliance & Energy Storage",
+    "standards": "IEEE Std 485 (Sizing Lead-Acid Batteries for Stationary Applications), IEC 60896 / IEC 62619, NFPA 70 (NEC Article 480 & Article 706)",
+    "cadContext": "Sizes stationary battery banks and uninterruptible power supply (UPS) systems in electrical schematic drawings and panel schedules, accounting for depth of discharge and inverter conversion efficiency.",
+    "formula": "E_load = P · t • C_Ah = E_load / (V_sys · DoD · η) • E_stored = C_Ah · V_sys • I_dc = P / (V_sys · η)",
     "inputs": [
       {
-        "label": "Load Power (W)",
-        "val": "500"
+        "label": "Load Power (P)",
+        "val": "500 W"
       },
       {
-        "label": "Backup Time (h)",
-        "val": "4"
+        "label": "Backup Autonomy Time (t)",
+        "val": "4 h"
       },
       {
-        "label": "System Voltage (V)",
-        "val": "48"
+        "label": "System DC Voltage (V)",
+        "val": "48 V"
       },
       {
-        "label": "DoD",
-        "val": "0.8"
+        "label": "Depth of Discharge (DoD)",
+        "val": "0.80"
       },
       {
-        "label": "Inverter Eff",
-        "val": "0.9"
+        "label": "Inverter / System Efficiency (η)",
+        "val": "0.90"
+      },
+      {
+        "label": "Design Margin",
+        "val": "1.10"
       }
     ],
     "outputs": [
       {
-        "label": "Battery Capacity",
-        "val": "57.870 Ah"
+        "label": "Rated Battery Capacity",
+        "val": "57.87 Ah"
       },
       {
-        "label": "Energy Needed",
-        "val": "2000.00 Wh"
+        "label": "Load Energy Needed",
+        "val": "2000 Wh (2.00 kWh)"
+      },
+      {
+        "label": "Recommended Capacity (with Margin)",
+        "val": "63.66 Ah"
+      },
+      {
+        "label": "Total Gross Battery Energy",
+        "val": "2777.8 Wh (2.78 kWh)"
+      },
+      {
+        "label": "Continuous DC Discharge Current",
+        "val": "11.57 A"
       }
     ]
   },
   "beam-deflection-structural-calculator": {
     "title": "Steel Beam Deflection & Stress Calculator",
-    "description": "Calculate structural H-beam deflection, bending stress, moment of inertia, and section modulus under point and distributed loads for AISC standard structural design.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "Standardized parametric evaluation for Steel Beam Deflection & Stress Calculator",
+    "description": "Calculate structural beam deflection, maximum bending moment, bending stress, moment of inertia (Ix), and section modulus (Wx) under concentrated and distributed loads.",
+    "discipline": "Structural Engineering, Solid Mechanics & AISC Design",
+    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1), ASTM A36 / A992, IBC 2024 Table 1604.3 (Deflection Limits L/240 & L/360)",
+    "cadContext": "Analyzes structural beam profiles in mechanical frame models and structural BIM layouts, comparing analytical closed-form Euler-Bernoulli deflections against building code serviceability thresholds.",
+    "formula": "M_max = (P · L) / 4 • δ_max = (P · L³) / (48 · E · I_x) • σ_max = M_max / W_x • SF = F_y / σ_max",
     "inputs": [
       {
-        "label": "1. Support & Load Arrangement",
-        "val": "Simply Supported + Center Point Load (Simply supported beam + central concentrated force)"
+        "label": "Support & Load Setup",
+        "val": "Simply Supported + Center Point Load (P)"
       },
       {
-        "label": "Flange Width (B) 100 mm",
-        "val": "100"
+        "label": "Profile Geometry",
+        "val": "I-Beam (H=200mm, B=100mm, tf=8mm, tw=6mm)"
       },
       {
-        "label": "Flange Thickness (tf) 8 mm",
-        "val": "8"
+        "label": "Beam Span Length (L)",
+        "val": "4.0 m"
       },
       {
-        "label": "Web Thickness (tw) 6 mm",
-        "val": "6"
+        "label": "Applied Force (P)",
+        "val": "10.0 kN"
       },
       {
-        "label": "Beam Span Length (L) 4 m",
-        "val": "4"
-      },
-      {
-        "label": "Applied Point Force (P) 10 kN",
-        "val": "10"
-      }
-    ],
-    "outputs": []
-  },
-  "bearing-capacity-calculator": {
-    "title": "Soil Bearing Capacity Calculator Terzaghi",
-    "description": "Calculate ultimate bearing capacity of shallow foundations.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "qu=c*Nc+g*Df*Nq+0.5*g*B*Ng",
-    "inputs": [
-      {
-        "label": "Cohesion c (kPa)",
-        "val": "20"
-      },
-      {
-        "label": "Soil Density (kN/m3)",
-        "val": "18"
-      },
-      {
-        "label": "Depth Df (m)",
-        "val": "1"
-      },
-      {
-        "label": "Width B (m)",
-        "val": "2"
-      },
-      {
-        "label": "Nc",
-        "val": "30"
-      },
-      {
-        "label": "Nq",
-        "val": "18"
-      },
-      {
-        "label": "Ng",
-        "val": "15"
+        "label": "Material Grade",
+        "val": "Structural Steel A36 (E=200 GPa, Fy=250 MPa)"
       }
     ],
     "outputs": [
       {
-        "label": "Ultimate Capacity",
+        "label": "Moment of Inertia (Ix)",
+        "val": "1.7869×10⁷ mm⁴"
+      },
+      {
+        "label": "Section Modulus (Wx)",
+        "val": "1.7869×10⁵ mm³"
+      },
+      {
+        "label": "Max Bending Moment",
+        "val": "10.000 kN·m"
+      },
+      {
+        "label": "Max Deflection (δmax)",
+        "val": "3.73 mm"
+      },
+      {
+        "label": "Max Bending Stress (σmax)",
+        "val": "56.0 MPa"
+      },
+      {
+        "label": "Safety Factor (SF)",
+        "val": "4.47"
+      },
+      {
+        "label": "Serviceability Limit (L/240)",
+        "val": "16.67 mm (SAFE)"
+      }
+    ]
+  },
+  "bearing-capacity-calculator": {
+    "title": "Soil Bearing Capacity Calculator (Terzaghi Method)",
+    "description": "Calculate ultimate and allowable bearing capacity of shallow strip, square, and circular foundations using the classical Terzaghi trilinear equation.",
+    "discipline": "Geotechnical Engineering & Foundation Design",
+    "standards": "Terzaghi (1943) Theoretical Soil Mechanics, Eurocode 7 (EN 1997-1 Geotechnical Design), ASTM D1586 Standard Penetration Test Correlation",
+    "cadContext": "Determines safe contact pressures for shallow spread and strip footings in civil site grading plans, foundation layouts, and structural CAD packages before sizing foundation dimensions.",
+    "formula": "q_u = s_c · c · N_c + s_q · γ · D_f · N_q + 0.5 · s_γ · γ · B · N_γ • q_a = q_u / FS",
+    "inputs": [
+      {
+        "label": "Foundation Shape",
+        "val": "Strip Footing (sc=1.0, sq=1.0, sg=1.0)"
+      },
+      {
+        "label": "Soil Cohesion (c)",
+        "val": "20 kPa"
+      },
+      {
+        "label": "Soil Unit Weight (γ)",
+        "val": "18 kN/m³"
+      },
+      {
+        "label": "Foundation Depth (Df)",
+        "val": "1.0 m"
+      },
+      {
+        "label": "Foundation Width (B)",
+        "val": "2.0 m"
+      },
+      {
+        "label": "Terzaghi Bearing Factors",
+        "val": "Nc=30, Nq=18, Nγ=15"
+      },
+      {
+        "label": "Factor of Safety (FS)",
+        "val": "3.0"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Ultimate Bearing Capacity (qu)",
         "val": "1194.00 kPa"
       },
       {
-        "label": "Allowable (FS=3)",
+        "label": "Allowable Bearing Capacity (qa)",
         "val": "398.00 kPa"
+      },
+      {
+        "label": "Net Allowable Capacity (qnet)",
+        "val": "392.00 kPa"
+      },
+      {
+        "label": "Total Allowable Line Force (Qa)",
+        "val": "796.00 kN/m"
+      },
+      {
+        "label": "Soft Clay Benchmark (phi=0, Nc=5.7)",
+        "val": "qu=159.50 kPa, qa=53.17 kPa, qnet=47.50 kPa, Qa=106.30 kN/m"
       }
     ]
   },
   "bearing-life-calculator": {
     "title": "Bearing Life L10 Calculator",
-    "description": "Calculate bearing L10 life from dynamic load rating, equivalent load, and speed.",
+    "description": "Calculates basic rating life L10 (millions of revolutions) and operating life L10h (hours) for ball and roller bearings based on dynamic load rating C, equivalent dynamic load P, and rotational speed.",
     "discipline": "Mechanical Power Transmission & Tribology",
-    "standards": "ISO 281:2007 (Dynamic Load Ratings & Rating Life), ISO 76 (Static Load Ratings), ANSI/ABMA Std 9 & Std 11",
-    "cadContext": "Verify shaft and housing cylindrical tolerance fits (typically ISO k5/m5 shaft with H7 housing bore per ISO 286) in your 3D MCAD assembly before finalizing bearing selection.",
-    "formula": "L10 = (C/P)^p, p=3 for ball, 10/3 for roller",
+    "standards": "ISO 281:2007 (Rolling bearings — Dynamic load ratings and rating life), ANSI/ABMA Std 9 & Std 11",
+    "cadContext": "Essential for machinery spindle design, gearbox shaft sizing, and electric motor reliability engineering to predict bearing fatigue life under radial/axial loading.",
+    "formula": "L10 = (C / P)^p • L10h = (10^6 / (60 · n)) · L10 • (p = 3 for ball bearings, p = 10/3 for roller bearings)",
     "inputs": [
       {
-        "label": "Dynamic Load C (kN)",
+        "label": "Dynamic Load Rating C (kN)",
         "val": "50"
       },
       {
-        "label": "Equivalent Load P (kN)",
+        "label": "Equivalent Dynamic Load P (kN)",
         "val": "5"
       },
       {
-        "label": "Speed (RPM)",
+        "label": "Rotational Speed n (RPM)",
         "val": "1500"
       },
       {
-        "label": "Type",
+        "label": "Bearing Type",
         "val": "Ball Bearing (p = 3)"
       }
     ],
     "outputs": [
       {
-        "label": "L10",
-        "val": "1000.00 Mr"
+        "label": "Basic Rating Life L10",
+        "val": "1000.00 Mr (million revolutions)"
       },
       {
-        "label": "L10h",
+        "label": "Operating Life L10h",
         "val": "11111 hours"
+      }
+    ],
+    "testCases": [
+      {
+        "name": "Standard Deep Groove Ball Bearing (Default)",
+        "inputs": {
+          "c": "50",
+          "p": "5",
+          "speed": "1500",
+          "type": "ball"
+        },
+        "expectedOutputs": {
+          "l10": "1000.00",
+          "l10h": "11111"
+        }
+      },
+      {
+        "name": "Heavy Duty Cylindrical Roller Bearing (Preset)",
+        "inputs": {
+          "c": "120",
+          "p": "25",
+          "speed": "900",
+          "type": "roller"
+        },
+        "expectedOutputs": {
+          "l10": "186.55",
+          "l10h": "3455"
+        }
       }
     ]
   },
   "bearing-static-load-calculator": {
     "title": "Bearing Static Load Capacity Calculator",
-    "description": "Calculate bearing static load rating and equivalent static load.",
+    "description": "Calculates equivalent static load P0 and required basic static load rating C0 for rolling bearings subjected to combined radial and axial static loads under ISO 76 guidelines.",
     "discipline": "Mechanical Power Transmission & Tribology",
-    "standards": "ISO 281:2007 (Dynamic Load Ratings & Rating Life), ISO 76 (Static Load Ratings), ANSI/ABMA Std 9 & Std 11",
-    "cadContext": "Verify shaft and housing cylindrical tolerance fits (typically ISO k5/m5 shaft with H7 housing bore per ISO 286) in your 3D MCAD assembly before finalizing bearing selection.",
-    "formula": "P0 = X0*Fr + Y0*Fa",
+    "standards": "ISO 76:2006 (Rolling bearings — Static load ratings), ANSI/ABMA Std 9",
+    "cadContext": "Determines static safety against permanent rolling element indentation (Brinelling) in slow-turning, oscillating, or stationary machinery subject to heavy shock loads.",
+    "formula": "P0 = max(X0 · Fr + Y0 · Fa, Fr) • C0 = s0 · P0 (ISO 76:2006)",
     "inputs": [
       {
-        "label": "Radial Load (kN)",
+        "label": "Radial Load Fr (kN)",
         "val": "10"
       },
       {
-        "label": "Axial Load (kN)",
+        "label": "Axial Load Fa (kN)",
         "val": "2"
       },
       {
-        "label": "X0",
+        "label": "Static Radial Factor X0",
         "val": "0.6"
       },
       {
-        "label": "Y0",
+        "label": "Static Axial Factor Y0",
         "val": "0.5"
+      },
+      {
+        "label": "Static Safety Factor s0",
+        "val": "1.5"
       }
     ],
     "outputs": [
       {
-        "label": "Equivalent P0",
+        "label": "Equivalent Static Load P0",
         "val": "10.000 kN"
       },
       {
-        "label": "Required C0",
+        "label": "Required Static Rating C0",
         "val": "15.000 kN"
+      }
+    ],
+    "testCases": [
+      {
+        "name": "Combined Radial & Axial Static Load (Default)",
+        "inputs": {
+          "fr": "10",
+          "fa": "2",
+          "x0": "0.6",
+          "y0": "0.5",
+          "s0": "1.5"
+        },
+        "expectedOutputs": {
+          "p0": "10.000",
+          "c0": "15.000"
+        }
+      },
+      {
+        "name": "High Axial Static Load",
+        "inputs": {
+          "fr": "10",
+          "fa": "15",
+          "x0": "0.6",
+          "y0": "0.5",
+          "s0": "1.5"
+        },
+        "expectedOutputs": {
+          "p0": "13.500",
+          "c0": "20.250"
+        }
       }
     ]
   },
   "belt-drive-length-calculator": {
     "title": "Belt Drive Calculator",
-    "description": "Calculate belt length, center distance, speed ratio, and output RPM for V-belt and timing belt drive systems.",
+    "description": "Computes pitch/datum belt length L, center distance C, speed ratio, driven RPM, and driver/driven pulley wrap angles for two-pulley open belt drives.",
     "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "L ≈ 2C + (π/2)(D₁ + D₂) + (D₂ - D₁)² / (4C) • i = D₂ / D₁ = RPM₁ / RPM₂",
+    "standards": "ISO 4183 (Classical and narrow V-belts — Grooved pulleys), RMA IP-20, ISO 5296 (Synchronous belt drives)",
+    "cadContext": "Used by mechanical engineers and machine designers to size V-belt, micro-V, and timing belt transmissions while verifying minimum arc of contact (wrap angle ≥ 120°).",
+    "formula": "L = 2C + (π/2)(D1 + D2) + (D2 - D1)² / (4C) • θ = 180° ∓ 2·arcsin((D2 - D1)/(2C))",
     "inputs": [
       {
-        "label": "Solve For Belt Length Center Dist Driver Pulley D₁ (mm)",
+        "label": "Driver Pulley D1 (mm)",
         "val": "100"
       },
       {
-        "label": "Driven Pulley D₂ (mm)",
+        "label": "Driven Pulley D2 (mm)",
         "val": "300"
-      },
-      {
-        "label": "Input RPM",
-        "val": "1450"
       },
       {
         "label": "Center Distance C (mm)",
         "val": "500"
+      },
+      {
+        "label": "Input Speed (RPM)",
+        "val": "1450"
       }
     ],
     "outputs": [
       {
-        "label": "Belt Length",
+        "label": "Pitch Belt Length L",
         "val": "1648.3 mm"
       },
       {
-        "label": "Output RPM",
+        "label": "Output Speed",
         "val": "483 RPM"
       },
       {
@@ -850,22 +1190,40 @@
         "val": "3.00:1"
       },
       {
-        "label": "Driver Wrap",
-        "val": "156.9 °"
+        "label": "Driver Wrap Angle θ1",
+        "val": "156.9°"
       },
       {
-        "label": "Driven Wrap",
-        "val": "203.1 °"
+        "label": "Driven Wrap Angle θ2",
+        "val": "203.1°"
+      }
+    ],
+    "testCases": [
+      {
+        "name": "Standard Reduction Drive 1:3 (Default)",
+        "inputs": {
+          "d1": "100",
+          "d2": "300",
+          "centerDist": "500",
+          "inputRPM": "1450"
+        },
+        "expectedOutputs": {
+          "beltLength": "1648.3",
+          "outputRPM": "483",
+          "speedRatio": "3.00",
+          "driverWrap": "156.9",
+          "drivenWrap": "203.1"
+        }
       }
     ]
   },
   "belt-tension-calculator": {
     "title": "Belt Tension Calculator",
-    "description": "Calculate optimal belt tension force from transmitted power, belt speed, and pulley diameter.",
+    "description": "Calculate belt tight-side, slack-side, and installation tensions from transmitted power and wrap angle using the Euler-Eytelwein friction model.",
     "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "Te = P*1000/v, T1 = Te*e^(u*a)/(e^(u*a)-1), T2 = Te/(e^(u*a)-1)",
+    "standards": "Bando / Gates Engineering Design Manual (Euler-Eytelwein Belt Friction Model)",
+    "cadContext": "Maintain exact center distance, wrap angle clearance, and shaft parallelism in parametric CAD layouts to prevent belt slip and premature bearing wear.",
+    "formula": "Te = 1000*P/v; T1/T2 = exp(u*theta); T1 = Te*exp(u*theta)/(exp(u*theta)-1); T2 = Te/(exp(u*theta)-1); T0 = (T1+T2)/2; Fb ≈ 2*T0*sin(theta/2) (symmetric static approximation)",
     "inputs": [
       {
         "label": "Power (kW)",
@@ -886,34 +1244,42 @@
     ],
     "outputs": [
       {
-        "label": "Effective Tension",
+        "label": "Effective Tension (Te)",
         "val": "500.00 N"
       },
       {
-        "label": "Tight Side T1",
+        "label": "Tight Side (T1)",
         "val": "879.83 N"
       },
       {
-        "label": "Slack Side T2",
+        "label": "Slack Side (T2)",
         "val": "379.83 N"
+      },
+      {
+        "label": "Initial Tension (T0)",
+        "val": "629.83 N"
+      },
+      {
+        "label": "Shaft Load (Fb)",
+        "val": "1241.34 N"
       }
     ]
   },
   "bend-allowance-calculator": {
     "title": "Bend Allowance Calculator",
-    "description": "Calculate bend allowance, bend deduction, and flat pattern length for sheet metal bending. Supports K-factor, bend radius, and material thickness.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "K-Factor: 0.30 for air bending soft materials, 0.33 for typical, 0.40-0.45 for bottoming/coining. BA = angle × (R + K×T). BD = 2×OSSB×tan(A/2) − BA. Flat = Flange1 + Flange2 − BD.",
+    "description": "Calculate sheet metal bend allowance, outside setback, bend deduction, and flat pattern length using neutral axis K-factor geometry.",
+    "discipline": "Sheet Metal Fabrication & Mechanical Forming",
+    "standards": "Sheet Metal Neutral Axis Bending Model (DB Sheetmetals / SolidWorks Engineering Practice)",
+    "cadContext": "Define accurate K-factor and bend deduction tables in SolidWorks, Inventor, or Creo sheet metal parameters to avoid blank size deviations during CNC press brake forming.",
+    "formula": "BA = (pi/180)*A*(R + K*T); OSSB = (R + T)*tan(A/2); BD = 2*OSSB - BA; Lflat = Flange1 + Flange2 - BD",
     "inputs": [
       {
         "label": "Material Thickness (mm)",
-        "val": "2"
+        "val": "2.0"
       },
       {
         "label": "Bend Radius (mm)",
-        "val": "3"
+        "val": "3.0"
       },
       {
         "label": "Bend Angle (°)",
@@ -934,26 +1300,34 @@
     ],
     "outputs": [
       {
-        "label": "Bend Allowance",
+        "label": "Bend Allowance (BA)",
         "val": "5.749 mm"
       },
       {
-        "label": "Bend Deduction",
+        "label": "Bend Deduction (BD)",
         "val": "4.251 mm"
+      },
+      {
+        "label": "Outside Setback (OSSB)",
+        "val": "5.000 mm"
+      },
+      {
+        "label": "Flat Pattern Blank Length",
+        "val": "95.749 mm"
       }
     ]
   },
   "bending-allowance-table-calculator": {
-    "title": "Bend Allowance Table Calculator",
-    "description": "Calculate bend allowance and deduction for standard sheet metal angles and materials.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "BA = (pi/180)*angle*(R+K*T), BD = 2*(R+T)-BA",
+    "title": "Bending Allowance Table Calculator",
+    "description": "Generate comprehensive sheet metal bend allowance and deduction lookup matrices for carbon steel, stainless steel, and aluminum across standard angles and radii.",
+    "discipline": "Sheet Metal Fabrication & Mechanical Forming",
+    "standards": "Sheet Metal Neutral Axis Bending Model (DB Sheetmetals / SolidWorks Engineering Practice)",
+    "cadContext": "Populate unfolding and bend allowance tables in CAD sheet metal styles to ensure uniform bend deduction across shop floor CNC press brake tooling.",
+    "formula": "BA = (pi/180)*angle*(R + K*T); OSSB = (R + T)*tan(angle/2); BD = 2*OSSB - BA",
     "inputs": [
       {
         "label": "Material",
-        "val": "Carbon Steel"
+        "val": "steel"
       },
       {
         "label": "Thickness (mm)",
@@ -966,12 +1340,16 @@
       {
         "label": "Inside Radius (mm)",
         "val": "3"
+      },
+      {
+        "label": "K-Factor",
+        "val": "0.44"
       }
     ],
     "outputs": [
       {
         "label": "K Factor",
-        "val": "0.440000"
+        "val": "0.44"
       },
       {
         "label": "Bend Allowance",
@@ -984,12 +1362,12 @@
     ]
   },
   "bending-force-calculator": {
-    "title": "Press Brake Bending Force Calculator",
-    "description": "Calculate press brake tonnage for air bending V-die operations.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "F = 1.42 * sigma_t * L * t^2 / V",
+    "title": "Bending Force Calculator",
+    "description": "Calculate press brake bending force and press tonnage for standard sheet metal V-die air bending operations.",
+    "discipline": "Sheet Metal Fabrication & Mechanical Forming",
+    "standards": "CNC Press Brake Air Bending Empirical Formula (Amada / Trumpf Tooling Practice)",
+    "cadContext": "Verify press brake tonnage limits and tooling capacity during sheet metal CAD feature validation to prevent machine overload during shop fabrication.",
+    "formula": "F = (1.42 * sigma * L * t^2) / (V * 1000) [kN]; Ft = F / 9.80665 [ton]",
     "inputs": [
       {
         "label": "Material Strength (MPa)",
@@ -1010,22 +1388,26 @@
     ],
     "outputs": [
       {
-        "label": "Bending Force (kN)",
-        "val": "239.63 kN"
+        "label": "Bending Force (F)",
+        "val": "239.625 kN"
       },
       {
-        "label": "Press Tonnage (Tons)",
-        "val": "24.427 ton"
+        "label": "Press Tonnage (Ft)",
+        "val": "24.435 ton"
+      },
+      {
+        "label": "Specific Force",
+        "val": "239.625 kN/m"
       }
     ]
   },
   "bernoulli-equation-calculator": {
     "title": "Bernoulli Equation Calculator",
-    "description": "Calculate pressure and velocity changes using Bernoulli equation.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "P1/rg + v1^2/2g + z1 = P2/rg + v2^2/2g + z2",
+    "description": "Calculate downstream static pressure, total hydraulic head, and dynamic pressure along a streamline using Bernoulli principle for incompressible fluid flow.",
+    "discipline": "Fluid Dynamics & Hydraulics",
+    "standards": "NASA Glenn Research Center Fluid Dynamics Reference (Incompressible Bernoulli Principle); ISO 80000-4 (Quantities and units — Mechanics, units definition only)",
+    "cadContext": "Verify pipe cross-section sizing, pressure head allowances, and Venturi constriction geometry in fluid system CAD assemblies.",
+    "formula": "P1 + 0.5*rho*v1^2 + rho*g*z1 = P2 + 0.5*rho*v2^2 + rho*g*z2 = const; H = P/(rho*g) + v^2/(2*g) + z",
     "inputs": [
       {
         "label": "P1 (kPa)",
@@ -1051,11 +1433,19 @@
     "outputs": [
       {
         "label": "P2",
-        "val": "160.07 kPa"
+        "val": "160.080 kPa"
       },
       {
-        "label": "Head Loss",
-        "val": "0.000000 m"
+        "label": "Total Head",
+        "val": "20.598 m"
+      },
+      {
+        "label": "q1 (Station 1)",
+        "val": "2.000 kPa"
+      },
+      {
+        "label": "q2 (Station 2)",
+        "val": "12.500 kPa"
       }
     ]
   },

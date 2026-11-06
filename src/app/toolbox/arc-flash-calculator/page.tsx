@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Arc Flash Incident Energy Calculator (NFPA 70E)",
-  description: "Calculate arc flash incident energy, PPE category, and flash protection boundary per NFPA 70E.",
+  title: 'Arc Flash Incident Energy Calculator (Preliminary Estimator)',
+  description: 'Preliminary estimation of arc flash incident energy and boundary distance based on simplified IEEE 1584 empirical equations for educational screening.',
   path: '/toolbox/arc-flash-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Arc Flash Incident Energy Calculator (NFPA 70E)", path: '/toolbox/arc-flash-calculator' },
+    { name: 'Arc Flash Incident Energy Calculator', path: '/toolbox/arc-flash-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Conceptual Estimator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Arc Flash Incident Energy Calculator (NFPA 70E)
+              Arc Flash Incident Energy <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate arc flash incident energy, PPE category, and flash protection boundary per NFPA 70E.
+              Preliminary screening of arc flash incident energy and flash boundary distance based on simplified IEEE 1584 empirical formulas.
             </p>
           </div>
         </section>

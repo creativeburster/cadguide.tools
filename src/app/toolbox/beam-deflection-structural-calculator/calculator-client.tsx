@@ -3,62 +3,75 @@
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
 import {
-  HelpCircle, Info, Copy, Check, AlertTriangle, CheckCircle, Settings, Activity, Sliders, Shield
+  HelpCircle, Info, Copy, Check, AlertTriangle, CheckCircle, Settings, Activity, Sliders, Shield, Download, XCircle
 } from 'lucide-react';
 
 // Materials configuration
 const MATERIALS = [
-  { name: 'Structural Steel (Structural steel)', E: 200, yield: 250 }, // E in GPa, yield in MPa
-  { name: 'Aluminum 6061-T6 (Aluminum alloy)', E: 70, yield: 276 },
-  { name: 'Timber / Softwood (wood)', E: 11, yield: 12 },
-  { name: 'Custom', E: 200, yield: 250 },
+  { name: 'Structural Steel (A36 / S275)', E: 200, yield: 250 }, // E in GPa, yield in MPa
+  { name: 'Aluminum 6061-T6', E: 70, yield: 276 },
+  { name: 'Structural Timber / Softwood', E: 11, yield: 12 },
+  { name: 'Custom Material', E: 200, yield: 250 },
 ];
 
 // Profile types
 const PROFILE_TYPES = [
-  { id: 'i-beam', name: 'I-Beam (I-beam/H-beam)' },
-  { id: 'box', name: 'Box Section (Square tube/box beam)' },
-  { id: 'solid-rect', name: 'Solid Rectangular (solid rectangle)' },
-  { id: 'pipe', name: 'Round Pipe (Round pipe/steel pipe)' },
+  { id: 'i-beam', name: 'I-Beam (Universal Beam / W-Shape)' },
+  { id: 'box', name: 'Box Section (RHS / Hollow Section)' },
+  { id: 'solid-rect', name: 'Solid Rectangular Section' },
+  { id: 'pipe', name: 'Round Hollow Pipe (CHS)' },
 ];
 
 // Support & load setups
 const LOAD_CONDITIONS = [
-  { id: 'ss-point', name: 'Simply Supported + Center Point Load (Simply supported beam + central concentrated force)', support: 'simply', load: 'point' },
-  { id: 'ss-dist', name: 'Simply Supported + Uniform Load (Simply supported beam + uniform load)', support: 'simply', load: 'distributed' },
-  { id: 'cant-point', name: 'Cantilever + End Point Load (Cantilever beam + endpoint concentrated force)', support: 'cantilever', load: 'point' },
-  { id: 'cant-dist', name: 'Cantilever + Uniform Load (Cantilever beam + uniform load)', support: 'cantilever', load: 'distributed' },
-  { id: 'ff-point', name: 'Fixed-Fixed + Center Point Load (Double-ended fixation + central concentration)', support: 'fixed', load: 'point' },
-  { id: 'ff-dist', name: 'Fixed-Fixed + Uniform Load (Double-end fixation + uniform load)', support: 'fixed', load: 'distributed' },
+  { id: 'ss-point', name: 'Simply Supported + Center Point Load (P)', support: 'simply', load: 'point' },
+  { id: 'ss-dist', name: 'Simply Supported + Uniform Load (w)', support: 'simply', load: 'distributed' },
+  { id: 'cant-point', name: 'Cantilever + End Point Load (P)', support: 'cantilever', load: 'point' },
+  { id: 'cant-dist', name: 'Cantilever + Uniform Load (w)', support: 'cantilever', load: 'distributed' },
+  { id: 'ff-point', name: 'Fixed-Fixed + Center Point Load (P)', support: 'fixed', load: 'point' },
+  { id: 'ff-dist', name: 'Fixed-Fixed + Uniform Load (w)', support: 'fixed', load: 'distributed' },
 ];
 
 export default function BeamDeflectionClient() {
   const [materialIdx, setMaterialIdx] = useState(0);
-  const [customE, setCustomE] = useState(200); // GPa
-  const [customYield, setCustomYield] = useState(250); // MPa
+  const [customE, setCustomE] = useState('200'); // GPa
+  const [customYield, setCustomYield] = useState('250'); // MPa
 
   const [profileType, setProfileType] = useState('i-beam');
   const [loadConditionIdx, setLoadConditionIdx] = useState(0);
 
   // General Inputs
-  const [length, setLength] = useState(4.0); // m
-  const [loadValue, setLoadValue] = useState(10.0); // kN or kN/m
+  const [lengthStr, setLengthStr] = useState('4.0'); // m
+  const [loadValueStr, setLoadValueStr] = useState('10.0'); // kN or kN/m
 
   // Profile dimensions (mm)
-  const [dimH, setDimH] = useState(200); // Height
-  const [dimB, setDimB] = useState(100); // Width
-  const [dimTw, setDimTw] = useState(6);  // Web thickness
-  const [dimTf, setDimTf] = useState(8);  // Flange thickness
-  const [dimT, setDimT] = useState(5);    // Box/Pipe wall thickness
-  const [copied, setCopied] = useState(false);
+  const [dimHStr, setDimHStr] = useState('200'); // Height
+  const [dimBStr, setDimBStr] = useState('100'); // Width
+  const [dimTwStr, setDimTwStr] = useState('6');  // Web thickness
+  const [dimTfStr, setDimTfStr] = useState('8');  // Flange thickness
+  const [dimTStr, setDimTStr] = useState('5');    // Box/Pipe wall thickness
+
+  // Copy status: 'idle' | 'success' | 'error'
+  const [copyStatus, setCopyStatus] = useState<'idle' | 'success' | 'error'>('idle');
+
+  // Numerical conversions (strict parse without silent zero masking)
+  const length = parseFloat(lengthStr);
+  const loadValue = parseFloat(loadValueStr);
+  const dimH = parseFloat(dimHStr);
+  const dimB = parseFloat(dimBStr);
+  const dimTw = parseFloat(dimTwStr);
+  const dimTf = parseFloat(dimTfStr);
+  const dimT = parseFloat(dimTStr);
 
   // Active Material properties
   const material = useMemo(() => {
     const isCustom = materialIdx === 3;
+    const cE = parseFloat(customE);
+    const cY = parseFloat(customYield);
     return {
       name: MATERIALS[materialIdx].name,
-      E: isCustom ? customE : MATERIALS[materialIdx].E,
-      yield: isCustom ? customYield : MATERIALS[materialIdx].yield,
+      E: isCustom ? (isNaN(cE) ? 0 : cE) : MATERIALS[materialIdx].E,
+      yield: isCustom ? (isNaN(cY) ? 0 : cY) : MATERIALS[materialIdx].yield,
     };
   }, [materialIdx, customE, customYield]);
 
@@ -69,57 +82,74 @@ export default function BeamDeflectionClient() {
 
   // Geometric Calculations (Ix: mm^4, Wx: mm^3)
   const geoProperties = useMemo(() => {
+    // Validate geometry bounds
+    const isBasicValid = !isNaN(dimH) && !isNaN(dimB) && dimH > 0 && dimB > 0;
+    if (!isBasicValid) {
+      return { isValid: false, Ix: NaN, Wx: NaN, area: NaN, effectiveH: 0 };
+    }
+
     let Ix = 0;
     let Wx = 0;
     let area = 0;
 
-    const H = Math.max(1, dimH);
-    const B = Math.max(1, dimB);
-    const tw = Math.min(B - 1, Math.max(1, dimTw));
-    const tf = Math.min(H / 2 - 1, Math.max(1, dimTf));
-    const t = Math.min(Math.min(B / 2 - 1, H / 2 - 1), Math.max(1, dimT));
-
     if (profileType === 'i-beam') {
-      // Ix = [B * H^3 - (B - tw) * (H - 2*tf)^3] / 12
-      const innerH = H - 2 * tf;
-      Ix = (B * Math.pow(H, 3) - (B - tw) * Math.pow(innerH, 3)) / 12;
-      Wx = Ix / (H / 2);
-      area = 2 * B * tf + innerH * tw;
+      if (isNaN(dimTw) || isNaN(dimTf) || dimTw <= 0 || dimTf <= 0 || dimTw >= dimB || 2 * dimTf >= dimH) {
+        return { isValid: false, Ix: NaN, Wx: NaN, area: NaN, effectiveH: 0 };
+      }
+      const innerH = dimH - 2 * dimTf;
+      Ix = (dimB * Math.pow(dimH, 3) - (dimB - dimTw) * Math.pow(innerH, 3)) / 12;
+      Wx = Ix / (dimH / 2);
+      area = 2 * dimB * dimTf + innerH * dimTw;
     } else if (profileType === 'box') {
-      // Ix = [B * H^3 - (B - 2*t) * (H - 2*t)^3] / 12
-      const innerB = B - 2 * t;
-      const innerH = H - 2 * t;
-      Ix = (B * Math.pow(H, 3) - innerB * Math.pow(innerH, 3)) / 12;
-      Wx = Ix / (H / 2);
-      area = B * H - innerB * innerH;
+      if (isNaN(dimT) || dimT <= 0 || 2 * dimT >= dimB || 2 * dimT >= dimH) {
+        return { isValid: false, Ix: NaN, Wx: NaN, area: NaN, effectiveH: 0 };
+      }
+      const innerB = dimB - 2 * dimT;
+      const innerH = dimH - 2 * dimT;
+      Ix = (dimB * Math.pow(dimH, 3) - innerB * Math.pow(innerH, 3)) / 12;
+      Wx = Ix / (dimH / 2);
+      area = dimB * dimH - innerB * innerH;
     } else if (profileType === 'solid-rect') {
-      // Ix = B * H^3 / 12
-      Ix = (B * Math.pow(H, 3)) / 12;
-      Wx = (B * Math.pow(H, 2)) / 6;
-      area = B * H;
+      Ix = (dimB * Math.pow(dimH, 3)) / 12;
+      Wx = (dimB * Math.pow(dimH, 2)) / 6;
+      area = dimB * dimH;
     } else if (profileType === 'pipe') {
-      // Diameter is represented by outer dimension B (or H, whichever is larger or B for simplicity)
-      const D = B;
-      const innerD = Math.max(1, D - 2 * t);
-      // Ix = pi * (D^4 - d^4) / 64
+      if (isNaN(dimT) || dimT <= 0 || 2 * dimT >= dimB) {
+        return { isValid: false, Ix: NaN, Wx: NaN, area: NaN, effectiveH: 0 };
+      }
+      const D = dimB;
+      const innerD = D - 2 * dimT;
       Ix = (Math.PI * (Math.pow(D, 4) - Math.pow(innerD, 4))) / 64;
       Wx = Ix / (D / 2);
       area = (Math.PI * (Math.pow(D, 2) - Math.pow(innerD, 2))) / 4;
     }
 
-    return { Ix, Wx, area, effectiveH: profileType === 'pipe' ? B : H };
+    return { isValid: true, Ix, Wx, area, effectiveH: profileType === 'pipe' ? dimB : dimH };
   }, [profileType, dimH, dimB, dimTw, dimTf, dimT]);
 
   // Load and stress math calculations
   const structuralOutputs = useMemo(() => {
-    const L = Math.max(0.1, length);
-    const L_mm = L * 1000;
-    const P_N = loadValue * 1000; // if point load
+    if (!geoProperties.isValid || isNaN(length) || isNaN(loadValue) || length <= 0 || loadValue <= 0 || material.E <= 0 || material.yield <= 0) {
+      return {
+        isValid: false,
+        L_mm: 0,
+        maxMoment: NaN,
+        maxDeflection: NaN,
+        maxStress: NaN,
+        safetyFactor: NaN,
+        targetLimit: NaN,
+        isDeflectionSafe: false,
+        isStressSafe: false
+      };
+    }
+
+    const L_mm = length * 1000;
+    const P_N = loadValue * 1000; // point load
     const w_Nmm = loadValue;      // 1 kN/m = 1 N/mm
 
     const E_Nmm2 = material.E * 1000; // GPa to MPa (N/mm2)
-    const I = Math.max(1, geoProperties.Ix);
-    const W = Math.max(1, geoProperties.Wx);
+    const I = geoProperties.Ix;
+    const W = geoProperties.Wx;
 
     let maxMoment = 0; // N*mm
     let maxDeflection = 0; // mm
@@ -145,53 +175,53 @@ export default function BeamDeflectionClient() {
       }
     } else if (support === 'fixed') {
       if (loadType === 'point') {
-        maxMoment = (P_N * L_mm) / 8; // moment at center & ends
+        maxMoment = (P_N * L_mm) / 8;
         maxDeflection = (P_N * Math.pow(L_mm, 3)) / (192 * E_Nmm2 * I);
       } else {
-        maxMoment = (w_Nmm * Math.pow(L_mm, 2)) / 12; // moment at fixed ends
+        maxMoment = (w_Nmm * Math.pow(L_mm, 2)) / 12;
         maxDeflection = (w_Nmm * Math.pow(L_mm, 4)) / (384 * E_Nmm2 * I);
       }
     }
 
-    // Maximum bending stress (MPa = N/mm2)
     const maxStress = maxMoment / W;
-
-    // Safety factor
     const safetyFactor = maxStress > 0 ? material.yield / maxStress : 999;
 
-    // Building Code Limits
-    const limitL360 = L_mm / 360;
-    const limitL240 = L_mm / 240;
-    const limitL180 = L_mm / 180;
-
-    let targetLimit = limitL240;
+    let targetLimit = L_mm / 240;
     if (support === 'cantilever') {
-      targetLimit = limitL180;
+      targetLimit = L_mm / 180;
     } else if (materialIdx === 2) {
-      // Timber often has stricter L/360 limit
-      targetLimit = limitL360;
+      targetLimit = L_mm / 360;
     }
 
     const isDeflectionSafe = maxDeflection <= targetLimit;
     const isStressSafe = maxStress <= material.yield;
 
     return {
+      isValid: true,
       L_mm,
       maxMoment,
       maxDeflection,
       maxStress,
       safetyFactor,
-      limitL360,
-      limitL240,
-      limitL180,
       targetLimit,
       isDeflectionSafe,
       isStressSafe,
     };
   }, [length, loadValue, material, loadSetup, geoProperties, materialIdx]);
 
+  const formatNum = (n: number, decimals: number = 2) => {
+    if (!structuralOutputs.isValid || isNaN(n) || !isFinite(n)) return '—';
+    return n.toFixed(decimals);
+  };
+
+  const formatExponential = (n: number, decimals: number = 4) => {
+    if (!geoProperties.isValid || isNaN(n) || !isFinite(n)) return '—';
+    return n.toExponential(decimals);
+  };
+
   // Bending curve coordinates for SVG
   const curvePath = useMemo(() => {
+    if (!structuralOutputs.isValid) return '';
     const pointsCount = 40;
     const pts: string[] = [];
     const L = length * 1000;
@@ -207,24 +237,20 @@ export default function BeamDeflectionClient() {
       const P = loadValue * 1000;
       const w = loadValue;
 
-      // Elastic equations
       if (support === 'simply') {
         if (loadType === 'point') {
-          // Symmetric. Formula for x <= L/2
           const xx = x > L / 2 ? L - x : x;
           return (P * xx * (3 * L * L - 4 * xx * xx)) / (48 * E_Nmm2 * I);
         } else {
           return (w * x * (Math.pow(L, 3) - 2 * L * x * x + Math.pow(x, 3))) / (24 * E_Nmm2 * I);
         }
       } else if (support === 'cantilever') {
-        // Fixed at x = 0. Deflection increases to maximum at x = L.
         if (loadType === 'point') {
           return (P * x * x * (3 * L - x)) / (6 * E_Nmm2 * I);
         } else {
           return (w * x * x * (6 * L * L - 4 * L * x + x * x)) / (24 * E_Nmm2 * I);
         }
       } else {
-        // Fixed at both ends (fixed-fixed)
         if (loadType === 'point') {
           const xx = x > L / 2 ? L - x : x;
           return (P * xx * xx * (3 * L - 4 * xx)) / (48 * E_Nmm2 * I);
@@ -234,25 +260,26 @@ export default function BeamDeflectionClient() {
       }
     };
 
-    // Calculate normalizer so curve doesn't clip
     const maxVal = getDeflectionAtX(support === 'cantilever' ? L : L / 2) || 1;
 
     for (let i = 0; i <= pointsCount; i++) {
       const fraction = i / pointsCount;
       const x = fraction * L;
       const def = getDeflectionAtX(x);
-      const ratio = def / maxVal; // 0 to 1
+      const ratio = def / maxVal;
 
-      // Map to SVG coordinates: x goes from 40 to 360, y baseline is 70, max deflection 25 pixels
       const svgX = 40 + fraction * 320;
-      const svgY = 70 + ratio * 28; // 28px max visual sag
+      const svgY = 70 + ratio * 28;
       pts.push(`${svgX.toFixed(1)},${svgY.toFixed(1)}`);
     }
 
     return pts.join(' ');
-  }, [length, loadValue, material, loadSetup, geoProperties, structuralOutputs.maxDeflection]);
+  }, [length, loadValue, material, loadSetup, geoProperties, structuralOutputs]);
 
-  const handleCopySummary = () => {
+  // Robust handleCopySummary: Never claim success when clipboard write fails!
+  const handleCopySummary = async () => {
+    if (!structuralOutputs.isValid) return;
+
     const summary = [
       `Steel Beam Deflection & Stress Report — CADGuide.tools`,
       `Support Type: ${loadSetup.name}`,
@@ -267,21 +294,63 @@ export default function BeamDeflectionClient() {
       `Max Bending Stress: ${structuralOutputs.maxStress.toFixed(2)} MPa (Yield: ${material.yield} MPa)`,
       `Max Deflection: ${structuralOutputs.maxDeflection.toFixed(2)} mm (Limit: ${structuralOutputs.targetLimit.toFixed(2)} mm)`,
       `Safety Factor: ${structuralOutputs.safetyFactor.toFixed(2)}`,
-      `Structural Assessment: ${structuralOutputs.isStressSafe && structuralOutputs.isDeflectionSafe ? 'SAFE (Pass)' : 'DANGER (warning)'}`,
+      `Structural Assessment: ${structuralOutputs.isStressSafe && structuralOutputs.isDeflectionSafe ? 'SAFE' : 'DANGER'}`,
     ].join('\n');
 
-    navigator.clipboard.writeText(summary).then(() => {
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    });
+    try {
+      if (typeof navigator !== 'undefined' && navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(summary);
+        setCopyStatus('success');
+        setTimeout(() => setCopyStatus('idle'), 2000);
+      } else {
+        setCopyStatus('error');
+        setTimeout(() => setCopyStatus('idle'), 3000);
+      }
+    } catch {
+      setCopyStatus('error');
+      setTimeout(() => setCopyStatus('idle'), 3000);
+    }
+  };
+
+  const handleExportCsv = () => {
+    const headers = ['Parameter', 'Value', 'Unit'];
+    const rows = [
+      ['Support & Load Setup', `"${loadSetup.name}"`, '—'],
+      ['Profile Type', profileType.toUpperCase(), '—'],
+      ['Height (H)', dimHStr, 'mm'],
+      ['Width (B)', dimBStr, 'mm'],
+      ['Span Length (L)', lengthStr, 'm'],
+      ['Applied Load', loadValueStr, loadSetup.load === 'point' ? 'kN' : 'kN/m'],
+      ['Material', `"${material.name}"`, '—'],
+      ['Elastic Modulus (E)', material.E.toString(), 'GPa'],
+      ['Yield Strength', material.yield.toString(), 'MPa'],
+      ['Moment of Inertia (Ix)', formatExponential(geoProperties.Ix), 'mm⁴'],
+      ['Section Modulus (Wx)', formatExponential(geoProperties.Wx), 'mm³'],
+      ['Max Bending Moment', formatNum(structuralOutputs.maxMoment / 1e6, 3), 'kN·m'],
+      ['Max Deflection', formatNum(structuralOutputs.maxDeflection, 2), 'mm'],
+      ['Max Bending Stress', formatNum(structuralOutputs.maxStress, 1), 'MPa'],
+      ['Safety Factor', formatNum(structuralOutputs.safetyFactor, 2), '—'],
+      ['Structural Status', structuralOutputs.isValid ? (structuralOutputs.isStressSafe && structuralOutputs.isDeflectionSafe ? 'SAFE' : 'LIMIT EXCEEDED') : 'INVALID INPUT', '—']
+    ];
+
+    const csvContent = [headers.join(','), ...rows.map(r => r.join(','))].join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.setAttribute('download', `beam-deflection-report-${profileType}-${lengthStr}m.csv`);
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(url);
   };
 
   // Cross section scaling
   const sectionDrawParams = useMemo(() => {
-    const H = Math.max(1, dimH);
-    const B = Math.max(1, dimB);
+    const H = Math.max(1, dimH || 200);
+    const B = Math.max(1, dimB || 100);
     const maxDim = Math.max(H, B);
-    const scale = 110 / maxDim; // bounded to 110 pixels max
+    const scale = 110 / maxDim;
 
     const w = B * scale;
     const h = H * scale;
@@ -303,13 +372,12 @@ export default function BeamDeflectionClient() {
               <Activity className="w-6 h-6 text-blue-600" /> Beam Bending & Load Curve
             </h2>
             <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
-              Exaggerated deflection line based on Euler-Bernoulli beam theory
+              Euler-Bernoulli elastic bending line diagram
             </p>
           </div>
 
           <div className="flex-1 flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 p-4 min-h-[220px]">
             <svg viewBox="0 0 400 150" className="w-full max-w-[400px] h-auto" aria-label="Beam Bending Diagram">
-              {/* Grid Background */}
               <defs>
                 <pattern id="gridBeam" width="20" height="20" patternUnits="userSpaceOnUse">
                   <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#e2e8f0" strokeWidth="0.5" />
@@ -320,10 +388,8 @@ export default function BeamDeflectionClient() {
               {/* Supports Drawing */}
               {loadSetup.support === 'simply' && (
                 <>
-                  {/* Left pin support */}
                   <polygon points="35,70 45,70 40,63" fill="#64748b" stroke="#475569" strokeWidth="1" />
                   <line x1="30" y1="71" x2="50" y2="71" stroke="#475569" strokeWidth="2" />
-                  {/* Right roller support */}
                   <polygon points="355,70 365,70 360,63" fill="#64748b" stroke="#475569" strokeWidth="1" />
                   <circle cx="360" cy="72" r="2.5" fill="#475569" />
                   <line x1="350" y1="75" x2="370" y2="75" stroke="#475569" strokeWidth="2" />
@@ -332,9 +398,7 @@ export default function BeamDeflectionClient() {
 
               {loadSetup.support === 'cantilever' && (
                 <>
-                  {/* Left wall fixture */}
                   <line x1="40" y1="35" x2="40" y2="105" stroke="#334155" strokeWidth="4" />
-                  {/* Hashed wall lines */}
                   {Array.from({ length: 8 }).map((_, i) => (
                     <line
                       key={i}
@@ -351,12 +415,10 @@ export default function BeamDeflectionClient() {
 
               {loadSetup.support === 'fixed' && (
                 <>
-                  {/* Left wall */}
                   <line x1="40" y1="35" x2="40" y2="105" stroke="#334155" strokeWidth="4" />
                   {Array.from({ length: 8 }).map((_, i) => (
                     <line key={i} x1="34" y1={35 + i * 10} x2="40" y2={41 + i * 10} stroke="#64748b" strokeWidth="1.5" />
                   ))}
-                  {/* Right wall */}
                   <line x1="360" y1="35" x2="360" y2="105" stroke="#334155" strokeWidth="4" />
                   {Array.from({ length: 8 }).map((_, i) => (
                     <line key={i} x1="360" y1={35 + i * 10} x2="366" y2={41 + i * 10} stroke="#64748b" strokeWidth="1.5" />
@@ -364,36 +426,30 @@ export default function BeamDeflectionClient() {
                 </>
               )}
 
-              {/* Unbent Neutral Line reference */}
               <line x1="40" y1="56" x2="360" y2="56" stroke="#94a3b8" strokeWidth="1" strokeDasharray="5 3" opacity="0.5" />
 
-              {/* Load arrows */}
               {loadSetup.load === 'point' ? (
                 <>
-                  {/* Single concentrated load arrow */}
                   {loadSetup.support === 'cantilever' ? (
                     <>
-                      {/* Arrow at cantilever tip */}
                       <line x1="360" y1="20" x2="360" y2="52" stroke="#3b82f6" strokeWidth="3" />
                       <polygon points="356,48 364,48 360,56" fill="#3b82f6" />
                       <text x="360" y="14" fill="#3b82f6" fontSize="10" fontWeight="900" textAnchor="middle">
-                        P = {loadValue} kN
+                        P = {loadValueStr} kN
                       </text>
                     </>
                   ) : (
                     <>
-                      {/* Arrow at center */}
                       <line x1="200" y1="20" x2="200" y2="52" stroke="#3b82f6" strokeWidth="3" />
                       <polygon points="196,48 204,48 200,56" fill="#3b82f6" />
                       <text x="200" y="14" fill="#3b82f6" fontSize="10" fontWeight="900" textAnchor="middle">
-                        P = {loadValue} kN
+                        P = {loadValueStr} kN
                       </text>
                     </>
                   )}
                 </>
               ) : (
                 <>
-                  {/* Distributed loads. Draw multiple small downward arrows */}
                   {Array.from({ length: 9 }).map((_, i) => {
                     const startX = 40 + i * 40;
                     return (
@@ -405,44 +461,63 @@ export default function BeamDeflectionClient() {
                   })}
                   <line x1="40" y1="35" x2="360" y2="35" stroke="#3b82f6" strokeWidth="1.5" />
                   <text x="200" y="26" fill="#3b82f6" fontSize="10" fontWeight="900" textAnchor="middle">
-                    w = {loadValue} kN/m
+                    w = {loadValueStr} kN/m
                   </text>
                 </>
               )}
 
-              {/* Elastic Bending Curve representation */}
-              <polyline
-                points={curvePath}
-                fill="none"
-                stroke="#ef4444"
-                strokeWidth="3.5"
-                strokeLinecap="round"
-              />
+              {structuralOutputs.isValid && (
+                <polyline
+                  points={curvePath}
+                  fill="none"
+                  stroke="#ef4444"
+                  strokeWidth="3.5"
+                  strokeLinecap="round"
+                />
+              )}
 
-              {/* Span label */}
               <line x1="40" y1="125" x2="360" y2="125" stroke="#64748b" strokeWidth="1" />
               <line x1="40" y1="120" x2="40" y2="130" stroke="#64748b" strokeWidth="1" />
               <line x1="360" y1="120" x2="360" y2="130" stroke="#64748b" strokeWidth="1" />
               <text x="200" y="140" fill="#475569" fontSize="10" fontWeight="black" textAnchor="middle">
-                L = {length} m
+                L = {lengthStr} m
               </text>
             </svg>
           </div>
 
           {/* Verification / Alert card */}
           {(() => {
+            if (!structuralOutputs.isValid) {
+              return (
+                <div data-testid="res-status-assessment" className="border rounded-2xl p-5 flex items-center gap-4 bg-slate-50 border-slate-200 text-slate-600">
+                  <Info className="w-6 h-6 text-slate-400 shrink-0" />
+                  <div>
+                    <div className="font-black text-base uppercase tracking-wide">
+                      Awaiting Valid Dimensions
+                    </div>
+                    <p className="text-sm text-slate-500 font-medium mt-0.5">
+                      Please enter valid positive beam dimensions, span length, and applied load.
+                    </p>
+                  </div>
+                </div>
+              );
+            }
+
             const isDefSafe = structuralOutputs.isDeflectionSafe;
             const isStrSafe = structuralOutputs.isStressSafe;
             const status = isDefSafe && isStrSafe ? 'safe' : (!isDefSafe && !isStrSafe ? 'danger' : 'warning');
             
             return (
-              <div className={`border rounded-2xl p-5 flex items-center gap-4 ${
-                status === 'safe'
-                  ? 'bg-emerald-50 border-emerald-200 text-emerald-800'
-                  : status === 'danger'
-                    ? 'bg-red-50 border-red-200 text-red-800'
-                    : 'bg-amber-50 border-amber-200 text-amber-800'
-              }`}>
+              <div
+                data-testid="res-status-assessment"
+                className={`border rounded-2xl p-5 flex items-center gap-4 ${
+                  status === 'safe'
+                    ? 'bg-emerald-50 border-emerald-200 text-emerald-800'
+                    : status === 'danger'
+                      ? 'bg-red-50 border-red-200 text-red-800'
+                      : 'bg-amber-50 border-amber-200 text-amber-800'
+                }`}
+              >
                 {status === 'safe' ? (
                   <CheckCircle className="w-6 h-6 text-emerald-600 shrink-0" />
                 ) : (
@@ -450,16 +525,16 @@ export default function BeamDeflectionClient() {
                 )}
                 <div>
                   <div className="font-black text-lg uppercase tracking-wide">
-                    {status === 'safe' && 'Structural Assessment: SAFE (structural safety)'}
-                    {status === 'danger' && 'Structural Assessment: DANGER (The bearing capacity and stiffness exceed the standard!)'}
+                    {status === 'safe' && 'Structural Assessment: SAFE'}
+                    {status === 'danger' && 'Structural Assessment: DANGER (Bearing capacity & stiffness exceeded)'}
                     {status === 'warning' && (!isDefSafe ? 'Assessment: DEFLECTION LIMIT EXCEEDED' : 'Assessment: FLEXURAL STRESS EXCEEDED')}
                   </div>
                   <p className="text-base text-slate-500 font-semibold mt-0.5 leading-relaxed">
-                    {status === 'safe' && `Bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) and deflection (${structuralOutputs.maxDeflection.toFixed(2)} mm) are within the material limits for ${material.name}.`}
-                    {status === 'danger' && `Both maximum bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) and structural deflection exceed safe limits for ${material.name}. Reduce load or increase beam cross-section size.`}
+                    {status === 'safe' && `Bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) and deflection (${structuralOutputs.maxDeflection.toFixed(2)} mm) are well within AISC design limits for ${material.name}.`}
+                    {status === 'danger' && `Both bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) and deflection exceed code serviceability limits. Upsize beam profile or shorten span.`}
                     {status === 'warning' && (!isDefSafe
-                      ? `Bending stress is safe, but deflection (${structuralOutputs.maxDeflection.toFixed(2)} mm) exceeds the L/${materialIdx === 2 ? 360 : 240} engineering threshold of ${structuralOutputs.targetLimit.toFixed(2)} mm. The beam is too flexible.`
-                      : `Deflection is within limit, but bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) exceeds the yield strength limit of ${material.yield} MPa. Ultimate failure risk!`)}
+                      ? `Bending stress is safe, but deflection (${structuralOutputs.maxDeflection.toFixed(2)} mm) exceeds the serviceability threshold of ${structuralOutputs.targetLimit.toFixed(2)} mm.`
+                      : `Deflection is within limit, but bending stress (${structuralOutputs.maxStress.toFixed(1)} MPa) exceeds the yield strength limit of ${material.yield} MPa.`)}
                   </p>
                 </div>
               </div>
@@ -467,7 +542,7 @@ export default function BeamDeflectionClient() {
           })()}
         </div>
 
-        {/* Profile Cross-Section SVG Dynamic Drawer */}
+        {/* Profile Cross-Section SVG Drawer */}
         <div className="lg:col-span-5 bg-white rounded-3xl p-6 shadow-sm border border-slate-100 flex flex-col justify-between space-y-6">
           <div>
             <h2 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
@@ -480,10 +555,8 @@ export default function BeamDeflectionClient() {
 
           <div className="flex-1 flex items-center justify-center bg-slate-50 rounded-2xl border border-slate-100 p-4 min-h-[220px]">
             <svg viewBox="0 0 200 200" className="w-full max-w-[200px] h-auto" aria-label="Beam Cross Section Diagram">
-              {/* Background grid */}
               <rect width="200" height="200" fill="url(#gridBeam)" rx="12" />
 
-              {/* Render shapes based on profileType */}
               {profileType === 'solid-rect' && (
                 <rect
                   x={sectionDrawParams.cx - sectionDrawParams.w / 2}
@@ -566,11 +639,9 @@ export default function BeamDeflectionClient() {
                 </>
               )}
 
-              {/* Central cross marker */}
               <line x1={sectionDrawParams.cx - 6} y1={sectionDrawParams.cy} x2={sectionDrawParams.cx + 6} y2={sectionDrawParams.cy} stroke="#64748b" strokeWidth="1" />
               <line x1={sectionDrawParams.cx} y1={sectionDrawParams.cy - 6} x2={sectionDrawParams.cx} y2={sectionDrawParams.cy + 6} stroke="#64748b" strokeWidth="1" />
 
-              {/* B dimension label */}
               <line
                 x1={sectionDrawParams.cx - sectionDrawParams.w / 2}
                 y1={sectionDrawParams.cy + sectionDrawParams.h / 2 + 12}
@@ -582,10 +653,9 @@ export default function BeamDeflectionClient() {
               <line x1={sectionDrawParams.cx - sectionDrawParams.w / 2} y1={sectionDrawParams.cy + sectionDrawParams.h / 2 + 8} x2={sectionDrawParams.cx - sectionDrawParams.w / 2} y2={sectionDrawParams.cy + sectionDrawParams.h / 2 + 16} stroke="#475569" strokeWidth="1" />
               <line x1={sectionDrawParams.cx + sectionDrawParams.w / 2} y1={sectionDrawParams.cy + sectionDrawParams.h / 2 + 8} x2={sectionDrawParams.cx + sectionDrawParams.w / 2} y2={sectionDrawParams.cy + sectionDrawParams.h / 2 + 16} stroke="#475569" strokeWidth="1" />
               <text x={sectionDrawParams.cx} y={sectionDrawParams.cy + sectionDrawParams.h / 2 + 25} fill="#475569" fontSize="8" fontWeight="bold" textAnchor="middle">
-                B = {profileType === 'pipe' ? dimB : dimB} mm
+                B = {dimBStr} mm
               </text>
 
-              {/* H dimension label */}
               <line
                 x1={sectionDrawParams.cx - sectionDrawParams.w / 2 - 12}
                 y1={sectionDrawParams.cy - sectionDrawParams.h / 2}
@@ -597,7 +667,7 @@ export default function BeamDeflectionClient() {
               <line x1={sectionDrawParams.cx - sectionDrawParams.w / 2 - 16} y1={sectionDrawParams.cy - sectionDrawParams.h / 2} x2={sectionDrawParams.cx - sectionDrawParams.w / 2 - 8} y2={sectionDrawParams.cy - sectionDrawParams.h / 2} stroke="#475569" strokeWidth="1" />
               <line x1={sectionDrawParams.cx - sectionDrawParams.w / 2 - 16} y1={sectionDrawParams.cy + sectionDrawParams.h / 2} x2={sectionDrawParams.cx - sectionDrawParams.w / 2 - 8} y2={sectionDrawParams.cy + sectionDrawParams.h / 2} stroke="#475569" strokeWidth="1" />
               <text x={sectionDrawParams.cx - sectionDrawParams.w / 2 - 22} y={sectionDrawParams.cy + 3} fill="#475569" fontSize="8" fontWeight="bold" textAnchor="end">
-                H = {profileType === 'pipe' ? dimB : dimH} mm
+                H = {profileType === 'pipe' ? dimBStr : dimHStr} mm
               </text>
             </svg>
           </div>
@@ -608,15 +678,15 @@ export default function BeamDeflectionClient() {
             </div>
             <div className="flex justify-between font-mono">
               <span>Section Area (A):</span>
-              <span className="text-slate-800 font-bold">{geoProperties.area.toFixed(1)} mm²</span>
+              <span className="text-slate-800 font-bold" data-testid="res-section-area">{formatNum(geoProperties.area, 1)} mm²</span>
             </div>
             <div className="flex justify-between font-mono">
               <span>Moment of Inertia (Ix):</span>
-              <span className="text-slate-800 font-bold">{geoProperties.Ix.toExponential(4)} mm⁴</span>
+              <span className="text-slate-800 font-bold" data-testid="res-ix">{formatExponential(geoProperties.Ix)} mm⁴</span>
             </div>
             <div className="flex justify-between font-mono">
               <span>Section Modulus (Wx):</span>
-              <span className="text-slate-800 font-bold">{geoProperties.Wx.toExponential(4)} mm³</span>
+              <span className="text-slate-800 font-bold" data-testid="res-wx">{formatExponential(geoProperties.Wx)} mm³</span>
             </div>
           </div>
         </div>
@@ -642,6 +712,7 @@ export default function BeamDeflectionClient() {
               1. Support & Load Arrangement
             </label>
             <select
+              data-testid="select-load-condition"
               value={loadConditionIdx}
               onChange={(e) => setLoadConditionIdx(parseInt(e.target.value))}
               className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4 py-3 text-base font-bold focus:outline-none focus:border-blue-500 text-white"
@@ -663,6 +734,7 @@ export default function BeamDeflectionClient() {
               {PROFILE_TYPES.map((p) => (
                 <button
                   key={p.id}
+                  data-testid={`btn-profile-${p.id}`}
                   onClick={() => setProfileType(p.id)}
                   className={`py-3 px-2 rounded-xl text-base font-black border transition-all ${
                     profileType === p.id
@@ -687,48 +759,52 @@ export default function BeamDeflectionClient() {
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Height (H)</span>
-                    <span className="font-mono text-blue-400">{dimH} mm</span>
+                    <span className="font-mono text-blue-400">{dimHStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimH}
-                    onChange={(e) => setDimH(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-h"
+                    value={dimHStr}
+                    onChange={(e) => setDimHStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Flange Width (B)</span>
-                    <span className="font-mono text-blue-400">{dimB} mm</span>
+                    <span className="font-mono text-blue-400">{dimBStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimB}
-                    onChange={(e) => setDimB(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-b"
+                    value={dimBStr}
+                    onChange={(e) => setDimBStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Flange Thickness (tf)</span>
-                    <span className="font-mono text-blue-400">{dimTf} mm</span>
+                    <span className="font-mono text-blue-400">{dimTfStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimTf}
-                    onChange={(e) => setDimTf(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-tf"
+                    value={dimTfStr}
+                    onChange={(e) => setDimTfStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Web Thickness (tw)</span>
-                    <span className="font-mono text-blue-400">{dimTw} mm</span>
+                    <span className="font-mono text-blue-400">{dimTwStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimTw}
-                    onChange={(e) => setDimTw(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-tw"
+                    value={dimTwStr}
+                    onChange={(e) => setDimTwStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
@@ -740,36 +816,39 @@ export default function BeamDeflectionClient() {
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Outer Height (H)</span>
-                    <span className="font-mono text-blue-400">{dimH} mm</span>
+                    <span className="font-mono text-blue-400">{dimHStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimH}
-                    onChange={(e) => setDimH(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-h"
+                    value={dimHStr}
+                    onChange={(e) => setDimHStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Outer Width (B)</span>
-                    <span className="font-mono text-blue-400">{dimB} mm</span>
+                    <span className="font-mono text-blue-400">{dimBStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimB}
-                    onChange={(e) => setDimB(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-b"
+                    value={dimBStr}
+                    onChange={(e) => setDimBStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5 col-span-2">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Wall Thickness (t)</span>
-                    <span className="font-mono text-blue-400">{dimT} mm</span>
+                    <span className="font-mono text-blue-400">{dimTStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimT}
-                    onChange={(e) => setDimT(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-t"
+                    value={dimTStr}
+                    onChange={(e) => setDimTStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
@@ -781,24 +860,26 @@ export default function BeamDeflectionClient() {
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Height (H)</span>
-                    <span className="font-mono text-blue-400">{dimH} mm</span>
+                    <span className="font-mono text-blue-400">{dimHStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimH}
-                    onChange={(e) => setDimH(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-h"
+                    value={dimHStr}
+                    onChange={(e) => setDimHStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Width (B)</span>
-                    <span className="font-mono text-blue-400">{dimB} mm</span>
+                    <span className="font-mono text-blue-400">{dimBStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimB}
-                    onChange={(e) => setDimB(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-b"
+                    value={dimBStr}
+                    onChange={(e) => setDimBStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
@@ -810,24 +891,26 @@ export default function BeamDeflectionClient() {
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Outer Diameter (D)</span>
-                    <span className="font-mono text-blue-400">{dimB} mm</span>
+                    <span className="font-mono text-blue-400">{dimBStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimB}
-                    onChange={(e) => setDimB(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-b"
+                    value={dimBStr}
+                    onChange={(e) => setDimBStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold flex justify-between">
                     <span>Wall Thickness (t)</span>
-                    <span className="font-mono text-blue-400">{dimT} mm</span>
+                    <span className="font-mono text-blue-400">{dimTStr} mm</span>
                   </label>
                   <input
                     type="number"
-                    value={dimT}
-                    onChange={(e) => setDimT(parseFloat(e.target.value) || 0)}
+                    data-testid="input-dim-t"
+                    value={dimTStr}
+                    onChange={(e) => setDimTStr(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
@@ -852,25 +935,23 @@ export default function BeamDeflectionClient() {
             <div className="space-y-2">
               <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
                 <span>Beam Span Length (L)</span>
-                <span className="text-blue-400 font-mono text-lg">{length} m</span>
+                <span className="text-blue-400 font-mono text-lg">{lengthStr} m</span>
               </label>
               <input
                 type="range"
                 min="0.5"
                 max="20"
                 step="0.1"
-                value={length}
-                onChange={(e) => setLength(parseFloat(e.target.value))}
+                value={isNaN(length) || length <= 0 ? 0.5 : length}
+                onChange={(e) => setLengthStr(e.target.value)}
                 className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
               />
               <div className="flex gap-2">
                 <input
-                  type="number"
-                  min="0.1"
-                  max="100"
-                  step="0.1"
-                  value={length}
-                  onChange={(e) => setLength(parseFloat(e.target.value) || 0.1)}
+                  type="text"
+                  data-testid="input-span-length"
+                  value={lengthStr}
+                  onChange={(e) => setLengthStr(e.target.value)}
                   className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-base font-mono font-bold focus:outline-none focus:border-blue-500 text-white"
                 />
               </div>
@@ -883,7 +964,7 @@ export default function BeamDeflectionClient() {
                   {loadSetup.load === 'point' ? 'Applied Point Force (P)' : 'Uniform Load (w)'}
                 </span>
                 <span className="text-blue-400 font-mono text-lg">
-                  {loadValue} {loadSetup.load === 'point' ? 'kN' : 'kN/m'}
+                  {loadValueStr} {loadSetup.load === 'point' ? 'kN' : 'kN/m'}
                 </span>
               </label>
               <input
@@ -891,18 +972,16 @@ export default function BeamDeflectionClient() {
                 min="0.5"
                 max="200"
                 step="0.5"
-                value={loadValue}
-                onChange={(e) => setLoadValue(parseFloat(e.target.value))}
+                value={isNaN(loadValue) || loadValue <= 0 ? 0.5 : loadValue}
+                onChange={(e) => setLoadValueStr(e.target.value)}
                 className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
               />
               <div className="flex gap-2">
                 <input
-                  type="number"
-                  min="0.1"
-                  max="5000"
-                  step="0.5"
-                  value={loadValue}
-                  onChange={(e) => setLoadValue(parseFloat(e.target.value) || 0.1)}
+                  type="text"
+                  data-testid="input-load-value"
+                  value={loadValueStr}
+                  onChange={(e) => setLoadValueStr(e.target.value)}
                   className="flex-1 bg-slate-800 border border-slate-700 rounded-xl px-4 py-2.5 text-base font-mono font-bold focus:outline-none focus:border-blue-500 text-white"
                 />
               </div>
@@ -917,6 +996,7 @@ export default function BeamDeflectionClient() {
                 {MATERIALS.map((m, i) => (
                   <button
                     key={i}
+                    data-testid={`btn-material-${i}`}
                     onClick={() => setMaterialIdx(i)}
                     className={`py-2.5 px-2 rounded-xl text-sm font-black border transition-all ${
                       materialIdx === i
@@ -936,18 +1016,20 @@ export default function BeamDeflectionClient() {
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold">Elastic Modulus (GPa)</label>
                   <input
-                    type="number"
+                    type="text"
+                    data-testid="input-custom-e"
                     value={customE}
-                    onChange={(e) => setCustomE(parseFloat(e.target.value) || 0)}
+                    onChange={(e) => setCustomE(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-750 rounded-xl px-3 py-2 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-sm text-slate-400 font-bold">Yield Strength (MPa)</label>
                   <input
-                    type="number"
+                    type="text"
+                    data-testid="input-custom-yield"
                     value={customYield}
-                    onChange={(e) => setCustomYield(parseFloat(e.target.value) || 0)}
+                    onChange={(e) => setCustomYield(e.target.value)}
                     className="w-full bg-slate-800 border border-slate-750 rounded-xl px-3 py-2 text-base font-mono text-white focus:outline-none"
                   />
                 </div>
@@ -964,63 +1046,99 @@ export default function BeamDeflectionClient() {
             <div className="grid grid-cols-2 gap-3.5">
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Max Moment</div>
-                <div className="text-white font-black text-xl font-mono">
-                  {(structuralOutputs.maxMoment / 1e6).toFixed(3)}
+                <div className="text-white font-black text-xl font-mono" data-testid="res-max-moment">
+                  {formatNum(structuralOutputs.maxMoment / 1e6, 3)}
                   <span className="text-sm text-slate-400 ml-1">kN·m</span>
                 </div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Max Deflection</div>
-                <div className={`font-black text-xl font-mono ${
-                  structuralOutputs.isDeflectionSafe ? 'text-emerald-400' : 'text-red-400'
-                }`}>
-                  {structuralOutputs.maxDeflection.toFixed(2)}
+                <div
+                  data-testid="res-max-deflection"
+                  className={`font-black text-xl font-mono ${
+                    structuralOutputs.isValid
+                      ? structuralOutputs.isDeflectionSafe ? 'text-emerald-400' : 'text-red-400'
+                      : 'text-slate-400'
+                  }`}
+                >
+                  {formatNum(structuralOutputs.maxDeflection, 2)}
                   <span className="text-sm text-slate-400 ml-1">mm</span>
                 </div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Bending Stress</div>
-                <div className={`font-black text-xl font-mono ${
-                  structuralOutputs.isStressSafe ? 'text-white' : 'text-red-400'
-                }`}>
-                  {structuralOutputs.maxStress.toFixed(1)}
+                <div
+                  data-testid="res-max-stress"
+                  className={`font-black text-xl font-mono ${
+                    structuralOutputs.isValid
+                      ? structuralOutputs.isStressSafe ? 'text-white' : 'text-red-400'
+                      : 'text-slate-400'
+                  }`}
+                >
+                  {formatNum(structuralOutputs.maxStress, 1)}
                   <span className="text-sm text-slate-400 ml-1">MPa</span>
                 </div>
               </div>
               <div className="bg-slate-800 rounded-xl p-3 border border-slate-750">
                 <div className="text-slate-400 font-bold text-[9px] uppercase">Safety Factor</div>
-                <div className={`font-black text-xl font-mono ${
-                  structuralOutputs.isStressSafe ? 'text-blue-400' : 'text-red-400'
-                }`}>
-                  {structuralOutputs.safetyFactor > 100 ? '99+' : structuralOutputs.safetyFactor.toFixed(2)}
+                <div
+                  data-testid="res-safety-factor"
+                  className={`font-black text-xl font-mono ${
+                    structuralOutputs.isValid
+                      ? structuralOutputs.isStressSafe ? 'text-blue-400' : 'text-red-400'
+                      : 'text-slate-400'
+                  }`}
+                >
+                  {structuralOutputs.isValid
+                    ? structuralOutputs.safetyFactor > 100 ? '99+' : structuralOutputs.safetyFactor.toFixed(2)
+                    : '—'}
                 </div>
               </div>
             </div>
 
             {/* Recommendation limit note */}
             <div className="bg-blue-950/20 rounded-xl p-3 border border-blue-900/30 text-[11px] font-semibold text-blue-200 leading-relaxed">
-              Standard building code deflection limit for this configuration is <strong className="text-white">L/{loadSetup.support === 'cantilever' ? 180 : (materialIdx === 2 ? 360 : 240)} = {structuralOutputs.targetLimit.toFixed(2)} mm</strong>.
+              Standard building code deflection limit for this configuration is <strong className="text-white">L/{loadSetup.support === 'cantilever' ? 180 : (materialIdx === 2 ? 360 : 240)} = {formatNum(structuralOutputs.targetLimit, 2)} mm</strong>.
             </div>
           </div>
 
           {/* Action buttons */}
-          <button
-            onClick={handleCopySummary}
-            className="w-full bg-white hover:bg-slate-100 text-slate-900 font-black text-base py-3.5 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
-          >
-            {copied ? (
-              <><Check className="w-4 h-4 text-green-600" /> Report Copied!</>
-            ) : (
-              <><Copy className="w-4 h-4" /> Copy Engineering Report</>
-            )}
-          </button>
+          <div className="flex gap-3">
+            <button
+              data-testid="btn-copy-report"
+              onClick={handleCopySummary}
+              className={`flex-1 font-black text-sm py-3.5 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95 cursor-pointer ${
+                copyStatus === 'error'
+                  ? 'bg-rose-50 text-rose-700 border border-rose-200'
+                  : 'bg-white hover:bg-slate-100 text-slate-900'
+              }`}
+            >
+              {copyStatus === 'success' && (
+                <><Check className="w-4 h-4 text-green-600" /> Report Copied!</>
+              )}
+              {copyStatus === 'error' && (
+                <><XCircle className="w-4 h-4 text-rose-600" /> Copy Failed (Check Permissions)</>
+              )}
+              {copyStatus === 'idle' && (
+                <><Copy className="w-4 h-4" /> Copy Report</>
+              )}
+            </button>
+            <button
+              data-testid="btn-export-csv"
+              onClick={handleExportCsv}
+              className="bg-slate-800 hover:bg-slate-700 text-white font-black text-sm py-3.5 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all border border-slate-700 cursor-pointer"
+            >
+              <Download className="w-4 h-4" />
+              CSV
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Structural Reference Guide */}
       <div className="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
         <h3 className="text-lg font-black text-slate-900 flex items-center gap-2">
-          <HelpCircle className="w-5 h-5 text-blue-600" /> Beam Deflection Engineering Guidelines
+          <HelpCircle className="w-5 h-5 text-blue-600" /> Beam Deflection Engineering Guidelines (AISC 360 & IBC 1604.3)
         </h3>
 
         <div className="grid md:grid-cols-2 gap-8 text-lg">
@@ -1046,15 +1164,15 @@ export default function BeamDeflectionClient() {
             <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">2. Standard Deflection Serviceability Limits</h4>
             <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
               <p>
-                In structural engineering, beam deflection is governed by <em>serviceability limits</em> to prevent unsightly sagging, cracking of plaster, or vibration. Deflection limits are defined as a fraction of the span length L:
+                In structural engineering, beam deflection is governed by <em>serviceability limits</em> (such as IBC Table 1604.3) to prevent unsightly sagging, cracking of plaster ceilings, or excessive vibration. Deflection limits are defined as a fraction of span length L:
               </p>
               <ul className="list-disc pl-4 space-y-1.5 bg-slate-50 border border-slate-100 p-4 rounded-xl text-sm font-mono leading-relaxed">
-                <li><strong className="text-slate-800">L/360</strong>: Strictest limit. Commonly used for floor joists supporting plaster ceilings to prevent cracking under live loads.</li>
-                <li><strong className="text-slate-800">L/240</strong>: Standard limit for roof beams, rafters, and members supporting non-plaster ceilings under combined loads.</li>
-                <li><strong className="text-slate-800">L/180</strong>: Frequently applied to cantilever beams or steel roof purlins where sagging has fewer cosmetic impacts.</li>
+                <li><strong className="text-slate-800">L/360</strong>: Strictest limit. Standard for floor joists supporting plaster or brittle finishes under live loads to prevent ceiling cracking.</li>
+                <li><strong className="text-slate-800">L/240</strong>: Standard limit for roof beams, purlins, and members supporting non-plaster ceilings under combined loads.</li>
+                <li><strong className="text-slate-800">L/180</strong>: Applied to cantilever beam tips or industrial roof members where visual sag has negligible cosmetic impact.</li>
               </ul>
               <p>
-                If your beam deflection exceeds these thresholds, the structure may be safe from structural failure but will violate building codes or trigger serviceability issues.
+                If your beam deflection exceeds these thresholds, the structure may resist collapse but will fail serviceability criteria.
               </p>
             </div>
           </div>
