@@ -156,8 +156,10 @@ export default function BeltDriveClient() {
     URL.revokeObjectURL(url);
   };
 
-  const d1Num = parseFloat(d1Str) || 100;
-  const d2Num = parseFloat(d2Str) || 300;
+  const d1Parsed = parseInput(d1Str);
+  const d2Parsed = parseInput(d2Str);
+  const d1Num = d1Parsed !== null && d1Parsed > 0 ? d1Parsed : 100;
+  const d2Num = d2Parsed !== null && d2Parsed > 0 ? d2Parsed : 300;
 
   return (
     <div className="space-y-8">

@@ -3,10 +3,10 @@
  *
  * Validates:
  * 21. autolisp-function-reference (AutoLISP syntax, purged duplicate angle, reference mode headers, search filter, mandatory category button)
- * 22. aws-welding-symbol-reference (AWS A2.4 symbol dictionary, corrected Flare-V & Seam weld keys, reference mode headers, groove/basic/supplementary/process search)
- * 23. bearing-life-calculator (ISO 281:2007 L10/L10h hand calculations, ball vs roller exponent, presets, empty & '12abc' defense, csv numerical values)
- * 24. bearing-static-load-calculator (ISO 76:2006 P0r=max(X0*Fr+Y0*Fa, Fr) & C0=s0*P0 hand calculations, presets, empty & '12abc' defense, csv numerical values)
- * 25. belt-drive-length-calculator (ISO 4183/RMA IP-20 pitch length, center distance quadratic solve, negative discriminant defense, presets, empty & '12abc' defense, csv numerical values)
+ * 22. aws-welding-symbol-reference (AWS A2.4 symbol dictionary, unique keys, corrected Flare-V, Seam, Plug/Slot, Field, Melt-Through, search)
+ * 23. bearing-life-calculator (ISO 281:2007 L10/L10h hand calculations, ball vs roller exponent, presets, empty & '12abc' defense with waitForFunction, csv numeric values)
+ * 24. bearing-static-load-calculator (ISO 76:2006 P0r=max(X0*Fr+Y0*Fa, Fr) & C0=s0*P0 hand calculations, presets, empty & '12abc' defense with waitForFunction, csv numeric values)
+ * 25. belt-drive-length-calculator (ISO 4183/RMA IP-20 pitch length, center distance quadratic solve, negative discriminant defense, presets, empty & '12abc' defense with waitForFunction, csv numeric values, strict 0.001 tolerance)
  */
 
 const { chromium } = require('playwright');
@@ -139,7 +139,7 @@ async function runMasterSuite() {
         throw new Error('Corrected Flare-V Groove with ) ( symbol missing from reference');
       }
 
-      // 3. Search Basic weld types including corrected Seam Weld
+      // 3. Search Basic weld types: Seam Weld, Plug / Slot, Stud Weld
       await searchInput.fill('Seam Weld');
       await p.waitForTimeout(150);
       pageText = await p.innerText('body');
@@ -147,12 +147,33 @@ async function runMasterSuite() {
         throw new Error('Corrected Seam Weld with circle and parallel lines missing from reference');
       }
 
-      // 4. Search Supplementary symbols: Melt-Through & Contours
+      await searchInput.fill('Plug / Slot');
+      await p.waitForTimeout(150);
+      pageText = await p.innerText('body');
+      if (!pageText.includes('Plug / Slot Weld') || !pageText.includes('[ ]')) {
+        throw new Error('Plug / Slot Weld with [ ] symbol missing from reference');
+      }
+
+      await searchInput.fill('Stud Weld');
+      await p.waitForTimeout(150);
+      pageText = await p.innerText('body');
+      if (!pageText.includes('Stud Weld') || !pageText.includes('⨂')) {
+        throw new Error('Stud Weld with circle-X symbol missing from reference');
+      }
+
+      // 4. Search Supplementary symbols: Melt-Through (●), Field Weld (⚑), Weld All Around (○)
       await searchInput.fill('Melt-Through');
       await p.waitForTimeout(150);
       pageText = await p.innerText('body');
-      if (!pageText.includes('Melt-Through') || !pageText.includes('root reinforcement')) {
-        throw new Error('Melt-Through missing from welding symbol reference');
+      if (!pageText.includes('Melt-Through') || !pageText.includes('●')) {
+        throw new Error('Melt-Through with solid semicircle ● symbol missing from reference');
+      }
+
+      await searchInput.fill('Field Weld');
+      await p.waitForTimeout(150);
+      pageText = await p.innerText('body');
+      if (!pageText.includes('Field Weld') || !pageText.includes('⚑')) {
+        throw new Error('Field Weld with triangular flag ⚑ symbol missing from reference');
       }
 
       // 5. Search Process & Tail: SMAW
@@ -213,45 +234,55 @@ async function runMasterSuite() {
       assertClose(l10Gearbox, 186.55, 0.001, 'Gearbox preset L10');
       assertClose(l10hGearbox, 3455, 0.001, 'Gearbox preset L10h');
 
-      // 4. Input field 1 (input-c) empty and illegal character tests ('abc', '12abc')
+      // 4. Input field 1 (input-c) empty and illegal character tests ('abc', '12abc') with waitForFunction
       await p.fill('[data-testid="input-c"]', '');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
-        throw new Error('Expected "—" when input-c is empty');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-l10"]');
+        const el2 = document.querySelector('[data-testid="result-l10h"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-c"]', 'abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
-        throw new Error('Expected "—" when input-c is "abc"');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-l10"]');
+        const el2 = document.querySelector('[data-testid="result-l10h"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-c"]', '12abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
-        throw new Error('Expected "—" when input-c is "12abc"');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-l10"]');
+        const el2 = document.querySelector('[data-testid="result-l10h"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
 
       let body = await p.innerText('body');
       if (body.includes('NaN') || body.includes('Infinity')) {
         throw new Error('Found NaN or Infinity on page after input-c illegal inputs');
       }
 
-      // Restore input-c and test Input field 2 (input-p)
+      // Restore input-c and test Input field 2 (input-p) with waitForFunction
       await p.fill('[data-testid="input-c"]', '50');
       await p.fill('[data-testid="input-p"]', '');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
-        throw new Error('Expected "—" when input-p is empty');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-l10"]');
+        const el2 = document.querySelector('[data-testid="result-l10h"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-p"]', 'abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
-        throw new Error('Expected "—" when input-p is "abc"');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-l10"]');
+        const el2 = document.querySelector('[data-testid="result-l10h"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-p"]', '12abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
-        throw new Error('Expected "—" when input-p is "12abc"');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-l10"]');
+        const el2 = document.querySelector('[data-testid="result-l10h"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
 
       body = await p.innerText('body');
       if (body.includes('NaN') || body.includes('Infinity')) {
@@ -309,7 +340,10 @@ async function runMasterSuite() {
       const faInput = p.locator('[data-testid="input-fa"]');
       await faInput.fill('15');
       await faInput.blur();
-      await p.waitForTimeout(200);
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-p0"]');
+        return el && parseFloat(el.innerText) > 13.0;
+      });
       const p0Axial = parseFloat(await p.innerText('[data-testid="result-p0"]'));
       const c0Axial = parseFloat(await p.innerText('[data-testid="result-c0"]'));
       assertClose(p0Axial, 13.500, 0.001, 'High axial P0');
@@ -326,45 +360,55 @@ async function runMasterSuite() {
       const c0Shock = parseFloat(await p.innerText('[data-testid="result-c0"]'));
       assertClose(c0Shock, 20.000, 0.001, 'Shock load C0');
 
-      // 4. Input field 1 (input-fr) empty and illegal character tests ('abc', '12abc')
+      // 4. Input field 1 (input-fr) empty and illegal character tests ('abc', '12abc') with waitForFunction
       await p.fill('[data-testid="input-fr"]', '');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
-        throw new Error('Expected "—" when input-fr is empty');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-p0"]');
+        const el2 = document.querySelector('[data-testid="result-c0"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-fr"]', 'abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
-        throw new Error('Expected "—" when input-fr is "abc"');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-p0"]');
+        const el2 = document.querySelector('[data-testid="result-c0"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-fr"]', '12abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
-        throw new Error('Expected "—" when input-fr is "12abc"');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-p0"]');
+        const el2 = document.querySelector('[data-testid="result-c0"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
 
       let body = await p.innerText('body');
       if (body.includes('NaN') || body.includes('Infinity')) {
         throw new Error('Found NaN or Infinity on page after input-fr illegal inputs');
       }
 
-      // Restore input-fr and test Input field 2 (input-fa)
+      // Restore input-fr and test Input field 2 (input-fa) with waitForFunction
       await p.fill('[data-testid="input-fr"]', '10');
       await p.fill('[data-testid="input-fa"]', '');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
-        throw new Error('Expected "—" when input-fa is empty');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-p0"]');
+        const el2 = document.querySelector('[data-testid="result-c0"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-fa"]', 'abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
-        throw new Error('Expected "—" when input-fa is "abc"');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-p0"]');
+        const el2 = document.querySelector('[data-testid="result-c0"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-fa"]', '12abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
-        throw new Error('Expected "—" when input-fa is "12abc"');
-      }
+      await p.waitForFunction(() => {
+        const el1 = document.querySelector('[data-testid="result-p0"]');
+        const el2 = document.querySelector('[data-testid="result-c0"]');
+        return el1 && el1.innerText === '—' && el2 && el2.innerText === '—';
+      }, { timeout: 5000 });
 
       body = await p.innerText('body');
       if (body.includes('NaN') || body.includes('Infinity')) {
@@ -422,7 +466,7 @@ async function runMasterSuite() {
       const drivenWrapDefault = parseFloat(await p.innerText('[data-testid="result-driven-wrap"]'));
 
       assertClose(beltLenDefault, 1648.3, 0.001, 'Default Belt Length');
-      assertClose(outputRpmDefault, 483, 0.01, 'Default Output RPM');
+      assertClose(outputRpmDefault, 483, 0.001, 'Default Output RPM');
       assertClose(ratioDefault, 3.00, 0.001, 'Default Speed Ratio');
       assertClose(driverWrapDefault, 156.9, 0.002, 'Default Driver Wrap');
       assertClose(drivenWrapDefault, 203.1, 0.002, 'Default Driven Wrap');
@@ -441,27 +485,33 @@ async function runMasterSuite() {
       // Input L = 1648.3 mm (from previous result) with D1=100, D2=300
       // Hand calc should yield C ≈ 500.0 mm
       await p.fill('[data-testid="input-belt-length"]', '1648.3');
-      await p.waitForTimeout(150);
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-primary-value"]');
+        return el && el.innerText !== '—';
+      });
       const solvedC = parseFloat(await p.innerText('[data-testid="result-primary-value"]'));
-      assertClose(solvedC, 500.0, 0.01, 'Reverse calculated Center Distance');
+      assertClose(solvedC, 500.0, 0.001, 'Reverse calculated Center Distance');
 
       // 2b. Center Distance mode defense: Empty L, illegal L ('12abc'), and negative discriminant (D1=100, D2=300, L=800)
       await p.fill('[data-testid="input-belt-length"]', '');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
-        throw new Error('Expected "—" when belt length is empty in center distance mode');
-      }
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-primary-value"]');
+        return el && el.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-belt-length"]', '12abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
-        throw new Error('Expected "—" when belt length is "12abc" in center distance mode');
-      }
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-primary-value"]');
+        return el && el.innerText === '—';
+      }, { timeout: 5000 });
+
       // Negative discriminant test: D1=100, D2=300, L=800
       await p.fill('[data-testid="input-belt-length"]', '800');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
-        throw new Error('Expected "—" when discriminant < 0 (L=800 for D1=100, D2=300)');
-      }
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-primary-value"]');
+        return el && el.innerText === '—';
+      }, { timeout: 5000 });
+
       let cModeBody = await p.innerText('body');
       if (cModeBody.includes('NaN') || cModeBody.includes('Infinity')) {
         throw new Error('Found NaN or Infinity on page in center distance mode with discriminant < 0');
@@ -479,7 +529,10 @@ async function runMasterSuite() {
         await p.waitForSelector('[data-testid="input-center-dist"]', { timeout: 15000 });
       }
       await p.click('[data-testid="btn-preset-1-1"]');
-      await p.waitForTimeout(150);
+      await p.waitForFunction(() => {
+        const d1Inp = document.querySelector('[data-testid="input-d1"]');
+        return d1Inp && d1Inp.value === '150';
+      });
 
       // Hand calc:
       //   L = 2*450 + (π/2)*(150+150) + 0 = 900 + 150*π = 900 + 471.239 = 1371.2 mm
@@ -491,45 +544,49 @@ async function runMasterSuite() {
       assertClose(ratio1to1, 1.00, 0.001, '1:1 Preset Ratio');
       assertClose(wrap1to1, 180.0, 0.001, '1:1 Preset Wrap Angle');
 
-      // 4. Input field 1 (input-d1) empty and illegal character tests ('abc', '12abc')
+      // 4. Input field 1 (input-d1) empty and illegal character tests ('abc', '12abc') with waitForFunction
       await p.fill('[data-testid="input-d1"]', '');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
-        throw new Error('Expected "—" when input-d1 is empty');
-      }
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-primary-value"]');
+        return el && el.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-d1"]', 'abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
-        throw new Error('Expected "—" when input-d1 is "abc"');
-      }
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-primary-value"]');
+        return el && el.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-d1"]', '12abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
-        throw new Error('Expected "—" when input-d1 is "12abc"');
-      }
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-primary-value"]');
+        return el && el.innerText === '—';
+      }, { timeout: 5000 });
 
       let body = await p.innerText('body');
       if (body.includes('NaN') || body.includes('Infinity')) {
         throw new Error('Found NaN or Infinity on belt-drive page after input-d1 illegal inputs');
       }
 
-      // Restore input-d1 and test Input field 2 (input-center-dist)
+      // Restore input-d1 and test Input field 2 (input-center-dist) with waitForFunction
       await p.fill('[data-testid="input-d1"]', '100');
       await p.fill('[data-testid="input-center-dist"]', '');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
-        throw new Error('Expected "—" when input-center-dist is empty');
-      }
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-primary-value"]');
+        return el && el.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-center-dist"]', 'abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
-        throw new Error('Expected "—" when input-center-dist is "abc"');
-      }
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-primary-value"]');
+        return el && el.innerText === '—';
+      }, { timeout: 5000 });
+
       await p.fill('[data-testid="input-center-dist"]', '12abc');
-      await p.waitForTimeout(50);
-      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
-        throw new Error('Expected "—" when input-center-dist is "12abc"');
-      }
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-primary-value"]');
+        return el && el.innerText === '—';
+      }, { timeout: 5000 });
 
       body = await p.innerText('body');
       if (body.includes('NaN') || body.includes('Infinity')) {
@@ -538,7 +595,10 @@ async function runMasterSuite() {
 
       // 5. Reset button restoration
       await p.click('[data-testid="btn-reset"]');
-      await p.waitForTimeout(100);
+      await p.waitForFunction(() => {
+        const d1Inp = document.querySelector('[data-testid="input-d1"]');
+        return d1Inp && d1Inp.value === '100';
+      });
       const resetLen = parseFloat(await p.innerText('[data-testid="result-primary-value"]'));
       assertClose(resetLen, 1648.3, 0.001, 'Reset restored Belt Length');
 
