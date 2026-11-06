@@ -4,6 +4,13 @@ import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
 import { Settings, Zap, Info, Download, RotateCcw } from 'lucide-react';
 
+function parseInput(val: string): number | null {
+  const trimmed = val.trim();
+  if (trimmed === '') return null;
+  const num = Number(trimmed);
+  return Number.isFinite(num) ? num : null;
+}
+
 export default function BearingStaticLoadCalculatorClient() {
   const [frStr, setFrStr] = useState('10');
   const [faStr, setFaStr] = useState('2');
@@ -12,18 +19,18 @@ export default function BearingStaticLoadCalculatorClient() {
   const [s0Str, setS0Str] = useState('1.5');
 
   const result = useMemo(() => {
-    const Fr = parseFloat(frStr);
-    const Fa = parseFloat(faStr);
-    const X0 = parseFloat(x0Str);
-    const Y0 = parseFloat(y0Str);
-    const s0 = parseFloat(s0Str);
+    const Fr = parseInput(frStr);
+    const Fa = parseInput(faStr);
+    const X0 = parseInput(x0Str);
+    const Y0 = parseInput(y0Str);
+    const s0 = parseInput(s0Str);
 
     if (
-      isNaN(Fr) ||
-      isNaN(Fa) ||
-      isNaN(X0) ||
-      isNaN(Y0) ||
-      isNaN(s0) ||
+      Fr === null ||
+      Fa === null ||
+      X0 === null ||
+      Y0 === null ||
+      s0 === null ||
       Fr < 0 ||
       Fa < 0 ||
       X0 < 0 ||

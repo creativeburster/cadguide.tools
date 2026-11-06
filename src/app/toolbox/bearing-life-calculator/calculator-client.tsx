@@ -4,6 +4,13 @@ import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
 import { Settings, Zap, Info, Download, RotateCcw } from 'lucide-react';
 
+function parseInput(val: string): number | null {
+  const trimmed = val.trim();
+  if (trimmed === '') return null;
+  const num = Number(trimmed);
+  return Number.isFinite(num) ? num : null;
+}
+
 export default function BearingLifeCalculatorClient() {
   const [cStr, setCStr] = useState('50');
   const [pStr, setPStr] = useState('5');
@@ -11,14 +18,14 @@ export default function BearingLifeCalculatorClient() {
   const [bearingType, setBearingType] = useState<'ball' | 'roller'>('ball');
 
   const result = useMemo(() => {
-    const C_kN = parseFloat(cStr);
-    const P_kN = parseFloat(pStr);
-    const n = parseFloat(speedStr);
+    const C_kN = parseInput(cStr);
+    const P_kN = parseInput(pStr);
+    const n = parseInput(speedStr);
 
     if (
-      isNaN(C_kN) ||
-      isNaN(P_kN) ||
-      isNaN(n) ||
+      C_kN === null ||
+      P_kN === null ||
+      n === null ||
       C_kN <= 0 ||
       P_kN <= 0 ||
       n <= 0
@@ -34,13 +41,8 @@ export default function BearingLifeCalculatorClient() {
     return { L10, L10h };
   }, [cStr, pStr, speedStr, bearingType]);
 
-  const formatNum = (n: number) => {
-    if (isNaN(n) || !isFinite(n)) return '—';
-    if (Math.abs(n) >= 10000) return n.toFixed(0);
-    if (Math.abs(n) >= 100) return n.toFixed(2);
-    if (Math.abs(n) >= 1) return n.toFixed(3);
-    return n.toFixed(6);
-  };
+  const displayL10 = isNaN(result.L10) || !isFinite(result.L10) ? '—' : result.L10.toFixed(2);
+  const displayL10h = isNaN(result.L10h) || !isFinite(result.L10h) ? '—' : Math.round(result.L10h).toFixed(0);
 
   const handleReset = () => {
     setCStr('50');
@@ -61,8 +63,8 @@ export default function BearingLifeCalculatorClient() {
       ['Bearing Type', bearingType === 'ball' ? 'Ball Bearing (p = 3)' : 'Roller Bearing (p = 10/3)'],
       ['', ''],
       ['Calculated Results', ''],
-      ['Basic Rating Life L10 (Millions of Revolutions)', isNaN(result.L10) ? '—' : result.L10.toFixed(2)],
-      ['Basic Rating Life L10h (Operating Hours)', isNaN(result.L10h) ? '—' : result.L10h.toFixed(0)],
+      ['Basic Rating Life L10 (Millions of Revolutions)', displayL10],
+      ['Basic Rating Life L10h (Operating Hours)', displayL10h],
     ].map(r => r.join(',')).join('\n');
 
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
@@ -200,14 +202,14 @@ export default function BearingLifeCalculatorClient() {
               <div className="bg-blue-50/60 rounded-2xl p-6 border border-blue-100">
                 <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-2">L10 (Millions of Revs)</div>
                 <div className="text-3xl font-black text-blue-700">
-                  <span data-testid="result-l10">{formatNum(result.L10)}</span>
+                  <span data-testid="result-l10">{displayL10}</span>
                   <span className="text-lg text-blue-400 font-bold ml-1.5">Mr</span>
                 </div>
               </div>
               <div className="bg-green-50/60 rounded-2xl p-6 border border-green-100">
                 <div className="text-xs font-black text-green-500 uppercase tracking-wider mb-2">L10h (Operating Life)</div>
                 <div className="text-3xl font-black text-green-700">
-                  <span data-testid="result-l10h">{formatNum(result.L10h)}</span>
+                  <span data-testid="result-l10h">{displayL10h}</span>
                   <span className="text-lg text-green-400 font-bold ml-1.5">hours</span>
                 </div>
               </div>

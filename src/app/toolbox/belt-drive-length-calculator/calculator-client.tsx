@@ -6,6 +6,13 @@ import { Settings, Download, RotateCcw } from 'lucide-react';
 
 type SolveMode = 'beltLength' | 'centerDistance';
 
+function parseInput(val: string): number | null {
+  const trimmed = val.trim();
+  if (trimmed === '') return null;
+  const num = Number(trimmed);
+  return Number.isFinite(num) ? num : null;
+}
+
 export default function BeltDriveClient() {
   const [mode, setMode] = useState<SolveMode>('beltLength');
   const [d1Str, setD1Str] = useState('100'); // driver pulley diameter mm
@@ -15,11 +22,11 @@ export default function BeltDriveClient() {
   const [inputRpmStr, setInputRpmStr] = useState('1450');
 
   const results = useMemo(() => {
-    const d1 = parseFloat(d1Str);
-    const d2 = parseFloat(d2Str);
-    const inputRPM = parseFloat(inputRpmStr);
+    const d1 = parseInput(d1Str);
+    const d2 = parseInput(d2Str);
+    const inputRPM = parseInput(inputRpmStr);
 
-    if (isNaN(d1) || isNaN(d2) || isNaN(inputRPM) || d1 <= 0 || d2 <= 0 || inputRPM <= 0) {
+    if (d1 === null || d2 === null || inputRPM === null || d1 <= 0 || d2 <= 0 || inputRPM <= 0) {
       return {
         beltLength: '—',
         centerDistance: '—',
@@ -37,8 +44,8 @@ export default function BeltDriveClient() {
     let L_val = NaN;
 
     if (mode === 'beltLength') {
-      const c = parseFloat(centerDistStr);
-      if (isNaN(c) || c <= 0 || c < Math.abs(d2 - d1) / 2) {
+      const c = parseInput(centerDistStr);
+      if (c === null || c <= 0 || c < Math.abs(d2 - d1) / 2) {
         return {
           beltLength: '—',
           centerDistance: '—',
@@ -53,8 +60,8 @@ export default function BeltDriveClient() {
       // L = 2C + (π/2)*(D1 + D2) + (D2 - D1)^2 / (4C)
       L_val = 2 * C_val + (Math.PI / 2) * (d1 + d2) + Math.pow(d2 - d1, 2) / (4 * C_val);
     } else {
-      const l = parseFloat(beltLengthStr);
-      if (isNaN(l) || l <= 0) {
+      const l = parseInput(beltLengthStr);
+      if (l === null || l <= 0) {
         return {
           beltLength: '—',
           centerDistance: '—',

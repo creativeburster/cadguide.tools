@@ -96,7 +96,15 @@ async function runTests() {
       const riseInput = p.locator('[data-testid="input-rise"]');
       await riseInput.click();
       await riseInput.fill('42');
-      await p.waitForTimeout(300);
+      try {
+        await p.waitForFunction(() => {
+          const el = document.querySelector('[data-testid="result-run-ft"]');
+          return el && parseFloat(el.innerText) === 42.0;
+        }, { timeout: 3000 });
+      } catch {
+        await riseInput.fill('42');
+        await p.waitForTimeout(300);
+      }
 
       const modRun = parseFloat(await p.locator('[data-testid="result-run-ft"]').innerText());
       assertClose(modRun, 42.0, 0.005, 'Modified 42 in Run (ft)');
@@ -146,12 +154,23 @@ async function runTests() {
       // 2. Opus Benchmark 1: 1 ha to ft² (Testing bugfix of missing ha factor)
       // Exact math: 10000 m² / 0.09290304 m²/ft² = 107639.104167 ft²
       await p.fill('[data-testid="input-value"]', '1');
-      await p.selectOption('[data-testid="select-from"]', 'ha');
-      await p.selectOption('[data-testid="select-to"]', 'ft2');
-      await p.waitForFunction(() => {
-        const txt = document.querySelector('[data-testid="result-value"]')?.innerText || '';
-        return txt.includes('107,639') || txt.includes('107639');
-      });
+      const selectHaFt2 = async () => {
+        await p.selectOption('[data-testid="select-from"]', 'ha');
+        await p.selectOption('[data-testid="select-to"]', 'ft2');
+      };
+      await selectHaFt2();
+      try {
+        await p.waitForFunction(() => {
+          const txt = document.querySelector('[data-testid="result-value"]')?.innerText || '';
+          return txt.includes('107,639') || txt.includes('107639');
+        }, { timeout: 3000 });
+      } catch {
+        await selectHaFt2();
+        await p.waitForFunction(() => {
+          const txt = document.querySelector('[data-testid="result-value"]')?.innerText || '';
+          return txt.includes('107,639') || txt.includes('107639');
+        }, { timeout: 15000 });
+      }
 
       resVal = parseFloat((await p.locator('[data-testid="result-value"]').innerText()).replace(/,/g, ''));
       assertClose(resVal, 107639.1, 0.001, '1 ha to ft² exact benchmark');

@@ -2,11 +2,11 @@
  * CADGuide.tools Toolbox - Master E2E Verification Suite for Batch 5 (Tools 21 to 25)
  *
  * Validates:
- * 21. autolisp-function-reference (AutoLISP syntax, purged duplicate angle, reference mode headers, search filter)
- * 22. aws-welding-symbol-reference (AWS A2.4 symbol dictionary, reference mode headers, groove/basic/supplementary/process search)
- * 23. bearing-life-calculator (ISO 281:2007 L10/L10h hand calculations, ball vs roller exponent, presets, empty defense, csv)
- * 24. bearing-static-load-calculator (ISO 76:2006 P0r=max(X0*Fr+Y0*Fa, Fr) & C0=s0*P0 hand calculations, presets, empty defense, csv)
- * 25. belt-drive-length-calculator (ISO 4183/RMA IP-20 pitch length, center distance quadratic solve, wrap angles, presets, empty defense, csv)
+ * 21. autolisp-function-reference (AutoLISP syntax, purged duplicate angle, reference mode headers, search filter, mandatory category button)
+ * 22. aws-welding-symbol-reference (AWS A2.4 symbol dictionary, corrected Flare-V & Seam weld keys, reference mode headers, groove/basic/supplementary/process search)
+ * 23. bearing-life-calculator (ISO 281:2007 L10/L10h hand calculations, ball vs roller exponent, presets, empty & '12abc' defense, csv numerical values)
+ * 24. bearing-static-load-calculator (ISO 76:2006 P0r=max(X0*Fr+Y0*Fa, Fr) & C0=s0*P0 hand calculations, presets, empty & '12abc' defense, csv numerical values)
+ * 25. belt-drive-length-calculator (ISO 4183/RMA IP-20 pitch length, center distance quadratic solve, negative discriminant defense, presets, empty & '12abc' defense, csv numerical values)
  */
 
 const { chromium } = require('playwright');
@@ -14,12 +14,12 @@ const fs = require('fs');
 
 const BASE_URL = 'http://localhost:3000';
 
-function assertClose(actual, expected, maxRelError = 0.01, context = '') {
+function assertClose(actual, expected, maxRelError = 0.001, context = '') {
   const diff = Math.abs(actual - expected);
   const relError = expected === 0 ? diff : diff / Math.abs(expected);
   if (relError > maxRelError) {
     throw new Error(
-      `[${context}] Value mismatch: actual ${actual} vs expected ${expected} (relative error ${(relError * 100).toFixed(3)}% > ${(maxRelError * 100).toFixed(3)}%)`
+      `[${context}] Value mismatch: actual ${actual} vs expected ${expected} (relative error ${(relError * 100).toFixed(4)}% > ${(maxRelError * 100).toFixed(4)}%)`
     );
   }
 }
@@ -102,16 +102,15 @@ async function runMasterSuite() {
         throw new Error('polar function missing or not found in search');
       }
 
-      // 3. Category filter switching
+      // 3. Category filter switching (NO silent skip, must be visible and click)
       await searchInput.fill('');
       const mathBtn = p.locator('button:has-text("Math & Logic")').first();
-      if (await mathBtn.isVisible()) {
-        await mathBtn.click();
-        await p.waitForTimeout(150);
-        const mathText = await p.innerText('body');
-        if (!mathText.includes('Addition') || !mathText.includes('Increment')) {
-          throw new Error('Math category filter failed to show math functions');
-        }
+      await mathBtn.waitFor({ state: 'visible', timeout: 5000 });
+      await mathBtn.click();
+      await p.waitForTimeout(200);
+      const mathText = await p.innerText('body');
+      if (!mathText.includes('Addition') || !mathText.includes('Increment')) {
+        throw new Error('Math category filter failed to show math functions');
       }
     });
 
@@ -132,15 +131,23 @@ async function runMasterSuite() {
         throw new Error('Fillet Weld missing from welding symbol reference');
       }
 
-      // 2. Search Groove types
-      await searchInput.fill('V-Groove');
+      // 2. Search Groove types including corrected Flare-V Groove
+      await searchInput.fill('Flare-V');
       await p.waitForTimeout(150);
       pageText = await p.innerText('body');
-      if (!pageText.includes('V-Groove') || !pageText.includes('beveled')) {
-        throw new Error('V-Groove missing from welding symbol reference');
+      if (!pageText.includes('Flare-V Groove') || !pageText.includes(')(')) {
+        throw new Error('Corrected Flare-V Groove with ) ( symbol missing from reference');
       }
 
-      // 3. Search Supplementary symbols: Melt-Through
+      // 3. Search Basic weld types including corrected Seam Weld
+      await searchInput.fill('Seam Weld');
+      await p.waitForTimeout(150);
+      pageText = await p.innerText('body');
+      if (!pageText.includes('Seam Weld') || !pageText.includes('◯ with =')) {
+        throw new Error('Corrected Seam Weld with circle and parallel lines missing from reference');
+      }
+
+      // 4. Search Supplementary symbols: Melt-Through & Contours
       await searchInput.fill('Melt-Through');
       await p.waitForTimeout(150);
       pageText = await p.innerText('body');
@@ -148,7 +155,7 @@ async function runMasterSuite() {
         throw new Error('Melt-Through missing from welding symbol reference');
       }
 
-      // 4. Search Process & Tail: SMAW
+      // 5. Search Process & Tail: SMAW
       await searchInput.fill('SMAW');
       await p.waitForTimeout(150);
       pageText = await p.innerText('body');
@@ -177,7 +184,7 @@ async function runMasterSuite() {
       // 2. Roller bearing branch hand-calculation
       // Switch type to roller (p = 10/3)
       // Hand calc:
-      //   L10 = (50 / 5)^(10/3) = 10^(3.333333) = 2154.43469 -> 2154 Mr
+      //   L10 = (50 / 5)^(10/3) = 10^(3.333333) = 2154.43469 -> 2154.43 Mr
       //   L10h = (10^6 / (60 * 1500)) * 2154.43469 = 23938.16 -> 23938 hours
       await p.selectOption('[data-testid="select-type"]', 'roller');
       await p.waitForFunction(() => {
@@ -186,8 +193,8 @@ async function runMasterSuite() {
       });
       const l10Roller = parseFloat(await p.innerText('[data-testid="result-l10"]'));
       const l10hRoller = parseFloat(await p.innerText('[data-testid="result-l10h"]'));
-      assertClose(l10Roller, 2154, 0.01, 'Roller bearing L10');
-      assertClose(l10hRoller, 23938, 0.01, 'Roller bearing L10h');
+      assertClose(l10Roller, 2154.43, 0.001, 'Roller bearing L10');
+      assertClose(l10hRoller, 23938, 0.001, 'Roller bearing L10h');
 
       // 3. Preset testing: Industrial Gearbox (Roller)
       // C = 120 kN, P = 25 kN, n = 900 RPM, p = 10/3
@@ -203,22 +210,52 @@ async function runMasterSuite() {
       });
       const l10Gearbox = parseFloat(await p.innerText('[data-testid="result-l10"]'));
       const l10hGearbox = parseFloat(await p.innerText('[data-testid="result-l10h"]'));
-      assertClose(l10Gearbox, 186.55, 0.01, 'Gearbox preset L10');
-      assertClose(l10hGearbox, 3455, 0.01, 'Gearbox preset L10h');
+      assertClose(l10Gearbox, 186.55, 0.001, 'Gearbox preset L10');
+      assertClose(l10hGearbox, 3455, 0.001, 'Gearbox preset L10h');
 
-      // 4. Empty / illegal input defense (no NaN / no Infinity)
+      // 4. Input field 1 (input-c) empty and illegal character tests ('abc', '12abc')
       await p.fill('[data-testid="input-c"]', '');
-      await p.waitForTimeout(100);
-      const emptyL10 = await p.innerText('[data-testid="result-l10"]');
-      const emptyL10h = await p.innerText('[data-testid="result-l10h"]');
-      if (emptyL10 !== '—' || emptyL10h !== '—') {
-        throw new Error(`Expected '—' on empty input, got L10=${emptyL10}, L10h=${emptyL10h}`);
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
+        throw new Error('Expected "—" when input-c is empty');
+      }
+      await p.fill('[data-testid="input-c"]', 'abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
+        throw new Error('Expected "—" when input-c is "abc"');
+      }
+      await p.fill('[data-testid="input-c"]', '12abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
+        throw new Error('Expected "—" when input-c is "12abc"');
       }
 
-      // Check whole page for NaN / Infinity
-      const fullText = await p.innerText('body');
-      if (fullText.includes('NaN') || fullText.includes('Infinity')) {
-        throw new Error('Found NaN or Infinity on bearing-life calculator page after empty input!');
+      let body = await p.innerText('body');
+      if (body.includes('NaN') || body.includes('Infinity')) {
+        throw new Error('Found NaN or Infinity on page after input-c illegal inputs');
+      }
+
+      // Restore input-c and test Input field 2 (input-p)
+      await p.fill('[data-testid="input-c"]', '50');
+      await p.fill('[data-testid="input-p"]', '');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
+        throw new Error('Expected "—" when input-p is empty');
+      }
+      await p.fill('[data-testid="input-p"]', 'abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
+        throw new Error('Expected "—" when input-p is "abc"');
+      }
+      await p.fill('[data-testid="input-p"]', '12abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-l10"]')) !== '—' || (await p.innerText('[data-testid="result-l10h"]')) !== '—') {
+        throw new Error('Expected "—" when input-p is "12abc"');
+      }
+
+      body = await p.innerText('body');
+      if (body.includes('NaN') || body.includes('Infinity')) {
+        throw new Error('Found NaN or Infinity on page after input-p illegal inputs');
       }
 
       // 5. Reset button restoration
@@ -230,7 +267,7 @@ async function runMasterSuite() {
       const resetL10 = parseFloat(await p.innerText('[data-testid="result-l10"]'));
       assertClose(resetL10, 1000.00, 0.001, 'Reset restored L10');
 
-      // 6. CSV Export download and content verification
+      // 6. CSV Export download and numeric verification
       const [download] = await Promise.all([
         p.waitForEvent('download'),
         p.click('[data-testid="btn-export-csv"]'),
@@ -239,6 +276,9 @@ async function runMasterSuite() {
       const csvContent = fs.readFileSync(downloadPath, 'utf-8');
       if (!csvContent.includes('ISO 281:2007') || !csvContent.includes('Basic Rating Life L10')) {
         throw new Error('Bearing life CSV content missing ISO 281 standard or headers');
+      }
+      if (!csvContent.includes('1000.00') || !csvContent.includes('11111')) {
+        throw new Error('Bearing life CSV content missing expected numeric values (1000.00 / 11111)');
       }
     });
 
@@ -286,17 +326,49 @@ async function runMasterSuite() {
       const c0Shock = parseFloat(await p.innerText('[data-testid="result-c0"]'));
       assertClose(c0Shock, 20.000, 0.001, 'Shock load C0');
 
-      // 4. Empty / illegal input defense (no NaN / no Infinity)
+      // 4. Input field 1 (input-fr) empty and illegal character tests ('abc', '12abc')
       await p.fill('[data-testid="input-fr"]', '');
-      await p.waitForTimeout(100);
-      const emptyP0 = await p.innerText('[data-testid="result-p0"]');
-      const emptyC0 = await p.innerText('[data-testid="result-c0"]');
-      if (emptyP0 !== '—' || emptyC0 !== '—') {
-        throw new Error(`Expected '—' on empty Fr, got P0=${emptyP0}, C0=${emptyC0}`);
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
+        throw new Error('Expected "—" when input-fr is empty');
       }
-      const pageText = await p.innerText('body');
-      if (pageText.includes('NaN') || pageText.includes('Infinity')) {
-        throw new Error('Found NaN or Infinity on bearing-static calculator page after empty input!');
+      await p.fill('[data-testid="input-fr"]', 'abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
+        throw new Error('Expected "—" when input-fr is "abc"');
+      }
+      await p.fill('[data-testid="input-fr"]', '12abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
+        throw new Error('Expected "—" when input-fr is "12abc"');
+      }
+
+      let body = await p.innerText('body');
+      if (body.includes('NaN') || body.includes('Infinity')) {
+        throw new Error('Found NaN or Infinity on page after input-fr illegal inputs');
+      }
+
+      // Restore input-fr and test Input field 2 (input-fa)
+      await p.fill('[data-testid="input-fr"]', '10');
+      await p.fill('[data-testid="input-fa"]', '');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
+        throw new Error('Expected "—" when input-fa is empty');
+      }
+      await p.fill('[data-testid="input-fa"]', 'abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
+        throw new Error('Expected "—" when input-fa is "abc"');
+      }
+      await p.fill('[data-testid="input-fa"]', '12abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-p0"]')) !== '—' || (await p.innerText('[data-testid="result-c0"]')) !== '—') {
+        throw new Error('Expected "—" when input-fa is "12abc"');
+      }
+
+      body = await p.innerText('body');
+      if (body.includes('NaN') || body.includes('Infinity')) {
+        throw new Error('Found NaN or Infinity on page after input-fa illegal inputs');
       }
 
       // 5. Reset button restoration
@@ -310,7 +382,7 @@ async function runMasterSuite() {
       assertClose(resetP0, 10.000, 0.001, 'Reset restored P0');
       assertClose(resetC0, 15.000, 0.001, 'Reset restored C0');
 
-      // 6. CSV Export download
+      // 6. CSV Export download and numeric verification
       const [download] = await Promise.all([
         p.waitForEvent('download'),
         p.click('[data-testid="btn-export-csv"]'),
@@ -319,6 +391,9 @@ async function runMasterSuite() {
       const csvContent = fs.readFileSync(downloadPath, 'utf-8');
       if (!csvContent.includes('ISO 76:2006') || !csvContent.includes('Equivalent Static Load P0')) {
         throw new Error('Bearing static CSV content missing ISO 76 standard or headers');
+      }
+      if (!csvContent.includes('10.000') || !csvContent.includes('15.000')) {
+        throw new Error('Bearing static CSV content missing expected numeric values (10.000 / 15.000)');
       }
     });
 
@@ -353,7 +428,6 @@ async function runMasterSuite() {
       assertClose(drivenWrapDefault, 203.1, 0.002, 'Default Driven Wrap');
 
       // 2. Solve for Center Distance mode (reverse calculation)
-      // Click Center Dist mode with hydration retry defense
       const centerDistBtn = p.locator('[data-testid="btn-mode-center-dist"]');
       await centerDistBtn.click();
       try {
@@ -370,6 +444,28 @@ async function runMasterSuite() {
       await p.waitForTimeout(150);
       const solvedC = parseFloat(await p.innerText('[data-testid="result-primary-value"]'));
       assertClose(solvedC, 500.0, 0.01, 'Reverse calculated Center Distance');
+
+      // 2b. Center Distance mode defense: Empty L, illegal L ('12abc'), and negative discriminant (D1=100, D2=300, L=800)
+      await p.fill('[data-testid="input-belt-length"]', '');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
+        throw new Error('Expected "—" when belt length is empty in center distance mode');
+      }
+      await p.fill('[data-testid="input-belt-length"]', '12abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
+        throw new Error('Expected "—" when belt length is "12abc" in center distance mode');
+      }
+      // Negative discriminant test: D1=100, D2=300, L=800
+      await p.fill('[data-testid="input-belt-length"]', '800');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
+        throw new Error('Expected "—" when discriminant < 0 (L=800 for D1=100, D2=300)');
+      }
+      let cModeBody = await p.innerText('body');
+      if (cModeBody.includes('NaN') || cModeBody.includes('Infinity')) {
+        throw new Error('Found NaN or Infinity on page in center distance mode with discriminant < 0');
+      }
 
       // 3. Preset testing: 1:1 Direct drive
       // D1 = 150 mm, D2 = 150 mm, C = 450 mm, Input RPM = 1450
@@ -395,16 +491,49 @@ async function runMasterSuite() {
       assertClose(ratio1to1, 1.00, 0.001, '1:1 Preset Ratio');
       assertClose(wrap1to1, 180.0, 0.001, '1:1 Preset Wrap Angle');
 
-      // 4. Empty / illegal input defense (no NaN / no Infinity)
+      // 4. Input field 1 (input-d1) empty and illegal character tests ('abc', '12abc')
       await p.fill('[data-testid="input-d1"]', '');
-      await p.waitForTimeout(100);
-      const emptyVal = await p.innerText('[data-testid="result-primary-value"]');
-      if (emptyVal !== '—') {
-        throw new Error(`Expected '—' on empty D1, got ${emptyVal}`);
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
+        throw new Error('Expected "—" when input-d1 is empty');
       }
-      const pageText = await p.innerText('body');
-      if (pageText.includes('NaN') || pageText.includes('Infinity')) {
-        throw new Error('Found NaN or Infinity on belt-drive calculator page after empty input!');
+      await p.fill('[data-testid="input-d1"]', 'abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
+        throw new Error('Expected "—" when input-d1 is "abc"');
+      }
+      await p.fill('[data-testid="input-d1"]', '12abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
+        throw new Error('Expected "—" when input-d1 is "12abc"');
+      }
+
+      let body = await p.innerText('body');
+      if (body.includes('NaN') || body.includes('Infinity')) {
+        throw new Error('Found NaN or Infinity on belt-drive page after input-d1 illegal inputs');
+      }
+
+      // Restore input-d1 and test Input field 2 (input-center-dist)
+      await p.fill('[data-testid="input-d1"]', '100');
+      await p.fill('[data-testid="input-center-dist"]', '');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
+        throw new Error('Expected "—" when input-center-dist is empty');
+      }
+      await p.fill('[data-testid="input-center-dist"]', 'abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
+        throw new Error('Expected "—" when input-center-dist is "abc"');
+      }
+      await p.fill('[data-testid="input-center-dist"]', '12abc');
+      await p.waitForTimeout(50);
+      if ((await p.innerText('[data-testid="result-primary-value"]')) !== '—') {
+        throw new Error('Expected "—" when input-center-dist is "12abc"');
+      }
+
+      body = await p.innerText('body');
+      if (body.includes('NaN') || body.includes('Infinity')) {
+        throw new Error('Found NaN or Infinity on belt-drive page after input-center-dist illegal inputs');
       }
 
       // 5. Reset button restoration
@@ -413,7 +542,7 @@ async function runMasterSuite() {
       const resetLen = parseFloat(await p.innerText('[data-testid="result-primary-value"]'));
       assertClose(resetLen, 1648.3, 0.001, 'Reset restored Belt Length');
 
-      // 6. CSV Export download
+      // 6. CSV Export download and numeric verification
       const [download] = await Promise.all([
         p.waitForEvent('download'),
         p.click('[data-testid="btn-export-csv"]'),
@@ -422,6 +551,9 @@ async function runMasterSuite() {
       const csvContent = fs.readFileSync(downloadPath, 'utf-8');
       if (!csvContent.includes('Belt Drive Calculator Report') || !csvContent.includes('Driver Pulley D1 (mm)')) {
         throw new Error('Belt drive CSV content missing title or headers');
+      }
+      if (!csvContent.includes('1648.3')) {
+        throw new Error('Belt drive CSV content missing expected numeric value (1648.3)');
       }
     });
 
