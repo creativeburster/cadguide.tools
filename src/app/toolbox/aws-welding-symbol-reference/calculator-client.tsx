@@ -42,7 +42,7 @@ const SHORTCUTS = [
   { keys: 'M', command: 'Machine Finish', category: 'supp', description: 'Letter M above contour symbol specifies finishing by machining (milling, turning, planing).' },
   { keys: 'R', command: 'Roll Finish', category: 'supp', description: 'Letter R above contour symbol specifies finishing by rolling. Used for pipe welds requiring smooth contour.' },
   { keys: 'H', command: 'Hammer Finish', category: 'supp', description: 'Letter H above contour symbol specifies finishing by hammering.' },
-  { keys: 'P', command: 'Planish Finish', category: 'supp', description: 'Letter P above contour symbol specifies finishing by planishing.' },
+  { keys: 'P', command: 'Planish Finish', category: 'supp', description: 'Letter P above contour symbol specifies finishing by planishing (AWS A2.4 / Pearson Welding Technology Table 10-13 method code P = planishing).' },
 
   // Process and tail specifications (AWS A2.4 tail designations)
   { keys: 'SMAW', command: 'Shielded Metal Arc Welding', category: 'process', description: 'Stick welding. Manual process using flux-coated electrodes. No shielding gas required. Process code in tail of welding symbol.' },

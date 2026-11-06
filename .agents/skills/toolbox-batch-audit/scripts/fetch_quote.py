@@ -7,12 +7,14 @@
 import html
 import os
 import re
+import ssl
 import sys
 import tempfile
 import urllib.parse
 import urllib.request
 
 CTX = 150
+SSL_CTX = ssl._create_unverified_context()
 
 
 def page_text(src):
@@ -23,13 +25,13 @@ def page_text(src):
             path = os.path.join(tempfile.gettempdir(), filename)
             if not os.path.exists(path) or os.path.getsize(path) == 0:
                 req = urllib.request.Request(src, headers={'User-Agent': 'Mozilla/5.0'})
-                with urllib.request.urlopen(req, timeout=120) as r, open(path, 'wb') as f:
+                with urllib.request.urlopen(req, timeout=120, context=SSL_CTX) as r, open(path, 'wb') as f:
                     f.write(r.read())
         import pypdf
         reader = pypdf.PdfReader(path)
         return [(f'PDF 第 {i + 1} 页', p.extract_text() or '') for i, p in enumerate(reader.pages)]
     req = urllib.request.Request(src, headers={'User-Agent': 'Mozilla/5.0'})
-    raw = urllib.request.urlopen(req, timeout=30).read().decode('utf-8', 'ignore')
+    raw = urllib.request.urlopen(req, timeout=30, context=SSL_CTX).read().decode('utf-8', 'ignore')
     raw = re.sub(r'<script.*?</script>|<style.*?</style>', '', raw, flags=re.S)
     txt = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]+>', ' ', raw)))
     return [('网页', txt)]

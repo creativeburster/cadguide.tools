@@ -68,39 +68,56 @@ async function runMasterSuite() {
         throw new Error('Found purged duplicate "Angle in Radians" on page!');
       }
 
-      // 2. Search core functions verified from Autodesk official materials
+      // Switch to Table view for strict row-scoped assertions
+      await p.click('button:has-text("Table")');
+      await p.waitForSelector('tbody tr');
+
       const searchInput = p.locator('[data-testid="shortcut-search-input"]');
 
+      // 2. Search core functions verified from Autodesk official materials
+      // Scoped strictly to matching table rows in tbody
       // defun
       await searchInput.fill('defun');
-      await p.locator('text=Define Function').first().waitFor({ state: 'visible', timeout: 3000 });
-      let pageText = await p.innerText('body');
-      if (!pageText.includes('defun') || !pageText.includes('Define Function')) {
-        throw new Error('defun function missing or not found in search');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('defun') && r.textContent.includes('Define Function'));
+      }, { timeout: 3000 });
+      const defunRow = await p.locator('tbody tr', { hasText: 'defun' }).first().innerText();
+      if (!defunRow.includes('defun') || !defunRow.includes('Define Function')) {
+        throw new Error('defun function missing or not found in table row');
       }
 
       // entget
       await searchInput.fill('entget');
-      await p.locator('text=DXF group codes').first().waitFor({ state: 'visible', timeout: 3000 });
-      pageText = await p.innerText('body');
-      if (!pageText.includes('(entget ename)') || !pageText.includes('DXF group codes')) {
-        throw new Error('entget function missing or not found in search');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('(entget ename)') && r.textContent.includes('DXF group codes'));
+      }, { timeout: 3000 });
+      const entgetRow = await p.locator('tbody tr', { hasText: 'entget' }).first().innerText();
+      if (!entgetRow.includes('(entget ename)') || !entgetRow.includes('DXF group codes')) {
+        throw new Error('entget function missing or not found in table row');
       }
 
       // ssget
       await searchInput.fill('ssget');
-      await p.locator('text=Selection Set').first().waitFor({ state: 'visible', timeout: 3000 });
-      pageText = await p.innerText('body');
-      if (!pageText.includes('(ssget mode pt1 pt2)') || !pageText.includes('Selection Set')) {
-        throw new Error('ssget function missing or not found in search');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('(ssget mode pt1 pt2)') && r.textContent.includes('Selection Set'));
+      }, { timeout: 3000 });
+      const ssgetRow = await p.locator('tbody tr', { hasText: 'ssget' }).first().innerText();
+      if (!ssgetRow.includes('(ssget mode pt1 pt2)') || !ssgetRow.includes('Selection Set')) {
+        throw new Error('ssget function missing or not found in table row');
       }
 
       // polar
       await searchInput.fill('polar');
-      await p.locator('text=Polar Point').first().waitFor({ state: 'visible', timeout: 3000 });
-      pageText = await p.innerText('body');
-      if (!pageText.includes('(polar pt ang dist)') || !pageText.includes('Polar Point')) {
-        throw new Error('polar function missing or not found in search');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        return Array.from(rows).some(r => r.textContent.includes('(polar pt ang dist)') && r.textContent.includes('Polar Point'));
+      }, { timeout: 3000 });
+      const polarRow = await p.locator('tbody tr', { hasText: 'polar' }).first().innerText();
+      if (!polarRow.includes('(polar pt ang dist)') || !polarRow.includes('Polar Point')) {
+        throw new Error('polar function missing or not found in table row');
       }
 
       // 3. Category filter switching (NO silent skip, must be visible and click)
@@ -108,11 +125,16 @@ async function runMasterSuite() {
       const mathBtn = p.locator('button:has-text("Math & Logic")').first();
       await mathBtn.waitFor({ state: 'visible', timeout: 5000 });
       await mathBtn.click();
-      await p.locator('text=Addition').first().waitFor({ state: 'visible', timeout: 3000 });
-      await p.locator('text=Increment').first().waitFor({ state: 'visible', timeout: 3000 });
-      const mathText = await p.innerText('body');
-      if (!mathText.includes('Addition') || !mathText.includes('Increment')) {
-        throw new Error('Math category filter failed to show math functions');
+      await p.waitForFunction(() => {
+        const rows = document.querySelectorAll('tbody tr');
+        const text = Array.from(rows).map(r => r.textContent).join(' ');
+        return text.includes('Addition') && text.includes('Increment');
+      }, { timeout: 3000 });
+      const mathRows = await p.locator('tbody tr').allInnerTexts();
+      const hasAddition = mathRows.some(r => r.includes('Addition'));
+      const hasIncrement = mathRows.some(r => r.includes('Increment'));
+      if (!hasAddition || !hasIncrement) {
+        throw new Error('Math category filter failed to show math functions in table rows');
       }
     });
 
@@ -141,15 +163,23 @@ async function runMasterSuite() {
 
       const searchInput = p.locator('[data-testid="shortcut-search-input"]');
 
+      // Helper to find target row across all current table rows
+      const findRowWithText = async (targetText) => {
+        const rows = await p.locator('tbody tr').allInnerTexts();
+        const found = rows.find(r => r.includes(targetText));
+        if (!found) throw new Error(`Target row containing "${targetText}" not found in current table rows`);
+        return found;
+      };
+
       // 2. Search authentic AWS A2.4 symbols: Fillet Weld
       await searchInput.fill('Fillet Weld');
       await p.waitForFunction(() => {
         const rows = document.querySelectorAll('tbody tr');
         return Array.from(rows).some(r => r.textContent.includes('Fillet Weld') && r.textContent.includes('⊿'));
       }, { timeout: 3000 });
-      const filletRow = await p.locator('tbody tr').first().innerText();
-      if (!filletRow.includes('Fillet Weld') || !filletRow.includes('⊿')) {
-        throw new Error('Fillet Weld missing from search result rows');
+      const filletRow = await findRowWithText('Fillet Weld');
+      if (!filletRow.includes('⊿')) {
+        throw new Error('Fillet Weld row missing ⊿ symbol');
       }
 
       // 3. Search Groove types including corrected Flare-V Groove
@@ -158,9 +188,9 @@ async function runMasterSuite() {
         const rows = document.querySelectorAll('tbody tr');
         return Array.from(rows).some(r => r.textContent.includes('Flare-V Groove') && r.textContent.includes(')('));
       }, { timeout: 3000 });
-      const flareRow = await p.locator('tbody tr').first().innerText();
-      if (!flareRow.includes('Flare-V Groove') || !flareRow.includes(')(')) {
-        throw new Error('Flare-V Groove missing from search result rows');
+      const flareRow = await findRowWithText('Flare-V Groove');
+      if (!flareRow.includes(')(')) {
+        throw new Error('Flare-V Groove row missing ) ( symbol');
       }
 
       // 4. Search Basic weld types: Seam Weld, Plug / Slot, Stud Weld
@@ -169,9 +199,9 @@ async function runMasterSuite() {
         const rows = document.querySelectorAll('tbody tr');
         return Array.from(rows).some(r => r.textContent.includes('Seam Weld') && r.textContent.includes('◯ with ='));
       }, { timeout: 3000 });
-      const seamRow = await p.locator('tbody tr').first().innerText();
-      if (!seamRow.includes('Seam Weld') || !seamRow.includes('◯ with =')) {
-        throw new Error('Seam Weld missing from search result rows');
+      const seamRow = await findRowWithText('Seam Weld');
+      if (!seamRow.includes('◯ with =')) {
+        throw new Error('Seam Weld row missing circle-with-parallel-lines symbol');
       }
 
       await searchInput.fill('Plug / Slot');
@@ -179,9 +209,9 @@ async function runMasterSuite() {
         const rows = document.querySelectorAll('tbody tr');
         return Array.from(rows).some(r => r.textContent.includes('Plug / Slot Weld') && r.textContent.includes('[ ]'));
       }, { timeout: 3000 });
-      const plugRow = await p.locator('tbody tr').first().innerText();
-      if (!plugRow.includes('Plug / Slot Weld') || !plugRow.includes('[ ]')) {
-        throw new Error('Plug / Slot Weld missing from search result rows');
+      const plugRow = await findRowWithText('Plug / Slot Weld');
+      if (!plugRow.includes('[ ]')) {
+        throw new Error('Plug / Slot Weld row missing [ ] symbol');
       }
 
       await searchInput.fill('Stud Weld');
@@ -189,20 +219,19 @@ async function runMasterSuite() {
         const rows = document.querySelectorAll('tbody tr');
         return Array.from(rows).some(r => r.textContent.includes('Stud Weld') && r.textContent.includes('⨂'));
       }, { timeout: 3000 });
-      const studRow = await p.locator('tbody tr').first().innerText();
-      if (!studRow.includes('Stud Weld') || !studRow.includes('⨂')) {
-        throw new Error('Stud Weld missing from search result rows');
+      const studRow = await findRowWithText('Stud Weld');
+      if (!studRow.includes('⨂')) {
+        throw new Error('Stud Weld row missing ⨂ symbol');
       }
 
       // 5. Search Supplementary symbols: Melt-Through (●), Field Weld (⚑), Weld All Around (○)
-      // Assertions scoped strictly to the table row, not body
       await searchInput.fill('Melt-Through');
       await p.waitForFunction(() => {
         const rows = document.querySelectorAll('tbody tr');
         return Array.from(rows).some(r => r.textContent.includes('Melt-Through') && r.textContent.includes('●'));
       }, { timeout: 3000 });
-      const meltRow = await p.locator('tbody tr').first().innerText();
-      if (!meltRow.includes('Melt-Through') || !meltRow.includes('●')) {
+      const meltRow = await findRowWithText('Melt-Through');
+      if (!meltRow.includes('●')) {
         throw new Error('Melt-Through row missing ● symbol');
       }
 
@@ -211,8 +240,8 @@ async function runMasterSuite() {
         const rows = document.querySelectorAll('tbody tr');
         return Array.from(rows).some(r => r.textContent.includes('Field Weld') && r.textContent.includes('⚑'));
       }, { timeout: 3000 });
-      const fieldRow = await p.locator('tbody tr').first().innerText();
-      if (!fieldRow.includes('Field Weld') || !fieldRow.includes('⚑')) {
+      const fieldRow = await findRowWithText('Field Weld');
+      if (!fieldRow.includes('⚑')) {
         throw new Error('Field Weld row missing ⚑ symbol');
       }
 
@@ -221,8 +250,8 @@ async function runMasterSuite() {
         const rows = document.querySelectorAll('tbody tr');
         return Array.from(rows).some(r => r.textContent.includes('Weld All Around') && r.textContent.includes('○'));
       }, { timeout: 3000 });
-      const allAroundRow = await p.locator('tbody tr').first().innerText();
-      if (!allAroundRow.includes('Weld All Around') || !allAroundRow.includes('○')) {
+      const allAroundRow = await findRowWithText('Weld All Around');
+      if (!allAroundRow.includes('○')) {
         throw new Error('Weld All Around row missing ○ symbol');
       }
 
@@ -232,9 +261,9 @@ async function runMasterSuite() {
         const rows = document.querySelectorAll('tbody tr');
         return Array.from(rows).some(r => r.textContent.includes('Shielded Metal Arc Welding') && r.textContent.includes('Stick welding'));
       }, { timeout: 3000 });
-      const smawRow = await p.locator('tbody tr').first().innerText();
-      if (!smawRow.includes('Shielded Metal Arc Welding') || !smawRow.includes('Stick welding')) {
-        throw new Error('SMAW missing from search result rows');
+      const smawRow = await findRowWithText('Shielded Metal Arc Welding');
+      if (!smawRow.includes('Stick welding')) {
+        throw new Error('SMAW row missing Stick welding');
       }
     });
 

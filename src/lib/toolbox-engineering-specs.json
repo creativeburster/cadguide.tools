@@ -1219,11 +1219,11 @@
   },
   "belt-tension-calculator": {
     "title": "Belt Tension Calculator",
-    "description": "Calculate optimal belt tension force from transmitted power, belt speed, and pulley diameter.",
+    "description": "Calculate belt tight-side, slack-side, and installation tensions from transmitted power and wrap angle using the Euler-Eytelwein friction model.",
     "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "Te = P*1000/v, T1 = Te*e^(u*a)/(e^(u*a)-1), T2 = Te/(e^(u*a)-1)",
+    "standards": "ISO 4183 / RMA IP-20 (Belt Drives), DIN 2211 (Grooved Pulleys for V-Belts)",
+    "cadContext": "Maintain exact center distance, wrap angle clearance, and shaft parallelism in parametric CAD layouts to prevent belt slip and premature bearing wear.",
+    "formula": "Te = 1000*P/v; T1/T2 = exp(u*theta); T1 = Te*exp(u*theta)/(exp(u*theta)-1); T2 = Te/(exp(u*theta)-1); T0 = (T1+T2)/2",
     "inputs": [
       {
         "label": "Power (kW)",
@@ -1244,34 +1244,42 @@
     ],
     "outputs": [
       {
-        "label": "Effective Tension",
+        "label": "Effective Tension (Te)",
         "val": "500.00 N"
       },
       {
-        "label": "Tight Side T1",
+        "label": "Tight Side (T1)",
         "val": "879.83 N"
       },
       {
-        "label": "Slack Side T2",
+        "label": "Slack Side (T2)",
         "val": "379.83 N"
+      },
+      {
+        "label": "Initial Tension (T0)",
+        "val": "629.83 N"
+      },
+      {
+        "label": "Shaft Load (Fb)",
+        "val": "1241.34 N"
       }
     ]
   },
   "bend-allowance-calculator": {
     "title": "Bend Allowance Calculator",
-    "description": "Calculate bend allowance, bend deduction, and flat pattern length for sheet metal bending. Supports K-factor, bend radius, and material thickness.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "K-Factor: 0.30 for air bending soft materials, 0.33 for typical, 0.40-0.45 for bottoming/coining. BA = angle × (R + K×T). BD = 2×OSSB×tan(A/2) − BA. Flat = Flange1 + Flange2 − BD.",
+    "description": "Calculate sheet metal bend allowance, outside setback, bend deduction, and flat pattern length using neutral axis K-factor geometry.",
+    "discipline": "Sheet Metal Fabrication & Mechanical Forming",
+    "standards": "DIN 6935 (Cold Bending of Flat Steel Products), ISO 7438 (Metallic Materials — Bend Test)",
+    "cadContext": "Define accurate K-factor and bend deduction tables in SolidWorks, Inventor, or Creo sheet metal parameters to avoid blank size deviations during CNC press brake forming.",
+    "formula": "BA = (pi/180)*A*(R + K*T); OSSB = (R + T)*tan(A/2); BD = 2*OSSB - BA; Lflat = Flange1 + Flange2 - BD",
     "inputs": [
       {
         "label": "Material Thickness (mm)",
-        "val": "2"
+        "val": "2.0"
       },
       {
         "label": "Bend Radius (mm)",
-        "val": "3"
+        "val": "3.0"
       },
       {
         "label": "Bend Angle (°)",
@@ -1292,26 +1300,34 @@
     ],
     "outputs": [
       {
-        "label": "Bend Allowance",
+        "label": "Bend Allowance (BA)",
         "val": "5.749 mm"
       },
       {
-        "label": "Bend Deduction",
+        "label": "Bend Deduction (BD)",
         "val": "4.251 mm"
+      },
+      {
+        "label": "Outside Setback (OSSB)",
+        "val": "5.000 mm"
+      },
+      {
+        "label": "Flat Pattern Blank Length",
+        "val": "95.749 mm"
       }
     ]
   },
   "bending-allowance-table-calculator": {
-    "title": "Bend Allowance Table Calculator",
-    "description": "Calculate bend allowance and deduction for standard sheet metal angles and materials.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "BA = (pi/180)*angle*(R+K*T), BD = 2*(R+T)-BA",
+    "title": "Bending Allowance Table Calculator",
+    "description": "Generate comprehensive sheet metal bend allowance and deduction lookup matrices for carbon steel, stainless steel, and aluminum across standard angles and radii.",
+    "discipline": "Sheet Metal Fabrication & Mechanical Forming",
+    "standards": "DIN 6935 (Cold Bending of Flat Steel Products), ISO 7438 (Metallic Materials — Bend Test)",
+    "cadContext": "Populate unfolding and bend allowance tables in CAD sheet metal styles to ensure uniform bend deduction across shop floor CNC press brake tooling.",
+    "formula": "BA = (pi/180)*angle*(R + K*T); OSSB = (R + T)*tan(angle/2); BD = 2*OSSB - BA",
     "inputs": [
       {
         "label": "Material",
-        "val": "Carbon Steel"
+        "val": "steel"
       },
       {
         "label": "Thickness (mm)",
@@ -1329,7 +1345,7 @@
     "outputs": [
       {
         "label": "K Factor",
-        "val": "0.440000"
+        "val": "0.44"
       },
       {
         "label": "Bend Allowance",
@@ -1342,12 +1358,12 @@
     ]
   },
   "bending-force-calculator": {
-    "title": "Press Brake Bending Force Calculator",
-    "description": "Calculate press brake tonnage for air bending V-die operations.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "F = 1.42 * sigma_t * L * t^2 / V",
+    "title": "Bending Force Calculator",
+    "description": "Calculate press brake bending force and press tonnage for standard sheet metal V-die air bending operations.",
+    "discipline": "Sheet Metal Fabrication & Mechanical Forming",
+    "standards": "DIN 6935 (Cold Bending of Flat Steel Products), ISO 7438 (Metallic Materials — Bend Test)",
+    "cadContext": "Verify press brake tonnage limits and tooling capacity during sheet metal CAD feature validation to prevent machine overload during shop fabrication.",
+    "formula": "F = (1.42 * sigma * L * t^2) / (V * 1000) [kN]; Ft = F / 9.80665 [ton]",
     "inputs": [
       {
         "label": "Material Strength (MPa)",
@@ -1368,22 +1384,26 @@
     ],
     "outputs": [
       {
-        "label": "Bending Force (kN)",
-        "val": "239.63 kN"
+        "label": "Bending Force (F)",
+        "val": "239.625 kN"
       },
       {
-        "label": "Press Tonnage (Tons)",
-        "val": "24.427 ton"
+        "label": "Press Tonnage (Ft)",
+        "val": "24.435 ton"
+      },
+      {
+        "label": "Specific Force",
+        "val": "239.625 kN/m"
       }
     ]
   },
   "bernoulli-equation-calculator": {
     "title": "Bernoulli Equation Calculator",
-    "description": "Calculate pressure and velocity changes using Bernoulli equation.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "P1/rg + v1^2/2g + z1 = P2/rg + v2^2/2g + z2",
+    "description": "Calculate downstream static pressure, total hydraulic head, and dynamic pressure along a streamline using Bernoulli principle for incompressible fluid flow.",
+    "discipline": "Fluid Dynamics & Hydraulics",
+    "standards": "ISO 80000-4 (Mechanics — Fluids), NASA Glenn Research Center Fluid Dynamics Reference",
+    "cadContext": "Verify pipe cross-section sizing, pressure head allowances, and Venturi constriction geometry in fluid system CAD assemblies.",
+    "formula": "P1 + 0.5*rho*v1^2 + rho*g*z1 = P2 + 0.5*rho*v2^2 + rho*g*z2 = const; H = P/(rho*g) + v^2/(2*g) + z",
     "inputs": [
       {
         "label": "P1 (kPa)",
@@ -1409,11 +1429,19 @@
     "outputs": [
       {
         "label": "P2",
-        "val": "160.07 kPa"
+        "val": "160.080 kPa"
       },
       {
-        "label": "Head Loss",
-        "val": "0.000000 m"
+        "label": "Total Head",
+        "val": "20.598 m"
+      },
+      {
+        "label": "q1 (Station 1)",
+        "val": "2.000 kPa"
+      },
+      {
+        "label": "q2 (Station 2)",
+        "val": "12.500 kPa"
       }
     ]
   },
