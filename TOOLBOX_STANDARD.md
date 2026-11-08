@@ -152,6 +152,7 @@ flowchart LR
 | 4 | autocad-vs-gstarcad-shortcuts、autocad-vs-zwcad-shortcuts、battery-capacity-calculator、beam-deflection-structural-calculator、bearing-capacity-calculator | bb9fb435～51496117（已 push，2026-11-05） |
 | 5 | autolisp-function-reference、aws-welding-symbol-reference、bearing-life-calculator、bearing-static-load-calculator、belt-drive-length-calculator | 33f2685a～b91fdc35（已通过复核，已 push，2026-11-06） |
 | 6 | belt-tension-calculator、bend-allowance-calculator、bending-allowance-table-calculator、bending-force-calculator、bernoulli-equation-calculator | 5372b783～8999bcbc（已通过复核，已 push，2026-11-06） |
+| 7 | bevel-gear-calculator、bim-clash-count-calculator、boiler-efficiency-calculator、bolt-circle-calculator、bolt-circle-pattern-calculator | 待复核 |
 
 ---
 

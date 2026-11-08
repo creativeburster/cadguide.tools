@@ -1451,55 +1451,59 @@
   },
   "bevel-gear-calculator": {
     "title": "Bevel Gear Geometry Calculator",
-    "description": "Calculate bevel gear pitch cone angles and pitch diameters.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "d1=atan(z1/z2), d2=90-d1, pd=m*z",
+    "description": "Calculate straight bevel gear pitch cone angles, pitch diameters, cone distance, and gear ratio for orthogonal 90° shafts.",
+    "discipline": "Mechanical Power Transmission & Gear Kinematics",
+    "standards": "KHK Stock Gears Technical Reference (Calculation of Gear Dimensions — Straight Bevel Gear, Σ = 90°)",
+    "cadContext": "Align pitch cone apexes of both pinion and gear at the exact shaft intersection point in your 3D CAD assembly, and restrict facewidth to b ≤ R / 3 to prevent inner-end tooth undercut.",
+    "formula": "δ₁ = arctan(z₁ / z₂) • δ₂ = 90° - δ₁ • d₁ = m · z₁ • d₂ = m · z₂ • R = 0.5 · m · √(z₁² + z₂²) • u = z₂ / z₁",
     "inputs": [
       {
         "label": "Module (mm)",
         "val": "3"
       },
       {
-        "label": "Pinion Teeth",
+        "label": "Pinion Teeth (z₁)",
         "val": "20"
       },
       {
-        "label": "Gear Teeth",
+        "label": "Gear Teeth (z₂)",
         "val": "40"
       }
     ],
     "outputs": [
       {
-        "label": "Pinion Cone",
+        "label": "Pinion Cone (δ₁)",
         "val": "26.565 deg"
       },
       {
-        "label": "Gear Cone",
+        "label": "Gear Cone (δ₂)",
         "val": "63.435 deg"
       },
       {
-        "label": "Pinion PD",
+        "label": "Pinion PD (d₁)",
         "val": "60.000 mm"
       },
       {
-        "label": "Gear PD",
-        "val": "120.00 mm"
+        "label": "Gear PD (d₂)",
+        "val": "120.000 mm"
       },
       {
-        "label": "Ratio",
+        "label": "Cone Distance (R)",
+        "val": "67.082 mm"
+      },
+      {
+        "label": "Ratio (u)",
         "val": "2.000 :1"
       }
     ]
   },
   "bim-clash-count-calculator": {
     "title": "BIM Clash Detection Count Calculator",
-    "description": "Calculate clash detection metrics and resolution rates for BIM coordination.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Clashes = structural + MEP + arch, Resolution rate = resolved/total*100",
+    "description": "Calculate clash detection totals, resolution rates, and critical remaining issues for multi-discipline BIM coordination.",
+    "discipline": "BIM Coordination & Digital Construction",
+    "standards": "BIM Coordination Clash Accounting Definition (Multi-Discipline Federated Model Metrics)",
+    "cadContext": "Group hard and clearance clashes by discipline pair (Structural vs. MEP, Architecture vs. MEP) during federated model review before issuing construction sign-off.",
+    "formula": "Total = Structural + MEP + Arch • Resolution Rate = (Resolved / Total) × 100% • Critical Remaining = Total - Resolved",
     "inputs": [
       {
         "label": "Structural Clashes",
@@ -1521,15 +1525,15 @@
     "outputs": [
       {
         "label": "Total Clashes",
-        "val": "200.00"
+        "val": "200"
       },
       {
         "label": "Resolution Rate",
-        "val": "90.000 %"
+        "val": "90.00 %"
       },
       {
         "label": "Critical Remaining",
-        "val": "20.000"
+        "val": "20"
       }
     ]
   },
@@ -1545,11 +1549,11 @@
   },
   "boiler-efficiency-calculator": {
     "title": "Boiler Efficiency Calculator",
-    "description": "Calculate boiler efficiency from fuel input, steam output, and heat content.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "eff = Qsteam / Qfuel * 100",
+    "description": "Calculate boiler thermal output, direct thermal efficiency, and nominal fuel consumption from steam flow and enthalpy difference.",
+    "discipline": "Thermal Engineering & Steam Plant Systems",
+    "standards": "Thermodynamic Direct (Input-Output) Thermal Efficiency Definition (η_th = Q_out / Q_in)",
+    "cadContext": "Size steam header piping, feedwater economizer connections, and fuel train flow meters in plant P&ID and 3D piping layouts according to rated boiler thermal output.",
+    "formula": "Q_out = (m_steam / 3600) × (h_steam - h_feedwater) • η_th = (Q_out / Q_in) × 100% • Fuel Consumption = Q_in / LHV",
     "inputs": [
       {
         "label": "Steam Flow (kg/h)",
@@ -1583,17 +1587,17 @@
       },
       {
         "label": "Fuel Consumption",
-        "val": "100.00 m3/h"
+        "val": "100.00 m³/h"
       }
     ]
   },
   "bolt-circle-calculator": {
-    "title": "Bolt Circle Pattern Calculator",
-    "description": "Calculate bolt hole coordinates on a bolt circle pattern for flanges and covers.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "X_i = R·cos(θ_start + 2π·i/n) • Y_i = R·sin(θ_start + 2π·i/n) • Chord = 2·R·sin(π/n)",
+    "title": "Bolt Circle Spacing & Chord Calculator",
+    "description": "Calculate hole-to-hole chord length, arc perimeter spacing, angular pitch, and first hole Cartesian coordinates on a bolt circle.",
+    "discipline": "Mechanical Design & Flange Layout Geometry",
+    "standards": "Euclidean Circle Chord & Polar-to-Cartesian Coordinate Geometry (crd θ = 2·R·sin(θ/2))",
+    "cadContext": "Verify hole-to-hole chord spacing and angular offset (straddling vs. on-centerline) when constraining circular hole patterns on mating flange faces in parametric CAD.",
+    "formula": "Chord = 2 · R · sin(π / n) • Arc = π · D / n • Δθ = 360° / n • X₁ = R · cos(θ₀) • Y₁ = R · sin(θ₀)",
     "inputs": [
       {
         "label": "Bolt Circle Dia (mm)",
@@ -1618,25 +1622,33 @@
         "val": "78.540 mm"
       },
       {
+        "label": "First Hole (X₁, Y₁)",
+        "val": "(100.000, 0.000) mm"
+      },
+      {
         "label": "Angular Pitch (Δθ)",
         "val": "45.000 °"
       }
     ]
   },
   "bolt-circle-pattern-calculator": {
-    "title": "Bolt Circle Pattern Calculator",
-    "description": "Generate X/Y coordinates for equally spaced bolt circles. Configurable bolt count, PCD, rotation offset. Export CSV for CNC drilling.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "X_i = (PCD / 2) × cos(θ₀ + 360° × i / N) • Y_i = (PCD / 2) × sin(θ₀ + 360° × i / N) • Chord = PCD × sin(180° / N)",
+    "title": "Bolt Circle Pattern Coordinate Generator",
+    "description": "Generate full X/Y Cartesian coordinate tables for equally spaced bolt circles with configurable bolt count, PCD, and rotation offset.",
+    "discipline": "CNC Machining & Mechanical Layout Geometry",
+    "standards": "Cartesian CNC Coordinate & Bolt Circle Pitch Diameter Geometry (PCD = 2·R)",
+    "cadContext": "Export exact X/Y hole center coordinates relative to the flange datum origin (0, 0) for CNC drilling cycles (G81/G83) and inspection coordinate measuring machine (CMM) programs.",
+    "formula": "R = PCD / 2 • Chord = PCD × sin(180° / N) • Δθ = 360° / N • X_i = R × cos(θ₀ + (i-1)·Δθ) • Y_i = R × sin(θ₀ + (i-1)·Δθ)",
     "inputs": [
       {
         "label": "Pitch Circle Diameter PCD (mm)",
         "val": "100"
       },
       {
-        "label": "Number of Bolts 3 4 6 8 10 12 16 24 Start Angle (°)",
+        "label": "Number of Bolts",
+        "val": "8"
+      },
+      {
+        "label": "Start Angle (°)",
         "val": "0"
       },
       {
@@ -1644,7 +1656,24 @@
         "val": "10"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Pitch Radius (R)",
+        "val": "50.000 mm"
+      },
+      {
+        "label": "Chord Length",
+        "val": "38.268 mm"
+      },
+      {
+        "label": "Angular Step (Δθ)",
+        "val": "45.000 °"
+      },
+      {
+        "label": "Hole #1 (X₁, Y₁)",
+        "val": "(50.000, 0.000)"
+      }
+    ]
   },
   "bolt-fatigue-calculator": {
     "title": "Bolt Fatigue Life Calculator",
@@ -20957,16 +20986,40 @@
     "cadContext": "Exported ISO 10303-21 STEP AP214 solids and watertight Binary STL meshes can be imported directly into FreeCAD, SolidWorks, AutoCAD, Fusion, or 3D print slicers without server round-trips.",
     "formula": "V = π × (Ro² - Ri²) × H • A_total = 2π(Ro² - Ri²) + 2π(Ro + Ri)H • Mass = (V / 1000) × ρ",
     "inputs": [
-      { "label": "Outer Boss Diameter Do (mm)", "val": "80" },
-      { "label": "Center Bore Hole Di (mm)", "val": "30" },
-      { "label": "Extrusion Height H (mm)", "val": "25" },
-      { "label": "Engineering Material (6061-T6 Al)", "val": "2.70 g/cm³" }
+      {
+        "label": "Outer Boss Diameter Do (mm)",
+        "val": "80"
+      },
+      {
+        "label": "Center Bore Hole Di (mm)",
+        "val": "30"
+      },
+      {
+        "label": "Extrusion Height H (mm)",
+        "val": "25"
+      },
+      {
+        "label": "Engineering Material (6061-T6 Al)",
+        "val": "2.70 g/cm³"
+      }
     ],
     "outputs": [
-      { "label": "Net Solid Volume", "val": "107992.25 mm³ (107.99 cm³)" },
-      { "label": "Total Surface Area", "val": "17278.76 mm² (172.79 cm²)" },
-      { "label": "Estimated Part Mass", "val": "291.58 g" },
-      { "label": "Center of Gravity (Xc, Yc, Zc)", "val": "(0.00, 0.00, 12.50) mm" }
+      {
+        "label": "Net Solid Volume",
+        "val": "107992.25 mm³ (107.99 cm³)"
+      },
+      {
+        "label": "Total Surface Area",
+        "val": "17278.76 mm² (172.79 cm²)"
+      },
+      {
+        "label": "Estimated Part Mass",
+        "val": "291.58 g"
+      },
+      {
+        "label": "Center of Gravity (Xc, Yc, Zc)",
+        "val": "(0.00, 0.00, 12.50) mm"
+      }
     ]
   },
   "web-cad-sheetmetal-nesting": {
@@ -20977,19 +21030,52 @@
     "cadContext": "Unfolded flat patterns and nested multi-part sheets export cleanly to AC1027 DXF for press-brake tooling verification and ISO 6983 G-code (G00/G01/G03/M03/M05) with inside-first hole cutting and lead-in/lead-out vectors.",
     "formula": "BA = (π/180) × θ × (R + K×T) • OSSB = tan(θ/2) × (R + T) • BD = 2×OSSB - BA • L_flat = L1 + L2 - BD",
     "inputs": [
-      { "label": "Sheet Thickness T (mm)", "val": "2.0" },
-      { "label": "Inside Bend Radius R (mm)", "val": "2.0" },
-      { "label": "Bend Angle θ (°)", "val": "90" },
-      { "label": "K-Factor (K)", "val": "0.44" },
-      { "label": "Flange Legs L1 / L2 (mm)", "val": "60 / 40" },
-      { "label": "Raw Sheet Dimensions (mm)", "val": "1000 × 500" }
+      {
+        "label": "Sheet Thickness T (mm)",
+        "val": "2.0"
+      },
+      {
+        "label": "Inside Bend Radius R (mm)",
+        "val": "2.0"
+      },
+      {
+        "label": "Bend Angle θ (°)",
+        "val": "90"
+      },
+      {
+        "label": "K-Factor (K)",
+        "val": "0.44"
+      },
+      {
+        "label": "Flange Legs L1 / L2 (mm)",
+        "val": "60 / 40"
+      },
+      {
+        "label": "Raw Sheet Dimensions (mm)",
+        "val": "1000 × 500"
+      }
     ],
     "outputs": [
-      { "label": "Bend Allowance (BA)", "val": "4.52 mm" },
-      { "label": "Outside Setback (OSSB)", "val": "4.00 mm" },
-      { "label": "Bend Deduction (BD)", "val": "3.48 mm" },
-      { "label": "Unfolded Flat Length (Lflat)", "val": "96.52 mm" },
-      { "label": "Nested Sheet Utilization (22 Parts)", "val": "96.22%" }
+      {
+        "label": "Bend Allowance (BA)",
+        "val": "4.52 mm"
+      },
+      {
+        "label": "Outside Setback (OSSB)",
+        "val": "4.00 mm"
+      },
+      {
+        "label": "Bend Deduction (BD)",
+        "val": "3.48 mm"
+      },
+      {
+        "label": "Unfolded Flat Length (Lflat)",
+        "val": "96.52 mm"
+      },
+      {
+        "label": "Nested Sheet Utilization (22 Parts)",
+        "val": "96.22%"
+      }
     ]
   },
   "web-cad-code-studio": {
@@ -21000,18 +21086,48 @@
     "cadContext": "Code-driven parametric models eliminate manual sketch rebuilding across part families; @param annotations synchronize UI sliders directly with let-bindings in the script AST.",
     "formula": "d = m × Z • db = d × cos(α) • da = d + 2m • df = d - 2.5m • p = π × m",
     "inputs": [
-      { "label": "Gear Module m (mm)", "val": "2.5" },
-      { "label": "Teeth Count Z", "val": "24" },
-      { "label": "Pressure Angle α (°)", "val": "20" },
-      { "label": "Face Width b (mm)", "val": "15" },
-      { "label": "Shaft Bore Diameter (mm)", "val": "16" }
+      {
+        "label": "Gear Module m (mm)",
+        "val": "2.5"
+      },
+      {
+        "label": "Teeth Count Z",
+        "val": "24"
+      },
+      {
+        "label": "Pressure Angle α (°)",
+        "val": "20"
+      },
+      {
+        "label": "Face Width b (mm)",
+        "val": "15"
+      },
+      {
+        "label": "Shaft Bore Diameter (mm)",
+        "val": "16"
+      }
     ],
     "outputs": [
-      { "label": "Pitch Diameter (d = m·Z)", "val": "60.00 mm" },
-      { "label": "Base Circle Diameter (db)", "val": "56.38 mm" },
-      { "label": "Tip (da) / Root (df) Diameter", "val": "65.00 / 53.75 mm" },
-      { "label": "Circular Pitch (p = π·m)", "val": "7.85 mm" },
-      { "label": "Net Solid Volume", "val": "39395.57 mm³ (39.40 cm³)" }
+      {
+        "label": "Pitch Diameter (d = m·Z)",
+        "val": "60.00 mm"
+      },
+      {
+        "label": "Base Circle Diameter (db)",
+        "val": "56.38 mm"
+      },
+      {
+        "label": "Tip (da) / Root (df) Diameter",
+        "val": "65.00 / 53.75 mm"
+      },
+      {
+        "label": "Circular Pitch (p = π·m)",
+        "val": "7.85 mm"
+      },
+      {
+        "label": "Net Solid Volume",
+        "val": "39395.57 mm³ (39.40 cm³)"
+      }
     ]
   }
 }
