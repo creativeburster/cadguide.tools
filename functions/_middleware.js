@@ -184,6 +184,61 @@ const GONE_PATHS = new Set([
   "/tools/varicad/opengraph-image?dde98c4133b54de0"
 ]);
 
+// High-authority inbound backlink redirects (Zenodo DOIs, Dev.to articles, ReadTheDocs, and engineering forums)
+// Must be intercepted with a 301 Permanent Redirect BEFORE any 410 Gone check so link equity is 100% preserved.
+const BACKLINK_301_REDIRECTS = new Map([
+  // 1. Authoritative /guides/* targets cited in Zenodo DOIs & Dev.to technical articles
+  ["/guides", "/toolbox"],
+  ["/guides/solidworks-workstation-hw-procurement-guide", "/toolbox/cad-hardware-workstation-spec-builder"],
+  ["/guides/revit-workstation-hw-procurement-tco", "/toolbox/cad-hardware-workstation-spec-builder"],
+  ["/guides/multi-layer-pcb-impedance-profile-stackup", "/toolbox/wire-gauge-awg-calculator"],
+  ["/guides/revit-worksharing-wizard", "/toolbox/revit-worksharing-wizard"],
+  ["/guides/repair-imported-step-iges-knit-surface", "/toolbox/online-step-iges-mutual-converter"],
+  ["/guides/solidworks-step-import-defeature-and-healing-workflow", "/toolbox/online-sldprt-to-step-converter"],
+  ["/guides/solidworks-large-assembly-performance", "/toolbox/solidworks-crash-diagnostic-wizard"],
+  ["/guides/freecad-topological-naming-problem-mitigation-2026", "/tools/freecad"],
+  ["/guides/autodesk-vault-vs-solidworks-pdm-enterprise-comparison", "/compare/autodesk-inventor-vs-solidworks"],
+  ["/guides/bim-ifc4-geometry-validation", "/toolbox/online-ifc-viewer-validator"],
+  ["/guides/autocad-lt-hardware-acceleration-greyed-out-fix", "/toolbox/autocad-display-graphics-wizard"],
+  ["/guides/step-file-header-format", "/toolbox/step-file-header-parser"],
+
+  // 2. Legacy /calculators/* and /calculator/* short paths used in forum profiles & posts
+  ["/calculator/hardware", "/toolbox/cad-hardware-workstation-spec-builder"],
+  ["/calculators/workstation-spec", "/toolbox/cad-hardware-workstation-spec-builder"],
+  ["/calculators/hardware", "/toolbox/cad-hardware-workstation-spec-builder"],
+  ["/calculators/dwg-compatibility", "/toolbox/dwg-version-checker"],
+  ["/calculators/k-factor", "/toolbox/k-factor-calculator"],
+  ["/calculators/sheet-metal-k-factor", "/toolbox/k-factor-calculator"],
+  ["/calculators/cnc-speeds-feeds", "/toolbox/turning-speeds-feeds-calculator"],
+  ["/calculators/machining-speed-feed", "/toolbox/turning-speeds-feeds-calculator"],
+  ["/calculators/tolerance", "/toolbox/tolerance-stackup-calculator"],
+  ["/calculators/trace-impedance", "/toolbox/wire-gauge-awg-calculator"],
+  ["/calculators/3d-print-tolerances", "/toolbox/3d-printing-chordal-deviation"],
+  ["/calculators/cad-cloud-cost", "/toolbox/cad-license-tco-calculator"],
+  ["/calculators/cad-license-cost", "/toolbox/cad-license-tco-calculator"],
+  ["/calculators/license-cost", "/toolbox/cad-license-tco-calculator"],
+  ["/calculators/cloud-render", "/toolbox/3d-print-cost-time-estimator"],
+  ["/calculators/rendering-time", "/toolbox/3d-print-cost-time-estimator"],
+
+  // 3. Shortened /toolbox/*, /convert/*, and root-level alias paths from external publications
+  ["/toolbox/acad-pgp-editor", "/toolbox/acad-pgp-alias-editor"],
+  ["/toolbox/concurrent-license-calculator", "/toolbox/flexlm-concurrent-seats-queue"],
+  ["/toolbox/flexlm-concurrent-license-calculator", "/toolbox/flexlm-concurrent-seats-queue"],
+  ["/toolbox/gcode", "/toolbox/gcode-quick-reference-sheet"],
+  ["/toolbox/gcode-viewer", "/toolbox/gcode-toolpath-visualizer"],
+  ["/toolbox/hardware-benchmark", "/toolbox/cad-hardware-workstation-spec-builder"],
+  ["/toolbox/hardware-calculator", "/toolbox/cad-hardware-workstation-spec-builder"],
+  ["/toolbox/workstation-recommender", "/toolbox/cad-hardware-workstation-spec-builder"],
+  ["/toolbox/sheet-metal-calculator", "/toolbox/sheet-metal-bend-calculator"],
+  ["/convert/dwg-to-dxf", "/toolbox/online-dwg-to-dxf-batch-converter"],
+  ["/standards", "/toolbox/drawing-standards-comparison-reference"],
+  ["/workstation-hardware", "/toolbox/cad-hardware-workstation-spec-builder"],
+  ["/dwg-magic-bytes", "/toolbox/dwg-version-checker"],
+  ["/sheet-metal-kfactor", "/toolbox/k-factor-calculator"],
+  ["/step-to-stl-manifold-kfactor-2026", "/toolbox/stl-mesh-checker"],
+  ["/asme-y145-gdt-autolisp-automation-2026", "/toolbox/true-position-calculator"],
+]);
+
 export async function onRequest(context) {
   const url = new URL(context.request.url);
   const path = url.pathname.replace(/\/+$/, '') || '/';
@@ -194,6 +249,12 @@ export async function onRequest(context) {
       status: 403,
       headers: { 'Content-Type': 'text/plain' },
     });
+  }
+
+  // 0. 301 Redirect any known external backlink target path to its canonical live 200 OK page
+  const redirectTarget = BACKLINK_301_REDIRECTS.get(path);
+  if (redirectTarget) {
+    return Response.redirect(`${url.origin}${redirectTarget}`, 301);
   }
 
   // 1. All /guides and /guides/* paths have been permanently decommissioned — return 410 Gone

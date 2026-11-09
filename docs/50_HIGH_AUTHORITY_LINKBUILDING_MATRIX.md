@@ -100,7 +100,7 @@
 - **权威指标**：DA 90 | DR 89 | 企业级研发协作网络
 - **门槛与审核机制**：Atlassian 生态认证账户。
 - **落地内容**：开源 CAD 脚本与 PGP 别名库配置模板。
-- **靶向锚文本与链接**：`https://cadguide.tools/toolbox/acad-pgp-editor`
+- **靶向锚文本与链接**：`https://cadguide.tools/toolbox/acad-pgp-alias-editor`
 
 ### 13. SourceForge Projects
 - **权威指标**：DA 91 | DR 90 | 拥有 25 年历史的顶级开源与软件目录 | **Dofollow**
@@ -194,7 +194,7 @@
 - **权威指标**：DA 90 | DR 88 | 全球 3D 与工业设计殿堂
 - **门槛与审核机制**：专业艺术家与 3D 工程师作品集审核。
 - **落地内容**：发布《Industrial CAD Geometry Kernels Topology & Wireframe Visualization》（展示 ACIS vs Parasolid 的实体缝合对比图），附带 CADGuide 链接。
-- **靶向锚文本与链接**：`https://cadguide.tools/guides`
+- **靶向锚文本与链接**：`https://cadguide.tools/toolbox`
 
 ### 27. Coroflot
 - **权威指标**：DA 78 | DR 79 | 工业设计（ID）领域最老牌权威网络
@@ -253,7 +253,7 @@
 - **权威指标**：DA 74 | DR 76 | Rhino 官方技术论坛
 - **门槛与审核机制**：官方核心工程师驻场解答。
 - **落地内容**：在 NURBS 曲线离散与 DXF 导出失真板块，提供技术参数优化方案。
-- **靶向锚文本与链接**：`https://cadguide.tools/guides`
+- **靶向锚文本与链接**：`https://cadguide.tools/toolbox/3d-printing-chordal-deviation`
 
 ### 36. PTC / Onshape 官方社区论坛
 - **权威指标**：DA 85 | DR 84 | 云原生与企业 CAD 官方社区
@@ -329,7 +329,7 @@
 - **权威指标**：DA 68 | DR 72 | 欧洲最具影响力的工业产品设计媒体
 - **门槛与审核机制**：资深工业设计编辑审核。
 - **落地内容**：推荐 CAD 选型对比矩阵与硬件工作站配置推荐体系。
-- **靶向锚文本与链接**：`https://cadguide.tools/toolbox/workstation-recommender`
+- **靶向锚文本与链接**：`https://cadguide.tools/toolbox/cad-hardware-workstation-spec-builder`
 
 ### 47. upFront.eZine / WorldCAD Access (Ralph Grabowski 行业专栏)
 - **权威指标**：DA 55 (垂直超高权重) | 全球 CAD 软件历史泰斗独立专栏
@@ -353,7 +353,7 @@
 - **权威指标**：DA 70+ (聚合播客平台 Apple Podcasts, Spotify, Substack)
 - **门槛与审核机制**：主播团队挑选真正实用的听众资源。
 - **落地内容**：向 The CAD Geek、The BIM Student 等播客主播提供“听众免费 CAD 快捷键速查表与 DWG 兼容性检测器”作为节目赞助/推荐链接。
-- **靶向锚文本与链接**：`https://cadguide.tools/toolbox/acad-pgp-editor` 与 `https://cadguide.tools`
+- **靶向锚文本与链接**：`https://cadguide.tools/toolbox/acad-pgp-alias-editor` 与 `https://cadguide.tools`
 
 ---
 

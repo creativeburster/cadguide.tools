@@ -44,13 +44,52 @@
 /alternatives/visi-modelling /alternatives/visi 301
 /pricing/visi-modelling /pricing/visi 301
 
-# 10. Legacy /calculators/* namespace → canonical /toolbox/* — 2026-11-04
-#     /calculators/ was never a route in this repo (verified across full git history),
-#     so these hits are inbound links from outside. GA4: 14 PV / 10 visitors in 10 days,
-#     page title was "Page Not Found (404)" — the traffic is real and worth keeping.
-#     Add rules one at a time as GA4 reports them. Do NOT add a /calculators/* splat:
-#     the legacy slugs are short forms (workstation-spec) that do not match the
-#     /toolbox/ slugs (cad-hardware-workstation-spec-builder), so a splat would
-#     chain a 301 into another 404.
+# 10. Legacy /calculators/*, /guides/*, and shortened /toolbox/* backlink targets → canonical 200 OK pages
+/guides /toolbox 301
+/guides/solidworks-workstation-hw-procurement-guide /toolbox/cad-hardware-workstation-spec-builder 301
+/guides/revit-workstation-hw-procurement-tco /toolbox/cad-hardware-workstation-spec-builder 301
+/guides/multi-layer-pcb-impedance-profile-stackup /toolbox/wire-gauge-awg-calculator 301
+/guides/revit-worksharing-wizard /toolbox/revit-worksharing-wizard 301
+/guides/repair-imported-step-iges-knit-surface /toolbox/online-step-iges-mutual-converter 301
+/guides/solidworks-step-import-defeature-and-healing-workflow /toolbox/online-sldprt-to-step-converter 301
+/guides/solidworks-large-assembly-performance /toolbox/solidworks-crash-diagnostic-wizard 301
+/guides/freecad-topological-naming-problem-mitigation-2026 /tools/freecad 301
+/guides/autodesk-vault-vs-solidworks-pdm-enterprise-comparison /compare/autodesk-inventor-vs-solidworks 301
+/guides/bim-ifc4-geometry-validation /toolbox/online-ifc-viewer-validator 301
+/guides/autocad-lt-hardware-acceleration-greyed-out-fix /toolbox/autocad-display-graphics-wizard 301
+/guides/step-file-header-format /toolbox/step-file-header-parser 301
+
+/calculator/hardware /toolbox/cad-hardware-workstation-spec-builder 301
 /calculators/workstation-spec /toolbox/cad-hardware-workstation-spec-builder 301
 /calculators/workstation-spec/ /toolbox/cad-hardware-workstation-spec-builder 301
+/calculators/hardware /toolbox/cad-hardware-workstation-spec-builder 301
+/calculators/dwg-compatibility /toolbox/dwg-version-checker 301
+/calculators/k-factor /toolbox/k-factor-calculator 301
+/calculators/sheet-metal-k-factor /toolbox/k-factor-calculator 301
+/calculators/cnc-speeds-feeds /toolbox/turning-speeds-feeds-calculator 301
+/calculators/machining-speed-feed /toolbox/turning-speeds-feeds-calculator 301
+/calculators/tolerance /toolbox/tolerance-stackup-calculator 301
+/calculators/trace-impedance /toolbox/wire-gauge-awg-calculator 301
+/calculators/3d-print-tolerances /toolbox/3d-printing-chordal-deviation 301
+/calculators/cad-cloud-cost /toolbox/cad-license-tco-calculator 301
+/calculators/cad-license-cost /toolbox/cad-license-tco-calculator 301
+/calculators/license-cost /toolbox/cad-license-tco-calculator 301
+/calculators/cloud-render /toolbox/3d-print-cost-time-estimator 301
+/calculators/rendering-time /toolbox/3d-print-cost-time-estimator 301
+
+/toolbox/acad-pgp-editor /toolbox/acad-pgp-alias-editor 301
+/toolbox/concurrent-license-calculator /toolbox/flexlm-concurrent-seats-queue 301
+/toolbox/flexlm-concurrent-license-calculator /toolbox/flexlm-concurrent-seats-queue 301
+/toolbox/gcode /toolbox/gcode-quick-reference-sheet 301
+/toolbox/gcode-viewer /toolbox/gcode-toolpath-visualizer 301
+/toolbox/hardware-benchmark /toolbox/cad-hardware-workstation-spec-builder 301
+/toolbox/hardware-calculator /toolbox/cad-hardware-workstation-spec-builder 301
+/toolbox/workstation-recommender /toolbox/cad-hardware-workstation-spec-builder 301
+/toolbox/sheet-metal-calculator /toolbox/sheet-metal-bend-calculator 301
+/convert/dwg-to-dxf /toolbox/online-dwg-to-dxf-batch-converter 301
+/standards /toolbox/drawing-standards-comparison-reference 301
+/workstation-hardware /toolbox/cad-hardware-workstation-spec-builder 301
+/dwg-magic-bytes /toolbox/dwg-version-checker 301
+/sheet-metal-kfactor /toolbox/k-factor-calculator 301
+/step-to-stl-manifold-kfactor-2026 /toolbox/stl-mesh-checker 301
+/asme-y145-gdt-autolisp-automation-2026 /toolbox/true-position-calculator 301
