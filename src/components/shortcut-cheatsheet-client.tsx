@@ -2,8 +2,10 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { Search, Printer, Download, Sparkles, Check, Copy, Star, ArrowRight, Compass } from 'lucide-react';
+import { usePathname } from 'next/navigation';
+import { Search, Printer, Download, Sparkles, Check, Copy, Star, ArrowRight, Compass, ImageDown } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
+import { PrintableBrandHeader, PrintableBrandFooter, downloadCheatSheetWallpaperPng } from '@/components/printable-brand-banner';
 
 export interface ShortcutItem {
   keys: string;
@@ -249,6 +251,7 @@ const CROSS_DISCOVERY_MAP: Record<string, { label: string; href: string; badge: 
 
 export default function ShortcutCheatsheetClient({
   title,
+  subtitle,
   categories,
   shortcuts,
   tips,
@@ -263,6 +266,7 @@ export default function ShortcutCheatsheetClient({
   const [isCopied, setIsCopied] = useState<number | null>(null);
   const [isNotesCopied, setIsNotesCopied] = useState(false);
   const [viewMode, setViewMode] = useState<'card' | 'table'>('card');
+  const pathname = usePathname() || '/toolbox';
 
   const isReference = mode === 'reference' || (
     !title.toLowerCase().includes('shortcut') && 
@@ -446,11 +450,31 @@ export default function ShortcutCheatsheetClient({
               </button>
             )}
             <button
+              data-testid="btn-download-wallpaper"
+              onClick={() =>
+                downloadCheatSheetWallpaperPng({
+                  title,
+                  path: pathname,
+                  items: shortcuts.map((s) => ({
+                    key: s.keys,
+                    command: s.command,
+                    desc: s.description,
+                  })),
+                })
+              }
+              className="flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl border border-slate-200 hover:bg-slate-50 text-slate-700 font-bold text-xs transition-all cursor-pointer h-11 bg-white"
+              title="Download 2K Dark-Mode CAD Engineer Desk Wallpaper (PNG)"
+            >
+              <ImageDown className="w-4 h-4 text-blue-600" />
+              <span>Desk Wallpaper (PNG)</span>
+            </button>
+            <button
+              data-testid="btn-print-a4"
               onClick={handlePrint}
               className="flex items-center justify-center gap-1.5 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-xs shadow-md transition-all cursor-pointer h-11"
             >
               <Printer className="w-4 h-4" />
-              Print (A4)
+              Print A4 Sheet (PDF)
             </button>
           </div>
         </div>
@@ -573,6 +597,11 @@ export default function ShortcutCheatsheetClient({
             viewMode === 'card' ? 'hidden print:block' : 'block'
           }`}
         >
+          <PrintableBrandHeader
+            title={`${title} ${isReference ? 'Engineering Reference Sheet' : 'Keyboard Shortcuts & Command Aliases'}`}
+            subtitle={subtitle}
+            itemCount={filteredShortcuts.length}
+          />
           <table className="w-full text-left border-collapse text-sm font-semibold text-slate-700">
             <thead>
               <tr className="border-b-2 border-slate-100 text-slate-400 uppercase text-xs tracking-wider font-bold">
@@ -614,6 +643,7 @@ export default function ShortcutCheatsheetClient({
               )}
             </tbody>
           </table>
+          <PrintableBrandFooter title={title} />
         </div>
 
         {/* @media print styles */}

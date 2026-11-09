@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { SHORTCUTS_DATA, SHORTCUT_CATEGORIES } from '@/lib/shortcuts-data';
 import { RelatedTools } from '@/components/related-tools';
+import { PrintableBrandHeader, PrintableBrandFooter, downloadCheatSheetWallpaperPng } from '@/components/printable-brand-banner';
 
 export default function CADShortcutsClient() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -84,13 +85,35 @@ export default function CADShortcutsClient() {
           </div>
 
           <button
+            data-testid="btn-download-wallpaper"
+            onClick={() =>
+              downloadCheatSheetWallpaperPng({
+                title: 'Cross-Platform CAD Shortcuts',
+                path: '/toolbox/shortcuts',
+                items: SHORTCUTS_DATA.map((s) => ({
+                  key: s.shortcut,
+                  command: s.command,
+                  desc: `${s.description} (AutoCAD: ${s.autocad} / GstarCAD: ${s.gstarcad} / ZWCAD: ${s.zwcad})`,
+                })),
+              })
+            }
+            className="h-12 px-5 rounded-2xl border border-slate-200 hover:border-slate-300 text-slate-700 text-sm font-black flex items-center justify-center gap-2 hover:bg-slate-50 transition-all bg-white cursor-pointer"
+            title="Download 2K Dark-Mode CAD Engineer Desk Wallpaper (PNG)"
+          >
+            <svg className="w-4 h-4 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+            Desk Wallpaper (PNG)
+          </button>
+          <button
+            data-testid="btn-print-a4"
             onClick={handlePrint}
-            className="h-12 px-6 rounded-2xl border border-slate-200 hover:border-slate-300 text-slate-700 text-base font-black flex items-center justify-center gap-2 hover:bg-slate-50 transition-all bg-white"
+            className="h-12 px-6 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white text-sm font-black flex items-center justify-center gap-2 transition-all shadow-sm cursor-pointer"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z" />
             </svg>
-            Print Sheet (PDF)
+            Print A4 Sheet (PDF)
           </button>
         </div>
       </div>
@@ -182,10 +205,15 @@ export default function CADShortcutsClient() {
       {/* Shortcuts List (Printable Zone & Table View) */}
       <div
         id="printable-shortcut-list"
-        className={`bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden ${
+        className={`bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden print:p-2 ${
           viewMode === 'card' ? 'hidden print:block' : 'block'
         }`}
       >
+        <PrintableBrandHeader
+          title="Cross-Platform CAD Shortcuts Matrix (AutoCAD • GstarCAD • ZWCAD • DWG FastView)"
+          subtitle="Side-by-side drafting command alias reference sheet for CAD engineers and managers."
+          itemCount={filteredShortcuts.length}
+        />
         <div className="overflow-x-auto">
           <table className="w-full text-left border-collapse text-lg font-semibold text-slate-700">
             <thead>
@@ -246,6 +274,7 @@ export default function CADShortcutsClient() {
             </tbody>
           </table>
         </div>
+        <PrintableBrandFooter title="Cross-Platform CAD Shortcuts Matrix" />
       </div>
 
       {/* Printing Help Guidelines */}

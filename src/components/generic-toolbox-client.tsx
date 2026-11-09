@@ -25,6 +25,7 @@ import {
 } from 'lucide-react';
 import { ToolboxItem } from '@/lib/toolbox-data';
 import { RelatedTools } from '@/components/related-tools';
+import { PrintableBrandHeader, PrintableBrandFooter, downloadCheatSheetWallpaperPng } from '@/components/printable-brand-banner';
 import CadFileWorkbench, { workbenchSupports } from '@/components/cad-file-workbench';
 
 interface GenericToolboxClientProps {
@@ -3381,8 +3382,28 @@ EOF`;
                     <span>Export CSV</span>
                   </button>
                   <button
+                    data-testid="btn-download-wallpaper"
+                    onClick={() =>
+                      downloadCheatSheetWallpaperPng({
+                        title: tool.title,
+                        path: `/toolbox/${tool.slug}`,
+                        items: filteredRows.map((r) => ({
+                          key: r[0] || '',
+                          command: r[1] || '',
+                          desc: r.slice(2).join(' • '),
+                        })),
+                      })
+                    }
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-white border border-slate-200 hover:bg-slate-50 text-slate-700 rounded-xl text-xs font-extrabold transition-all cursor-pointer"
+                    title="Download 2K Dark-Mode CAD Engineer Desk Wallpaper (PNG)"
+                  >
+                    <FileCheck2 className="w-3.5 h-3.5 text-blue-600" />
+                    <span>Desk Wallpaper (PNG)</span>
+                  </button>
+                  <button
+                    data-testid="btn-print-a4"
                     onClick={() => window.print()}
-                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-extrabold shadow-xs transition-all"
+                    className="inline-flex items-center gap-1.5 px-3.5 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-xl text-xs font-extrabold shadow-xs transition-all cursor-pointer"
                     title="Print or Save as One-Page A4 PDF Cheat Sheet"
                   >
                     <Printer className="w-3.5 h-3.5" />
@@ -3394,7 +3415,12 @@ EOF`;
           </div>
 
           {referenceData ? (
-            <div className="overflow-x-auto rounded-2xl border border-slate-200">
+            <div className="overflow-x-auto rounded-2xl border border-slate-200 print:border-none">
+              <PrintableBrandHeader
+                title={tool.title}
+                subtitle={referenceData.note}
+                itemCount={filteredRows.length}
+              />
               <table className="w-full text-left text-xs">
                 <thead className="bg-slate-50 text-slate-700 font-black border-b border-slate-200 uppercase tracking-wider">
                   <tr>
@@ -3429,6 +3455,7 @@ EOF`;
                 <span>{referenceData.note}</span>
                 <span>Showing {filteredRows.length} entries</span>
               </div>
+              <PrintableBrandFooter title={tool.title} />
             </div>
           ) : (
             <div className="p-8 text-center bg-slate-50 rounded-2xl border border-slate-100 space-y-3">
