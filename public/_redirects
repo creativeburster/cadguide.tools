@@ -58,7 +58,9 @@
 /guides/bim-ifc4-geometry-validation /toolbox/online-ifc-viewer-validator 301
 /guides/autocad-lt-hardware-acceleration-greyed-out-fix /toolbox/autocad-display-graphics-wizard 301
 /guides/step-file-header-format /toolbox/step-file-header-parser 301
+/guides/shortcuts /toolbox/shortcuts 301
 
+/calculators /toolbox 301
 /calculator/hardware /toolbox/cad-hardware-workstation-spec-builder 301
 /calculators/workstation-spec /toolbox/cad-hardware-workstation-spec-builder 301
 /calculators/workstation-spec/ /toolbox/cad-hardware-workstation-spec-builder 301
@@ -85,8 +87,25 @@
 /toolbox/hardware-benchmark /toolbox/cad-hardware-workstation-spec-builder 301
 /toolbox/hardware-calculator /toolbox/cad-hardware-workstation-spec-builder 301
 /toolbox/workstation-recommender /toolbox/cad-hardware-workstation-spec-builder 301
+/toolbox/hardware-spec-checker /toolbox/cad-hardware-workstation-spec-builder 301
+/toolbox/license-cost-calculator /toolbox/cad-license-tco-calculator 301
 /toolbox/sheet-metal-calculator /toolbox/sheet-metal-bend-calculator 301
+/toolbox/dwg-version-checkerz /toolbox/dwg-version-checker 301
+/toolbox/k-factor-calculatorz /toolbox/k-factor-calculator 301
+/toolbox/autocad-dwg-version-feature-matrix /toolbox/dwg-version-checker 301
+/toolbox/format-compatibility /toolbox/cad-format-compatibility-matrix 301
+/toolbox/ifc-schema-analyzer /toolbox/online-ifc-viewer-validator 301
+/toolbox/gerber-rs274x-drill-file-checker /toolbox/online-gerber-pcb-viewer 301
+/toolbox/ipc-2221-pcb-trace-width-calculator /toolbox/wire-gauge-awg-calculator 301
+/toolbox/cad-file-converter /convert 301
+/toolbox/cad-viewer /toolbox/dxf-2d-viewer 301
 /convert/dwg-to-dxf /toolbox/online-dwg-to-dxf-batch-converter 301
+/nx-prt-to-step /convert/nx-prt-to-step 301
+/tools/inventor /tools/autodesk-inventor 301
+/tools/rhino /tools/rhino-3d 301
+/methodology /about#methodology 301
+/licensing/open-source /open-source 301
+/licensing/network /pricing/network 301
 /standards /toolbox/drawing-standards-comparison-reference 301
 /workstation-hardware /toolbox/cad-hardware-workstation-spec-builder 301
 /dwg-magic-bytes /toolbox/dwg-version-checker 301

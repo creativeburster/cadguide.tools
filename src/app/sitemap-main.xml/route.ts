@@ -17,7 +17,7 @@ export async function GET() {
   // Fixed content-version date — only update this when content is substantively changed.
   // Do NOT use new Date() here; a dynamic timestamp causes Googlebot to re-crawl unchanged
   // pages every time the sitemap is fetched, wasting crawl budget.
-  const now = '2026-10-26T00:00:00.000Z'; // Content update: full site audit, /all-tools hub, internal link improvements
+  const now = '2026-11-09T00:00:00.000Z'; // Content update: full site audit, /all-tools hub, internal link improvements
 
   // 1. Core Hub Landing Pages
   const pages = [
