@@ -1,6 +1,7 @@
 import React from 'react';
 import specsData from '@/lib/toolbox-engineering-specs.json';
 import { BookOpen, CheckCircle2, FileCode, HelpCircle, Layers, ShieldCheck, Sliders } from 'lucide-react';
+import { ToolboxPresetAndPipelineBar } from '@/components/toolbox-preset-and-pipeline';
 
 interface InputSpec {
   label: string;
@@ -72,6 +73,13 @@ export function ToolboxEngineeringGuide({ slug }: { slug: string }) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
+      {/* 0. Browser LocalStorage Parameter Presets & Upstream/Downstream Workflow Chain */}
+      <ToolboxPresetAndPipelineBar
+        slug={slug}
+        title={spec.title}
+        discipline={spec.discipline}
       />
 
       {/* 1. Engineering Methodology, Governing Equations & Standards Reference */}
