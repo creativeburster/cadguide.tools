@@ -44,7 +44,13 @@
 /alternatives/visi-modelling /alternatives/visi 301
 /pricing/visi-modelling /pricing/visi 301
 
-# 10. Legacy /calculators/*, /guides/*, and shortened /toolbox/* backlink targets → canonical 200 OK pages
+# 10. Legacy /calculators/*, /guides/*, child sitemaps, and shortened /toolbox/* backlink targets → canonical 200 OK pages
+/sitemap-main.xml /sitemap.xml 301
+/sitemap-tools.xml /sitemap.xml 301
+/sitemap-toolbox.xml /sitemap.xml 301
+/sitemap-compare.xml /sitemap.xml 301
+/sitemap-alternatives.xml /sitemap.xml 301
+/sitemap-convert.xml /sitemap.xml 301
 /guides /toolbox 301
 /guides/solidworks-workstation-hw-procurement-guide /toolbox/cad-hardware-workstation-spec-builder 301
 /guides/revit-workstation-hw-procurement-tco /toolbox/cad-hardware-workstation-spec-builder 301

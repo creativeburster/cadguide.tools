@@ -187,6 +187,14 @@ const GONE_PATHS = new Set([
 // High-authority inbound backlink redirects (Zenodo DOIs, Dev.to articles, ReadTheDocs, and engineering forums)
 // Must be intercepted with a 301 Permanent Redirect BEFORE any 410 Gone check so link equity is 100% preserved.
 const BACKLINK_301_REDIRECTS = new Map([
+  // 0. Legacy child sitemaps → monolithic /sitemap.xml
+  ["/sitemap-main.xml", "/sitemap.xml"],
+  ["/sitemap-tools.xml", "/sitemap.xml"],
+  ["/sitemap-toolbox.xml", "/sitemap.xml"],
+  ["/sitemap-compare.xml", "/sitemap.xml"],
+  ["/sitemap-alternatives.xml", "/sitemap.xml"],
+  ["/sitemap-convert.xml", "/sitemap.xml"],
+
   // 1. Authoritative /guides/* targets cited in Zenodo DOIs & Dev.to technical articles
   ["/guides", "/toolbox"],
   ["/guides/solidworks-workstation-hw-procurement-guide", "/toolbox/cad-hardware-workstation-spec-builder"],
