@@ -45,32 +45,69 @@ export default function RootLayout({
         <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml" />
         <link rel="alternate" type="text/plain" href="/llms.txt" title="LLMs.txt Index" />
         
-        {/* Google Analytics with Consent Mode v2 */}
+        {/* Google Analytics with Consent Mode v2 & Headless Datacenter Bot Shield */}
         <script
           data-cfasync="false"
           dangerouslySetInnerHTML={{
             __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
+              (function() {
+                var isHeadlessBot = false;
+                try {
+                  var ua = navigator.userAgent || '';
+                  var sw = window.screen ? window.screen.width : 0;
+                  var sh = window.screen ? window.screen.height : 0;
+                  var res = sw + 'x' + sh;
+                  var botScreens = { '1280x1200': 1, '1366x1366': 1, '1280x1280': 1, '1280x1600': 1, '800x600': 1 };
+                  if (
+                    navigator.webdriver === true ||
+                    /HeadlessChrome|PhantomJS|Playwright|Puppeteer|SlimerJS|CasperJS/i.test(ua) ||
+                    botScreens[res] === 1 ||
+                    (sw > 0 && sw === sh)
+                  ) {
+                    isHeadlessBot = true;
+                  } else {
+                    var c = document.createElement('canvas');
+                    var gl = c.getContext('webgl') || c.getContext('experimental-webgl');
+                    if (gl) {
+                      var dbg = gl.getExtension('WEBGL_debug_renderer_info');
+                      if (dbg) {
+                        var renderer = gl.getParameter(dbg.UNMASKED_RENDERER_WEBGL) || '';
+                        if (/SwiftShader|llvmpipe|Software Rasterizer/i.test(renderer)) {
+                          isHeadlessBot = true;
+                        }
+                      }
+                    }
+                  }
+                } catch (_) {}
 
-              var storedConsent = null;
-              try {
-                var raw = localStorage.getItem('cookie-consent');
-                if (raw) storedConsent = JSON.parse(raw);
-              } catch(e) {}
+                if (isHeadlessBot) {
+                  window['ga-disable-G-2NC8HV27GC'] = true;
+                  return;
+                }
 
-              var analyticsGranted = (storedConsent && storedConsent.preferences && storedConsent.preferences.analytics === false) ? 'denied' : 'granted';
-              var marketingGranted = (storedConsent && storedConsent.preferences && storedConsent.preferences.marketing === false) ? 'denied' : 'granted';
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                window.gtag = gtag;
 
-              gtag('consent', 'default', {
-                'analytics_storage': analyticsGranted,
-                'ad_storage': marketingGranted,
-                'ad_user_data': marketingGranted,
-                'ad_personalization': marketingGranted
-              });
+                var storedConsent = null;
+                try {
+                  var raw = localStorage.getItem('cookie-consent');
+                  if (raw) storedConsent = JSON.parse(raw);
+                } catch(e) {}
 
-              gtag('js', new Date());
-              gtag('config', 'G-2NC8HV27GC');
+                var analyticsGranted = (storedConsent && storedConsent.preferences && storedConsent.preferences.analytics === false) ? 'denied' : 'granted';
+                var marketingGranted = (storedConsent && storedConsent.preferences && storedConsent.preferences.marketing === false) ? 'denied' : 'granted';
+
+                gtag('consent', 'default', {
+                  'analytics_storage': analyticsGranted,
+                  'ad_storage': marketingGranted,
+                  'ad_user_data': marketingGranted,
+                  'ad_personalization': marketingGranted
+                });
+
+                gtag('js', new Date());
+                gtag('config', 'G-2NC8HV27GC');
+              })();
             `,
           }}
         />

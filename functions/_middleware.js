@@ -14,7 +14,27 @@ const BLOCKED_USER_AGENTS = [
   'bytespider',
   'petalbot',
   'baiduspider',
+  'headlesschrome',
+  'phantomjs',
+  'barkrowler',
+  'seekportbot',
+  'censysinspect',
+  'zgrab',
 ];
+
+// Known cloud datacenter ASNs that generate 98%+ of 0-second headless bot traffic in Singapore/US
+// (Alibaba Cloud, Tencent Cloud, DigitalOcean, Vultr, OVH, Hetzner, Choopa, M247, LeaseWeb)
+const DATACENTER_BOT_ASNS = new Set([
+  45102, // Alibaba Cloud (Singapore / US)
+  37963, // Alibaba Cloud
+  132203, // Tencent Cloud (Singapore)
+  45090, // Tencent Cloud
+  14061, // DigitalOcean
+  20473, // Vultr / Choopa
+  16276, // OVH
+  24940, // Hetzner
+  9009,  // M247
+]);
 
 // Active curated comparison paths (80 pairs)
 const VALID_COMPARE_PATHS = new Set([
@@ -321,10 +341,24 @@ export async function onRequest(context) {
   }
 
   // Pass through to static assets and neutralize Cloudflare Rocket Loader on all <script> tags
+  // Also inject early GA4 anti-bot guard in <head> so datacenter headless browsers (e.g. 1280x1200 Singapore bots,
+  // known cloud ASNs with no search/forum referer, or SwiftShader CPU renderers) never fire GA4 beacons.
+  const cfAsn = Number(context.request.cf && context.request.cf.asn ? context.request.cf.asn : 0);
+  const referer = context.request.headers.get("referer") || "";
+  const isSuspiciousDatacenterDirect = DATACENTER_BOT_ASNS.has(cfAsn) && !referer;
+
   const response = await context.next();
   const contentType = response.headers.get("content-type") || "";
   if (contentType.includes("text/html") && typeof HTMLRewriter !== "undefined") {
     return new HTMLRewriter()
+      .on("head", {
+        element(el) {
+          el.prepend(
+            `<script data-cfasync="false">(function(){try{var ua=navigator.userAgent||'';var sw=window.screen?window.screen.width:0;var sh=window.screen?window.screen.height:0;var res=sw+'x'+sh;var bs={'1280x1200':1,'1366x1366':1,'1280x1280':1,'1280x1600':1,'800x600':1};var dc=${isSuspiciousDatacenterDirect ? 'true' : 'false'};var bot=dc||navigator.webdriver===true||/HeadlessChrome|PhantomJS|Playwright|Puppeteer|SlimerJS|CasperJS/i.test(ua)||bs[res]===1||(sw>0&&sw===sh);if(!bot){var c=document.createElement('canvas');var gl=c.getContext('webgl')||c.getContext('experimental-webgl');if(gl){var d=gl.getExtension('WEBGL_debug_renderer_info');if(d&&/SwiftShader|llvmpipe|Software Rasterizer/i.test(gl.getParameter(d.UNMASKED_RENDERER_WEBGL)||''))bot=true;}}if(bot){window['ga-disable-G-2NC8HV27GC']=true;}}catch(_){}})();</script>`,
+            { html: true }
+          );
+        },
+      })
       .on("script", {
         element(el) {
           if (!el.hasAttribute("data-cfasync")) {
