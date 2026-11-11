@@ -4619,8 +4619,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cad-license-tco-calculator',
     title: 'CAD License TCO Calculator',
-    description: 'Compare 3-year total cost of ownership between any two CAD tools using live catalog pricing — subscription vs perpetual buyout.',
-    detailDesc: 'Pick any two tools from the CADGuide catalog and project licensing cost over 1-10 years with adjustable escalation and maintenance assumptions. Subscription models escalate annually; perpetual models add yearly maintenance on top of the buyout. Base prices are period-aware from the catalog.',
+    description: 'Model 1-10 year CAD total cost of ownership — subscription vs perpetual buyout with editable sample inputs and official vendor pricing links.',
+    detailDesc: 'Compare subscription with annual escalation against perpetual buyout plus maintenance, training, and hardware budgets over 1-10 years using editable sample inputs and direct links to official vendor pricing pages.',
     category: 'calculator',
     status: 'released',
     origin: 'native',

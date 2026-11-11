@@ -2,9 +2,10 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Sparkles, Download, FileCode, Info, RefreshCw } from 'lucide-react';
+import { Download, FileCode, Info, RotateCcw, Copy, Check } from 'lucide-react';
 
 interface ScaleItem {
+  id: string;
   name: string;
   ratio: string;
   selected: boolean;
@@ -12,114 +13,188 @@ interface ScaleItem {
 }
 
 const INITIAL_SCALES: ScaleItem[] = [
-  { name: '1:1', ratio: '1:1', selected: true, isMetric: true },
-  { name: '1:2', ratio: '1:2', selected: true, isMetric: true },
-  { name: '1:5', ratio: '1:5', selected: true, isMetric: true },
-  { name: '1:10', ratio: '1:10', selected: true, isMetric: true },
-  { name: '1:20', ratio: '1:20', selected: true, isMetric: true },
-  { name: '1:50', ratio: '1:50', selected: true, isMetric: true },
-  { name: '1:100', ratio: '1:100', selected: true, isMetric: true },
-  { name: '1:200', ratio: '1:200', selected: true, isMetric: true },
-  { name: '1:500', ratio: '1:500', selected: true, isMetric: true },
-  { name: '1:1000', ratio: '1:1000', selected: true, isMetric: true },
-  // Imperial standard
-  { name: '1/8"=1\'', ratio: '1:96', selected: false, isMetric: false },
-  { name: '1/4"=1\'', ratio: '1:48', selected: false, isMetric: false },
-  { name: '1/2"=1\'', ratio: '1:24', selected: false, isMetric: false },
-  { name: '1"=1\'', ratio: '1:12', selected: false, isMetric: false }
+  { id: 'm-1-1', name: '1:1', ratio: '1:1', selected: true, isMetric: true },
+  { id: 'm-1-2', name: '1:2', ratio: '1:2', selected: true, isMetric: true },
+  { id: 'm-1-5', name: '1:5', ratio: '1:5', selected: true, isMetric: true },
+  { id: 'm-1-10', name: '1:10', ratio: '1:10', selected: true, isMetric: true },
+  { id: 'm-1-20', name: '1:20', ratio: '1:20', selected: true, isMetric: true },
+  { id: 'm-1-50', name: '1:50', ratio: '1:50', selected: true, isMetric: true },
+  { id: 'm-1-100', name: '1:100', ratio: '1:100', selected: true, isMetric: true },
+  { id: 'm-1-200', name: '1:200', ratio: '1:200', selected: true, isMetric: true },
+  { id: 'm-1-500', name: '1:500', ratio: '1:500', selected: true, isMetric: true },
+  { id: 'm-1-1000', name: '1:1000', ratio: '1:1000', selected: true, isMetric: true },
+  { id: 'i-1-96', name: '1/8"=1\'', ratio: '1:96', selected: false, isMetric: false },
+  { id: 'i-1-48', name: '1/4"=1\'', ratio: '1:48', selected: false, isMetric: false },
+  { id: 'i-1-24', name: '1/2"=1\'', ratio: '1:24', selected: false, isMetric: false },
+  { id: 'i-1-12', name: '1"=1\'', ratio: '1:12', selected: false, isMetric: false },
 ];
+
+function parseStrictNumber(raw: string): number {
+  const trimmed = raw.trim();
+  if (trimmed === '') return NaN;
+  const val = Number(trimmed);
+  return Number.isFinite(val) ? val : NaN;
+}
 
 export default function CadScaleListResetClient() {
   const [scales, setScales] = useState<ScaleItem[]>(INITIAL_SCALES);
-  const [cleanStatus, setCleanStatus] = useState<'idle' | 'cleaning' | 'done'>('idle');
+  const [includeCustom, setIncludeCustom] = useState<boolean>(true);
+  const [customPaperUnitsStr, setCustomPaperUnitsStr] = useState<string>('1');
+  const [customDrawingUnitsStr, setCustomDrawingUnitsStr] = useState<string>('25');
+  const [copiedState, setCopiedState] = useState<'idle' | 'copied' | 'failed'>('idle');
 
-  // Toggle selection
-  const handleToggle = (index: number) => {
-    setScales((prev) => {
-      const copy = [...prev];
-      copy[index] = { ...copy[index], selected: !copy[index].selected };
-      return copy;
-    });
-  };
-
-  // Toggle all metric
-  const toggleMetric = (checked: boolean) => {
+  const handleToggle = (id: string) => {
     setScales((prev) =>
-      prev.map((item) => (item.isMetric ? { ...item, selected: checked } : item))
-);
+      prev.map((item) => (item.id === id ? { ...item, selected: !item.selected } : item))
+    );
   };
 
-  // Reset state helper
-  const handleResetSimulation = () => {
-    setCleanStatus('cleaning');
-    setTimeout(() => {
-      setCleanStatus('done');
-    }, 1800);
+  const applyPreset = (preset: 'metric-plus-25' | 'imperial-arch' | 'metric-only') => {
+    setCopiedState('idle');
+    if (preset === 'metric-plus-25') {
+      setScales(INITIAL_SCALES);
+      setIncludeCustom(true);
+      setCustomPaperUnitsStr('1');
+      setCustomDrawingUnitsStr('25');
+    } else if (preset === 'imperial-arch') {
+      setScales(
+        INITIAL_SCALES.map((item) => ({
+          ...item,
+          selected: !item.isMetric || item.id === 'm-1-1',
+        }))
+      );
+      setIncludeCustom(false);
+      setCustomPaperUnitsStr('1');
+      setCustomDrawingUnitsStr('16');
+    } else {
+      setScales(INITIAL_SCALES);
+      setIncludeCustom(false);
+      setCustomPaperUnitsStr('1');
+      setCustomDrawingUnitsStr('25');
+    }
   };
 
-  // Compile LISP Code
-  const lispCode = useMemo(() => {
-    let code = `;; =========================================================================\n`;
-    code += `;; AutoCAD Scale List Purge & Reconstruction Utility\n`;
-    code += `;; Generated by CADGuide.tools\n`;
-    code += `;; -------------------------------------------------------------------------\n`;
-    code += `;; 💡 Usage: \n`;
-    code += `;; 1. Open CAD, enter APPLOAD Load this LISP file. \n`;
-    code += `;; 2. Type ResetScaleList in the command line and press Enter to run. \n`;
-    code += `;; =========================================================================\n\n`;
-    code += `(defun c:ResetScaleList (/)\n`;
-    code += `  (setvar "CMDECHO" 0)\n`;
-    code += `  (princ "\\n[CADGuide] Initializing drawing viewport scale data...")\n`;
-    code += `  \n`;
-    code += `  ;; Step 1: Run CAD Built-in command line scale reset, first restore factory configuration\n`;
-    code += `  (command "-SCALELISTEDIT" "Reset" "Yes" "Exit")\n`;
-    code += `  \n`;
-    code += `  ;; Step 2: Use the dictionary function to completely cancel the proportion list data, Prevent redundant caching of xrefs\n`;
-    code += `  (dictremove (namedobjdict) "ACAD_SCALELIST")\n`;
-    code += `  \n`;
-    code += `  ;; Step 3: Reactivate and create a clean scale list dictionary\n`;
-    code += `  (command "-SCALELISTEDIT" "Reset" "Yes" "Exit")\n`;
-    code += `  \n`;
-    code += `  ;; Step 4: Define safe scale builder to prevent command lockup on existing scales\n`;
-    code += `  (defun _cadguide_add_scale (sName sRatio / sDict exists)\n`;
-    code += `    (vl-load-com)\n`;
-    code += `    (setq exists nil)\n`;
-    code += `    (setq sDict (dictsearch (namedobjdict) "ACAD_SCALELIST"))\n`;
-    code += `    (if sDict\n`;
-    code += `      (foreach item sDict\n`;
-    code += `        (if (= (car item) 350)\n`;
-    code += `          (if (= (strcase (cdr (assoc 300 (entget (cdr item))))) (strcase sName))\n`;
-    code += `            (setq exists T)\n`;
-    code += `          )\n`;
-    code += `        )\n`;
-    code += `      )\n`;
-    code += `    )\n`;
-    code += `    (if (not exists)\n`;
-    code += `      (command "-SCALELISTEDIT" "Add" sName sRatio "Exit")\n`;
-    code += `    )\n`;
-    code += `  )\n\n`;
+  const handleReset = () => {
+    applyPreset('metric-plus-25');
+  };
 
-    const selectedScales = scales.filter((s) => s.selected);
-    if (selectedScales.length > 0) {
-      code += `  (princ "\\n[CADGuide] Rebuilding the selected standard scale structure...")\n`;
-      selectedScales.forEach((item) => {
-        const escapedName = item.name.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
-        code += `  (_cadguide_add_scale "${escapedName}" "${item.ratio}")\n`;
-      });
+  /**
+   * Step-by-step derivation for custom scale ratio & AutoLISP dictionary rebuild:
+   * 1. Per AutoCAD -SCALELISTEDIT > Add documentation, scale ratios take the form n:m,
+   *    where n = number of paper units (> 0) and m = number of drawing units (> 0).
+   *    Dimensionless viewport scale factor = n / m.
+   * 2. Total rebuilt custom/standard scale entries pushed after resetting ACAD_SCALELIST:
+   *    N_total = N_checked_presets + (1 if includeCustom and custom ratio not already in checked presets, else 0).
+   * 3. Generated AutoLISP script uses strictly ASCII characters and verified AutoCAD commands / AutoLISP functions:
+   *    CMDECHO, -SCALELISTEDIT (Reset / Add / Exit), namedobjdict, dictremove, dictsearch, entget, ACAD_SCALELIST.
+   */
+  const calc = useMemo(() => {
+    const nPaper = parseStrictNumber(customPaperUnitsStr);
+    const mDrawing = parseStrictNumber(customDrawingUnitsStr);
+    const customNumsValid =
+      Number.isFinite(nPaper) &&
+      Number.isFinite(mDrawing) &&
+      nPaper > 0 &&
+      mDrawing > 0;
+
+    const customFactor = customNumsValid ? nPaper / mDrawing : NaN;
+    const customRatioText = customNumsValid
+      ? `${customPaperUnitsStr.trim()}:${customDrawingUnitsStr.trim()}`
+      : '—';
+
+    if (includeCustom && (!customNumsValid || !Number.isFinite(customFactor))) {
+      return {
+        isValid: false as const,
+        customNumsValid: false,
+        customFactor: NaN,
+        customRatioText: '—',
+      };
     }
 
-    code += `  \n`;
-    code += `  (setvar "CMDECHO" 1)\n`;
-    code += `  (princ "\\n[CADGuide] The scale list was reset successfully! Invalid reference scales have been eliminated.")\n`;
-    code += `  (princ)\n`;
-    code += `)\n`;
+    const activeList: Array<{ name: string; ratio: string }> = scales
+      .filter((s) => s.selected)
+      .map((s) => ({ name: s.name, ratio: s.ratio }));
 
-    return code;
-  }, [scales]);
+    if (includeCustom && customNumsValid) {
+      const existsAlready = activeList.some(
+        (s) => s.name.toLowerCase() === customRatioText.toLowerCase()
+      );
+      if (!existsAlready) {
+        activeList.push({ name: customRatioText, ratio: customRatioText });
+      }
+    }
 
-  // Trigger file download
+    const lines: string[] = [
+      ';; =========================================================================',
+      ';; AutoCAD Annotation Scale List Purge & Reconstruction Utility',
+      ';; Generated by CADGuide.tools (Pure ASCII AutoLISP)',
+      ';; -------------------------------------------------------------------------',
+      ';; Usage:',
+      ';; 1. In AutoCAD, run APPLOAD and load reset_scalelist.lsp.',
+      ';; 2. Type ResetScaleList at the command prompt and press Enter.',
+      ';; =========================================================================',
+      '',
+      '(defun c:ResetScaleList (/ _cadguide_add_scale)',
+      '  (setvar "CMDECHO" 0)',
+      '  (princ "\\n[CADGuide] Resetting drawing scale list...")',
+      '',
+      '  ;; Step 1: Restore default scale list via command-line -SCALELISTEDIT',
+      '  (command "-SCALELISTEDIT" "Reset" "Yes" "Exit")',
+      '',
+      '  ;; Step 2: Remove ACAD_SCALELIST entry from Named Object Dictionary',
+      '  (dictremove (namedobjdict) "ACAD_SCALELIST")',
+      '',
+      '  ;; Step 3: Re-initialize default scale dictionary',
+      '  (command "-SCALELISTEDIT" "Reset" "Yes" "Exit")',
+      '',
+      '  ;; Step 4: Helper that checks ACAD_SCALELIST before calling -SCALELISTEDIT Add',
+      '  (defun _cadguide_add_scale (sName sRatio / sDict exists)',
+      '    (setq exists nil)',
+      '    (setq sDict (dictsearch (namedobjdict) "ACAD_SCALELIST"))',
+      '    (if sDict',
+      '      (foreach item sDict',
+      '        (if (= (car item) 350)',
+      '          (if (= (strcase (cdr (assoc 300 (entget (cdr item))))) (strcase sName))',
+      '            (setq exists T)',
+      '          )',
+      '        )',
+      '      )',
+      '    )',
+      '    (if (not exists)',
+      '      (command "-SCALELISTEDIT" "Add" sName sRatio "Exit")',
+      '    )',
+      '  )',
+      '',
+    ];
+
+    if (activeList.length > 0) {
+      lines.push('  ;; Step 5: Ensure selected standard and custom scales exist');
+      activeList.forEach((item) => {
+        const escapedName = item.name.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+        lines.push(`  (_cadguide_add_scale "${escapedName}" "${item.ratio}")`);
+      });
+      lines.push('');
+    }
+
+    lines.push('  (setvar "CMDECHO" 1)');
+    lines.push('  (princ "\\n[CADGuide] Scale list reset completed.")');
+    lines.push('  (princ)');
+    lines.push(')');
+
+    return {
+      isValid: true as const,
+      customNumsValid,
+      customFactor,
+      customRatioText,
+      activeList,
+      totalCount: activeList.length,
+      lispCode: lines.join('\n') + '\n',
+    };
+  }, [scales, includeCustom, customPaperUnitsStr, customDrawingUnitsStr]);
+
   const handleDownload = () => {
-    const blob = new Blob([lispCode], { type: 'text/plain;charset=utf-8' });
+    if (!calc.isValid) return;
+    const blob = new Blob([calc.lispCode], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
@@ -128,233 +203,275 @@ export default function CadScaleListResetClient() {
     URL.revokeObjectURL(url);
   };
 
+  const handleCopy = async () => {
+    if (!calc.isValid) return;
+    try {
+      await navigator.clipboard.writeText(calc.lispCode);
+      setCopiedState('copied');
+      setTimeout(() => setCopiedState('idle'), 2000);
+    } catch {
+      setCopiedState('failed');
+    }
+  };
+
   return (
     <div className="flex flex-col gap-8">
-      {/* Option parameter configuration and dynamic comparison simulation */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-        {/* Left: Scale parameter checkbox */}
-        <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col justify-between gap-6">
-          <div>
-            <div className="flex justify-between items-center mb-4">
-              <div>
-                <h2 className="text-slate-900 font-black text-lg tracking-tight">Rebuild scale selection</h2>
-                <p className="text-base text-slate-400 font-bold uppercase tracking-wider">
-                  Scale List Checklist
-                </p>
-              </div>
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        {/* Left: Scale Selection & Custom Ratio Inputs */}
+        <div
+          data-testid="calculator-inputs"
+          className="lg:col-span-5 bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm space-y-5"
+        >
+          <div className="flex items-center justify-between">
+            <div>
+              <h2 className="text-slate-900 font-black text-lg tracking-tight">
+                Scale List Configuration
+              </h2>
+              <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">
+                Standard &amp; Custom n:m Ratios
+              </p>
             </div>
+            <button
+              type="button"
+              data-testid="btn-reset"
+              onClick={handleReset}
+              className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black flex items-center gap-1 transition-all"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              Reset
+            </button>
+          </div>
 
-            <div className="flex gap-2 mb-4">
+          {/* Presets */}
+          <div className="space-y-1.5">
+            <span className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+              Quick Presets
+            </span>
+            <div className="grid grid-cols-3 gap-2">
               <button
-                onClick={() => toggleMetric(true)}
-                className="px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold cursor-pointer"
+                type="button"
+                data-testid="preset-metric-25"
+                onClick={() => applyPreset('metric-plus-25')}
+                className="px-2.5 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700 transition-all"
               >
-                Select Metric All
+                Metric + 1:25
               </button>
               <button
-                onClick={() => toggleMetric(false)}
-                className="px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 text-sm font-bold cursor-pointer"
+                type="button"
+                data-testid="preset-metric-only"
+                onClick={() => applyPreset('metric-only')}
+                className="px-2.5 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700 transition-all"
               >
-                Abolish the metric system
+                Metric Only (10)
+              </button>
+              <button
+                type="button"
+                data-testid="preset-imperial-arch"
+                onClick={() => applyPreset('imperial-arch')}
+                className="px-2.5 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700 transition-all"
+              >
+                Imperial Arch (5)
               </button>
             </div>
+          </div>
 
-            <p className="text-sm text-slate-400 leading-relaxed mb-4">
-              Check the boxes you want to keep in CAD after reset and add them automatically**Core Standard Scale**. Unchecked scales will be completely deleted, Keep the viewport list clean. 
-            </p>
-
-            {/* Checklist Grid */}
-            <div className="grid grid-cols-2 gap-2 max-h-[220px] overflow-y-auto pr-1">
-              {scales.map((item, idx) => (
+          {/* Checklist Grid */}
+          <div className="space-y-2">
+            <label className="text-xs font-black text-slate-500 uppercase tracking-wider block">
+              1. Standard Scales to Ensure After Reset
+            </label>
+            <div className="grid grid-cols-2 gap-2 max-h-[240px] overflow-y-auto pr-1">
+              {scales.map((item) => (
                 <label
-                  key={idx}
-                  className={`flex items-center gap-2 p-2 rounded-xl border text-[11px] font-bold cursor-pointer transition-all ${
+                  key={item.id}
+                  className={`flex items-center gap-2.5 p-2.5 rounded-xl border text-xs font-bold cursor-pointer transition-all ${
                     item.selected
-                      ? 'bg-blue-500/10 border-blue-500/30 text-blue-600'
+                      ? 'bg-blue-50 border-blue-200 text-blue-700'
                       : 'bg-slate-50 border-slate-100 text-slate-500 hover:bg-slate-100'
                   }`}
                 >
                   <input
                     type="checkbox"
+                    data-testid={`chk-scale-${item.id}`}
                     checked={item.selected}
-                    onChange={() => handleToggle(idx)}
-                    className="rounded border-slate-300 text-blue-600 focus:ring-blue-500/20"
+                    onChange={() => handleToggle(item.id)}
+                    className="rounded border-slate-300 text-blue-600"
                   />
                   <div className="flex flex-col">
                     <span>{item.name}</span>
-                    <span className="text-[8px] font-medium opacity-70">Ratio {item.ratio}</span>
+                    <span className="text-[10px] font-medium opacity-75">Ratio {item.ratio}</span>
                   </div>
                 </label>
-))}
+              ))}
+            </div>
+          </div>
+
+          {/* Custom Scale Ratio n:m */}
+          <div className="space-y-3 pt-3 border-t border-slate-100">
+            <label className="flex items-center gap-2 text-xs font-black text-slate-700 uppercase tracking-wider cursor-pointer">
+              <input
+                type="checkbox"
+                data-testid="chk-include-custom"
+                checked={includeCustom}
+                onChange={(e) => setIncludeCustom(e.target.checked)}
+                className="rounded border-slate-300 text-blue-600"
+              />
+              <span>2. Append Custom Scale (Format n:m)</span>
+            </label>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs font-bold text-slate-500 block mb-1">
+                  Paper Units n (&gt; 0)
+                </label>
+                <input
+                  type="text"
+                  data-testid="input-paper-units"
+                  value={customPaperUnitsStr}
+                  onChange={(e) => setCustomPaperUnitsStr(e.target.value)}
+                  className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900 focus:outline-none focus:bg-white"
+                />
+              </div>
+              <div>
+                <label className="text-xs font-bold text-slate-500 block mb-1">
+                  Drawing Units m (&gt; 0)
+                </label>
+                <input
+                  type="text"
+                  data-testid="input-drawing-units"
+                  value={customDrawingUnitsStr}
+                  onChange={(e) => setCustomDrawingUnitsStr(e.target.value)}
+                  className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900 focus:outline-none focus:bg-white"
+                />
+              </div>
             </div>
           </div>
 
           <button
+            type="button"
+            data-testid="btn-download-lsp"
+            disabled={!calc.isValid}
             onClick={handleDownload}
-            className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-lg shadow-md hover:shadow-lg transition-all cursor-pointer w-full"
+            className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 disabled:bg-slate-200 disabled:text-slate-400 text-white font-black text-sm shadow-sm transition-all w-full"
           >
             <Download className="w-4 h-4" />
             Download reset_scalelist.lsp
           </button>
         </div>
 
-        {/* Right: scale bloated cleanup visualization */}
-        <div className="bg-slate-950 rounded-3xl border border-slate-800 p-6 shadow-2xl flex flex-col justify-between min-h-[320px] lg:col-span-2 relative text-white">
-          <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/50 to-transparent pointer-events-none"></div>
+        {/* Right: Computed Summary & LISP Preview */}
+        <div
+          data-testid="calculator-results"
+          className="lg:col-span-7 space-y-6"
+        >
+          <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm space-y-6">
+            <div className="flex items-center justify-between">
+              <h3 className="text-slate-900 font-black text-lg tracking-tight flex items-center gap-2">
+                <FileCode className="w-5 h-5 text-blue-500" />
+                <span>Scale Rebuild Summary &amp; AutoLISP Output</span>
+              </h3>
+              <button
+                type="button"
+                disabled={!calc.isValid}
+                onClick={handleCopy}
+                className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-blue-600 hover:text-white disabled:opacity-40 text-slate-700 text-xs font-black flex items-center gap-1.5 transition-all"
+              >
+                {copiedState === 'copied' ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                <span>
+                  {copiedState === 'copied'
+                    ? 'Copied'
+                    : copiedState === 'failed'
+                      ? 'Copy unavailable'
+                      : 'Copy LISP'}
+                </span>
+              </button>
+            </div>
 
-          <div className="flex justify-between items-center pb-3 border-b border-slate-800">
-            <div>
-              <h2 className="text-white font-black text-lg tracking-tight">Viewport ratio list slimming demo</h2>
-              <p className="text-base text-slate-400 font-bold uppercase tracking-wider">
-                Viewport Scale List Cleaner Simulator
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="bg-blue-50/70 rounded-2xl p-4 border border-blue-100">
+                <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-1">
+                  Target Scale Count
+                </div>
+                <div className="text-2xl font-black font-mono text-blue-700">
+                  <span data-testid="out-scale-count">
+                    {calc.isValid ? String(calc.totalCount) : '—'}
+                  </span>{' '}
+                  <span className="text-xs font-bold text-blue-400">scales</span>
+                </div>
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                <div className="text-xs font-black text-slate-400 uppercase tracking-wider mb-1">
+                  Custom Ratio (n:m)
+                </div>
+                <div
+                  data-testid="out-custom-ratio"
+                  className="text-2xl font-black font-mono text-slate-800"
+                >
+                  {calc.customNumsValid ? calc.customRatioText : '—'}
+                </div>
+              </div>
+
+              <div className="bg-emerald-50/70 rounded-2xl p-4 border border-emerald-100">
+                <div className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-1">
+                  Custom Factor (n / m)
+                </div>
+                <div
+                  data-testid="out-custom-factor"
+                  className="text-2xl font-black font-mono text-emerald-700"
+                >
+                  {calc.customNumsValid ? calc.customFactor.toFixed(4) : '—'}
+                </div>
+              </div>
+            </div>
+
+            {/* Active Scale Badges */}
+            {calc.isValid && (
+              <div className="flex flex-wrap gap-1.5">
+                {calc.activeList.map((s) => (
+                  <span
+                    key={s.name}
+                    className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 font-mono text-xs font-bold"
+                  >
+                    {s.name}
+                  </span>
+                ))}
+              </div>
+            )}
+
+            {/* Pure ASCII LISP Code Block */}
+            <div className="bg-slate-900 text-slate-200 font-mono text-xs p-5 rounded-2xl overflow-x-auto max-h-[380px] border border-slate-800">
+              <pre data-testid="out-lisp-code" className="whitespace-pre leading-relaxed">
+                {calc.isValid
+                  ? calc.lispCode
+                  : ';; Enter positive numeric values for Custom Paper Units (n) and Drawing Units (m)'}
+              </pre>
+            </div>
+
+            {/* Official Command & Dictionary Reference */}
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 text-xs text-slate-600 space-y-1.5 leading-relaxed">
+              <div className="font-bold text-slate-800 flex items-center gap-1.5">
+                <Info className="w-4 h-4 text-blue-500 shrink-0" />
+                <span>Verified AutoCAD Commands &amp; AutoLISP Functions:</span>
+              </div>
+              <p>
+                <code>-SCALELISTEDIT</code> (prompts: <code>Reset</code> &gt; <code>Yes</code> &gt; <code>Exit</code>, and{' '}
+                <code>Add</code> with ratio <code>n:m</code> where <code>n</code> = paper units and <code>m</code> = drawing
+                units), <code>SCALELISTEDIT</code>, <code>APPLOAD</code>, system variable <code>CMDECHO</code> (
+                <code>0</code> turns off command echoing), and AutoLISP dictionary functions <code>namedobjdict</code>,{' '}
+                <code>dictremove</code>, <code>dictsearch</code>, and <code>entget</code> operating on the{' '}
+                <code>ACAD_SCALELIST</code> dictionary.
+              </p>
+              <p className="text-slate-500">
+                Sources: Autodesk AutoCAD Command &amp; System Variable Reference and AutoLISP Developer&apos;s Guide. Note:
+                Per AutoCAD documentation, scales currently referenced by an annotative object cannot be deleted by{' '}
+                <code>-SCALELISTEDIT Delete</code>.
               </p>
             </div>
-            {cleanStatus !== 'cleaning' && (
-              <button
-                onClick={handleResetSimulation}
-                className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-black text-base transition-all cursor-pointer flex items-center gap-1.5"
-              >
-                <RefreshCw className="w-3.5 h-3.5" />
-                Reset cleaning simulation
-              </button>
-)}
           </div>
 
-          {/* Comparison box before/after cleaning */}
-          <div className="grid grid-cols-2 gap-4 py-4">
-            {/* Bloated list */}
-            <div className="bg-slate-900/80 rounded-2xl p-4 border border-slate-850 flex flex-col gap-2 min-h-[160px] max-h-[200px] overflow-y-auto">
-              <span className="text-sm font-black text-rose-400 uppercase tracking-widest flex items-center gap-1">
-                <span className="w-1.5 h-1.5 rounded-full bg-rose-500 animate-ping"></span>
-                Bloated scale list (Xref contamination)
-              </span>
-
-              {cleanStatus !== 'done' ? (
-                <div className="flex flex-col gap-1.5 font-mono text-[9px] text-slate-500">
-                  <div className="px-2 py-1 rounded bg-rose-950/20 text-rose-400 border border-rose-950/50">1:10_xref_xref_xref_copy1</div>
-                  <div className="px-2 py-1 rounded bg-rose-950/20 text-rose-400 border border-rose-950/50">1:50_copy_1_2</div>
-                  <div className="px-2 py-1 rounded bg-rose-950/20 text-rose-400 border border-rose-950/50">1:100_nested_ref_floor</div>
-                  <div className="px-2 py-1 rounded bg-rose-950/20 text-rose-400 border border-rose-950/50">1:5_xref_elevation</div>
-                  <div className="px-2 py-1 rounded bg-rose-950/20 text-rose-400 border border-rose-950/50">1:20_xref_copy</div>
-                  <div className="px-2 py-1 rounded bg-rose-950/20 text-rose-400 border border-rose-950/50">1:500_copy_copy_1</div>
-                  <div className="px-2 py-1 rounded bg-rose-950/20 text-rose-400 border border-rose-950/50">1:1000_xref_nested</div>
-                </div>
-) : (
-                <div className="flex flex-col items-center justify-center h-full text-slate-500 text-base py-8">
-                  All cleared! 
-                </div>
-)}
-            </div>
-
-            {/* After reset and purification */}
-            <div className="bg-slate-900/80 rounded-2xl p-4 border border-slate-850 flex flex-col gap-2 min-h-[160px] max-h-[200px] overflow-y-auto">
-              <span className="text-sm font-black text-emerald-400 uppercase tracking-widest flex items-center gap-1">
-                {cleanStatus === 'done' && <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping"></span>}
-                Reset after purification (refresh core ratio)
-              </span>
-
-              {cleanStatus === 'cleaning' && (
-                <div className="flex flex-col items-center justify-center h-full text-slate-400 text-sm py-8 animate-pulse font-mono uppercase tracking-widest">
-                  Wiping dict...
-                </div>
-)}
-
-              {cleanStatus === 'idle' && (
-                <div className="flex flex-col items-center justify-center h-full text-slate-500 text-base py-8">
-                  Waiting for reset to start...
-                </div>
-)}
-
-              {cleanStatus === 'done' && (
-                <div className="flex flex-col gap-1.5 font-mono text-[9px] text-emerald-400">
-                  {scales
-                    .filter((s) => s.selected)
-                    .map((item) => (
-                      <div
-                        key={item.name}
-                        className="px-2 py-1 rounded bg-emerald-950/20 border border-emerald-950/50"
-                      >
-                        {item.name}
-                      </div>
-))}
-                </div>
-)}
-            </div>
-          </div>
-
-          <div className="text-sm text-slate-400 leading-normal border-t border-slate-800 pt-3 flex gap-2">
-            <Info className="w-4 h-4 text-blue-400 flex-shrink-0" />
-            <span>
-              Scale lists split exponentially when drawings are contaminated with external references. Reset and rebuild resolves CAD copy-paste stuck issue. 
-            </span>
-          </div>
-
+          <RelatedTools />
         </div>
       </div>
-
-      {/* LISP Preview area */}
-      <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 pb-6 border-b border-slate-100">
-          <div>
-            <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
-              <FileCode className="w-5 h-5 text-blue-500" />
-              LISP Code preview
-            </h3>
-            <p className="text-base text-slate-400 font-bold mt-1">Copy and load this section directly in CAD LISP Start slimming down and refactoring the code</p>
-          </div>
-        </div>
-
-        {/* Core preview */}
-        <div className="bg-slate-900 text-slate-300 font-mono text-base p-6 rounded-2xl overflow-x-auto max-h-[400px] border border-slate-950 relative select-all">
-          <pre className="whitespace-pre">{lispCode}</pre>
-        </div>
-      </div>
-
-      {/* Geek’s Guide to Productivity */}
-      <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6">
-        <div>
-          <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-blue-500 animate-pulse" />
-            Advanced Guide to Expanding and Resetting Scale Lists
-          </h3>
-          <p className="text-base text-slate-400 mt-1 uppercase tracking-wide">
-            CAD Viewport Scale List Bloat Diagnostic & Reset Guide
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-base leading-relaxed text-slate-500">
-          <div>
-            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-              1. Why does copying and pasting cause lag? 
-            </h4>
-            <p>
-              Execute in CAD Ctrl+C and Ctrl+V, the software must map and merge the annotation scale of the entity in the clipboard with the scale list of the target drawing one by one. If your drawing accumulates hundreds of junk custom scale aliases from different xref drawings, this mapping calculation will fall into an infinite loop calculation that can last for several seconds or even minutes.**, Causes interface lag. Completely resetting and cleaning the scale is the most effective way to solve the lag. 
-            </p>
-          </div>
-          <div>
-            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-              2. Dictionary cleaning command with -SCALELISTEDIT
-            </h4>
-            <p>
-              AutoCAD Starting from the 2008 version, a file called <b>`ACAD_SCALELIST`</b> Exclusive Named Object Dictionary. Regular cleanup commands cannot delete this system-level container dictionary. So in AutoLISP, we use the underlying forced removal command <b>`(dictremove (namedobjdict) &quot;ACAD_SCALELIST&quot;)`</b> to force logout, Force CAD to release all invalid references, then call `-SCALELISTEDIT` to rebuild. 
-            </p>
-          </div>
-          <div>
-            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-              3. Automatic scale cleaning of multiple images in batches
-            </h4>
-            <p>
-              You can also use the LISP named functions generated by this tool with Tool 2 Batch processing for use with `.scr` script files. Just replace the `CleanDwg` command with this `ResetScaleList`, you can silently and automatically handle the resetting and clearing of the scale list of multiple drawings, minimizing the workload. 
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <RelatedTools />
     </div>
-);
+  );
 }

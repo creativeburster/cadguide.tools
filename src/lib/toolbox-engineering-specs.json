@@ -2223,142 +2223,277 @@
   },
   "cad-license-tco-calculator": {
     "title": "CAD License TCO Calculator",
-    "description": "Compare the total cost of ownership of any two CAD tools over 1-10 years using live catalog pricing. Adjustable escalation and maintenance assumptions, per-seat and per-team totals.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for CAD License TCO Calculator",
+    "description": "Model 1-10 year CAD total cost of ownership (subscription with annual escalation vs perpetual buyout plus maintenance, training, and hardware) using editable sample inputs and official vendor pricing links.",
+    "discipline": "CAD Procurement & Software Asset Management",
+    "standards": "Vendor Licensing Documentation (Bricsys Help Center License Types, GstarCAD & McNeel Rhino Official Stores) — Standard Multi-Year TCO Accounting",
+    "cadContext": "Regional CAD subscription and perpetual prices vary by country, currency, tax, and reseller promotions; always verify live quotes on each vendor's official pricing page before finalizing multi-seat procurement budgets.",
+    "formula": "TCO_A = S * [sum_{y=1..Y} P_sub * (1 + e/100)^(y-1) + C_train + C_hw]; TCO_B = S * [P_perp + (Y - 1) * P_perp * (m/100) + C_train + C_hw]",
     "inputs": [
       {
-        "label": "Tool A",
-        "val": "AutoCAD"
-      },
-      {
-        "label": "Tool B",
-        "val": "BricsCAD"
-      },
-      {
-        "label": "Seats",
+        "label": "Team Seats S",
         "val": "10"
       },
       {
-        "label": "Years",
+        "label": "Horizon Y (years)",
         "val": "3"
       },
       {
-        "label": "Sub. escalation %/yr",
+        "label": "Annual Subscription Fee A (Sample USD/seat/yr)",
+        "val": "1800"
+      },
+      {
+        "label": "Escalation Rate A (%/yr)",
         "val": "5"
       },
       {
-        "label": "Maint. % of list",
+        "label": "Perpetual License B (Sample USD/seat)",
+        "val": "1200"
+      },
+      {
+        "label": "Annual Maintenance Rate B (%/yr, Years 2..Y)",
         "val": "20"
+      },
+      {
+        "label": "Training Cost per Seat (Sample USD)",
+        "val": "300"
+      },
+      {
+        "label": "Hardware Cost per Seat (Sample USD)",
+        "val": "500"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Option A Software / Seat",
+        "val": "5674.50 USD"
+      },
+      {
+        "label": "Option A Full TCO / Seat",
+        "val": "6474.50 USD"
+      },
+      {
+        "label": "Option A Team Total TCO",
+        "val": "64745.00 USD"
+      },
+      {
+        "label": "Option B Software / Seat",
+        "val": "1680.00 USD"
+      },
+      {
+        "label": "Option B Full TCO / Seat",
+        "val": "2480.00 USD"
+      },
+      {
+        "label": "Option B Team Total TCO",
+        "val": "24800.00 USD"
+      },
+      {
+        "label": "Net Difference",
+        "val": "39945.00 USD"
+      },
+      {
+        "label": "Relative Savings",
+        "val": "61.70%"
+      }
+    ]
   },
   "cad-limits-checker": {
     "title": "CAD Limits & Grid Boundary Calculator",
-    "description": "Calculate the exact coordinates to configure AutoCAD LIMITS and GRID commands for standard paper sizes (A0-A4, Arch E) and output drawing scales.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for CAD Limits & Grid Boundary Calculator",
+    "description": "Calculate model-space LIMITS coordinates, GRID pitch, and SNAP intervals for ISO 216 (A0-A4) and North American ARCH sheets across standard plotting scales.",
+    "discipline": "CAD Drafting Setup & Sheet Plotting",
+    "standards": "Autodesk AutoCAD Command & System Variable Reference (LIMITS, LIMCHECK, GRID, SNAP, ZOOM All) & ISO 216 Paper Sizes",
+    "cadContext": "Configure model-space rectangular grid boundaries to match the plotted sheet scale (1:S) and drawing unit (mm or m), then run ZOOM All to frame visible extents or LIMITS.",
+    "formula": "X_max = (X_sheet_mm * S) / k_u, Y_max = (Y_sheet_mm * S) / k_u, GRID = (p_grid_mm * S) / k_u, SNAP = GRID / N_sub",
     "inputs": [
       {
-        "label": "1. Standard drawing specifications (Paper Size)",
-        "val": "ISO A3"
+        "label": "Standard Paper Preset",
+        "val": "ISO A3 (420 x 297 mm)"
+      },
+      {
+        "label": "Sheet Side A (mm)",
+        "val": "420"
+      },
+      {
+        "label": "Sheet Side B (mm)",
+        "val": "297"
+      },
+      {
+        "label": "Sheet Orientation",
+        "val": "Landscape"
+      },
+      {
+        "label": "Model Drawing Unit",
+        "val": "mm"
+      },
+      {
+        "label": "Plot Scale Denominator S (1 : S)",
+        "val": "100"
+      },
+      {
+        "label": "Plotted Grid Pitch (mm, typical)",
+        "val": "10"
+      },
+      {
+        "label": "Snap Subdivisions (typical)",
+        "val": "5"
+      },
+      {
+        "label": "LIMCHECK System Variable",
+        "val": "0"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Model Width X_max",
+        "val": "42000.00 mm"
+      },
+      {
+        "label": "Model Height Y_max",
+        "val": "29700.00 mm"
+      },
+      {
+        "label": "GRID Spacing",
+        "val": "1000.00 mm"
+      },
+      {
+        "label": "SNAP Spacing",
+        "val": "200.00 mm"
+      }
+    ]
   },
   "cad-scale-list-reset-helper": {
-    "title": "CAD Viewport scale reset and cleaner",
-    "description": "Generate automated AutoLISP scripts to purge bloated annotation scale lists (-SCALELISTEDIT) caused by nested Xrefs. Clean corrupt scale dictionaries to resolve slow DWG saving, copy-paste lag, and AutoCAD freezing or crashing on file open.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for CAD Viewport scale reset and cleaner",
+    "title": "CAD Scale List Reset AutoLISP Helper",
+    "description": "Generate pure-ASCII AutoLISP routines using -SCALELISTEDIT and ACAD_SCALELIST dictionary functions to reset bloated AutoCAD annotation scale lists and rebuild selected metric, imperial, or custom n:m scales.",
+    "discipline": "CAD Administration & AutoLISP Automation",
+    "standards": "Autodesk AutoCAD Command Reference (-SCALELISTEDIT, SCALELISTEDIT, APPLOAD, CMDECHO) & AutoLISP Reference (namedobjdict, dictremove, dictsearch, entget, ACAD_SCALELIST)",
+    "cadContext": "Purge excess custom annotation scales accumulated from nested external references by resetting ACAD_SCALELIST and appending only the required n:m paper-to-drawing ratios.",
+    "formula": "Scale Ratio = n : m (Paper Units : Drawing Units); Custom Scale Factor = n / m; Rebuilt Count = N_checked + N_custom",
     "inputs": [
       {
-        "label": "Ratio",
-        "val": "Nominal"
+        "label": "Standard Metric Scales Checked",
+        "val": "10 (1:1 to 1:1000)"
+      },
+      {
+        "label": "Append Custom Scale",
+        "val": "Enabled"
+      },
+      {
+        "label": "Custom Paper Units n",
+        "val": "1"
+      },
+      {
+        "label": "Custom Drawing Units m",
+        "val": "25"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Target Scale Count",
+        "val": "11 scales"
+      },
+      {
+        "label": "Custom Ratio (n:m)",
+        "val": "1:25"
+      },
+      {
+        "label": "Custom Factor (n / m)",
+        "val": "0.0400"
+      }
+    ]
   },
   "cam-profile-calculator": {
     "title": "Cam Profile Displacement Calculator",
-    "description": "Calculate cam follower displacement, velocity, and acceleration for SHM, uniform, and cycloidal motion.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "SHM: s=h/2*(1-cos(pi*th/beta)), uniform: s=h*th/beta, cycloidal: s=h*(r-sin(2pi*r)/2pi)",
+    "description": "Calculate cam follower displacement, velocity, acceleration, and peak rise values for Simple Harmonic Motion (SHM), Cycloidal, and Uniform Velocity laws.",
+    "discipline": "Mechanism Kinematics & Cam Design",
+    "standards": "Classical Cam Follower Kinematics (METU ME 301 Theory of Machines Ch. 8-3 & MechSimulator Cam Follower Kinematics Guide)",
+    "cadContext": "Evaluate follower lift s(theta), velocity v(theta), and acceleration a(theta) from rise angle beta (converted from degrees to radians) and shaft speed N (converted from rpm to rad/s) before exporting point coordinates to CAD splines.",
+    "formula": "omega = 2*pi*N/60, beta_rad = beta*pi/180, u = theta/beta; SHM: s=(h/2)*(1-cos(pi*u)), v=(pi*h*omega/(2*beta_rad))*sin(pi*u), a=(pi^2*h*omega^2/(2*beta_rad^2))*cos(pi*u); Cycloidal: s=h*(u-sin(2*pi*u)/(2*pi)), v=(h*omega/beta_rad)*(1-cos(2*pi*u)), a=(2*pi*h*omega^2/beta_rad^2)*sin(2*pi*u); Uniform: s=h*u, v=h*omega/beta_rad, a=0",
     "inputs": [
       {
-        "label": "Total Lift (mm)",
+        "label": "Total Follower Lift h (mm)",
         "val": "20"
       },
       {
-        "label": "Rise Angle (deg)",
+        "label": "Rise Angle β (deg)",
         "val": "90"
       },
       {
-        "label": "Cam Angle (deg)",
+        "label": "Cam Angle θ (deg)",
         "val": "45"
       },
       {
-        "label": "Motion Type",
+        "label": "Cam Shaft Speed N (rpm)",
+        "val": "60"
+      },
+      {
+        "label": "Follower Motion Law",
         "val": "Simple Harmonic Motion (SHM)"
       }
     ],
     "outputs": [
       {
-        "label": "Displacement",
+        "label": "Displacement s(θ)",
         "val": "10.000 mm"
       },
       {
-        "label": "Velocity",
+        "label": "Velocity v(θ)",
         "val": "125.66 mm/s"
       },
       {
-        "label": "Acceleration",
-        "val": "0.000000 mm/s2"
+        "label": "Acceleration a(θ)",
+        "val": "0.00 mm/s²"
+      },
+      {
+        "label": "Angular Velocity ω",
+        "val": "6.283 rad/s"
+      },
+      {
+        "label": "Peak Rise Velocity v_max",
+        "val": "125.66 mm/s"
+      },
+      {
+        "label": "Peak Interior Accel a_max",
+        "val": "1579.14 mm/s²"
       }
     ]
   },
   "capacitor-reactance-calculator": {
     "title": "Capacitor Reactance Calculator",
-    "description": "Calculate capacitive reactance, RC time constant, and cutoff frequency.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Xc = 1/(2*pi*f*C), tau = R*C, fc = 1/(2*pi*R*C)",
+    "description": "Calculate AC capacitive reactance, RC time constant, first-order -3 dB cutoff frequency, and series RC impedance across pF/nF/uF/mF and Hz/kHz/MHz ranges.",
+    "discipline": "AC Circuit Analysis & Passive RC Filters",
+    "standards": "AC Circuit & RC Filter Theory (OpenStax College Physics 2e §23.11 & University Physics Vol. 2 §10.5)",
+    "cadContext": "Verify SI unit scaling (pF/nF/uF/mF to Farads, Hz/kHz/MHz to Hertz, ohm/kohm to Ohms) when specifying decoupling, snubber, and anti-aliasing RC filter components on schematic BOMs.",
+    "formula": "X_C = 1 / (2 * pi * f_Hz * C_F), tau_ms = R_ohm * C_F * 1000, f_c = 1 / (2 * pi * R_ohm * C_F), |Z| = sqrt(R_ohm^2 + X_C^2)",
     "inputs": [
       {
-        "label": "Capacitance (uF)",
-        "val": "100"
+        "label": "Capacitance C",
+        "val": "100 μF"
       },
       {
-        "label": "Frequency (Hz)",
-        "val": "50"
+        "label": "AC Frequency f",
+        "val": "50 Hz"
       },
       {
-        "label": "Resistance (ohm)",
-        "val": "1000"
+        "label": "Series Resistance R",
+        "val": "1000 Ω"
       }
     ],
     "outputs": [
       {
-        "label": "Reactance Xc",
-        "val": "31.831 ohm"
+        "label": "Capacitive Reactance X_C",
+        "val": "31.831 Ω"
       },
       {
-        "label": "Time Constant",
+        "label": "RC Time Constant τ",
         "val": "100.000 ms"
       },
       {
-        "label": "Cutoff Freq",
+        "label": "−3 dB Cutoff Frequency f_c",
         "val": "1.592 Hz"
+      },
+      {
+        "label": "Series RC Impedance |Z|",
+        "val": "1000.506 Ω"
       }
     ]
   },

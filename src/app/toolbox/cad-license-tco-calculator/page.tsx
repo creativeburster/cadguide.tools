@@ -6,7 +6,8 @@ import { EmbedSnippet } from '@/components/embed-snippet';
 
 export const metadata: Metadata = pageMetadata({
   title: 'CAD License TCO Calculator — Subscription vs Perpetual Over N Years',
-  description: 'Compare the total cost of ownership of any two CAD tools over 1-10 years using live catalog pricing. Adjustable escalation and maintenance assumptions, per-seat and per-team totals.',
+  description:
+    'Model 1-10 year CAD total cost of ownership (subscription with annual escalation vs perpetual buyout plus maintenance, training, and hardware) using editable sample inputs and official vendor pricing links.',
   path: '/toolbox/cad-license-tco-calculator',
 });
 
@@ -33,7 +34,7 @@ export default function CadLicenseTcoCalculatorPage() {
               CAD License <span className="text-blue-400">TCO Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Project 1-10 year licensing cost for any two CAD tools — subscription vs perpetual buyout, per seat and per team.
+              Compare 1–10 year total cost of ownership between subscription and perpetual licensing models — including escalation, annual maintenance, training, and workstation hardware — with direct links to official vendor pricing pages.
             </p>
           </div>
         </section>

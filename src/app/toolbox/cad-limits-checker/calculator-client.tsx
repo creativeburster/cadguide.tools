@@ -1,344 +1,669 @@
 'use client';
 
 import { useState, useMemo } from 'react';
-import { Info, Copy, Check, FileText, Settings } from 'lucide-react';
+import { Info, Copy, Check, FileText, Settings, Download, RotateCcw } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
-const PAPER_SIZES = [
-  { name: 'ISO A0', width: 1189, height: 841 },
-  { name: 'ISO A1', width: 841, height: 594 },
-  { name: 'ISO A2', width: 594, height: 420 },
-  { name: 'ISO A3', width: 420, height: 297 },
-  { name: 'ISO A4', width: 297, height: 210 },
-  { name: 'Arch E', width: 1219.2, height: 914.4 },
-  { name: 'Arch D', width: 914.4, height: 609.6 },
+interface PaperPreset {
+  id: string;
+  name: string;
+  widthMm: string;
+  heightMm: string;
+  standardNote: string;
+}
+
+/**
+ * Standard drawing sheet sizes:
+ * - ISO A0 to A4 per ISO 216 international paper size standard.
+ * - North American Architectural sizes ARCH E (36 x 48 in) and ARCH D (24 x 36 in),
+ *   converted with exact 1 in = 25.4 mm (914.4 x 1219.2 mm and 609.6 x 914.4 mm).
+ */
+const PAPER_PRESETS: PaperPreset[] = [
+  { id: 'iso-a0', name: 'ISO A0 (1189 x 841 mm)', widthMm: '1189', heightMm: '841', standardNote: 'ISO 216 A-series' },
+  { id: 'iso-a1', name: 'ISO A1 (841 x 594 mm)', widthMm: '841', heightMm: '594', standardNote: 'ISO 216 A-series' },
+  { id: 'iso-a2', name: 'ISO A2 (594 x 420 mm)', widthMm: '594', heightMm: '420', standardNote: 'ISO 216 A-series' },
+  { id: 'iso-a3', name: 'ISO A3 (420 x 297 mm)', widthMm: '420', heightMm: '297', standardNote: 'ISO 216 A-series' },
+  { id: 'iso-a4', name: 'ISO A4 (297 x 210 mm)', widthMm: '297', heightMm: '210', standardNote: 'ISO 216 A-series' },
+  { id: 'arch-e', name: 'ARCH E (1219.2 x 914.4 mm / 48 x 36 in)', widthMm: '1219.2', heightMm: '914.4', standardNote: 'North American ARCH (36 x 48 in)' },
+  { id: 'arch-d', name: 'ARCH D (914.4 x 609.6 mm / 36 x 24 in)', widthMm: '914.4', heightMm: '609.6', standardNote: 'North American ARCH (24 x 36 in)' },
 ];
 
-const SCALES = [
-  { label: '1 : 1', value: 1 },
-  { label: '1 : 5', value: 5 },
-  { label: '1 : 10', value: 10 },
-  { label: '1 : 20', value: 20 },
-  { label: '1 : 50', value: 50 },
-  { label: '1 : 100', value: 100 },
-  { label: '1 : 200', value: 200 },
-  { label: '1 : 500', value: 500 },
-  { label: '1 : 1000', value: 1000 },
-];
+const QUICK_SCALES = ['1', '10', '20', '50', '100', '200', '500'];
+
+type DrawingUnit = 'mm' | 'm';
+
+const UNIT_MM_FACTOR: Record<DrawingUnit, number> = {
+  mm: 1,
+  m: 1000,
+};
+
+function parseStrictNumber(raw: string): number {
+  const trimmed = raw.trim();
+  if (trimmed === '') return NaN;
+  const val = Number(trimmed);
+  return Number.isFinite(val) ? val : NaN;
+}
 
 export default function LimitsCheckerClient() {
-  const [paperIdx, setPaperIdx] = useState(3); // A3 default
+  const [paperPresetId, setPaperPresetId] = useState<string>('iso-a3');
+  const [sheetWidthStr, setSheetWidthStr] = useState<string>('420');
+  const [sheetHeightStr, setSheetHeightStr] = useState<string>('297');
   const [orientation, setOrientation] = useState<'landscape' | 'portrait'>('landscape');
-  const [scaleIdx, setScaleIdx] = useState(5); // 1:100 default
-  const [unit, setUnit] = useState<'mm' | 'm'>('mm');
-  const [copied, setCopied] = useState(false);
+  const [unit, setUnit] = useState<DrawingUnit>('mm');
+  const [scaleDenominatorStr, setScaleDenominatorStr] = useState<string>('100');
+  const [paperGridPitchStr, setPaperGridPitchStr] = useState<string>('10');
+  const [snapSubdivStr, setSnapSubdivStr] = useState<string>('5');
+  const [limcheckVal, setLimcheckVal] = useState<'0' | '1'>('0');
+  const [copiedState, setCopiedState] = useState<'idle' | 'copied' | 'failed'>('idle');
 
-  const paper = useMemo(() => PAPER_SIZES[paperIdx], [paperIdx]);
-  const scale = useMemo(() => SCALES[scaleIdx], [scaleIdx]);
-
-  // Dimensions mapped to orientation and unit
-  const dims = useMemo(() => {
-    const w = orientation === 'landscape' ? paper.width : paper.height;
-    const h = orientation === 'landscape' ? paper.height : paper.width;
-    
-    // Model space size in mm
-    const modelW_mm = w * scale.value;
-    const modelH_mm = h * scale.value;
-
-    // Convert to target units
-    const div = unit === 'm' ? 1000 : 1;
-    const modelW = modelW_mm / div;
-    const modelH = modelH_mm / div;
-
-    // Optimal grid calculation (grid every ~10% or standard snap increments)
-    // For 1:100 scale, grid is typically 1000 mm (1m) or 500 mm.
-    let recommendedGrid = scale.value * 10; // basic heuristic in mm
-    if (unit === 'm') {
-      recommendedGrid = recommendedGrid / 1000;
+  const handleSelectPaperPreset = (id: string) => {
+    setPaperPresetId(id);
+    const found = PAPER_PRESETS.find((p) => p.id === id);
+    if (found) {
+      setSheetWidthStr(found.widthMm);
+      setSheetHeightStr(found.heightMm);
     }
-    
-    // Round to nice engineering values (e.g. 1, 2, 5, 10, 50, 100, 500, 1000)
-    let grid = 1;
-    const rawGrid = recommendedGrid;
-    if (rawGrid >= 500) grid = 500;
-    else if (rawGrid >= 200) grid = 200;
-    else if (rawGrid >= 100) grid = 100;
-    else if (rawGrid >= 50) grid = 50;
-    else if (rawGrid >= 10) grid = 10;
-    else if (rawGrid >= 5) grid = 5;
-    else if (rawGrid >= 2) grid = 2;
-    else if (rawGrid >= 1) grid = 1;
-    else if (rawGrid >= 0.5) grid = 0.5;
-    else if (rawGrid >= 0.1) grid = 0.1;
-    else grid = 0.05;
+  };
 
-    const snap = grid / 5; // standard sub-snap
+  const applyScenarioPreset = (presetKey: 'a3-mm-100' | 'a1-m-200' | 'archd-mm-50') => {
+    setCopiedState('idle');
+    if (presetKey === 'a3-mm-100') {
+      setPaperPresetId('iso-a3');
+      setSheetWidthStr('420');
+      setSheetHeightStr('297');
+      setOrientation('landscape');
+      setUnit('mm');
+      setScaleDenominatorStr('100');
+      setPaperGridPitchStr('10');
+      setSnapSubdivStr('5');
+      setLimcheckVal('0');
+    } else if (presetKey === 'a1-m-200') {
+      setPaperPresetId('iso-a1');
+      setSheetWidthStr('841');
+      setSheetHeightStr('594');
+      setOrientation('landscape');
+      setUnit('m');
+      setScaleDenominatorStr('200');
+      setPaperGridPitchStr('10');
+      setSnapSubdivStr('5');
+      setLimcheckVal('1');
+    } else {
+      setPaperPresetId('arch-d');
+      setSheetWidthStr('914.4');
+      setSheetHeightStr('609.6');
+      setOrientation('portrait');
+      setUnit('mm');
+      setScaleDenominatorStr('50');
+      setPaperGridPitchStr('10');
+      setSnapSubdivStr('4');
+      setLimcheckVal('0');
+    }
+  };
+
+  const handleReset = () => {
+    applyScenarioPreset('a3-mm-100');
+  };
+
+  /**
+   * Step-by-step unit derivation:
+   * 1. Sheet dimensions in mm:
+   *    longSide_mm  = max(W_sheet, H_sheet) [mm]
+   *    shortSide_mm = min(W_sheet, H_sheet) [mm]
+   *    X_sheet [mm] = longSide_mm  (landscape) or shortSide_mm (portrait)
+   *    Y_sheet [mm] = shortSide_mm (landscape) or longSide_mm  (portrait)
+   * 2. Model-space unit conversion factor k_u [mm / drawing unit]:
+   *    k_u = 1 (when drawing unit = mm) or 1000 (when drawing unit = m)
+   * 3. Upper-right LIMITS corner (X_max, Y_max) for plot scale 1 : S:
+   *    X_max [units] = (X_sheet [mm] * S) / k_u [mm/unit]
+   *    Y_max [units] = (Y_sheet [mm] * S) / k_u [mm/unit]
+   * 4. Model-space GRID and SNAP spacing from target paper grid pitch p_grid [mm]
+   *    and integer subdivision ratio N_sub:
+   *    GRID [units] = (p_grid [mm] * S) / k_u [mm/unit]
+   *    SNAP [units] = GRID [units] / N_sub
+   */
+  const calc = useMemo(() => {
+    const rawW = parseStrictNumber(sheetWidthStr);
+    const rawH = parseStrictNumber(sheetHeightStr);
+    const scaleS = parseStrictNumber(scaleDenominatorStr);
+    const paperGridMm = parseStrictNumber(paperGridPitchStr);
+    const snapSubdiv = parseStrictNumber(snapSubdivStr);
+
+    if (
+      !Number.isFinite(rawW) ||
+      !Number.isFinite(rawH) ||
+      !Number.isFinite(scaleS) ||
+      !Number.isFinite(paperGridMm) ||
+      !Number.isFinite(snapSubdiv) ||
+      rawW <= 0 ||
+      rawH <= 0 ||
+      scaleS <= 0 ||
+      paperGridMm <= 0 ||
+      snapSubdiv < 1 ||
+      !Number.isInteger(snapSubdiv)
+    ) {
+      return { isValid: false as const };
+    }
+
+    const longSideMm = Math.max(rawW, rawH);
+    const shortSideMm = Math.min(rawW, rawH);
+    const xSheetMm = orientation === 'landscape' ? longSideMm : shortSideMm;
+    const ySheetMm = orientation === 'landscape' ? shortSideMm : longSideMm;
+
+    const unitMmFactor = UNIT_MM_FACTOR[unit];
+    const modelWidth = (xSheetMm * scaleS) / unitMmFactor;
+    const modelHeight = (ySheetMm * scaleS) / unitMmFactor;
+    const gridSpacing = (paperGridMm * scaleS) / unitMmFactor;
+    const snapSpacing = gridSpacing / snapSubdiv;
+
+    if (
+      !Number.isFinite(modelWidth) ||
+      !Number.isFinite(modelHeight) ||
+      !Number.isFinite(gridSpacing) ||
+      !Number.isFinite(snapSpacing)
+    ) {
+      return { isValid: false as const };
+    }
+
+    const scriptLines = [
+      'LIMITS',
+      '0,0',
+      `${modelWidth.toFixed(2)},${modelHeight.toFixed(2)}`,
+      'LIMCHECK',
+      limcheckVal,
+      'GRID',
+      gridSpacing.toFixed(2),
+      'SNAP',
+      snapSpacing.toFixed(2),
+      'ZOOM',
+      'All',
+    ];
 
     return {
-      paperW: w,
-      paperH: h,
-      modelW,
-      modelH,
-      grid,
-      snap,
+      isValid: true as const,
+      xSheetMm,
+      ySheetMm,
+      modelWidth,
+      modelHeight,
+      gridSpacing,
+      snapSpacing,
+      scriptText: scriptLines.join('\n') + '\n',
     };
-  }, [paper, orientation, scale, unit]);
+  }, [sheetWidthStr, sheetHeightStr, orientation, unit, scaleDenominatorStr, paperGridPitchStr, snapSubdivStr, limcheckVal]);
 
-  // AutoCAD macro output text
-  const macroText = useMemo(() => {
-    return `LIMITS
-0,0
-${dims.modelW.toFixed(1)},${dims.modelH.toFixed(1)}
-GRID
-${dims.grid.toFixed(2)}
-SNAP
-${dims.snap.toFixed(2)}
-ZOOM
-All`;
-  }, [dims]);
-
-  const copyMacro = () => {
-    navigator.clipboard.writeText(macroText);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const handleCopyScript = async () => {
+    if (!calc.isValid) return;
+    try {
+      await navigator.clipboard.writeText(calc.scriptText);
+      setCopiedState('copied');
+      setTimeout(() => setCopiedState('idle'), 2000);
+    } catch {
+      setCopiedState('failed');
+    }
   };
+
+  const handleDownloadScr = () => {
+    if (!calc.isValid) return;
+    const blob = new Blob([calc.scriptText], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'configure_limits.scr';
+    link.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const svgRect = useMemo(() => {
+    if (!calc.isValid) {
+      return { x: 80, y: 30, w: 240, h: 140 };
+    }
+    const aspect = calc.modelWidth / calc.modelHeight;
+    const maxW = 280;
+    const maxH = 140;
+    let w = maxW;
+    let h = w / aspect;
+    if (h > maxH) {
+      h = maxH;
+      w = h * aspect;
+    }
+    return {
+      x: (400 - w) / 2,
+      y: (200 - h) / 2,
+      w,
+      h,
+    };
+  }, [calc]);
 
   return (
     <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 text-slate-900">
-      {/* Parameters Panel */}
-      <div className="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-6 shadow-2xl border border-slate-800 space-y-6 print:bg-white print:text-black print:border-none print:shadow-none">
+      {/* Left: Inputs Panel */}
+      <div
+        data-testid="calculator-inputs"
+        className="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-6 shadow-2xl border border-slate-800 space-y-5 print:bg-white print:text-black print:border-none print:shadow-none"
+      >
         <div className="flex items-center justify-between pb-4 border-b border-slate-800 print:hidden">
           <h2 className="text-lg font-black flex items-center gap-2">
             <Settings className="w-5 h-5 text-blue-400" />
-            <span>Page and scale settings</span>
+            <span>Sheet &amp; Scale Setup</span>
           </h2>
+          <button
+            type="button"
+            data-testid="btn-reset"
+            onClick={handleReset}
+            className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-black uppercase tracking-wider flex items-center gap-1.5 transition-all"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+            Reset
+          </button>
         </div>
 
-        {/* Paper Size */}
+        {/* Scenario Presets */}
+        <div className="space-y-2 print:hidden">
+          <span className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+            Quick Scenario Presets
+          </span>
+          <div className="grid grid-cols-3 gap-2">
+            <button
+              type="button"
+              data-testid="preset-a3-mm-100"
+              onClick={() => applyScenarioPreset('a3-mm-100')}
+              className="px-2.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 transition-all"
+            >
+              A3 · 1:100 (mm)
+            </button>
+            <button
+              type="button"
+              data-testid="preset-a1-m-200"
+              onClick={() => applyScenarioPreset('a1-m-200')}
+              className="px-2.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 transition-all"
+            >
+              A1 · 1:200 (m)
+            </button>
+            <button
+              type="button"
+              data-testid="preset-archd-mm-50"
+              onClick={() => applyScenarioPreset('archd-mm-50')}
+              className="px-2.5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 border border-slate-700 text-xs font-bold text-slate-200 transition-all"
+            >
+              ARCH D · 1:50
+            </button>
+          </div>
+        </div>
+
+        {/* Paper Size Preset + Editable Width/Height */}
         <div className="space-y-2">
-          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
-            1. Standard drawing specifications (Paper Size)
+          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+            1. Standard Paper Preset (ISO 216 / ARCH)
           </label>
           <select
-            value={paperIdx}
-            onChange={(e) => setPaperIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
+            data-testid="select-paper-preset"
+            value={paperPresetId}
+            onChange={(e) => handleSelectPaperPreset(e.target.value)}
+            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:outline-none"
           >
-            {PAPER_SIZES.map((p, i) => (
-              <option key={p.name} value={i}>
-                {p.name} ({Math.round(p.width)} x {Math.round(p.height)} mm)
+            {PAPER_PRESETS.map((p) => (
+              <option key={p.id} value={p.id}>
+                {p.name}
               </option>
-))}
+            ))}
           </select>
-          <div className="hidden print:block font-bold">
-            Drawing specifications: {paper.name}
+          <div className="grid grid-cols-2 gap-3 pt-1">
+            <div>
+              <label className="text-xs font-bold text-slate-400 block mb-1">Sheet Side A (mm)</label>
+              <input
+                type="text"
+                data-testid="input-sheet-width"
+                value={sheetWidthStr}
+                onChange={(e) => setSheetWidthStr(e.target.value)}
+                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm font-bold text-white focus:outline-none"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-400 block mb-1">Sheet Side B (mm)</label>
+              <input
+                type="text"
+                data-testid="input-sheet-height"
+                value={sheetHeightStr}
+                onChange={(e) => setSheetHeightStr(e.target.value)}
+                className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm font-bold text-white focus:outline-none"
+              />
+            </div>
           </div>
         </div>
 
-        {/* Orientation & Unit */}
-        <div className="grid grid-cols-2 gap-4">
-          <div className="space-y-2">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
-              2. Orientation
+        {/* Orientation & Model Unit */}
+        <div className="grid grid-cols-2 gap-3">
+          <div className="space-y-1.5">
+            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+              2. Sheet Orientation
             </label>
-            <div className="flex gap-2 print:hidden">
+            <div className="flex gap-1.5">
               <button
+                type="button"
+                data-testid="btn-orient-landscape"
                 onClick={() => setOrientation('landscape')}
-                className={`flex-1 py-2 rounded-xl text-base font-black border transition-all ${
+                className={`flex-1 py-2 rounded-xl text-xs font-black border transition-all ${
                   orientation === 'landscape'
-                    ? 'bg-blue-600 border-blue-600 text-white'
-                    : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
+                    ? 'bg-blue-600 border-blue-500 text-white'
+                    : 'bg-slate-800 border-slate-700 text-slate-400'
                 }`}
               >
-                Horizontal
+                Landscape
               </button>
               <button
+                type="button"
+                data-testid="btn-orient-portrait"
                 onClick={() => setOrientation('portrait')}
-                className={`flex-1 py-2 rounded-xl text-base font-black border transition-all ${
+                className={`flex-1 py-2 rounded-xl text-xs font-black border transition-all ${
                   orientation === 'portrait'
-                    ? 'bg-blue-600 border-blue-600 text-white'
-                    : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
+                    ? 'bg-blue-600 border-blue-500 text-white'
+                    : 'bg-slate-800 border-slate-700 text-slate-400'
                 }`}
               >
-                portrait
+                Portrait
               </button>
-            </div>
-            <div className="hidden print:block font-bold">
-              Paper placement: {orientation === 'landscape' ? 'Landscape' : 'Portrait'}
             </div>
           </div>
 
-          <div className="space-y-2">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
-              3. CAD Unit
+          <div className="space-y-1.5">
+            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+              3. Model Drawing Unit
             </label>
-            <div className="flex gap-2 print:hidden">
+            <div className="flex gap-1.5">
               <button
+                type="button"
+                data-testid="btn-unit-mm"
                 onClick={() => setUnit('mm')}
-                className={`flex-1 py-2 rounded-xl text-base font-black border transition-all ${
+                className={`flex-1 py-2 rounded-xl text-xs font-black border transition-all ${
                   unit === 'mm'
-                    ? 'bg-blue-600 border-blue-600 text-white'
-                    : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
+                    ? 'bg-blue-600 border-blue-500 text-white'
+                    : 'bg-slate-800 border-slate-700 text-slate-400'
                 }`}
               >
-                Millimeters (mm)
+                mm
               </button>
               <button
+                type="button"
+                data-testid="btn-unit-m"
                 onClick={() => setUnit('m')}
-                className={`flex-1 py-2 rounded-xl text-base font-black border transition-all ${
+                className={`flex-1 py-2 rounded-xl text-xs font-black border transition-all ${
                   unit === 'm'
-                    ? 'bg-blue-600 border-blue-600 text-white'
-                    : 'bg-slate-800 border-slate-700 text-slate-400 hover:bg-slate-750'
+                    ? 'bg-blue-600 border-blue-500 text-white'
+                    : 'bg-slate-800 border-slate-700 text-slate-400'
                 }`}
               >
-                Meter (m)
+                m
               </button>
-            </div>
-            <div className="hidden print:block font-bold">
-              Drawing unit: {unit === 'mm' ? 'mm (mm)' : 'Meters (m)'}
             </div>
           </div>
         </div>
 
-        {/* Output Scale */}
-        <div className="space-y-3">
-          <div className="flex justify-between items-center text-base font-black">
-            <span className="text-slate-400 uppercase tracking-wider">4. Output Scale</span>
-            <span className="text-blue-400 font-mono">{scale.label}</span>
+        {/* Plot Scale Denominator */}
+        <div className="space-y-2">
+          <div className="flex justify-between items-center">
+            <label className="text-xs font-black text-slate-400 uppercase tracking-wider">
+              4. Plot Scale Denominator S (1 : S)
+            </label>
+            <span className="text-xs font-mono text-blue-400">1 : {scaleDenominatorStr.trim() || '—'}</span>
           </div>
+          <input
+            type="text"
+            data-testid="input-scale-denominator"
+            value={scaleDenominatorStr}
+            onChange={(e) => setScaleDenominatorStr(e.target.value)}
+            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:outline-none"
+          />
+          <div className="flex flex-wrap gap-1.5">
+            {QUICK_SCALES.map((s) => (
+              <button
+                key={s}
+                type="button"
+                onClick={() => setScaleDenominatorStr(s)}
+                className={`px-2 py-1 rounded-lg text-xs font-bold border transition-all ${
+                  scaleDenominatorStr.trim() === s
+                    ? 'bg-blue-600/30 border-blue-500 text-blue-300'
+                    : 'bg-slate-800 border-slate-700 text-slate-400 hover:text-white'
+                }`}
+              >
+                1:{s}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Editable Empirical Grid & Snap Heuristics */}
+        <div className="grid grid-cols-2 gap-3">
+          <div>
+            <label className="text-xs font-bold text-slate-400 block mb-1">
+              Plotted Grid Pitch (mm, typical 10)
+            </label>
+            <input
+              type="text"
+              data-testid="input-paper-grid"
+              value={paperGridPitchStr}
+              onChange={(e) => setPaperGridPitchStr(e.target.value)}
+              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm font-bold text-white focus:outline-none"
+            />
+          </div>
+          <div>
+            <label className="text-xs font-bold text-slate-400 block mb-1">
+              Snap Subdivisions (typical 5, int)
+            </label>
+            <input
+              type="text"
+              data-testid="input-snap-subdiv"
+              value={snapSubdivStr}
+              onChange={(e) => setSnapSubdivStr(e.target.value)}
+              className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2 text-sm font-bold text-white focus:outline-none"
+            />
+          </div>
+        </div>
+
+        {/* LIMCHECK System Variable */}
+        <div className="space-y-1.5">
+          <label className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+            5. LIMCHECK System Variable
+          </label>
           <select
-            value={scaleIdx}
-            onChange={(e) => setScaleIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
+            data-testid="select-limcheck"
+            value={limcheckVal}
+            onChange={(e) => setLimcheckVal(e.target.value as '0' | '1')}
+            className="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:outline-none"
           >
-            {SCALES.map((s, i) => (
-              <option key={s.label} value={i}>
-                {s.label}
-              </option>
-))}
+            <option value="0">0 — Off (Allow drawing outside grid limits, AutoCAD initial value)</option>
+            <option value="1">1 — On (Reject point entry outside grid limits)</option>
           </select>
-          <div className="hidden print:block font-bold">
-            Print scale: {scale.label}
-          </div>
         </div>
       </div>
 
-      {/* Right Results Panel */}
-      <div className="lg:col-span-7 space-y-6 flex flex-col justify-between">
-        {/* Results Card */}
+      {/* Right: Results & Visualizer Panel */}
+      <div
+        data-testid="calculator-results"
+        className="lg:col-span-7 space-y-6 flex flex-col justify-between"
+      >
         <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm space-y-6">
           <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-            <h3 className="text-md font-black text-slate-900 flex items-center gap-2">
+            <h3 className="text-base font-black text-slate-900 flex items-center gap-2">
               <FileText className="w-5 h-5 text-blue-500" />
-              <span>LIMITS Reporting with Grid Parameters</span>
+              <span>Model-Space LIMITS, GRID &amp; SNAP Results</span>
             </h3>
+            <button
+              type="button"
+              data-testid="btn-download-scr"
+              disabled={!calc.isValid}
+              onClick={handleDownloadScr}
+              className="px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:bg-slate-200 disabled:text-slate-400 text-white text-xs font-black flex items-center gap-1.5 transition-all"
+            >
+              <Download className="w-3.5 h-3.5" />
+              Download .scr
+            </button>
           </div>
 
-          <div className="grid grid-cols-2 gap-6">
-            <div className="space-y-1">
-              <span className="text-sm text-slate-400 font-black uppercase tracking-wider">
-                LIMITS Coordinate
-              </span>
-              <div className="text-xl font-black font-mono text-slate-800">
-                0,0 to {dims.modelW.toFixed(1)},{dims.modelH.toFixed(1)}
+          <div className="grid grid-cols-2 gap-4">
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+              <div className="text-xs text-slate-400 font-black uppercase tracking-wider mb-1">
+                Model Width X_max
               </div>
-              <p className="text-[9.5px] text-slate-400">
-                Total size of model space: {dims.modelW.toFixed(0)} x {dims.modelH.toFixed(0)} {unit}
-              </p>
+              <div className="text-2xl font-black font-mono text-slate-900">
+                <span data-testid="out-model-width">
+                  {calc.isValid ? calc.modelWidth.toFixed(2) : '—'}
+                </span>{' '}
+                <span className="text-sm font-bold text-slate-400">{unit}</span>
+              </div>
             </div>
 
-            <div className="space-y-1">
-              <span className="text-sm text-slate-400 font-black uppercase tracking-wider">
-                Recommended grid step size (GRID / SNAP)
-              </span>
-              <div className="text-xl font-black font-mono text-blue-600">
-                GRID: {dims.grid} / SNAP: {dims.snap.toFixed(2)}
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+              <div className="text-xs text-slate-400 font-black uppercase tracking-wider mb-1">
+                Model Height Y_max
               </div>
-              <p className="text-[9.5px] text-slate-400">
-                It is recommended to set snap alignment with a substep size of 5:1
-              </p>
+              <div className="text-2xl font-black font-mono text-slate-900">
+                <span data-testid="out-model-height">
+                  {calc.isValid ? calc.modelHeight.toFixed(2) : '—'}
+                </span>{' '}
+                <span className="text-sm font-bold text-slate-400">{unit}</span>
+              </div>
+            </div>
+
+            <div className="bg-blue-50/70 rounded-2xl p-4 border border-blue-100">
+              <div className="text-xs text-blue-500 font-black uppercase tracking-wider mb-1">
+                GRID Spacing (Typical Pitch)
+              </div>
+              <div className="text-2xl font-black font-mono text-blue-700">
+                <span data-testid="out-grid-spacing">
+                  {calc.isValid ? calc.gridSpacing.toFixed(2) : '—'}
+                </span>{' '}
+                <span className="text-sm font-bold text-blue-400">{unit}</span>
+              </div>
+            </div>
+
+            <div className="bg-emerald-50/70 rounded-2xl p-4 border border-emerald-100">
+              <div className="text-xs text-emerald-600 font-black uppercase tracking-wider mb-1">
+                SNAP Spacing
+              </div>
+              <div className="text-2xl font-black font-mono text-emerald-700">
+                <span data-testid="out-snap-spacing">
+                  {calc.isValid ? calc.snapSpacing.toFixed(2) : '—'}
+                </span>{' '}
+                <span className="text-sm font-bold text-emerald-500">{unit}</span>
+              </div>
             </div>
           </div>
 
-          {/* CLI Script Output */}
+          {/* AutoCAD Script Preview */}
           <div className="space-y-2 border-t border-slate-100 pt-5">
             <div className="flex items-center justify-between">
-              <span className="text-base font-black text-slate-500 uppercase tracking-wide">
-                AutoCAD One-click configuration generation from the command line
+              <span className="text-xs font-black text-slate-500 uppercase tracking-wider">
+                AutoCAD Command Script (configure_limits.scr)
               </span>
               <button
-                onClick={copyMacro}
-                className="px-2.5 py-1 rounded bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-sm font-black flex items-center gap-1 border border-slate-200/50 print:hidden"
+                type="button"
+                disabled={!calc.isValid}
+                onClick={handleCopyScript}
+                className="px-2.5 py-1 rounded-lg bg-slate-100 text-slate-700 hover:bg-blue-600 hover:text-white disabled:opacity-40 transition-all text-xs font-black flex items-center gap-1 border border-slate-200"
               >
-                {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
-                <span>{copied ? 'Copied ' : 'Copy command'}</span>
+                {copiedState === 'copied' ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                <span>
+                  {copiedState === 'copied'
+                    ? 'Copied'
+                    : copiedState === 'failed'
+                      ? 'Copy unavailable'
+                      : 'Copy Script'}
+                </span>
               </button>
             </div>
-            <pre className="bg-slate-900 text-slate-300 font-mono text-[11px] p-4 rounded-2xl overflow-x-auto border border-slate-800 leading-relaxed shadow-inner">
-              {macroText}
+            <pre
+              data-testid="out-script-preview"
+              className="bg-slate-900 text-slate-200 font-mono text-xs p-4 rounded-2xl overflow-x-auto border border-slate-800 leading-relaxed"
+            >
+              {calc.isValid ? calc.scriptText : '— Enter positive numeric sheet dimensions, scale, and integer snap subdivisions —'}
             </pre>
+          </div>
+
+          {/* Formula & Official Reference Note */}
+          <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 text-xs text-slate-600 space-y-1.5 leading-relaxed">
+            <div className="font-bold text-slate-800">Formula &amp; Command Reference:</div>
+            <p>
+              Model-space upper-right corner: <code>X_max = (X_sheet_mm × S) / k_u</code>,{' '}
+              <code>Y_max = (Y_sheet_mm × S) / k_u</code>, where <code>k_u = 1</code> for <code>mm</code> and{' '}
+              <code>1000</code> for <code>m</code>. Empirical grid spacing:{' '}
+              <code>GRID = (p_grid_mm × S) / k_u</code>, <code>SNAP = GRID / N_sub</code> (typical planning values:{' '}
+              <code>10 mm</code> paper pitch, <code>5</code> subdivisions).
+            </p>
+            <p className="text-slate-500">
+              Sources: Autodesk AutoCAD Help — <code>LIMITS</code> (Command), <code>LIMCHECK</code> (System Variable),{' '}
+              <code>GRID</code> (Command), <code>SNAP</code> (Command), and <code>ZOOM</code> &gt; <code>All</code>;{' '}
+              sheet dimensions per ISO 216 (A0–A4) and North American ARCH series (<code>1 in = 25.4 mm</code>).
+            </p>
           </div>
         </div>
 
-        {/* Dynamic Model Space Visualizer */}
-        <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
+        {/* SVG Boundary Preview */}
+        <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden">
           <div className="flex justify-between items-center mb-3">
-            <span className="text-sm font-black text-slate-400 uppercase tracking-widest">
-              Model space sheet paper boundaries and Grid preview
+            <span className="text-xs font-black text-slate-400 uppercase tracking-widest">
+              Model-Space Sheet Boundary Preview
+            </span>
+            <span className="text-xs font-mono text-slate-400">
+              {calc.isValid
+                ? `Sheet: ${calc.xSheetMm} × ${calc.ySheetMm} mm (${orientation})`
+                : 'Awaiting valid parameters'}
             </span>
           </div>
 
-          {/* SVG representation */}
-          <div className="relative w-full h-[180px] bg-slate-950 rounded-2xl border border-slate-850 flex items-center justify-center">
+          <div className="relative w-full h-[200px] bg-slate-950 rounded-2xl border border-slate-800 flex items-center justify-center">
             <svg width="100%" height="100%" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Draw Grids inside SVG background */}
               <defs>
-                <pattern id="limitsGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <pattern id="limitsGridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
                   <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" strokeWidth="0.8" />
                 </pattern>
               </defs>
-              <rect width="100%" height="100%" fill="url(#limitsGrid)" />
+              <rect width="400" height="200" fill="url(#limitsGridPattern)" />
 
-              {/* Draw Model Space sheet paper border */}
-              <g transform="translate(40, 20)">
-                {/* Simulated Sheet Area */}
-                <rect
-                  x="0"
-                  y="0"
-                  width="320"
-                  height="160"
-                  fill="none"
-                  stroke="#3b82f6"
-                  strokeWidth="2.5"
-                  strokeDasharray="4 2"
-                  opacity="0.8"
-                />
-                
-                {/* 0,0 Corner Mark */}
-                <circle cx="0" cy="160" r="4.5" fill="#10b981" />
-                <text x="8" y="155" fill="#10b981" fontSize="9" fontWeight="bold">0,0</text>
+              <rect
+                x={svgRect.x}
+                y={svgRect.y}
+                width={svgRect.w}
+                height={svgRect.h}
+                fill="none"
+                stroke="#3b82f6"
+                strokeWidth="2"
+                strokeDasharray="5 3"
+              />
 
-                {/* Xmax, Ymax Corner Mark */}
-                <circle cx="320" cy="0" r="4.5" fill="#ef4444" />
-                <text x="312" y="-5" fill="#ef4444" fontSize="9" fontWeight="bold" textAnchor="end">
-                  {dims.modelW.toFixed(0)},{dims.modelH.toFixed(0)}
-                </text>
+              {/* Lower-Left Corner (0,0) */}
+              <circle cx={svgRect.x} cy={svgRect.y + svgRect.h} r="4" fill="#10b981" />
+              <text
+                x={svgRect.x + 6}
+                y={svgRect.y + svgRect.h - 6}
+                fill="#10b981"
+                fontSize="10"
+                fontWeight="bold"
+              >
+                0,0
+              </text>
 
-                {/* Dimensions labels */}
-                <text x="160" y="178" fill="#94a3b8" fontSize="10" textAnchor="middle" fontWeight="bold">
-                  {dims.modelW.toFixed(0)} {unit} (Width)
-                </text>
-                <text x="-15" y="80" fill="#94a3b8" fontSize="10" textAnchor="middle" transform="rotate(-90 -15 80)" fontWeight="bold">
-                  {dims.modelH.toFixed(0)} {unit} (Height)
-                </text>
-              </g>
+              {/* Upper-Right Corner (X_max, Y_max) */}
+              <circle cx={svgRect.x + svgRect.w} cy={svgRect.y} r="4" fill="#f97316" />
+              <text
+                x={svgRect.x + svgRect.w - 6}
+                y={Math.max(14, svgRect.y - 6)}
+                fill="#fb923c"
+                fontSize="10"
+                fontWeight="bold"
+                textAnchor="end"
+              >
+                {calc.isValid
+                  ? `${calc.modelWidth.toFixed(2)},${calc.modelHeight.toFixed(2)}`
+                  : '—'}
+              </text>
             </svg>
           </div>
 
-          <div className="text-sm text-slate-400 leading-relaxed mt-4 flex items-start gap-2">
-            <Info className="w-3.5 h-3.5 text-blue-400 shrink-0 mt-0.5" />
+          <div className="text-xs text-slate-400 leading-relaxed mt-3 flex items-start gap-2">
+            <Info className="w-4 h-4 text-blue-400 shrink-0 mt-0.5" />
             <span>
-              <strong>LIMITS Core tip: </strong> The purpose of configuring drawing limits is to limit misdrawing beyond the drawing range. and enable AutoCAD&apos;s `GRID` (Grid) is only displayed in the drawing printing area. When aligning model space within a layout viewport, Make sure the `LIMITS` scale matches the viewport XP The reciprocal proportions are consistent and can be avoided&quot;Grid exceeds screen&quot; or&quot;&quot;The grid is too dense and does not display&quot; phenomenon. 
+              In AutoCAD, <code>ZOOM</code> &gt; <code>All</code> adjusts the viewport magnification to accommodate all
+              visible objects or the grid limits set by <code>LIMITS</code>, whichever is larger. Note that{' '}
+              <code>ZOOM All</code> always regenerates the drawing and cannot be used transparently.
             </span>
           </div>
         </div>
@@ -348,5 +673,5 @@ All`;
         <RelatedTools />
       </div>
     </div>
-);
+  );
 }
