@@ -301,6 +301,25 @@ async function runBatch7Tests() {
       assertClose(presetEff, 85.185, 0.001, '10 t/h Oil Preset Efficiency');
       assertClose(presetFuel, 642.86, 0.001, '10 t/h Oil Preset Fuel');
 
+      // 3b. Preset Branch 2: Coal Fired 20 t/h Steam (flow=20000 kg/h, hSteam=2800 kJ/kg, hFeed=420 kJ/kg, qIn=16000 kW, coal LHV=28 MJ/kg)
+      // Step-by-step unit & hand calc:
+      //   Steam mass flow: 20000 kg/h / 3600 s/h = 5.5555556 kg/s
+      //   Q_out = 5.5555556 kg/s * (2800 - 420) kJ/kg = 5.5555556 * 2380 = 13222.2222 kW -> 13222.22 kW
+      //   eff = (13222.2222 kW / 16000 kW) * 100 = 82.638889 % -> 82.639 %
+      //   Hourly heat input: 16000 kW * 3.6 (MJ/h)/kW = 57600 MJ/h
+      //   Fuel consumption (coal LHV = 28 MJ/kg): 57600 MJ/h / 28 MJ/kg = 2057.14286 kg/h -> 2057.14 kg/h
+      await p.click('[data-testid="preset-btn-2"]');
+      await p.waitForFunction(() => {
+        const el = document.querySelector('[data-testid="result-output"]');
+        return el && el.textContent.includes('13222.22');
+      });
+      const coalPresetQOut = parseFloat(await p.innerText('[data-testid="result-output"]'));
+      const coalPresetEff = parseFloat(await p.innerText('[data-testid="result-efficiency"]'));
+      const coalPresetFuel = parseFloat(await p.innerText('[data-testid="result-fuel"]'));
+      assertClose(coalPresetQOut, 13222.22, 0.001, '20 t/h Coal Preset Output kW');
+      assertClose(coalPresetEff, 82.639, 0.001, '20 t/h Coal Preset Efficiency %');
+      assertClose(coalPresetFuel, 2057.14, 0.001, '20 t/h Coal Preset Fuel kg/h');
+
       // 4. Reset Button Verification
       await p.click('[data-testid="reset-btn"]');
       await p.waitForFunction(() => {

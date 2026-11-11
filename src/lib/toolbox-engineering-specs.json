@@ -1677,131 +1677,151 @@
   },
   "bolt-fatigue-calculator": {
     "title": "Bolt Fatigue Life Calculator",
-    "description": "Calculate bolt fatigue life under cyclic loading using Goodman or Soderberg criteria.",
+    "description": "Calculate bolt fatigue safety factor under cyclic loading using Soderberg or Goodman mean-stress fatigue relations and ISO 898-1 fastener property classes.",
     "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "Soderberg: 1/n = sigma_a/Se + sigma_m/Sy",
+    "standards": "ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners) • Soderberg & Goodman Mean-Stress Fatigue Relations",
+    "cadContext": "Model proper underhead fillet radii and clamp length ratios in your 3D CAD assembly to reduce cyclic stress amplitude acting on the bolt thread root.",
+    "formula": "Soderberg: 1/n_S = (σ_a / S_e) + (σ_m / S_y) • Goodman: 1/n_G = (σ_a / S_e) + (σ_m / S_ut)",
     "inputs": [
       {
-        "label": "Alternating Stress (MPa)",
-        "val": "50"
+        "label": "Fatigue Criterion",
+        "val": "Soderberg"
       },
       {
-        "label": "Mean Stress (MPa)",
-        "val": "200"
+        "label": "Alternating Stress σ_a (MPa)",
+        "val": "40"
       },
       {
-        "label": "Endurance Se (MPa)",
-        "val": "150"
+        "label": "Mean Stress σ_m (MPa)",
+        "val": "320"
       },
       {
-        "label": "Yield Sy (MPa)",
-        "val": "400"
+        "label": "Endurance Limit S_e (MPa)",
+        "val": "100"
+      },
+      {
+        "label": "Yield Strength S_y (MPa)",
+        "val": "640"
+      },
+      {
+        "label": "Ultimate Strength S_ut (MPa)",
+        "val": "800"
       }
     ],
     "outputs": [
       {
-        "label": "Safety Factor",
-        "val": "1.200"
+        "label": "Active Safety Factor (Soderberg)",
+        "val": "1.111"
       },
       {
-        "label": "Status",
+        "label": "Soderberg Safety Factor (n_S)",
+        "val": "1.111"
+      },
+      {
+        "label": "Goodman Safety Factor (n_G)",
+        "val": "1.250"
+      },
+      {
+        "label": "Assessment Status",
         "val": "Marginal"
       }
     ]
   },
   "bolt-pattern-load-calculator": {
     "title": "Bolt Pattern Load Distribution Calculator",
-    "description": "Calculate load on each bolt in a bolted joint pattern from moment and shear.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "F_i = M*y_i/sum(y_i^2) + V/n",
+    "description": "Calculate shear force on extreme bolts in a collinear equally spaced bolt group subjected to in-plane eccentric moment and parallel direct shear.",
+    "discipline": "Fastener Engineering & Structural Connection Statics",
+    "standards": "Engineering Mechanics — Rigid-Body Statics & Polar Moment of Inertia Superposition",
+    "cadContext": "Maintain symmetric bolt pitch layout and verify edge distances and plate bearing thickness on structural connection detail drawings.",
+    "formula": "s = s_mm / 1000 • y_max = (n − 1)·s / 2 • Σ(y_i²) = n·s²·(n² − 1) / 12 • F_max = V/n + M·y_max/Σ(y_i²) • F_min = V/n − M·y_max/Σ(y_i²)",
     "inputs": [
       {
-        "label": "Moment (Nm)",
+        "label": "In-Plane Moment M (N·m)",
         "val": "5000"
       },
       {
-        "label": "Shear (N)",
+        "label": "Direct Shear V (N)",
         "val": "2000"
       },
       {
-        "label": "Bolt Count",
+        "label": "Bolt Count n",
         "val": "4"
       },
       {
-        "label": "Bolt Spacing (mm)",
+        "label": "Bolt Pitch Spacing s (mm)",
         "val": "100"
       }
     ],
     "outputs": [
       {
-        "label": "Max Bolt Force",
-        "val": "15500 N"
+        "label": "Max Bolt Force (F_max)",
+        "val": "15500.00 N"
       },
       {
-        "label": "Min Bolt Force",
-        "val": "-14500 N"
+        "label": "Opposite Extreme Bolt Force (F_min)",
+        "val": "-14500.00 N"
       },
       {
-        "label": "Avg Force",
+        "label": "Avg Direct Shear (V / n)",
         "val": "500.00 N"
+      },
+      {
+        "label": "Max Moment Share (F_m,max)",
+        "val": "15000.00 N"
       }
     ]
   },
   "brake-torque-calculator": {
     "title": "Brake Torque & Stopping Distance Calculator",
-    "description": "Calculate braking torque, deceleration, and stopping distance.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "T=Fb*R, a=Fb/m, d=v^2/(2a)",
+    "description": "Calculate total wheel braking torque, constant linear deceleration, and theoretical level-road braking distance.",
+    "discipline": "Vehicle & Machine Braking Kinematics",
+    "standards": "Newtonian Linear Kinematics & Work-Energy Braking Relation (Level Surface)",
+    "cadContext": "Verify brake rotor caliper envelope clearance inside the wheel rim profile and confirm mounting bracket torque reaction paths in your 3D assembly.",
+    "formula": "v = v_kmh / 3.6 • T = F_b · R • a = F_b / m • d = v² / (2 · a)",
     "inputs": [
       {
-        "label": "Brake Force (N)",
+        "label": "Total Braking Force F_b (N)",
         "val": "3000"
       },
       {
-        "label": "Wheel Radius (m)",
+        "label": "Effective Wheel Radius R (m)",
         "val": "0.3"
       },
       {
-        "label": "Vehicle Mass (kg)",
+        "label": "Vehicle Mass m (kg)",
         "val": "1500"
       },
       {
-        "label": "Speed (km/h)",
+        "label": "Initial Speed v (km/h)",
         "val": "80"
       }
     ],
     "outputs": [
       {
-        "label": "Brake Torque",
-        "val": "900.00 Nm"
+        "label": "Total Brake Torque",
+        "val": "900.00 N·m"
       },
       {
         "label": "Deceleration",
-        "val": "2.000 m/s2"
+        "val": "2.000 m/s²"
       },
       {
-        "label": "Stop Distance",
+        "label": "Braking Distance",
         "val": "123.46 m"
       }
     ]
   },
   "brick-block-quantity-calculator": {
     "title": "Brick & Block Quantity Calculator",
-    "description": "Calculate number of bricks or blocks, mortar volume, and cement bags for any wall dimensions. Includes waste factor and opening deductions.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "bricks/m² = (1000/(L+joint)) × (1000/(H+joint)), total = area × bricks/m² × wythes × (1+waste%)",
+    "description": "Calculate masonry unit count, mortar volume, and cement bags from wall dimensions, wythe count, unit L×W×H work size, mortar joint, opening area, and waste factor.",
+    "discipline": "Architectural & Masonry Construction Takeoff",
+    "standards": "Volumetric Masonry Takeoff Geometry (Coordinated Unit Dimensions & Mortar Joint Volume Deduction)",
+    "cadContext": "Align wall lengths and rough opening dimensions to masonry modular coordination increments on architectural floor plans and elevation sheets to minimize cut units.",
+    "formula": "A_net = (W_L·W_H)/10⁶ − A_open • Units/m² = 10⁶ / ((L + j)·(H + j)) • Total = ⌈A_net · Units/m² · wythes · (1 + waste%)⌉ • V_mortar = (V_wall − V_units)·(1 + waste%)",
     "inputs": [
       {
-        "label": "Unit Type",
-        "val": "Modular Brick"
+        "label": "Unit Preset",
+        "val": "US Modular Brick (194×92×57 mm)"
       },
       {
         "label": "Wall Length (mm)",
@@ -1812,7 +1832,7 @@
         "val": "2700"
       },
       {
-        "label": "Wall Thickness (wythes)",
+        "label": "Wythes",
         "val": "1"
       },
       {
@@ -1820,34 +1840,46 @@
         "val": "10"
       },
       {
-        "label": "Brick L (mm)",
-        "val": "190"
+        "label": "Unit L (mm)",
+        "val": "194"
       },
       {
-        "label": "Brick H (mm)",
+        "label": "Unit W (mm)",
+        "val": "92"
+      },
+      {
+        "label": "Unit H (mm)",
         "val": "57"
       },
       {
-        "label": "Opening Area (mm²)",
+        "label": "Opening Area (m²)",
         "val": "0"
+      },
+      {
+        "label": "Waste Factor (%)",
+        "val": "5"
+      },
+      {
+        "label": "Cement Yield Factor (bags/m³)",
+        "val": "6.5"
       }
     ],
     "outputs": [
       {
-        "label": "Wall Area",
-        "val": "13.5 m²"
+        "label": "Net Wall Area",
+        "val": "13.50 m²"
       },
       {
-        "label": "Bricks/m²",
-        "val": "74.6"
+        "label": "Units/m² (per wythe)",
+        "val": "73.16"
       },
       {
-        "label": "Total Bricks",
-        "val": "1,058"
+        "label": "Total Units",
+        "val": "1038"
       },
       {
         "label": "Mortar Volume",
-        "val": "0.245 m³"
+        "val": "0.249 m³"
       },
       {
         "label": "Cement Bags",
@@ -1867,41 +1899,45 @@
   },
   "broaching-force-calculator": {
     "title": "Broaching Force Calculator",
-    "description": "Calculate broaching force from chip load, width, and material shear strength.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "F = n * b * h * tau * K",
+    "description": "Calculate linear broaching force and net cutting power from simultaneous engaged teeth, cut width, rise per tooth (RPT), material shear strength, cutting factor, and broaching speed.",
+    "discipline": "Machining, Metal Cutting & Manufacturing Engineering",
+    "standards": "Metal Cutting Mechanics — Specific Cutting Resistance & Linear Broaching Power (P = F · v)",
+    "cadContext": "Verify broach pull-end shank clearance, pilot hole diameter tolerance, and minimum chip gullet space relative to workpiece cut length in your fixture CAD model.",
+    "formula": "F [kN] = (z · b · h · τ · K) / 1000 • P [kW] = (F · v_m/min) / 60",
     "inputs": [
       {
-        "label": "Teeth Engaged",
+        "label": "Teeth Engaged (z)",
         "val": "5"
       },
       {
-        "label": "Cut Width (mm)",
+        "label": "Cut Width b (mm)",
         "val": "10"
       },
       {
-        "label": "Rise per Tooth (mm)",
+        "label": "Rise per Tooth h (mm)",
         "val": "0.05"
       },
       {
-        "label": "Shear Strength (MPa)",
+        "label": "Shear Strength τ (MPa)",
         "val": "300"
       },
       {
-        "label": "Factor K",
+        "label": "Cutting Factor K",
         "val": "1.5"
+      },
+      {
+        "label": "Cutting Speed v (m/min)",
+        "val": "8"
       }
     ],
     "outputs": [
       {
-        "label": "Broaching Force",
+        "label": "Broaching Force (F)",
         "val": "1.125 kN"
       },
       {
-        "label": "Power Required",
-        "val": "0.112500 kW"
+        "label": "Net Cutting Power (P)",
+        "val": "0.150 kW"
       }
     ]
   },
