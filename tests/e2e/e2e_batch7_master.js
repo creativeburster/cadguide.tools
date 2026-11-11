@@ -252,43 +252,45 @@ async function runBatch7Tests() {
       await p.waitForSelector('[data-testid="input-steam-flow"]');
 
       // 1. Default Hand-Calculation Verification (Direct Method)
-      // Inputs: Steam Flow = 5000 kg/h, h_steam = 2700 kJ/kg, h_feed = 500 kJ/kg, Q_in = 3500 kW, Fuel = gas (LHV=35)
+      // Inputs: Steam Flow = 5000 kg/h, h_steam = 2700 kJ/kg, h_feed = 500 kJ/kg, Q_in = 3500 kW, Fuel = gas (LHV=35 MJ/m³)
       // Hand calc:
       //   Q_out = (5000 / 3600) * (2700 - 500) = 1.3888889 * 2200 = 3055.5556 kW -> 3055.56 kW
       //   eff = (3055.5556 / 3500) * 100 = 87.30159 % -> 87.302 %
-      //   fuel = 3500 / 35 = 100.00 m³/h
+      //   Hourly heat input = 3500 kW * 3.6 = 12600 MJ/h
+      //   fuel (gas, LHV = 35 MJ/m³) = 12600 / 35 = 360.00 m³/h
       const qOut = parseFloat(await p.innerText('[data-testid="result-output"]'));
       const eff = parseFloat(await p.innerText('[data-testid="result-efficiency"]'));
       const fuel = parseFloat(await p.innerText('[data-testid="result-fuel"]'));
 
       assertClose(qOut, 3055.56, 0.001, 'Default Boiler Output kW');
       assertClose(eff, 87.302, 0.001, 'Default Boiler Efficiency %');
-      assertClose(fuel, 100.00, 0.001, 'Default Natural Gas Consumption');
+      assertClose(fuel, 360.00, 0.001, 'Default Natural Gas Consumption');
 
       // 2. Fuel Type Branch Switching (Oil vs Coal must produce distinct results!)
-      // Oil (LHV = 42): fuel = 3500 / 42 = 83.3333 -> 83.33 kg/h
+      // Oil (LHV = 42 MJ/kg): fuel = (3500 * 3.6) / 42 = 12600 / 42 = 300.00 kg/h
       await p.selectOption('[data-testid="select-fuel-type"]', 'oil');
       await p.waitForFunction(() => {
         const el = document.querySelector('[data-testid="result-fuel"]');
-        return el && el.textContent.includes('83.33');
+        return el && el.textContent.includes('300.00');
       });
       const oilFuel = parseFloat(await p.innerText('[data-testid="result-fuel"]'));
-      assertClose(oilFuel, 83.33, 0.001, 'Fuel Oil Consumption (LHV=42)');
+      assertClose(oilFuel, 300.00, 0.001, 'Fuel Oil Consumption (LHV=42)');
 
-      // Coal (LHV = 28): fuel = 3500 / 28 = 125.00 kg/h
+      // Coal (LHV = 28 MJ/kg): fuel = (3500 * 3.6) / 28 = 12600 / 28 = 450.00 kg/h
       await p.selectOption('[data-testid="select-fuel-type"]', 'coal');
       await p.waitForFunction(() => {
         const el = document.querySelector('[data-testid="result-fuel"]');
-        return el && el.textContent.includes('125.00');
+        return el && el.textContent.includes('450.00');
       });
       const coalFuel = parseFloat(await p.innerText('[data-testid="result-fuel"]'));
-      assertClose(coalFuel, 125.00, 0.001, 'Coal Consumption (LHV=28)');
+      assertClose(coalFuel, 450.00, 0.001, 'Coal Consumption (LHV=28)');
 
-      // 3. Preset Branch: Fuel Oil 10 t/h Steam (flow=10000, h1=2750, h2=450, qIn=7500, oil)
+      // 3. Preset Branch: Fuel Oil 10 t/h Steam (flow=10000, h1=2750, h2=450, qIn=7500, oil LHV=42)
       // Hand calc:
       //   Q_out = (10000 / 3600) * (2750 - 450) = 2.777778 * 2300 = 6388.8889 kW -> 6388.89 kW
       //   eff = (6388.8889 / 7500) * 100 = 85.185185 % -> 85.185 %
-      //   fuel = 7500 / 42 = 178.5714 kg/h -> 178.57 kg/h
+      //   Hourly heat input = 7500 kW * 3.6 = 27000 MJ/h
+      //   fuel = 27000 / 42 = 642.85714 kg/h -> 642.86 kg/h
       await p.click('[data-testid="preset-btn-1"]');
       await p.waitForFunction(() => {
         const el = document.querySelector('[data-testid="result-output"]');
@@ -297,13 +299,13 @@ async function runBatch7Tests() {
       const presetEff = parseFloat(await p.innerText('[data-testid="result-efficiency"]'));
       const presetFuel = parseFloat(await p.innerText('[data-testid="result-fuel"]'));
       assertClose(presetEff, 85.185, 0.001, '10 t/h Oil Preset Efficiency');
-      assertClose(presetFuel, 178.57, 0.001, '10 t/h Oil Preset Fuel');
+      assertClose(presetFuel, 642.86, 0.001, '10 t/h Oil Preset Fuel');
 
       // 4. Reset Button Verification
       await p.click('[data-testid="reset-btn"]');
       await p.waitForFunction(() => {
-        const el = document.querySelector('[data-testid="result-output"]');
-        return el && el.textContent.includes('3055.56');
+        const el = document.querySelector('[data-testid="result-fuel"]');
+        return el && el.textContent.includes('360.00');
       });
 
       // 5. Input Robustness: Empty, 'abc', '12abc'
@@ -333,10 +335,10 @@ async function runBatch7Tests() {
       ]);
       const csvPath = await download.path();
       const csvText = fs.readFileSync(csvPath, 'utf8');
-      if (!csvText.includes('Boiler_Output_kW') || !csvText.includes('Efficiency_pct')) {
-        throw new Error('Boiler Efficiency CSV missing expected column headers');
+      if (!csvText.includes('Boiler_Output_kW') || !csvText.includes('Efficiency_pct') || !csvText.includes('Fuel = Q_in × 3.6 / LHV')) {
+        throw new Error('Boiler Efficiency CSV missing expected column headers or formula text');
       }
-      if (!csvText.includes('3055.56') || !csvText.includes('87.302') || !csvText.includes('100.00')) {
+      if (!csvText.includes('3055.56') || !csvText.includes('87.302') || !csvText.includes('360.00')) {
         throw new Error('Boiler Efficiency CSV missing expected numerical values');
       }
 

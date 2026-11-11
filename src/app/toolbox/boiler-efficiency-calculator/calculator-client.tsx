@@ -93,13 +93,8 @@ export default function BoilerEfficiencyCalculatorClient() {
     const Qo = msKgS * (h1 - h2);
     const eff = (Qo / qIn) * 100;
 
-    // Fuel consumption rate:
-    // Q_in [kW] = Q_in [kJ/s] = Q_in * 3.6 [MJ/h]
-    // Since LHV is in MJ/unit, Fuel_Rate [unit/h] = (Q_in * 3.6) / LHV
-    // Note: when Q_in is expressed on an hourly energy basis or standard 3.6 MJ/kWh conversion:
-    // Wait: in original formula `fuel = Qi / (type === 'gas' ? 35 : 40)` where Qi=3500 gave 100.00!
-    // Let's check specs.json: Fuel Consumption = "100.00 m3/h" for Qi=3500 and LHV=35 (or 10 kWh/m3 = 36 MJ/m3, here 35 kWh/unit or MJ/s scale).
-    const fuel = qIn / fuelMeta.lhv;
+    // Unit conversion: Q_in [kW = kJ/s] * 3.6 = MJ/h; divided by LHV [MJ/unit] yields m³/h or kg/h
+    const fuel = (qIn * 3.6) / fuelMeta.lhv;
 
     return { Qo, eff, fuel };
   }, [flowStr, h1Str, h2Str, qInStr, fuelMeta.lhv]);
@@ -121,6 +116,8 @@ export default function BoilerEfficiencyCalculatorClient() {
   };
 
   const exportCsv = () => {
+    const formulaComment =
+      '# Direct Boiler Efficiency: Q_out = (m_steam / 3600) * (h_steam - h_feedwater) | eta_th = (Q_out / Q_in) * 100 | Fuel = Q_in × 3.6 / LHV';
     const headers = [
       'Steam_Flow_kg_h',
       'Steam_Enthalpy_kJ_kg',
@@ -141,7 +138,7 @@ export default function BoilerEfficiencyCalculatorClient() {
       formatFixed(result.eff, 3),
       formatFixed(result.fuel, 2),
     ];
-    const csvContent = `${headers.join(',')}\n${row.join(',')}\n`;
+    const csvContent = `${formulaComment}\n${headers.join(',')}\n${row.join(',')}\n`;
     const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -351,7 +348,9 @@ export default function BoilerEfficiencyCalculatorClient() {
                 <div>
                   Direct Thermal Efficiency Definition:{' '}
                   <code>Q_out = (m_steam / 3600) × (h_steam - h_feedwater)</code>,{' '}
-                  <code>η_th = (Q_out / Q_in) × 100%</code>. Nominal fuel index uses typical Lower Heating Value ({fuelMeta.label}).
+                  <code>η_th = (Q_out / Q_in) × 100%</code>,{' '}
+                  <code>Fuel = Q_in × 3.6 / LHV</code>. Nominal fuel consumption uses{' '}
+                  {fuelMeta.label} (Typical value; verify with fuel supplier data / 典型值，请以燃料供应商数据为准).
                 </div>
               </div>
             </div>

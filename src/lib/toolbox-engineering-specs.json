@@ -1553,7 +1553,7 @@
     "discipline": "Thermal Engineering & Steam Plant Systems",
     "standards": "Thermodynamic Direct (Input-Output) Thermal Efficiency Definition (η_th = Q_out / Q_in)",
     "cadContext": "Size steam header piping, feedwater economizer connections, and fuel train flow meters in plant P&ID and 3D piping layouts according to rated boiler thermal output.",
-    "formula": "Q_out = (m_steam / 3600) × (h_steam - h_feedwater) • η_th = (Q_out / Q_in) × 100% • Fuel Consumption = Q_in / LHV",
+    "formula": "Q_out = (m_steam / 3600) × (h_steam - h_feedwater) • η_th = (Q_out / Q_in) × 100% • Fuel = Q_in × 3.6 / LHV",
     "inputs": [
       {
         "label": "Steam Flow (kg/h)",
@@ -1587,7 +1587,7 @@
       },
       {
         "label": "Fuel Consumption",
-        "val": "100.00 m³/h"
+        "val": "360.00 m³/h"
       }
     ]
   },
