@@ -4288,14 +4288,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'cable-tray-fill-calculator',
-    title: "Cable Tray Fill Ratio Calculator (NEC 392)",
-    description: "Calculate circular cable cross-sectional area, usable tray area, and fill ratio per NEC Article 392.",
-    detailDesc: "NFPA 70 (NEC) Article 392 cross-sectional fill check (40% solid bottom, 50% ladder or ventilated trough for multiconductor control/signal cables).",
+    title: "Cable Tray Fill Ratio Calculator (NEC 392.22)",
+    description: "Calculate multiconductor control and signal cable tray cross-sectional fill ratio per NEC 392.22.",
+    detailDesc: "NFPA 70 (NEC) 392.22(A)(2)/(4) cross-sectional fill check (40% solid bottom, 50% ladder or ventilated trough for multiconductor control/signal cables only; power cables require NEC 392.22(A)(1)).",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["cable tray fill calculator","nec 392","cable tray sizing","cable tray capacity","tray fill ratio","cable tray width","ladder tray","ventilated tray","cable management"]
+    keywords: ["cable tray fill calculator","nec 392.22","cable tray sizing","cable tray capacity","tray fill ratio","cable tray width","ladder tray","ventilated tray","cable management"]
   },
   {
     slug: 'lightning-protection-calculator',

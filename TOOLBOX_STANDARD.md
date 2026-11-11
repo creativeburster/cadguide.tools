@@ -154,7 +154,7 @@ flowchart LR
 | 6 | belt-tension-calculator、bend-allowance-calculator、bending-allowance-table-calculator、bending-force-calculator、bernoulli-equation-calculator | 5372b783～8999bcbc（已通过复核，已 push，2026-11-06） |
 | 7 | bevel-gear-calculator、bim-clash-count-calculator、boiler-efficiency-calculator、bolt-circle-calculator、bolt-circle-pattern-calculator | 03a6be6d～d768d000（已通过复核，2026-11-11） |
 | 8 | bolt-fatigue-calculator、bolt-pattern-load-calculator、brake-torque-calculator、brick-block-quantity-calculator、broaching-force-calculator | 6ade3d80（已通过复核，2026-11-11） |
-| 9 | cable-pull-tension-calculator、cable-sizing-calculator、cable-tray-fill-calculator、cad-format-compatibility-matrix、cad-hatch-scale-optimizer | 待复核 |
+| 9 | cable-pull-tension-calculator、cable-sizing-calculator、cable-tray-fill-calculator、cad-format-compatibility-matrix、cad-hatch-scale-optimizer | 3bb9a877（返工中） |
 
 ---
 

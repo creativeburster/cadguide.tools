@@ -258,7 +258,7 @@ export default function HatchScaleClient() {
     if (!result.valid) return;
     const lines = [
       '# CAD Hatch Pattern Scale Optimization Report',
-      '# Reference: Autodesk AutoCAD Official Help — HPSCALE, HPMAXLINES (100 to 10,000,000, default 100000), and ANSI31 (45 deg, 0.125 units)',
+      '# Reference: Autodesk AutoCAD Official Help — HPSCALE, HPMAXLINES (100 to 10,000,000, default 100000), and ANSI31 (45 deg; 0.125 in imperial acad.pat, 3.175 in metric acadiso.pat)',
       '# Formula: HPSCALE_rec = (d_target * S) / (p_0 * u) | s_model = p_0 * HPSCALE | d_paper = (s_model * u) / S | N_lines = ((W + H) / sqrt(2)) / s_model',
       'Drawing_Unit,Plot_Scale_1_to_S,Base_Pitch_units,Target_Paper_Spacing_mm,Active_HPSCALE,Region_Width_units,Region_Height_units,HPMAXLINES_Limit,Recommended_HPSCALE,Model_Spacing_units,Plotted_Spacing_mm,Estimated_ANSI31_Lines,Status',
       `${unit},${plotScaleStr.trim()},${basePitchStr.trim()},${targetSpacingStr.trim()},${hpscaleStr.trim()},${widthStr.trim()},${heightStr.trim()},${hpmaxlinesStr.trim()},${formatFixed(result.recHpscale, 2)},${formatFixed(result.modelSpacingUnits, 3)},${formatFixed(result.paperSpacingMm, 3)},${formatFixed(result.estimatedLines, 2)},${result.status}`,
@@ -361,7 +361,9 @@ export default function HatchScaleClient() {
               <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
                 Base Pitch p₀ (units)
               </label>
-              <p className="text-[11px] text-slate-400 mb-1">ANSI31: 0.125 units</p>
+              <p className="text-[11px] text-slate-400 mb-1">
+                ANSI31: 0.125 (acad.pat imperial) · 3.175 (acadiso.pat metric)
+              </p>
               <input
                 type="text"
                 data-testid="input-base-pitch"
@@ -529,7 +531,7 @@ export default function HatchScaleClient() {
                 </span>
               </div>
               <p className="text-xs text-slate-500 pl-6 leading-relaxed">
-                Reference: Autodesk AutoCAD Help — HPSCALE system variable (sets the default scale factor for new hatch patterns; initial value 1.0000), HPMAXLINES system variable (sets the maximum number of hatch lines generated in a hatch operation; initial value 100000, valid integer range 100 to 10,000,000), and standard ANSI31 hatch pattern definition (*ANSI31, ANSI Iron, Brick, Stone masonry: 45° angle, 0.125 drawing units perpendicular spacing). Paper spacing readability bounds (0.5–15.0 mm) are typical drafting values; adjust per project standard.
+                Reference: Autodesk AutoCAD Help — HPSCALE system variable (sets the default scale factor for new hatch patterns; initial value 1.0000), HPMAXLINES system variable (sets the maximum number of hatch lines generated in a hatch operation; initial value 100000, valid integer range 100 to 10,000,000), and standard ANSI31 hatch pattern definition (*ANSI31, ANSI Iron, Brick, Stone masonry: 45° angle, with perpendicular base spacing 0.125 in imperial acad.pat and 3.175 in metric acadiso.pat). Paper spacing readability bounds (0.5–15.0 mm) are typical drafting values; adjust per project standard.
               </p>
             </div>
           </div>

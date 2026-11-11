@@ -47,9 +47,9 @@ const SOFTWARES: VerifiedSoftware[] = ['AutoCAD', 'Rhino 8', 'Blender', 'OpenSCA
 
 // Every entry below is verified verbatim against official product help / command documentation:
 // - AutoCAD: Autodesk AutoCAD 2024 Help — IMPORT (Command) & EXPORT (Command)
-// - Rhino 8: McNeel Rhinoceros 8 Help — Index of import/export file types
-// - Blender: Blender Manual — Importing & Exporting Files / Import-Export Add-ons
-// - OpenSCAD: OpenSCAD User Manual — STL Import and Export
+// - Rhino 8: McNeel Rhinoceros 8 Help — Index of import/export file types & IGES (.igs, .iges) Import/Export
+// - Blender: Blender 4.2 LTS Manual — Importing & Exporting Files / Built-in Import-Export Add-ons
+// - OpenSCAD: OpenSCAD Official Cheat Sheet, CLI Manual (openscad.1), Importing Geometry & STL Import and Export
 const MATRIX_ROWS: FormatMatrixRow[] = [
   {
     id: 'autocad-dwg',
@@ -147,9 +147,9 @@ const MATRIX_ROWS: FormatMatrixRow[] = [
     toolSlug: 'rhino',
     format: 'IGES',
     canImport: true,
-    canExport: false,
-    commandRef: 'Import list: IGES (*.igs; *.iges); not listed in Export list',
-    docSource: 'McNeel Rhino 8 Help — Import/Export File Types',
+    canExport: true,
+    commandRef: 'Import & Export: IGES (*.igs; *.iges)',
+    docSource: 'McNeel Rhino 8 Help — IGES (.igs, .iges) Import/Export',
   },
   {
     id: 'rhino-sat',
@@ -239,17 +239,7 @@ const MATRIX_ROWS: FormatMatrixRow[] = [
     canImport: true,
     canExport: true,
     commandRef: 'Importing & Exporting Files: FBX',
-    docSource: 'Blender Manual — Importing & Exporting Files',
-  },
-  {
-    id: 'blender-dxf',
-    software: 'Blender',
-    toolSlug: 'blender',
-    format: 'DXF',
-    canImport: true,
-    canExport: true,
-    commandRef: 'Add-ons » Import-Export » AutoCAD DXF (Import & Export)',
-    docSource: 'Blender Manual — AutoCAD DXF Add-on',
+    docSource: 'Blender 4.2 LTS Manual — Importing & Exporting Files',
   },
   {
     id: 'openscad-stl',
@@ -268,8 +258,8 @@ const MATRIX_ROWS: FormatMatrixRow[] = [
     format: 'DXF',
     canImport: true,
     canExport: true,
-    commandRef: 'import() & File --> Export as DXF (2D geometry)',
-    docSource: 'OpenSCAD User Manual — STL Import and Export',
+    commandRef: 'import() (2D DXF) & CLI/Menu Export as DXF',
+    docSource: 'OpenSCAD Official Cheat Sheet (2D import) & CLI Manual (openscad.1)',
   },
   {
     id: 'openscad-3mf',
@@ -278,8 +268,8 @@ const MATRIX_ROWS: FormatMatrixRow[] = [
     format: '3MF',
     canImport: true,
     canExport: true,
-    commandRef: '3D geometry import & File --> Export as 3MF',
-    docSource: 'OpenSCAD User Manual — STL Import and Export',
+    commandRef: 'import() (3D 3MF) & CLI/Menu Export as 3MF',
+    docSource: 'OpenSCAD Official Cheat Sheet (3D import) & CLI Manual (openscad.1)',
   },
   {
     id: 'openscad-obj',
@@ -288,8 +278,8 @@ const MATRIX_ROWS: FormatMatrixRow[] = [
     format: 'OBJ',
     canImport: true,
     canExport: false,
-    commandRef: '3D geometry import: OBJ; not listed in File --> Export',
-    docSource: 'OpenSCAD User Manual — STL Import and Export',
+    commandRef: 'import() 3D geometry: OBJ; not listed in GUI File --> Export',
+    docSource: 'OpenSCAD Importing Geometry (ImportNode.cc) & User Manual',
   },
 ];
 
@@ -523,7 +513,7 @@ export default function CadFormatCompatibilityClient() {
             <div className="flex items-start gap-2 text-xs text-slate-500 font-medium leading-relaxed">
               <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
               <p>
-                Every entry is verified against official vendor command documentation (AutoCAD 2024 IMPORT/EXPORT, McNeel Rhino 8 File I/O Index, Blender Manual, and OpenSCAD User Manual).
+                Every entry is verified against official vendor documentation (AutoCAD 2024 IMPORT/EXPORT, McNeel Rhino 8 File I/O &amp; IGES Import/Export Help, Blender 4.2 LTS Manual, and OpenSCAD Cheat Sheet / CLI Manual). Note: Blender ≤ 4.1 bundled an AutoCAD DXF add-on, which was unbundled starting in Blender 4.2 LTS in favor of online Extensions and is omitted here.
               </p>
             </div>
           </div>

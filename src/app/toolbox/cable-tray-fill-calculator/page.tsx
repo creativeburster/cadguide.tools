@@ -4,8 +4,9 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Cable Tray Fill Ratio Calculator (NEC 392)",
-  description: "Calculate cable tray fill ratio, cable count, and tray width per NEC Article 392.",
+  title: 'Cable Tray Fill Ratio Calculator (NEC 392.22 Control & Signal)',
+  description:
+    'Calculate multiconductor control and signal cable tray cross-sectional fill ratio per NEC 392.22 (40% solid-bottom / 50% ladder or ventilated; power cables require NEC 392.22(A)(1)).',
   path: '/toolbox/cable-tray-fill-calculator',
 });
 
@@ -29,10 +30,10 @@ export default function CalculatorPage() {
               Engineering Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Cable Tray Fill Ratio Calculator (NEC 392)
+              Cable Tray Fill Ratio Calculator (NEC 392.22)
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate cable tray fill ratio, cable count, and tray width per NEC Article 392.
+              Calculate cross-sectional fill percentage for multiconductor control and signal cable trays per NEC 392.22 (40% solid-bottom / 50% ladder or ventilated).
             </p>
           </div>
         </section>

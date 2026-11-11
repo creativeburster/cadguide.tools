@@ -2070,11 +2070,11 @@
     ]
   },
   "cable-tray-fill-calculator": {
-    "title": "Cable Tray Fill Ratio Calculator (NEC 392)",
-    "description": "Calculate circular cable cross-sectional area, usable tray cross-section, and fill percentage against NFPA 70 (NEC) Article 392 limits.",
+    "title": "Cable Tray Fill Ratio Calculator (NEC 392.22)",
+    "description": "Calculate circular cable cross-sectional area, usable tray cross-section, and fill percentage for multiconductor control/signal cable trays per NEC 392.22 (percentage limits apply ONLY to control/signal cables; power cables require NEC 392.22(A)(1)).",
     "discipline": "Electrical Raceway & Cable Tray Layout",
-    "standards": "NFPA 70 (National Electrical Code / NEC) Article 392",
-    "cadContext": "Check total circular cable cross-sectional area against usable tray width and depth when sizing ladder, ventilated trough, and solid-bottom trays in BIM/CAD containment models.",
+    "standards": "NFPA 70 (NEC) Section 392.22(A)(2) & 392.22(A)(4) (Percentage fill limits apply only to multiconductor control/signal cables; power cables use NEC 392.22(A)(1))",
+    "cadContext": "Evaluate multiconductor control and instrumentation cable cross-sectional area against usable tray width and depth (up to 150 mm / 6 in); evaluate power cable trays separately per NEC 392.22(A)(1).",
     "formula": "A_cable = Σ N_i · (π · d_i² / 4) [mm²] • A [cm²] = A [mm²] / 100 • Fill % = (A_cable / (W × H)) × 100%",
     "inputs": [
       {
@@ -2086,20 +2086,20 @@
         "val": "100"
       },
       {
-        "label": "Power Cables N₁",
-        "val": "8"
+        "label": "Control Cables N₁",
+        "val": "15"
       },
       {
-        "label": "Power OD d₁ (mm)",
-        "val": "24"
+        "label": "Control OD d₁ (mm)",
+        "val": "16"
       },
       {
-        "label": "Control Cables N₂",
-        "val": "20"
+        "label": "Signal Cables N₂",
+        "val": "25"
       },
       {
-        "label": "Control OD d₂ (mm)",
-        "val": "12"
+        "label": "Signal OD d₂ (mm)",
+        "val": "10"
       },
       {
         "label": "Max Fill Limit (%)",
@@ -2109,11 +2109,11 @@
     "outputs": [
       {
         "label": "Cross-Sectional Fill Ratio",
-        "val": "19.60 %"
+        "val": "16.60 %"
       },
       {
         "label": "Total Cable Area",
-        "val": "58.81 cm²"
+        "val": "49.79 cm²"
       },
       {
         "label": "Tray Internal Cross-Section",
@@ -2121,7 +2121,7 @@
       },
       {
         "label": "Remaining Allowable Area",
-        "val": "61.19 cm²"
+        "val": "70.21 cm²"
       },
       {
         "label": "Status",
@@ -2133,7 +2133,7 @@
     "title": "CAD Format Compatibility Matrix",
     "description": "Directional CAD file import/export compatibility reference and single-hop bridge lookup across AutoCAD, Rhino 8, Blender, and OpenSCAD (DWG, DXF, STEP, IGES, SAT, STL, OBJ, 3MF, FBX, PDF).",
     "discipline": "CAD Data Exchange & Multi-Software File Interoperability",
-    "standards": "ISO 10303-21 (STEP), Official Vendor Command Documentation (AutoCAD 2024 Help, McNeel Rhino 8 Help, Blender Manual, OpenSCAD User Manual)",
+    "standards": "ISO 10303-21 (STEP), Official Vendor Documentation (AutoCAD 2024 Help, McNeel Rhino 8 Help incl. IGES Import/Export, Blender 4.2 LTS Manual, OpenSCAD Cheat Sheet & CLI Manual)",
     "cadContext": "Verify directional Import and Export support (such as AutoCAD STEP import vs STLOUT export) before planning neutral-file handoffs across 2D drafting, NURBS modeling, and mesh pipelines.",
     "formula": "Directional Single-Hop Bridge: CanBridge(S → T) = SupportsImport(S) ∧ SupportsExport(T)",
     "inputs": [
@@ -2153,15 +2153,15 @@
       },
       {
         "label": "Verified Matrix Entries",
-        "val": "24"
+        "val": "23"
       }
     ]
   },
   "cad-hatch-scale-optimizer": {
     "title": "CAD Hatch Pattern Scale Optimizer (HPSCALE & HPMAXLINES)",
-    "description": "Calculate AutoCAD HPSCALE from drawing units, plot scale, and base pattern pitch (ANSI31 = 0.125 units), and check estimated hatch line count against HPMAXLINES.",
+    "description": "Calculate AutoCAD HPSCALE from drawing units, plot scale, and base pattern pitch (ANSI31: 0.125 in imperial acad.pat, 3.175 in metric acadiso.pat), and check estimated hatch line count against HPMAXLINES.",
     "discipline": "CAD Drafting Standards & Sheet Plotting",
-    "standards": "Autodesk AutoCAD 2024 Help — HPSCALE, HPMAXLINES (100 to 10,000,000, initial value 100000), and ANSI31 Pattern Definition (45°, 0.125 units)",
+    "standards": "Autodesk AutoCAD 2024 Help — HPSCALE, HPMAXLINES (100 to 10,000,000, initial value 100000), and ANSI31 Pattern Definition (45°; 0.125 in acad.pat imperial, 3.175 in acadiso.pat metric)",
     "cadContext": "Match HPSCALE to model-space units and viewport plot scale 1:S so plotted hatch spacing stays legible on paper without exceeding the AutoCAD HPMAXLINES generation limit.",
     "formula": "HPSCALE_rec = (d_target · S) / (p₀ · u) • s_model = p₀ · HPSCALE • d_paper = (s_model · u) / S • N_lines = ((W + H) / √2) / s_model",
     "inputs": [

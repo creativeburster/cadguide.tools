@@ -28,33 +28,33 @@ interface TrayPreset {
 
 const PRESETS: TrayPreset[] = [
   {
-    label: 'Solid Bottom 300×100 (40% Limit)',
+    label: 'Solid Bottom Control/Signal (40% Limit)',
     width: '300',
     depth: '100',
-    n1: '8',
-    d1: '24',
-    n2: '20',
-    d2: '12',
+    n1: '15',
+    d1: '16',
+    n2: '25',
+    d2: '10',
     maxFill: '40',
   },
   {
-    label: 'Ladder Tray Control Only (50% Limit)',
+    label: 'Ladder Tray Control/Signal (50% Limit)',
     width: '450',
     depth: '100',
-    n1: '0',
-    d1: '0',
-    n2: '120',
-    d2: '14',
+    n1: '40',
+    d1: '16',
+    n2: '80',
+    d2: '12',
     maxFill: '50',
   },
   {
-    label: 'Overfilled 150×75 Tray (Exceeds Limit)',
+    label: 'Overfilled 150×75 Control Tray (40% Limit)',
     width: '150',
     depth: '75',
-    n1: '10',
-    d1: '22',
-    n2: '15',
-    d2: '14',
+    n1: '18',
+    d1: '16',
+    n2: '20',
+    d2: '12',
     maxFill: '40',
   },
 ];
@@ -158,10 +158,10 @@ export default function CalculatorClient() {
   const handleExportCsv = () => {
     if (!result.valid) return;
     const lines = [
-      '# Cable Tray Cross-Sectional Fill Ratio Report',
-      '# Reference: NFPA 70 (NEC) Article 392 (40% solid-bottom / 50% ladder or ventilated control & signal fill limits)',
+      '# Cable Tray Cross-Sectional Fill Ratio Report (Control & Signal Cables Only)',
+      '# Reference: NFPA 70 (NEC) Section 392.22(A)(2) & 392.22(A)(4) — Percentage fill limits (40% solid-bottom / 50% ladder or ventilated) apply ONLY to trays containing multiconductor control and/or signal cables; power cables must be evaluated per NEC 392.22(A)(1) or (A)(3) (percentage limit does not apply)',
       '# Formula: A_cable = Sum(N_i * pi * d_i^2 / 4) [mm^2] | A_cm2 = A_mm2 / 100 | Fill% = (A_cable / (W * H)) * 100',
-      'Tray_Width_mm,Tray_Depth_mm,Group1_Count,Group1_OD_mm,Group2_Count,Group2_OD_mm,Max_Fill_Limit_Pct,Fill_Ratio_Pct,Total_Cable_Area_cm2,Tray_Area_cm2,Remaining_Allowable_Area_cm2,Status',
+      'Tray_Width_mm,Tray_Depth_mm,Control_Cables_N1,Control_OD_d1_mm,Signal_Cables_N2,Signal_OD_d2_mm,Max_Fill_Limit_Pct,Fill_Ratio_Pct,Total_Cable_Area_cm2,Tray_Area_cm2,Remaining_Allowable_Area_cm2,Status',
       `${widthStr.trim()},${depthStr.trim()},${n1Str.trim()},${d1Str.trim()},${n2Str.trim()},${d2Str.trim()},${maxFillStr.trim()},${formatFixed(result.fillPct, 2)},${formatFixed(result.cableAreaCm2, 2)},${formatFixed(result.trayAreaCm2, 2)},${formatFixed(result.remainingAreaCm2, 2)},${result.status}`,
     ];
     const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
@@ -186,13 +186,13 @@ export default function CalculatorClient() {
             </div>
             <div>
               <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs &amp; Parameters</h2>
-              <p className="text-xs text-slate-500 font-medium">Tray dimensions &amp; outer cable diameters</p>
+              <p className="text-xs text-slate-500 font-medium">Multiconductor control &amp; signal cables only</p>
             </div>
           </div>
 
           <div className="space-y-2">
             <span className="text-xs font-black text-slate-400 uppercase tracking-wider block">
-              NEC 392 Tray Presets
+              NEC 392.22 Control/Signal Presets
             </span>
             <div className="flex flex-wrap gap-2">
               {PRESETS.map((p, idx) => (
@@ -242,28 +242,28 @@ export default function CalculatorClient() {
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
-                Power Cables N₁
+                Control Cables N₁
               </label>
               <input
                 type="text"
                 data-testid="input-n1"
                 value={n1Str}
                 onChange={(e) => setN1Str(e.target.value)}
-                placeholder="8"
+                placeholder="15"
                 className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
               />
             </div>
 
             <div>
               <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
-                Power OD d₁ (mm)
+                Control OD d₁ (mm)
               </label>
               <input
                 type="text"
                 data-testid="input-d1"
                 value={d1Str}
                 onChange={(e) => setD1Str(e.target.value)}
-                placeholder="24"
+                placeholder="16"
                 className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
               />
             </div>
@@ -272,28 +272,28 @@ export default function CalculatorClient() {
           <div className="grid grid-cols-2 gap-3">
             <div>
               <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
-                Control Cables N₂
+                Signal Cables N₂
               </label>
               <input
                 type="text"
                 data-testid="input-n2"
                 value={n2Str}
                 onChange={(e) => setN2Str(e.target.value)}
-                placeholder="20"
+                placeholder="25"
                 className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
               />
             </div>
 
             <div>
               <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
-                Control OD d₂ (mm)
+                Signal OD d₂ (mm)
               </label>
               <input
                 type="text"
                 data-testid="input-d2"
                 value={d2Str}
                 onChange={(e) => setD2Str(e.target.value)}
-                placeholder="12"
+                placeholder="10"
                 className="w-full h-11 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
               />
             </div>
@@ -304,7 +304,7 @@ export default function CalculatorClient() {
               Max Fill Limit (%)
             </label>
             <p className="text-xs text-slate-400 mb-1.5">
-              NEC 392 control/signal multiconductor limits: 40% solid bottom, 50% ladder/ventilated trough.
+              Percentage fill limits (40% solid bottom per NEC 392.22(A)(4), 50% ladder/ventilated per NEC 392.22(A)(2)) apply ONLY to multiconductor control/signal cables; power cables must be sized per NEC 392.22(A)(1) (percentage limit does not apply).
             </p>
             <input
               type="text"
@@ -411,7 +411,7 @@ export default function CalculatorClient() {
                 </span>
               </div>
               <p className="text-xs text-slate-500 pl-6 leading-relaxed">
-                Reference: NFPA 70 (National Electrical Code / NEC) Article 392 specifies maximum cross-sectional fill rates of 50% for ladder or ventilated trough trays and 40% for solid-bottom trays containing multiconductor control and/or signal cables (25% for solid-bottom trays with heat-producing cables per NEC 392.12). Power cables 4/0 AWG and larger or single-conductor installations require single-layer diameter-sum or NEC fill-area table checks.
+                Reference: NFPA 70 (National Electrical Code / NEC) Section 392.22 — Percentage cross-sectional fill limits (50% for ladder or ventilated trough trays per NEC 392.22(A)(2), and 40% for solid-bottom trays per NEC 392.22(A)(4), with usable inside depth up to 150 mm / 6 in) apply ONLY to trays containing multiconductor control and/or signal cables. Trays carrying power or lighting cables (or mixed power and control cables) are governed by NEC 392.22(A)(1) or 392.22(A)(3) using Table 392.22(A) fixed area columns or diameter-sum rules; percentage fill judgment in this tool does not apply to power cables.
               </p>
             </div>
           </div>

@@ -298,45 +298,52 @@ async function runBatch9Tests() {
     await runSubTest('43. cable-tray-fill-calculator', async (p) => {
       await openToolPage(p, `${BASE_URL}/toolbox/cable-tray-fill-calculator`, '[data-testid="input-width"]');
 
-      // 1. Default Hand-Calculation (W=300 mm, H=100 mm, n1=8, d1=24 mm, n2=20, d2=12 mm, maxFill=40%)
-      // Step-by-step unit derivation (1 cm^2 = 100 mm^2):
-      //   A_tray = 300 [mm] * 100 [mm] = 30000 [mm^2] = 300.00 [cm^2]
-      //   A_cables = 8 * (pi * 24^2 / 4) + 20 * (pi * 12^2 / 4)
-      //            = 3619.11474 + 2261.94671 = 5881.06145 [mm^2] = 58.8106 [cm^2] -> 58.81
-      //   Fill% = (5881.06145 / 30000) * 100 = 19.6035 [%] -> 19.60
-      //   Remaining = 300.00 * 0.40 - 58.8106 = 120.00 - 58.8106 = 61.1894 [cm^2] -> 61.19 ('Within Limit')
-      assertClose(parseFloat(await p.innerText('[data-testid="result-fill-pct"]')), 19.60, 0.001, 'Default Tray Fill Pct');
-      assertClose(parseFloat(await p.innerText('[data-testid="result-cable-area"]')), 58.81, 0.001, 'Default Cable Area');
+      // 1. Default Hand-Calculation — Control/Signal Cables Only per NEC 392.22(A)(4) (40% solid-bottom limit)
+      //    Inputs: W=300 mm, H=100 mm, N1=15 (16 mm control cables), N2=25 (10 mm signal cables), maxFill=40%
+      //    Step-by-step unit derivation (mm -> mm^2 -> cm^2, 1 cm^2 = 100 mm^2):
+      //      A_tray = 300 [mm] * 100 [mm] = 30000 [mm^2] = 300.00 [cm^2]
+      //      A_control = 15 * (pi * 16^2 / 4) = 15 * 64 * pi = 960 * pi = 3015.92895 [mm^2]
+      //      A_signal  = 25 * (pi * 10^2 / 4) = 25 * 25 * pi = 625 * pi = 1963.49541 [mm^2]
+      //      A_cables  = 1585 * pi = 4979.42436 [mm^2] = 49.7942 [cm^2] -> 49.79
+      //      Fill%     = (4979.42436 / 30000) * 100 = 16.5981 [%] -> 16.60
+      //      Allowable = 300.00 * 0.40 = 120.00 [cm^2]
+      //      Remaining = 120.00 - 49.7942 = 70.2058 [cm^2] -> 70.21 ('Within Limit')
+      assertClose(parseFloat(await p.innerText('[data-testid="result-fill-pct"]')), 16.60, 0.001, 'Default Tray Fill Pct');
+      assertClose(parseFloat(await p.innerText('[data-testid="result-cable-area"]')), 49.79, 0.001, 'Default Cable Area');
       assertClose(parseFloat(await p.innerText('[data-testid="result-tray-area"]')), 300.00, 0.001, 'Default Tray Area');
-      assertClose(parseFloat(await p.innerText('[data-testid="result-remaining-area"]')), 61.19, 0.001, 'Default Remaining Area');
+      assertClose(parseFloat(await p.innerText('[data-testid="result-remaining-area"]')), 70.21, 0.001, 'Default Remaining Area');
       if ((await p.innerText('[data-testid="result-status"]')).trim() !== 'Within Limit') {
         throw new Error('Expected default Cable Tray status Within Limit');
       }
 
-      // 2. Preset 1: Ladder Tray Control Only 50% Limit (W=450, H=100, n1=0, d1=0, n2=120, d2=14, maxFill=50)
-      // Hand calc:
-      //   A_tray = 45000 mm^2 = 450.00 cm^2
-      //   A_cables = 120 * (pi * 196 / 4) = 18472.5648 mm^2 = 184.7256 cm^2 -> 184.73
-      //   Fill% = (18472.5648 / 45000) * 100 = 41.0501% -> 41.05
-      //   Remaining = 450.00 * 0.50 - 184.7256 = 40.2744 cm^2 -> 40.27 ('Within Limit')
+      // 2. Preset 1: Ladder Tray Control/Signal (50% Limit per NEC 392.22(A)(2))
+      //    Inputs: W=450 mm, H=100 mm, N1=40 (16 mm), N2=80 (12 mm), maxFill=50%
+      //    Hand calc:
+      //      A_tray    = 45000 mm^2 = 450.00 cm^2
+      //      A_cables  = 40 * (pi * 256 / 4) + 80 * (pi * 144 / 4) = (2560 + 2880) * pi = 5440 * pi
+      //                = 17090.2640 mm^2 = 170.9026 cm^2 -> 170.90
+      //      Fill%     = (17090.2640 / 45000) * 100 = 37.9784% -> 37.98
+      //      Remaining = 450.00 * 0.50 - 170.9026 = 225.00 - 170.9026 = 54.0974 cm^2 -> 54.10 ('Within Limit')
       await p.click('[data-testid="preset-btn-1"]');
       await p.waitForFunction(() => document.querySelector('[data-testid="result-tray-area"]').textContent.trim() === '450.00');
-      assertClose(parseFloat(await p.innerText('[data-testid="result-fill-pct"]')), 41.05, 0.001, 'Preset 1 Fill Pct');
-      assertClose(parseFloat(await p.innerText('[data-testid="result-cable-area"]')), 184.73, 0.001, 'Preset 1 Cable Area');
-      assertClose(parseFloat(await p.innerText('[data-testid="result-remaining-area"]')), 40.27, 0.001, 'Preset 1 Remaining');
+      assertClose(parseFloat(await p.innerText('[data-testid="result-fill-pct"]')), 37.98, 0.001, 'Preset 1 Fill Pct');
+      assertClose(parseFloat(await p.innerText('[data-testid="result-cable-area"]')), 170.90, 0.001, 'Preset 1 Cable Area');
+      assertClose(parseFloat(await p.innerText('[data-testid="result-remaining-area"]')), 54.10, 0.001, 'Preset 1 Remaining');
 
-      // 3. Preset 2: Overfilled 150x75 Tray (W=150, H=75, n1=10, d1=22, n2=15, d2=14, maxFill=40)
-      // Hand calc:
-      //   A_tray = 11250 mm^2 = 112.50 cm^2
-      //   A_cables = 10 * (pi * 484 / 4) + 15 * (pi * 196 / 4) = 3801.3271 + 2309.0706 = 6110.3977 mm^2 = 61.1040 cm^2 -> 61.10
-      //   Fill% = (6110.3977 / 11250) * 100 = 54.3146% -> 54.31
-      //   Remaining = 112.50 * 0.40 - 61.1040 = -16.1040 cm^2 -> -16.10 ('Exceeds Limit')
+      // 3. Preset 2: Overfilled 150x75 Control Tray (40% Limit per NEC 392.22(A)(4))
+      //    Inputs: W=150 mm, H=75 mm, N1=18 (16 mm), N2=20 (12 mm), maxFill=40%
+      //    Hand calc:
+      //      A_tray    = 11250 mm^2 = 112.50 cm^2
+      //      A_cables  = 18 * (pi * 256 / 4) + 20 * (pi * 144 / 4) = (1152 + 720) * pi = 1872 * pi
+      //                = 5881.0614 mm^2 = 58.8106 cm^2 -> 58.81
+      //      Fill%     = (5881.0614 / 11250) * 100 = 52.2761% -> 52.28
+      //      Remaining = 112.50 * 0.40 - 58.8106 = 45.00 - 58.8106 = -13.8106 cm^2 -> -13.81 ('Exceeds Limit')
       await p.click('[data-testid="preset-btn-2"]');
       await p.waitForFunction(() => document.querySelector('[data-testid="result-status"]').textContent.trim() === 'Exceeds Limit');
-      assertClose(parseFloat(await p.innerText('[data-testid="result-fill-pct"]')), 54.31, 0.001, 'Preset 2 Fill Pct');
-      assertClose(parseFloat(await p.innerText('[data-testid="result-cable-area"]')), 61.10, 0.001, 'Preset 2 Cable Area');
+      assertClose(parseFloat(await p.innerText('[data-testid="result-fill-pct"]')), 52.28, 0.001, 'Preset 2 Fill Pct');
+      assertClose(parseFloat(await p.innerText('[data-testid="result-cable-area"]')), 58.81, 0.001, 'Preset 2 Cable Area');
       assertClose(parseFloat(await p.innerText('[data-testid="result-tray-area"]')), 112.50, 0.001, 'Preset 2 Tray Area');
-      assertClose(parseFloat(await p.innerText('[data-testid="result-remaining-area"]')), -16.10, 0.001, 'Preset 2 Remaining');
+      assertClose(parseFloat(await p.innerText('[data-testid="result-remaining-area"]')), -13.81, 0.001, 'Preset 2 Remaining');
 
       // 4. Input Defenses on >= 2 inputs ('', 'abc', '12abc', non-integer cable count '1.5')
       const wInput = p.locator('[data-testid="input-width"]');
@@ -360,7 +367,7 @@ async function runBatch9Tests() {
       await verifyNoNaNOrInfinity(p, 'Tray Fill non-integer n1');
 
       await p.click('[data-testid="reset-btn"]');
-      await p.waitForFunction(() => document.querySelector('[data-testid="result-fill-pct"]').textContent.trim() === '19.60');
+      await p.waitForFunction(() => document.querySelector('[data-testid="result-fill-pct"]').textContent.trim() === '16.60');
 
       // 5. CSV Export Verification
       const [download] = await Promise.all([
@@ -368,18 +375,24 @@ async function runBatch9Tests() {
         p.click('[data-testid="export-csv-btn"]'),
       ]);
       const csvText = fs.readFileSync(await download.path(), 'utf8');
-      if (!csvText.includes('Tray_Width_mm,Tray_Depth_mm,Group1_Count') || !csvText.includes('Article 392')) {
-        throw new Error('Cable Tray CSV missing expected headers');
+      if (
+        !csvText.includes('Tray_Width_mm,Tray_Depth_mm,Control_Cables_N1,Control_OD_d1_mm,Signal_Cables_N2,Signal_OD_d2_mm') ||
+        !csvText.includes('392.22(A)(1)')
+      ) {
+        throw new Error('Cable Tray CSV missing expected NEC 392.22(A)(1) scope notice or headers');
       }
-      if (!csvText.includes('300,100,8,24,20,12,40,19.60,58.81,300.00,61.19,Within Limit')) {
+      if (!csvText.includes('300,100,15,16,25,10,40,16.60,49.79,300.00,70.21,Within Limit')) {
         throw new Error('Cable Tray CSV missing expected numerical row');
       }
 
-      // 6. Negative Assertions
+      // 6. Scope & Negative Assertions
       const coreText =
         (await p.innerText('[data-testid="calculator-inputs"]')) +
         ' ' +
         (await p.innerText('[data-testid="calculator-results"]'));
+      if (!coreText.includes('392.22(A)(1)') || !coreText.includes('multiconductor control')) {
+        throw new Error('Cable Tray core missing NEC 392.22(A)(1) power-cable exclusion notice');
+      }
       for (const banned of ['NEMA VE 2', 'IEC 60909', 'IPC-2221', 'IEEE Std 1584']) {
         if (coreText.includes(banned)) {
           throw new Error(`Cable Tray core contains removed standard '${banned}'`);
@@ -393,7 +406,7 @@ async function runBatch9Tests() {
     await runSubTest('44. cad-format-compatibility-matrix', async (p) => {
       await openToolPage(p, `${BASE_URL}/toolbox/cad-format-compatibility-matrix`, '[data-testid="select-source-format"]');
 
-      // 1. Default Bridge Check: STEP (Import) -> STL (Export) => 2 tools (AutoCAD, Rhino 8), 24 total rows
+      // 1. Default Bridge Check: STEP (Import) -> STL (Export) => 2 tools (AutoCAD, Rhino 8), 23 total rows
       if ((await p.innerText('[data-testid="bridge-count"]')).trim() !== '2') {
         throw new Error('Expected 2 bridge tools for STEP -> STL');
       }
@@ -403,8 +416,8 @@ async function runBatch9Tests() {
       if ((await p.locator('[data-testid="bridge-card-rhino"]').count()) !== 1) {
         throw new Error('Expected Rhino 8 bridge card for STEP -> STL');
       }
-      if ((await p.locator('[data-testid="matrix-table"] tbody tr').count()) !== 24) {
-        throw new Error('Expected 24 verified matrix rows by default');
+      if ((await p.locator('[data-testid="matrix-table"] tbody tr').count()) !== 23) {
+        throw new Error('Expected 23 verified matrix rows by default');
       }
 
       // 2. Directional Asymmetry Check: STL (Import) -> STEP (Export) => 1 tool (Rhino 8 only; AutoCAD does not import STL)
@@ -416,6 +429,16 @@ async function runBatch9Tests() {
       }
       if ((await p.locator('[data-testid="bridge-card-rhino"]').count()) !== 1) {
         throw new Error('Rhino 8 must appear as a bridge for STL -> STEP');
+      }
+
+      // 2b. Rhino 8 IGES Export Bridge Check: STL (Import) -> IGES (Export) => 1 tool (Rhino 8)
+      await p.selectOption('[data-testid="select-target-format"]', 'IGES');
+      await p.waitForFunction(() => document.querySelector('[data-testid="bridge-count"]').textContent.trim() === '1');
+      if ((await p.locator('[data-testid="bridge-card-rhino"]').count()) !== 1) {
+        throw new Error('Rhino 8 must appear as a bridge for STL -> IGES');
+      }
+      if ((await p.locator('[data-testid="bridge-card-autocad"]').count()) !== 0) {
+        throw new Error('AutoCAD must NOT appear as a bridge for STL -> IGES');
       }
 
       // 3. Zero Single-Hop Bridge Check: SAT (Import: AutoCAD only) -> 3MF (Export: Rhino 8 & OpenSCAD) => 0 tools
@@ -436,12 +459,39 @@ async function runBatch9Tests() {
 
       // 5. Software & Direction Filters scoped to matrix-table tbody tr
       await p.locator('[data-testid="search-input"]').fill('');
-      await p.selectOption('[data-testid="filter-software"]', 'Blender');
-      await p.waitForFunction(() => document.querySelectorAll('[data-testid="matrix-table"] tbody tr').length === 4);
 
+      // 5a. Rhino 8 filter => 10 rows; rhino-iges is bidirectional with updated commandRef
+      await p.selectOption('[data-testid="filter-software"]', 'Rhino 8');
+      await p.waitForFunction(() => document.querySelectorAll('[data-testid="matrix-table"] tbody tr').length === 10);
+      const rhinoIgesText = await p.innerText('[data-testid="matrix-row-rhino-iges"]');
+      if (
+        !rhinoIgesText.includes('Import & Export: IGES (*.igs; *.iges)') ||
+        rhinoIgesText.includes('not listed in Export list')
+      ) {
+        throw new Error('Rhino 8 IGES row missing updated Import & Export commandRef');
+      }
+
+      // 5b. Blender filter => 3 rows (OBJ, STL, FBX; unbundled Blender <=4.1 DXF add-on removed)
+      await p.selectOption('[data-testid="filter-software"]', 'Blender');
+      await p.waitForFunction(() => document.querySelectorAll('[data-testid="matrix-table"] tbody tr').length === 3);
+      if ((await p.locator('[data-testid="matrix-row-blender-dxf"]').count()) !== 0) {
+        throw new Error('blender-dxf must be removed in Blender 4.2 LTS native matrix');
+      }
+
+      // 5c. OpenSCAD filter => 4 rows; DXF, 3MF, OBJ each cite their specific manual/source (not STL Import and Export)
+      await p.selectOption('[data-testid="filter-software"]', 'OpenSCAD');
+      await p.waitForFunction(() => document.querySelectorAll('[data-testid="matrix-table"] tbody tr').length === 4);
+      for (const rowId of ['matrix-row-openscad-dxf', 'matrix-row-openscad-3mf', 'matrix-row-openscad-obj']) {
+        const txt = await p.innerText(`[data-testid="${rowId}"]`);
+        if (txt.includes('STL Import and Export')) {
+          throw new Error(`${rowId} still cites generic 'STL Import and Export'`);
+        }
+      }
+
+      // 5d. Direction filters across all software: import-only => 2 (autocad-step, openscad-obj); export-only => 2 (autocad-stl, rhino-sat)
       await p.selectOption('[data-testid="filter-software"]', 'All');
       await p.selectOption('[data-testid="filter-direction"]', 'import-only');
-      await p.waitForFunction(() => document.querySelectorAll('[data-testid="matrix-table"] tbody tr').length === 3);
+      await p.waitForFunction(() => document.querySelectorAll('[data-testid="matrix-table"] tbody tr').length === 2);
 
       await p.selectOption('[data-testid="filter-direction"]', 'export-only');
       await p.waitForFunction(() => document.querySelectorAll('[data-testid="matrix-table"] tbody tr').length === 2);
@@ -451,7 +501,7 @@ async function runBatch9Tests() {
       await p.waitForFunction(
         () =>
           document.querySelector('[data-testid="bridge-count"]').textContent.trim() === '2' &&
-          document.querySelectorAll('[data-testid="matrix-table"] tbody tr').length === 24
+          document.querySelectorAll('[data-testid="matrix-table"] tbody tr').length === 23
       );
       await verifyNoNaNOrInfinity(p, 'Format Matrix reset');
 
@@ -463,9 +513,11 @@ async function runBatch9Tests() {
       if (
         !csvText.includes('Software,Format,Import_Supported,Export_Supported,Command_Or_Menu_Reference,Official_Source') ||
         !csvText.includes('"AutoCAD","STEP","Yes","No"') ||
-        !csvText.includes('"AutoCAD","STL","No","Yes"')
+        !csvText.includes('"AutoCAD","STL","No","Yes"') ||
+        !csvText.includes('"Rhino 8","IGES","Yes","Yes","Import & Export: IGES (*.igs; *.iges)"') ||
+        csvText.includes('"Blender","DXF"')
       ) {
-        throw new Error('Format Matrix CSV missing expected directional entries');
+        throw new Error('Format Matrix CSV missing expected Rhino IGES bidirectional entry or contains removed Blender DXF');
       }
 
       // 7. Negative Assertions (unverified IFC/BIM standards & unverified software removed)
@@ -564,18 +616,26 @@ async function runBatch9Tests() {
         p.click('[data-testid="export-csv-btn"]'),
       ]);
       const csvText = fs.readFileSync(await download.path(), 'utf8');
-      if (!csvText.includes('Drawing_Unit,Plot_Scale_1_to_S,Base_Pitch_units') || !csvText.includes('HPMAXLINES')) {
-        throw new Error('Hatch Scale CSV missing expected headers');
+      if (
+        !csvText.includes('Drawing_Unit,Plot_Scale_1_to_S,Base_Pitch_units') ||
+        !csvText.includes('HPMAXLINES') ||
+        !csvText.includes('acad.pat') ||
+        !csvText.includes('acadiso.pat')
+      ) {
+        throw new Error('Hatch Scale CSV missing expected headers or acad.pat / acadiso.pat note');
       }
       if (!csvText.includes('mm,100,0.125,2.5,2000,10000,10000,100000,2000.00,250.000,2.500,56.57,Optimal')) {
         throw new Error('Hatch Scale CSV missing expected numerical row');
       }
 
-      // 7. Negative Assertions
+      // 7. Positive & Negative Assertions
       const coreText =
         (await p.innerText('[data-testid="calculator-inputs"]')) +
         ' ' +
         (await p.innerText('[data-testid="calculator-results"]'));
+      if (!coreText.includes('acad.pat') || !coreText.includes('acadiso.pat') || !coreText.includes('3.175')) {
+        throw new Error('Hatch Scale core missing acad.pat (0.125) / acadiso.pat (3.175) notice');
+      }
       for (const banned of ['MAXHATCH', 'AR-CONC', 'GRAVEL', 'ISO 10303-21', 'ISO 19650']) {
         if (coreText.includes(banned)) {
           throw new Error(`Hatch Scale core contains unverified/removed item '${banned}'`);
