@@ -571,21 +571,20 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cad-hatch-scale-optimizer',
     title: 'CAD Hatch Pattern Scale Optimizer',
-    description: 'Optimize drawing patterns density to prevent viewport freezes and empty hatches.',
-    detailDesc: 'Calculate recommended hatch scales based on current drawing units (Metric vs Imperial) and targeted sheet scales to prevent solid hatch scaling crashes (MAXHATCH limit exceeded).',
+    description: 'Calculate AutoCAD HPSCALE and check estimated ANSI31 hatch line count against HPMAXLINES.',
+    detailDesc: 'Calculate recommended HPSCALE from model-space units, plot scale, and base pattern pitch (ANSI31 = 0.125 units) while checking estimated line count against HPMAXLINES.',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'native',
     keywords: [
       'hatch scale optimizer',
-      'maxhatch fix',
-      'autocad hatch scale',
+      'hpmaxlines limit',
+      'autocad hpscale',
       'hatch density limit',
-      'hatch density limit exceeded fix',
-      'maxhatch limit autocad crash warning',
+      'ansi31 hatch spacing',
       'cad hatch scale factor optimizer',
-      'solid hatch pattern scale generator'
+      'solid hatch pattern scale'
     ]
   },
   {
@@ -2308,14 +2307,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'cable-sizing-calculator',
-    title: 'Cable Sizing Calculator',
-    description: 'Calculate minimum cable cross-section from current carrying capacity and voltage drop.',
-    detailDesc: 'A = I/(current density), check Vd',
+    title: 'Cable Sizing & AC Voltage Drop Calculator',
+    description: 'Calculate three-phase and single-phase AC voltage drop and minimum IEC 60228 conductor cross-section.',
+    detailDesc: 'AC voltage drop ΔU = k · I · (L/1000) · (R cosφ + X sinφ) with editable resistivity, reactance, and IEC 60228 standard section selection.',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["cable","electrical","calculator"]
+    keywords: ["cable sizing","voltage drop","iec 60228","electrical","calculator"]
   },
   {
     slug: 'generator-sizing-calculator',
@@ -4290,13 +4289,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cable-tray-fill-calculator',
     title: "Cable Tray Fill Ratio Calculator (NEC 392)",
-    description: "Calculate cable tray fill ratio, cable count, and tray width per NEC Article 392.",
-    detailDesc: "NEC 392: ladder/ventilated tray spacing rules. Solid bottom 50% fill for 4/0+. Max weight from NEMA load class. Includes cable diameter sum, tray width selection.",
+    description: "Calculate circular cable cross-sectional area, usable tray area, and fill ratio per NEC Article 392.",
+    detailDesc: "NFPA 70 (NEC) Article 392 cross-sectional fill check (40% solid bottom, 50% ladder or ventilated trough for multiconductor control/signal cables).",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["cable tray fill calculator","nec 392","cable tray sizing","cable tray capacity","tray fill ratio","cable tray width","ladder tray","ventilated tray","nema load class","cable management"]
+    keywords: ["cable tray fill calculator","nec 392","cable tray sizing","cable tray capacity","tray fill ratio","cable tray width","ladder tray","ventilated tray","cable management"]
   },
   {
     slug: 'lightning-protection-calculator',
@@ -4608,14 +4607,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'cable-pull-tension-calculator',
-    title: "Cable Pull Tension Calculator (NEC / IEEE 1185)",
-    description: "Calculate cable pulling tension and sidewall pressure for conduit installations per IEEE 1185.",
-    detailDesc: "T = T_prev + L*w*mu (straight). T = T_prev*exp(mu*theta) (curve). Sidewall pressure = T/R. Max tension from cable NEC tables. Includes weight correction factor, jamming ratio, and conduit fill.",
+    title: "Cable Pull Tension & Sidewall Pressure Calculator",
+    description: "Calculate conduit cable pulling tension (Euler-Eytelwein capstan equation) and radial sidewall bearing pressure.",
+    detailDesc: "T_in = (m*9.81*L*mu)/1000, T_out = T_in*exp(mu*theta), and SWP = T_out/R with editable friction coefficient and Southwire SW-1003229 sidewall pressure reference.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["cable pull tension","ieee 1185","cable pulling","conduit pull","sidewall pressure","cable tension","pulling force","cable installation","conduit fill","jamming ratio","cable routing"]
+    keywords: ["cable pull tension","capstan equation","cable pulling","conduit pull","sidewall pressure","cable tension","pulling force","cable installation","cable routing"]
   },
   {
     slug: 'cad-license-tco-calculator',
@@ -4631,13 +4630,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cad-format-compatibility-matrix',
     title: 'CAD Format Compatibility Matrix',
-    description: 'Find which CAD tools natively bridge two file formats (DWG, DXF, STEP, IGES, STL, IFC, OBJ, PDF, FBX, 3MF).',
-    detailDesc: 'Pick a source and target format to list native bridge candidates from the CADGuide catalog, plus single-format tools that need a two-hop pipeline. Support data from vendor-published specifications.',
+    description: 'Find which CAD tools natively import and export DWG, DXF, STEP, IGES, SAT, STL, OBJ, 3MF, FBX, and PDF.',
+    detailDesc: 'Directional Import → Export lookup and verified command reference across AutoCAD, Rhino 8, Blender, and OpenSCAD.',
     category: 'converter',
     status: 'released',
     origin: 'native',
     releasedDate: '2026-08-07',
-    keywords: ['cad format compatibility', 'dwg to step', 'ifc interoperability', 'cad file conversion matrix'],
+    keywords: ['cad format compatibility', 'step to stl', 'dwg to dxf', 'cad file conversion matrix'],
   },
   {
     slug: 'concurrent-vs-named-breakeven-calculator',

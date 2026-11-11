@@ -125,6 +125,7 @@ export default function BoltFatigueCalculatorClient() {
     const nGoodman = 1 / invGoodman;
     const nActive = criterion === 'soderberg' ? nSoderberg : nGoodman;
 
+    // Typical design thresholds (adjust per project specification): n >= 1.5 Safe, n >= 1.0 Marginal
     const status = nActive >= 1.5 ? 'Safe' : nActive >= 1.0 ? 'Marginal' : 'Unsafe';
 
     return {
@@ -330,6 +331,9 @@ export default function BoltFatigueCalculatorClient() {
                 <div data-testid="result-status" className="text-3xl font-black text-emerald-700">
                   {result.status}
                 </div>
+                <div className="text-xs text-emerald-700/80 mt-1">
+                  n ≥ 1.5 Safe · n ≥ 1.0 Marginal (typical design values; adjust per project specification)
+                </div>
               </div>
 
               <div className="bg-slate-50 rounded-2xl p-6 border border-slate-100">
@@ -359,7 +363,7 @@ export default function BoltFatigueCalculatorClient() {
                 </span>
               </div>
               <p className="text-xs text-slate-500 pl-6">
-                Reference: ISO 898-1 fastener property classes (Class 4.6: S_y = 240 MPa, S_ut = 400 MPa; Class 8.8: S_y = 640 MPa, S_ut = 800 MPa; Class 10.9: S_y = 940 MPa, S_ut = 1040 MPa). Status thresholds: Safe (n ≥ 1.5), Marginal (1.0 ≤ n &lt; 1.5), Unsafe (n &lt; 1.0).
+                Reference: ISO 898-1 fastener property classes (Class 4.6: S_y = 240 MPa, S_ut = 400 MPa; Class 8.8: S_y = 640 MPa, S_ut = 800 MPa; Class 10.9: S_y = 940 MPa, S_ut = 1040 MPa). Status thresholds — Safe (n ≥ 1.5), Marginal (1.0 ≤ n &lt; 1.5), Unsafe (n &lt; 1.0) — are typical design values; adjust per project specification.
               </p>
             </div>
           </div>

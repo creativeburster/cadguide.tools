@@ -4,8 +4,9 @@ import type { Metadata } from 'next';
 import CableSizingCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Cable Sizing Calculator",
-  description: "Calculate minimum cable cross-section from current carrying capacity and voltage drop.",
+  title: 'Cable Sizing & AC Voltage Drop Calculator (IEC 60228)',
+  description:
+    'Calculate three-phase and single-phase AC cable voltage drop ΔU = √3·I·L·(R cosφ + X sinφ) and minimum IEC 60228 conductor cross-section.',
   path: '/toolbox/cable-sizing-calculator',
 });
 
@@ -13,12 +14,15 @@ export default function CableSizingCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Cable Sizing Calculator", path: '/toolbox/cable-sizing-calculator' },
+    { name: 'Cable Sizing Calculator', path: '/toolbox/cable-sizing-calculator' },
   ]);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <main className="min-h-screen bg-slate-50">
         <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
@@ -32,7 +36,7 @@ export default function CableSizingCalculatorPage() {
               Cable Sizing <span className="text-yellow-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate minimum cable cross-section from current carrying capacity and voltage drop.
+              Calculate AC line voltage drop ΔU = √3·I·L·(R cosφ + X sinφ) and minimum IEC 60228 conductor cross-section.
             </p>
           </div>
         </section>

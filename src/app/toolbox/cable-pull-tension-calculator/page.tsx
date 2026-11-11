@@ -4,8 +4,9 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Cable Pull Tension Calculator (NEC / IEEE 1185)",
-  description: "Calculate cable pulling tension and sidewall pressure for conduit installations per IEEE 1185.",
+  title: 'Cable Pull Tension & Sidewall Pressure Calculator',
+  description:
+    'Calculate conduit cable pulling tension (Euler-Eytelwein capstan equation) and bend sidewall bearing pressure (SWP = T / R).',
   path: '/toolbox/cable-pull-tension-calculator',
 });
 
@@ -13,12 +14,18 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Cable Pull Tension Calculator (NEC / IEEE 1185)", path: '/toolbox/cable-pull-tension-calculator' },
+    {
+      name: 'Cable Pull Tension & Sidewall Pressure Calculator',
+      path: '/toolbox/cable-pull-tension-calculator',
+    },
   ]);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <main className="min-h-screen bg-slate-50">
         <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
@@ -29,10 +36,10 @@ export default function CalculatorPage() {
               Engineering Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Cable Pull Tension Calculator (NEC / IEEE 1185)
+              Cable Pull Tension &amp; Sidewall Pressure Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate cable pulling tension and sidewall pressure for conduit installations per IEEE 1185.
+              Calculate conduit cable pulling tension via the Euler-Eytelwein capstan equation and bend sidewall bearing pressure (SWP = T / R).
             </p>
           </div>
         </section>

@@ -166,11 +166,14 @@ async function runBatch8Tests() {
         throw new Error('Bolt Fatigue CSV missing expected numerical row');
       }
 
-      // 8. Negative Assertions inside calculator-inputs and calculator-results
+      // 8. Negative Assertions & Threshold Note Check inside calculator-inputs and calculator-results
       const coreText =
         (await p.innerText('[data-testid="calculator-inputs"]')) +
         ' ' +
         (await p.innerText('[data-testid="calculator-results"]'));
+      if (!coreText.includes('typical design values; adjust per project specification')) {
+        throw new Error('Bolt Fatigue missing typical design values note for Safe/Marginal thresholds');
+      }
       for (const banned of ['VDI 2230', 'ASME B1.1', 'ISO 68-1', 'ISO 273']) {
         if (coreText.includes(banned)) {
           throw new Error(`Bolt Fatigue core contains removed standard '${banned}'`);

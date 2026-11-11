@@ -2,128 +2,318 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Settings, Zap, Info, RotateCcw, Download } from 'lucide-react';
 
-interface CalculationOutput {
-  primary: { label: string; val: string; unit: string };
-  secondary: Array<{ label: string; val: string; unit: string }>;
-  status?: { pass: boolean; text: string };
+function parseNum(str: string): number {
+  const trimmed = str.trim();
+  if (trimmed === '') return NaN;
+  const n = Number(trimmed);
+  return Number.isFinite(n) ? n : NaN;
 }
 
-const computeFn: (vals: string[]) => CalculationOutput = (vals) => {
-      const w = parseFloat(vals[0]) || 4.5;
-      const len = parseFloat(vals[1]) || 120;
-      const mu = parseFloat(vals[2]) || 0.35;
-      const bends = parseFloat(vals[3]) || 90;
-      const tStraight = w * 9.81 * len * mu;
-      const bendFactor = Math.exp(mu * (bends * Math.PI / 180));
-      const tTotal = (tStraight * bendFactor) / 1000;
-      const swp = (tTotal * 1000) / 0.6;
-      return {
-        primary: { label: 'Total Pulling Tension', val: tTotal.toFixed(2), unit: 'kN' },
-        secondary: [
-          { label: 'Straight Run Tension Component', val: (tStraight / 1000).toFixed(2), unit: 'kN' },
-          { label: 'Bend Exponential Multiplier', val: bendFactor.toFixed(2), unit: 'x' },
-          { label: 'Sidewall Bearing Pressure (SWP)', val: (swp / 1000).toFixed(2), unit: 'kN/m' }
-        ],
-        status: { pass: swp <= 4500, text: swp <= 4500 ? 'WITHIN CABLE CASING LIMIT' : 'EXCEEDS MAX SIDEWALL BEARING' }
-      };
-    };
+function formatFixed(n: number, digits: number): string {
+  return Number.isFinite(n) ? n.toFixed(digits) : '—';
+}
 
-const DEFAULT_INPUTS = ["4.5","120","0.35","90"];
+const GRAVITY_ACCEL = 9.81; // m/s^2
+
+interface PullPreset {
+  label: string;
+  mass: string;
+  length: string;
+  mu: string;
+  angle: string;
+  radius: string;
+  swpMax: string;
+}
+
+const PRESETS: PullPreset[] = [
+  {
+    label: 'Lubricated Conduit (Default)',
+    mass: '4.5',
+    length: '120',
+    mu: '0.35',
+    angle: '90',
+    radius: '0.6',
+    swpMax: '7.30',
+  },
+  {
+    label: 'Dry Conduit 180° Sweep (Over Limit)',
+    mass: '6.0',
+    length: '100',
+    mu: '0.50',
+    angle: '180',
+    radius: '0.6',
+    swpMax: '7.30',
+  },
+  {
+    label: 'Industrial Feeder (Southwire 1000 lb/ft)',
+    mass: '8.0',
+    length: '100',
+    mu: '0.25',
+    angle: '90',
+    radius: '0.9',
+    swpMax: '14.59',
+  },
+];
 
 export default function CalculatorClient() {
-  const [inputs, setInputs] = useState<string[]>(DEFAULT_INPUTS);
+  const [massStr, setMassStr] = useState(PRESETS[0].mass);
+  const [lengthStr, setLengthStr] = useState(PRESETS[0].length);
+  const [muStr, setMuStr] = useState(PRESETS[0].mu);
+  const [angleStr, setAngleStr] = useState(PRESETS[0].angle);
+  const [radiusStr, setRadiusStr] = useState(PRESETS[0].radius);
+  const [swpMaxStr, setSwpMaxStr] = useState(PRESETS[0].swpMax);
 
-  const updateInput = (idx: number, val: string) => {
-    const next = [...inputs];
-    next[idx] = val;
-    setInputs(next);
+  const applyPreset = (p: PullPreset) => {
+    setMassStr(p.mass);
+    setLengthStr(p.length);
+    setMuStr(p.mu);
+    setAngleStr(p.angle);
+    setRadiusStr(p.radius);
+    setSwpMaxStr(p.swpMax);
   };
 
+  const handleReset = () => applyPreset(PRESETS[0]);
+
   const result = useMemo(() => {
-    try {
-      return computeFn(inputs);
-    } catch {
+    const m = parseNum(massStr);
+    const len = parseNum(lengthStr);
+    const mu = parseNum(muStr);
+    const thetaDeg = parseNum(angleStr);
+    const rBend = parseNum(radiusStr);
+    const swpMax = parseNum(swpMaxStr);
+
+    if (
+      !Number.isFinite(m) ||
+      !Number.isFinite(len) ||
+      !Number.isFinite(mu) ||
+      !Number.isFinite(thetaDeg) ||
+      !Number.isFinite(rBend) ||
+      !Number.isFinite(swpMax) ||
+      m <= 0 ||
+      len <= 0 ||
+      mu <= 0 ||
+      thetaDeg < 0 ||
+      rBend <= 0 ||
+      swpMax <= 0
+    ) {
       return {
-        primary: { label: 'Calculation Error', val: '—', unit: '' },
-        secondary: [],
-        status: { pass: false, text: 'Invalid Input Values' }
+        valid: false,
+        tStraightKn: NaN,
+        bendMultiplier: NaN,
+        tOutKn: NaN,
+        swpKnPerM: NaN,
+        status: '—',
       };
     }
-  }, [inputs]);
+
+    // Unit derivation (single cable or common-jacket pull, W_c = 1, T_0 = 0):
+    // 1. Linear cable weight: W [N/m] = m [kg/m] * g [9.81 m/s^2]
+    // 2. Horizontal straight-section pulling tension:
+    //    T_in [kN] = (W [N/m] * L [m] * mu [dimensionless]) / 1000 [N/kN]
+    // 3. Cumulative bend angle in radians:
+    //    theta_rad [rad] = theta_deg [deg] * (pi / 180)
+    // 4. Euler-Eytelwein capstan bend multiplier:
+    //    M_bend = exp(mu * theta_rad) [dimensionless]
+    // 5. Bend exit tension:
+    //    T_out [kN] = T_in [kN] * M_bend
+    // 6. Sidewall bearing pressure:
+    //    SWP [kN/m] = T_out [kN] / R [m]
+    const weightPerMeter = m * GRAVITY_ACCEL;
+    const tStraightKn = (weightPerMeter * len * mu) / 1000;
+    const thetaRad = (thetaDeg * Math.PI) / 180;
+    const bendMultiplier = Math.exp(mu * thetaRad);
+    const tOutKn = tStraightKn * bendMultiplier;
+    const swpKnPerM = tOutKn / rBend;
+    const status = swpKnPerM <= swpMax ? 'Within Limit' : 'Exceeds Limit';
+
+    return {
+      valid: true,
+      tStraightKn,
+      bendMultiplier,
+      tOutKn,
+      swpKnPerM,
+      status,
+    };
+  }, [massStr, lengthStr, muStr, angleStr, radiusStr, swpMaxStr]);
+
+  const handleExportCsv = () => {
+    if (!result.valid) return;
+    const lines = [
+      '# Cable Pull Tension & Sidewall Pressure Report',
+      '# Reference: Euler-Eytelwein Capstan Equation (T_out = T_in * exp(mu * theta)) | Southwire CableTech SW-1003229 Sidewall Pressure Guidance (SWP = T_out / R)',
+      '# Formula: T_in = (m * 9.81 * L * mu) / 1000 [kN] | T_out = T_in * exp(mu * theta_rad) [kN] | SWP = T_out / R [kN/m]',
+      'Cable_Mass_kg_m,Straight_Length_m,Friction_Coeff_mu,Bend_Angle_deg,Bend_Radius_m,Max_SWP_Limit_kN_m,Straight_Tension_kN,Bend_Multiplier,Total_Exit_Tension_kN,Sidewall_Pressure_kN_m,Status',
+      `${massStr.trim()},${lengthStr.trim()},${muStr.trim()},${angleStr.trim()},${radiusStr.trim()},${swpMaxStr.trim()},${formatFixed(result.tStraightKn, 3)},${formatFixed(result.bendMultiplier, 3)},${formatFixed(result.tOutKn, 3)},${formatFixed(result.swpKnPerM, 3)},${result.status}`,
+    ];
+    const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'cable-pull-tension-report.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="space-y-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left Column: Parameter Inputs */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div
+          data-testid="calculator-inputs"
+          className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5"
+        >
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
+            <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
               <Settings className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs & Parameters</h2>
-              <p className="text-xs text-slate-500 font-medium">Adjust values to recalculate</p>
+              <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs &amp; Parameters</h2>
+              <p className="text-xs text-slate-500 font-medium">Single-cable / common-jacket conduit pull</p>
             </div>
           </div>
 
-          <div className="space-y-4">
-          <div key="0">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Cable Weight (kg/m)</label>
-            <input
-              type="number"
-              step="0.1"
-              value={inputs[0]}
-              onChange={(e) => updateInput(0, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          <div key="1">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Total Pull Length (m)</label>
-            <input
-              type="number"
-              step="10"
-              value={inputs[1]}
-              onChange={(e) => updateInput(1, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          <div key="2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Friction Coefficient μ</label>
-            <select
-              value={inputs[2]}
-              onChange={(e) => updateInput(2, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all cursor-pointer"
-            >
-              <option key="0.35" value="0.35">{"0.35 (PVC / Steel with Lubricant)"}</option>
-              <option key="0.50" value="0.50">{"0.50 (Dry Conduit / No Lube)"}</option>
-              <option key="0.20" value="0.20">{"0.20 (High-Lubricity Polymer Raceway)"}</option>
-            </select>
-          </div>
-          <div key="3">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Total Bend Angles (°)</label>
-            <input
-              type="number"
-              step="15"
-              value={inputs[3]}
-              onChange={(e) => updateInput(3, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
+          <div className="space-y-2">
+            <span className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+              Engineering Presets
+            </span>
+            <div className="flex flex-wrap gap-2">
+              {PRESETS.map((p, idx) => (
+                <button
+                  key={p.label}
+                  type="button"
+                  data-testid={`preset-btn-${idx}`}
+                  onClick={() => applyPreset(p)}
+                  className="px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors cursor-pointer"
+                >
+                  {p.label}
+                </button>
+              ))}
+            </div>
           </div>
 
-          <button
-            onClick={() => setInputs(DEFAULT_INPUTS)}
-            className="w-full py-3 rounded-xl text-sm font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
-          >
-            Reset Defaults
-          </button>
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-2">
+                Cable Mass m (kg/m)
+              </label>
+              <input
+                type="text"
+                data-testid="input-mass"
+                value={massStr}
+                onChange={(e) => setMassStr(e.target.value)}
+                placeholder="4.5"
+                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
+              />
+            </div>
+
+            <div>
+              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-2">
+                Pull Length L (m)
+              </label>
+              <input
+                type="text"
+                data-testid="input-length"
+                value={lengthStr}
+                onChange={(e) => setLengthStr(e.target.value)}
+                placeholder="120"
+                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
+              Friction Coefficient μ
+            </label>
+            <p className="text-xs text-slate-400 mb-2">
+              Typical values: 0.35 lubricated conduit, 0.50 dry conduit; verify per lubricant datasheet.
+            </p>
+            <input
+              type="text"
+              data-testid="input-mu"
+              value={muStr}
+              onChange={(e) => setMuStr(e.target.value)}
+              placeholder="0.35"
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
+            />
+          </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-2">
+                Bend Angle θ (°)
+              </label>
+              <input
+                type="text"
+                data-testid="input-angle"
+                value={angleStr}
+                onChange={(e) => setAngleStr(e.target.value)}
+                placeholder="90"
+                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
+              />
+            </div>
+
+            <div>
+              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-2">
+                Bend Radius R (m)
+              </label>
+              <input
+                type="text"
+                data-testid="input-radius"
+                value={radiusStr}
+                onChange={(e) => setRadiusStr(e.target.value)}
+                placeholder="0.6"
+                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
+              />
+            </div>
+          </div>
+
+          <div>
+            <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
+              Max Sidewall Pressure Limit (kN/m)
+            </label>
+            <p className="text-xs text-slate-400 mb-2">
+              Typical values: 7.30 kN/m (~500 lb/ft multiconductor) to 14.59 kN/m (1000 lb/ft per Southwire SW-1003229).
+            </p>
+            <input
+              type="text"
+              data-testid="input-swp-max"
+              value={swpMaxStr}
+              onChange={(e) => setSwpMaxStr(e.target.value)}
+              placeholder="7.30"
+              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-orange-600/5 focus:bg-white transition-all"
+            />
+          </div>
+
+          <div className="flex gap-3 pt-2">
+            <button
+              type="button"
+              data-testid="reset-btn"
+              onClick={handleReset}
+              className="flex-1 py-3 rounded-xl text-sm font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <RotateCcw className="w-4 h-4" />
+              Reset
+            </button>
+            <button
+              type="button"
+              data-testid="export-csv-btn"
+              onClick={handleExportCsv}
+              disabled={!result.valid}
+              className="flex-1 py-3 rounded-xl text-sm font-black bg-orange-600 text-white hover:bg-orange-700 disabled:opacity-40 transition-all flex items-center justify-center gap-2 cursor-pointer"
+            >
+              <Download className="w-4 h-4" />
+              Export CSV
+            </button>
+          </div>
         </div>
 
-        {/* Right Column: Results & Engineering Metrics */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+          <div
+            data-testid="calculator-results"
+            className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6"
+          >
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
@@ -131,78 +321,74 @@ export default function CalculatorClient() {
                 </div>
                 <h2 className="text-lg font-black text-slate-900 tracking-tight">Calculated Outputs</h2>
               </div>
-              {result.status && (
-                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-black tracking-wide uppercase border ${
-                  result.status.pass
-                    ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                    : 'bg-amber-50 text-amber-700 border-amber-200'
-                }`}>
-                  {result.status.pass ? (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  ) : (
-                    <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
-                  )}
-                  <span>{result.status.text}</span>
+              <div
+                data-testid="result-status"
+                className={`px-3.5 py-1.5 rounded-full text-xs font-black tracking-wide border ${
+                  !result.valid
+                    ? 'bg-slate-50 text-slate-500 border-slate-200'
+                    : result.status === 'Within Limit'
+                      ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                      : 'bg-amber-50 text-amber-700 border-amber-200'
+                }`}
+              >
+                {result.status}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+                <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-2">
+                  Total Pulling Tension T_out (kN)
                 </div>
-              )}
+                <div data-testid="result-tension" className="text-3xl font-black text-blue-900">
+                  {formatFixed(result.tOutKn, 3)}
+                </div>
+              </div>
+
+              <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
+                <div className="text-xs font-black text-orange-600 uppercase tracking-wider mb-2">
+                  Sidewall Bearing Pressure SWP (kN/m)
+                </div>
+                <div data-testid="result-swp" className="text-3xl font-black text-orange-900">
+                  {formatFixed(result.swpKnPerM, 3)}
+                </div>
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+                  Straight Run Tension T_in (kN)
+                </div>
+                <div data-testid="result-straight-tension" className="text-2xl font-black text-slate-900">
+                  {formatFixed(result.tStraightKn, 3)}
+                </div>
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1">
+                  Capstan Bend Multiplier e^(μ·θ) (x)
+                </div>
+                <div data-testid="result-multiplier" className="text-2xl font-black text-slate-900">
+                  {formatFixed(result.bendMultiplier, 3)}
+                </div>
+              </div>
             </div>
 
-            {/* Primary Result Banner */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50/40 rounded-2xl p-6 border border-blue-100">
-              <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-2">
-                {result.primary.label}
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl sm:text-5xl font-black text-blue-900 tracking-tight">
-                  {result.primary.val}
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 space-y-2 text-xs sm:text-sm text-slate-600">
+              <div className="flex items-start gap-2 font-semibold text-slate-800">
+                <Info className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
+                <span>
+                  T_in = (m · g · L · μ) / 1000 &nbsp;|&nbsp; T_out = T_in · e^(μ · θ_rad) &nbsp;|&nbsp; SWP = T_out / R
                 </span>
-                {result.primary.unit && (
-                  <span className="text-lg font-bold text-blue-600">
-                    {result.primary.unit}
-                  </span>
-                )}
               </div>
-            </div>
-
-            {/* Secondary Metrics Grid */}
-            {result.secondary && result.secondary.length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {result.secondary.map((metric, idx) => (
-                  <div key={idx} className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 line-clamp-1">
-                      {metric.label}
-                    </div>
-                    <div className="text-xl font-black text-slate-900">
-                      {metric.val}
-                      {metric.unit && <span className="text-xs font-medium text-slate-500 ml-1.5">{metric.unit}</span>}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Engineering Methodology & Formula Card */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-600">
-                <Info className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-base font-black text-slate-900 tracking-tight">Governing Engineering Formula & Standards</h3>
-                <p className="text-xs text-slate-500 font-medium">Standardized calculation procedure</p>
-              </div>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <p className="text-xs sm:text-sm text-slate-700 font-mono font-medium leading-relaxed block break-words">
-                {"T_bend = T_in · e^(μ·θ) • SWP = T / R_bend (IEEE 576 Standard for Cable Pulling in Industrial Systems)"}
+              <p className="text-xs text-slate-500 pl-6 leading-relaxed">
+                Sources: Euler-Eytelwein capstan friction equation (T_out = T_in · e^(μ·θ), with θ_rad = θ° × π / 180 and g = 9.81 m/s²) and Southwire CableTech Maximum Sidewall Pressure Flyer (SW-1003229) radial bend bearing equation SWP = T_out / R for a single cable or common-jacket pull (weight correction factor W_c = 1).
               </p>
             </div>
           </div>
+
+          <RelatedTools />
         </div>
       </div>
-
-      <RelatedTools />
     </div>
   );
 }

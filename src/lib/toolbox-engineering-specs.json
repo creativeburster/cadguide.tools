@@ -1942,178 +1942,284 @@
     ]
   },
   "cable-pull-tension-calculator": {
-    "title": "Cable Pull Tension Calculator (NEC / IEEE 1185)",
-    "description": "Calculate cable pulling tension and sidewall pressure for conduit installations per IEEE 1185.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "T_bend = T_in · e^(μ·θ) • SWP = T / R_bend (IEEE 576 Standard for Cable Pulling in Industrial Systems)",
+    "title": "Cable Pull Tension & Sidewall Pressure Calculator",
+    "description": "Calculate conduit cable pulling tension using the Euler-Eytelwein capstan equation and radial sidewall bearing pressure (SWP = T / R).",
+    "discipline": "Electrical Conduit Routing & Power Cable Installation",
+    "standards": "Euler-Eytelwein Capstan Friction Equation, Southwire CableTech SW-1003229 Sidewall Pressure Guidance",
+    "cadContext": "Verify conduit bend radii and pull-box spacing on electrical duct-bank plans so bend exit tension and radial sidewall bearing pressure stay within cable manufacturer limits.",
+    "formula": "T_in = (m · 9.81 · L · μ) / 1000 [kN] • T_out = T_in · e^(μ · θ_rad) [kN] • SWP = T_out / R [kN/m]",
     "inputs": [
       {
-        "label": "Cable Weight (kg/m)",
+        "label": "Cable Mass m (kg/m)",
         "val": "4.5"
       },
       {
-        "label": "Total Pull Length (m)",
+        "label": "Pull Length L (m)",
         "val": "120"
       },
       {
         "label": "Friction Coefficient μ",
-        "val": "0.35 (PVC / Steel with Lubricant)"
+        "val": "0.35"
       },
       {
-        "label": "Total Bend Angles (°)",
+        "label": "Bend Angle θ (°)",
         "val": "90"
+      },
+      {
+        "label": "Bend Radius R (m)",
+        "val": "0.6"
+      },
+      {
+        "label": "Max Sidewall Pressure Limit (kN/m)",
+        "val": "7.30"
       }
     ],
     "outputs": [
       {
-        "label": "Total Pulling Tension",
-        "val": "3.21 kN"
+        "label": "Total Pulling Tension T_out",
+        "val": "3.213 kN"
       },
       {
-        "label": "Straight Run Tension Component",
-        "val": "1.85 kN"
+        "label": "Sidewall Bearing Pressure SWP",
+        "val": "5.355 kN/m"
       },
       {
-        "label": "Bend Exponential Multiplier",
-        "val": "1.73 x"
+        "label": "Straight Run Tension T_in",
+        "val": "1.854 kN"
       },
       {
-        "label": "Sidewall Bearing Pressure (SWP)",
-        "val": "5.35 kN/m"
+        "label": "Capstan Bend Multiplier e^(μ·θ)",
+        "val": "1.733 x"
+      },
+      {
+        "label": "Status",
+        "val": "Within Limit"
       }
     ]
   },
   "cable-sizing-calculator": {
-    "title": "Cable Sizing Calculator",
-    "description": "Calculate minimum cable cross-section from current carrying capacity and voltage drop.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "A = I/(current density), check Vd",
+    "title": "Cable Sizing & AC Voltage Drop Calculator (IEC 60228)",
+    "description": "Calculate three-phase and single-phase AC cable voltage drop (ΔU and ΔU%), linear conductor resistance, and minimum IEC 60228 cross-section.",
+    "discipline": "Electrical Power Distribution & Feeder Sizing",
+    "standards": "IEC 60228 (Nominal Conductor Cross-Sections), IEC 60364-5-52 Annex G (Informative Voltage Drop Limits: 3% Lighting / 5% Other)",
+    "cadContext": "Document route length, power factor, conductor material resistivity, and steady-state voltage drop percentage on single-line diagrams and panel feeder schedules.",
+    "formula": "L_km = L / 1000 • R = (ρ × 1000) / A [Ω/km] • 3-Phase ΔU = √3 · I · L_km · (R cosφ + X sinφ) • 1-Phase ΔU = 2 · I · L_km · (R cosφ + X sinφ)",
     "inputs": [
       {
-        "label": "Current (A)",
-        "val": "30"
+        "label": "System Phase",
+        "val": "Three-Phase Balanced AC"
       },
       {
-        "label": "Length (m)",
-        "val": "20"
+        "label": "Current I (A)",
+        "val": "60"
       },
       {
-        "label": "Voltage (V)",
-        "val": "230"
+        "label": "Length L (m)",
+        "val": "120"
+      },
+      {
+        "label": "Voltage U_n (V)",
+        "val": "400"
+      },
+      {
+        "label": "Power Factor cosφ",
+        "val": "0.85"
       },
       {
         "label": "Max Drop (%)",
         "val": "3"
       },
       {
-        "label": "Conductor",
-        "val": "Copper Conductor (Cu)"
+        "label": "Section A (mm²)",
+        "val": "16"
+      },
+      {
+        "label": "Resistivity ρ (Ω·mm²/m)",
+        "val": "0.0172"
+      },
+      {
+        "label": "Reactance X (Ω/km)",
+        "val": "0.08"
       }
     ],
     "outputs": [
       {
-        "label": "Min Area (current)",
-        "val": "6.000 mm2"
+        "label": "Voltage Drop ΔU",
+        "val": "11.92 V"
       },
       {
-        "label": "Min Area (Vd)",
-        "val": "3.043 mm2"
+        "label": "Voltage Drop ΔU%",
+        "val": "2.98 %"
       },
       {
-        "label": "Recommended",
-        "val": "6.000 mm2"
+        "label": "Conductor Resistance R",
+        "val": "1.075 Ω/km"
+      },
+      {
+        "label": "Min Area for Drop Limit A_min",
+        "val": "15.89 mm²"
+      },
+      {
+        "label": "Next Standard IEC 60228 Section",
+        "val": "16 mm²"
+      },
+      {
+        "label": "Status",
+        "val": "Within Limit"
       }
     ]
   },
   "cable-tray-fill-calculator": {
     "title": "Cable Tray Fill Ratio Calculator (NEC 392)",
-    "description": "Calculate cable tray fill ratio, cable count, and tray width per NEC Article 392.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Fill % = (Σ Area_cables / (W_tray × H_tray)) × 100% • Limit = 40% (NEC Article 392 / NEMA VE 2)",
+    "description": "Calculate circular cable cross-sectional area, usable tray cross-section, and fill percentage against NFPA 70 (NEC) Article 392 limits.",
+    "discipline": "Electrical Raceway & Cable Tray Layout",
+    "standards": "NFPA 70 (National Electrical Code / NEC) Article 392",
+    "cadContext": "Check total circular cable cross-sectional area against usable tray width and depth when sizing ladder, ventilated trough, and solid-bottom trays in BIM/CAD containment models.",
+    "formula": "A_cable = Σ N_i · (π · d_i² / 4) [mm²] • A [cm²] = A [mm²] / 100 • Fill % = (A_cable / (W × H)) × 100%",
     "inputs": [
       {
-        "label": "Tray Width (mm)",
-        "val": "300 mm (12 inch)"
+        "label": "Tray Width W (mm)",
+        "val": "300"
       },
       {
-        "label": "Tray Usable Depth (mm)",
+        "label": "Usable Depth H (mm)",
         "val": "100"
       },
       {
-        "label": "Power Cables Count",
+        "label": "Power Cables N₁",
         "val": "8"
       },
       {
-        "label": "Power Cable Avg Dia (mm)",
+        "label": "Power OD d₁ (mm)",
         "val": "24"
       },
       {
-        "label": "Control Cables Count",
+        "label": "Control Cables N₂",
         "val": "20"
       },
       {
-        "label": "Control Cable Avg Dia (mm)",
+        "label": "Control OD d₂ (mm)",
         "val": "12"
+      },
+      {
+        "label": "Max Fill Limit (%)",
+        "val": "40"
       }
     ],
     "outputs": [
       {
         "label": "Cross-Sectional Fill Ratio",
-        "val": "19.6 %"
+        "val": "19.60 %"
       },
       {
         "label": "Total Cable Area",
-        "val": "58.8 cm²"
+        "val": "58.81 cm²"
       },
       {
-        "label": "Total Tray Internal Cross-Section",
-        "val": "300 cm²"
+        "label": "Tray Internal Cross-Section",
+        "val": "300.00 cm²"
       },
       {
-        "label": "NEC 392 Standard Threshold",
-        "val": "40.0 % Max"
+        "label": "Remaining Allowable Area",
+        "val": "61.19 cm²"
+      },
+      {
+        "label": "Status",
+        "val": "Within Limit"
       }
     ]
   },
   "cad-format-compatibility-matrix": {
     "title": "CAD Format Compatibility Matrix",
-    "description": "Find which CAD tools natively bridge two file formats (DWG, DXF, STEP, IGES, STL, IFC, OBJ, PDF, FBX, 3MF). Pick a source and target format to list native bridge candidates from the CADGuide catalog.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for CAD Format Compatibility Matrix",
+    "description": "Directional CAD file import/export compatibility reference and single-hop bridge lookup across AutoCAD, Rhino 8, Blender, and OpenSCAD (DWG, DXF, STEP, IGES, SAT, STL, OBJ, 3MF, FBX, PDF).",
+    "discipline": "CAD Data Exchange & Multi-Software File Interoperability",
+    "standards": "ISO 10303-21 (STEP), Official Vendor Command Documentation (AutoCAD 2024 Help, McNeel Rhino 8 Help, Blender Manual, OpenSCAD User Manual)",
+    "cadContext": "Verify directional Import and Export support (such as AutoCAD STEP import vs STLOUT export) before planning neutral-file handoffs across 2D drafting, NURBS modeling, and mesh pipelines.",
+    "formula": "Directional Single-Hop Bridge: CanBridge(S → T) = SupportsImport(S) ∧ SupportsExport(T)",
     "inputs": [
       {
-        "label": "Source format",
-        "val": "DWG"
+        "label": "Source (Import)",
+        "val": "STEP"
       },
       {
-        "label": "Target format",
-        "val": "STEP"
+        "label": "Target (Export)",
+        "val": "STL"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Verified Bridge Tools (STEP → STL)",
+        "val": "2 (AutoCAD, Rhino 8)"
+      },
+      {
+        "label": "Verified Matrix Entries",
+        "val": "24"
+      }
+    ]
   },
   "cad-hatch-scale-optimizer": {
-    "title": "CAD Hatch Pattern Scale Optimizer",
-    "description": "Optimize AutoCAD and GstarCAD hatch density to prevent solid hatch conversion, MAXHATCH limit crashes, and viewport freezes.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "HPSCALE = DrawingScaleFactor × (TargetSpacing_mm / BasePatternPitch_mm)",
+    "title": "CAD Hatch Pattern Scale Optimizer (HPSCALE & HPMAXLINES)",
+    "description": "Calculate AutoCAD HPSCALE from drawing units, plot scale, and base pattern pitch (ANSI31 = 0.125 units), and check estimated hatch line count against HPMAXLINES.",
+    "discipline": "CAD Drafting Standards & Sheet Plotting",
+    "standards": "Autodesk AutoCAD 2024 Help — HPSCALE, HPMAXLINES (100 to 10,000,000, initial value 100000), and ANSI31 Pattern Definition (45°, 0.125 units)",
+    "cadContext": "Match HPSCALE to model-space units and viewport plot scale 1:S so plotted hatch spacing stays legible on paper without exceeding the AutoCAD HPMAXLINES generation limit.",
+    "formula": "HPSCALE_rec = (d_target · S) / (p₀ · u) • s_model = p₀ · HPSCALE • d_paper = (s_model · u) / S • N_lines = ((W + H) / √2) / s_model",
     "inputs": [
       {
-        "label": "1. Current drawing unit of the drawing (Drawing Unit)",
-        "val": "Metric: Millimeters (Metric: mm)"
+        "label": "Drawing Unit",
+        "val": "mm (1 unit = 1 mm)"
+      },
+      {
+        "label": "Plot Scale 1 : S",
+        "val": "100"
+      },
+      {
+        "label": "Base Pitch p₀ (units)",
+        "val": "0.125"
+      },
+      {
+        "label": "Target Spacing (mm)",
+        "val": "2.5"
+      },
+      {
+        "label": "Active HPSCALE",
+        "val": "2000"
+      },
+      {
+        "label": "Region Width W (units)",
+        "val": "10000"
+      },
+      {
+        "label": "Region Height H (units)",
+        "val": "10000"
+      },
+      {
+        "label": "HPMAXLINES Limit",
+        "val": "100000"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Recommended HPSCALE",
+        "val": "2000.00"
+      },
+      {
+        "label": "Plotted Paper Spacing",
+        "val": "2.500 mm"
+      },
+      {
+        "label": "Model-Space Pitch s_model",
+        "val": "250.000 units"
+      },
+      {
+        "label": "Estimated 45° ANSI31 Line Count",
+        "val": "56.57"
+      },
+      {
+        "label": "Status",
+        "val": "Optimal"
+      }
+    ]
   },
   "cad-license-tco-calculator": {
     "title": "CAD License TCO Calculator",

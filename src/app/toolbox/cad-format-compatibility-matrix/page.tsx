@@ -5,8 +5,9 @@ import CadFormatCompatibilityClient from './calculator-client';
 import { EmbedSnippet } from '@/components/embed-snippet';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD Format Compatibility Matrix — DWG, STEP, IFC, IGES Interop Finder',
-  description: 'Find which CAD tools natively bridge two file formats (DWG, DXF, STEP, IGES, STL, IFC, OBJ, PDF, FBX, 3MF). Pick a source and target format to list native bridge candidates from the CADGuide catalog.',
+  title: 'CAD Format Compatibility Matrix — DWG, STEP, IGES, STL Interop Finder',
+  description:
+    'Check verified import and export compatibility across DWG, DXF, STEP, IGES, SAT, STL, OBJ, 3MF, FBX, and PDF from official CAD documentation.',
   path: '/toolbox/cad-format-compatibility-matrix',
 });
 
@@ -19,7 +20,10 @@ export default function CadFormatCompatibilityMatrixPage() {
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <main className="min-h-screen bg-slate-50">
         <section className="bg-slate-900 text-white py-20 relative overflow-hidden">
           <div className="absolute inset-0 opacity-10">
@@ -33,14 +37,17 @@ export default function CadFormatCompatibilityMatrixPage() {
               CAD Format <span className="text-teal-400">Compatibility Matrix</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Pick a source and a target format — see which tools natively bridge the two, straight from vendor-published specs.
+              Verify directional Import &amp; Export support and find native format bridges from official vendor command references.
             </p>
           </div>
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
           <CadFormatCompatibilityClient />
           <div className="mt-8">
-            <EmbedSnippet slug="cad-format-compatibility-matrix" title="CAD Format Compatibility Matrix" />
+            <EmbedSnippet
+              slug="cad-format-compatibility-matrix"
+              title="CAD Format Compatibility Matrix"
+            />
           </div>
           <ToolboxEngineeringGuide slug="cad-format-compatibility-matrix" />
         </section>
