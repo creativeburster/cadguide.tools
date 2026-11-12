@@ -2500,36 +2500,40 @@
   "casting-shrinkage-calculator": {
     "title": "Casting Shrinkage Allowance Calculator",
     "description": "Calculate pattern shrinkage allowance for sand casting and investment casting.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Shrinkage = L * shrink_rate, Pattern = L + allowance",
+    "discipline": "Foundry Engineering, Patternmaking & Mold Tooling",
+    "standards": "Foundry Patternmaking Shrink-Rule & Linear Contraction Practice (Kurt Foundry / Matson Foundry Engineering References)",
+    "cadContext": "Apply uniform or directional cavity scale factors (1 + s/100) to your 3D CAD casting model before adding parting-line draft angles and machining stock allowances.",
+    "formula": "S = L × (s / 100), L_pattern = L × (1 + s / 100), k_scale = 1 + s / 100, L_inverse = L / (1 − s / 100)",
     "inputs": [
       {
-        "label": "Dimension (mm)",
+        "label": "Target Casting Dimension L (mm)",
         "val": "200"
       },
       {
-        "label": "Material",
-        "val": "Grey Cast Iron (1.0%)"
+        "label": "Alloy Reference Preset",
+        "val": "Gray Cast Iron (Typical 1.0%)"
       },
       {
-        "label": "Shrinkage Rate (%)",
-        "val": "1"
+        "label": "Linear Shrinkage Rate s (%)",
+        "val": "1.0"
       }
     ],
     "outputs": [
       {
-        "label": "Shrinkage Allowance",
+        "label": "Linear Shrinkage Allowance (S)",
         "val": "2.000 mm"
       },
       {
-        "label": "Pattern / Cavity Size",
-        "val": "202.00 mm"
+        "label": "Pattern / Cavity Size (Shrink Rule)",
+        "val": "202.000 mm"
       },
       {
-        "label": "Cooled Casting Part Target",
-        "val": "200.00 mm (at room temperature)"
+        "label": "3D CAD Uniform Scale Factor",
+        "val": "1.0100 ×"
+      },
+      {
+        "label": "Pattern Size (Inverse Contraction)",
+        "val": "202.020 mm"
       }
     ]
   },
@@ -2546,26 +2550,38 @@
   "ceiling-grid-calculator": {
     "title": "Ceiling Grid & Tile Layout Calculator",
     "description": "Calculate suspended ceiling grid layout, tile count, runner length, and material quantities.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "Tiles = ceil((Area / A_tile) × (1 + Waste)) • Main T-Bar @ 1200mm centers (ASTM C635 / EN 13964)",
+    "discipline": "Architectural Interiors & Reflected Ceiling Plan (RCP) Coordination",
+    "standards": "ASTM C635 / BS EN 13964 (Suspension Grid Duty Ratings & Span Deflection Testing) & Modular Lay-In Takeoff Practice",
+    "cadContext": "Align modular 600 × 600 mm or 600 × 1200 mm T-bar grid origins on your CAD/BIM Reflected Ceiling Plan (RCP) to balance perimeter border cut tiles and clear recessed luminaires and HVAC diffusers.",
+    "formula": "A = L × W, P = 2(L + W), Tiles = ceil((A / A_tile) × (1 + w / 100)), Wall Angle = ceil(P / L_wall), Main Runners = ceil(A / (s_main × L_main))",
     "inputs": [
       {
-        "label": "Room Length (m)",
+        "label": "Room Length L (m)",
         "val": "12"
       },
       {
-        "label": "Room Width (m)",
+        "label": "Room Width W (m)",
         "val": "8"
       },
       {
-        "label": "Tile Dimensions",
-        "val": "600 mm × 600 mm Metric Grid"
+        "label": "Ceiling Tile Module",
+        "val": "600 mm × 600 mm Metric Square Module (0.36 m²)"
       },
       {
-        "label": "Cut Waste Allowance (%)",
+        "label": "Cut Waste Allowance w (%)",
         "val": "10"
+      },
+      {
+        "label": "Main Spacing (m)",
+        "val": "1.2"
+      },
+      {
+        "label": "Main Tee Bar (m)",
+        "val": "3.6"
+      },
+      {
+        "label": "Wall Angle (m)",
+        "val": "3.0"
       }
     ],
     "outputs": [
@@ -2574,15 +2590,19 @@
         "val": "294 pcs"
       },
       {
-        "label": "Finished Ceiling Floor Area",
-        "val": "96.0 m²"
+        "label": "Finished Ceiling Area (A)",
+        "val": "96.00 m²"
       },
       {
-        "label": "Wall Angle Trim (3m lengths)",
+        "label": "Room Perimeter (P)",
+        "val": "40.00 m"
+      },
+      {
+        "label": "Wall Angle Trim Bars",
         "val": "14 bars"
       },
       {
-        "label": "Main T-Bar Runners (3.6m lengths)",
+        "label": "Main T-Bar Runners (Area Estimate)",
         "val": "23 runners"
       }
     ]
@@ -2590,116 +2610,136 @@
   "centrifugal-force-calculator": {
     "title": "Centrifugal Force Calculator",
     "description": "Calculate centrifugal force from mass, radius, and rotational speed.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "Fc = m*omega^2*r",
+    "discipline": "Rotational Dynamics & Rigid-Body Mechanics",
+    "standards": "OpenStax University Physics Volume 1, Section 6.3 (Uniform Circular Motion & Centripetal Force)",
+    "cadContext": "Evaluate radial mass-property eccentricity from 3D CAD center-of-gravity queries to check hub clamping bolt loads and housing containment forces at operating speed.",
+    "formula": "ω = 2πN / 60, v = ωr, F_c = m · r · ω², RCF = (r · ω²) / 9.80665",
     "inputs": [
       {
-        "label": "Mass (kg)",
+        "label": "Rotating Mass m (kg)",
         "val": "2"
       },
       {
-        "label": "Radius (m)",
+        "label": "Center-of-Mass Radius r (m)",
         "val": "0.3"
       },
       {
-        "label": "Speed (RPM)",
+        "label": "Rotational Speed N (RPM)",
         "val": "1500"
       }
     ],
     "outputs": [
       {
-        "label": "Centrifugal Force",
-        "val": "14804 N"
+        "label": "Centrifugal Force (F_c)",
+        "val": "14804.41 N"
       },
       {
-        "label": "Angular Velocity",
-        "val": "157.08 rad/s"
+        "label": "Angular Velocity (ω)",
+        "val": "157.080 rad/s"
       },
       {
-        "label": "Linear Speed",
+        "label": "Tangential Linear Speed (v)",
         "val": "47.124 m/s"
+      },
+      {
+        "label": "Relative Centrifugal Accel (RCF)",
+        "val": "754.81 × g"
       }
     ]
   },
   "chain-drive-length-calculator": {
     "title": "Chain Drive Length Calculator",
     "description": "Calculate roller chain length and center distance for two-sprocket chain drives.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "L = 2C/P + (N1+N2)/2 + ((N2-N1)/(2pi))^2 * P/C",
+    "discipline": "Mechanical Power Transmission & Sprocket Drive Layout",
+    "standards": "ISO 606:2015 (Short-Pitch Precision Roller Chains) & ASME B29.1-2011 (Precision Power Transmission Roller Chains)",
+    "cadContext": "Set shaft mounting slot travel in your 3D CAD assembly to span the adjusted center distance C_actual corresponding to an even number of chain pitches without requiring an offset link.",
+    "formula": "L_p,exact = (N₁ + N₂)/2 + 2C/P + (N₂ − N₁)² / [4π²(C/P)], L_p,even = 2 × ceil(L_p,exact / 2)",
     "inputs": [
       {
-        "label": "Center Distance (mm)",
+        "label": "Center Distance C (mm)",
         "val": "500"
       },
       {
-        "label": "Pitch (mm)",
+        "label": "Chain Pitch P (mm)",
         "val": "12.7"
       },
       {
-        "label": "Sprocket1 Teeth",
+        "label": "Sprocket 1 Teeth N₁",
         "val": "17"
       },
       {
-        "label": "Sprocket2 Teeth",
+        "label": "Sprocket 2 Teeth N₂",
         "val": "51"
       }
     ],
     "outputs": [
       {
-        "label": "Chain Links (Pitches)",
-        "val": "113.00 pitches"
+        "label": "Recommended Even Links (L_p,even)",
+        "val": "114 pitches"
       },
       {
-        "label": "Chain Linear Length (mm)",
-        "val": "1435.10 mm"
+        "label": "Total Chain Linear Length",
+        "val": "1447.80 mm"
+      },
+      {
+        "label": "Calculated Theoretical Pitches",
+        "val": "113.48 pitches"
+      },
+      {
+        "label": "Adjusted Center Distance (C_actual)",
+        "val": "503.31 mm"
       }
     ]
   },
   "channel-flow-manning-calculator": {
     "title": "Open Channel Flow Calculator (Manning)",
     "description": "Calculate open channel flow rate and velocity using Mannings equation.",
-    "discipline": "Environmental Process, Hydrology & Open-Channel Hydraulics",
-    "standards": "WEF Manual of Practice No. 8 (MOP 8), Metcalf & Eddy Wastewater Engineering, ASCE/EWRI Urban Drainage Guidelines, International Plumbing Code (IPC)",
-    "cadContext": "Check hydraulic grade line (HGL), invert elevations, freeboard clearances, and peak diurnal flow peaking factors across all connected P&ID and civil site utility profiles.",
-    "formula": "Q = (1/n)*A*R^(2/3)*S^(1/2)",
+    "discipline": "Civil Hydraulics & Open-Channel Gravity Drainage",
+    "standards": "SI Manning Open-Channel Uniform Flow Equation & Prismatic Section Geometry (Engineering ToolBox Hydraulics Reference)",
+    "cadContext": "Verify channel invert slope S, bottom width b, side slope z, and normal water depth y along civil grading corridor cross-sections to maintain adequate freeboard.",
+    "formula": "v = (1 / n) · R_h^(2/3) · S^(1/2), Q = A · v, R_h = A / P",
     "inputs": [
       {
-        "label": "Channel Width (m)",
+        "label": "Channel Cross-Section Shape",
+        "val": "Rectangular Flume (Vertical Walls, z = 0)"
+      },
+      {
+        "label": "Bottom Width b (m)",
         "val": "2"
       },
       {
-        "label": "Water Depth (m)",
+        "label": "Flow Depth y (m)",
         "val": "1"
       },
       {
-        "label": "Slope",
+        "label": "Longitudinal Slope S (m/m)",
         "val": "0.001"
       },
       {
-        "label": "Manning n",
+        "label": "Manning Roughness Coefficient n",
         "val": "0.015"
-      },
-      {
-        "label": "Channel Shape",
-        "val": "Rectangular Flume"
       }
     ],
     "outputs": [
       {
-        "label": "Flow Rate",
-        "val": "2.656 m3/s"
+        "label": "Volumetric Flow Rate (Q)",
+        "val": "2.656 m³/s"
       },
       {
-        "label": "Velocity",
+        "label": "Mean Flow Velocity (v)",
         "val": "1.328 m/s"
       },
       {
-        "label": "Hydraulic Radius",
-        "val": "0.500000 m"
+        "label": "Hydraulic Radius (R_h = A / P)",
+        "val": "0.500 m"
+      },
+      {
+        "label": "Wetted Flow Area (A)",
+        "val": "2.000 m²"
+      },
+      {
+        "label": "Wetted Perimeter (P)",
+        "val": "4.000 m"
       }
     ]
   },

@@ -2,208 +2,430 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Settings, Zap, Info, RotateCcw, Download } from 'lucide-react';
 
-interface CalculationOutput {
-  primary: { label: string; val: string; unit: string };
-  secondary: Array<{ label: string; val: string; unit: string }>;
-  status?: { pass: boolean; text: string };
+type TileModuleId = '600x600' | '600x1200';
+
+const TILE_MODULES: Record<TileModuleId, { label: string; areaSqm: number }> = {
+  '600x600': {
+    label: '600 mm × 600 mm Metric Square Module (0.36 m²)',
+    areaSqm: 0.36,
+  },
+  '600x1200': {
+    label: '600 mm × 1200 mm Metric Rectangular Module (0.72 m²)',
+    areaSqm: 0.72,
+  },
+};
+
+function parseStrictNumber(raw: string): number {
+  const trimmed = raw.trim();
+  if (trimmed === '') return NaN;
+  const num = Number(trimmed);
+  return Number.isFinite(num) ? num : NaN;
 }
 
-const computeFn: (vals: string[]) => CalculationOutput = (vals) => {
-      const len = parseFloat(vals[0]) || 12;
-      const wid = parseFloat(vals[1]) || 8;
-      const size = parseFloat(vals[2]) || 600;
-      const waste = parseFloat(vals[3]) || 10;
-      const area = len * wid;
-      const tileArea = size === 600 ? 0.36 : 0.72;
-      const tilesNeeded = Math.ceil((area / tileArea) * (1 + waste / 100));
-      const perimeter = 2 * (len + wid);
-      const wallAngle = Math.ceil(perimeter / 3.0);
-      const mainRunners = Math.ceil((len / 1.2) * (wid / 3.6));
-      return {
-        primary: { label: 'Total Ceiling Tiles Required', val: tilesNeeded.toString(), unit: 'pcs' },
-        secondary: [
-          { label: 'Finished Ceiling Floor Area', val: area.toFixed(1), unit: 'm²' },
-          { label: 'Wall Angle Trim (3m lengths)', val: wallAngle.toString(), unit: 'bars' },
-          { label: 'Main T-Bar Runners (3.6m lengths)', val: mainRunners.toString(), unit: 'runners' }
-        ],
-        status: { pass: true, text: 'BILL OF MATERIALS CALCULATED' }
-      };
-    };
+function safeCeil(val: number): number {
+  return Math.ceil(val - 1e-9);
+}
 
-const DEFAULT_INPUTS = ["12","8","600","10"];
+export default function CeilingGridCalculatorClient() {
+  const [lengthStr, setLengthStr] = useState<string>('12');
+  const [widthStr, setWidthStr] = useState<string>('8');
+  const [tileModule, setTileModule] = useState<TileModuleId>('600x600');
+  const [wastePctStr, setWastePctStr] = useState<string>('10');
+  const [mainSpacingStr, setMainSpacingStr] = useState<string>('1.2');
+  const [mainBarLenStr, setMainBarLenStr] = useState<string>('3.6');
+  const [wallBarLenStr, setWallBarLenStr] = useState<string>('3.0');
 
-export default function CalculatorClient() {
-  const [inputs, setInputs] = useState<string[]>(DEFAULT_INPUTS);
-
-  const updateInput = (idx: number, val: string) => {
-    const next = [...inputs];
-    next[idx] = val;
-    setInputs(next);
+  const applyPreset = (
+    len: string,
+    wid: string,
+    mod: TileModuleId,
+    waste: string,
+    spacing = '1.2',
+    mainLen = '3.6',
+    wallLen = '3.0'
+  ) => {
+    setLengthStr(len);
+    setWidthStr(wid);
+    setTileModule(mod);
+    setWastePctStr(waste);
+    setMainSpacingStr(spacing);
+    setMainBarLenStr(mainLen);
+    setWallBarLenStr(wallLen);
   };
 
-  const result = useMemo(() => {
-    try {
-      return computeFn(inputs);
-    } catch {
-      return {
-        primary: { label: 'Calculation Error', val: '—', unit: '' },
-        secondary: [],
-        status: { pass: false, text: 'Invalid Input Values' }
-      };
+  const handleReset = () => {
+    applyPreset('12', '8', '600x600', '10', '1.2', '3.6', '3.0');
+  };
+
+  /**
+   * Modular Suspended Ceiling Takeoff Equations:
+   * 1. Floor / Ceiling Area A = L * W [m²], Room Perimeter P = 2 * (L + W) [m]
+   * 2. Tile Unit Area A_tile = 0.36 m² (600x600 mm) or 0.72 m² (600x1200 mm)
+   * 3. Total Ceiling Tiles N_tiles = ceil((A / A_tile) * (1 + w / 100))
+   * 4. Wall Angle Trim Bars N_wall = ceil(P / L_wall)
+   * 5. Main T-Bar Runners (area-density estimate) N_main = ceil(A / (s_main * L_main))
+   */
+  const calc = useMemo(() => {
+    const L = parseStrictNumber(lengthStr);
+    const W = parseStrictNumber(widthStr);
+    const wastePct = parseStrictNumber(wastePctStr);
+    const sMain = parseStrictNumber(mainSpacingStr);
+    const lenMain = parseStrictNumber(mainBarLenStr);
+    const lenWall = parseStrictNumber(wallBarLenStr);
+
+    const modInfo = TILE_MODULES[tileModule];
+    if (
+      !modInfo ||
+      !Number.isFinite(L) ||
+      !Number.isFinite(W) ||
+      !Number.isFinite(wastePct) ||
+      !Number.isFinite(sMain) ||
+      !Number.isFinite(lenMain) ||
+      !Number.isFinite(lenWall) ||
+      L <= 0 ||
+      W <= 0 ||
+      wastePct < 0 ||
+      wastePct > 100 ||
+      sMain <= 0 ||
+      lenMain <= 0 ||
+      lenWall <= 0
+    ) {
+      return { isValid: false as const };
     }
-  }, [inputs]);
+
+    const area = L * W;
+    const perimeter = 2 * (L + W);
+    const tilesNeeded = safeCeil((area / modInfo.areaSqm) * (1 + wastePct / 100));
+    const wallAngleBars = safeCeil(perimeter / lenWall);
+    const mainRunners = safeCeil(area / (sMain * lenMain));
+
+    return {
+      isValid: true as const,
+      L,
+      W,
+      wastePct,
+      sMain,
+      lenMain,
+      lenWall,
+      modInfo,
+      area,
+      perimeter,
+      tilesNeeded,
+      wallAngleBars,
+      mainRunners,
+    };
+  }, [lengthStr, widthStr, tileModule, wastePctStr, mainSpacingStr, mainBarLenStr, wallBarLenStr]);
+
+  const handleExportCsv = () => {
+    if (!calc.isValid) return;
+    const rows = [
+      ['Parameter', 'Value', 'Unit', 'Notes'],
+      ['Room Length (L)', calc.L.toFixed(2), 'm', 'Interior finished span'],
+      ['Room Width (W)', calc.W.toFixed(2), 'm', 'Interior finished width'],
+      ['Tile Module', calc.modInfo.label, '-', `Unit area = ${calc.modInfo.areaSqm.toFixed(2)} m²`],
+      ['Cut Waste Allowance (w)', calc.wastePct.toFixed(1), '%', 'Perimeter cut & handling allowance'],
+      ['Main Tee Center Spacing (s_main)', calc.sMain.toFixed(2), 'm', 'Typical metric span = 1.20 m (1200 mm)'],
+      ['Main Tee Stock Length (L_main)', calc.lenMain.toFixed(2), 'm', 'Typical stock bar = 3.60 m (3600 mm)'],
+      ['Wall Angle Stock Length (L_wall)', calc.lenWall.toFixed(2), 'm', 'Typical perimeter trim = 3.00 m'],
+      ['Finished Ceiling Area (A)', calc.area.toFixed(2), 'm²', 'A = L * W'],
+      ['Room Perimeter (P)', calc.perimeter.toFixed(2), 'm', 'P = 2 * (L + W)'],
+      ['Total Ceiling Tiles Required', String(calc.tilesNeeded), 'pcs', 'ceil((A / A_tile) * (1 + w / 100))'],
+      ['Wall Angle Trim Bars', String(calc.wallAngleBars), 'bars', 'ceil(P / L_wall)'],
+      ['Main T-Bar Runners (Area Estimate)', String(calc.mainRunners), 'runners', 'ceil(A / (s_main * L_main))'],
+      ['Grid System Standards Note', 'ASTM C635 / BS EN 13964 (Suspension grid duty ratings & deflection test standards)', '-', 'Modular area takeoff per manufacturer grid layout guidelines'],
+    ];
+    const csvContent = rows
+      .map((r) => r.map((cell) => `"${String(cell).replace(/"/g, '""')}"`).join(','))
+      .join('\n');
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = 'ceiling-grid-takeoff.csv';
+    link.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="space-y-8">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left Column: Parameter Inputs */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
-              <Settings className="w-5 h-5" />
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        {/* Left Column: Inputs */}
+        <div
+          data-testid="calculator-inputs"
+          className="lg:col-span-5 bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm space-y-5"
+        >
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
+                <Settings className="w-5 h-5" />
+              </div>
+              <div>
+                <h2 className="text-lg font-black text-slate-900 tracking-tight">Room &amp; Grid Parameters</h2>
+                <p className="text-xs text-slate-400 font-bold uppercase tracking-wider">
+                  Modular Lay-In Ceiling Takeoff
+                </p>
+              </div>
             </div>
-            <div>
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs & Parameters</h2>
-              <p className="text-xs text-slate-500 font-medium">Adjust values to recalculate</p>
+            <button
+              type="button"
+              data-testid="btn-reset"
+              onClick={handleReset}
+              className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black flex items-center gap-1.5 transition-all"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              Reset
+            </button>
+          </div>
+
+          {/* Presets */}
+          <div className="space-y-1.5">
+            <span className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+              Quick Presets
+            </span>
+            <div className="grid grid-cols-3 gap-2">
+              <button
+                type="button"
+                data-testid="preset-office-600"
+                onClick={() => applyPreset('12', '8', '600x600', '10')}
+                className="px-2.5 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700 transition-all"
+              >
+                12×8m · 600×600
+              </button>
+              <button
+                type="button"
+                data-testid="preset-office-1200"
+                onClick={() => applyPreset('12', '8', '600x1200', '10')}
+                className="px-2.5 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700 transition-all"
+              >
+                12×8m · 600×1200
+              </button>
+              <button
+                type="button"
+                data-testid="preset-exact-6x6"
+                onClick={() => applyPreset('6', '6', '600x600', '0')}
+                className="px-2.5 py-2 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-xs font-bold text-slate-700 transition-all"
+              >
+                6×6m · 0% Waste
+              </button>
             </div>
           </div>
 
           <div className="space-y-4">
-          <div key="0">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Room Length (m)</label>
-            <input
-              type="number"
-              step="0.5"
-              value={inputs[0]}
-              onChange={(e) => updateInput(0, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          <div key="1">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Room Width (m)</label>
-            <input
-              type="number"
-              step="0.5"
-              value={inputs[1]}
-              onChange={(e) => updateInput(1, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          <div key="2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Tile Dimensions</label>
-            <select
-              value={inputs[2]}
-              onChange={(e) => updateInput(2, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all cursor-pointer"
-            >
-              <option key="600" value="600">{"600 mm × 600 mm Metric Grid"}</option>
-              <option key="1200" value="1200">{"600 mm × 1200 mm Imperial Module"}</option>
-            </select>
-          </div>
-          <div key="3">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Cut Waste Allowance (%)</label>
-            <input
-              type="number"
-              step="1"
-              value={inputs[3]}
-              onChange={(e) => updateInput(3, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
+                  Room Length L (m)
+                </label>
+                <input
+                  type="text"
+                  data-testid="input-room-length"
+                  value={lengthStr}
+                  onChange={(e) => setLengthStr(e.target.value)}
+                  className="w-full h-11 px-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900 focus:outline-none focus:bg-white transition-all"
+                />
+              </div>
+              <div>
+                <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
+                  Room Width W (m)
+                </label>
+                <input
+                  type="text"
+                  data-testid="input-room-width"
+                  value={widthStr}
+                  onChange={(e) => setWidthStr(e.target.value)}
+                  className="w-full h-11 px-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900 focus:outline-none focus:bg-white transition-all"
+                />
+              </div>
+            </div>
+
+            <div>
+              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
+                Ceiling Tile Module
+              </label>
+              <select
+                data-testid="select-tile-module"
+                value={tileModule}
+                onChange={(e) => setTileModule(e.target.value as TileModuleId)}
+                className="w-full h-11 px-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900 focus:outline-none focus:bg-white transition-all"
+              >
+                <option value="600x600">{TILE_MODULES['600x600'].label}</option>
+                <option value="600x1200">{TILE_MODULES['600x1200'].label}</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
+                Cut Waste Allowance w (%, 0–100)
+              </label>
+              <input
+                type="text"
+                data-testid="input-waste-pct"
+                value={wastePctStr}
+                onChange={(e) => setWastePctStr(e.target.value)}
+                className="w-full h-11 px-3.5 rounded-2xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900 focus:outline-none focus:bg-white transition-all"
+              />
+            </div>
+
+            <div className="pt-3 border-t border-slate-100 space-y-3">
+              <span className="text-xs font-black text-slate-400 uppercase tracking-wider block">
+                Grid Stock &amp; Spacing (Editable Typical Values)
+              </span>
+              <div className="grid grid-cols-3 gap-2.5">
+                <div>
+                  <label className="text-[11px] font-bold text-slate-500 block mb-1">
+                    Main Spacing (m)
+                  </label>
+                  <input
+                    type="text"
+                    data-testid="input-main-spacing"
+                    value={mainSpacingStr}
+                    onChange={(e) => setMainSpacingStr(e.target.value)}
+                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900 focus:outline-none focus:bg-white"
+                  />
+                </div>
+                <div>
+                  <label className="text-[11px] font-bold text-slate-500 block mb-1">
+                    Main Tee Bar (m)
+                  </label>
+                  <input
+                    type="text"
+                    data-testid="input-main-length"
+                    value={mainBarLenStr}
+                    onChange={(e) => setMainBarLenStr(e.target.value)}
+                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900 focus:outline-none focus:bg-white"
+                  />
+                </div>
+                <div>
+                  <label className="text-[11px] font-bold text-slate-500 block mb-1">
+                    Wall Angle (m)
+                  </label>
+                  <input
+                    type="text"
+                    data-testid="input-wall-length"
+                    value={wallBarLenStr}
+                    onChange={(e) => setWallBarLenStr(e.target.value)}
+                    className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900 focus:outline-none focus:bg-white"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
 
           <button
-            onClick={() => setInputs(DEFAULT_INPUTS)}
-            className="w-full py-3 rounded-xl text-sm font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
+            type="button"
+            data-testid="btn-export-csv"
+            disabled={!calc.isValid}
+            onClick={handleExportCsv}
+            className="w-full py-3 rounded-2xl bg-orange-600 hover:bg-orange-700 disabled:bg-slate-200 disabled:text-slate-400 text-white text-sm font-black flex items-center justify-center gap-2 transition-all"
           >
-            Reset Defaults
+            <Download className="w-4 h-4" />
+            Export Ceiling Takeoff CSV
           </button>
         </div>
 
-        {/* Right Column: Results & Engineering Metrics */}
-        <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
-                  <Zap className="w-5 h-5" />
+        {/* Right Column: Results */}
+        <div
+          data-testid="calculator-results"
+          className="lg:col-span-7 space-y-6"
+        >
+          <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm space-y-6">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
+                <Zap className="w-5 h-5" />
+              </div>
+              <h2 className="text-lg font-black text-slate-900 tracking-tight">
+                Bill of Materials Estimate
+              </h2>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50/50 rounded-2xl p-6 border border-blue-100">
+              <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-1">
+                Total Ceiling Tiles Required
+              </div>
+              <div className="text-4xl font-black font-mono text-blue-900">
+                <span data-testid="out-tiles-needed">
+                  {calc.isValid ? String(calc.tilesNeeded) : '—'}
+                </span>{' '}
+                <span className="text-lg font-bold text-blue-600">pcs</span>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+                  Finished Ceiling Area (A)
                 </div>
-                <h2 className="text-lg font-black text-slate-900 tracking-tight">Calculated Outputs</h2>
-              </div>
-              {result.status && (
-                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-black tracking-wide uppercase border ${
-                  result.status.pass
-                    ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                    : 'bg-amber-50 text-amber-700 border-amber-200'
-                }`}>
-                  {result.status.pass ? (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  ) : (
-                    <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
-                  )}
-                  <span>{result.status.text}</span>
+                <div className="text-2xl font-black font-mono text-slate-900">
+                  <span data-testid="out-ceiling-area">
+                    {calc.isValid ? calc.area.toFixed(2) : '—'}
+                  </span>{' '}
+                  <span className="text-xs font-bold text-slate-500">m²</span>
                 </div>
-              )}
+              </div>
+
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">
+                  Room Perimeter (P)
+                </div>
+                <div className="text-2xl font-black font-mono text-slate-900">
+                  <span data-testid="out-perimeter">
+                    {calc.isValid ? calc.perimeter.toFixed(2) : '—'}
+                  </span>{' '}
+                  <span className="text-xs font-bold text-slate-500">m</span>
+                </div>
+              </div>
+
+              <div className="bg-emerald-50/70 rounded-2xl p-4 border border-emerald-100">
+                <div className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-1">
+                  Wall Angle Trim Bars
+                </div>
+                <div className="text-2xl font-black font-mono text-emerald-800">
+                  <span data-testid="out-wall-angle">
+                    {calc.isValid ? String(calc.wallAngleBars) : '—'}
+                  </span>{' '}
+                  <span className="text-xs font-bold text-emerald-600">bars</span>
+                </div>
+              </div>
+
+              <div className="bg-amber-50/70 rounded-2xl p-4 border border-amber-100">
+                <div className="text-xs font-black text-amber-600 uppercase tracking-wider mb-1">
+                  Main T-Bar Runners (Area Estimate)
+                </div>
+                <div className="text-2xl font-black font-mono text-amber-800">
+                  <span data-testid="out-main-runners">
+                    {calc.isValid ? String(calc.mainRunners) : '—'}
+                  </span>{' '}
+                  <span className="text-xs font-bold text-amber-600">runners</span>
+                </div>
+              </div>
             </div>
 
-            {/* Primary Result Banner */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50/40 rounded-2xl p-6 border border-blue-100">
-              <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-2">
-                {result.primary.label}
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 text-xs text-slate-600 space-y-1.5 leading-relaxed">
+              <div className="font-bold text-slate-800 flex items-center gap-1.5">
+                <Info className="w-4 h-4 text-orange-600 shrink-0" />
+                <span>Modular Takeoff Formulas &amp; Suspension Grid Standards:</span>
               </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl sm:text-5xl font-black text-blue-900 tracking-tight">
-                  {result.primary.val}
-                </span>
-                {result.primary.unit && (
-                  <span className="text-lg font-bold text-blue-600">
-                    {result.primary.unit}
-                  </span>
-                )}
-              </div>
-            </div>
-
-            {/* Secondary Metrics Grid */}
-            {result.secondary && result.secondary.length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {result.secondary.map((metric, idx) => (
-                  <div key={idx} className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 line-clamp-1">
-                      {metric.label}
-                    </div>
-                    <div className="text-xl font-black text-slate-900">
-                      {metric.val}
-                      {metric.unit && <span className="text-xs font-medium text-slate-500 ml-1.5">{metric.unit}</span>}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Engineering Methodology & Formula Card */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-600">
-                <Info className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-base font-black text-slate-900 tracking-tight">Governing Engineering Formula & Standards</h3>
-                <p className="text-xs text-slate-500 font-medium">Standardized calculation procedure</p>
-              </div>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <p className="text-xs sm:text-sm text-slate-700 font-mono font-medium leading-relaxed block break-words">
-                {"Tiles = ceil((Area / A_tile) × (1 + Waste)) • Main T-Bar @ 1200mm centers (ASTM C635 / EN 13964)"}
+              <p className="font-mono text-slate-700">
+                A = L × W, P = 2(L + W), Tiles = ceil((A / A_tile) × (1 + w / 100))
+              </p>
+              <p className="font-mono text-slate-700">
+                Wall Angle = ceil(P / L_wall), Main Runners = ceil(A / (s_main × L_main))
+              </p>
+              <p className="text-slate-500">
+                Scope note: Metal suspension grid mechanical load ratings (Light / Intermediate / Heavy Duty) and span
+                deflection testing are governed by <strong>ASTM C635</strong> and <strong>BS EN 13964</strong> (metric
+                600 × 600 mm and 1200 × 600 mm lay-in modules with main tees typically spaced at 1200 mm centers). The
+                material counts above are modular area-density estimates; exact bar counts vary slightly with runner
+                orientation, border tile symmetry, and MEP light/diffuser cutouts on your Reflected Ceiling Plan (RCP).
               </p>
             </div>
           </div>
+
+          <RelatedTools />
         </div>
       </div>
-
-      <RelatedTools />
     </div>
   );
 }

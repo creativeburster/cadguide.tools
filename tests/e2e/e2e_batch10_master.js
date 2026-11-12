@@ -307,10 +307,11 @@ async function runBatch10Tests() {
         throw new Error('reset_scalelist.lsp contains non-ASCII characters (such as emoji)!');
       }
       const requiredTokens = [
+        ';; WARNING: Back up the drawing before running;',
         '(defun c:ResetScaleList',
         '(setvar "CMDECHO" 0)',
-        '(command "-SCALELISTEDIT" "Reset" "Yes" "Exit")',
         '(dictremove (namedobjdict) "ACAD_SCALELIST")',
+        '(command "-SCALELISTEDIT" "Reset" "Yes" "Exit")',
         '(dictsearch (namedobjdict) "ACAD_SCALELIST")',
         '(command "-SCALELISTEDIT" "Add" sName sRatio "Exit")',
         '(_cadguide_add_scale "1:1" "1:1")',
@@ -322,6 +323,12 @@ async function runBatch10Tests() {
         if (!lspContent.includes(token)) {
           throw new Error(`Missing expected AutoLISP token in reset_scalelist.lsp: ${token}`);
         }
+      }
+      const resetCallCount = lspContent.split('(command "-SCALELISTEDIT" "Reset" "Yes" "Exit")').length - 1;
+      assertEqual(resetCallCount, 1, 'scalelist single -SCALELISTEDIT Reset call');
+      const resultsText = await p.locator('[data-testid="calculator-results"]').innerText();
+      if (!resultsText.includes('Backup Warning:')) {
+        throw new Error('Expected Backup Warning notice on cad-scale-list-reset-helper page');
       }
 
       // 3. Presets: Metric Only (10) & Imperial Arch (5)
