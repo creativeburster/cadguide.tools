@@ -156,7 +156,8 @@ flowchart LR
 | 8 | bolt-fatigue-calculator、bolt-pattern-load-calculator、brake-torque-calculator、brick-block-quantity-calculator、broaching-force-calculator | 6ade3d80（已通过复核，2026-11-11） |
 | 9 | cable-pull-tension-calculator、cable-sizing-calculator、cable-tray-fill-calculator、cad-format-compatibility-matrix、cad-hatch-scale-optimizer | 3bb9a877～26500f71（已通过复核，2026-11-11） |
 | 10 | cad-license-tco-calculator、cad-limits-checker、cad-scale-list-reset-helper、cam-profile-calculator、capacitor-reactance-calculator | 7ef95ba6（已通过复核，已 push，2026-11-11） |
-| 11 | casting-shrinkage-calculator、ceiling-grid-calculator、centrifugal-force-calculator、chain-drive-length-calculator、channel-flow-manning-calculator | 待复核 |
+| 11 | casting-shrinkage-calculator、ceiling-grid-calculator、centrifugal-force-calculator、chain-drive-length-calculator、channel-flow-manning-calculator | e2f07eb8～db654ec9（已通过复核，2026-11-12） |
+| 12 | chiller-load-calculator、chlorine-dose-calculator、cloud-bim-rvt-to-ifc-converter、cloud-cad-telemetry-blocker-wizard、cloud-dwg-drawing-recovery-service | 待复核 |
 
 ---
 

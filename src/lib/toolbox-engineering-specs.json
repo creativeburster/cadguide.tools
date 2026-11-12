@@ -2651,7 +2651,7 @@
     "title": "Chain Drive Length Calculator",
     "description": "Calculate roller chain length and center distance for two-sprocket chain drives.",
     "discipline": "Mechanical Power Transmission & Sprocket Drive Layout",
-    "standards": "ISO 606:2015 (Short-Pitch Precision Roller Chains) & ASME B29.1 (Precision Power Transmission Roller Chains)",
+    "standards": "ISO 606:2015 (Short-pitch transmission precision roller and bush chains) & ASME B29.1 (Precision Power Transmission Roller Chains)",
     "cadContext": "Set shaft mounting slot travel in your 3D CAD assembly to span the adjusted center distance C_actual corresponding to an even number of chain pitches without requiring an offset link.",
     "formula": "L_p,exact = (N₁ + N₂)/2 + 2C/P + (N₂ − N₁)² / [4π²(C/P)], L_p,even = 2 × ceil(L_p,exact / 2)",
     "inputs": [
@@ -2745,85 +2745,109 @@
   },
   "chiller-load-calculator": {
     "title": "Chiller Tonnage Calculator",
-    "description": "Calculate chiller cooling capacity and tonnage from flow rate and temperature difference.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "Q = m*cp*dT, tons = Q/3.517",
+    "description": "Calculate hydronic chiller cooling capacity (kW) and refrigeration tonnage (RT) from volumetric flow rate, fluid density, specific heat, and temperature differential.",
+    "discipline": "HVAC Hydronic Chilled-Water Systems & Building Thermal Plant Sizing",
+    "standards": "First-Law Hydronic Sensible Heat Balance & NIST Special Publication 811 Appendix B.9 (1 RT = 3.516853 kW)",
+    "cadContext": "Size chilled-water supply and return header pipe diameters, control valve Cv ratings, and pump flow schedules in your MEP BIM model from verified plant mass flow and delta-T.",
+    "formula": "ṁ = V̇ [L/s] × ρ [kg/L], Q [kW] = ṁ × c_p × (T_in − T_out), RT = Q ÷ 3.516853",
     "inputs": [
       {
-        "label": "Flow Rate (L/s)",
+        "label": "Volumetric Flow Rate V̇ (L/s)",
         "val": "50"
       },
       {
-        "label": "Temp In (C)",
+        "label": "Entering Return Water Temp T_in (°C)",
         "val": "12"
       },
       {
-        "label": "Temp Out (C)",
+        "label": "Leaving Supply Water Temp T_out (°C)",
         "val": "7"
       },
       {
-        "label": "Cp (kJ/kgK)",
-        "val": "4.18"
+        "label": "Fluid Specific Heat c_p (kJ/(kg·K))",
+        "val": "4.184"
+      },
+      {
+        "label": "Fluid Density ρ (kg/L)",
+        "val": "1.000"
       }
     ],
     "outputs": [
       {
-        "label": "Cooling Load",
-        "val": "1045.00 kW"
+        "label": "Sensible Cooling Capacity (Q)",
+        "val": "1046.00 kW"
       },
       {
-        "label": "Tonnage",
-        "val": "297.13 TR"
+        "label": "Refrigeration Tonnage (RT)",
+        "val": "297.42 RT"
       },
       {
-        "label": "Flow per Ton",
-        "val": "0.168278 L/s per TR"
+        "label": "Mass Flow Rate (ṁ)",
+        "val": "50.000 kg/s"
+      },
+      {
+        "label": "Temperature Differential (ΔT)",
+        "val": "5.00 °C (K)"
+      },
+      {
+        "label": "Volumetric Flow per Refrigeration Ton",
+        "val": "0.1681 L/(s·RT)"
       }
     ]
   },
   "chlorine-dose-calculator": {
     "title": "Chlorine Dose & CT Value Calculator",
-    "description": "Calculate chlorine disinfection dose, CT value, and contact time for water treatment.",
-    "discipline": "Environmental Process, Hydrology & Open-Channel Hydraulics",
-    "standards": "WEF Manual of Practice No. 8 (MOP 8), Metcalf & Eddy Wastewater Engineering, ASCE/EWRI Urban Drainage Guidelines, International Plumbing Code (IPC)",
-    "cadContext": "Check hydraulic grade line (HGL), invert elevations, freeboard clearances, and peak diurnal flow peaking factors across all connected P&ID and civil site utility profiles.",
-    "formula": "Feed (kg/h) = Q(m³/h) × (Demand + Residual)(mg/L) / 1000 (AWWA Standard B300 Disinfection)",
+    "description": "Calculate chlorine disinfection mass feed rate, sodium hypochlorite metering pump volume, and CT value for water treatment.",
+    "discipline": "Water Treatment Chemical Dosing & Clearwell Disinfection Contact Design",
+    "standards": "Mass-Balance Chemical Stoichiometry & US EPA Surface Water Treatment Rule (SWTR) CT Disinfection Product",
+    "cadContext": "Coordinate chemical metering pump skid capacities, sodium hypochlorite day-tank containment volumes, and clearwell baffle contact geometry on process P&IDs and hydraulic layouts.",
+    "formula": "C_dose = C_demand + C_residual, M_Cl2 [kg/d] = Q [m³/d] × C_dose [mg/L] ÷ 1000, V_sol [L/d] = M_Cl2 ÷ (SG × w_avail/100), CT = C_residual × T",
     "inputs": [
       {
-        "label": "Water Flow Q (m³/h)",
-        "val": "120"
+        "label": "Treated Water Flow Q (m³/d)",
+        "val": "2400"
       },
       {
-        "label": "Chlorine Demand (mg/L)",
+        "label": "Chlorine Demand C_demand (mg/L)",
         "val": "1.8"
       },
       {
-        "label": "Target Free Residual (mg/L)",
+        "label": "Target Free Residual C_residual (mg/L)",
         "val": "0.6"
       },
       {
-        "label": "NaOCl Solution Strength (%)",
-        "val": "10% Commercial Sodium Hypochlorite"
+        "label": "Available Chlorine Strength w_avail (%)",
+        "val": "12.5"
+      },
+      {
+        "label": "Solution Specific Gravity SG (kg/L)",
+        "val": "1.18"
+      },
+      {
+        "label": "Disinfection Contact Time T (min)",
+        "val": "30"
       }
     ],
     "outputs": [
       {
-        "label": "Pure Chlorine Dose Feed Rate",
-        "val": "0.288 kg/h"
+        "label": "Daily Pure Chlorine Mass (M_Cl₂)",
+        "val": "5.760 kg/d"
       },
       {
-        "label": "Total Dosage Concentration",
-        "val": "2.40 mg/L (ppm)"
+        "label": "Hourly Pure Chlorine Feed Rate",
+        "val": "0.240 kg/h"
       },
       {
-        "label": "Hypochlorite Solution Feed Pump Rate",
-        "val": "2.50 L/h"
+        "label": "Total Applied Dose (C_dose)",
+        "val": "2.40 mg/L"
       },
       {
-        "label": "Daily Chlorine Consumption",
-        "val": "6.9 kg/day"
+        "label": "Solution Metering Pump Rate",
+        "val": "1.63 L/h (39.05 L/d)"
+      },
+      {
+        "label": "Disinfection CT Value (C × T)",
+        "val": "18.00 mg·min/L"
       }
     ]
   },
@@ -2838,73 +2862,128 @@
     "outputs": []
   },
   "cloud-bim-rvt-to-ifc-converter": {
-    "title": "Online Revit RVT to openBIM IFC Standard Converter",
-    "description": "Evaluate the best Revit RVT to buildingSmart IFC converters. Find compliant exporters that preserve parameters and spaces mapping.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online Revit RVT to openBIM IFC Standard Converter",
+    "title": "Revit RVT to openBIM IFC Export Guide & Local IFC Inspector",
+    "description": "Export Revit RVT models to ISO 16739-1 (IFC4 / IFC2x3) via official Autodesk Revit IFC workflows and audit exported IFC entity counts locally in the browser.",
+    "discipline": "BIM Interoperability & openBIM IFC Deliverables QA",
+    "standards": "ISO 16739-1:2024 (Industry Foundation Classes — buildingSMART IFC4 & IFC2x3) & Autodesk Revit IFC Exporter",
+    "cadContext": "Export native .rvt models inside desktop Revit via File tab > Export > (IFC) after loading your shared class mapping table, then inspect the exported .ifc file's FILE_SCHEMA, IfcSpace count, and IfcBuildingElementProxy share locally.",
+    "formula": "Proxy Share (%) = (N_IfcBuildingElementProxy ÷ N_TrackedElements) × 100; QA Pass requires Proxy Share ≤ MaxProxy% and N_IfcSpace ≥ MinSpaces",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Inspected IFC Buffer",
+        "val": "office-core-arch.ifc (Sample 1: IFC4)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
+        "label": "Max Allowed Proxy Share (%)",
+        "val": "15"
       },
       {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Min Required IfcSpace Count",
+        "val": "1"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Detected FILE_SCHEMA",
+        "val": "IFC4"
+      },
+      {
+        "label": "Tracked Building Elements",
+        "val": "10 (4 IfcWall, 2 IfcSlab, 2 IfcColumn, 1 IfcSpace, 1 Proxy)"
+      },
+      {
+        "label": "Unmapped Proxy Ratio",
+        "val": "10.00%"
+      },
+      {
+        "label": "QA Gate Status",
+        "val": "PASS"
+      }
+    ]
   },
   "cloud-cad-telemetry-blocker-wizard": {
-    "title": "Enterprise CAD Telemetry Privacy Configuration Portal",
-    "description": "Benchmark firewall and proxy configurations that limit CAD outbound telemetry in line with corporate privacy and security policy (GDPR data minimization, air-gapped networks).",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Enterprise CAD Telemetry Privacy Configuration Portal",
+    "title": "AutoCAD Telemetry & Error-Reporting Privacy Wizard",
+    "description": "Generate documented AutoCAD privacy scripts (REPORTERROR, desktopanalytics) and optional Windows Defender Firewall outbound rules (ADPClientService.exe) with licensing impact warnings.",
+    "discipline": "CAD Workstation Administration & Endpoint Network Privacy",
+    "standards": "Autodesk AutoCAD System Variables (REPORTERROR, desktopanalytics / ADPClientService.exe) & Windows PowerShell NetSecurity (New-NetFirewallRule / Remove-NetFirewallRule)",
+    "cadContext": "Test generated .scr and .ps1 configurations on a non-production workstation first; blocking outbound processes may disrupt Named-User subscription sign-in and Autodesk My Insights.",
+    "formula": "Active Controls = I(REPORTERROR = 0) + I(desktopanalytics included) + I(ADPClientService.exe outbound rule enabled)",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Target Workstations",
+        "val": "25"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
+        "label": "AutoCAD Release Year",
+        "val": "2025"
       },
       {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "REPORTERROR System Variable",
+        "val": "0"
+      },
+      {
+        "label": "Include desktopanalytics Command",
+        "val": "Enabled"
+      },
+      {
+        "label": "Outbound Firewall Block (ADPClientService.exe)",
+        "val": "Disabled (In-App Only)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Active Privacy Controls",
+        "val": "2"
+      },
+      {
+        "label": "Target Fleet Summary",
+        "val": "25 seats (2025)"
+      },
+      {
+        "label": "Licensing Risk Assessment",
+        "val": "LOW (IN-APP DOCUMENTED CONTROLS)"
+      }
+    ]
   },
   "cloud-dwg-drawing-recovery-service": {
-    "title": "Online Damaged DWG Drawing Recovery & Repair Portal",
-    "description": "Compare the best online tools to recover corrupt DWG files. Learn how to bypass the invalid drawing error and salvage layers locally.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online Damaged DWG Drawing Recovery & Repair Portal",
+    "title": "Corrupt DWG Local Recovery Guide & Header Inspector",
+    "description": "Check local DWG 6-byte AC10xx version signatures without uploading files and generate pure-ASCII AutoCAD recovery & audit scripts.",
+    "discipline": "CAD Database Integrity, Crash Triage & Local Drawing Recovery",
+    "standards": "Autodesk AutoCAD Recovery & Audit Commands (RECOVER, RECOVERALL, AUDIT, AUDITCTL, DRAWINGRECOVERY, ISAVEBAK, SAVETIME, -PURGE, -WBLOCK, SAVEAS)",
+    "cadContext": "Inspect local .dwg / .bak / .sv$ header bytes first, then run native desktop AutoCAD RECOVER, RECOVERALL, or DRAWINGRECOVERY offline rather than uploading proprietary drawings to third-party servers.",
+    "formula": "Header Signature = ASCII(Bytes[0..5]); Post-Recovery Script sets ISAVEBAK = 1, SAVETIME ∈ [0, 600], AUDITCTL ∈ {0, 1}, and runs AUDIT Y",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Observed Failure Mode",
+        "val": "Cannot open file (\"Drawing file is not valid\")"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
+        "label": "Sample Header Signature",
+        "val": "AC1032 (site-grading-plan.dwg)"
       },
       {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "SAVETIME Interval (min)",
+        "val": "10"
+      },
+      {
+        "label": "AUDITCTL Log Switch",
+        "val": "1"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "6-Byte Header Signature",
+        "val": "AC1032 — DWG 2018 Format (AutoCAD 2018–2027)"
+      },
+      {
+        "label": "Primary Official AutoCAD Command",
+        "val": "RECOVER / RECOVERALL"
+      },
+      {
+        "label": "Backup & Audit Script State",
+        "val": "ISAVEBAK=1 | SAVETIME=10 min | AUDITCTL=1"
+      }
+    ]
   },
   "cloud-dwg-to-step-iges-converter": {
     "title": "Online 3D DWG to STEP/IGES CAD Translator",
