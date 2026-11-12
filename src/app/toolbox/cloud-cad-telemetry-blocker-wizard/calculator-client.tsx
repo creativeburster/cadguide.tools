@@ -10,6 +10,7 @@ import {
   Terminal,
   ExternalLink,
   Info,
+  CheckCircle2,
 } from 'lucide-react';
 
 interface PolicyPreset {
@@ -18,26 +19,32 @@ interface PolicyPreset {
   reportErrorVal: '0' | '1';
   blockAdpService: boolean;
   openDesktopAnalyticsDialog: boolean;
+  adpPath: string;
   workstationCount: string;
   cadReleaseYear: string;
 }
 
+const ADP_PATH_PLACEHOLDER =
+  'e.g. %APPDATA%\\Autodesk\\ADPSDK\\bin\\ADPClientService.exe — verify on your workstation';
+
 const PRESETS: PolicyPreset[] = [
   {
     id: 'in-app-minimal',
-    label: 'Preset 1: In-App Only (Safe for Named-User Licensing)',
+    label: 'Preset 1: Official In-App & Account Opt-Out Only (Recommended)',
     reportErrorVal: '0',
     blockAdpService: false,
     openDesktopAnalyticsDialog: true,
+    adpPath: '',
     workstationCount: '25',
     cadReleaseYear: '2025',
   },
   {
     id: 'restricted-firewall',
-    label: 'Preset 2: In-App + Block ADPClientService.exe Outbound',
+    label: 'Preset 2: Unofficial Firewall Template (Requires Local Path Input)',
     reportErrorVal: '0',
     blockAdpService: true,
     openDesktopAnalyticsDialog: true,
+    adpPath: '',
     workstationCount: '50',
     cadReleaseYear: '2025',
   },
@@ -47,29 +54,32 @@ const PRESETS: PolicyPreset[] = [
     reportErrorVal: '1',
     blockAdpService: false,
     openDesktopAnalyticsDialog: false,
+    adpPath: '',
     workstationCount: '10',
     cadReleaseYear: '2025',
   },
 ];
 
-const DEFAULT_ADP_PATH =
-  'C:\\Program Files\\Common Files\\Autodesk Shared\\AdpSDK\\bin\\ADPClientService.exe';
-
 const OFFICIAL_DOCS = [
+  {
+    name: 'Autodesk Help — Desktop Analytics & Data Collection and Use Dialog',
+    url: 'https://help.autodesk.com/cloudhelp/ENU/Autodesk-Product-Insights-Content/files/adsk_api_faq_why_am_I_not_getting_insights.html',
+    desc: 'Official in-product method: click Help > Desktop Analytics (or enter desktopanalytics) or Help > Privacy Settings, and clear "I Agree to Data Collection in Desktop Products for Autodesk Analytics Programs".',
+  },
+  {
+    name: 'Autodesk Help — Manage Product Privacy Settings in Autodesk Account',
+    url: 'https://help.autodesk.com/cloudhelp/ENU/Autodesk-Product-Insights-Content/files/adsk_api_faq_what_data_is_being_collected.html',
+    desc: 'Official account-level method (2023+ releases): sign in to Autodesk Account (profile.autodesk.com) > My Profile and Settings > Settings > Product Privacy > Edit.',
+  },
   {
     name: 'Autodesk AutoCAD 2025 Help — REPORTERROR (System Variable)',
     url: 'https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core/files/GUID-509A2E92-C0B6-477C-B1B4-2D66CEB45E13.htm',
     desc: 'Controls whether an error report can be sent to Autodesk if the program closes unexpectedly (0 = disabled, 1 = enabled; saved in Registry).',
   },
   {
-    name: 'Autodesk Help — Desktop Analytics & Data Collection and Use Dialog',
-    url: 'https://help.autodesk.com/cloudhelp/ENU/Autodesk-Product-Insights-Content/files/adsk_api_faq_why_am_I_not_getting_insights.html',
-    desc: 'Documents entering desktopanalytics at the AutoCAD Command prompt to open the Data Collection and Use dialog box.',
-  },
-  {
     name: 'Microsoft Learn — New-NetFirewallRule & Remove-NetFirewallRule (NetSecurity)',
     url: 'https://learn.microsoft.com/en-us/powershell/module/netsecurity/new-netfirewallrule?view=windowsserver2025-ps',
-    desc: 'Official PowerShell NetSecurity syntax for creating and removing outbound program firewall rules on Windows.',
+    desc: 'Official Windows PowerShell NetSecurity cmdlet syntax for creating and removing outbound program firewall rules.',
   },
 ];
 
@@ -88,7 +98,7 @@ export default function CloudCadTelemetryBlockerWizardClient() {
   const [reportErrorVal, setReportErrorVal] = useState<'0' | '1'>('0');
   const [blockAdpService, setBlockAdpService] = useState(false);
   const [openDesktopAnalyticsDialog, setOpenDesktopAnalyticsDialog] = useState(true);
-  const [adpExePath, setAdpExePath] = useState(DEFAULT_ADP_PATH);
+  const [adpExePath, setAdpExePath] = useState('');
   const [workstationCountStr, setWorkstationCountStr] = useState('25');
   const [cadReleaseYearStr, setCadReleaseYearStr] = useState('2025');
 
@@ -96,7 +106,7 @@ export default function CloudCadTelemetryBlockerWizardClient() {
     setReportErrorVal(p.reportErrorVal);
     setBlockAdpService(p.blockAdpService);
     setOpenDesktopAnalyticsDialog(p.openDesktopAnalyticsDialog);
-    setAdpExePath(DEFAULT_ADP_PATH);
+    setAdpExePath(p.adpPath);
     setWorkstationCountStr(p.workstationCount);
     setCadReleaseYearStr(p.cadReleaseYear);
   };
@@ -129,19 +139,29 @@ export default function CloudCadTelemetryBlockerWizardClient() {
     }
 
     const sanitizedPath = toSafeAscii(adpExePath.trim());
-    if (blockAdpService && (!sanitizedPath.toLowerCase().endsWith('adpclientservice.exe') || sanitizedPath.includes('"'))) {
-      return {
-        valid: false as const,
-        error: 'Executable path must end with ADPClientService.exe and must not contain double quotes.',
-      };
+    if (blockAdpService) {
+      if (sanitizedPath === '') {
+        return {
+          valid: false as const,
+          error:
+            'Confirm and enter the actual ADPClientService.exe path on your workstation (Autodesk documentation does not specify a fixed path; example path—verify on your machine).',
+        };
+      }
+      if (!sanitizedPath.toLowerCase().endsWith('adpclientservice.exe') || sanitizedPath.includes('"')) {
+        return {
+          valid: false as const,
+          error: 'Executable path must end with ADPClientService.exe and must not contain double quotes.',
+        };
+      }
     }
 
     const ruleDisplayName = 'CADGuide-Block-Autodesk-ADPClientService';
-    const activeRuleCount = (reportErrorVal === '0' ? 1 : 0) + (openDesktopAnalyticsDialog ? 1 : 0) + (blockAdpService ? 1 : 0);
+    const activeRuleCount =
+      (reportErrorVal === '0' ? 1 : 0) + (openDesktopAnalyticsDialog ? 1 : 0) + (blockAdpService ? 1 : 0);
 
     const scrLines = [
       `; AutoCAD Privacy Configuration Script (.scr) - Target Release ${year} (${seats} seats)`,
-      `; Generated locally by CADGuide.tools - Verify in non-production environment before deployment.`,
+      `; Official Autodesk method: manage Product Privacy at https://profile.autodesk.com/ and via in-app Desktop Analytics.`,
       `; System Variable REPORTERROR: 0 = Disables error report prompt/submission; 1 = Enables error report.`,
       `REPORTERROR ${reportErrorVal}`,
     ];
@@ -155,22 +175,24 @@ export default function CloudCadTelemetryBlockerWizardClient() {
     const psLines = [
       `# Windows Defender Firewall Configuration Script (.ps1)`,
       `# Target Fleet: ${seats} workstation(s) | AutoCAD Release: ${year}`,
-      `# WARNING: Run in an elevated Administrator PowerShell session at your own risk.`,
-      `# Blocking background analytics executables or network endpoints can interfere with`,
-      `# Autodesk Named-User subscription sign-in, license verification, and Autodesk My Insights.`,
-      `# Note: In 2023 and newer releases, certain required operational telemetry cannot be disabled via UI.`,
+      `# UNOFFICIAL PRACTICE WARNING: Outbound firewall blocking is NOT an official Autodesk procedure.`,
+      `# Run in an elevated Administrator PowerShell session strictly at your own risk.`,
+      `# Blocking background processes may interfere with Named-User subscription sign-in,`,
+      `# license verification, and Autodesk My Insights.`,
+      `# Preferred official opt-out: in-app Desktop Analytics / Privacy Settings, or`,
+      `# Autodesk Account (https://profile.autodesk.com/) > Settings > Product Privacy.`,
       ``,
       `$RuleName = "${ruleDisplayName}"`,
-      `$AdpPath = "${sanitizedPath}"`,
-      ``,
     ];
 
     if (blockAdpService) {
       psLines.push(
+        `$AdpPath = [Environment]::ExpandEnvironmentVariables("${sanitizedPath}")`,
+        ``,
         `if (Test-Path -LiteralPath $AdpPath) {`,
         `    New-NetFirewallRule -DisplayName $RuleName -Direction Outbound -Program $AdpPath -Action Block`,
         `} else {`,
-        `    Write-Warning "ADPClientService.exe not found at: $AdpPath (verify actual install path on workstation)"`,
+        `    Write-Warning "ADPClientService.exe not found at: $AdpPath (verify actual path on this workstation)"`,
         `}`,
         ``,
         `# Rollback command (run if license sign-in or My Insights requires restoration):`,
@@ -178,7 +200,8 @@ export default function CloudCadTelemetryBlockerWizardClient() {
       );
     } else {
       psLines.push(
-        `# Outbound firewall block is NOT enabled in this profile (in-app configuration only).`,
+        ``,
+        `# Outbound firewall block is NOT enabled in this profile (official in-app & account controls only).`,
         `# If a previous rule exists and you want to remove it, run:`,
         `Remove-NetFirewallRule -DisplayName $RuleName -ErrorAction SilentlyContinue`
       );
@@ -192,8 +215,9 @@ export default function CloudCadTelemetryBlockerWizardClient() {
       seats,
       year,
       activeRuleCount,
-      riskLevel: blockAdpService ? 'MODERATE (TEST NAMED-USER LOGIN)' : 'LOW (IN-APP DOCUMENTED CONTROLS)',
-      Mandatory2023Note: year >= 2023,
+      riskLevel: blockAdpService
+        ? 'UNOFFICIAL FIREWALL RULE (LICENSE CHECK RISK — USE AT OWN RISK)'
+        : 'OFFICIAL IN-APP & ACCOUNT CONTROLS (RECOMMENDED)',
       scrScript,
       psScript,
     };
@@ -213,7 +237,44 @@ export default function CloudCadTelemetryBlockerWizardClient() {
 
   return (
     <div className="space-y-8">
-      {/* Prominent Risk & Licensing Warning */}
+      {/* Primary Official Opt-Out Methods (First Choice) */}
+      <div
+        data-testid="official-optout-guide"
+        className="bg-emerald-50 border border-emerald-200 rounded-3xl p-6 flex items-start gap-4"
+      >
+        <CheckCircle2 className="w-6 h-6 text-emerald-600 shrink-0 mt-0.5" />
+        <div className="space-y-2 text-sm text-emerald-950">
+          <h2 className="font-black text-base">
+            Preferred Method: Official Autodesk Privacy Controls (Safe for Subscription Licensing)
+          </h2>
+          <ol className="list-decimal pl-5 space-y-1 font-medium text-emerald-900 leading-relaxed">
+            <li>
+              <strong>In-Product Desktop Analytics / Privacy Settings:</strong> In AutoCAD, open{' '}
+              <code>Help &gt; Desktop Analytics</code> (or enter <code>desktopanalytics</code> at the Command prompt; in
+              Revit use <code>Help &gt; Privacy Settings</code>), and clear{' '}
+              <em>&quot;I Agree to Data Collection in Desktop Products for Autodesk Analytics Programs&quot;</em> in the{' '}
+              <em>Data Collection and Use</em> dialog box. Set <code>REPORTERROR</code> to <code>0</code> to disable
+              crash error report prompts.
+            </li>
+            <li>
+              <strong>Autodesk Account Product Privacy (2023+ Releases):</strong> Sign in at{' '}
+              <a
+                href="https://profile.autodesk.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-bold"
+              >
+                profile.autodesk.com
+              </a>
+              , open <strong>My Profile and Settings &gt; Settings &gt; Product Privacy</strong>, click{' '}
+              <strong>Edit</strong>, and save your optional data collection preferences (note: in 2023 and later
+              releases, required operational data for service delivery and fraud detection cannot be turned off).
+            </li>
+          </ol>
+        </div>
+      </div>
+
+      {/* Prominent Unofficial Firewall Risk Warning */}
       <div
         data-testid="licensing-risk-warning"
         className="bg-rose-50 border border-rose-200 rounded-3xl p-6 flex items-start gap-4"
@@ -221,14 +282,17 @@ export default function CloudCadTelemetryBlockerWizardClient() {
         <ShieldAlert className="w-6 h-6 text-rose-600 shrink-0 mt-0.5" />
         <div className="space-y-1.5 text-sm text-rose-950">
           <h2 className="font-black text-base">
-            Administrator Risk & Subscription Licensing Notice
+            Unofficial Firewall Rule Warning — Licensing Verification Risk (Use at Your Own Risk)
           </h2>
           <p className="leading-relaxed font-medium text-rose-900">
-            Blocking outbound CAD processes in Windows Defender Firewall requires local Administrator privileges and{' '}
-            <strong>may disrupt Named-User subscription sign-in, license renewal checks, or Autodesk My Insights</strong>.
-            In AutoCAD 2023 and newer releases, certain required operational data collection cannot be turned off
-            entirely. Never block undocumented domains or licensing services; test any generated script on a single
-            non-production workstation first and keep the <code>Remove-NetFirewallRule</code> rollback command handy.
+            Blocking <code>ADPClientService.exe</code> via Windows Defender Firewall is{' '}
+            <strong>not an official Autodesk procedure</strong>. It requires local Administrator rights and{' '}
+            <strong>
+              may disrupt Named-User subscription sign-in, license verification, or Autodesk My Insights
+            </strong>
+            . Use the official in-product and <code>profile.autodesk.com</code> controls above first; if corporate
+            network policy still requires an outbound firewall rule, test on a non-production machine at your own risk
+            and keep <code>Remove-NetFirewallRule</code> ready for rollback.
           </p>
         </div>
       </div>
@@ -332,39 +396,43 @@ export default function CloudCadTelemetryBlockerWizardClient() {
               className="mt-1 w-4 h-4 accent-blue-600"
             />
             <span className="text-xs font-semibold text-slate-700 leading-relaxed">
-              Include <code>desktopanalytics</code> command in AutoCAD <code>.scr</code> to open the{' '}
-              <em>Data Collection and Use</em> opt-out dialog
+              Include official <code>desktopanalytics</code> command in AutoCAD <code>.scr</code> to open the{' '}
+              <em>Data Collection and Use</em> dialog
             </span>
           </label>
 
-          <label className="flex items-start gap-3 p-3.5 rounded-2xl bg-slate-50 border border-slate-200 cursor-pointer">
+          <label className="flex items-start gap-3 p-3.5 rounded-2xl bg-rose-50/60 border border-rose-200 cursor-pointer">
             <input
               type="checkbox"
               data-testid="toggle-adp-firewall"
               checked={blockAdpService}
               onChange={(e) => setBlockAdpService(e.target.checked)}
-              className="mt-1 w-4 h-4 accent-blue-600"
+              className="mt-1 w-4 h-4 accent-rose-600"
             />
-            <span className="text-xs font-semibold text-slate-700 leading-relaxed">
-              Generate outbound <code>New-NetFirewallRule</code> block for <code>ADPClientService.exe</code>
+            <span className="text-xs font-semibold text-rose-950 leading-relaxed">
+              <strong>Unofficial option (use at own risk):</strong> Generate outbound{' '}
+              <code>New-NetFirewallRule</code> block for <code>ADPClientService.exe</code> (may affect license
+              verification)
             </span>
           </label>
 
           {blockAdpService && (
             <div>
               <label htmlFor="tel-adp-path" className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
-                Local ADPClientService.exe Path
+                Local ADPClientService.exe Path (Verify on Machine)
               </label>
-              <p className="text-[11px] text-slate-400 mb-1.5">
-                Verify actual path on target workstation before running PowerShell rule.
+              <p className="text-[11px] text-slate-500 mb-1.5" data-testid="adp-path-example-note">
+                Example path only — please confirm the exact location on your workstation (Autodesk docs do not publish
+                a single fixed path; inspect Task Manager &gt; Open file location).
               </p>
               <input
                 id="tel-adp-path"
                 data-testid="input-adp-path"
                 type="text"
+                placeholder={ADP_PATH_PLACEHOLDER}
                 value={adpExePath}
                 onChange={(e) => setAdpExePath(e.target.value)}
-                className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-mono font-bold text-slate-800"
+                className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-mono font-bold text-slate-800 placeholder:font-normal placeholder:text-slate-400"
               />
             </div>
           )}
@@ -424,7 +492,7 @@ export default function CloudCadTelemetryBlockerWizardClient() {
                 </div>
               </div>
               <div className="bg-blue-50 rounded-2xl p-4 border border-blue-100">
-                <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">Licensing Risk</div>
+                <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">Method Classification</div>
                 <div className="text-xs font-black text-blue-950 leading-snug" data-testid="result-risk-level">
                   {evaluation.valid ? evaluation.riskLevel : '—'}
                 </div>

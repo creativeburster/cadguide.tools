@@ -382,27 +382,73 @@ async function runBatch12Tests() {
         '[data-testid="input-workstations"]'
       );
 
-      // Risk warning check
-      const warning = await readTextTestId(p, 'licensing-risk-warning');
-      if (!warning.includes('Named-User subscription sign-in') || !warning.includes('My Insights')) {
-        throw new Error('Telemetry wizard missing Named-User licensing & My Insights risk warning');
+      // Primary official opt-out guide check
+      const officialGuide = await readTextTestId(p, 'official-optout-guide');
+      if (
+        !officialGuide.includes('Desktop Analytics') ||
+        !officialGuide.includes('Privacy Settings') ||
+        !officialGuide.includes('profile.autodesk.com') ||
+        !officialGuide.includes('Product Privacy')
+      ) {
+        throw new Error('Telemetry wizard missing official Desktop Analytics / Privacy Settings / profile.autodesk.com Product Privacy guide');
       }
 
-      // Default Preset 1 (In-app only: REPORTERROR = 0, desktopanalytics = true, ADP firewall = false, 25 seats, 2025)
+      // Unofficial firewall risk warning check
+      const warning = await readTextTestId(p, 'licensing-risk-warning');
+      if (
+        !warning.includes('not an official Autodesk procedure') ||
+        !warning.includes('Named-User subscription sign-in') ||
+        !warning.includes('at your own risk')
+      ) {
+        throw new Error('Telemetry wizard missing unofficial procedure & Named-User licensing risk warning');
+      }
+
+      // Default Preset 1 (In-app & account controls only: REPORTERROR = 0, desktopanalytics = true, ADP firewall = false, 25 seats, 2025)
       assertEqual(await readTextTestId(p, 'result-active-controls'), '2', 'Telemetry default controls');
       assertEqual(await readTextTestId(p, 'result-fleet-summary'), '25 seats (2025)', 'Telemetry default fleet');
+      assertEqual(
+        await readTextTestId(p, 'result-risk-level'),
+        'OFFICIAL IN-APP & ACCOUNT CONTROLS (RECOMMENDED)',
+        'Telemetry default method classification'
+      );
 
-      // Preset 2 (Enable ADPClientService.exe outbound firewall rule)
+      // Preset 2 (Unofficial firewall template: default adpPath is blank until user confirms local workstation path)
       await p.click('[data-testid="preset-restricted-firewall"]');
-      assertEqual(await readTextTestId(p, 'result-active-controls'), '3', 'Telemetry firewall preset controls');
+      const defaultAdpVal = await p.locator('[data-testid="input-adp-path"]').inputValue();
+      assertEqual(defaultAdpVal, '', 'Telemetry firewall preset default adpPath must be blank');
+      const adpPlaceholder = await p.locator('[data-testid="input-adp-path"]').getAttribute('placeholder');
+      assertEqual(
+        adpPlaceholder,
+        'e.g. %APPDATA%\\Autodesk\\ADPSDK\\bin\\ADPClientService.exe — verify on your workstation',
+        'Telemetry ADP path placeholder'
+      );
+      const pathNote = await readTextTestId(p, 'adp-path-example-note');
+      if (!pathNote.includes('Example path only — please confirm the exact location on your workstation')) {
+        throw new Error('Telemetry ADP path missing example-path workstation confirmation note');
+      }
+      assertEqual(await readTextTestId(p, 'result-active-controls'), '—', 'Telemetry blank ADP path blocks generation');
+      const blankAlert = await readTextTestId(p, 'validation-alert');
+      if (!blankAlert.includes('Confirm and enter the actual ADPClientService.exe path on your workstation')) {
+        throw new Error('Telemetry blank ADP path validation alert mismatch');
+      }
+
+      // Fill workstation-verified path and check active controls + PS1 output
+      await p.fill('[data-testid="input-adp-path"]', '%APPDATA%\\Autodesk\\ADPSDK\\bin\\ADPClientService.exe');
+      assertEqual(await readTextTestId(p, 'result-active-controls'), '3', 'Telemetry firewall preset controls after path input');
+      assertEqual(
+        await readTextTestId(p, 'result-risk-level'),
+        'UNOFFICIAL FIREWALL RULE (LICENSE CHECK RISK — USE AT OWN RISK)',
+        'Telemetry firewall method classification'
+      );
       const ps1Preview = await readTextTestId(p, 'preview-ps1');
       if (
+        !ps1Preview.includes('NOT an official Autodesk procedure') ||
         !ps1Preview.includes('New-NetFirewallRule') ||
         !ps1Preview.includes('-Direction Outbound') ||
         !ps1Preview.includes('ADPClientService.exe') ||
         !ps1Preview.includes('Remove-NetFirewallRule')
       ) {
-        throw new Error('PowerShell preview missing verified New-NetFirewallRule / ADPClientService.exe / rollback');
+        throw new Error('PowerShell preview missing unofficial warning / New-NetFirewallRule / ADPClientService.exe / rollback');
       }
 
       // Download both .scr and .ps1 and verify pure ASCII & verified tokens
@@ -416,8 +462,12 @@ async function runBatch12Tests() {
       const ps1Dl = await downloadAndReadText(p, '[data-testid="download-ps1-button"]');
       assertEqual(ps1Dl.suggestedFilename, 'autocad-adp-firewall.ps1', 'Telemetry PS1 filename');
       assertPureAscii(ps1Dl.content, 'Telemetry PS1 pure ASCII');
-      if (!ps1Dl.content.includes('New-NetFirewallRule') || !ps1Dl.content.includes('ADPClientService.exe')) {
-        throw new Error('Downloaded .ps1 missing New-NetFirewallRule or ADPClientService.exe');
+      if (
+        !ps1Dl.content.includes('NOT an official Autodesk procedure') ||
+        !ps1Dl.content.includes('New-NetFirewallRule') ||
+        !ps1Dl.content.includes('ADPClientService.exe')
+      ) {
+        throw new Error('Downloaded .ps1 missing unofficial warning, New-NetFirewallRule, or ADPClientService.exe');
       }
 
       // Input defenses on 2 inputs
@@ -437,10 +487,11 @@ async function runBatch12Tests() {
       await p.click('[data-testid="reset-button"]');
       assertEqual(await readTextTestId(p, 'result-active-controls'), '2', 'Telemetry after reset');
 
-      // Negative assertions for unverified executables/domains and unrelated standards
+      // Negative assertions for unverified executables/domains/paths and unrelated standards
       await verifyNegativeTermsOnToolPage(
         p,
         [
+          'Common Files\\Autodesk Shared\\AdpSDK',
           'AdpSDKWrapper.exe',
           'ase.autodesk.com',
           'analytics.autodesk.com',
@@ -472,9 +523,11 @@ async function runBatch12Tests() {
 
       // Default Scenario 1: AC1032, RECOVER / RECOVERALL, SAVETIME=10, AUDITCTL=1
       assertEqual(await readTextTestId(p, 'result-header-sig'), 'AC1032', 'DWG default header sig');
-      if (!(await readTextTestId(p, 'result-header-desc')).includes('AutoCAD 2018')) {
-        throw new Error('Expected AutoCAD 2018 format description for AC1032');
-      }
+      assertEqual(
+        await readTextTestId(p, 'result-header-desc'),
+        'DWG 2018 Format (AutoCAD 2018 and later)',
+        'DWG default AC1032 format description'
+      );
       assertEqual(
         await readTextTestId(p, 'result-primary-command'),
         'RECOVER / RECOVERALL',
@@ -530,7 +583,16 @@ async function runBatch12Tests() {
       // Negative assertions
       await verifyNegativeTermsOnToolPage(
         p,
-        ['9.9', 'AnyDWG', 'CADSoftTools', 'ISO 10303-21', 'ISO/ASTM 52900', 'AIA CAD Layer Guidelines'],
+        [
+          '2018–2027',
+          '2018-2027',
+          '9.9',
+          'AnyDWG',
+          'CADSoftTools',
+          'ISO 10303-21',
+          'ISO/ASTM 52900',
+          'AIA CAD Layer Guidelines',
+        ],
         'DWG recovery negative assertions'
       );
     });

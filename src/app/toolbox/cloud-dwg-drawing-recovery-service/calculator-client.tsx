@@ -25,7 +25,7 @@ interface RecoveryPreset {
 }
 
 const DWG_SIGNATURES: Record<string, string> = {
-  AC1032: 'DWG 2018 Format (AutoCAD 2018–2027)',
+  AC1032: 'DWG 2018 Format (AutoCAD 2018 and later)',
   AC1027: 'DWG 2013 Format (AutoCAD 2013–2017)',
   AC1024: 'DWG 2010 Format (AutoCAD 2010–2012)',
   AC1021: 'DWG 2007 Format (AutoCAD 2007–2009)',

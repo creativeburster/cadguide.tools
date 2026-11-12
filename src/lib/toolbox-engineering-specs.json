@@ -2903,11 +2903,11 @@
   },
   "cloud-cad-telemetry-blocker-wizard": {
     "title": "AutoCAD Telemetry & Error-Reporting Privacy Wizard",
-    "description": "Generate documented AutoCAD privacy scripts (REPORTERROR, desktopanalytics) and optional Windows Defender Firewall outbound rules (ADPClientService.exe) with licensing impact warnings.",
+    "description": "Configure official Autodesk privacy settings (in-product Desktop Analytics / Privacy Settings, profile.autodesk.com Product Privacy, REPORTERROR) and optional user-verified PowerShell firewall scripts.",
     "discipline": "CAD Workstation Administration & Endpoint Network Privacy",
-    "standards": "Autodesk AutoCAD System Variables (REPORTERROR, desktopanalytics / ADPClientService.exe) & Windows PowerShell NetSecurity (New-NetFirewallRule / Remove-NetFirewallRule)",
-    "cadContext": "Test generated .scr and .ps1 configurations on a non-production workstation first; blocking outbound processes may disrupt Named-User subscription sign-in and Autodesk My Insights.",
-    "formula": "Active Controls = I(REPORTERROR = 0) + I(desktopanalytics included) + I(ADPClientService.exe outbound rule enabled)",
+    "standards": "Autodesk Official Privacy Controls (Desktop Analytics / Privacy Settings, profile.autodesk.com Product Privacy, REPORTERROR) & Optional Windows PowerShell NetSecurity (New-NetFirewallRule / Remove-NetFirewallRule)",
+    "cadContext": "Prefer official in-product Desktop Analytics / Privacy Settings or Autodesk Account (profile.autodesk.com > Settings > Product Privacy) first; outbound firewall rules on ADPClientService.exe are an unofficial practice that may disrupt Named-User license verification and require local path confirmation.",
+    "formula": "Active Controls = I(REPORTERROR = 0) + I(desktopanalytics included) + I(Unofficial ADPClientService.exe rule enabled with workstation-verified path)",
     "inputs": [
       {
         "label": "Target Workstations",
@@ -2926,8 +2926,8 @@
         "val": "Enabled"
       },
       {
-        "label": "Outbound Firewall Block (ADPClientService.exe)",
-        "val": "Disabled (In-App Only)"
+        "label": "Unofficial Outbound Firewall Rule (ADPClientService.exe)",
+        "val": "Disabled (Official In-App & Account Controls Only; path left blank until verified on machine)"
       }
     ],
     "outputs": [
@@ -2940,8 +2940,8 @@
         "val": "25 seats (2025)"
       },
       {
-        "label": "Licensing Risk Assessment",
-        "val": "LOW (IN-APP DOCUMENTED CONTROLS)"
+        "label": "Method Classification",
+        "val": "OFFICIAL IN-APP & ACCOUNT CONTROLS (RECOMMENDED)"
       }
     ]
   },
@@ -2973,7 +2973,7 @@
     "outputs": [
       {
         "label": "6-Byte Header Signature",
-        "val": "AC1032 — DWG 2018 Format (AutoCAD 2018–2027)"
+        "val": "AC1032 — DWG 2018 Format (AutoCAD 2018 and later)"
       },
       {
         "label": "Primary Official AutoCAD Command",
