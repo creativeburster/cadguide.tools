@@ -378,7 +378,7 @@ async function runBatch11Tests() {
         '"Recommended Even Chain Links (L_p,even)","114","pitches","Rounded up to next even pitch count (no offset link)"',
         '"Total Chain Linear Length","1447.80","mm","L_p,even * P"',
         '"Adjusted Center Distance (C_actual)","503.31","mm","Exact center distance corresponding to L_p,even"',
-        '"Standards Reference","ISO 606:2015 / ASME B29.1-2011","-","Roller chain pitch standards & two-sprocket length equation"',
+        '"Standards Reference","ISO 606:2015 / ASME B29.1","-","Roller chain pitch standards & two-sprocket length equation"',
       ];
       for (const row of expectedRows) {
         if (!csvText.includes(row)) {
@@ -472,24 +472,24 @@ async function runBatch11Tests() {
       //   Preset Trap z=1.5: b = 2 m, y = 1 m, z = 1.5, S = 0.001, n = 0.015
       //     A   = (2 + 1.5 * 1) * 1 = 3.500 m²
       //     P   = 2 + 2 * 1 * sqrt(1 + 2.25) = 2 + 2 * 1.8027756 = 5.60555 -> 5.606 m
-      //     R_h = 3.5 / 5.60555 = 0.62438 -> 0.624 m
-      //     v   = (1 / 0.015) * (0.624381)^(2/3) * sqrt(0.001) = 1.54043 -> 1.540 m/s
-      //     Q   = 3.5 * 1.54043 = 5.3915 -> 5.392 m³/s
+      //     R_h = 3.5 / 5.60555 = 0.624381 -> 0.624 m
+      //     v   = (1 / 0.015) * (0.624381)^(2/3) * sqrt(0.001) = 1.54010 -> 1.540 m/s
+      //     Q   = 3.5 * 1.54010 = 5.39035 -> 5.390 m³/s
       await p.click('[data-testid="preset-trap-concrete"]');
       assertClose(await readNumberTestId(p, 'out-flow-area'), 3.5, 0.001, 'manning trap A');
       assertClose(await readNumberTestId(p, 'out-wetted-perimeter'), 5.606, 0.001, 'manning trap P');
       assertClose(await readNumberTestId(p, 'out-hydraulic-radius'), 0.624, 0.001, 'manning trap R_h');
       assertClose(await readNumberTestId(p, 'out-velocity'), 1.54, 0.001, 'manning trap v');
-      assertClose(await readNumberTestId(p, 'out-flow-rate'), 5.392, 0.001, 'manning trap Q');
+      assertClose(await readNumberTestId(p, 'out-flow-rate'), 5.390, 0.001, 'manning trap Q');
 
       //   Preset Earth z=2.0: b = 3 m, y = 1.2 m, z = 2, S = 0.002, n = 0.025
-      //     A = (3 + 2.4) * 1.2 = 6.480 m², P = 3 + 2.4 * sqrt(5) = 8.367 m, R_h = 0.775 m, v = 1.509 m/s, Q = 9.777 m³/s
+      //     A = (3 + 2.4) * 1.2 = 6.480 m², P = 3 + 2.4 * sqrt(5) = 8.367 m, R_h = 0.775 m, v = 1.509 m/s, Q = 9.776 m³/s
       await p.click('[data-testid="preset-trap-earth"]');
       assertClose(await readNumberTestId(p, 'out-flow-area'), 6.48, 0.001, 'manning earth A');
       assertClose(await readNumberTestId(p, 'out-wetted-perimeter'), 8.367, 0.001, 'manning earth P');
       assertClose(await readNumberTestId(p, 'out-hydraulic-radius'), 0.775, 0.001, 'manning earth R_h');
       assertClose(await readNumberTestId(p, 'out-velocity'), 1.509, 0.001, 'manning earth v');
-      assertClose(await readNumberTestId(p, 'out-flow-rate'), 9.777, 0.001, 'manning earth Q');
+      assertClose(await readNumberTestId(p, 'out-flow-rate'), 9.776, 0.001, 'manning earth Q');
 
       // 4. Input Defenses across >= 2 inputs (including trapezoidal side slope z)
       for (const bad of ['', 'abc', '12abc', '0', '-1.5']) {

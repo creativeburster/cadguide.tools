@@ -140,7 +140,7 @@ export default function ChainDriveLengthCalculatorClient() {
       ['Recommended Even Chain Links (L_p,even)', String(calc.lpEven), 'pitches', 'Rounded up to next even pitch count (no offset link)'],
       ['Total Chain Linear Length', calc.linearLengthMm.toFixed(2), 'mm', 'L_p,even * P'],
       ['Adjusted Center Distance (C_actual)', calc.cActual.toFixed(2), 'mm', 'Exact center distance corresponding to L_p,even'],
-      ['Standards Reference', 'ISO 606:2015 / ASME B29.1-2011', '-', 'Roller chain pitch standards & two-sprocket length equation'],
+      ['Standards Reference', 'ISO 606:2015 / ASME B29.1', '-', 'Roller chain pitch standards & two-sprocket length equation'],
     ];
     const csvContent = rows
       .map((r) => r.map((cell) => `"${String(cell).replace(/"/g, '""')}"`).join(','))

@@ -2651,7 +2651,7 @@
     "title": "Chain Drive Length Calculator",
     "description": "Calculate roller chain length and center distance for two-sprocket chain drives.",
     "discipline": "Mechanical Power Transmission & Sprocket Drive Layout",
-    "standards": "ISO 606:2015 (Short-Pitch Precision Roller Chains) & ASME B29.1-2011 (Precision Power Transmission Roller Chains)",
+    "standards": "ISO 606:2015 (Short-Pitch Precision Roller Chains) & ASME B29.1 (Precision Power Transmission Roller Chains)",
     "cadContext": "Set shaft mounting slot travel in your 3D CAD assembly to span the adjusted center distance C_actual corresponding to an even number of chain pitches without requiring an offset link.",
     "formula": "L_p,exact = (N₁ + N₂)/2 + 2C/P + (N₂ − N₁)² / [4π²(C/P)], L_p,even = 2 × ceil(L_p,exact / 2)",
     "inputs": [
