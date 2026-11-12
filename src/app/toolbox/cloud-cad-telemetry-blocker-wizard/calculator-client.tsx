@@ -69,7 +69,7 @@ const OFFICIAL_DOCS = [
   {
     name: 'Autodesk Help — Manage Product Privacy Settings in Autodesk Account',
     url: 'https://help.autodesk.com/cloudhelp/ENU/Autodesk-Product-Insights-Content/files/adsk_api_faq_what_data_is_being_collected.html',
-    desc: 'Official account-level method (2023+ releases): sign in to Autodesk Account (profile.autodesk.com) > My Profile and Settings > Settings > Product Privacy > Edit.',
+    desc: 'Official account-level method (2023+ releases): sign in to the Autodesk Account Portal > My Profile and Settings > Settings > Product Privacy > Edit.',
   },
   {
     name: 'Autodesk AutoCAD 2025 Help — REPORTERROR (System Variable)',
@@ -249,26 +249,27 @@ export default function CloudCadTelemetryBlockerWizardClient() {
           </h2>
           <ol className="list-decimal pl-5 space-y-1 font-medium text-emerald-900 leading-relaxed">
             <li>
-              <strong>In-Product Desktop Analytics / Privacy Settings:</strong> In AutoCAD, open{' '}
-              <code>Help &gt; Desktop Analytics</code> (or enter <code>desktopanalytics</code> at the Command prompt; in
-              Revit use <code>Help &gt; Privacy Settings</code>), and clear{' '}
+              <strong>In-Product Desktop Analytics / Privacy Settings (2022 Release Products and Earlier):</strong> In
+              AutoCAD, open <code>Help &gt; Desktop Analytics</code> (or enter <code>desktopanalytics</code> at the
+              Command prompt; in Revit use <code>Help &gt; Privacy Settings</code>), and clear{' '}
               <em>&quot;I Agree to Data Collection in Desktop Products for Autodesk Analytics Programs&quot;</em> in the{' '}
-              <em>Data Collection and Use</em> dialog box. Set <code>REPORTERROR</code> to <code>0</code> to disable
-              crash error report prompts.
+              <em>Data Collection and Use</em> dialog box. Note per Autodesk Help: &quot;Data collection cannot be turned
+              off in 2023 release products and later, but you can change your product privacy settings.&quot; Set{' '}
+              <code>REPORTERROR</code> to <code>0</code> to disable crash error report prompts.
             </li>
             <li>
-              <strong>Autodesk Account Product Privacy (2023+ Releases):</strong> Sign in at{' '}
+              <strong>Autodesk Account Portal — Product Privacy (2023+ Releases):</strong> Go to{' '}
+              <strong>My Profile and Settings</strong> in the{' '}
               <a
                 href="https://profile.autodesk.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="underline font-bold"
               >
-                profile.autodesk.com
+                Autodesk Account Portal
               </a>
-              , open <strong>My Profile and Settings &gt; Settings &gt; Product Privacy</strong>, click{' '}
-              <strong>Edit</strong>, and save your optional data collection preferences (note: in 2023 and later
-              releases, required operational data for service delivery and fraud detection cannot be turned off).
+              , open <strong>Settings &gt; Product Privacy</strong>, click{' '}
+              <strong>Edit</strong>, and save your product privacy settings.
             </li>
           </ol>
         </div>

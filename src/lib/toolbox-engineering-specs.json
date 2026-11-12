@@ -2986,105 +2986,151 @@
     ]
   },
   "cloud-dwg-to-step-iges-converter": {
-    "title": "Online 3D DWG to STEP/IGES CAD Translator",
-    "description": "Lookup and benchmark online translators to convert 3D DWG solids to STEP or IGES files for CNC machining and SolidWorks modeling.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online 3D DWG to STEP/IGES CAD Translator",
+    "title": "DWG to STEP / IGES Desktop Workflow & Local Export Script",
+    "description": "Explain why browsers cannot convert 2D DWG into STEP/IGES solids, review official AutoCAD IMPORT, IGESEXPORT, and ACISOUT capabilities, and generate pure-ASCII preflight scripts.",
+    "discipline": "Desktop 3D CAD Neutral Solid Exchange & Preflight",
+    "standards": "ISO 10303-21 (Clear text encoding of the exchange structure), Autodesk AutoCAD Help (IMPORT, EXPORT, IGESEXPORT, ACISOUT, INSUNITS)",
+    "cadContext": "Verify 3D solid topology in desktop AutoCAD (2D wireframe entities cannot auto-convert into 3D solids), set INSUNITS explicitly, run AUDIT and -PURGE, and use IGESEXPORT or ACISOUT (.sat) before downstream MCAD STEP translation.",
+    "formula": "INSUNITS integer code mapping (0–21) + AUDIT Y + -PURGE A * N + IGESEXPORT / ACISOUT (.scr)",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "AutoCAD Desktop Export Route",
+        "val": "IGESEXPORT — Direct IGES (*.igs, *.iges)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
+        "label": "AutoCAD INSUNITS Code",
+        "val": "4"
       },
       {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Expected 3D Solid Bodies",
+        "val": "12"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "AutoCAD Export Command",
+        "val": "IGESEXPORT (*.igs, *.iges)"
+      },
+      {
+        "label": "INSUNITS Drawing Scale",
+        "val": "4 (Millimeters)"
+      },
+      {
+        "label": "Target 3D Solids",
+        "val": "12"
+      },
+      {
+        "label": "STEP Capability Summary",
+        "val": "AutoCAD IMPORT reads STEP (*.ste; *.stp; *.step); STEP is not in AutoCAD EXPORT"
+      }
+    ]
   },
   "cloud-dxf-to-gcode-laser-converter": {
-    "title": "Online DXF to CNC G-Code Path Planner",
-    "description": "Compare the best cloud toolpath compilers converting 2D DXF contours to CNC G-Code. Review laser speed and lead-in configurations.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Standardized parametric evaluation for Online DXF to CNC G-Code Path Planner",
+    "title": "Client-Side ASCII DXF to 2D Laser G-Code Generator",
+    "description": "Parse 2D ASCII DXF entities (LINE, CIRCLE, ARC, LWPOLYLINE) locally in your browser into pure-ASCII G0/G1/G2/G3/M3/M5 G-code with LinuxCNC and GRBL command references.",
+    "discipline": "2D Laser Contour G-Code Compilation",
+    "standards": "LinuxCNC G-Code & M-Code Reference (G0, G1, G2, G3, G17, G20, G21, G90, G94, M2, M3, M4, M5), GRBL v1.1 Laser Mode, Autodesk AutoCAD DXF Reference (LINE, CIRCLE, ARC, LWPOLYLINE)",
+    "cadContext": "Convert SPLINE and ELLIPSE entities to LINE/ARC polylines in desktop CAD, export as ASCII DXF, and always verify the uncompensated G-code path in dedicated CAM software and via an unpowered air-cut dry run before enabling the laser.",
+    "formula": "L_cut = Σ L_segment; t_cut [s] = (L_cut / F) × 60 (uncompensated 2D contour, excludes G0 rapid & acceleration)",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Units Preamble",
+        "val": "G21 (mm)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
+        "label": "Laser Enable",
+        "val": "M3 (Constant CW)"
       },
       {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Cutting Feed Rate F (mm/min)",
+        "val": "1200"
+      },
+      {
+        "label": "Spindle / Laser S Word",
+        "val": "1000"
+      },
+      {
+        "label": "Sample Contour",
+        "val": "100×60 mm Plate + Ø20 mm Hole (4 LINE + 1 CIRCLE)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Parsed Entities",
+        "val": "5"
+      },
+      {
+        "label": "Cut Path Length",
+        "val": "382.83 mm"
+      },
+      {
+        "label": "Pure Cutting Time",
+        "val": "19.14 s"
+      }
+    ]
   },
   "clutch-torque-calculator": {
     "title": "Clutch Torque Capacity Calculator",
-    "description": "Calculate torque capacity of disc clutches from friction and geometry.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "T=u*W*Rm*n",
+    "description": "Calculate axial disc clutch torque capacity, effective friction radius, and lining contact pressure under Uniform Wear and Uniform Pressure assumptions.",
+    "discipline": "Machine Elements & Power Transmission",
+    "standards": "Shigley's Mechanical Engineering Design (Ch. 16: Axial Disc Clutches — Uniform Wear & Uniform Pressure), Roymech Axial Clutch Equations",
+    "cadContext": "Verify annular friction lining radii (R_o, R_i), number of active clamping interfaces n, and spring clamping clearance in your 3D clutch assembly model, and confirm friction coefficient μ and allowable lining pressure against manufacturer datasheets.",
+    "formula": "T = μ · F · (R_m / 1000) · n; Uniform Wear: R_m = (R_o + R_i) / 2; Uniform Pressure: R_m = (2/3) · (R_o³ − R_i³) / (R_o² − R_i²)",
     "inputs": [
       {
-        "label": "Axial Force (N)",
+        "label": "Contact Pressure Assumption",
+        "val": "Uniform Wear"
+      },
+      {
+        "label": "Axial Clamping Force F (N)",
         "val": "2000"
       },
       {
-        "label": "Friction",
+        "label": "Coefficient of Friction μ",
         "val": "0.25"
       },
       {
-        "label": "Outer Radius (mm)",
+        "label": "Outer Radius R_o (mm)",
         "val": "60"
       },
       {
-        "label": "Inner Radius (mm)",
+        "label": "Inner Radius R_i (mm)",
         "val": "40"
       },
       {
-        "label": "Surfaces",
+        "label": "Active Friction Surfaces n",
         "val": "2"
       }
     ],
     "outputs": [
       {
-        "label": "Torque Capacity",
-        "val": "50.667 Nm"
+        "label": "Torque Capacity T",
+        "val": "50.000 N·m"
       },
       {
-        "label": "Mean Radius",
-        "val": "50.667 mm"
+        "label": "Effective Radius R_m",
+        "val": "50.000 mm"
+      },
+      {
+        "label": "Peak Pressure p_max (at R_i)",
+        "val": "0.398 MPa"
       }
     ]
   },
   "cnc-cycle-time-calculator": {
     "title": "CNC Cycle Time Calculator",
-    "description": "Calculate CNC machining cycle time from tool paths, feeds, and speeds.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "t = total_distance / feed_rate + setup_time",
+    "description": "Calculate CNC machining cycle time from cutting path length, feed rate, rapid traverse distance and speed, tool changes, and auxiliary time.",
+    "discipline": "CNC Machining Cycle Time Estimation",
+    "standards": "CNC Machining Kinematics (Constant-Velocity Path Time Estimation)",
+    "cadContext": "Extract total G1/G2/G3 cutting path length and G0 rapid traverse distance from your CAM toolpath summary, and account for machine-specific ATC tool-change time and part load/unload auxiliary time.",
+    "formula": "t_min = L_cut / F_cut + L_rapid / F_rapid + (N_tc · t_tc + t_aux) / 60",
     "inputs": [
       {
-        "label": "Total Distance (mm)",
+        "label": "Cutting Path Length L_cut (mm)",
         "val": "5000"
       },
       {
-        "label": "Feed Rate (mm/min)",
+        "label": "Cutting Feed Rate F_cut (mm/min)",
         "val": "800"
       },
       {
@@ -3096,66 +3142,94 @@
         "val": "10000"
       },
       {
-        "label": "Tool Changes",
+        "label": "Tool Changes N_tc",
         "val": "3"
       },
       {
-        "label": "Change Time (s)",
+        "label": "Change Time t_tc (s)",
         "val": "5"
+      },
+      {
+        "label": "Auxiliary Time t_aux (s)",
+        "val": "0"
       }
     ],
     "outputs": [
+      {
+        "label": "Total Cycle Time",
+        "val": "6.550 min"
+      },
+      {
+        "label": "Total Cycle Time (s)",
+        "val": "393.00 s"
+      },
+      {
+        "label": "Theoretical Output (100% Uptime)",
+        "val": "9.16 parts/hr"
+      },
       {
         "label": "Cutting Time",
         "val": "375.00 s"
       },
       {
-        "label": "Rapid Time",
-        "val": "3.000 s"
+        "label": "Rapid Time (G0)",
+        "val": "3.00 s"
       },
       {
-        "label": "Total Cycle",
-        "val": "6.550 min"
+        "label": "Tool Change & Aux",
+        "val": "15.00 s"
       }
     ]
   },
   "cnc-feed-rate-calculator": {
     "title": "CNC Feed Rate Calculator",
-    "description": "Calculate CNC milling feed rate (mm/min), spindle RPM, and chip load per tooth from cutting speed, number of flutes, and tool diameter.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "RPM = (1000 × V_c) / (π × D) • V_f = RPM × f_z × Z • MRR = (a_p × a_e × V_f) / 1000 (cm³/min)",
+    "description": "Calculate CNC milling spindle speed n = 1000·Vc/(π·D), table feed rate F = fz·z·n, and material removal rate MRR with full m/min to mm/min unit derivation.",
+    "discipline": "CNC Milling Speeds & Feeds Kinematics",
+    "standards": "Milling Speeds and Feeds Kinematics (n = 1000·V_c / (π·D), F = f_z·z·n)",
+    "cadContext": "Match programmed cutter diameter D, flute count z, axial depth a_p, and radial width a_e in your CAM milling operation, and consult your cutting tool manufacturer's catalog for recommended V_c and f_z values.",
+    "formula": "n = (1000 · V_c) / (π · D) [RPM] • F = f_z · z · n [mm/min] • MRR = (a_p · a_e · F) / 1000 [cm³/min]",
     "inputs": [
       {
-        "label": "Workpiece Material",
-        "val": "Aluminum (6061-T6)"
+        "label": "Cutting Speed V_c (m/min)",
+        "val": "300"
       },
       {
-        "label": "Tool Diameter D (mm)",
+        "label": "Chip Load f_z (mm/tooth)",
+        "val": "0.12"
+      },
+      {
+        "label": "Tool Dia D (mm)",
+        "val": "6"
+      },
+      {
+        "label": "Flutes z",
+        "val": "2"
+      },
+      {
+        "label": "Axial Cut a_p (mm)",
+        "val": "3"
+      },
+      {
+        "label": "Radial Cut a_e (mm)",
         "val": "6"
       }
     ],
     "outputs": [
       {
         "label": "Spindle Speed (n)",
-        "val": "15,915 RPM"
+        "val": "15915.5 RPM"
       },
       {
-        "label": "Feed Rate (Vf)",
-        "val": "3,819.7 mm/min"
+        "label": "Table Feed Rate (F)",
+        "val": "3819.7 mm/min"
       },
       {
-        "label": "Chip Load fz",
+        "label": "Chip Load (f_z)",
         "val": "0.120 mm/tooth"
       },
       {
-        "label": "MRR (slotting)",
-        "val": "22,918 mm³/min"
-      },
-      {
-        "label": "Est. Power",
-        "val": "0.31 kW"
+        "label": "Material Removal Rate (MRR)",
+        "val": "68.75 cm³/min"
       }
     ]
   },

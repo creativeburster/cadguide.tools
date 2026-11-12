@@ -1,11 +1,12 @@
-﻿import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import CloudDxfToGcodeLaserConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online DXF to CNC G-Code Path Planners & Laser Converters | CADGuide.tools',
-  description: 'Compare the best cloud toolpath compilers converting 2D DXF contours to CNC G-Code. Review laser speed and lead-in configurations.',
+  title: 'Client-Side ASCII DXF to 2D Laser G-Code Generator | CADGuide.tools',
+  description:
+    'Parse 2D ASCII DXF entities (LINE, CIRCLE, ARC, LWPOLYLINE) locally in your browser into pure-ASCII G0/G1/G2/G3/M3/M5 G-code with LinuxCNC and GRBL command references.',
   path: '/toolbox/cloud-dxf-to-gcode-laser-converter',
 });
 
@@ -13,7 +14,10 @@ export default function CloudDxfToGcodeLaserConverterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online DXF to CNC G-Code Path Planner', path: '/toolbox/cloud-dxf-to-gcode-laser-converter' },
+    {
+      name: 'Client-Side ASCII DXF to 2D Laser G-Code Generator',
+      path: '/toolbox/cloud-dxf-to-gcode-laser-converter',
+    },
   ]);
 
   return (
@@ -30,13 +34,15 @@ export default function CloudDxfToGcodeLaserConverterPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              100% Browser-Local ASCII Compiler
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online DXF to CNC G-Code Path Planner
+              Client-Side ASCII DXF to 2D Laser G-Code Generator
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Convert 2D ASCII DXF contours (LINE, CIRCLE, ARC, LWPOLYLINE) into pure-ASCII G-code locally without
+              server uploads. Review in CAM and run an air-cut dry run before machining.
+            </p>
           </div>
         </section>
 
@@ -46,5 +52,5 @@ export default function CloudDxfToGcodeLaserConverterPage() {
         </section>
       </main>
     </>
-);
+  );
 }

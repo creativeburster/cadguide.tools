@@ -385,12 +385,14 @@ async function runBatch12Tests() {
       // Primary official opt-out guide check
       const officialGuide = await readTextTestId(p, 'official-optout-guide');
       if (
+        !officialGuide.includes('2022 Release Products and Earlier') ||
+        !officialGuide.includes('Data collection cannot be turned off in 2023 release products and later') ||
         !officialGuide.includes('Desktop Analytics') ||
         !officialGuide.includes('Privacy Settings') ||
-        !officialGuide.includes('profile.autodesk.com') ||
+        !officialGuide.includes('Autodesk Account Portal') ||
         !officialGuide.includes('Product Privacy')
       ) {
-        throw new Error('Telemetry wizard missing official Desktop Analytics / Privacy Settings / profile.autodesk.com Product Privacy guide');
+        throw new Error('Telemetry wizard missing official 2022/2023+ Desktop Analytics / Autodesk Account Portal Product Privacy guide');
       }
 
       // Unofficial firewall risk warning check

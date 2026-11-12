@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import CNCFeedRateClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CNC Feed Rate, Spindle Speed & Chip Load Calculator',
+  title: 'CNC Feed Rate, Spindle Speed & MRR Calculator | CADGuide.tools',
   description:
-    'Calculate CNC milling feed rate (mm/min), spindle RPM, and chip load per tooth from cutting speed, number of flutes, and tool diameter.',
+    'Calculate CNC milling spindle speed n = 1000·Vc/(π·D), feed rate F = fz·z·n, and material removal rate MRR with full m/min to mm/min unit derivation.',
   path: '/toolbox/cnc-feed-rate-calculator',
 });
 
@@ -30,13 +30,14 @@ export default function CNCFeedRatePage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Free Machining Calculator
+              Milling Kinematics Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               CNC Feed Rate <span className="text-blue-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate spindle RPM, feed rate, and chip load from cutting speed, tool diameter, and flute count. Includes recommended parameters for steel, aluminum, brass, and plastics.
+              Calculate spindle speed (RPM), table feed rate (mm/min), and material removal rate from cutting speed,
+              cutter diameter, flute count, and chip load. Consult your cutting tool manufacturer for final parameters.
             </p>
           </div>
         </section>

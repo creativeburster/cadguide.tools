@@ -1,11 +1,12 @@
-﻿import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import CloudDwgToStepIgesConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online 3D DWG to STEP/IGES Converters Review | CADGuide.tools',
-  description: 'Lookup and benchmark online translators to convert 3D DWG solids to STEP or IGES files for CNC machining and SolidWorks modeling.',
+  title: 'DWG to STEP / IGES Desktop Workflow & Local Export Script | CADGuide.tools',
+  description:
+    'Understand why browsers cannot convert 2D DWG into STEP/IGES solids, review official AutoCAD IMPORT, IGESEXPORT, and ACISOUT capabilities, and generate pure-ASCII preflight scripts.',
   path: '/toolbox/cloud-dwg-to-step-iges-converter',
 });
 
@@ -13,7 +14,10 @@ export default function CloudDwgToStepIgesConverterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online 3D DWG to STEP/IGES CAD Translator', path: '/toolbox/cloud-dwg-to-step-iges-converter' },
+    {
+      name: 'DWG to STEP / IGES Desktop Workflow & Local Export Script',
+      path: '/toolbox/cloud-dwg-to-step-iges-converter',
+    },
   ]);
 
   return (
@@ -30,13 +34,15 @@ export default function CloudDwgToStepIgesConverterPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Offline Desktop CAD Interoperability Guide
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online 3D DWG to STEP/IGES CAD Translator
+              DWG to STEP / IGES Desktop Workflow &amp; Local Export Script
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Honest browser limitations, official AutoCAD IMPORT / IGESEXPORT / ACISOUT command capabilities, and local
+              pure-ASCII export preflight scripts without uploading drawings.
+            </p>
           </div>
         </section>
 
@@ -46,5 +52,5 @@ export default function CloudDwgToStepIgesConverterPage() {
         </section>
       </main>
     </>
-);
+  );
 }
