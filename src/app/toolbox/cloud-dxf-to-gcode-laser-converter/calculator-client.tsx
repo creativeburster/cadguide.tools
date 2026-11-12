@@ -130,6 +130,11 @@ const OFFICIAL_DOCS = [
     desc: 'Documents M3 Constant Laser Power Mode, M4 Dynamic Laser Power Mode, M5 laser off, and automatic laser disable during G0 rapid moves.',
   },
   {
+    name: 'GRBL v1.1 Official Wiki — Configuration ($30 Max Spindle Speed, RPM)',
+    url: 'https://github.com/gnea/grbl/wiki/Grbl-v1.1-Configuration',
+    desc: 'Documents GRBL $x=val settings including $30=1000. Max spindle speed, RPM (sets spindle speed for maximum 5V PWM pin output) and $32 Laser mode.',
+  },
+  {
     name: 'Autodesk AutoCAD 2025 DXF Reference — LINE, CIRCLE, ARC Group Codes',
     url: 'https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-DXF/files/GUID-FCEF5726-53AE-4C43-B4EA-C84EB8686A66.htm',
     desc: 'Specifies DXF ENTITIES group codes: 10/20 start or center point, 11/21 endpoint, 40 radius, and 50/51 start and end angles.',
@@ -660,7 +665,16 @@ export default function CloudDxfToGcodeLaserConverterClient() {
               className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900 focus:outline-none focus:ring-4 focus:ring-blue-600/10 focus:bg-white transition-all"
             />
             <p className="text-[11px] text-slate-500 mt-1">
-              Match your controller PWM range (e.g., GRBL <code>$30</code> max spindle speed, commonly 1000).
+              Match your controller PWM range (e.g.,{' '}
+              <a
+                href="https://github.com/gnea/grbl/wiki/Grbl-v1.1-Configuration"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-bold text-blue-700"
+              >
+                GRBL <code>$30</code> Max spindle speed, RPM
+              </a>
+              , default <code>$30=1000</code>).
             </p>
           </div>
 

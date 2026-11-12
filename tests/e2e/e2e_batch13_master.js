@@ -3,7 +3,7 @@
  * CADGuide.tools Toolbox - Master E2E Verification Suite for Batch 13 (Tools 61 to 65)
  *
  * Validates:
- * 61. cloud-dwg-to-step-iges-converter (Honest browser limitation disclosure, official AutoCAD IMPORT vs EXPORT/IGESEXPORT/ACISOUT & INSUNITS 0..21 mapping, pure-ASCII .scr download, input defenses, negative assertions)
+ * 61. cloud-dwg-to-step-iges-converter (Honest browser limitation disclosure, official AutoCAD IMPORT vs EXPORT/IGESEXPORT/ACISOUT & INSUNITS 0..24 mapping, pure-ASCII .scr download, input defenses, negative assertions)
  * 62. cloud-dxf-to-gcode-laser-converter (Client-side ASCII DXF parser for LINE/CIRCLE/ARC/LWPOLYLINE, LinuxCNC & GRBL v1.1 G0/G1/G2/G3/M3/M4/M5/M2/G20/G21/G90/G17/G94, mandatory CAM & dry-run warning, unsupported entity & binary DXF handling, pure-ASCII .nc download, negative assertions)
  * 63. clutch-torque-calculator (T = mu*F*(R_m/1000)*n, Uniform Wear R_m=(R_o+R_i)/2 vs Uniform Pressure R_m=2/3*(R_o^3-R_i^3)/(R_o^2-R_i^2), editable mu with manufacturer datasheet note, presets, input defenses, CSV export, negative assertions)
  * 64. cnc-cycle-time-calculator (t = L/F [mm / (mm/min) = min], independent editable rapid distance/speed, tool changes/change time, and auxiliary time, presets, input defenses, CSV export, negative assertions)
@@ -193,6 +193,13 @@ async function runBatch13Tests() {
       assertEqual(await readTextTestId(p, 'result-insunits-summary'), '1 (Inches)', 'Tool 61 Preset 3 Inches');
       assertEqual(await readTextTestId(p, 'result-solid-count'), '24', 'Tool 61 Preset 3 solids');
 
+      // Boundary check: INSUNITS = 24 (US Survey Mile) valid, INSUNITS = 25 out-of-range -> '—'
+      await p.fill('[data-testid="input-insunits-code"]', '24');
+      assertEqual(await readTextTestId(p, 'result-insunits-summary'), '24 (US Survey Mile)', 'Tool 61 INSUNITS=24 valid');
+      await p.fill('[data-testid="input-insunits-code"]', '25');
+      assertEqual(await readTextTestId(p, 'result-export-route'), '—', 'Tool 61 INSUNITS=25 out-of-range dash');
+      assertEqual(await readTextTestId(p, 'result-insunits-summary'), '—', 'Tool 61 INSUNITS=25 summary dash');
+
       // Input defenses on >= 2 inputs ('', 'abc', '12abc', out-of-range 99)
       for (const bad of ['', 'abc', '12abc', '99']) {
         await p.fill('[data-testid="input-insunits-code"]', bad);
@@ -247,6 +254,14 @@ async function runBatch13Tests() {
         !safetyWarning.includes('SPLINE')
       ) {
         throw new Error('DXF-to-GCode page missing CAM/dry-run warning or unsupported feature disclosure');
+      }
+
+      // Verify GRBL $30 Configuration official wiki link is present
+      const grblCfgCount = await p
+        .locator('a[href="https://github.com/gnea/grbl/wiki/Grbl-v1.1-Configuration"]')
+        .count();
+      if (grblCfgCount < 1) {
+        throw new Error('DXF-to-GCode page missing Grbl-v1.1-Configuration official link for $30');
       }
 
       // Default Preset 1 hand-calculation:
@@ -361,7 +376,7 @@ async function runBatch13Tests() {
       // p_max = 2000 / (2 * pi * 40 * (60 - 40)) = 2000 / (1600 * pi) = 0.397887 -> 0.398 MPa
       assertClose(await readNumberTestId(p, 'result-mean-radius'), 50.0, 0.001, 'Tool 63 default UW R_m');
       assertClose(await readNumberTestId(p, 'result-torque'), 50.0, 0.001, 'Tool 63 default UW torque');
-      assertClose(await readNumberTestId(p, 'result-lining-pressure'), 0.398, 0.002, 'Tool 63 default UW p_max');
+      assertClose(await readNumberTestId(p, 'result-lining-pressure'), 0.398, 0.001, 'Tool 63 default UW p_max');
 
       // Switch to Uniform Pressure assumption on same inputs:
       // R_m = (2/3) * (60^3 - 40^3) / (60^2 - 40^2) = (2/3) * 152000 / 2000 = 50.666667 -> 50.667 mm
@@ -370,21 +385,21 @@ async function runBatch13Tests() {
       await p.selectOption('[data-testid="select-theory"]', 'uniform-pressure');
       assertClose(await readNumberTestId(p, 'result-mean-radius'), 50.667, 0.001, 'Tool 63 UP R_m');
       assertClose(await readNumberTestId(p, 'result-torque'), 50.667, 0.001, 'Tool 63 UP torque');
-      assertClose(await readNumberTestId(p, 'result-lining-pressure'), 0.318, 0.002, 'Tool 63 UP p_avg');
+      assertClose(await readNumberTestId(p, 'result-lining-pressure'), 0.318, 0.001, 'Tool 63 UP p_avg');
 
       // Preset 2: Automotive Single-Plate Dry (Uniform Wear: F=4500, mu=0.35, R_o=115, R_i=75, n=2)
       // R_m = 95.000 mm; T = 0.35 * 4500 * 0.095 * 2 = 299.250 N*m; p_max = 4500 / (2*pi*75*40) = 0.238732 -> 0.239 MPa
       await p.click('[data-testid="preset-automotive-single-plate"]');
       assertClose(await readNumberTestId(p, 'result-mean-radius'), 95.0, 0.001, 'Tool 63 Preset 2 R_m');
       assertClose(await readNumberTestId(p, 'result-torque'), 299.25, 0.001, 'Tool 63 Preset 2 torque');
-      assertClose(await readNumberTestId(p, 'result-lining-pressure'), 0.239, 0.003, 'Tool 63 Preset 2 p_max');
+      assertClose(await readNumberTestId(p, 'result-lining-pressure'), 0.239, 0.001, 'Tool 63 Preset 2 p_max');
 
       // Preset 3: Wet Multi-Plate Oil (Uniform Wear: F=3000, mu=0.08, R_o=80, R_i=50, n=6)
       // R_m = 65.000 mm; T = 0.08 * 3000 * 0.065 * 6 = 93.600 N*m; p_max = 3000 / (2*pi*50*30) = 0.318310 -> 0.318 MPa
       await p.click('[data-testid="preset-wet-multi-plate"]');
       assertClose(await readNumberTestId(p, 'result-mean-radius'), 65.0, 0.001, 'Tool 63 Preset 3 R_m');
       assertClose(await readNumberTestId(p, 'result-torque'), 93.6, 0.001, 'Tool 63 Preset 3 torque');
-      assertClose(await readNumberTestId(p, 'result-lining-pressure'), 0.318, 0.002, 'Tool 63 Preset 3 p_max');
+      assertClose(await readNumberTestId(p, 'result-lining-pressure'), 0.318, 0.001, 'Tool 63 Preset 3 p_max');
 
       // Reset to defaults & test CSV export
       await p.click('[data-testid="reset-button"]');
@@ -524,21 +539,21 @@ async function runBatch13Tests() {
       await p.click('[data-testid="preset-carbon-steel-1045"]');
       assertClose(await readNumberTestId(p, 'result-rpm'), 2864.8, 0.001, 'Tool 65 Preset 2 RPM');
       assertClose(await readNumberTestId(p, 'result-feed-rate'), 687.5, 0.001, 'Tool 65 Preset 2 feed');
-      assertClose(await readNumberTestId(p, 'result-mrr'), 6.88, 0.002, 'Tool 65 Preset 2 MRR');
+      assertClose(await readNumberTestId(p, 'result-mrr'), 6.88, 0.001, 'Tool 65 Preset 2 MRR');
 
       // Preset 3: Stainless 304 (V_c=50, f_z=0.04, D=8, z=4, a_p=4, a_e=1.6)
       // n = 50000 / (8*pi) = 1989.4 RPM; F = 0.16 * 1989.437 = 318.3 mm/min; MRR = 6.4 * 318.310 / 1000 = 2.04 cm^3/min
       await p.click('[data-testid="preset-stainless-304"]');
       assertClose(await readNumberTestId(p, 'result-rpm'), 1989.4, 0.001, 'Tool 65 Preset 3 RPM');
       assertClose(await readNumberTestId(p, 'result-feed-rate'), 318.3, 0.001, 'Tool 65 Preset 3 feed');
-      assertClose(await readNumberTestId(p, 'result-mrr'), 2.04, 0.003, 'Tool 65 Preset 3 MRR');
+      assertClose(await readNumberTestId(p, 'result-mrr'), 2.04, 0.001, 'Tool 65 Preset 3 MRR');
 
       // Preset 4: Titanium Ti-6Al-4V (V_c=40, f_z=0.05, D=12, z=4, a_p=6, a_e=1.2)
       // n = 40000 / (12*pi) = 1061.0 RPM; F = 0.20 * 1061.033 = 212.2 mm/min; MRR = 7.2 * 212.207 / 1000 = 1.53 cm^3/min
       await p.click('[data-testid="preset-titanium-ti6al4v"]');
       assertClose(await readNumberTestId(p, 'result-rpm'), 1061.0, 0.001, 'Tool 65 Preset 4 RPM');
       assertClose(await readNumberTestId(p, 'result-feed-rate'), 212.2, 0.001, 'Tool 65 Preset 4 feed');
-      assertClose(await readNumberTestId(p, 'result-mrr'), 1.53, 0.003, 'Tool 65 Preset 4 MRR');
+      assertClose(await readNumberTestId(p, 'result-mrr'), 1.53, 0.001, 'Tool 65 Preset 4 MRR');
 
       // Input defenses on >= 2 inputs ('', 'abc', '12abc', a_e > D)
       await p.click('[data-testid="reset-button"]');

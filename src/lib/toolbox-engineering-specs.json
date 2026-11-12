@@ -2991,7 +2991,7 @@
     "discipline": "Desktop 3D CAD Neutral Solid Exchange & Preflight",
     "standards": "ISO 10303-21 (Clear text encoding of the exchange structure), Autodesk AutoCAD Help (IMPORT, EXPORT, IGESEXPORT, ACISOUT, INSUNITS)",
     "cadContext": "Verify 3D solid topology in desktop AutoCAD (2D wireframe entities cannot auto-convert into 3D solids), set INSUNITS explicitly, run AUDIT and -PURGE, and use IGESEXPORT or ACISOUT (.sat) before downstream MCAD STEP translation.",
-    "formula": "INSUNITS integer code mapping (0–21) + AUDIT Y + -PURGE A * N + IGESEXPORT / ACISOUT (.scr)",
+    "formula": "INSUNITS integer code mapping (0–24) + AUDIT Y + -PURGE A * N + IGESEXPORT / ACISOUT (.scr)",
     "inputs": [
       {
         "label": "AutoCAD Desktop Export Route",
@@ -3029,7 +3029,7 @@
     "title": "Client-Side ASCII DXF to 2D Laser G-Code Generator",
     "description": "Parse 2D ASCII DXF entities (LINE, CIRCLE, ARC, LWPOLYLINE) locally in your browser into pure-ASCII G0/G1/G2/G3/M3/M5 G-code with LinuxCNC and GRBL command references.",
     "discipline": "2D Laser Contour G-Code Compilation",
-    "standards": "LinuxCNC G-Code & M-Code Reference (G0, G1, G2, G3, G17, G20, G21, G90, G94, M2, M3, M4, M5), GRBL v1.1 Laser Mode, Autodesk AutoCAD DXF Reference (LINE, CIRCLE, ARC, LWPOLYLINE)",
+    "standards": "LinuxCNC G-Code & M-Code Reference (G0, G1, G2, G3, G17, G20, G21, G90, G94, M2, M3, M4, M5), GRBL v1.1 Laser Mode & Configuration ($30), Autodesk AutoCAD DXF Reference (LINE, CIRCLE, ARC, LWPOLYLINE)",
     "cadContext": "Convert SPLINE and ELLIPSE entities to LINE/ARC polylines in desktop CAD, export as ASCII DXF, and always verify the uncompensated G-code path in dedicated CAM software and via an unpowered air-cut dry run before enabling the laser.",
     "formula": "L_cut = Σ L_segment; t_cut [s] = (L_cut / F) × 60 (uncompensated 2D contour, excludes G0 rapid & acceleration)",
     "inputs": [

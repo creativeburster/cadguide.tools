@@ -23,7 +23,7 @@ interface ExportPreset {
   solidCount: string;
 }
 
-// Verbatim AutoCAD 2025 Help — INSUNITS (System Variable) integer table (0..21)
+// Verbatim AutoCAD 2025 Help — INSUNITS (System Variable) integer table (0..24)
 const INSUNITS_MAP: Record<number, string> = {
   0: 'Unspecified (No units)',
   1: 'Inches',
@@ -47,6 +47,9 @@ const INSUNITS_MAP: Record<number, string> = {
   19: 'Light Years',
   20: 'Parsecs',
   21: 'US Survey Feet',
+  22: 'US Survey Inch',
+  23: 'US Survey Yard',
+  24: 'US Survey Mile',
 };
 
 const DWG_SIGNATURES: Record<string, string> = {
@@ -101,7 +104,7 @@ const OFFICIAL_DOCS = [
   {
     name: 'Autodesk AutoCAD 2025 Help — INSUNITS (System Variable)',
     url: 'https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core/files/GUID-A58A87BB-482B-4042-A00A-EEF55A2B4FD8.htm',
-    desc: 'Defines drawing-units integer codes (0 = Unspecified, 1 = Inches, 2 = Feet, 4 = Millimeters, 5 = Centimeters, 6 = Meters, up to 21 = US Survey Feet).',
+    desc: 'Defines drawing-units integer codes 0–24 (0 = Unspecified, 1 = Inches, 2 = Feet, 4 = Millimeters, 6 = Meters, 21 = US Survey Feet, up to 24 = US Survey Mile; 22–24 supported on AutoCAD for Mac only).',
   },
 ];
 
@@ -157,14 +160,14 @@ export default function CloudDwgToStepIgesConverterClient() {
     if (!Number.isFinite(insCode) || !Number.isFinite(solids)) {
       return {
         valid: false as const,
-        error: 'Enter valid finite integers for AutoCAD INSUNITS Code (0–21) and Expected 3D Solid Bodies (1–10,000).',
+        error: 'Enter valid finite integers for AutoCAD INSUNITS Code (0–24) and Expected 3D Solid Bodies (1–10,000).',
       };
     }
 
     if (!Number.isInteger(insCode) || !(insCode in INSUNITS_MAP)) {
       return {
         valid: false as const,
-        error: 'INSUNITS must be an official AutoCAD integer code from 0 to 21 (e.g., 1 = Inches, 4 = Millimeters, 6 = Meters).',
+        error: 'INSUNITS must be an official AutoCAD integer code from 0 to 24 (e.g., 1 = Inches, 4 = Millimeters, 6 = Meters, 24 = US Survey Mile).',
       };
     }
 
@@ -326,7 +329,7 @@ export default function CloudDwgToStepIgesConverterClient() {
               htmlFor="dwg-insunits"
               className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-2"
             >
-              AutoCAD INSUNITS Code (0–21)
+              AutoCAD INSUNITS Code (0–24)
             </label>
             <input
               id="dwg-insunits"
