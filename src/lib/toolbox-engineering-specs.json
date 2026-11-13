@@ -3235,153 +3235,207 @@
   },
   "cnc-gcode-feed-calculator": {
     "title": "CNC G-code Feed Rate Calculator",
-    "description": "Calculate feed rate, spindle speed, and chip load for CNC milling from cutting parameters.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "f = z * fz * n, n = vc*1000/(pi*D)",
+    "description": "Calculate spindle speed (S), G94/G95 feed rates (F), and material removal rate (MRR) for CNC milling.",
+    "discipline": "CNC Milling & ISO G-code Programming",
+    "standards": "LinuxCNC G-code Reference (G20/G21 Units, G93/G94/G95 Feed Modes) & Other Codes (F: Set Feed Rate, S: Set Spindle Speed)",
+    "cadContext": "Keep cutting speed (Vc) and chip load (fz) synced across CAM tool libraries and post-processor G94 (mm/min) or G95 (mm/rev) blocks.",
+    "formula": "n = (1000 * Vc) / (pi * D); f_rev = fz * z; Vf = f_rev * n = fz * z * n; Q = (ap * ae * Vf) / 1000",
     "inputs": [
       {
-        "label": "Cutter Dia (mm)",
+        "label": "Cutter Diameter D (mm)",
         "val": "10"
       },
       {
-        "label": "Teeth",
+        "label": "Flutes / Teeth z",
         "val": "4"
       },
       {
-        "label": "Cutting Speed (m/min)",
+        "label": "Cutting Speed Vc (m/min)",
         "val": "200"
       },
       {
-        "label": "Chip Load (mm/tooth)",
+        "label": "Chip Load fz (mm/tooth)",
         "val": "0.05"
       },
       {
-        "label": "Depth of Cut (mm)",
+        "label": "Axial Depth ap (mm)",
         "val": "2"
+      },
+      {
+        "label": "Radial Width ae (mm)",
+        "val": "5"
       }
     ],
     "outputs": [
       {
-        "label": "Spindle Speed",
-        "val": "6366.20 RPM"
+        "label": "Spindle Speed n",
+        "val": "6366.2 RPM"
       },
       {
-        "label": "Feed Rate",
-        "val": "1273.24 mm/min"
+        "label": "G94 Feed Rate Vf",
+        "val": "1273.2 mm/min"
       },
       {
-        "label": "MRR",
-        "val": "25.465 cm3/min"
+        "label": "G95 Feed per Rev f_rev",
+        "val": "0.200 mm/rev"
+      },
+      {
+        "label": "MRR (Q)",
+        "val": "12.73 cm3/min"
       }
     ]
   },
   "cnc-speeds-feeds-reference": {
-    "title": "Speeds & Feeds Quick Reference",
-    "description": "CNC cutting speeds (Vc) and feed rates per material: steel, aluminum, stainless, titanium, brass, and plastics with HSS and carbide tool data.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Standardized parametric evaluation for Speeds & Feeds Quick Reference",
+    "title": "CNC Speeds & Feeds Quick Reference",
+    "description": "Manufacturer-cited cutting speeds (Vc) and feed rates (fz / f) for steels, stainless steels, cast irons, aluminum, titanium, superalloys, and hardened steel.",
+    "discipline": "CNC Milling & Indexable Drilling Reference",
+    "standards": "Tungaloy Cutting Condition Catalogs: TungForce-Rec (TR506-G p. 17), DoFeedQuad TXQ12 (p. 1), and DrillForce-Meister (h_scc_509.pdf p. 1)",
+    "cadContext": "Use manufacturer-published Vc and fz/f ranges as initial starting baselines in CAM operations, adjusting for insert grade, overhang, and spindle rigidity.",
+    "formula": "n = (Vc * 1000) / (pi * D); Vf = fz * z * n; Q = (ap * ae * Vf) / 1000",
     "inputs": [],
     "outputs": []
   },
   "coating-thickness-calculator": {
     "title": "Coating Thickness & Coverage Calculator",
-    "description": "Calculate coating thickness from application rate and dry film coverage.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "DFT = (volume * solids * 10) / area",
+    "description": "Calculate wet film thickness (WFT), dry film thickness (DFT), spreading rates, and paint volume from Volume Solids (%).",
+    "discipline": "Protective Coatings & Surface Finishing",
+    "standards": "ISO 2808 (Determination of Film Thickness), ASTM D4414 (Wet Film Thickness by Notch Gauges), Dulux Protective Coatings Tech Note (531_handy_calculations)",
+    "cadContext": "Verify dry film thickness and Volume Solids (%) specifications on engineering coating schedules and product Technical Data Sheets (TDS).",
+    "formula": "WFT = (DFT * 100) / VS%; TSR = (VS% * 10) / DFT; PSR = TSR * (1 - Loss%/100); V_theo = (Area * DFT) / (VS% * 10)",
     "inputs": [
       {
-        "label": "Coating Volume (L)",
-        "val": "5"
+        "label": "Target Total DFT (um)",
+        "val": "150"
       },
       {
-        "label": "Solids Content (%)",
+        "label": "Volume Solids VS (%)",
         "val": "60"
       },
       {
-        "label": "Area (m2)",
-        "val": "50"
+        "label": "Coated Area (m2)",
+        "val": "100"
       },
       {
-        "label": "Coats",
+        "label": "Number of Coats",
         "val": "2"
+      },
+      {
+        "label": "Application Loss Factor (%)",
+        "val": "15"
       }
     ],
     "outputs": [
       {
-        "label": "Dry Film Thickness",
-        "val": "1.200 um"
+        "label": "WFT per Coat",
+        "val": "125.0 um"
       },
       {
-        "label": "Coverage Rate",
-        "val": "10.000 m2/L"
+        "label": "DFT per Coat / Total DFT",
+        "val": "75.0 / 150.0 um"
       },
       {
-        "label": "Wet Film Thickness",
-        "val": "2.000 um"
+        "label": "Theoretical / Practical Spreading Rate",
+        "val": "4.00 / 3.40 m2/L"
+      },
+      {
+        "label": "Theoretical / Practical Volume",
+        "val": "25.00 / 29.41 L"
       }
     ]
   },
   "color-rgb-to-aci-matchbox": {
     "title": "RGB to ACI Color Matchbox",
-    "description": "Convert standard RGB or Hex color codes to their closest matching AutoCAD Index Color (ACI 1-255) using CIE76 Delta-E color distance mapping. Includes CTB plot styles suggestions.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for RGB to ACI Color Matchbox",
-    "inputs": [],
-    "outputs": []
-  },
-  "column-base-plate-calculator": {
-    "title": "Column Base Plate Calculator",
-    "description": "Calculate base plate thickness and dimensions for steel columns on concrete.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "AISC Design Guide 1: Cantilever l = max(m, n) where m = (B - 0.95·cd)/2, n = (B - 0.8·cw)/2 • t = l · √(3·fp / (0.75·fy))",
+    "description": "Match RGB or Hex colors to AutoCAD Color Index values (ACI 1-255) using CIE76 Delta-E and Euclidean RGB distance.",
+    "discipline": "CAD Layer Color & Drafting Visualization",
+    "standards": "Autodesk AutoCAD Color Index (ACI 1-255) per Autodesk COLOR Command Reference (GUID-C163F875) & ezdxf DXF_DEFAULT_COLORS",
+    "cadContext": "Translate RGB/HEX colors to standard ACI indices (1-255) and apply via -LAYER C <index>, keeping viewport background adaptation for ACI 7 and 250-255 in mind.",
+    "formula": "Euclidean: sqrt(dR^2 + dG^2 + dB^2); CIE76: sqrt(dL*^2 + da*^2 + db*^2) via D65 sRGB -> XYZ -> CIE L*a*b*",
     "inputs": [
       {
-        "label": "Column Load (kN)",
-        "val": "500"
+        "label": "HEX Color",
+        "val": "#3B82F6"
       },
       {
-        "label": "Concrete fc (MPa)",
-        "val": "25"
-      },
-      {
-        "label": "Column Width (mm)",
-        "val": "200"
-      },
-      {
-        "label": "Column Depth (mm)",
-        "val": "200"
-      },
-      {
-        "label": "Steel fy (MPa)",
-        "val": "250"
+        "label": "RGB Triplet",
+        "val": "59, 130, 246"
       }
     ],
     "outputs": [
       {
-        "label": "Base Plate Size (B × B)",
-        "val": "300.00 mm"
+        "label": "Closest ACI Index",
+        "val": "ACI 150 (#007FFF, 0, 127, 255)"
       },
       {
-        "label": "Minimum Thickness (t)",
-        "val": "20.900 mm"
+        "label": "CIE76 Delta-E",
+        "val": "7.28"
       },
       {
-        "label": "Concrete Bearing Stress",
-        "val": "5.556 MPa"
+        "label": "Euclidean RGB Distance",
+        "val": "59.76"
+      }
+    ]
+  },
+  "column-base-plate-calculator": {
+    "title": "Column Base Plate Calculator",
+    "description": "Calculate concrete bearing capacity (phi_c * Pp) and required base plate thickness (tp) for concentrically loaded steel columns under AISC LRFD.",
+    "discipline": "Structural Steel Base Plate & Foundation Interface",
+    "standards": "AISC 360-22 Eq. J8-2 (Concrete Bearing Capacity) & AISC Design Guide 1 (Base Plate and Anchor Rod Design, LRFD)",
+    "cadContext": "Check trial plate width B, length N, and supporting concrete area A2 against footing and anchor layout in structural BIM/CAD framing plans.",
+    "formula": "phi_c*Pp = 0.65 * min(0.85*f'c*A1*sqrt(A2/A1), 1.7*f'c*A1); l = max((N-0.95*d)/2, (B-0.80*bf)/2, lambda*sqrt(d*bf)/4); tp = l * sqrt(2*Pu / (0.9*Fy*B*N))",
+    "inputs": [
+      {
+        "label": "Factored Axial Load Pu (kN, LRFD)",
+        "val": "1500"
       },
       {
-        "label": "Governing Cantilever (l)",
-        "val": "70.000 mm"
+        "label": "Concrete Strength f'c (MPa)",
+        "val": "25"
+      },
+      {
+        "label": "Plate Yield Strength Fy (MPa)",
+        "val": "250"
+      },
+      {
+        "label": "Column Depth d (mm)",
+        "val": "300"
+      },
+      {
+        "label": "Column Flange bf (mm)",
+        "val": "300"
+      },
+      {
+        "label": "Plate Width B (mm)",
+        "val": "400"
+      },
+      {
+        "label": "Plate Length N (mm)",
+        "val": "400"
+      },
+      {
+        "label": "Support Concrete Area A2 (mm2)",
+        "val": "640000"
+      },
+      {
+        "label": "Lambda Factor (Editable)",
+        "val": "1.0"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Required Thickness tp",
+        "val": "23.09 mm"
+      },
+      {
+        "label": "Concrete Capacity phi_c*Pp",
+        "val": "4420.00 kN"
+      },
+      {
+        "label": "Governing Cantilever l",
+        "val": "80.00 mm"
+      },
+      {
+        "label": "Bearing Pressure fpu",
+        "val": "9.375 MPa"
       }
     ]
   },

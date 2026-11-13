@@ -1,8 +1,10 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
+import { Check, Copy, Download, HelpCircle, Layers, RotateCcw } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
-import { Info, HelpCircle, Layers, Copy, Check } from 'lucide-react';
+
+type DistanceMetric = 'cie76' | 'euclidean';
 
 interface AciColor {
   index: number;
@@ -13,541 +15,548 @@ interface AciColor {
   name: string;
 }
 
-// Compact, mathematically accurate AutoCAD Index Color (ACI) Generator
-const generateAciColors = (): AciColor[] => {
-  const list: AciColor[] = [];
+// Exact AutoCAD 2020 default dark modelspace ACI palette (indices 1..255)
+// Source: ezdxf colors.py DXF_DEFAULT_COLORS (cross-verified with netDxf AciColor.cs)
+const ACI_HEX_1_TO_255 = [
+  'FF0000', 'FFFF00', '00FF00', '00FFFF', '0000FF', 'FF00FF', 'FFFFFF', '808080', 'C0C0C0', 'FF0000',
+  'FF7F7F', 'A50000', 'A55252', '7F0000', '7F3F3F', '4C0000', '4C2626', '260000', '261313', 'FF3F00',
+  'FF9F7F', 'A52900', 'A56752', '7F1F00', '7F4F3F', '4C1300', '4C2F26', '260900', '261713', 'FF7F00',
+  'FFBF7F', 'A55200', 'A57C52', '7F3F00', '7F5F3F', '4C2600', '4C3926', '261300', '261C13', 'FFBF00',
+  'FFDF7F', 'A57C00', 'A59152', '7F5F00', '7F6F3F', '4C3900', '4C4226', '261C00', '262113', 'FFFF00',
+  'FFFF7F', 'A5A500', 'A5A552', '7F7F00', '7F7F3F', '4C4C00', '4C4C26', '262600', '262613', 'BFFF00',
+  'DFFF7F', '7CA500', '91A552', '5F7F00', '6F7F3F', '394C00', '424C26', '1C2600', '212613', '7FFF00',
+  'BFFF7F', '52A500', '7CA552', '3F7F00', '5F7F3F', '264C00', '394C26', '132600', '1C2613', '3FFF00',
+  '9FFF7F', '29A500', '67A552', '1F7F00', '4F7F3F', '134C00', '2F4C26', '092600', '172613', '00FF00',
+  '7FFF7F', '00A500', '52A552', '007F00', '3F7F3F', '004C00', '264C26', '002600', '132613', '00FF3F',
+  '7FFF9F', '00A529', '52A567', '007F1F', '3F7F4F', '004C13', '264C2F', '002609', '135817', '00FF7F',
+  '7FFFBF', '00A552', '52A57C', '007F3F', '3F7F5F', '004C26', '264C39', '002613', '13581C', '00FFBF',
+  '7FFFDF', '00A57C', '52A591', '007F5F', '3F7F6F', '004C39', '264C42', '00261C', '135858', '00FFFF',
+  '7FFFFF', '00A5A5', '52A5A5', '007F7F', '3F7F7F', '004C4C', '264C4C', '002626', '135858', '00BFFF',
+  '7FDFFF', '007CA5', '5291A5', '005F7F', '3F6F7F', '00394C', '26427E', '001C26', '135858', '007FFF',
+  '7FBFFF', '0052A5', '527CA5', '003F7F', '3F5F7F', '00264C', '26397E', '001326', '131C58', '003FFF',
+  '7F9FFF', '0029A5', '5267A5', '001F7F', '3F4F7F', '00134C', '262F7E', '000926', '131758', '0000FF',
+  '7F7FFF', '0000A5', '5252A5', '00007F', '3F3F7F', '00004C', '26267E', '000026', '131358', '3F00FF',
+  '9F7FFF', '2900A5', '6752A5', '1F007F', '4F3F7F', '13004C', '2F267E', '090026', '171358', '7F00FF',
+  'BF7FFF', '5200A5', '7C52A5', '3F007F', '5F3F7F', '26004C', '39267E', '130026', '1C1358', 'BF00FF',
+  'DF7FFF', '7C00A5', '9152A5', '5F007F', '6F3F7F', '39004C', '42264C', '1C0026', '581358', 'FF00FF',
+  'FF7FFF', 'A500A5', 'A552A5', '7F007F', '7F3F7F', '4C004C', '4C264C', '260026', '581358', 'FF00BF',
+  'FF7FDF', 'A5007C', 'A55291', '7F005F', '7F3F6F', '4C0039', '4C2642', '26001C', '581358', 'FF007F',
+  'FF7FBF', 'A50052', 'A5527C', '7F003F', '7F3F5F', '4C0026', '4C2639', '260013', '58131C', 'FF003F',
+  'FF7F9F', 'A50029', 'A55267', '7F001F', '7F3F4F', '4C0013', '4C262F', '260009', '581317', '000000',
+  '656565', '666666', '999999', 'CCCCCC', 'FFFFFF',
+] as const;
 
-  // 1. Standard ACI colors (1 to 9)
-  const stdColors = [
-    { r: 255, g: 0, b: 0, name: 'Red (Standard index 1)' },          // ACI 1
-    { r: 255, g: 255, b: 0, name: 'Yellow (Standard index 2)' },    // ACI 2
-    { r: 0, g: 255, b: 0, name: 'Green (Standard index 3)' },        // ACI 3
-    { r: 0, g: 255, b: 255, name: 'Cyan (Standard index 4)' },       // ACI 4
-    { r: 0, g: 0, b: 255, name: 'Blue (Standard index 5)' },         // ACI 5
-    { r: 255, g: 0, b: 255, name: 'Magenta (Standard index 6)' },    // ACI 6
-    { r: 255, g: 255, b: 255, name: 'White/Black (Standard index 7)' }, // ACI 7
-    { r: 128, g: 128, b: 128, name: 'Dark Grey (Standard index 8)' }, // ACI 8
-    { r: 192, g: 192, b: 192, name: 'Light Grey (Standard index 9)' }, // ACI 9
-  ];
-  stdColors.forEach((c, idx) => {
-    const index = idx + 1;
-    const hex = '#' + ((1 << 24) + (c.r << 16) + (c.g << 8) + c.b).toString(16).slice(1);
-    list.push({ index, ...c, hex });
-  });
-
-  // 2. Grayscale ACI colors (250 to 255)
-  const grays = [
-    { r: 51, g: 51, b: 51, name: 'Gray (ACI 250)' },
-    { r: 91, g: 91, b: 91, name: 'Gray (ACI 251)' },
-    { r: 132, g: 132, b: 132, name: 'Gray (ACI 252)' },
-    { r: 173, g: 173, b: 173, name: 'Gray (ACI 253)' },
-    { r: 214, g: 214, b: 214, name: 'Gray (ACI 254)' },
-    { r: 255, g: 255, b: 255, name: 'White (ACI 255)' },
-  ];
-  grays.forEach((c, idx) => {
-    const index = 250 + idx;
-    const hex = '#' + ((1 << 24) + (c.r << 16) + (c.g << 8) + c.b).toString(16).slice(1);
-    list.push({ index, ...c, hex });
-  });
-
-  // 3. Hue grid (10 to 249)
-  // 24 Base Hues along the standard CAD color wheel
-  const baseHues = [
-    [255, 0, 0, 'Red'],
-    [255, 63, 0, 'Red-Orange'],
-    [255, 127, 0, 'Orange'],
-    [255, 191, 0, 'Yellow-Orange'],
-    [255, 255, 0, 'Yellow'],
-    [191, 255, 0, 'Yellow-Green'],
-    [127, 255, 0, 'Green'],
-    [63, 255, 0, 'Green-Cyan'],
-    [0, 255, 0, 'Green'],
-    [0, 255, 63, 'Cyan-Green'],
-    [0, 255, 127, 'Cyan-Green-Blue'],
-    [0, 255, 191, 'Cyan-Blue'],
-    [0, 255, 255, 'Cyan'],
-    [0, 191, 255, 'Cyan-Blue-Violet'],
-    [0, 127, 255, 'Blue-Cyan'],
-    [0, 63, 255, 'Blue'],
-    [0, 0, 255, 'Blue'],
-    [63, 0, 255, 'Blue-Indigo'],
-    [127, 0, 255, 'Indigo'],
-    [191, 0, 255, 'Indigo-Violet'],
-    [255, 0, 255, 'Violet/Magenta'],
-    [255, 0, 191, 'Magenta-Violet'],
-    [255, 0, 127, 'Magenta'],
-    [255, 0, 63, 'Magenta-Red'],
-  ];
-
-  // Autodesk standard shade scaling factors
-  const brightnessFactors = [1.0, 0.78, 0.56, 0.34, 0.12];
-
-  for (let h = 0; h < 24; h++) {
-    const [br, bg, bb, hueName] = baseHues[h];
-    const baseR = br as number;
-    const baseG = bg as number;
-    const baseB = bb as number;
-    
-    for (let s = 0; s < 10; s++) {
-      const index = 10 + h * 10 + s;
-      const isEven = s % 2 === 0;
-      const factorIndex = Math.floor(s / 2);
-      const factor = brightnessFactors[factorIndex];
-
-      let r = 0, g = 0, b = 0;
-      let shadeName = '';
-
-      if (isEven) {
-        // Pure hue, scaled
-        r = Math.round(baseR * factor);
-        g = Math.round(baseG * factor);
-        b = Math.round(baseB * factor);
-        shadeName = `${hueName} (Shade ${factorIndex + 1})`;
-      } else {
-        // Desaturated pastel (blend with white, then scale)
-        const mixR = (baseR + 255) / 2;
-        const mixG = (baseG + 255) / 2;
-        const mixB = (baseB + 255) / 2;
-
-        r = Math.round(mixR * factor);
-        g = Math.round(mixG * factor);
-        b = Math.round(mixB * factor);
-        shadeName = `${hueName} (Pastel Shade ${factorIndex + 1})`;
-      }
-
-      const hex = '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-      list.push({
-        index,
-        r,
-        g,
-        b,
-        hex,
-        name: shadeName,
-      });
-    }
-  }
-
-  return list.sort((a, b) => a.index - b.index);
+const STANDARD_NAMES: Record<number, string> = {
+  1: 'Red (ACI 1)',
+  2: 'Yellow (ACI 2)',
+  3: 'Green (ACI 3)',
+  4: 'Cyan (ACI 4)',
+  5: 'Blue (ACI 5)',
+  6: 'Magenta (ACI 6)',
+  7: 'White / Black (ACI 7)',
+  8: 'Gray (ACI 8)',
+  9: 'Light Gray (ACI 9)',
+  250: 'Gray Shade 250 (ACI 250)',
+  251: 'Gray Shade 251 (ACI 251)',
+  252: 'Gray Shade 252 (ACI 252)',
+  253: 'Gray Shade 253 (ACI 253)',
+  254: 'Gray Shade 254 (ACI 254)',
+  255: 'Gray Shade 255 / White (ACI 255)',
 };
 
-// Compile full list statically
-const ACI_COLORS_DB = generateAciColors();
+const ACI_COLORS_DB: AciColor[] = ACI_HEX_1_TO_255.map((hexBody, i) => {
+  const index = i + 1;
+  const r = parseInt(hexBody.slice(0, 2), 16);
+  const g = parseInt(hexBody.slice(2, 4), 16);
+  const b = parseInt(hexBody.slice(4, 6), 16);
+  return {
+    index,
+    r,
+    g,
+    b,
+    hex: `#${hexBody}`,
+    name: STANDARD_NAMES[index] ?? `ACI Color ${index}`,
+  };
+});
 
-// Math helpers for CIE76 Delta-E Color Distance calculation
-const rgbToXyz = (r: number, g: number, b: number) => {
-  let rL = r / 255;
-  let gL = g / 255;
-  let bL = b / 255;
+function rgbToXyzD65(r: number, g: number, b: number) {
+  const lin = (v: number) => {
+    const c = v / 255;
+    return c > 0.04045 ? Math.pow((c + 0.055) / 1.055, 2.4) : c / 12.92;
+  };
+  const rL = lin(r) * 100;
+  const gL = lin(g) * 100;
+  const bL = lin(b) * 100;
 
-  rL = rL > 0.04045 ? Math.pow((rL + 0.055) / 1.055, 2.4) : rL / 12.92;
-  gL = gL > 0.04045 ? Math.pow((gL + 0.055) / 1.055, 2.4) : gL / 12.92;
-  bL = bL > 0.04045 ? Math.pow((bL + 0.055) / 1.055, 2.4) : bL / 12.92;
+  return {
+    x: rL * 0.4124 + gL * 0.3576 + bL * 0.1805,
+    y: rL * 0.2126 + gL * 0.7152 + bL * 0.0722,
+    z: rL * 0.0193 + gL * 0.1192 + bL * 0.9505,
+  };
+}
 
-  rL *= 100;
-  gL *= 100;
-  bL *= 100;
+function xyzToLab(x: number, y: number, z: number) {
+  const f = (t: number) => (t > 0.008856 ? Math.pow(t, 1 / 3) : 7.787 * t + 16 / 116);
+  const fx = f(x / 95.047);
+  const fy = f(y / 100.0);
+  const fz = f(z / 108.883);
+  return {
+    L: 116 * fy - 16,
+    a: 500 * (fx - fy),
+    b: 200 * (fy - fz),
+  };
+}
 
-  // Standard D65 observer coefficients
-  const x = rL * 0.4124 + gL * 0.3576 + bL * 0.1805;
-  const y = rL * 0.2126 + gL * 0.7152 + bL * 0.0722;
-  const z = rL * 0.0193 + gL * 0.1192 + bL * 0.9505;
-
-  return { x, y, z };
-};
-
-const xyzToLab = (x: number, y: number, z: number) => {
-  const refX = 95.047;
-  const refY = 100.000;
-  const refZ = 108.883;
-
-  let xL = x / refX;
-  let yL = y / refY;
-  let zL = z / refZ;
-
-  xL = xL > 0.008856 ? Math.pow(xL, 1/3) : (7.787 * xL) + (16 / 116);
-  yL = yL > 0.008856 ? Math.pow(yL, 1/3) : (7.787 * yL) + (16 / 116);
-  zL = zL > 0.008856 ? Math.pow(zL, 1/3) : (7.787 * zL) + (16 / 116);
-
-  const L = (116 * yL) - 16;
-  const a = 500 * (xL - yL);
-  const b = 200 * (yL - zL);
-
-  return { L, a, b };
-};
-
-const calculateDeltaE = (r1: number, g1: number, b1: number, r2: number, g2: number, b2: number) => {
-  const xyz1 = rgbToXyz(r1, g1, b1);
+function cie76DeltaE(r1: number, g1: number, b1: number, r2: number, g2: number, b2: number): number {
+  const xyz1 = rgbToXyzD65(r1, g1, b1);
   const lab1 = xyzToLab(xyz1.x, xyz1.y, xyz1.z);
-
-  const xyz2 = rgbToXyz(r2, g2, b2);
+  const xyz2 = rgbToXyzD65(r2, g2, b2);
   const lab2 = xyzToLab(xyz2.x, xyz2.y, xyz2.z);
-
   return Math.sqrt(
-    Math.pow(lab1.L - lab2.L, 2) +
-    Math.pow(lab1.a - lab2.a, 2) +
-    Math.pow(lab1.b - lab2.b, 2)
+    (lab1.L - lab2.L) ** 2 +
+      (lab1.a - lab2.a) ** 2 +
+      (lab1.b - lab2.b) ** 2
   );
-};
+}
+
+function euclideanRgbDistance(r1: number, g1: number, b1: number, r2: number, g2: number, b2: number): number {
+  return Math.sqrt((r1 - r2) ** 2 + (g1 - g2) ** 2 + (b1 - b2) ** 2);
+}
+
+function parseRgbByte(raw: string): number | null {
+  const s = raw.trim();
+  if (!s) return null;
+  const n = Number(s);
+  if (!Number.isFinite(n) || !Number.isInteger(n) || n < 0 || n > 255) return null;
+  return n;
+}
+
+function parseHexColor(raw: string): { r: number; g: number; b: number; hex: string } | null {
+  const s = raw.trim();
+  const m = /^#?([0-9a-f]{6})$/i.exec(s);
+  if (!m) return null;
+  const hexBody = m[1].toUpperCase();
+  return {
+    r: parseInt(hexBody.slice(0, 2), 16),
+    g: parseInt(hexBody.slice(2, 4), 16),
+    b: parseInt(hexBody.slice(4, 6), 16),
+    hex: `#${hexBody}`,
+  };
+}
+
+const PRESETS = [
+  { id: 'default-blue', name: 'Default Blue', hex: '#3B82F6' },
+  { id: 'autocad-blue', name: 'AutoCAD Blue', hex: '#005691' },
+  { id: 'red-alert', name: 'Standard Red', hex: '#D32F2F' },
+  { id: 'exact-red', name: 'Exact ACI 1', hex: '#FF0000' },
+  { id: 'gray-253', name: 'ACI 253 Gray', hex: '#999999' },
+];
 
 export default function ColorMatchboxClient() {
-  const [hexInput, setHexInput] = useState<string>('#3b82f6');
-  const [rgbR, setRgbR] = useState<number>(59);
-  const [rgbG, setRgbG] = useState<number>(130);
-  const [rgbB, setRgbB] = useState<number>(246);
-  const [copied, setCopied] = useState<boolean>(false);
+  const [metric, setMetric] = useState<DistanceMetric>('cie76');
+  const [hexInput, setHexInput] = useState('#3B82F6');
+  const [rStr, setRStr] = useState('59');
+  const [gStr, setGStr] = useState('130');
+  const [bStr, setBStr] = useState('246');
+  const [copied, setCopied] = useState(false);
 
-  // Apply Brand Presets
-  const handleApplyPreset = (hex: string) => {
+  const applyHex = (hex: string) => {
     setHexInput(hex);
-    // Parse hex to RGB
-    const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-    if (result) {
-      setRgbR(parseInt(result[1], 16));
-      setRgbG(parseInt(result[2], 16));
-      setRgbB(parseInt(result[3], 16));
+    const parsed = parseHexColor(hex);
+    if (parsed) {
+      setRStr(String(parsed.r));
+      setGStr(String(parsed.g));
+      setBStr(String(parsed.b));
     }
   };
 
-  // Convert RGB Slider adjustments back to Hex
-  const handleRgbChange = (r: number, g: number, b: number) => {
-    setRgbR(r);
-    setRgbG(g);
-    setRgbB(b);
-    const hex = '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-    setHexInput(hex);
-  };
-
-  // Convert Hex string manual input back to RGB
-  const handleHexChange = (val: string) => {
-    setHexInput(val);
-    if (/^#[0-9A-F]{6}$/i.test(val)) {
-      const result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(val);
-      if (result) {
-        setRgbR(parseInt(result[1], 16));
-        setRgbG(parseInt(result[2], 16));
-        setRgbB(parseInt(result[3], 16));
-      }
+  const applyRgbChannels = (nextR: string, nextG: string, nextB: string) => {
+    setRStr(nextR);
+    setGStr(nextG);
+    setBStr(nextB);
+    const r = parseRgbByte(nextR);
+    const g = parseRgbByte(nextG);
+    const b = parseRgbByte(nextB);
+    if (r !== null && g !== null && b !== null) {
+      const hex =
+        '#' +
+        [r, g, b]
+          .map((c) => c.toString(16).padStart(2, '0').toUpperCase())
+          .join('');
+      setHexInput(hex);
     }
   };
 
-  // Compute CIE76 Delta-E matching to standard Autodesk 255 color list
-  const matchedColors = useMemo(() => {
-    const list = ACI_COLORS_DB.map((aci) => {
-      const distance = calculateDeltaE(rgbR, rgbG, rgbB, aci.r, aci.g, aci.b);
+  const handleReset = () => applyHex('#3B82F6');
+
+  const calc = useMemo(() => {
+    const r = parseRgbByte(rStr);
+    const g = parseRgbByte(gStr);
+    const b = parseRgbByte(bStr);
+    const hexParsed = parseHexColor(hexInput);
+
+    // Both HEX text box and R/G/B inputs must agree as valid when edited directly
+    if (r === null || g === null || b === null || hexParsed === null) {
+      return {
+        valid: false as const,
+        error: 'Enter valid R, G, B integers (0–255) or a 6-digit HEX code (#RRGGBB).',
+      };
+    }
+
+    const xyz = rgbToXyzD65(r, g, b);
+    const ranked = ACI_COLORS_DB.map((aci) => {
+      const deltaE = cie76DeltaE(r, g, b, aci.r, aci.g, aci.b);
+      const euclid = euclideanRgbDistance(r, g, b, aci.r, aci.g, aci.b);
       return {
         ...aci,
-        distance,
+        deltaE,
+        euclid,
+        primaryDistance: metric === 'cie76' ? deltaE : euclid,
       };
+    }).sort((a, bItem) => {
+      if (a.primaryDistance !== bItem.primaryDistance) {
+        return a.primaryDistance - bItem.primaryDistance;
+      }
+      return a.index - bItem.index;
     });
 
-    // Sort by smallest distance
-    return list.sort((a, b) => a.distance - b.distance);
-  }, [rgbR, rgbG, rgbB]);
-
-  const bestMatch = matchedColors[0];
-
-  // Specific CTB plotting thickness and layers advice
-  const ctbRecommendation = useMemo(() => {
-    if (!bestMatch) return null;
-    const idx = bestMatch.index;
-
-    // Standard indexing defaults
-    if (idx === 1) return { pen: '0.18 mm', layer: 'Hatch borders, text notes, centerline details', screening: '100%' };
-    if (idx === 2) return { pen: '0.35 mm', layer: 'Hidden outlines, minor detail views, dims text', screening: '100%' };
-    if (idx === 3) return { pen: '0.50 mm', layer: 'Primary solid visible outlines, mechanical borders', screening: '100%' };
-    if (idx === 4) return { pen: '0.70 mm', layer: 'Title block borders, framing sheets, heavy cut planes', screening: '100%' };
-    if (idx === 5) return { pen: '0.25 mm', layer: 'Electrical cabling, piping runs, general utilities layout', screening: '100%' };
-    if (idx === 6) return { pen: '0.35 mm', layer: 'Section lines, symmetry axis, center markings', screening: '100%' };
-    if (idx === 7) return { pen: '0.50 mm (Plots Black)', layer: 'Standard drafting text, visible geometry boundaries', screening: '100%' };
-    if (idx === 8 || idx === 9) return { pen: '0.13 mm', layer: 'Thin background equipment overlays, grid ticks', screening: '60% (Screened)' };
-    if (idx >= 250 && idx <= 254) return { pen: '0.09 mm', layer: 'Civil contours, architectural partition texture grids', screening: '40% (Screened)' };
-
-    // General hue index
     return {
-      pen: '0.25 mm',
-      layer: 'General layers. Match in layers styles table to overwrite defaults.',
-      screening: idx % 2 === 1 ? '70% (Pastel)' : '100% (Solid)',
+      valid: true as const,
+      r,
+      g,
+      b,
+      hex: hexParsed.hex,
+      xyz,
+      bestMatch: ranked[0],
+      alternatives: ranked.slice(1, 6),
     };
-  }, [bestMatch]);
+  }, [rStr, gStr, bStr, hexInput, metric]);
 
   const handleCopyIndex = () => {
-    if (!bestMatch) return;
-    navigator.clipboard.writeText(bestMatch.index.toString());
+    if (!calc.valid) return;
+    navigator.clipboard.writeText(String(calc.bestMatch.index));
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const handleExportCsv = () => {
+    if (!calc.valid) return;
+    const m = calc.bestMatch;
+    const rows = [
+      'field,value,notes',
+      `input_hex,${calc.hex},User HEX input`,
+      `input_rgb,"${calc.r},${calc.g},${calc.b}",Integer channels 0..255`,
+      `distance_metric,${metric},cie76 (Delta-E) or euclidean (RGB)`,
+      `matched_aci_index,${m.index},AutoCAD Color Index (1-255)`,
+      `matched_name,${m.name},Standard ACI name or index`,
+      `matched_hex,${m.hex},ezdxf DXF_DEFAULT_COLORS`,
+      `matched_rgb,"${m.r},${m.g},${m.b}",Matched ACI sRGB triplet`,
+      `cie76_delta_e,${m.deltaE.toFixed(2)},Perceptual CIE L*a*b* distance`,
+      `euclidean_rgb_distance,${m.euclid.toFixed(2)},sqrt(dR^2 + dG^2 + dB^2)`,
+    ];
+    const blob = new Blob([rows.join('\n') + '\n'], { type: 'text/csv;charset=ascii' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'rgb-to-aci-match.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <div className="space-y-12">
-      {/* Brand Color Presets */}
-      <div className="bg-white border border-slate-100 p-6 rounded-3xl shadow-sm space-y-4">
-        <h3 className="text-lg font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
-          <Layers className="w-4 h-4 text-blue-600" /> Common Digital Color Presets
-        </h3>
-        <div className="flex flex-wrap gap-2.5">
-          {[
-            { name: 'AutoCAD Blue', hex: '#005691' },
-            { name: 'Standard Red Alert', hex: '#d32f2f' },
-            { name: 'Safety Yellow', hex: '#fbc02d' },
-            { name: 'Forest Green', hex: '#2e7d32' },
-            { name: 'Sky Cyan', hex: '#0288d1' },
-            { name: 'Plum Violet', hex: '#7b1fa2' },
-            { name: 'Slate Gray', hex: '#455a64' },
-          ].map((c) => (
+    <div className="space-y-8">
+      <div className="bg-white border border-slate-200 p-6 rounded-3xl shadow-sm space-y-4">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h3 className="text-base font-black text-slate-800 uppercase tracking-wider flex items-center gap-2">
+            <Layers className="w-4 h-4 text-blue-600" /> Presets &amp; Distance Algorithm
+          </h3>
+          <button
+            type="button"
+            data-testid="reset-button"
+            onClick={handleReset}
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition"
+          >
+            <RotateCcw className="w-4 h-4" />
+            Reset
+          </button>
+        </div>
+
+        <div className="flex flex-wrap gap-2">
+          {PRESETS.map((p) => (
             <button
-              key={c.name}
-              onClick={() => handleApplyPreset(c.hex)}
-              className="px-4 py-2 rounded-xl text-base font-bold bg-slate-50 border border-slate-100 text-slate-700 hover:bg-blue-50 hover:border-blue-200 transition-all"
+              key={p.id}
+              type="button"
+              data-testid={`preset-${p.id}`}
+              onClick={() => applyHex(p.hex)}
+              className="px-3.5 py-2 rounded-xl text-sm font-bold bg-slate-50 border border-slate-200 text-slate-700 hover:bg-blue-50 hover:border-blue-300 transition"
             >
-              {c.name} ({c.hex})
+              {p.name} ({p.hex})
             </button>
           ))}
+        </div>
+
+        <div className="flex items-center gap-2 bg-slate-50 p-1.5 rounded-xl border border-slate-200 max-w-lg">
+          <button
+            type="button"
+            data-testid="metric-cie76"
+            onClick={() => setMetric('cie76')}
+            className={`flex-1 py-2 px-3 rounded-lg text-sm font-bold transition ${
+              metric === 'cie76' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            CIE76 Delta-E (Perceptual)
+          </button>
+          <button
+            type="button"
+            data-testid="metric-euclidean"
+            onClick={() => setMetric('euclidean')}
+            className={`flex-1 py-2 px-3 rounded-lg text-sm font-bold transition ${
+              metric === 'euclidean' ? 'bg-blue-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            Euclidean RGB Distance
+          </button>
         </div>
       </div>
 
       <div className="grid lg:grid-cols-12 gap-8 items-start">
-        {/* Left Side: Color Input controls */}
-        <div className="lg:col-span-5 bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-8">
-          <div className="space-y-2">
-            <h2 className="text-xl font-black text-slate-900">Digital Color Input</h2>
-            <p className="text-base text-slate-400 font-semibold">
-              Select a custom color to translate to its nearest AutoCAD indexing value.
+        <div className="lg:col-span-5 bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
+          <div className="space-y-1">
+            <h2 className="text-xl font-black text-slate-900">RGB / HEX Color Input</h2>
+            <p className="text-sm text-slate-500">
+              Palette: AutoCAD 2020 default dark modelspace ACI 1–255 (<code>ezdxf</code> / <code>netDxf</code>).
             </p>
           </div>
 
-          <div className="space-y-6">
-            {/* Color picker and hex text input */}
-            <div className="flex items-center gap-4">
-              <div className="w-16 h-16 rounded-2xl overflow-hidden border border-slate-100 relative shrink-0">
-                <input
-                  type="color"
-                  value={hexInput}
-                  onChange={(e) => handleHexChange(e.target.value)}
-                  className="absolute inset-0 w-full h-full p-0 border-0 cursor-pointer"
-                />
-              </div>
-              <div className="space-y-1 w-full">
-                <span className="text-sm font-bold text-slate-400 uppercase">HEX Code</span>
-                <input
-                  type="text"
-                  value={hexInput}
-                  maxLength={7}
-                  onChange={(e) => handleHexChange(e.target.value)}
-                  placeholder="#3B82F6"
-                  className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-100 font-bold focus:outline-none focus:ring-2 focus:ring-blue-600/10 focus:bg-white text-lg font-mono text-slate-700"
-                />
-              </div>
-            </div>
-
-            {/* Red slider */}
-            <div className="space-y-2 pt-4 border-t border-slate-50">
-              <div className="flex items-center justify-between text-base font-bold text-slate-700">
-                <span className="text-slate-400 uppercase">Red (R)</span>
-                <span className="font-mono">{rgbR}</span>
-              </div>
+          <div className="flex items-center gap-4">
+            <div className="w-16 h-16 rounded-2xl overflow-hidden border border-slate-200 relative shrink-0">
               <input
-                type="range"
-                min="0"
-                max="255"
-                value={rgbR}
-                onChange={(e) => handleRgbChange(parseInt(e.target.value), rgbG, rgbB)}
-                className="w-full h-1.5 bg-red-100 rounded-lg appearance-none cursor-pointer accent-red-600"
+                aria-label="Color Picker"
+                type="color"
+                value={calc.valid ? calc.hex : '#3B82F6'}
+                onChange={(e) => applyHex(e.target.value)}
+                className="absolute inset-0 w-full h-full p-0 border-0 cursor-pointer"
               />
             </div>
-
-            {/* Green slider */}
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-base font-bold text-slate-700">
-                <span className="text-slate-400 uppercase">Green (G)</span>
-                <span className="font-mono">{rgbG}</span>
-              </div>
+            <div className="space-y-1 w-full">
+              <label htmlFor="color-hex-input" className="block text-xs font-bold text-slate-500 uppercase">
+                HEX Code (#RRGGBB)
+              </label>
               <input
-                type="range"
-                min="0"
-                max="255"
-                value={rgbG}
-                onChange={(e) => handleRgbChange(rgbR, parseInt(e.target.value), rgbB)}
-                className="w-full h-1.5 bg-green-100 rounded-lg appearance-none cursor-pointer accent-green-600"
+                id="color-hex-input"
+                data-testid="input-hex"
+                type="text"
+                value={hexInput}
+                onChange={(e) => applyHex(e.target.value)}
+                className="w-full px-4 py-2.5 rounded-xl border border-slate-300 font-mono text-base font-bold uppercase text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
+          </div>
 
-            {/* Blue slider */}
-            <div className="space-y-2">
-              <div className="flex items-center justify-between text-base font-bold text-slate-700">
-                <span className="text-slate-400 uppercase">Blue (B)</span>
-                <span className="font-mono">{rgbB}</span>
-              </div>
+          <div className="grid grid-cols-3 gap-3">
+            <div>
+              <label htmlFor="color-r-input" className="block text-xs font-bold text-slate-500 uppercase mb-1">
+                Red (0–255)
+              </label>
               <input
-                type="range"
-                min="0"
-                max="255"
-                value={rgbB}
-                onChange={(e) => handleRgbChange(rgbR, rgbG, parseInt(e.target.value))}
-                className="w-full h-1.5 bg-blue-100 rounded-lg appearance-none cursor-pointer accent-blue-600"
+                id="color-r-input"
+                data-testid="input-r"
+                type="text"
+                inputMode="numeric"
+                value={rStr}
+                onChange={(e) => applyRgbChannels(e.target.value, gStr, bStr)}
+                className="w-full px-3 py-2 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
+            <div>
+              <label htmlFor="color-g-input" className="block text-xs font-bold text-slate-500 uppercase mb-1">
+                Green (0–255)
+              </label>
+              <input
+                id="color-g-input"
+                data-testid="input-g"
+                type="text"
+                inputMode="numeric"
+                value={gStr}
+                onChange={(e) => applyRgbChannels(rStr, e.target.value, bStr)}
+                className="w-full px-3 py-2 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label htmlFor="color-b-input" className="block text-xs font-bold text-slate-500 uppercase mb-1">
+                Blue (0–255)
+              </label>
+              <input
+                id="color-b-input"
+                data-testid="input-b"
+                type="text"
+                inputMode="numeric"
+                value={bStr}
+                onChange={(e) => applyRgbChannels(rStr, gStr, e.target.value)}
+                className="w-full px-3 py-2 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          {!calc.valid && (
+            <div data-testid="validation-error" className="text-sm font-semibold text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-2.5">
+              {calc.error}
+            </div>
+          )}
+
+          <div className="pt-2 flex flex-wrap gap-3">
+            <button
+              type="button"
+              data-testid="export-csv"
+              disabled={!calc.valid}
+              onClick={handleExportCsv}
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-blue-600 text-white text-sm font-bold hover:bg-blue-700 disabled:opacity-40 transition"
+            >
+              <Download className="w-4 h-4" />
+              Export CSV Match
+            </button>
           </div>
         </div>
 
-        {/* Right Side: Split-screen Compare & matched index details */}
-        {bestMatch && ctbRecommendation && (
-          <div className="lg:col-span-7 space-y-6">
-            {/* Split Screen Matchbox */}
-            <div className="bg-white border border-slate-100 rounded-[32px] overflow-hidden shadow-sm flex flex-col">
-              <div className="h-44 flex text-center font-bold text-base uppercase tracking-widest text-white">
-                {/* Left side: user custom input */}
-                <div
-                  style={{ backgroundColor: hexInput }}
-                  className="w-1/2 flex flex-col items-center justify-center p-4 drop-shadow-sm transition-all duration-300"
-                >
-                  <span className="bg-slate-900/40 px-3 py-1 rounded-full backdrop-blur-sm">
-                    Custom Input
-                  </span>
-                  <span className="text-lg font-black font-mono mt-2 bg-slate-900/40 px-3 py-1 rounded-full backdrop-blur-sm">
-                    {hexInput.toUpperCase()}
-                  </span>
+        <div className="lg:col-span-7 space-y-6">
+          <div className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-4">
+              <div>
+                <div className="text-xs font-bold uppercase tracking-wider text-slate-400">
+                  Closest AutoCAD Color Index ({metric === 'cie76' ? 'CIE76 Delta-E' : 'Euclidean RGB'})
                 </div>
-
-                {/* Right side: standard AutoCAD matching */}
-                <div
-                  style={{ backgroundColor: bestMatch.hex }}
-                  className="w-1/2 flex flex-col items-center justify-center p-4 drop-shadow-sm transition-all duration-300"
-                >
-                  <span className="bg-slate-900/40 px-3 py-1 rounded-full backdrop-blur-sm">
-                    Autodesk ACI Match
+                <div className="flex items-baseline gap-3 mt-1">
+                  <span data-testid="result-aci-index" className="text-4xl font-black font-mono text-slate-900">
+                    {calc.valid ? `ACI ${calc.bestMatch.index}` : '—'}
                   </span>
-                  <span className="text-lg font-black font-mono mt-2 bg-slate-900/40 px-3 py-1 rounded-full backdrop-blur-sm">
-                    ACI {bestMatch.index} ({bestMatch.hex.toUpperCase()})
+                  <span data-testid="result-aci-name" className="text-base font-bold text-slate-600">
+                    {calc.valid ? calc.bestMatch.name : '—'}
                   </span>
                 </div>
               </div>
 
-              {/* Match description */}
-              <div className="p-6 md:p-8 space-y-6 border-t border-slate-100">
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-100">
-                  <div>
-                    <div className="text-base font-bold text-blue-600 uppercase tracking-widest mb-1">
-                      Matched Color: {bestMatch.name}
-                    </div>
-                    <h3 className="text-2xl font-black text-slate-900 flex items-center gap-2">
-                      AutoCAD Index ACI {bestMatch.index}
-                    </h3>
-                  </div>
-                  <button
-                    onClick={handleCopyIndex}
-                    className="flex items-center justify-center gap-1.5 h-10 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-base uppercase tracking-widest shrink-0"
-                  >
-                    {copied ? (
-                      <>
-                        <Check className="w-3.5 h-3.5" /> Copied Index
-                      </>
-                    ) : (
-                      <>
-                        <Copy className="w-3.5 h-3.5" /> Copy Index
-                      </>
-                    )}
-                  </button>
-                </div>
+              <button
+                type="button"
+                disabled={!calc.valid}
+                onClick={handleCopyIndex}
+                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-sm font-bold hover:bg-slate-800 disabled:opacity-40 transition"
+              >
+                {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                {copied ? 'Copied' : 'Copy Index'}
+              </button>
+            </div>
 
-                {/* Recommended CTB plot details */}
-                <div className="grid md:grid-cols-3 gap-6 text-slate-700">
-                  <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
-                    <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Default Pen Width</div>
-                    <div className="text-lg font-black text-slate-800">{ctbRecommendation.pen}</div>
-                  </div>
-                  <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
-                    <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">Color Screening</div>
-                    <div className="text-lg font-black text-slate-800">{ctbRecommendation.screening}</div>
-                  </div>
-                  <div className="bg-slate-50 border border-slate-100 p-4 rounded-2xl text-center space-y-1">
-                    <div className="text-sm font-bold text-slate-400 uppercase tracking-wider">CIE76 Delta-E Distance</div>
-                    <div className="text-lg font-black text-slate-800">{bestMatch.distance.toFixed(1)}</div>
-                  </div>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="rounded-2xl border border-slate-200 p-4 space-y-2">
+                <div className="text-xs font-bold uppercase text-slate-400">Input Color</div>
+                <div
+                  className="h-14 rounded-xl border border-slate-200"
+                  style={{ backgroundColor: calc.valid ? calc.hex : '#e2e8f0' }}
+                />
+                <div data-testid="result-input-hex" className="font-mono text-sm font-bold text-slate-800">
+                  {calc.valid ? `${calc.hex} (${calc.r}, ${calc.g}, ${calc.b})` : '—'}
                 </div>
+              </div>
 
-                {/* Layer mapping recommendation */}
-                <div className="bg-blue-50/50 rounded-2xl p-5 border border-blue-50/50 space-y-2">
-                  <h4 className="text-base font-black text-blue-800 uppercase tracking-wider flex items-center gap-1.5">
-                    <Info className="w-4 h-4" /> Recommended Layer & Usage
-                  </h4>
-                  <p className="text-base text-blue-600 leading-relaxed font-semibold">
-                    {ctbRecommendation.layer}. 
-                    {bestMatch.distance > 8 && ' Note: The closest matching ACI index has a Delta-E distance of ' + bestMatch.distance.toFixed(1) + '. It is recommended to use layers configurations instead of direct color overriding if absolute brand precision is needed.'}
-                  </p>
+              <div className="rounded-2xl border border-slate-200 p-4 space-y-2">
+                <div className="text-xs font-bold uppercase text-slate-400">Matched ACI Swatch</div>
+                <div
+                  className="h-14 rounded-xl border border-slate-200"
+                  style={{ backgroundColor: calc.valid ? calc.bestMatch.hex : '#e2e8f0' }}
+                />
+                <div data-testid="result-matched-hex" className="font-mono text-sm font-bold text-slate-800">
+                  {calc.valid
+                    ? `${calc.bestMatch.hex} (${calc.bestMatch.r}, ${calc.bestMatch.g}, ${calc.bestMatch.b})`
+                    : '—'}
                 </div>
               </div>
             </div>
 
-            {/* alternative nearest matching candidates */}
-            <div className="bg-white border border-slate-100 rounded-3xl p-6 shadow-sm space-y-4">
-              <h4 className="text-base font-black text-slate-400 uppercase tracking-wider">Top 5 Alternative Matches</h4>
-              <div className="grid grid-cols-5 gap-3">
-                {matchedColors.slice(1, 6).map((aci) => (
-                  <button
-                    key={aci.index}
-                    onClick={() => handleRgbChange(aci.r, aci.g, aci.b)}
-                    className="group border border-slate-100 hover:border-blue-300 rounded-2xl overflow-hidden p-2 text-center transition-all bg-slate-50 hover:bg-white"
-                  >
-                    <div
-                      style={{ backgroundColor: aci.hex }}
-                      className="h-10 rounded-lg mb-2 group-hover:scale-95 transition-transform"
-                    ></div>
-                    <div className="text-sm font-extrabold text-slate-800">Index {aci.index}</div>
-                    <div className="text-[8px] text-slate-400 font-semibold mt-0.5">ΔE: {aci.distance.toFixed(1)}</div>
-                  </button>
-                ))}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+                <div className="text-xs font-bold uppercase text-slate-400">CIE76 Delta-E (ΔE76)</div>
+                <div data-testid="result-delta-e" className="text-2xl font-black font-mono text-slate-900 mt-1">
+                  {calc.valid ? calc.bestMatch.deltaE.toFixed(2) : '—'}
+                </div>
+                <div className="text-xs text-slate-500 mt-1">D65 sRGB → CIE L*a*b* perceptual distance</div>
+              </div>
+
+              <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4">
+                <div className="text-xs font-bold uppercase text-slate-400">Euclidean RGB Distance</div>
+                <div data-testid="result-euclidean" className="text-2xl font-black font-mono text-slate-900 mt-1">
+                  {calc.valid ? calc.bestMatch.euclid.toFixed(2) : '—'}
+                </div>
+                <div className="text-xs text-slate-500 mt-1">sqrt((dR)^2 + (dG)^2 + (dB)^2) in 0–255 space</div>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 border border-slate-200 rounded-2xl p-4 space-y-2">
+              <div className="text-xs font-bold uppercase tracking-wider text-slate-500">Top 5 Alternative Matches</div>
+              <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5">
+                {calc.valid
+                  ? calc.alternatives.map((aci) => (
+                      <button
+                        key={aci.index}
+                        type="button"
+                        onClick={() => applyHex(aci.hex)}
+                        className="border border-slate-200 hover:border-blue-400 rounded-xl p-2 text-center bg-white transition"
+                      >
+                        <div className="h-8 rounded-lg mb-1.5 border border-slate-100" style={{ backgroundColor: aci.hex }} />
+                        <div className="text-xs font-black text-slate-800">ACI {aci.index}</div>
+                        <div className="text-[11px] text-slate-500 font-mono">
+                          {metric === 'cie76' ? `ΔE ${aci.deltaE.toFixed(1)}` : `d ${aci.euclid.toFixed(1)}`}
+                        </div>
+                      </button>
+                    ))
+                  : Array.from({ length: 5 }).map((_, idx) => (
+                      <div key={idx} className="border border-slate-200 rounded-xl p-3 text-center text-slate-400 font-mono text-xs bg-white">
+                        —
+                      </div>
+                    ))}
               </div>
             </div>
           </div>
-        )}
+        </div>
       </div>
 
-      {/* CIE76 Delta-E reference guidelines */}
-      <div className="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
-        <h3 className="text-xl font-black text-slate-900 flex items-center gap-2">
-          <HelpCircle className="w-5 h-5 text-blue-600" /> CIE76 Delta-E Color Distance Reference
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-5">
+        <h3 className="text-lg font-black text-slate-900 flex items-center gap-2">
+          <HelpCircle className="w-5 h-5 text-blue-600" /> Distance Formulas, Palette Behavior &amp; CAD Command
         </h3>
 
-        <div className="grid md:grid-cols-2 gap-8 text-lg">
-          <div className="space-y-4">
-            <h4 className="font-bold text-slate-800 uppercase tracking-wide">1. Why Delta-E mapping is necessary</h4>
-            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
-              <p>
-                <strong>Euclidean RGB vs Human Eye</strong>: A simple distance formula in RGB space ({"$d = \\sqrt{\\Delta R^2 + \\Delta G^2 + \\Delta B^2}$"}) treats color channels linearly. However, the human eye is far more sensitive to green wavelengths than blue, and perceives brightness non-linearly.
-              </p>
-              <p>
-                <strong>CIE76 standard</strong>: We convert the RGB coordinates into the CIE {"$L^*a^*b^*$"} color space. This model separates lightness ({"$L$"}) from the color channels ({"$a$"}: red-green axis, {"$b$"}: yellow-blue axis) to align mathematically with human visual perception limits.
-              </p>
-              <p>
-                <strong>Delta-E ({"$\\Delta E$"}) Threshold values</strong>:
-                <br />• <strong>{"$\\Delta E \\le 1.0$"}</strong>: Inappreciable (not perceptible by the human eye).
-                <br />• <strong>{"$1.0 < \\Delta E \\le 2.0$"}</strong>: Perceptible only by close observation.
-                <br />• <strong>{"$2.0 < \\Delta E \\le 10.0$"}</strong>: Perceptible at a glance.
-                <br />• <strong>{"$\\Delta E > 10.0$"}</strong>: Colors look distinctly different.
-              </p>
-            </div>
+        <div className="grid md:grid-cols-2 gap-6 text-sm text-slate-600 leading-relaxed">
+          <div className="space-y-2.5 bg-slate-50 p-5 rounded-2xl border border-slate-100">
+            <div className="font-bold text-slate-900">1. Matching Algorithms &amp; AutoCAD ACI Behavior</div>
+            <p>
+              <strong>Euclidean RGB:</strong> d = sqrt((R1 - R2)^2 + (G1 - G2)^2 + (B1 - B2)^2). Exact matches yield d = 0.00.
+            </p>
+            <p>
+              <strong>CIE76 Delta-E:</strong> Converts sRGB channels (0–255) via sRGB linearization to CIE XYZ (D65/2 deg) and CIE L*a*b*, then computes ΔE76 = sqrt((L1 - L2)^2 + (a1 - a2)^2 + (b1 - b2)^2).
+            </p>
+            <p>
+              <strong>ACI 7 &amp; 250–255 Viewport Note:</strong> Per Autodesk <em>COLOR (Command)</em> Help (<code>GUID-C163F875</code>) and <code>ezdxf</code> documentation, ACI 7 (White/Black) and grayscale indices 250–255 shift dynamically depending on your AutoCAD dark modelspace vs. white paper-layout background color. Always verify CTB/STB plot lineweights in your office plot style table.
+            </p>
           </div>
 
-          <div className="space-y-4">
-            <h4 className="font-bold text-slate-800 uppercase tracking-wide">2. Color translation log</h4>
-            <div className="bg-slate-50 border border-slate-100 p-5 rounded-2xl space-y-3.5 text-base font-semibold text-slate-600 leading-relaxed font-mono">
-              <div>
-                <span className="text-slate-400">{'// XYZ D65 reference conversion'}</span>
-                <div>X = {rgbR * 0.4124 + rgbG * 0.3576 + rgbB * 0.1805}</div>
-                <div>Y = {rgbR * 0.2126 + rgbG * 0.7152 + rgbB * 0.0722}</div>
-              </div>
-              <div className="pt-2 border-t border-slate-200/50">
-                <span className="text-slate-400">{'// Matched CTB stylesheet tip'}</span>
-                <div>To avoid overriding global drawing styles:</div>
-                <div className="text-slate-800 font-mono font-bold text-[11px]">Specify layer color index: {bestMatch?.index}</div>
-                <div className="text-slate-400 font-mono text-[9px] pt-1">{'// Set Layer Color in Command line: -LAYER C {bestMatch?.index} [layerName]'}</div>
-              </div>
+          <div className="space-y-2.5 bg-slate-50 p-5 rounded-2xl border border-slate-100 font-mono text-xs text-slate-700">
+            <div className="font-sans font-bold text-sm text-slate-900">2. Color Conversion Log &amp; Layer Command</div>
+            <div data-testid="xyz-log">
+              {calc.valid
+                ? `D65 XYZ (from linearized sRGB): X=${calc.xyz.x.toFixed(2)}, Y=${calc.xyz.y.toFixed(2)}, Z=${calc.xyz.z.toFixed(2)}`
+                : 'D65 XYZ: —'}
+            </div>
+            <div className="pt-2 border-t border-slate-200 text-slate-900 font-bold">
+              {calc.valid
+                ? `-LAYER C ${calc.bestMatch.index} <layer_name>`
+                : '-LAYER C — <layer_name>'}
+            </div>
+            <div className="font-sans text-slate-500">
+              Palette table: ACI 1–9 standard named/gray indices, 10–249 color wheel, 250–255 dark-to-light gray shades (#000000, #656565, #666666, #999999, #CCCCCC, #FFFFFF in ezdxf AutoCAD 2020 dark modelspace table).
             </div>
           </div>
         </div>
       </div>
 
-      {/* Lead Capture Newsletter banner */}
       <RelatedTools />
     </div>
   );

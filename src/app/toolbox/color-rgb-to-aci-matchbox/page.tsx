@@ -6,7 +6,7 @@ import ColorMatchboxClient from './calculator-client';
 export const metadata: Metadata = pageMetadata({
   title: 'Hex / RGB to ACI (AutoCAD Index Color) Converter & Matchbox',
   description:
-    'Convert standard RGB or Hex color codes to their closest matching AutoCAD Index Color (ACI 1-255) using CIE76 Delta-E color distance mapping. Includes CTB plot styles suggestions.',
+    'Convert RGB or Hex colors to the closest AutoCAD Color Index (ACI 1-255) using CIE76 Delta-E and Euclidean RGB distance mapping.',
   path: '/toolbox/color-rgb-to-aci-matchbox',
 });
 
@@ -39,7 +39,7 @@ export default function ColorMatchboxPage() {
               RGB to <span className="text-blue-400">ACI Color</span> Matchbox
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Match standard digital colors to standard AutoCAD Index Colors (1-255) with CIE76 Delta-E precision. Optimize layer plotting line weights for CTB stylesheets.
+              Match RGB and HEX colors to AutoCAD Color Index values (ACI 1-255) using CIE76 Delta-E and Euclidean RGB distance.
             </p>
           </div>
         </section>

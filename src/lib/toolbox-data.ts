@@ -479,7 +479,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     slug: 'color-rgb-to-aci-matchbox',
     title: 'RGB Hex to ACI (AutoCAD Index Color) Conversion Helper',
     description: 'Convert standard RGB or Hex color codes to their closest matching AutoCAD Index Color (1-255).',
-    detailDesc: 'Enter RGB or Hex values. The algorithm calculates color distance (Delta E) to match your color to the nearest standard ACI code used in CTB line weight indexing.',
+    detailDesc: 'Enter RGB or Hex values to find the closest AutoCAD Index Color (ACI 1-255) using CIE76 Delta E or Euclidean RGB distance against the standard AutoCAD dark model-space palette.',
     category: 'converter',
     status: 'released',
     origin: 'native',
@@ -1384,13 +1384,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cnc-speeds-feeds-reference',
     title: 'CNC Speeds & Feeds Quick Reference Table',
-    description: 'CNC cutting speeds (Vc) and feed rates per material: steel, aluminum, stainless, titanium, brass, and plastics with HSS and carbide tool data.',
-    detailDesc: 'Searchable CNC speeds and feeds reference: HSS and carbide cutting speeds for 12+ materials (aluminum, steel, stainless, titanium, cast iron, Inconel, brass, plastics), chip load per tooth data, drilling speeds, RPM/feed formulas, and material-specific machining tips.',
+    description: 'Published CNC cutting speeds (Vc) and feed rates (fz / f) from Tungaloy carbide milling and indexable drilling catalogs.',
+    detailDesc: 'Searchable CNC speeds and feeds reference compiled from published Tungaloy indexable carbide catalogs (TungForce-Rec, DoFeedQuad, DrillForce-Meister): steel, stainless, cast iron, aluminum, Ti-6Al-4V, Inconel 718, and hardened steel cutting ranges.',
     category: 'cheatsheet',
     status: 'released',
     releasedDate: '2026-07-15',
     origin: 'native',
-    keywords: ['cnc speeds and feeds', 'cutting speed', 'feed rate', 'spindle speed rpm', 'chip load', 'carbide tool speed', 'hss tool speed', 'aluminum machining', 'stainless machining', 'titanium machining', 'cnc formula']
+    keywords: ['cnc speeds and feeds', 'cutting speed', 'feed rate', 'spindle speed rpm', 'chip load', 'carbide tool speed', 'indexable milling', 'aluminum machining', 'stainless machining', 'titanium machining', 'cnc formula']
   },
   {
     slug: 'iso-2768-general-tolerances-reference',
@@ -2891,8 +2891,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'column-base-plate-calculator',
     title: 'Column Base Plate Calculator',
-    description: 'Calculate base plate thickness and dimensions for steel columns on concrete.',
-    detailDesc: 't = sqrt(6*M/fy), m = max(plate cantilever)',
+    description: 'Calculate steel column base plate concrete bearing capacity and LRFD plate thickness per AISC 360-22 J8-2 and AISC Design Guide 1.',
+    detailDesc: 'phi_c*Pp = 0.65*0.85*fc*A1*sqrt(A2/A1), tp = l*sqrt(2*Pu/(0.9*Fy*B*N))',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -3166,8 +3166,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cnc-gcode-feed-calculator',
     title: 'CNC G-code Feed Rate Calculator',
-    description: 'Calculate feed rate, spindle speed, and chip load for CNC milling from cutting parameters.',
-    detailDesc: 'f = z * fz * n, n = vc*1000/(pi*D)',
+    description: 'Calculate spindle RPM, feed per revolution (G95), feed per minute (G94), and LinuxCNC G-code F/S blocks.',
+    detailDesc: 'n = Vc*1000/(pi*D), Vf = f_rev*n = z*fz*n, Q = ap*ae*Vf/1000',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',

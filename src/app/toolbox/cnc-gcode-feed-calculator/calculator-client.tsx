@@ -1,108 +1,572 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
+import { Download, Info, RotateCcw, AlertTriangle } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info } from 'lucide-react';
+
+type InputMode = 'vc-fz' | 'rpm-feed';
+type FeedMode = 'G94' | 'G95';
+
+interface PresetSpec {
+  id: string;
+  label: string;
+  mode: InputMode;
+  feedMode: FeedMode;
+  diameter: string;
+  flutes: string;
+  vc: string;
+  fz: string;
+  rpm: string;
+  feedRate: string;
+  ap: string;
+  ae: string;
+}
+
+const PRESETS: PresetSpec[] = [
+  {
+    id: 'default-alloy-steel',
+    label: 'Default (Ø10 · 4Z · Vc 200)',
+    mode: 'vc-fz',
+    feedMode: 'G94',
+    diameter: '10',
+    flutes: '4',
+    vc: '200',
+    fz: '0.05',
+    rpm: '6366.2',
+    feedRate: '1273.2',
+    ap: '2',
+    ae: '5',
+  },
+  {
+    id: 'aluminum-pocket',
+    label: 'Aluminum Ø12 · 3Z · Vc 350',
+    mode: 'vc-fz',
+    feedMode: 'G94',
+    diameter: '12',
+    flutes: '3',
+    vc: '350',
+    fz: '0.08',
+    rpm: '9284.0',
+    feedRate: '2228.2',
+    ap: '3',
+    ae: '6',
+  },
+  {
+    id: 'stainless-g95',
+    label: 'Stainless Ø16 · 4Z · G95 Mode',
+    mode: 'vc-fz',
+    feedMode: 'G95',
+    diameter: '16',
+    flutes: '4',
+    vc: '150',
+    fz: '0.06',
+    rpm: '2984.2',
+    feedRate: '716.2',
+    ap: '2.5',
+    ae: '4',
+  },
+];
+
+function parsePositive(raw: string, max: number): number | null {
+  const s = raw.trim();
+  if (!s) return null;
+  const n = Number(s);
+  if (!Number.isFinite(n) || n <= 0 || n > max) return null;
+  return n;
+}
+
+function parseIntRange(raw: string, min: number, max: number): number | null {
+  const s = raw.trim();
+  if (!s) return null;
+  const n = Number(s);
+  if (!Number.isFinite(n) || !Number.isInteger(n) || n < min || n > max) return null;
+  return n;
+}
 
 export default function CncGcodeFeedCalculatorClient() {
-  const [inputs, setInputs] = useState(["10","4","200","0.05","2"]);
+  const [inputMode, setInputMode] = useState<InputMode>('vc-fz');
+  const [feedMode, setFeedMode] = useState<FeedMode>('G94');
+  const [diameterStr, setDiameterStr] = useState('10');
+  const [flutesStr, setFlutesStr] = useState('4');
+  const [vcStr, setVcStr] = useState('200');
+  const [fzStr, setFzStr] = useState('0.05');
+  const [rpmStr, setRpmStr] = useState('6366.2');
+  const [feedRateStr, setFeedRateStr] = useState('1273.2');
+  const [apStr, setApStr] = useState('2');
+  const [aeStr, setAeStr] = useState('5');
 
-  const updateInput = (idx: number, val: string) => {
-    const next = [...inputs];
-    next[idx] = val;
-    setInputs(next);
+  const applyPreset = (p: PresetSpec) => {
+    setInputMode(p.mode);
+    setFeedMode(p.feedMode);
+    setDiameterStr(p.diameter);
+    setFlutesStr(p.flutes);
+    setVcStr(p.vc);
+    setFzStr(p.fz);
+    setRpmStr(p.rpm);
+    setFeedRateStr(p.feedRate);
+    setApStr(p.ap);
+    setAeStr(p.ae);
   };
 
-  const result = useMemo(() => {
-    const D=parseFloat(inputs[0]),z=parseFloat(inputs[1]),vc=parseFloat(inputs[2]),fz=parseFloat(inputs[3]),doc=parseFloat(inputs[4]);const n=vc*1000/(Math.PI*D);const f=z*fz*n;const mrr=D*doc*f/1000;return{n,f,mrr};
-  }, [inputs]);
+  const resetAll = () => applyPreset(PRESETS[0]);
 
-  const formatNum = (n: number) => {
-    if (isNaN(n) || !isFinite(n)) return '—';
-    if (Math.abs(n) >= 10000) return n.toFixed(0);
-    if (Math.abs(n) >= 100) return n.toFixed(2);
-    if (Math.abs(n) >= 1) return n.toFixed(3);
-    return n.toFixed(6);
+  const calc = useMemo(() => {
+    const D = parsePositive(diameterStr, 1000);
+    const z = parseIntRange(flutesStr, 1, 64);
+    const ap = parsePositive(apStr, 500);
+    const ae = D !== null ? parsePositive(aeStr, D) : parsePositive(aeStr, 1000);
+
+    if (D === null || z === null || ap === null || ae === null) {
+      return { valid: false as const, error: 'Check D (0–1000 mm), flutes z (1–64 int), ap (0–500 mm), and 0 < ae ≤ D.' };
+    }
+
+    let rpm: number;
+    let vc: number;
+    let fz: number;
+    let vf: number;
+
+    if (inputMode === 'vc-fz') {
+      const parsedVc = parsePositive(vcStr, 5000);
+      const parsedFz = parsePositive(fzStr, 5);
+      if (parsedVc === null || parsedFz === null) {
+        return { valid: false as const, error: 'Check Vc (0–5000 m/min) and fz (0–5 mm/tooth).' };
+      }
+      vc = parsedVc;
+      fz = parsedFz;
+      rpm = (1000 * vc) / (Math.PI * D);
+      vf = fz * z * rpm;
+    } else {
+      const parsedRpm = parsePositive(rpmStr, 100000);
+      const parsedVf = parsePositive(feedRateStr, 50000);
+      if (parsedRpm === null || parsedVf === null) {
+        return { valid: false as const, error: 'Check spindle RPM (0–100,000) and table feed F (0–50,000 mm/min).' };
+      }
+      rpm = parsedRpm;
+      vf = parsedVf;
+      vc = (Math.PI * D * rpm) / 1000;
+      fz = vf / (rpm * z);
+    }
+
+    const fRev = fz * z;
+    const mrr = (ap * ae * vf) / 1000;
+    const sWord = Math.round(rpm);
+    const fWordValue = feedMode === 'G94' ? vf.toFixed(1) : fRev.toFixed(3);
+
+    const gcodeSnippet = [
+      `; Generated by CADGuide CNC G-code Feed Calculator (Metric G21 / ${feedMode})`,
+      `; Verify speeds/feeds against cutting tool manufacturer catalog before running`,
+      `G21 ; Length units in millimeters (LinuxCNC G21)`,
+      `G90 G17 ; Absolute distance mode, XY plane`,
+      `${feedMode} ; ${feedMode === 'G94' ? 'Units per Minute Mode (mm/min)' : 'Units per Revolution Mode (mm/rev)'}`,
+      `M3 S${sWord} ; Spindle clockwise at ${rpm.toFixed(1)} RPM`,
+      `G0 X0.000 Y0.000 Z5.000`,
+      `G1 Z-${ap.toFixed(2)} F${fWordValue} ; Controlled feed rate (${feedMode})`,
+      `G1 X50.000 F${fWordValue}`,
+      `G0 Z25.000`,
+      `M5 ; Spindle stop`,
+      `M30 ; Program end`,
+    ].join('\n');
+
+    return {
+      valid: true as const,
+      D,
+      z,
+      ap,
+      ae,
+      vc,
+      fz,
+      rpm,
+      fRev,
+      vf,
+      mrr,
+      sWord,
+      fWordValue,
+      gcodeSnippet,
+    };
+  }, [inputMode, feedMode, diameterStr, flutesStr, vcStr, fzStr, rpmStr, feedRateStr, apStr, aeStr]);
+
+  const downloadGcode = () => {
+    if (!calc.valid) return;
+    const blob = new Blob([calc.gcodeSnippet + '\n'], { type: 'text/plain;charset=ascii' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `cnc-feed-${feedMode.toLowerCase()}.nc`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const downloadCsv = () => {
+    if (!calc.valid) return;
+    const lines = [
+      'parameter,value,unit,notes',
+      `input_mode,${inputMode},-,vc-fz or rpm-feed`,
+      `gcode_feed_mode,${feedMode},-,LinuxCNC G94 (mm/min) or G95 (mm/rev)`,
+      `cutter_diameter_D,${calc.D},mm,Valid range (0..1000]`,
+      `flutes_z,${calc.z},teeth,Integer 1..64`,
+      `cutting_speed_Vc,${calc.vc.toFixed(1)},m/min,Vc = (pi * D * n) / 1000`,
+      `chip_load_fz,${calc.fz.toFixed(3)},mm/tooth,fz = Vf / (n * z)`,
+      `axial_depth_ap,${calc.ap},mm,DOC`,
+      `radial_width_ae,${calc.ae},mm,WOC <= D`,
+      `spindle_speed_n,${calc.rpm.toFixed(1)},RPM,n = (1000 * Vc) / (pi * D)`,
+      `feed_per_rev_G95,${calc.fRev.toFixed(3)},mm/rev,f_rev = fz * z`,
+      `feed_rate_G94,${calc.vf.toFixed(1)},mm/min,Vf = f_rev * n = fz * z * n`,
+      `mrr_Q,${calc.mrr.toFixed(2)},cm3/min,Q = (ap * ae * Vf) / 1000`,
+      `gcode_S_word,S${calc.sWord},RPM,Rounded integer RPM for S word`,
+      `gcode_F_word,F${calc.fWordValue},${feedMode === 'G94' ? 'mm/min' : 'mm/rev'},Active ${feedMode} F word`,
+    ];
+    const blob = new Blob([lines.join('\n') + '\n'], { type: 'text/csv;charset=ascii' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'cnc-gcode-feed-calculation.csv';
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   return (
     <div className="space-y-8">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
-              <Settings className="w-5 h-5" />
-            </div>
-            <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs</h2>
-          </div>
+      <div
+        data-testid="manufacturer-advisory"
+        className="bg-amber-50 border border-amber-200 rounded-2xl p-4 flex items-start gap-3 text-amber-900"
+      >
+        <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+        <div className="text-sm leading-relaxed">
+          <span className="font-bold">Shop-floor advisory:</span> Computed <code>S</code> and <code>F</code> words assume rigid tooling and do not account for machine spindle power limits or chip thinning. Verify <code>Vc</code> and <code>fz</code> against your cutting tool manufacturer&apos;s catalog before running.
+        </div>
+      </div>
 
-          <div key="0">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Cutter Dia (mm)</label>
-            <input type="text" value={inputs[0]} onChange={e => updateInput(0, e.target.value)} placeholder="10"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="flex flex-wrap gap-2">
+            {PRESETS.map((p) => (
+              <button
+                key={p.id}
+                type="button"
+                data-testid={`preset-${p.id}`}
+                onClick={() => applyPreset(p)}
+                className="px-3.5 py-2 rounded-xl text-sm font-bold bg-slate-50 border border-slate-200 text-slate-700 hover:bg-purple-50 hover:border-purple-300 transition"
+              >
+                {p.label}
+              </button>
+            ))}
           </div>
-          <div key="1">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Teeth</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="4"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
-          </div>
-          <div key="2">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Cutting Speed (m/min)</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="200"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
-          </div>
-          <div key="3">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Chip Load (mm/tooth)</label>
-            <input type="text" value={inputs[3]} onChange={e => updateInput(3, e.target.value)} placeholder="0.05"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
-          </div>
-          <div key="4">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Depth of Cut (mm)</label>
-            <input type="text" value={inputs[4]} onChange={e => updateInput(4, e.target.value)} placeholder="2"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
-          </div>
-
-          <button onClick={() => setInputs(["10","4","200","0.05","2"])}
-            className="w-full py-3 rounded-xl text-base font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
+          <button
+            type="button"
+            data-testid="reset-button"
+            onClick={resetAll}
+            className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 transition"
+          >
+            <RotateCcw className="w-4 h-4" />
             Reset
           </button>
         </div>
 
-        <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
-                <Zap className="w-5 h-5" />
-              </div>
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">Results</h2>
-            </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="flex items-center gap-2 bg-slate-50 p-1.5 rounded-xl border border-slate-200">
+            <button
+              type="button"
+              data-testid="mode-vc-fz"
+              onClick={() => setInputMode('vc-fz')}
+              className={`flex-1 py-2 px-3 rounded-lg text-sm font-bold transition ${
+                inputMode === 'vc-fz' ? 'bg-purple-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              From Vc &amp; fz → S / F
+            </button>
+            <button
+              type="button"
+              data-testid="mode-rpm-feed"
+              onClick={() => setInputMode('rpm-feed')}
+              className={`flex-1 py-2 px-3 rounded-lg text-sm font-bold transition ${
+                inputMode === 'rpm-feed' ? 'bg-purple-600 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              From RPM &amp; Feed → Vc / fz
+            </button>
+          </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Spindle Speed</div>
-                <div className="text-3xl font-black text-blue-700">{formatNum(result.n)}<span className="text-lg text-blue-400"> RPM</span></div>
-              </div>
-              <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Feed Rate</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.f)}<span className="text-lg text-green-400"> mm/min</span></div>
-              </div>
-              <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-base font-black text-orange-400 uppercase tracking-wider mb-2">MRR</div>
-                <div className="text-3xl font-black text-orange-700">{formatNum(result.mrr)}<span className="text-lg text-orange-400"> cm3/min</span></div>
-              </div>
-            </div>
+          <div className="flex items-center gap-2 bg-slate-50 p-1.5 rounded-xl border border-slate-200">
+            <button
+              type="button"
+              data-testid="feedmode-g94"
+              onClick={() => setFeedMode('G94')}
+              className={`flex-1 py-2 px-3 rounded-lg text-sm font-bold transition ${
+                feedMode === 'G94' ? 'bg-slate-900 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              G94: mm/min (Units / Minute)
+            </button>
+            <button
+              type="button"
+              data-testid="feedmode-g95"
+              onClick={() => setFeedMode('G95')}
+              className={`flex-1 py-2 px-3 rounded-lg text-sm font-bold transition ${
+                feedMode === 'G95' ? 'bg-slate-900 text-white shadow-sm' : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              G95: mm/rev (Units / Rev)
+            </button>
+          </div>
+        </div>
 
-            <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
-                <Info className="w-4 h-4 text-slate-400" />
-                f = z * fz * n, n = vc*1000/(pi*D)
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div>
+            <label htmlFor="gcode-diameter" className="block text-sm font-bold text-slate-700 mb-1.5">
+              Cutter Diameter D (mm)
+            </label>
+            <input
+              id="gcode-diameter"
+              data-testid="input-diameter"
+              type="text"
+              inputMode="decimal"
+              value={diameterStr}
+              onChange={(e) => setDiameterStr(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="gcode-flutes" className="block text-sm font-bold text-slate-700 mb-1.5">
+              Flutes / Teeth z (1–64)
+            </label>
+            <input
+              id="gcode-flutes"
+              data-testid="input-flutes"
+              type="text"
+              inputMode="numeric"
+              value={flutesStr}
+              onChange={(e) => setFlutesStr(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+
+          {inputMode === 'vc-fz' ? (
+            <>
+              <div>
+                <label htmlFor="gcode-vc" className="block text-sm font-bold text-slate-700 mb-1.5">
+                  Cutting Speed Vc (m/min)
+                </label>
+                <input
+                  id="gcode-vc"
+                  data-testid="input-vc"
+                  type="text"
+                  inputMode="decimal"
+                  value={vcStr}
+                  onChange={(e) => setVcStr(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
               </div>
+
+              <div>
+                <label htmlFor="gcode-fz" className="block text-sm font-bold text-slate-700 mb-1.5">
+                  Chip Load fz (mm/tooth)
+                </label>
+                <input
+                  id="gcode-fz"
+                  data-testid="input-fz"
+                  type="text"
+                  inputMode="decimal"
+                  value={fzStr}
+                  onChange={(e) => setFzStr(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+            </>
+          ) : (
+            <>
+              <div>
+                <label htmlFor="gcode-rpm" className="block text-sm font-bold text-slate-700 mb-1.5">
+                  Spindle Speed n (RPM)
+                </label>
+                <input
+                  id="gcode-rpm"
+                  data-testid="input-rpm"
+                  type="text"
+                  inputMode="decimal"
+                  value={rpmStr}
+                  onChange={(e) => setRpmStr(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="gcode-feed" className="block text-sm font-bold text-slate-700 mb-1.5">
+                  Table Feed Rate Vf (mm/min)
+                </label>
+                <input
+                  id="gcode-feed"
+                  data-testid="input-feed"
+                  type="text"
+                  inputMode="decimal"
+                  value={feedRateStr}
+                  onChange={(e) => setFeedRateStr(e.target.value)}
+                  className="w-full px-4 py-2.5 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
+                />
+              </div>
+            </>
+          )}
+
+          <div>
+            <label htmlFor="gcode-ap" className="block text-sm font-bold text-slate-700 mb-1.5">
+              Axial Depth of Cut ap (mm)
+            </label>
+            <input
+              id="gcode-ap"
+              data-testid="input-ap"
+              type="text"
+              inputMode="decimal"
+              value={apStr}
+              onChange={(e) => setApStr(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+
+          <div>
+            <label htmlFor="gcode-ae" className="block text-sm font-bold text-slate-700 mb-1.5">
+              Radial Width of Cut ae (mm, ≤ D)
+            </label>
+            <input
+              id="gcode-ae"
+              data-testid="input-ae"
+              type="text"
+              inputMode="decimal"
+              value={aeStr}
+              onChange={(e) => setAeStr(e.target.value)}
+              className="w-full px-4 py-2.5 rounded-xl border border-slate-300 font-mono text-base text-slate-900 focus:outline-none focus:ring-2 focus:ring-purple-500"
+            />
+          </div>
+        </div>
+
+        {!calc.valid && (
+          <div data-testid="validation-error" className="text-sm font-semibold text-red-600 bg-red-50 border border-red-200 rounded-xl px-4 py-2.5">
+            {calc.error}
+          </div>
+        )}
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 pt-2">
+          <div className="bg-slate-900 text-white rounded-2xl p-5">
+            <div className="text-xs font-bold uppercase tracking-wider text-purple-300">
+              Spindle Speed n
+            </div>
+            <div data-testid="result-rpm" className="text-2xl font-black font-mono mt-1">
+              {calc.valid ? calc.rpm.toFixed(1) : '—'}
+            </div>
+            <div className="text-xs text-slate-400 mt-1">RPM (G-code S{calc.valid ? calc.sWord : '—'})</div>
+          </div>
+
+          <div className="bg-purple-600 text-white rounded-2xl p-5">
+            <div className="text-xs font-bold uppercase tracking-wider text-purple-100">
+              G94 Feed Rate Vf
+            </div>
+            <div data-testid="result-g94-feed" className="text-2xl font-black font-mono mt-1">
+              {calc.valid ? calc.vf.toFixed(1) : '—'}
+            </div>
+            <div className="text-xs text-purple-100 mt-1">mm/min (F = f_rev × n)</div>
+          </div>
+
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+            <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              G95 Feed / Rev
+            </div>
+            <div data-testid="result-g95-feed" className="text-2xl font-black font-mono text-slate-900 mt-1">
+              {calc.valid ? calc.fRev.toFixed(3) : '—'}
+            </div>
+            <div className="text-xs text-slate-500 mt-1">mm/rev (f_rev = fz × z)</div>
+          </div>
+
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+            <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              {inputMode === 'vc-fz' ? 'MRR (Q)' : 'Vc / fz'}
+            </div>
+            <div data-testid="result-mrr" className="text-2xl font-black font-mono text-slate-900 mt-1">
+              {calc.valid ? calc.mrr.toFixed(2) : '—'}
+            </div>
+            <div className="text-xs text-slate-500 mt-1">
+              cm³/min {calc.valid && inputMode === 'rpm-feed' ? `· Vc ${calc.vc.toFixed(1)} · fz ${calc.fz.toFixed(3)}` : ''}
             </div>
           </div>
 
-          <RelatedTools />
+          <div className="bg-slate-50 border border-slate-200 rounded-2xl p-5">
+            <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
+              Active G-code F
+            </div>
+            <div data-testid="result-gcode-f" className="text-2xl font-black font-mono text-purple-700 mt-1">
+              {calc.valid ? `F${calc.fWordValue}` : '—'}
+            </div>
+            <div className="text-xs text-slate-500 mt-1">
+              {calc.valid ? `${feedMode} · S${calc.sWord}` : 'Invalid input'}
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          <button
+            type="button"
+            data-testid="download-gcode"
+            disabled={!calc.valid}
+            onClick={downloadGcode}
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 text-white text-sm font-bold hover:bg-slate-800 disabled:opacity-40 transition"
+          >
+            <Download className="w-4 h-4" />
+            Download G-code (.nc)
+          </button>
+          <button
+            type="button"
+            data-testid="export-csv"
+            disabled={!calc.valid}
+            onClick={downloadCsv}
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-purple-600 text-white text-sm font-bold hover:bg-purple-700 disabled:opacity-40 transition"
+          >
+            <Download className="w-4 h-4" />
+            Export CSV Report
+          </button>
+        </div>
+
+        <div className="bg-slate-950 text-slate-100 rounded-2xl p-5 font-mono text-xs md:text-sm overflow-x-auto">
+          <div className="text-slate-400 mb-2 uppercase tracking-wider text-[11px] font-bold">
+            Sample ISO G-code Block (LinuxCNC Syntax)
+          </div>
+          <pre data-testid="gcode-preview">{calc.valid ? calc.gcodeSnippet : '; Enter valid positive cutting parameters to generate G-code'}</pre>
         </div>
       </div>
+
+      <div className="bg-white border border-slate-200 rounded-3xl p-6 md:p-8 shadow-sm space-y-5">
+        <h3 className="text-lg font-black text-slate-900 flex items-center gap-2">
+          <Info className="w-5 h-5 text-purple-600" /> LinuxCNC G-code Definitions &amp; Unit Derivations
+        </h3>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-600 leading-relaxed">
+          <div className="space-y-3 bg-slate-50 rounded-2xl p-5 border border-slate-100">
+            <div className="font-bold text-slate-900">1. Unit &amp; Feed Conversions (consistent with CNC Feed Rate Calculator)</div>
+            <div className="font-mono text-xs bg-white p-3 rounded-xl border border-slate-200 space-y-1 text-slate-800">
+              <div>n [RPM] = (1000 × Vc [m/min]) / (π × D [mm])</div>
+              <div>f_rev [mm/rev] = fz [mm/tooth] × z [teeth/rev]</div>
+              <div>Vf [mm/min] = f_rev [mm/rev] × n [rev/min] = fz × z × n</div>
+              <div>Q [cm³/min] = (ap [mm] × ae [mm] × Vf [mm/min]) / 1000</div>
+            </div>
+            <p>
+              Converting G95 (<code>mm/rev</code>) to G94 (<code>mm/min</code>): multiply feed per revolution by spindle speed <code>n</code> (since <code>(mm/rev) × (rev/min) = mm/min</code>).
+            </p>
+          </div>
+
+          <div className="space-y-2.5 bg-slate-50 rounded-2xl p-5 border border-slate-100">
+            <div className="font-bold text-slate-900">2. Official LinuxCNC Word Semantics</div>
+            <ul className="space-y-1.5 list-disc pl-5">
+              <li><code>G21</code>: Set millimeter length units (<code>G20</code> for inches).</li>
+              <li><code>G94</code>: Units per Minute Mode — the <code>F</code> word specifies controlled-point velocity in mm/min (when <code>G21</code> is active).</li>
+              <li><code>G95</code>: Units per Revolution Mode — the <code>F</code> word specifies tool advance per spindle revolution in mm/rev.</li>
+              <li><code>Fx</code>: Sets feed rate word <code>F</code> to <code>x</code> according to the active <code>G93</code>/<code>G94</code>/<code>G95</code> mode.</li>
+              <li><code>Sx</code>: Sets spindle speed in revolutions per minute (RPM).</li>
+            </ul>
+            <div className="pt-1 text-xs text-slate-500">
+              Sources: LinuxCNC G-code Reference (<code>gcode/g-code.html</code>) &amp; Other Codes (<code>gcode/other-code.html</code>).
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <RelatedTools />
     </div>
   );
 }
