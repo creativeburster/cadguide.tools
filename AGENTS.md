@@ -33,42 +33,43 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ## 📂 2. 项目核心知识图谱与文档索引 (Documentation Index)
 
-在进行任何修改前，请务必仔细阅读并遵循以下存储在项目根目录和文档目录下的核心战略文档：
+在进行任何修改前，请务必仔细阅读并遵循以下存储在项目根目录的核心现行文档：
 
-*   **项目灵魂与人格契约**：[SOUL.md](file:///f:/cad%20tools%20io/cadtools-cc/SOUL.md) — 记录了 Antigravity 的人格规范、已完成的重要里程碑和代码习惯。
-*   **产品百科与计算器 PRD**：[WIKIHUB_PRD.md](file:///f:/cad%20tools%20io/cadtools-cc/docs/WIKIHUB_PRD.md) — 包含百科全量方案、只读静态 SQLite 架构设计以及 100 阶段落地开发计划。
-*   **开发路线与内容生成计划**：[PLAN.md](file:///f:/cad%20tools%20io/cadtools-cc/PLAN.md) — 记录了五大交互计算器指标、跨软件长尾排错内容规划与开发阶段跟踪。
-*   **用户画像与分销变现模型**：[PERSONA.md](file:///f:/cad%20tools%20io/cadtools-cc/PERSONA.md) — 记录了四类靶向设计师画像，以及基于客户端拦截 of 子联盟网络（Brandreward / Sovrn）的无缝转化逻辑。
-*   **外链建设与推广指南**：[LINKBUILDING.md](file:///f:/cad%20tools%20io/cadtools-cc/LINKBUILDING.md) — 记录了海外高权重目录、替代平台提交文案包以及社交引流策略。
+*   **产品需求与站点定位**：[`PRD.md`](./PRD.md) — 明确当前以 Toolbox 工程工具箱 + `/convert` 为第一核心、以纯信息聚合软件目录为辅的现行产品定位（原 Guides 已下线且后期形态待定）。
+*   **Toolbox 工具优化唯一标准**：[`TOOLBOX_STANDARD.md`](./TOOLBOX_STANDARD.md) — `/toolbox/*` 计算器、速查表、解析器的手算复算、标准溯源及 E2E 验收标准。
+*   **Directory 软件详情唯一标准**：[`DIRECTORY_TOOL_STANDARD.md`](./DIRECTORY_TOOL_STANDARD.md) — `/tools/[slug]` 纯聚合目录规范与 `/tools/autocad` 样板基准。
+*   **用户画像与分销变现模型**：[`PERSONA.md`](./PERSONA.md) — 记录 B-End 目标受众画像及客户端子联盟拦截逻辑。
+*   **外链建设与推广指南**：[`LINKBUILDING.md`](./LINKBUILDING.md) — 记录海外高权重目录、替代平台及社区分发策略。
+*   **历史废止规划归档**：[`docs/archive/`](./docs/archive/README.md) — 存放 2026 年 4~7 月早期规划文档（已废止，严禁作为当前开发依据）。
 
 ---
 
 ## ⚙️ 3. 核心架构约束与 SEO 铁律 (Architecture & SEO Strict Constraints)
 
-*   **0 服务器数据库 (Zero-Server-Load)**：由于百科和计算器是只读的内容，为保持边缘节点秒开性能并实现 $0 托管成本，生产环境严禁引入关系型/非关系型运行时数据库。
-*   **构建期 SQLite 动态生成**：当页面达到上万级时，应采用构建期 SQLite 读取方案（读取本地 `wikihub.db` 并在静态编译期 `generateStaticParams` 渲染为 HTML），绝不能打包进客户端 JS 中。
-*   **联盟转链对爬虫透明**：所有外部商户链接在 HTML 源码中必须呈现为直接、干净的官网 URL。禁止在源码里直接写死带有各种复杂参数的跳转链接，从而规避谷歌对门页（Doorway Page）和低质分销站点的算法降权。
-*   **极度注重设计美学 (Premium Aesthetics)**：UI 必须使用 curated、HSL 调制的配色、精致的毛玻璃效果（Glassmorphism）和流畅的微交互。拒绝任何简陋粗糙的默认组件。
+*   **0 服务器数据库 (Zero-Server-Load)**：全站通过 Next.js Static Export 编译为只读静态 HTML/CSS/JS，部署在 Cloudflare Pages 边缘节点，生产环境严禁引入运行时关系型/非关系型数据库。
+*   **前端包体轻量化**：禁止将完整数据 JSON（如工具全量明细、完整转换器大表）直接打包进 `'use client'` 客户端组件 chunk；应使用构建脚本生成的轻量索引或在 Server Component 筛选后传参。
+*   **单一规范 Sitemap 与 410 出清**：全站统一使用 [`src/app/sitemap.xml/route.ts`](./src/app/sitemap.xml/route.ts) 输出规范路由；已下线的历史 `/guides/*` 等无效路径在 [`functions/_middleware.js`](./functions/_middleware.js) 中统一返回 `410 Gone`，禁止在源码内链中引用非规范别名或已废弃路径。
+*   **联盟转链对爬虫透明**：所有外部商户链接在 HTML 源码中必须呈现为直接、干净的官网 URL。禁止在源码里直接写死带有各种复杂参数的跳转链接，从而规避搜索引擎对门页（Doorway Page）和低质分销站点的算法降权。
+*   **极度注重设计美学 (Premium Aesthetics)**：UI 必须使用协调的配色、精致的界面层次与清晰的微交互，拒绝简陋粗糙的默认组件。
 
 ---
 
 ## 🛡️ 4. 零穿帮、强自洽内容质量红线 (Zero-Degradation Content & Logic Constraints)
 
-*   **严禁无脑随机拼凑**：全站禁止进行任何形式的“随机抓取词库、段落胡乱拼接”的灌水生成。所有长尾 Guides 技术指南必须基于逻辑 100% 自洽、合理的专业文章母版，通过属性分发实现规模化。
-*   **强类型特征物理熔断**：在 `isArticleCompatibleWithTool` 过滤引擎中，必须以硬代码写死特征熔断，从源头杜绝“秦琼战关公”的不合理配置：
-    *   *开源/免费软件*（如 FreeCAD, LibreCAD）：绝对不允许生成 any 商业授权（License/FLEXlm/EULA 审计/Seat 采购）相关网页。
-    *   *纯 2D 绘图 CAD*（如 QCAD, DraftSight）：绝对不允许生成 3D 实体（STEP/IGES/B-Rep）缝合、3D 打印切片、钣金折弯系数（K-Factor/G-Code）相关网页。
-    *   *纯创意动画/渲染软件*（如 V-Ray, KeyShot, Blender）：绝对不允许生成电气原理图（IEC/Schematic）或建筑属性协同（IFC4/BEP）相关网页。
-    *   *不支持 LISP/PGP 引擎软件*（如 Revit, SolidWorks）：绝对不允许生成 AutoLISP 脚本运行、PGP 命令简写别名配置、CUIX 菜单修改相关网页。
-*   **行话方言映射适配 (Jargon Map)**：针对不同的软件门类（MCAD, BIM, AEC, Creative），必须调用其专属词汇字典进行本地化重写（如 AEC 替换为图纸/图层，MCAD 替换为 Feature Tree/Sketch），确保术语符合该领域高工的真实工作习惯。
-*   **上线前的“极端用例”脑补推演**：AI 智能体在完成任何涉及网页数量扩增（如本轮 Guides 从 10 篇放宽至 20 篇）后，**必须在脑海中把最极端的工具配对（如 Revit 运行 LISP、V-Ray 配置电气原理图、Altium Designer 配置建筑 BEP）强行带入测试**，一旦有万分之一的张冠李戴风险，必须立刻加固熔断逻辑，否则严禁提交或部署。
+*   **严禁无脑模板拼凑**：全站禁止任何形式的“随机词库拼凑、跨工具套话复用”的灌水行为。无论是工具计算器说明还是软件目录数据，都必须贴合对应软件/工程领域的真实使用场景。
+*   **强类型特征与适用边界熔断**：在维护工具列表、软件聚合页推荐或速查表映射时，严禁出现张冠李戴的工程逻辑冲突：
+    *   *开源/免费软件*（如 FreeCAD, LibreCAD）：绝对不允许捏造商业授权（License/FLEXlm/EULA 审计/Seat 采购）描述或虚构付费价格。
+    *   *纯 2D 绘图 CAD*（如 QCAD, DraftSight）：绝对不允许关联 3D 实体（STEP/IGES/B-Rep）缝合、3D 打印切片、钣金折弯计算工具。
+    *   *纯创意动画/渲染软件*（如 V-Ray, KeyShot, Blender）：绝对不允许关联电气原理图（IEC/Schematic）或建筑属性协同（IFC4/BEP）内容。
+    *   *不支持 LISP/PGP 引擎软件*（如 Revit, SolidWorks）：绝对不允许关联 AutoLISP 脚本、PGP 命令简写别名、CUIX 菜单操作。
+*   **行话方言映射适配 (Jargon Map)**：针对不同的软件门类（MCAD, BIM, AEC, Creative），必须采用该领域工程师的真实专业术语与行业标准号（如 ISO、ASME、DIN、ASTM、NEC 等）。
 
 ---
 
 ## 🚫 5. 严格的 Git 推送禁令与 Cloudflare 构建额度守护 (Strict Git Push Ban & Cloudflare Build Shield)
 
 *   **绝对禁止擅自 Git Push**：在任何情况下，AI 智能体**绝对不允许自主执行 `git push` 命令**。
-*   **额度风控与成本控制**：由于站点部署在 Cloudflare，每次 push 都会触发全量构建，存在构建配额与服务成本限制，且 6,160+ 个静态页面的项目全量渲染极为耗时，严禁以任何理由“抢跑推送”。
+*   **额度风控与成本控制**：由于站点部署在 Cloudflare，每次 push 都会触发全量构建（当前约 1,560+ 个静态页面），存在构建配额与服务成本限制，严禁以任何理由“抢跑推送”。
 *   **标准工作流**：
     1. 智能体仅在本地 Workspace 修改代码，并通过 `npx tsc --noEmit` 和 `npm run build` 进行类型与构建校验。
     2. 校验成功后，只在本地完成 `git commit`，并在对话框中将构建输出呈报给用户。
@@ -77,57 +78,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 ---
 
-## 📝 6. Guide 内容创作准则 (Guide Content Creation Principles)
+## 📝 6. `/guides` 板块现状与约束（已下线，后期规划待定）
 
-### 核心规则
-每篇 guide 必须基于**真实搜索需求和实际社区讨论**，不能凭空生成。
-
-### 研究优先流程
-1. **搜索量验证** — 确认话题有真实搜索需求（Google Trends、论坛提及、Reddit 帖子、Autodesk/SolidWorks 社区帖子）。
-2. **来源收集** — 写作前收集 2+ 权威来源（官方文档、厂商 KB、社区帖子、有互动的 YouTube 教程）。
-3. **综合改写** — 将多个来源整合为一个连贯叙述。禁止复制粘贴。用自己的话改写并加入实际经验。
-
-### 语气与风格
-- **去 AI 味** — 禁止使用 "In this comprehensive guide, we will explore…", "It's worth noting that…", "Delve into", "Navigate the complexities of", "In the realm of" 等 AI 典型措辞。
-- **直接实用** — 像资深 CAD 管理员跟同事说话，不像教科书。
-- **实战经验** — 引用真实场景（须来自可核实来源，见禁止事项）。
-
-### 质量标准
-- **1000+ 字** 每篇 guide
-- **2+ 来源** 在 frontmatter `sources` 数组中引用
-- **可操作步骤** — 每篇 guide 必须有具体修复步骤，不只是理论
-- **无废话** — 每段都要传递信息， aggressively 删减填充内容
-- **Frontmatter 必填** — title, excerpt, category, softwareSlug, keyword, slug, author, readTime, date, sources
-
-### 分类
-**选题由真实搜索需求决定，不是先定选题再填内容；但 `category` 字段必须从下列受控枚举中取值。**
-
-流程：先搜索该工具的真实讨论、论坛帖子、搜索量数据 → 根据实际发现的内容确定选题与分类 → 分类只能取下方枚举之一。
-
-受控枚举（与站点 UI 的 CATEGORY_LABELS 一一对应）：
-- `troubleshooting` — 错误修复、崩溃、文件损坏
-- `performance` — 速度优化、大文件、硬件
-- `migration` — 版本升级、平台切换
-- `standards` — 制图标准、合规、格式
-- `procurement` — 许可、采购、审计
-- `deployment` — 安装、网络配置、部署
-- `manufacturing` — CAM、钣金、3D 打印
-- `printing` — 打印、PDF 导出、打印标准
-- `workflow` — 工作流程教程
-- `comparison` — 软件对比
-
-**严禁自造一次性分类值**（如 "crash-and-performance-errors"）：不在枚举内的分类值不会出现在 /guides 列表页的分类筛选下拉框中，相关文章匹配也会失效，等于把文章从站点导航中隐形。确需新增分类时，必须先同步更新 `src/app/guides/guides-list-client.tsx` 与 `src/app/guides/[slug]/page.tsx` 中的 CATEGORY_LABELS/CATEGORY_COLORS，再在 frontmatter 中使用。
-
-**禁止按模板分配分类**（如"每个工具必须 1 篇 troubleshooting + 1 篇 performance…"）。每个工具的 guide 分类组合应反映该工具真实的搜索需求分布，不同工具的组合应该不同。
-
-### 禁止事项
-- 不研究真实需求就生成 guide
-- 编造错误代码、文件路径或注册表键
-- 适用于任何软件的通用建议
-- AI 典型的对冲语言和元评论
-- **杜撰虚构的个人经历** — 禁止编造"我在三台工作站上验证过"、"上周客户打电话说…"等无法核实的第一人称叙事。可以基于真实来源的内容用第一人称改写，但不得编造具体场景、数字和事件
-- **预设分类再填内容** — 禁止先确定分类模板再据此生成 guide。分类必须由搜索调研中发现的真实话题决定
-- **编造具体技术参数** — 如加工转速、进给速度、注册表路径等，除非来自可验证的来源。不确定时应标注"请参考厂商推荐参数"
+*   **已彻底下线**：原 `/guides/*` 长文指南板块已于 2026 年 8~9 月全量移除，目前代码库中不存在 `src/app/guides/` 路由，且边缘中间件 [`functions/_middleware.js`](./functions/_middleware.js) 对所有历史 `/guides/*` 访问返回 `HTTP 410 Gone`。
+*   **后期规则待定**：站点当前重心为 `/toolbox/*`（工程工具箱）、`/convert/*`（格式转换指引）与 `/tools/*`（纯信息聚合目录）。未来是否以及如何重做真正具备实操价值的 Guide 内容尚未最终敲定。
+*   **现阶段严格禁令**：在用户正式确立新版 Guide PRD 并发出指令之前，**严禁任何 Agent 擅自恢复 `/guides` 路由、生成任何指南文章，或在站内页面中添加指向 `/guides/*` 的链接**。
 
 
 ---
