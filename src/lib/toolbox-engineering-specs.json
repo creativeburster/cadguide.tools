@@ -3347,8 +3347,8 @@
     "title": "RGB to ACI Color Matchbox",
     "description": "Match RGB or Hex colors to AutoCAD Color Index values (ACI 1-255) using CIE76 Delta-E and Euclidean RGB distance.",
     "discipline": "CAD Layer Color & Drafting Visualization",
-    "standards": "Autodesk AutoCAD Color Index (ACI 1-255) per Autodesk COLOR Command Reference (GUID-C163F875) & ezdxf DXF_DEFAULT_COLORS",
-    "cadContext": "Translate RGB/HEX colors to standard ACI indices (1-255) and apply via -LAYER C <index>, keeping viewport background adaptation for ACI 7 and 250-255 in mind.",
+    "standards": "Autodesk Index Color Tab (Select Color Dialog Box) (GUID-C163F875) & ezdxf DXF_DEFAULT_COLORS / DXF_DEFAULT_PAPERSPACE_COLORS",
+    "cadContext": "Translate RGB/HEX colors to ACI 1-255 and apply via -LAYER C <index>. GUID-C163F875 defines the 1-9, 10-249, and 250-255 palette sections; ezdxf dark vs. white background tables show ACI 7, 251-255, and 21 dark-tone colors shift while ACI 250 stays #000000.",
     "formula": "Euclidean: sqrt(dR^2 + dG^2 + dB^2); CIE76: sqrt(dL*^2 + da*^2 + db*^2) via D65 sRGB -> XYZ -> CIE L*a*b*",
     "inputs": [
       {

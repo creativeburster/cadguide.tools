@@ -3122,8 +3122,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'coating-thickness-calculator',
     title: 'Coating Thickness & Coverage Calculator',
-    description: 'Calculate coating thickness from application rate and dry film coverage.',
-    detailDesc: 'DFT = (volume * solids * 10) / area',
+    description: 'Calculate wet film thickness (WFT), dry film thickness (DFT), theoretical/practical spreading rates, and paint volume from Volume Solids (%).',
+    detailDesc: 'WFT = DFT*100/VS%, TSR = VS%*10/DFT, PSR = TSR*(1-Loss%/100), V_theo = Area*DFT/(VS%*10)',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',

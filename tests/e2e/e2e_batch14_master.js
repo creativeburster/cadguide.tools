@@ -316,13 +316,13 @@ async function runTests() {
     // Default #3B82F6 (59, 130, 246) -> ACI 150 (#007FFF, 0, 127, 255), dE=7.28, Euclidean=59.76
     assertEqual((await page.locator('[data-testid="result-aci-index"]').innerText()).trim(), 'ACI 150', '69 default ACI 150');
     assertEqual((await page.locator('[data-testid="result-matched-hex"]').innerText()).trim(), '#007FFF (0, 127, 255)', '69 default matched hex');
-    assertClose(await readLeadingNumber(page, 'result-delta-e'), 7.28, 0.002, '69 default CIE76 dE');
+    assertClose(await readLeadingNumber(page, 'result-delta-e'), 7.28, 0.001, '69 default CIE76 dE');
     assertClose(await readLeadingNumber(page, 'result-euclidean'), 59.76, 0.001, '69 default Euclidean');
 
     // AutoCAD Blue #005691: CIE76 -> ACI 147 (dE=11.49), Euclidean -> ACI 144 (eu=20.12)
     await page.click('[data-testid="preset-autocad-blue"]');
     assertEqual((await page.locator('[data-testid="result-aci-index"]').innerText()).trim(), 'ACI 147', '69 AutoCAD Blue CIE76');
-    assertClose(await readLeadingNumber(page, 'result-delta-e'), 11.49, 0.002, '69 AutoCAD Blue dE');
+    assertClose(await readLeadingNumber(page, 'result-delta-e'), 11.49, 0.001, '69 AutoCAD Blue dE');
 
     await page.click('[data-testid="metric-euclidean"]');
     assertEqual((await page.locator('[data-testid="result-aci-index"]').innerText()).trim(), 'ACI 144', '69 AutoCAD Blue Euclidean');

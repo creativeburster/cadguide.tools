@@ -232,11 +232,19 @@ export default function ColorMatchboxClient() {
     };
   }, [rStr, gStr, bStr, hexInput, metric]);
 
-  const handleCopyIndex = () => {
+  const handleCopyIndex = async () => {
     if (!calc.valid) return;
-    navigator.clipboard.writeText(String(calc.bestMatch.index));
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      if (!navigator.clipboard?.writeText) {
+        setCopied(false);
+        return;
+      }
+      await navigator.clipboard.writeText(String(calc.bestMatch.index));
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      setCopied(false);
+    }
   };
 
   const handleExportCsv = () => {
@@ -534,7 +542,7 @@ export default function ColorMatchboxClient() {
               <strong>CIE76 Delta-E:</strong> Converts sRGB channels (0–255) via sRGB linearization to CIE XYZ (D65/2 deg) and CIE L*a*b*, then computes ΔE76 = sqrt((L1 - L2)^2 + (a1 - a2)^2 + (b1 - b2)^2).
             </p>
             <p>
-              <strong>ACI 7 &amp; 250–255 Viewport Note:</strong> Per Autodesk <em>COLOR (Command)</em> Help (<code>GUID-C163F875</code>) and <code>ezdxf</code> documentation, ACI 7 (White/Black) and grayscale indices 250–255 shift dynamically depending on your AutoCAD dark modelspace vs. white paper-layout background color. Always verify CTB/STB plot lineweights in your office plot style table.
+              <strong>ACI Palette Scope &amp; Viewport Adaptation:</strong> Autodesk <em>Index Color Tab (Select Color Dialog Box)</em> (<code>GUID-C163F875</code>) organizes the 255 AutoCAD Color Index values into indices 1–9 (named colors), 10–249, and 250–255 (shades of gray) without specifying background shifts. Separately, comparing <code>ezdxf</code> <code>DXF_DEFAULT_COLORS</code> (default 2D model space RGB 33,40,48) vs. <code>DXF_DEFAULT_PAPERSPACE_COLORS</code> (white layout RGB 255,255,255) shows that ACI 7 (#FFFFFF vs. #000000), gray shades 251–255, and 21 dark-tone indices adapt to background contrast while ACI 250 remains #000000 in both palettes. Always verify CTB/STB plot lineweights in your office plot style table.
             </p>
           </div>
 

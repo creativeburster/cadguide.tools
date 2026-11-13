@@ -64,7 +64,7 @@ const SHORTCUTS = [
     keys: 'Titanium alloys (Ti-6Al-4V)',
     command: 'Vc: 40-90 m/min | fz: 0.04-0.1 mm/t',
     category: 'tungforce',
-    description: 'Tungaloy TungForce-Rec AVGT-MJ (TR506-G p. 17). Grade AH130.',
+    description: 'Tungaloy TungForce-Rec AVGT-MJ (TR506-G p. 17). Grade AH130 (catalog PDF prints "Ti-6AI-4V" with uppercase I).',
   },
   {
     keys: 'Superalloys (Inconel 718)',
@@ -126,7 +126,7 @@ const SHORTCUTS = [
     keys: 'Titanium alloy (Ti-6Al-4V, <=40 HRC) — High-Feed',
     command: 'Vc: 30-60 m/min | fz: 0.3-0.7 mm/t',
     category: 'highfeed',
-    description: 'Tungaloy DoFeedQuad TXQ12 (Max ap = 2.0 mm). Grade AH725.',
+    description: 'Tungaloy DoFeedQuad TXQ12 (Max ap = 2.0 mm). Grade AH725 (catalog PDF prints "Ti-6AI-4V" with uppercase I).',
   },
   {
     keys: 'Hardened steels (SKD61, 40-50 HRC) — High-Feed',
@@ -188,7 +188,7 @@ const SHORTCUTS = [
     keys: 'Titanium alloys (Ti-6Al-4V) — Indexable Drill',
     command: 'Vc: 20-50 m/min | f: 0.1-0.25 mm/rev',
     category: 'drilling',
-    description: 'Tungaloy DrillForce-Meister (h_scc_509.pdf): ø26-35.9 mm uses 0.1-0.2 mm/rev; ø36-41.0 mm uses 0.1-0.25 mm/rev.',
+    description: 'Tungaloy DrillForce-Meister (h_scc_509.pdf): ø26-35.9 mm uses 0.1-0.2 mm/rev; ø36-41.0 mm uses 0.1-0.25 mm/rev (catalog PDF prints "Ti-6AI-4V" with uppercase I).',
   },
   {
     keys: 'Heat-resistant alloys (Inconel 718) — Indexable Drill',
@@ -220,7 +220,7 @@ const SHORTCUTS = [
     keys: 'High-Feed Vibration Order (fl_highfeed.pdf)',
     command: 'Adjust at 70%: Vc -> ap -> fz',
     category: 'tips',
-    description: 'Tungaloy fl_highfeed.pdf p. 17: Reducing parameters to 70% may minimize vibration; adjust in order (1) Vc, (2) DOC ap, (3) fz (do not drop fz below 0.5 mm/z on TXQ high-feed cutters).',
+    description: 'Tungaloy fl_highfeed.pdf p. 17: Optimizing cutting parameters to 70% may minimize vibration; adjust in order (1) Vc, (2) DOC ap, (3) fz (note: using a feed rate of 0.5 mm/z or lower may adversely increase vibration for the SWMT0904ZER/UER cutter series shown on p. 17).',
   },
 ];
 
