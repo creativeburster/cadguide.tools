@@ -45,7 +45,7 @@ const MIX_PRESETS: MixPreset[] = [
     id: 'pavement-air',
     label: 'Pavement Interactive PCC Example (148 kg water, 5.5% air)',
     water: '148',
-    wc: '0.3895',
+    wc: '0.39',
     airPct: '5.5',
     coarseRatio: '0.71',
     druw: '1600',

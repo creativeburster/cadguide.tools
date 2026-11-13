@@ -3569,11 +3569,11 @@
   },
   "concrete-slab-calculator": {
     "title": "Concrete Slab Thickness Calculator",
-    "description": "Check ACI 318 Table 7.3.1.1 minimum one-way solid slab thickness and calculate Whitney stress-block flexural and Table 7.6.1.1 minimum reinforcement per meter strip.",
+    "description": "Check ACI 318M Table 7.3.1.1 minimum one-way solid slab thickness and calculate Whitney stress-block flexural and ACI 318-19 Section 7.6.1.1 minimum reinforcement per meter strip.",
     "discipline": "Reinforced Concrete Structural Engineering",
-    "standards": "ACI 318 Table 7.3.1.1 (Minimum Thickness of Solid Nonprestressed One-Way Slabs) & Table 7.6.1.1 (Minimum Shrinkage and Temperature Reinforcement)",
-    "cadContext": "Apply ACI 318 Table 7.3.1.1 minimum thickness only to normalweight nonprestressed solid one-way slabs; verify clear cover and bar spacing directly on reinforcement CAD details.",
-    "formula": "h_min = (l/ratio)*(0.4 + fy/700); Mu = wu*l^2/C; a = As*fy/(0.85*fc*b); phi*Mn = phi*As*fy*(d - a/2); As_min = max(0.0018*420/fy, 0.0014)*b*h",
+    "standards": "ACI 318M Table 7.3.1.1 (Minimum Thickness of Solid Nonprestressed One-Way Slabs) & ACI 318-19 Section 7.6.1.1 (Minimum Flexural Reinforcement As,min = 0.0018 Ag)",
+    "cadContext": "Apply ACI 318M Table 7.3.1.1 minimum thickness only to normalweight nonprestressed solid one-way slabs; verify clear cover and bar spacing directly on reinforcement CAD details.",
+    "formula": "h_min = (l/ratio)*(0.4 + fy/700); Mu = wu*l^2/C; a = As*fy/(0.85*fc*b); phi*Mn = phi*As*fy*(d - a/2); As_min = 0.0018*b*h",
     "inputs": [
       {
         "label": "Support Condition & Clear Span l",

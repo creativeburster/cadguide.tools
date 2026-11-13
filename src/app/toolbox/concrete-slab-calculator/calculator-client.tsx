@@ -104,8 +104,8 @@ export default function ConcreteSlabCalculatorClient() {
     const bMm = 1000; // 1 m unit strip width
     const dMm = hMm - coverMm;
 
-    // 1. ACI 318 Table 7.3.1.1 minimum thickness for normalweight one-way slab
-    // Base ratios apply for fy = 420 MPa (60,000 psi); SI modifier (0.4 + fy/700)
+    // 1. ACI 318M Table 7.3.1.1 minimum thickness for normalweight one-way slab
+    // Base ratios apply for fy = 420 MPa; ACI 318M metric modifier (0.4 + fy/700)
     const fyFactor = 0.4 + fy / 700;
     const hMinMm = (spanMm / cond.spanRatio) * fyFactor;
     const thicknessOk = hMm >= hMinMm;
@@ -122,9 +122,9 @@ export default function ConcreteSlabCalculatorClient() {
     let aMm = Number.NaN;
     let phiMnKnm = Number.NaN;
 
-    // Shrinkage & temperature minimum reinforcement per ACI 318 Table 7.6.1.1
-    // (0.0018 * 420 / fy, minimum 0.0014) * b * h
-    const rhoMin = Math.max((0.0018 * 420) / fy, 0.0014);
+    // Minimum flexural reinforcement per ACI 318-19 Section 7.6.1.1:
+    // As,min = 0.0018 * Ag = 0.0018 * b * h
+    const rhoMin = 0.0018;
     const AsMin = rhoMin * bMm * hMm;
     let AsDesign = Number.NaN;
 
@@ -165,7 +165,7 @@ export default function ConcreteSlabCalculatorClient() {
       `Clear Span l = ${result.spanM.toFixed(2)} m | fy = ${result.fy.toFixed(0)} MPa | f'c = ${result.fc.toFixed(0)} MPa`,
       `Minimum Thickness h_min = ${result.hMinMm.toFixed(1)} mm (fy factor = ${result.fyFactor.toFixed(3)}) vs Adopted h = ${result.hMm.toFixed(1)} mm`,
       `Factored Moment Mu = ${result.MuKnm.toFixed(3)} kN*m/m | Effective Depth d = ${result.dMm.toFixed(1)} mm`,
-      `Required As = ${result.AsReq.toFixed(2)} mm2/m | Min As (Table 7.6.1.1) = ${result.AsMin.toFixed(2)} mm2/m | Governing As = ${result.AsDesign.toFixed(2)} mm2/m`,
+      `Required As = ${result.AsReq.toFixed(2)} mm2/m | Min As (ACI 318-19 7.6.1.1) = ${result.AsMin.toFixed(2)} mm2/m | Governing As = ${result.AsDesign.toFixed(2)} mm2/m`,
       `Design Moment Capacity phi*Mn = ${result.phiMnKnm.toFixed(3)} kN*m/m (a = ${result.aMm.toFixed(2)} mm)`,
     ].join('\n');
     try {
@@ -189,7 +189,7 @@ export default function ConcreteSlabCalculatorClient() {
       `effective_depth_d,${result.dMm.toFixed(2)},mm,h - cover_offset`,
       `Mu,${result.MuKnm.toFixed(3)},kN*m/m,wu*l^2/C per 1000 mm strip`,
       `As_required,${result.AsReq.toFixed(2)},mm2/m,Flexural demand`,
-      `As_min,${result.AsMin.toFixed(2)},mm2/m,ACI 318 Table 7.6.1.1 max(0.0018*420/fy;0.0014)*b*h`,
+      `As_min,${result.AsMin.toFixed(2)},mm2/m,ACI 318-19 Section 7.6.1.1 (0.0018*b*h)`,
       `As_design,${result.AsDesign.toFixed(2)},mm2/m,max(As_required;As_min)`,
       `stress_block_a,${result.aMm.toFixed(3)},mm,As_design*fy/(0.85*fc*b)`,
       `phi_Mn,${result.phiMnKnm.toFixed(3)},kN*m/m,Design flexural strength phi=${result.phi}`,
@@ -479,9 +479,9 @@ export default function ConcreteSlabCalculatorClient() {
               <div className="flex items-start gap-2">
                 <Info className="w-4 h-4 shrink-0 mt-0.5 text-slate-500" />
                 <div>
-                  <strong>Scope &amp; ACI 318 Equations:</strong> Valid for normalweight, nonprestressed solid one-way slabs without attachments damaged by large deflections. Per ACI 318 Table 7.3.1.1, baseline <code>h_min</code> uses <code>ℓ/20</code>, <code>ℓ/24</code>, <code>ℓ/28</code>, or <code>ℓ/10</code> multiplied by <code>(0.4 + fy/700)</code> for <code>fy</code> in MPa (equivalent to <code>(0.4 + fy/100,000)</code> in psi for 420 MPa / 60,000 psi). Flexural reinforcement solves Whitney stress block{' '}
-                  <code>a = As·fy/(0.85·f&apos;c·b)</code>, <code>φMn = φ·As·fy·(d − a/2)</code>, and Table 7.6.1.1 minimum{' '}
-                  <code>As,min = max(0.0018·420/fy, 0.0014)·b·h</code>.
+                  <strong>Scope &amp; ACI 318 Equations:</strong> Valid for normalweight, nonprestressed solid one-way slabs without attachments damaged by large deflections. Per ACI 318M Table 7.3.1.1, baseline <code>h_min</code> uses <code>ℓ/20</code>, <code>ℓ/24</code>, <code>ℓ/28</code>, or <code>ℓ/10</code> multiplied by <code>(0.4 + fy/700)</code> for <code>fy</code> in MPa (ACI 318 US customary edition specifies <code>(0.4 + fy/100,000)</code> for <code>fy</code> in psi). Flexural reinforcement solves Whitney stress block{' '}
+                  <code>a = As·fy/(0.85·f&apos;c·b)</code>, <code>φMn = φ·As·fy·(d − a/2)</code>, and ACI 318-19 Section 7.6.1.1 minimum{' '}
+                  <code>As,min = 0.0018·b·h</code>.
                 </div>
               </div>
             </div>

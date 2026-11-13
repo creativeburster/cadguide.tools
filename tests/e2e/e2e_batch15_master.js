@@ -6,7 +6,7 @@
  * 71. column-buckling-calculator (Ideal Euler Pe/Fe + squash load Py + AISC 360 Ch. E Fcr/phi*Pn, theoretical vs recommended K, CSV/clipboard, negative template check)
  * 72. composite-section-calculator (Transformed section n=E2/E1, neutral axis y_bar, parallel-axis theorem It, restored stress sigma2=n*M*c2/It, CSV/clipboard, negative check)
  * 73. concrete-mix-design-calculator (ACI absolute volume method, sum(V)=1.0000 m3, Pavement Interactive preset, overflow warning, input defenses, CSV, negative check)
- * 74. concrete-slab-calculator (ACI 318 Table 7.3.1.1 l/20,l/24,l/28,l/10*(0.4+fy/700), Whitney flexural design & Table 7.6.1.1 As_min, CSV, negative check)
+ * 74. concrete-slab-calculator (ACI 318M Table 7.3.1.1 l/20,l/24,l/28,l/10*(0.4+fy/700), Whitney flexural design & ACI 318-19 7.6.1.1 As_min=0.0018*b*h, CSV, negative check)
  * 75. concrete-slab-volume-calculator (Rectangular & Circular geometry, waste factor, editable bag weight/yield + Quikrete 1101 presets, input defenses, CSV, negative check)
  */
 
@@ -136,10 +136,13 @@ async function runTests() {
     assertClose(await readLeadingNumber(page, 'result-radius'), 11.55, 0.001, '71 default r');
     assertClose(await readLeadingNumber(page, 'result-aisc-phipn'), 124.64, 0.001, '71 default AISC phi*Pn');
 
-    // Switch to Fixed-Fixed recommended K=0.65 and L=1000 mm (triggers inelastic Eq. E3-2 & Euler>Py warning)
+    // Switch to Fixed-Fixed recommended K=0.65 and Cantilever recommended K=2.10, then L=1000 mm (triggers inelastic Eq. E3-2 & Euler>Py warning)
     await page.selectOption('[data-testid="select-end"]', 'fixed-fixed');
     await page.click('[data-testid="k-mode-recommended"]');
     assertEqual(await page.locator('[data-testid="input-k"]').inputValue(), '0.65', '71 Fixed-Fixed rec K');
+
+    await page.selectOption('[data-testid="select-end"]', 'cantilever');
+    assertEqual(await page.locator('[data-testid="input-k"]').inputValue(), '2.10', '71 Cantilever rec K');
 
     await page.selectOption('[data-testid="select-end"]', 'pinned-pinned');
     await page.fill('[data-testid="input-k"]', '1.0');
@@ -192,12 +195,12 @@ async function runTests() {
     // Switch preset: Concrete + Steel Flange (E1=25, b1=300, h1=150, E2=200, b2=120, h2=12, M=35)
     // Hand calc:
     // n = 8, A1=45000, A2t=8*1440=11520, y1=75, y2=156, yBar=(45000*75+11520*156)/56520 = 91.5096 mm
-    // It = 300*150^3/12 + 45000*(16.5096)^2 + 8*120*12^3/12 + 11520*(64.4904)^2 = 144,686,705.2 mm4 = 14468.67 cm4
-    // sigma1 = 35e6 * 91.5096 / 144686705.2 = 22.136 MPa; sigma2 = 8 * 35e6 * (162 - 91.5096) / 144686705.2 = 136.414 MPa
+    // It = 300*150^3/12 + 45000*(16.5096...)^2 + 8*120*12^3/12 + 11520*(64.4904...)^2 = 144,690,564.84 mm4 = 14469.06 cm4
+    // sigma1 = 35e6 * 91.5096 / 144690564.84 = 22.1358 MPa; sigma2 = 8 * 35e6 * (162 - 91.5096) / 144690564.84 = 136.4106 MPa
     await page.click('[data-testid="preset-concrete-steel"]');
     assertClose(await readLeadingNumber(page, 'result-n'), 8.0, 0.001, '72 concrete-steel n');
     assertClose(await readLeadingNumber(page, 'result-ybar'), 91.51, 0.001, '72 concrete-steel yBar');
-    assertClose(await readLeadingNumber(page, 'result-it'), 14468.67, 0.001, '72 concrete-steel It');
+    assertClose(await readLeadingNumber(page, 'result-it'), 14469.06, 0.001, '72 concrete-steel It');
     assertClose(await readLeadingNumber(page, 'result-sigma1'), 22.14, 0.001, '72 concrete-steel sigma1');
     assertClose(await readLeadingNumber(page, 'result-sigma2'), 136.41, 0.001, '72 concrete-steel sigma2');
 
@@ -229,11 +232,11 @@ async function runTests() {
     assertClose(await readLeadingNumber(page, 'result-vol-sum'), 1.0, 0.001, '73 default vol sum');
     assertClose(await readLeadingNumber(page, 'result-density'), 2372.28, 0.001, '73 default density');
 
-    // Pavement Interactive preset: water=148, w/c=0.3895, air=5.5, coarseRatio=0.71, druw=1600 -> c=379.97, ca=1136, fa=666.57
+    // Pavement Interactive preset: water=148, w/c=0.39, air=5.5, coarseRatio=0.71, druw=1600 -> c=379.49, ca=1136, fa=666.99
     await page.click('[data-testid="preset-pavement-air"]');
-    assertClose(await readLeadingNumber(page, 'result-cement'), 379.97, 0.001, '73 pavement cement');
+    assertClose(await readLeadingNumber(page, 'result-cement'), 379.49, 0.001, '73 pavement cement');
     assertClose(await readLeadingNumber(page, 'result-coarse'), 1136.0, 0.001, '73 pavement coarse');
-    assertClose(await readLeadingNumber(page, 'result-fine'), 666.57, 0.001, '73 pavement fine');
+    assertClose(await readLeadingNumber(page, 'result-fine'), 666.99, 0.001, '73 pavement fine');
     assertClose(await readLeadingNumber(page, 'result-vol-sum'), 1.0, 0.001, '73 pavement vol sum');
 
     // Volume overflow test (set water to 700 -> exceeds 1.000 m3, must warn and output '—')
@@ -268,14 +271,18 @@ async function runTests() {
     assertClose(await readLeadingNumber(page, 'result-phimn'), 24.0, 0.001, '74 default phi*Mn');
 
     // Switch to Cantilever (l/10, C=2), span=2 m, fy=350 MPa -> fyMod = 0.4 + 350/700 = 0.90 -> h_min = (2000/10)*0.9 = 180.0 mm
-    // Mu = 12 * 2^2 / 2 = 24.00 kNm/m; As_min = (0.0018*420/350)*1000*200 = 0.00216*200000 = 432.00 mm2/m
-    // As_req for d=175, fy=350, fc=28, Mu=24 -> 369.70 * (420/350) = 443.64 mm2/m -> As_design = 443.64
+    // Mu = 12 * 2^2 / 2 = 24.00 kNm/m; ACI 318-19 7.6.1.1 As_min = 0.0018*b*h = 0.0018*1000*200 = 360.00 mm2/m
+    // As_req for d=175, fy=350, fc=28, Mu=24 -> 443.64 mm2/m -> As_design = 443.64
     await page.selectOption('[data-testid="select-support"]', 'cantilever');
     await page.fill('[data-testid="input-span"]', '2');
     await page.fill('[data-testid="input-fy"]', '350');
     assertClose(await readLeadingNumber(page, 'result-hmin'), 180.0, 0.001, '74 cantilever h_min');
     assertClose(await readLeadingNumber(page, 'result-mu'), 24.0, 0.001, '74 cantilever Mu');
     assertClose(await readLeadingNumber(page, 'result-as-design'), 443.64, 0.001, '74 cantilever As_design');
+    const asBreakdown = await page.locator('[data-testid="result-as-breakdown"]').innerText();
+    if (!asBreakdown.includes('360.00')) {
+      throw new Error(`[74 As_min check] Expected Min As 360.00 (0.0018*b*h) in breakdown: ${asBreakdown}`);
+    }
 
     await page.click('[data-testid="reset-button"]');
     await verifyDownloadCsv(page, '[data-testid="export-csv-button"]', ['h_min_aci318,200.00', 'As_design,369.70'], '74');

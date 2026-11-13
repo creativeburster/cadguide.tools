@@ -2044,8 +2044,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'concrete-slab-calculator',
     title: 'Concrete Slab Thickness Calculator',
-    description: 'Check ACI 318 Table 7.3.1.1 minimum one-way slab thickness and calculate Whitney stress-block flexural and minimum reinforcement.',
-    detailDesc: 'ACI 318 Table 7.3.1.1 one-way solid slab thickness check (l/20, l/24, l/28, l/10 with fy modifier) plus Whitney stress-block flexural design and Table 7.6.1.1 minimum reinforcement.',
+    description: 'Check ACI 318M Table 7.3.1.1 minimum one-way slab thickness and calculate Whitney stress-block flexural and ACI 318-19 Section 7.6.1.1 minimum reinforcement.',
+    detailDesc: 'ACI 318M Table 7.3.1.1 one-way solid slab thickness check (l/20, l/24, l/28, l/10 with fy modifier 0.4 + fy/700) plus Whitney stress-block flexural design and ACI 318-19 Section 7.6.1.1 minimum reinforcement (As,min = 0.0018*b*h).',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',

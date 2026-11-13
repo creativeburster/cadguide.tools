@@ -5,7 +5,7 @@ import ConcreteSlabCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Concrete Slab Thickness Calculator",
-  description: 'Check ACI 318 Table 7.3.1.1 minimum one-way concrete slab thickness with fy modification and calculate flexural and Table 7.6.1.1 minimum reinforcement per meter strip.',
+  description: 'Check ACI 318M Table 7.3.1.1 minimum one-way concrete slab thickness with fy modification and calculate Whitney flexural and ACI 318-19 Section 7.6.1.1 minimum reinforcement per meter strip.',
   path: '/toolbox/concrete-slab-calculator',
 });
 

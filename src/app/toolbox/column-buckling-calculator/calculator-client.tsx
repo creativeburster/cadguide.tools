@@ -39,7 +39,7 @@ const END_CONDITIONS: EndConditionPreset[] = [
   { id: 'pinned-pinned', name: 'Pinned-Pinned (Both ends pinned)', kTheoretical: '1.0', kRecommended: '1.0' },
   { id: 'fixed-fixed', name: 'Fixed-Fixed (Both ends fixed)', kTheoretical: '0.5', kRecommended: '0.65' },
   { id: 'fixed-pinned', name: 'Fixed-Pinned (One fixed, one pinned)', kTheoretical: '0.7', kRecommended: '0.80' },
-  { id: 'cantilever', name: 'Fixed-Free (Cantilever)', kTheoretical: '2.0', kRecommended: '2.0' },
+  { id: 'cantilever', name: 'Fixed-Free (Cantilever)', kTheoretical: '2.0', kRecommended: '2.10' },
 ];
 
 function parsePositive(raw: string): number {
@@ -590,7 +590,7 @@ export default function ColumnBucklingClient() {
                   <code>r = √(I/A)</code>. Per AISC 360 Chapter E (Section E3): for{' '}
                   <code>KL/r ≤ 4.71√(E/Fy)</code>, <code>Fcr = [0.658^(Fy/Fe)]·Fy</code>; for{' '}
                   <code>KL/r &gt; 4.71√(E/Fy)</code>, <code>Fcr = 0.877·Fe</code>; LRFD design strength{' '}
-                  <code>φcPn = 0.90·Fcr·Ag</code>. Recommended design K factors (Pinned 1.0, Fixed-Fixed 0.65, Fixed-Pinned 0.80, Cantilever 2.0) account for practical end-restraint tolerances.
+                  <code>φcPn = 0.90·Fcr·Ag</code>. Recommended design K factors (Pinned 1.0, Fixed-Fixed 0.65, Fixed-Pinned 0.80, Cantilever 2.10) account for practical end-restraint tolerances.
                 </div>
               </div>
             </div>
