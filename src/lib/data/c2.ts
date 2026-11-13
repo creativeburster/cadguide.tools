@@ -559,11 +559,11 @@ export const c2Tools: Tool[] = [
       },
       {
         "label": "SketchUp SKP to GLB Converter",
-        "href": "/toolbox/skp-to-glb"
+        "href": "/convert/skp-to-glb"
       },
       {
         "label": "SketchUp SKP to OBJ Converter",
-        "href": "/toolbox/skp-to-obj"
+        "href": "/convert/skp-to-obj"
       }
     ],
     "pros": [
@@ -1245,7 +1245,7 @@ export const c2Tools: Tool[] = [
       },
       {
         "label": "Rhino 3DM to STL Mesh",
-        "href": "/toolbox/rhino-3dm-to-stl"
+        "href": "/convert/rhino-3dm-to-stl"
       },
       {
         "label": "Cross-Platform CAD Shortcuts",

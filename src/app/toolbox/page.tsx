@@ -1,6 +1,7 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import type { Metadata } from 'next';
 import ToolboxClient from './toolbox-client';
+import { getAllConversionSlugs } from '@/lib/converter-data';
 import Link from 'next/link';
 import { BookOpen, ArrowRight } from 'lucide-react';
 
@@ -12,6 +13,7 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function ToolboxPage() {
+  const convertSlugs = getAllConversionSlugs();
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
@@ -49,7 +51,7 @@ export default function ToolboxPage() {
 
         {/* Toolbox Main List */}
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
-          <ToolboxClient />
+          <ToolboxClient convertSlugs={convertSlugs} />
         </section>
       </main>
     </>

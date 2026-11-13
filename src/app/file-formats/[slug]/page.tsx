@@ -692,7 +692,7 @@ function FormatQuickToolsHub({ slug, formatName }: { slug: string; formatName: s
     );
   } else if (s === 'step' || s === 'iges' || s === 'sldprt' || s === 'catpart' || s === 'nxprt' || s === 'ipt') {
     links.push(
-      { title: 'SLDPRT / CATPart / NX to STEP', badge: 'B-Rep Exchange', href: s === 'catpart' ? '/convert/catpart-to-step' : s === 'nxprt' ? '/convert/nx-prt-to-step' : '/toolbox/sldprt-to-step', desc: 'Lossless neutral ISO 10303-21 B-Rep solid assembly conversion.' },
+      { title: 'SLDPRT / CATPart / NX to STEP', badge: 'B-Rep Exchange', href: s === 'catpart' ? '/convert/catpart-to-step' : s === 'nxprt' ? '/convert/nx-prt-to-step' : '/convert/sldprt-to-step', desc: 'Lossless neutral ISO 10303-21 B-Rep solid assembly conversion.' },
       { title: 'STEP Assembly Defeature & Reducer', badge: 'Size Optimizer', href: '/toolbox/step-file-size-reducer', desc: 'Strip internal fasteners & threads to shrink 300MB+ STEP files.' },
       { title: 'STEP AP203 / AP214 / AP242 Parser', badge: 'PMI Standard', href: '/toolbox/step-file-header-parser', desc: 'Inspect STEP schemas, authoring CAD kernel origins, and units in-browser.' }
     );

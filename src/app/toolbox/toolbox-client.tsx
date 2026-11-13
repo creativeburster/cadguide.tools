@@ -6,7 +6,10 @@ import { TOOLBOX_DATA, TOOLBOX_CATEGORIES, ToolboxItem } from '@/lib/toolbox-dat
 
 const PAGE_SIZE = 12;
 
-export default function ToolboxClient() {
+export default function ToolboxClient({ convertSlugs = [] }: { convertSlugs?: string[] }) {
+  const convertSlugSet = useMemo(() => new Set(convertSlugs), [convertSlugs]);
+  const getToolHref = (slug: string) =>
+    convertSlugSet.has(slug) ? `/convert/${slug}` : `/toolbox/${slug}`;
   const [searchTerm, setSearchTerm] = useState('');
   const [activeCategory, setActiveCategory] = useState<string>('all');
   const [expandedCats, setExpandedCats] = useState<Set<string>>(
@@ -91,7 +94,7 @@ export default function ToolboxClient() {
   const renderToolCard = (item: ToolboxItem) => (
     <Link
       key={item.slug}
-      href={`/toolbox/${item.slug}`}
+      href={getToolHref(item.slug)}
       className="group relative flex flex-col justify-between bg-white border border-slate-100 rounded-3xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-blue-200 transition-all duration-300 overflow-hidden"
     >
       <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-br from-blue-600/5 to-indigo-600/5 rounded-bl-[100px] group-hover:scale-125 transition-transform duration-300"></div>
@@ -294,7 +297,7 @@ export default function ToolboxClient() {
                     {catItems.map((item) => (
                       <li key={item.slug}>
                         <Link
-                          href={`/toolbox/${item.slug}`}
+                          href={getToolHref(item.slug)}
                           className="text-xs font-semibold text-slate-600 hover:text-blue-600 hover:underline block truncate py-0.5"
                         >
                           {item.title}

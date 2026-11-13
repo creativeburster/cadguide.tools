@@ -1396,7 +1396,7 @@ export const c1Tools: Tool[] = [
       },
       {
         "label": "Bentley DGN to STEP Converter",
-        "href": "/toolbox/dgn-to-step"
+        "href": "/convert/dgn-to-step"
       },
       {
         "label": "Online DWG to PDF Cloud Printer",
