@@ -5,7 +5,7 @@ import ConcreteMixDesignCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Concrete Mix Design Calculator",
-  description: "Calculate concrete mix proportions by ACI method.",
+  description: 'Calculate 1 m³ concrete batch weights via the ACI absolute volume method with editable specific gravities, water-cement ratio, air content, and volume conservation verification.',
   path: '/toolbox/concrete-mix-design-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function ConcreteMixDesignCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Concrete Mix Design Calculator", path: '/toolbox/concrete-mix-design-calculator' },
+    { name: 'Concrete Mix Design Calculator', path: '/toolbox/concrete-mix-design-calculator' },
   ]);
 
   return (
@@ -32,7 +32,7 @@ export default function ConcreteMixDesignCalculatorPage() {
               Concrete Mix Design <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate concrete mix proportions by ACI method.
+              Proportion cement, mixing water, coarse aggregate, and fine aggregate per m³ using the ACI absolute volume method with editable specific gravities and strict ΣV = 1.000 m³ conservation.
             </p>
           </div>
         </section>

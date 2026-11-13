@@ -5,7 +5,7 @@ import ConcreteSlabVolumeCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Concrete Slab Volume Calculator",
-  description: "Calculate concrete volume, bags of cement, and cost for slab pours.",
+  description: 'Calculate rectangular or circular concrete slab volume with construction waste margin, ready-mix m³/yd³ quantities, and editable pre-mixed bag yield and cost.',
   path: '/toolbox/concrete-slab-volume-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function ConcreteSlabVolumeCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Concrete Slab Volume Calculator", path: '/toolbox/concrete-slab-volume-calculator' },
+    { name: 'Concrete Slab Volume Calculator', path: '/toolbox/concrete-slab-volume-calculator' },
   ]);
 
   return (
@@ -32,7 +32,7 @@ export default function ConcreteSlabVolumeCalculatorPage() {
               Concrete Slab Volume <span className="text-red-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate concrete volume, bags of cement, and cost for slab pours.
+              Compute net and waste-adjusted concrete volume (m³ and yd³) for rectangular or circular slabs and estimate pre-mixed concrete bag counts from editable bag weight and wet yield.
             </p>
           </div>
         </section>

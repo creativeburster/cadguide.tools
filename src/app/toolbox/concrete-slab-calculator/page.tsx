@@ -5,7 +5,7 @@ import ConcreteSlabCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Concrete Slab Thickness Calculator",
-  description: "Calculate required concrete slab thickness for given load and subgrade modulus.",
+  description: 'Check ACI 318 Table 7.3.1.1 minimum one-way concrete slab thickness with fy modification and calculate flexural and Table 7.6.1.1 minimum reinforcement per meter strip.',
   path: '/toolbox/concrete-slab-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function ConcreteSlabCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Concrete Slab Thickness Calculator", path: '/toolbox/concrete-slab-calculator' },
+    { name: 'Concrete Slab Thickness Calculator', path: '/toolbox/concrete-slab-calculator' },
   ]);
 
   return (
@@ -32,7 +32,7 @@ export default function ConcreteSlabCalculatorPage() {
               Concrete Slab Thickness <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate required concrete slab thickness for given load and subgrade modulus.
+              Check ACI 318 Table 7.3.1.1 minimum thickness for normalweight nonprestressed one-way slabs and compute Whitney stress-block flexural and minimum reinforcement.
             </p>
           </div>
         </section>

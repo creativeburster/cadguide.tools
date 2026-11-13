@@ -5,7 +5,7 @@ import ColumnBucklingClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Euler Column Buckling Load Calculator',
-  description: 'Calculate critical buckling load for columns using Euler and Johnson formulas. Supports pinned, fixed, cantilever, and guided end conditions with material selection.',
+  description: 'Calculate critical buckling load for columns using ideal Euler formula and AISC 360 Chapter E inelastic/elastic design curves with editable K factors.',
   path: '/toolbox/column-buckling-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function ColumnBucklingPage() {
               Euler Column <span className="text-emerald-400">Buckling</span> Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate critical buckling load for columns using Euler and Johnson parabolic formulas. Supports four end-condition types and automatic slenderness ratio transition.
+              Calculate ideal Euler elastic buckling load alongside AISC 360 Chapter E inelastic/elastic compressive capacity, slenderness limit checks, and theoretical or recommended K factors.
             </p>
           </div>
         </section>

@@ -5,7 +5,7 @@ import CompositeSectionCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Composite Section Transform Calculator",
-  description: "Calculate transformed section properties for composite beams.",
+  description: 'Calculate transformed composite beam properties (modular ratio n = E2/E1, neutral axis y-bar, parallel-axis inertia It) and restored bending stresses.',
   path: '/toolbox/composite-section-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CompositeSectionCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Composite Section Transform Calculator", path: '/toolbox/composite-section-calculator' },
+    { name: 'Composite Section Transform Calculator', path: '/toolbox/composite-section-calculator' },
   ]);
 
   return (
@@ -32,7 +32,7 @@ export default function CompositeSectionCalculatorPage() {
               Composite Section Transform <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate transformed section properties for composite beams.
+              Compute modular ratio n = E2/E1, transformed neutral axis, parallel-axis moment of inertia It, and restored bending stresses (including σ2 = n·My/It) for bonded two-material beams.
             </p>
           </div>
         </section>

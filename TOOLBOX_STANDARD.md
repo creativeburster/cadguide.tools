@@ -159,7 +159,8 @@ flowchart LR
 | 11 | casting-shrinkage-calculator、ceiling-grid-calculator、centrifugal-force-calculator、chain-drive-length-calculator、channel-flow-manning-calculator | e2f07eb8～db654ec9（已通过复核，已 push，2026-11-12） |
 | 12 | chiller-load-calculator、chlorine-dose-calculator、cloud-bim-rvt-to-ifc-converter、cloud-cad-telemetry-blocker-wizard、cloud-dwg-drawing-recovery-service | f6f38939～ba80e25f（已通过复核，已 push，2026-11-12） |
 | 13 | cloud-dwg-to-step-iges-converter、cloud-dxf-to-gcode-laser-converter、clutch-torque-calculator、cnc-cycle-time-calculator、cnc-feed-rate-calculator | 1dd07e61～8d66c030（已通过复核，2026-11-12） |
-| 14 | cnc-gcode-feed-calculator、cnc-speeds-feeds-reference、coating-thickness-calculator、color-rgb-to-aci-matchbox、column-base-plate-calculator | 待复核 |
+| 14 | cnc-gcode-feed-calculator、cnc-speeds-feeds-reference、coating-thickness-calculator、color-rgb-to-aci-matchbox、column-base-plate-calculator | f3ba6876～e73a62a6（已通过复核，2026-11-13） |
+| 15 | column-buckling-calculator、composite-section-calculator、concrete-mix-design-calculator、concrete-slab-calculator、concrete-slab-volume-calculator | 待复核 |
 
 ---
 

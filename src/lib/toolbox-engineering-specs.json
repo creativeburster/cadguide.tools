@@ -3441,213 +3441,209 @@
   },
   "column-buckling-calculator": {
     "title": "Euler Column Buckling Calculator",
-    "description": "Calculate critical buckling load for columns using Euler and Johnson formulas. Supports pinned, fixed, cantilever, and guided end conditions with material selection.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "P_cr = (π² × E × I) / (K × L)² • σ_cr = π² × E / (K × L / r)² (Euler Buckling Formula, AISC 360 Chapter E)",
+    "description": "Calculate ideal Euler elastic buckling load and AISC 360 Chapter E inelastic/elastic column compressive capacity with editable theoretical or recommended K factors.",
+    "discipline": "Structural Column Stability & Mechanics of Materials",
+    "standards": "AISC 360 Chapter E (Section E3, Eq. E3-2 & E3-3); Ideal Euler Column Buckling Formula",
+    "cadContext": "Confirm that member end-connection rotational restraint (pinned, fixed, fixed-pinned, or cantilever) modeled in your structural framing drawing matches the effective length factor (K) assumed in calculation.",
+    "formula": "Pe = pi^2*E*I/(K*L)^2; Fe = pi^2*E/(KL/r)^2; AISC 360 E3: KL/r <= 4.71*sqrt(E/Fy) -> Fcr = [0.658^(Fy/Fe)]*Fy, else Fcr = 0.877*Fe; phi_c*Pn = 0.90*Fcr*Ag",
     "inputs": [
       {
-        "label": "Material",
-        "val": "Structural Steel (E=200 GPa, σy=250)"
+        "label": "Elastic Modulus E / Yield Stress Fy",
+        "val": "200 GPa / 250 MPa (A36 Steel)"
       },
       {
-        "label": "End Condition",
-        "val": "Pinned-Pinned"
+        "label": "End Condition & K Factor",
+        "val": "Pinned-Pinned (K = 1.0)"
       },
       {
-        "label": "Column Length (mm)",
+        "label": "Unbraced Length L (mm)",
         "val": "2000"
       },
       {
-        "label": "Section Rectangular Circular Width b (mm)",
-        "val": "40"
+        "label": "Rectangular Section b x h (mm)",
+        "val": "40 x 60"
       },
       {
-        "label": "Height h (mm)",
-        "val": "60"
+        "label": "AISC LRFD Factor phi_c",
+        "val": "0.90"
       }
     ],
     "outputs": [
       {
-        "label": "Critical Buckling Load",
-        "val": "157.91 kN"
+        "label": "Ideal Euler Buckling Load Pe",
+        "val": "157.91 kN (Fe = 65.80 MPa, Py = 600.00 kN)"
+      },
+      {
+        "label": "Slenderness KL/r vs 4.71*sqrt(E/Fy)",
+        "val": "173.2 vs 133.2 (Elastic)"
+      },
+      {
+        "label": "AISC 360 Design Capacity phi_c*Pn",
+        "val": "124.64 kN (Fcr = 57.70 MPa, Pn = 138.49 kN)"
       }
     ]
   },
   "composite-section-calculator": {
     "title": "Composite Section Transform Calculator",
-    "description": "Calculate transformed section properties for composite beams.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "n = E1/E2, A_trans = n*A, I_trans = n*I",
+    "description": "Calculate modular ratio n = E2/E1, transformed neutral axis y-bar, parallel-axis moment of inertia It, and restored bending stresses for bonded two-material beams.",
+    "discipline": "Structural Composite Beams & Mechanics of Materials",
+    "standards": "Transformed-Section Method for Composite Beams; Parallel-Axis (Steiner) Theorem I_x' = I_x + A*d^2",
+    "cadContext": "Keep beam layer heights perpendicular to the neutral axis unchanged when sketching equivalent transformed widths (b2_tr = n*b2), and apply modular ratio n when reading true stress in Material 2.",
+    "formula": "n = E2/E1; y_bar = (A1*y1 + n*A2*y2)/(A1 + n*A2); It = (I1 + A1*d1^2) + (n*I2 + n*A2*d2^2); sigma1 = M*y1/It; sigma2 = n*(M*y2/It)",
     "inputs": [
       {
-        "label": "E1 (GPa)",
-        "val": "200"
+        "label": "Layer 1 (Bottom Base): E1, b1 x h1",
+        "val": "10 GPa, 100 x 200 mm"
       },
       {
-        "label": "E2 (GPa)",
-        "val": "25"
+        "label": "Layer 2 (Top): E2, b2 x h2",
+        "val": "200 GPa, 100 x 20 mm"
       },
       {
-        "label": "Area A1 (cm2)",
-        "val": "50"
-      },
-      {
-        "label": "Inertia I1 (cm4)",
-        "val": "500"
-      },
-      {
-        "label": "Area A2 (cm2)",
-        "val": "300"
-      },
-      {
-        "label": "Inertia I2 (cm4)",
-        "val": "5000"
+        "label": "Applied Bending Moment M",
+        "val": "20 kN*m"
       }
     ],
     "outputs": [
       {
         "label": "Modular Ratio n",
-        "val": "8.000"
+        "val": "20.000 (b2_tr = 2000.0 mm)"
       },
       {
-        "label": "Transformed Area",
-        "val": "700.00 cm2"
+        "label": "Neutral Axis y_bar (from bottom)",
+        "val": "173.33 mm (At = 600.00 cm2)"
       },
       {
-        "label": "Transformed I",
-        "val": "9000.00 cm4"
+        "label": "Transformed Inertia It",
+        "val": "22933.33 cm4"
+      },
+      {
+        "label": "Bottom sigma1 / Top sigma2",
+        "val": "15.12 MPa / 81.40 MPa"
       }
     ]
   },
   "concrete-mix-design-calculator": {
     "title": "Concrete Mix Design Calculator",
-    "description": "Calculate concrete mix proportions by ACI method.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "ACI 211.1 Method: Water adjusted for slump & max aggregate size • Aggregates proportioned by dry-rodded bulk volume",
+    "description": "Proportion cement, water, coarse aggregate, and fine aggregate per m3 using the ACI absolute volume method with editable specific gravities and strict volume conservation.",
+    "discipline": "Civil & Concrete Materials Engineering",
+    "standards": "ACI Absolute Volume Method (Pavement Interactive PCC Mix Design Reference; cement SG = 3.15, water = 1000 kg/m3)",
+    "cadContext": "Replace typical default specific gravities (cement 3.15, coarse 2.68, fine 2.64) with local quarry SSD laboratory test values before finalizing ready-mix batch sheets.",
+    "formula": "M_c = M_w / (w/c); M_ca = (b/b0)*DRUW; V_i = M_i / (1000*SG_i); V_fa = 1.000 - (V_w + V_c + V_ca + V_air); M_fa = V_fa*1000*SG_fa",
     "inputs": [
       {
-        "label": "Target Strength (MPa)",
-        "val": "30"
+        "label": "Water Content / w/c Ratio",
+        "val": "180 kg/m3 / 0.45"
       },
       {
-        "label": "WC Ratio",
-        "val": "0.45"
+        "label": "Air Content / Coarse b/b0 / DRUW",
+        "val": "2.0% / 0.65 / 1600 kg/m3"
       },
       {
-        "label": "Slump (mm)",
-        "val": "75"
-      },
-      {
-        "label": "Agg Size (mm)",
-        "val": "20"
+        "label": "Specific Gravities (Cement / Coarse / Fine)",
+        "val": "3.15 / 2.68 / 2.64"
       }
     ],
     "outputs": [
       {
-        "label": "Cement Content",
-        "val": "422.22 kg/m³"
+        "label": "Portland Cement",
+        "val": "400.00 kg/m3 (0.1270 m3)"
       },
       {
         "label": "Net Mixing Water",
-        "val": "190.00 kg/m³"
+        "val": "180.00 kg/m3 (0.1800 m3)"
       },
       {
-        "label": "Fine Agg (Sand)",
-        "val": "750.98 kg/m³"
+        "label": "Fine Aggregate (Sand)",
+        "val": "752.28 kg/m3 (0.2850 m3)"
       },
       {
-        "label": "Coarse Agg (Stone)",
-        "val": "1036.80 kg/m³"
+        "label": "Coarse Aggregate (Stone)",
+        "val": "1040.00 kg/m3 (0.3881 m3)"
+      },
+      {
+        "label": "Total Volume Balance / Density",
+        "val": "1.0000 m3 / 2372.28 kg/m3"
       }
     ]
   },
   "concrete-slab-calculator": {
     "title": "Concrete Slab Thickness Calculator",
-    "description": "Calculate required concrete slab thickness for given load and subgrade modulus.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "t = sqrt(6*M/fc), M = q*a^2/8 for simply supported",
+    "description": "Check ACI 318 Table 7.3.1.1 minimum one-way solid slab thickness and calculate Whitney stress-block flexural and Table 7.6.1.1 minimum reinforcement per meter strip.",
+    "discipline": "Reinforced Concrete Structural Engineering",
+    "standards": "ACI 318 Table 7.3.1.1 (Minimum Thickness of Solid Nonprestressed One-Way Slabs) & Table 7.6.1.1 (Minimum Shrinkage and Temperature Reinforcement)",
+    "cadContext": "Apply ACI 318 Table 7.3.1.1 minimum thickness only to normalweight nonprestressed solid one-way slabs; verify clear cover and bar spacing directly on reinforcement CAD details.",
+    "formula": "h_min = (l/ratio)*(0.4 + fy/700); Mu = wu*l^2/C; a = As*fy/(0.85*fc*b); phi*Mn = phi*As*fy*(d - a/2); As_min = max(0.0018*420/fy, 0.0014)*b*h",
     "inputs": [
       {
-        "label": "Load q (kN/m2)",
-        "val": "10"
+        "label": "Support Condition & Clear Span l",
+        "val": "Simply Supported (l/20), 4.0 m"
       },
       {
-        "label": "Span a (m)",
-        "val": "4"
+        "label": "Adopted Thickness h / Cover Offset",
+        "val": "200 mm / 25 mm (d = 175 mm)"
       },
       {
-        "label": "Concrete fc (MPa)",
-        "val": "25"
+        "label": "Factored Load wu / Moment Coeff C",
+        "val": "12 kN/m2 / C = 8"
       },
       {
-        "label": "Steel fy (MPa)",
-        "val": "400"
+        "label": "Concrete f'c / Steel fy / phi",
+        "val": "28 MPa / 420 MPa / 0.90"
       }
     ],
     "outputs": [
       {
-        "label": "Moment",
-        "val": "20.000 kNm/m"
+        "label": "ACI 318 Min Thickness h_min",
+        "val": "200.0 mm (Pass: h >= h_min)"
       },
       {
-        "label": "Min Thickness",
-        "val": "143.00 mm"
+        "label": "Factored Moment Mu",
+        "val": "24.00 kN*m/m"
       },
       {
-        "label": "Steel Area",
-        "val": "542.00 mm2/m"
+        "label": "Governing Steel Area As",
+        "val": "369.70 mm2/m (Min As = 360.00 mm2/m)"
+      },
+      {
+        "label": "Design Capacity phi*Mn",
+        "val": "24.00 kN*m/m (a = 6.52 mm)"
       }
     ]
   },
   "concrete-slab-volume-calculator": {
     "title": "Concrete Slab Volume Calculator",
-    "description": "Calculate concrete volume, bags of cement, and cost for slab pours.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "V = L*W*T, bags = V/m3_per_bag",
+    "description": "Calculate rectangular or circular concrete slab volume with construction waste allowance, ready-mix quantities, and pre-mixed bag counts from editable bag mass and yield.",
+    "discipline": "Civil & Concrete Quantity Estimating",
+    "standards": "Geometric Slab Volume & QUIKRETE Concrete Mix No. 1101 Yield Data Sheet (80 lb / 36.2 kg -> 17 L; 60 lb / 27.2 kg -> 12.7 L; 40 lb / 18.1 kg -> 8.5 L)",
+    "cadContext": "Extract net slab footprint areas from CAD/BIM schedules and always edit bag weight and wet yield per bag to match local supplier packaging before procurement.",
+    "formula": "V_net = L*W*(T/1000) or pi*(D^2/4)*(T/1000); V_order = V_net*(1 + waste/100); bags = ceil(1000*V_order/yield_L)",
     "inputs": [
       {
-        "label": "Length (m)",
+        "label": "Geometry & Dimensions",
+        "val": "Rectangular 10 m x 5 m x 150 mm"
+      },
+      {
+        "label": "Waste Margin (%)",
         "val": "10"
       },
       {
-        "label": "Width (m)",
-        "val": "5"
-      },
-      {
-        "label": "Thickness (mm)",
-        "val": "150"
-      },
-      {
-        "label": "Bag Size (kg)",
-        "val": "40"
-      },
-      {
-        "label": "Bag Cost ($)",
-        "val": "8"
+        "label": "Bag Weight / Wet Yield / Cost",
+        "val": "36.2 kg / 17.0 L/bag / $8"
       }
     ],
     "outputs": [
       {
-        "label": "Volume",
-        "val": "7.500 m3"
+        "label": "Order Volume (incl. 10% waste)",
+        "val": "8.250 m3 (Net: 7.500 m3, 10.791 yd3)"
       },
       {
         "label": "Bags Needed",
-        "val": "450.00"
+        "val": "486 bags"
       },
       {
-        "label": "Total Cost",
-        "val": "3600.00 $"
+        "label": "Total Material Cost",
+        "val": "$3888.00"
       }
     ]
   },
