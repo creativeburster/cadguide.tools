@@ -376,18 +376,17 @@ export function collectionPageLd(opts: {
 
 /** Simple breadcrumb payload for non-tool pages, plus SoftwareApplication JSON-LD for toolbox utilities. */
 export function siteBreadcrumbLd(items: { name: string; path: string }[]) {
-  const filtered = items.filter((it) => it.path !== "/" && it.path !== "");
   const breadcrumbList = {
     "@type": "BreadcrumbList",
-    itemListElement: filtered.map((it, i) => ({
+    itemListElement: items.map((it, i) => ({
       "@type": "ListItem",
       position: i + 1,
       name: it.name,
-      item: `${SITE_URL}${it.path}`,
+      item: it.path === "/" || it.path === "" ? SITE_URL : `${SITE_URL}${it.path}`,
     })),
   };
 
-  const last = filtered[filtered.length - 1];
+  const last = items[items.length - 1];
   if (last && last.path.startsWith("/toolbox/") && last.path !== "/toolbox") {
     const slug = last.path.replace(/^\/toolbox\//, "");
     const tbItem = TOOLBOX_DATA.find((t) => t.slug === slug);

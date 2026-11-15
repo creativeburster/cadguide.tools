@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { SECTOR_PAGES, toolsForSector } from '@/lib/seo-content';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'CAD Software by Sector & Industry Vertical',
@@ -30,8 +30,17 @@ const SECTOR_COLORS: Record<string, { badge: string; border: string }> = {
 };
 
 export default function SectorsIndexPage() {
+  const breadcrumbs = siteBreadcrumbLd([
+    { name: 'Home', path: '/' },
+    { name: 'By Sector', path: '/sectors' },
+  ]);
+
   return (
     <main className="min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <article className="max-w-5xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <nav className="text-sm text-slate-500 mb-6">
           <Link href="/" className="hover:underline">Home</Link>{' / '}

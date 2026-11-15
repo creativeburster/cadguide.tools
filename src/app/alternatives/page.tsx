@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import { tools, categories } from '@/lib/data';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolLogo } from '@/components/tool-logo';
 
 export const metadata: Metadata = pageMetadata({
@@ -33,6 +33,10 @@ function popularSwitchAwayTargets() {
 
 export default function AlternativesIndexPage() {
   const popular = popularSwitchAwayTargets();
+  const breadcrumbs = siteBreadcrumbLd([
+    { name: 'Home', path: '/' },
+    { name: 'Alternatives', path: '/alternatives' },
+  ]);
 
   // Helper to get sorted tools for a category
   const getToolsInCategory = (catId: string) => {
@@ -43,6 +47,10 @@ export default function AlternativesIndexPage() {
 
   return (
     <main className="min-h-screen bg-slate-50 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       <article className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16">
         <nav className="text-sm text-slate-500 mb-6">
           <Link href="/" className="hover:underline">Home</Link>{' / '}

@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 import { PRICING_PAGES } from '@/lib/pricing-licensing-content';
 import { tools } from '@/lib/data';
-import { pageMetadata } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   title: 'CAD Software Pricing Models | CADGuide.tools',
@@ -41,8 +41,17 @@ function getToolsCount(slug: string): number {
 }
 
 export default function PricingIndexPage() {
+  const breadcrumbs = siteBreadcrumbLd([
+    { name: 'Home', path: '/' },
+    { name: 'Pricing', path: '/pricing' },
+  ]);
+
   return (
     <main className="min-h-screen bg-slate-50 pb-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
       {/* Visual Header Accent */}
       <div className="w-full h-1.5 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500" />
 

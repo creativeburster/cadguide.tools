@@ -12,6 +12,7 @@ import {
   FileCode2
 } from 'lucide-react';
 import { getAllConversionPairs, CONVERTER_CATEGORIES } from '@/lib/converter-data';
+import { siteBreadcrumbLd } from '@/lib/seo';
 import { ConvertHubClient } from './convert-hub-client';
 
 export const dynamic = 'force-static';
@@ -44,6 +45,10 @@ export const metadata: Metadata = {
 
 export default function ConvertHubPage() {
   const allPairs = getAllConversionPairs();
+  const breadcrumbs = siteBreadcrumbLd([
+    { name: 'Home', path: '/' },
+    { name: '3D Converters', path: '/convert' },
+  ]);
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -67,6 +72,10 @@ export default function ConvertHubPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
       />
 
       {/* Hero Section */}
