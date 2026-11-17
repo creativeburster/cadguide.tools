@@ -6,7 +6,7 @@ import DuctSizeClient from './calculator-client';
 export const metadata: Metadata = pageMetadata({
   title: 'HVAC Air Duct Sizing & Friction Loss Calculator | CADGuide.tools',
   description:
-    'Calculate rectangular and round air duct sizes, air velocity, and static friction head loss under ASHRAE standards using Colebrook/Haaland equations.',
+    'Calculate rectangular and round air duct sizes, air velocity, Huebscher equivalent diameter, and Darcy-Weisbach friction loss via Colebrook.',
   path: '/toolbox/duct-size-friction-loss-calculator',
 });
 

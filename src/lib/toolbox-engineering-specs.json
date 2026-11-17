@@ -4484,59 +4484,83 @@
   },
   "drilling-time-calculator": {
     "title": "Drilling Time & Thrust Calculator",
-    "description": "Calculate drilling time, thrust force, and torque for twist drilling operations.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "t = L/(f*n), Thrust = 0.5*sigma*f*d",
+    "description": "Calculate twist drilling machining time (including point tip travel), feed rate, MRR, net cutting power, and torque.",
+    "discipline": "CNC Machining & Hole-Making Kinematics",
+    "standards": "Classical Twist-Drilling Kinematics & Specific Cutting Force Mechanics (kc reference estimate)",
+    "cadContext": "Account for the drill point cone height l_tip = d / (2 * tan(theta/2)) when programming through-hole Z-axis depths in CAM drilling cycles.",
+    "formula": "L_tot = L + l_app + d/(2*tan(theta/2)); vf = fn*n; tm = 60*L_tot/vf; Pc = pi*d^2*vf*kc/2.4e8; Mc = d^2*fn*kc/8000",
     "inputs": [
       {
-        "label": "Hole Depth (mm)",
+        "label": "Hole Depth L (mm)",
         "val": "25"
       },
       {
-        "label": "Drill Dia (mm)",
+        "label": "Drill Diameter d (mm)",
         "val": "10"
       },
       {
-        "label": "Feed (mm/rev)",
-        "val": "0.2"
+        "label": "Point Angle (deg)",
+        "val": "118"
       },
       {
-        "label": "Spindle Speed (RPM)",
+        "label": "Hole Mode",
+        "val": "through"
+      },
+      {
+        "label": "Approach l_app (mm)",
+        "val": "2"
+      },
+      {
+        "label": "Feed fn (mm/rev)",
+        "val": "0.20"
+      },
+      {
+        "label": "Spindle Speed n (RPM)",
         "val": "800"
       },
       {
-        "label": "Material Strength (MPa)",
-        "val": "500"
+        "label": "Specific Cutting Force kc (N/mm2)",
+        "val": "2000"
       }
     ],
     "outputs": [
       {
-        "label": "Drilling Time",
-        "val": "9.375 s"
+        "label": "Machining Time",
+        "val": "11.252 s"
       },
       {
-        "label": "Thrust Force",
-        "val": "250.00 N"
+        "label": "Feed Rate (vf)",
+        "val": "160.00 mm/min"
       },
       {
-        "label": "Torque",
-        "val": "0.625000 Nm"
+        "label": "Cutting Speed (Vc)",
+        "val": "25.133 m/min"
+      },
+      {
+        "label": "Net Power (Pc)",
+        "val": "0.4189 kW"
+      },
+      {
+        "label": "Torque (Mc)",
+        "val": "5.000 N*m"
       }
     ]
   },
   "drywall-quantity-calculator": {
     "title": "Drywall Sheet Quantity Calculator",
-    "description": "Calculate number of drywall sheets, screws, and joint compound needed.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "sheets = ceil(A*(1+waste)/sheet_area)",
+    "description": "Calculate gypsum drywall sheet count (with openings deduction and waste), estimated screws, and joint compound.",
+    "discipline": "Interior Framing & Drywall Quantity Takeoff",
+    "standards": "Geometric Area Takeoff with Editable Fastener & Joint Compound Planning Allowances",
+    "cadContext": "Extract net interior partition and soffit areas from BIM room schedules after subtracting door and window openings before ordering gypsum board.",
+    "formula": "A_net = A_gross - A_openings; Sheets = ceil(A_net*(1+waste/100)/(W_s*L_s)); Screws = Sheets*screwsPerSheet",
     "inputs": [
       {
-        "label": "Wall Area (m2)",
+        "label": "Gross Wall/Ceiling Area (m2)",
         "val": "100"
+      },
+      {
+        "label": "Openings Deduction (m2)",
+        "val": "0"
       },
       {
         "label": "Sheet Width (m)",
@@ -4549,127 +4573,180 @@
       {
         "label": "Waste Factor (%)",
         "val": "10"
+      },
+      {
+        "label": "Screws / Sheet (Est.)",
+        "val": "32"
+      },
+      {
+        "label": "Compound Rate (kg/m2)",
+        "val": "0.45"
       }
     ],
     "outputs": [
       {
         "label": "Sheets Needed",
-        "val": "39.000"
+        "val": "39 sheets"
       },
       {
-        "label": "Screws",
-        "val": "1560.00"
+        "label": "Estimated Screws",
+        "val": "1248 pcs"
       },
       {
         "label": "Joint Compound",
-        "val": "19.500 kg"
+        "val": "49.50 kg"
+      },
+      {
+        "label": "Net Area",
+        "val": "100.00 m2"
       }
     ]
   },
   "duct-pressure-loss-calculator": {
     "title": "Duct Pressure Loss Calculator",
-    "description": "Calculate total pressure loss in HVAC ducts from friction and fittings.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "dP = f*L/D*0.5*rho*v^2 + K*0.5*rho*v^2",
+    "description": "Calculate total pressure loss in circular HVAC ducts using Darcy-Weisbach and Colebrook friction equations.",
+    "discipline": "HVAC Fluid Flow & Ductwork Hydraulics",
+    "standards": "Darcy-Weisbach Equation & Colebrook Equation (Engineering ToolBox d_646 / d_1031 / d_209)",
+    "cadContext": "Sum straight duct segment lengths and fitting K-factors from HVAC BIM runs to verify total static pressure drop against fan capacity.",
+    "formula": "dP_major = lambda*(L/D)*0.5*rho*v^2; dP_minor = sum(K)*0.5*rho*v^2; 1/lambda^0.5 = -2*log10(2.51/(Re*lambda^0.5) + (k/D)/3.72)",
     "inputs": [
       {
-        "label": "Airflow (m3/h)",
+        "label": "Airflow Q (m3/h)",
         "val": "2000"
       },
       {
-        "label": "Duct Dia (mm)",
+        "label": "Duct Dia D (mm)",
         "val": "300"
       },
       {
-        "label": "Length (m)",
+        "label": "Duct Length L (m)",
         "val": "20"
       },
       {
-        "label": "Fitting K",
-        "val": "2"
+        "label": "Wall Roughness k (mm)",
+        "val": "0.15"
+      },
+      {
+        "label": "Sum of Fitting K",
+        "val": "2.0"
+      },
+      {
+        "label": "Air Density (kg/m3)",
+        "val": "1.204"
+      },
+      {
+        "label": "Kinematic Viscosity (m2/s)",
+        "val": "0.00001516"
       }
     ],
     "outputs": [
       {
-        "label": "Velocity",
+        "label": "Air Velocity (v)",
         "val": "7.860 m/s"
       },
       {
-        "label": "Friction Loss",
-        "val": "49.417 Pa"
+        "label": "Major Friction Loss",
+        "val": "47.797 Pa"
       },
       {
         "label": "Fitting Loss",
-        "val": "74.126 Pa"
+        "val": "74.373 Pa"
       },
       {
-        "label": "Total Loss",
-        "val": "123.54 Pa"
+        "label": "Total Pressure Loss",
+        "val": "122.170 Pa"
+      },
+      {
+        "label": "Friction Factor (lambda)",
+        "val": "0.01928"
       }
     ]
   },
   "duct-size-friction-loss-calculator": {
     "title": "HVAC Air Duct Sizing & Friction Loss Calculator",
-    "description": "Calculate rectangular and round air duct sizes, air velocity, and static friction head loss under ASHRAE standards using Colebrook/Haaland equations.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "D_e = 1.30 × ((a × b)^0.625) / ((a + b)^0.25) (Huebscher Equation, ASHRAE Fundamentals) • ΔP = f × (L / D_h) × (ρ × v² / 2)",
+    "description": "Calculate round and rectangular duct velocity, Huebscher equivalent diameter, hydraulic diameter, and Colebrook friction loss per meter.",
+    "discipline": "HVAC Fluid Flow & Ductwork Hydraulics",
+    "standards": "Huebscher Equivalent Diameter Equation, Darcy-Weisbach & Colebrook Equations (Engineering ToolBox d_205 / d_646 / d_1031 / d_209)",
+    "cadContext": "Convert architectural ceiling-void rectangular duct constraints (width x height) into equivalent circular diameters using the Huebscher equation.",
+    "formula": "de = 1.30*(a*b)^0.625 / (a+b)^0.25; Dh = 2*a*b/(a+b); dP/L = lambda*rho*v^2/(2*Dh)",
     "inputs": [
-      {
-        "label": "1. Duct Shape",
-        "val": "Nominal"
-      },
-      {
-        "label": "Width a mm",
-        "val": "Nominal"
-      },
-      {
-        "label": "Height b mm",
-        "val": "Nominal"
-      },
-      {
-        "label": "4. Material absolute roughness",
-        "val": "Nominal"
-      }
-    ],
-    "outputs": []
-  },
-  "duct-sizing-calculator": {
-    "title": "HVAC Duct Sizing Calculator",
-    "description": "Calculate duct diameter or dimensions from airflow and velocity for HVAC systems.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "A = Q / v • Huebscher Equivalent: De = 1.30·(a·b)^0.625 / (a + b)^0.25 • Δp/L = 0.018·v^1.9 / D^1.2",
-    "inputs": [
-      {
-        "label": "Airflow Q (m3/h)",
-        "val": "1000"
-      },
-      {
-        "label": "Velocity v (m/s)",
-        "val": "5"
-      },
       {
         "label": "Duct Shape",
-        "val": "Circular Duct (Round)"
+        "val": "round"
+      },
+      {
+        "label": "Airflow Rate Q (m3/h)",
+        "val": "1500"
+      },
+      {
+        "label": "Round Diameter D (mm)",
+        "val": "300"
+      },
+      {
+        "label": "Wall Roughness k (mm)",
+        "val": "0.15"
+      },
+      {
+        "label": "Air Density (kg/m3)",
+        "val": "1.204"
       }
     ],
     "outputs": [
       {
-        "label": "Net Flow Area (A)",
-        "val": "0.055556 m²"
+        "label": "Velocity",
+        "val": "5.895 m/s"
+      },
+      {
+        "label": "Friction Loss",
+        "val": "1.3891 Pa/m"
+      },
+      {
+        "label": "Equivalent Dia (De)",
+        "val": "300.00 mm"
+      },
+      {
+        "label": "Friction Factor (lambda)",
+        "val": "0.01992"
+      }
+    ]
+  },
+  "duct-sizing-calculator": {
+    "title": "HVAC Duct Sizing Calculator",
+    "description": "Size circular and rectangular HVAC ducts from design airflow and target air velocity, with Colebrook friction loss check.",
+    "discipline": "HVAC Fluid Flow & Ductwork Hydraulics",
+    "standards": "Constant-Velocity Sizing, Huebscher Equivalent Diameter & Darcy-Weisbach / Colebrook Equations (d_205 / d_646 / d_1031)",
+    "cadContext": "Establish preliminary duct envelope dimensions from room CFM/m3h loads and maximum acoustic velocity limits before 3D MEP routing.",
+    "formula": "A_req = Q/v; D = sqrt(4*A_req/pi); de = 1.30*(a*b)^0.625/(a+b)^0.25; dP/L = lambda*rho*v_act^2/(2*Dh)",
+    "inputs": [
+      {
+        "label": "Airflow Q (m3/h)",
+        "val": "1800"
+      },
+      {
+        "label": "Target Velocity (m/s)",
+        "val": "5.0"
+      },
+      {
+        "label": "Duct Shape",
+        "val": "circular"
+      },
+      {
+        "label": "Wall Roughness k (mm)",
+        "val": "0.15"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Required Flow Area",
+        "val": "0.1000 m2"
       },
       {
         "label": "Internal Diameter (D)",
-        "val": "265.96 mm"
+        "val": "356.82 mm"
       },
       {
-        "label": "Specific Friction Loss Rate (Δp/L)",
-        "val": "1.877 Pa/m (ASHRAE Duct Friction Equation)"
+        "label": "Specific Friction Loss",
+        "val": "0.8246 Pa/m"
       }
     ]
   },
