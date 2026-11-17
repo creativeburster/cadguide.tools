@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import EdmMaterialRemovalCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "EDM Material Removal Rate Calculator",
-  description: "Calculate EDM material removal rate from discharge energy and frequency.",
+  title: "EDM Pulse Energy & Material Removal Calculator",
+  description: "Calculate EDM pulse frequency, duty cycle, single-pulse energy, average discharge power, and estimated material removal rate.",
   path: '/toolbox/edm-material-removal-calculator',
 });
 

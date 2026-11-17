@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import EgressWidthCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Egress Width & Occupant Load Calculator (IBC 2021)",
-  description: "Calculate building occupant load, required egress width, and minimum number of exits per IBC 2021 occupancy classifications.",
+  title: "Egress Width & Occupant Load Calculator (IBC Chapter 10)",
+  description: "Calculate occupant load, stair and level egress capacity widths, and minimum exits based on IBC Chapter 10 methodology.",
   path: '/toolbox/egress-width-calculator',
 });
 

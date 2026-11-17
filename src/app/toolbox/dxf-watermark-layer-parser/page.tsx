@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import DxfParserClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'DXF Educational Watermark Detector & ASCII Layer Parser',
+  title: 'DXF $ACADVER & ASCII Layer Table Parser',
   description:
-    'Scan ASCII DXF drawing files locally to detect Autodesk educational version registry stamps. Extract active drawing layers, ACI color indices, and linetypes securely inside your browser.',
+    'Inspect ASCII DXF drawing files locally in your browser. Extract $ACADVER format headers and LAYER table attributes (ACI color, linetype, frozen, locked, plottable flags).',
   path: '/toolbox/dxf-watermark-layer-parser',
 });
 
@@ -14,7 +14,7 @@ export default function DxfParserPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'DXF Watermark & Layer Parser', path: '/toolbox/dxf-watermark-layer-parser' },
+    { name: 'DXF Header & Layer Parser', path: '/toolbox/dxf-watermark-layer-parser' },
   ]);
 
   return (
@@ -36,10 +36,10 @@ export default function DxfParserPage() {
               100% Local File Analyzer
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              DXF Educational <span className="text-blue-400">Watermark Scanner</span> & Layer Parser
+              ASCII DXF <span className="text-blue-400">Header &amp; Layer</span> Parser
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Analyze ASCII DXF drawings locally in your browser. Scan for printing border watermarks and audit layer tables without uploading files to any server.
+              Analyze ASCII DXF drawings locally in your browser. Inspect $ACADVER release headers and active LAYER table records without uploading files.
             </p>
           </div>
         </section>

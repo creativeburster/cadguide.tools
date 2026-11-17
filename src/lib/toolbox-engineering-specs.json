@@ -4752,145 +4752,237 @@
   },
   "dwg-version-checker": {
     "title": "AutoCAD DWG Version Checker",
-    "description": "Identify your CAD DWG file version instantly. Upload or drag-and-drop a .dwg drawing to detect its AutoCAD format (e.g. AC1032, AC1027) and test software support tables.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for AutoCAD DWG Version Checker",
-    "inputs": [],
-    "outputs": []
-  },
-  "dxf-watermark-layer-parser": {
-    "title": "DXF Educational Watermark Scanner & Layer Parser",
-    "description": "Scan ASCII DXF drawing files locally to detect Autodesk educational version registry stamps. Extract active drawing layers, ACI color indices, and linetypes securely inside your browser.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for DXF Educational Watermark Scanner & Layer Parser",
-    "inputs": [],
-    "outputs": []
-  },
-  "edm-material-removal-calculator": {
-    "title": "EDM Material Removal Rate Calculator",
-    "description": "Calculate EDM material removal rate from discharge energy and frequency.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "MRR = K * I * Ton * f",
+    "description": "Inspect the 6-byte ASCII DWG header prefix (AC1009-AC1032) locally in your browser or look up official AutoCAD release codes.",
+    "discipline": "CAD File Format Header Inspection",
+    "standards": "Autodesk AutoCAD DXF Reference HEADER ($ACADVER AC1006-AC1032)",
+    "cadContext": "Verify the target DWG release code (such as AC1032 for AutoCAD 2018-2026 or AC1027 for AutoCAD 2013-2017) before sharing drawings with teams on older CAD releases.",
+    "formula": "Read first 6 ASCII bytes of binary .dwg file header matching AC10xx database codes",
     "inputs": [
       {
-        "label": "Peak Current (A)",
-        "val": "20"
-      },
-      {
-        "label": "Pulse On Time (us)",
-        "val": "100"
-      },
-      {
-        "label": "Frequency (kHz)",
-        "val": "10"
-      },
-      {
-        "label": "Material K",
-        "val": "0.001"
+        "label": "Magic Header Code",
+        "val": "AC1032"
       }
     ],
     "outputs": [
       {
-        "label": "MRR",
-        "val": "1200000 mm3/min"
+        "label": "Release Format",
+        "val": "AutoCAD 2018 Format (used by AutoCAD 2018-2026)"
       },
       {
-        "label": "Surface Finish",
-        "val": "2.000 um Ra"
+        "label": "Introduced Year",
+        "val": "2018"
+      }
+    ]
+  },
+  "dxf-watermark-layer-parser": {
+    "title": "ASCII DXF Header & Layer Table Parser",
+    "description": "Parse ASCII DXF $ACADVER header and LAYER symbol table group codes (2, 6, 62, 70, 290) read-only inside your browser.",
+    "discipline": "CAD File Format & Layer Table Auditing",
+    "standards": "Autodesk AutoCAD DXF Reference LAYER Table (Group codes 2, 6, 62, 70, 290) & HEADER ($ACADVER)",
+    "cadContext": "Audit frozen (flag bit 1), locked (flag bit 4), turned-off (negative group code 62), and non-plottable (group code 290 = 0) layers prior to plotting or issuing CAD deliverables.",
+    "formula": "State-machine parser over ASCII DXF TABLE/LAYER group codes",
+    "inputs": [
+      {
+        "label": "Source File",
+        "val": "sample_architecture.dxf"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "$ACADVER",
+        "val": "AC1032"
+      },
+      {
+        "label": "Total Layers",
+        "val": "4"
+      },
+      {
+        "label": "Off / Frozen / Locked",
+        "val": "1 / 1 / 1"
+      }
+    ]
+  },
+  "edm-material-removal-calculator": {
+    "title": "EDM Pulse Energy & Material Removal Calculator",
+    "description": "Calculate EDM pulse period, frequency, duty cycle, single-pulse energy, average power, and estimated material removal rate.",
+    "discipline": "Electrical Discharge Machining (EDM) Pulse Kinematics",
+    "standards": "Pulse Train Timing, Discharge Power Physics & Editable Technology Removal Coefficient (eta_mrr)",
+    "cadContext": "Balance roughing vs. finishing EDM pulse on/off durations before exporting sinker electrode offsets and overburn spark gaps from 3D mold CAD.",
+    "formula": "Tp = Ton + Toff; fp = 1000/Tp; D = Ton/Tp; Ep = Vd*Ip*Ton*1e-6; I_avg = Ip*D; MRR = eta_mrr*I_avg",
+    "inputs": [
+      {
+        "label": "Gap Voltage Vd (V)",
+        "val": "25"
+      },
+      {
+        "label": "Peak Current Ip (A)",
+        "val": "20"
+      },
+      {
+        "label": "Pulse On Ton (us)",
+        "val": "100"
+      },
+      {
+        "label": "Pulse Off Toff (us)",
+        "val": "50"
+      },
+      {
+        "label": "Cavity Volume (mm3)",
+        "val": "1500"
+      },
+      {
+        "label": "Coeff eta (mm3/min/A)",
+        "val": "6.5"
+      },
+      {
+        "label": "Electrode Wear Ratio (%)",
+        "val": "1.5"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Estimated MRR",
+        "val": "86.667 mm3/min"
+      },
+      {
+        "label": "Duty Cycle",
+        "val": "66.67 %"
+      },
+      {
+        "label": "Pulse Frequency",
+        "val": "6.667 kHz"
+      },
+      {
+        "label": "Pulse Energy (Ep)",
+        "val": "0.0500 J"
+      },
+      {
+        "label": "Avg Power",
+        "val": "333.33 W"
+      },
+      {
+        "label": "Sparking Time",
+        "val": "17.308 min"
       }
     ]
   },
   "egress-width-calculator": {
-    "title": "Egress Width Calculator",
-    "description": "Calculate building occupant load, required egress width, and minimum number of exits per IBC 2021 occupancy classifications.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "IBC 2021: load = area / factor, stair = load × 0.3in/occ, level = load × 0.2in/occ",
+    "title": "Egress Width & Occupant Load Calculator (IBC Chapter 10)",
+    "description": "Calculate occupant load, stair and level egress capacity widths, and minimum exits using exact NIST SP 811 unit conversions.",
+    "discipline": "Architectural Fire & Life Safety Egress Sizing",
+    "standards": "IBC Chapter 10 Egress Methodology (Table 1004.5 Occupant Load, Sec 1005.3 Capacity Factors, Sec 1006 Exit Count) & Exact Conversions (1 ft2 = 0.09290304 m2)",
+    "cadContext": "Check door clear leaf widths, exit corridor dimensions, and stair flight widths on architectural life-safety floor plans against calculated occupant load.",
+    "formula": "Load = ceil(Area / OLF); StairWidth = Load * stairFactor; LevelWidth = Load * levelFactor",
     "inputs": [
       {
-        "label": "Floor Area ( m² )",
+        "label": "Unit System",
+        "val": "metric"
+      },
+      {
+        "label": "Floor Area (m2)",
         "val": "500"
       },
       {
-        "label": "Occupancy Type",
-        "val": "Business (Office)"
+        "label": "Occupancy Preset",
+        "val": "Business Area (150 ft2/occ ref = 13.9355 m2/occ)"
+      },
+      {
+        "label": "Stair Factor (in/occ)",
+        "val": "0.3"
+      },
+      {
+        "label": "Level Factor (in/occ)",
+        "val": "0.2"
       }
     ],
     "outputs": [
       {
         "label": "Occupant Load",
-        "val": "54"
+        "val": "36 persons"
       },
       {
-        "label": "Stair Width",
-        "val": "410 mm"
+        "label": "Min Exits Required",
+        "val": "2 exits"
       },
       {
-        "label": "Level Egress",
-        "val": "275 mm"
+        "label": "Calculated Stair Width",
+        "val": "274.32 mm"
       },
       {
-        "label": "Minimum Exits Required",
-        "val": "2"
+        "label": "Calculated Level Width",
+        "val": "182.88 mm"
       }
     ]
   },
   "elevator-traffic-calculator": {
-    "title": "Elevator Traffic Analysis & Wait Time Calculator",
-    "description": "Calculate elevator round-trip time, handling capacity, and average wait time.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "RTT = (2H/v) + t_stop·S + t_passenger·P • Interval = RTT / N_cars • Target Interval < 30s (CIBSE Guide D)",
+    "title": "Up-Peak Elevator Traffic & Round-Trip Time Calculator",
+    "description": "Calculate probabilistic stops (S), highest reversal floor (H), round-trip time (RTT), interval, and 5-minute handling capacity.",
+    "discipline": "Vertical Transportation & Up-Peak Traffic Analysis",
+    "standards": "Classical Barney Up-Peak Probabilistic Round-Trip Time Formulation",
+    "cadContext": "Size elevator shaft banks, lobby waiting areas, and core structural cutouts in high-rise BIM models based on target 5-minute handling capacity and interval.",
+    "formula": "S = N*(1-((N-1)/N)^P); H = N - sum((j/N)^P); RTT = 2*H*df/v + (S+1)*ts + 2*P*tp; HC5 = 300*P*L/RTT",
     "inputs": [
       {
-        "label": "Building Population (persons)",
+        "label": "Population (persons)",
         "val": "800"
       },
       {
-        "label": "Served Floors Above Lobby",
+        "label": "Floors Above Lobby (N)",
         "val": "16"
       },
       {
-        "label": "Floor-to-Floor Height (m)",
+        "label": "Floor Height df (m)",
         "val": "3.8"
       },
       {
-        "label": "Number of Elevator Cars in Bank",
+        "label": "Number of Cars (L)",
         "val": "4"
       },
       {
-        "label": "Car Capacity (persons)",
-        "val": "13"
+        "label": "Car Capacity (pax)",
+        "val": "16"
       },
       {
-        "label": "Rated Car Speed (m/s)",
+        "label": "Load Factor (%)",
+        "val": "80"
+      },
+      {
+        "label": "Rated Speed v (m/s)",
         "val": "2.5"
+      },
+      {
+        "label": "Stop Loss Time ts (s)",
+        "val": "8.0"
+      },
+      {
+        "label": "Passenger Transfer tp (s/pax)",
+        "val": "1.2"
       }
     ],
     "outputs": [
       {
-        "label": "5-Minute Handling Capacity (HC5)",
-        "val": "16.9 %"
+        "label": "5-Min Capacity (%POP)",
+        "val": "12.22 %"
       },
       {
-        "label": "Lobby Waiting Interval (UP-Peak)",
-        "val": "28.8 seconds"
+        "label": "Up-Peak Interval",
+        "val": "39.28 s"
       },
       {
         "label": "Round Trip Time (RTT)",
-        "val": "115.1 seconds"
+        "val": "157.12 s"
       },
       {
-        "label": "Probable Stops per Round Trip",
-        "val": "7.8 stops"
+        "label": "Probable Stops (S)",
+        "val": "8.996"
+      },
+      {
+        "label": "Highest Floor (H)",
+        "val": "15.274"
+      },
+      {
+        "label": "5-Min Throughput",
+        "val": "97.76 pax/5m"
       }
     ]
   },

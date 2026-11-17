@@ -1,13 +1,12 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import DwgVersionCheckerClient from './checker-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'DWG Version Checker & Compatibility Matrix',
+  title: 'DWG Version Checker & Header Explorer',
   description:
-    'Identify your CAD DWG file version instantly. Upload or drag-and-drop a .dwg drawing to detect its AutoCAD format (e.g. AC1032, AC1027) and test software support tables.',
+    'Identify your CAD DWG file version locally in your browser. Drop a .dwg file to inspect its 6-byte magic header (AC1009-AC1032) and release format.',
   path: '/toolbox/dwg-version-checker',
 });
 

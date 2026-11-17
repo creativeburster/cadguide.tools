@@ -1,129 +1,81 @@
 'use client';
 
-import { useState, DragEvent, ChangeEvent } from 'react';
+import React, { useState, DragEvent, ChangeEvent } from 'react';
+import { Download, Copy, Check, Info } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
 
 interface VersionInfo {
   code: string;
   year: string;
-  released: string;
-  compatibility: {
-    autocad: 'full' | 'partial' | 'none';
-    gstarcad: 'full' | 'partial' | 'none';
-    zwcad: 'full' | 'partial' | 'none';
-    dwgfastview: 'full' | 'partial' | 'none';
-  };
+  firstReleaseYear: string;
+  sourceNote: string;
   desc: string;
 }
 
+// Verified against Autodesk AutoCAD DXF Reference HEADER ($ACADVER) and Autodesk DWG format specifications
 const VERSION_MAP: Record<string, VersionInfo> = {
   AC1032: {
     code: 'AC1032',
-    year: 'AutoCAD 2018 - 2027',
-    released: '2018',
-    compatibility: {
-      autocad: 'full',
-      gstarcad: 'full',
-      zwcad: 'full',
-      dwgfastview: 'full',
-    },
-    desc: 'The current standard DWG format. Highly optimized for performance and handles dynamic blocks and multi-core CAD engines natively.',
+    year: 'AutoCAD 2018 Format (used by AutoCAD 2018-2026)',
+    firstReleaseYear: '2018',
+    sourceNote: 'AutoCAD DXF Reference ($ACADVER: AC1032 = AutoCAD 2018)',
+    desc: 'Drawing database format introduced in AutoCAD 2018. Supported natively for read/write by AutoCAD 2018 through 2026 and current ODA/IntelliCAD-based CAD tools.',
   },
   AC1027: {
     code: 'AC1027',
-    year: 'AutoCAD 2013 - 2017',
-    released: '2013',
-    compatibility: {
-      autocad: 'full',
-      gstarcad: 'full',
-      zwcad: 'full',
-      dwgfastview: 'full',
-    },
-    desc: 'Widely used legacy format. Excellent compatibility with virtually all modern and older alternative CAD systems.',
+    year: 'AutoCAD 2013 Format (AutoCAD 2013-2017)',
+    firstReleaseYear: '2013',
+    sourceNote: 'AutoCAD DXF Reference ($ACADVER: AC1027 = AutoCAD 2013)',
+    desc: 'Drawing format introduced in AutoCAD 2013. Commonly used as a save-down exchange format when collaborating with legacy CAD installations.',
   },
   AC1024: {
     code: 'AC1024',
-    year: 'AutoCAD 2010 - 2012',
-    released: '2010',
-    compatibility: {
-      autocad: 'full',
-      gstarcad: 'full',
-      zwcad: 'full',
-      dwgfastview: 'full',
-    },
-    desc: 'Older DWG version. Read/write support is universally integrated into modern tools with minimal overhead.',
+    year: 'AutoCAD 2010 Format (AutoCAD 2010-2012)',
+    firstReleaseYear: '2010',
+    sourceNote: 'AutoCAD DXF Reference ($ACADVER: AC1024 = AutoCAD 2010)',
+    desc: 'Drawing format introduced in AutoCAD 2010. Read and write support is widely integrated across modern and legacy DWG-compatible editors.',
   },
   AC1021: {
     code: 'AC1021',
-    year: 'AutoCAD 2007 - 2009',
-    released: '2007',
-    compatibility: {
-      autocad: 'full',
-      gstarcad: 'full',
-      zwcad: 'full',
-      dwgfastview: 'full',
-    },
-    desc: 'Introduced Unicode support to DWG. Universally supported by all alternative and viewing tools.',
+    year: 'AutoCAD 2007 Format (AutoCAD 2007-2009)',
+    firstReleaseYear: '2007',
+    sourceNote: 'AutoCAD DXF Reference ($ACADVER: AC1021 = AutoCAD 2007)',
+    desc: 'Drawing format introduced in AutoCAD 2007 with Unicode text encoding support.',
   },
   AC1018: {
     code: 'AC1018',
-    year: 'AutoCAD 2004 - 2006',
-    released: '2004',
-    compatibility: {
-      autocad: 'full',
-      gstarcad: 'full',
-      zwcad: 'full',
-      dwgfastview: 'full',
-    },
-    desc: 'Highly compressed format from the mid-2000s. Completely supported.',
+    year: 'AutoCAD 2004 Format (AutoCAD 2004-2006)',
+    firstReleaseYear: '2004',
+    sourceNote: 'AutoCAD DXF Reference ($ACADVER: AC1018 = AutoCAD 2004)',
+    desc: 'Drawing format introduced in AutoCAD 2004.',
   },
   AC1015: {
     code: 'AC1015',
-    year: 'AutoCAD 2000 - 2002',
-    released: '2000',
-    compatibility: {
-      autocad: 'full',
-      gstarcad: 'full',
-      zwcad: 'full',
-      dwgfastview: 'full',
-    },
-    desc: 'Classic CAD format. All modern CAD software can read and save back to this format for legacy system integration.',
+    year: 'AutoCAD 2000 Format (AutoCAD 2000/2000i/2002)',
+    firstReleaseYear: '2000',
+    sourceNote: 'AutoCAD DXF Reference ($ACADVER: AC1015 = AutoCAD 2000)',
+    desc: 'AutoCAD 2000 drawing database format, frequently retained for legacy CAM and CNC interoperability.',
   },
   AC1014: {
     code: 'AC1014',
     year: 'AutoCAD Release 14',
-    released: '1997',
-    compatibility: {
-      autocad: 'full',
-      gstarcad: 'full',
-      zwcad: 'full',
-      dwgfastview: 'full',
-    },
-    desc: 'Legacy Release 14 DWG. Autodesk dropped write support in some versions, but alternatives still read it perfectly.',
+    firstReleaseYear: '1997',
+    sourceNote: 'AutoCAD DXF Reference ($ACADVER: AC1014 = R14)',
+    desc: 'AutoCAD Release 14 format.',
   },
   AC1012: {
     code: 'AC1012',
     year: 'AutoCAD Release 13',
-    released: '1994',
-    compatibility: {
-      autocad: 'full',
-      gstarcad: 'full',
-      zwcad: 'full',
-      dwgfastview: 'full',
-    },
-    desc: 'Extremely old layout format. Primarily used for archiving ancient blueprints.',
+    firstReleaseYear: '1994',
+    sourceNote: 'AutoCAD DXF Reference ($ACADVER: AC1012 = R13)',
+    desc: 'AutoCAD Release 13 drawing database format.',
   },
   AC1009: {
     code: 'AC1009',
     year: 'AutoCAD Release 11 / 12',
-    released: '1990',
-    compatibility: {
-      autocad: 'full',
-      gstarcad: 'full',
-      zwcad: 'full',
-      dwgfastview: 'full',
-    },
-    desc: 'Relic DWG/DXF format from early 90s. Used for CNC machine backward-compatibility plotting.',
+    firstReleaseYear: '1990',
+    sourceNote: 'AutoCAD DXF Reference ($ACADVER: AC1009 = R11 and R12)',
+    desc: 'AutoCAD R11/R12 format commonly referenced for basic 2D legacy CAD/CAM interchange.',
   },
 };
 
@@ -131,91 +83,82 @@ export default function DwgVersionCheckerClient() {
   const [isDragging, setIsDragging] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [result, setResult] = useState<VersionInfo | null>(null);
+  const [result, setResult] = useState<VersionInfo | null>(VERSION_MAP.AC1032);
   const [fileName, setFileName] = useState<string | null>(null);
   const [fileSize, setFileSize] = useState<string | null>(null);
+  const [manualCode, setManualCode] = useState('AC1032');
+  const [copied, setCopied] = useState(false);
+
+  const inspectHeaderBytes = (magicRaw: string, name: string, sizeLabel: string) => {
+    const magic = magicRaw.trim().toUpperCase();
+    if (!magic.startsWith('AC') || magic.length < 6) {
+      setResult(null);
+      setError('Invalid DWG header: first 6 ASCII bytes must start with "AC" (for example AC1032).');
+      return;
+    }
+    const header6 = magic.slice(0, 6);
+    const match = VERSION_MAP[header6];
+    setError(null);
+    setFileName(name);
+    setFileSize(sizeLabel);
+    setManualCode(header6);
+    if (match) {
+      setResult(match);
+    } else {
+      setResult({
+        code: header6,
+        year: `Unmapped AC Header (${header6})`,
+        firstReleaseYear: 'Unknown',
+        sourceNote: 'Detected 6-byte ASCII prefix not present in standard AC1009-AC1032 map.',
+        desc: `Detected header '${header6}'. This may correspond to a pre-R11 release (such as AC1006 = R10) or a non-standard writer.`,
+      });
+    }
+  };
 
   const parseDwgHeader = (file: File) => {
     setLoading(true);
     setError(null);
-    setResult(null);
-    setFileName(file.name);
-    
-    // Format file size
     const sizeInKb = file.size / 1024;
-    setFileSize(sizeInKb > 1024 ? `${(sizeInKb / 1024).toFixed(2)} MB` : `${sizeInKb.toFixed(1)} KB`);
-
+    const sizeLabel = sizeInKb > 1024 ? `${(sizeInKb / 1024).toFixed(2)} MB` : `${sizeInKb.toFixed(1)} KB`;
     const reader = new FileReader();
-    
     reader.onload = (e) => {
       try {
         const buffer = e.target?.result as ArrayBuffer;
         if (!buffer || buffer.byteLength < 6) {
-          throw new Error('File is too small to be a valid DWG file.');
+          throw new Error('File is smaller than 6 bytes and cannot contain a valid DWG magic header.');
         }
-
         const bytes = new Uint8Array(buffer);
         let magic = '';
         for (let i = 0; i < 6; i++) {
           magic += String.fromCharCode(bytes[i]);
         }
-
-        if (!magic.startsWith('AC')) {
-          throw new Error('This file does not appear to be a standard AutoCAD DWG drawing. Magic header prefix is missing.');
-        }
-
-        const match = VERSION_MAP[magic];
-        if (match) {
-          setResult(match);
-        } else {
-          // If it starts with AC but we don't know the specific version code
-          setResult({
-            code: magic,
-            year: 'Unknown / Pre-release AutoCAD',
-            released: 'N/A',
-            compatibility: {
-              autocad: 'partial',
-              gstarcad: 'partial',
-              zwcad: 'partial',
-              dwgfastview: 'full',
-            },
-            desc: `Recognized header '${magic}', but it does not map to a standard release year. It could be an export from an incompatible 3rd party CAD system or an extremely early version.`,
-          });
-        }
+        inspectHeaderBytes(magic, file.name, sizeLabel);
       } catch (err: unknown) {
-        setError((err instanceof Error ? err.message : '') || 'An error occurred while parsing the DWG header.');
+        setResult(null);
+        setError((err instanceof Error ? err.message : '') || 'Failed to parse DWG header bytes.');
       } finally {
         setLoading(false);
       }
     };
-
-    reader.onloadend = () => {};
-
     reader.onerror = () => {
-      setError('Failed to read the file.');
+      setResult(null);
+      setError('Failed to read the local file.');
       setLoading(false);
     };
-
-    // Slice first 6 bytes to read fast
-    const slice = file.slice(0, 6);
-    reader.readAsArrayBuffer(slice);
+    reader.readAsArrayBuffer(file.slice(0, 6));
   };
 
   const handleDrag = (e: DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
-    if (e.type === 'dragenter' || e.type === 'dragover') {
-      setIsDragging(true);
-    } else if (e.type === 'dragleave') {
-      setIsDragging(false);
-    }
+    if (e.type === 'dragenter' || e.type === 'dragover') setIsDragging(true);
+    else if (e.type === 'dragleave') setIsDragging(false);
   };
 
   const handleDrop = (e: DragEvent<HTMLDivElement>) => {
     e.preventDefault();
     e.stopPropagation();
     setIsDragging(false);
-
     if (e.dataTransfer.files && e.dataTransfer.files[0]) {
       parseDwgHeader(e.dataTransfer.files[0]);
     }
@@ -231,252 +174,221 @@ export default function DwgVersionCheckerClient() {
     setError(null);
     setFileName(null);
     setFileSize(null);
+    setManualCode(code);
     setResult(VERSION_MAP[code]);
   };
 
-  const renderBadge = (status: 'full' | 'partial' | 'none') => {
-    switch (status) {
-      case 'full':
-        return (
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-base font-black bg-emerald-500/10 text-emerald-600 border border-emerald-500/20">
-            ● Read & Write (Full)
-          </span>
-);
-      case 'partial':
-        return (
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-base font-black bg-amber-500/10 text-amber-600 border border-amber-500/20">
-            ▲ Read Only / Viewer
-          </span>
-);
-      case 'none':
-        return (
-          <span className="inline-flex items-center px-3 py-1 rounded-full text-base font-black bg-rose-500/10 text-rose-600 border border-rose-500/20">
-            × Unsupported
-          </span>
-);
+  const handleSampleParse = (code: string) => {
+    inspectHeaderBytes(`${code}\0\0`, `sample_${code.toLowerCase()}.dwg`, '128.0 KB (Simulated 6-Byte Header)');
+  };
+
+  const handleManualLookup = () => {
+    const clean = manualCode.trim().toUpperCase();
+    if (!clean) {
+      setResult(null);
+      setError('Enter a 6-character DWG header code such as AC1032 or upload a .dwg file.');
+      return;
+    }
+    inspectHeaderBytes(clean, 'Manual Header Lookup', '-');
+  };
+
+  const handleCopySummary = async () => {
+    if (!result) return;
+    const text = [
+      'DWG Format Version Inspection Report',
+      `Magic Header Code: ${result.code}`,
+      `Release Format: ${result.year}`,
+      `Format Introduced: ${result.firstReleaseYear}`,
+      `Source Reference: ${result.sourceNote}`,
+      `Details: ${result.desc}`,
+    ].join('\n');
+    try {
+      if (!navigator.clipboard?.writeText) return;
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
     }
   };
 
+  const handleExportCsv = () => {
+    const rows = [
+      ['Header Code', 'AutoCAD Release Format', 'Introduced Year', 'Selected', 'Reference'],
+      ...Object.values(VERSION_MAP).map((v) => [
+        v.code,
+        v.year,
+        v.firstReleaseYear,
+        result?.code === v.code ? 'Active' : '-',
+        v.sourceNote,
+      ]),
+    ];
+    const csv = rows
+      .map((r) => r.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(','))
+      .join('\n')
+      .replace(/[^\x20-\x7E\r\n\t]/g, '');
+    const blob = new Blob([csv], { type: 'text/csv;charset=ascii' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `dwg-version-reference-${result?.code || 'table'}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <div className="space-y-16">
-      {/* Upload/Drop Area */}
-      <div className="relative group">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 rounded-[32px] blur-xl opacity-10 group-hover:opacity-20 transition duration-300"></div>
+    <div className="space-y-10">
+      <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
         <div
           onDragEnter={handleDrag}
           onDragOver={handleDrag}
           onDragLeave={handleDrag}
           onDrop={handleDrop}
-          className={`relative border-2 border-dashed rounded-[32px] text-center transition-all duration-300 flex flex-col items-center justify-center backdrop-blur-md bg-white/60 dark:bg-slate-900/60 shadow-lg ${
-            result ? 'min-h-[110px] p-6' : 'min-h-[320px] p-12'
-          } ${
-            isDragging
-              ? 'border-blue-600 bg-blue-50/50 scale-[0.99]'
-              : 'border-slate-200 hover:border-blue-500/50'
+          className={`relative border-2 border-dashed rounded-2xl p-8 text-center transition-all ${
+            isDragging ? 'border-blue-600 bg-blue-50/60' : 'border-slate-200 hover:border-blue-400'
           }`}
         >
           <input
             type="file"
             id="dwg-file-input"
+            data-testid="input-dwg-file"
             accept=".dwg"
             onChange={handleFileChange}
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
           />
-
-          {result ? (
-            <div className="flex flex-col md:flex-row items-center gap-4 w-full justify-center">
-              <div className="w-10 h-10 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                </svg>
-              </div>
-              <div className="text-center md:text-left">
-                <h4 className="text-lg font-bold text-slate-800">
-                  Analyze another DWG drawing?
-                </h4>
-                <p className="text-base text-slate-500 font-medium">
-                  Drag & drop here or <span className="text-blue-600 font-bold underline">browse files</span>. Client-side local processing.
-                </p>
-              </div>
-            </div>
-          ) : (
-            <>
-              <div className="w-16 h-16 bg-blue-50 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition duration-300">
-                <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
-                </svg>
-              </div>
-
-              <h3 className="text-xl font-bold text-slate-800 mb-2">
-                Drag & Drop your DWG file here
-              </h3>
-              <p className="text-lg text-slate-500 mb-6 max-w-sm">
-                Or <span className="text-blue-600 font-bold underline">browse files</span> on your device.
-                Processing is 100% local — your data never leaves your browser.
-              </p>
-              <div className="text-sm text-slate-400 font-bold uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-full border border-slate-100">
-                Pure client-side WebAssembly / JS
-              </div>
-            </>
-          )}
-        </div>
-      </div>
-
-      {/* Parsing Status / Loading */}
-      {loading && (
-        <div className="flex flex-col items-center justify-center py-10">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-600 mb-4"></div>
-          <p className="text-lg text-slate-500 font-bold">Analyzing file bytes...</p>
-        </div>
-)}
-
-      {/* Error State */}
-      {error && (
-        <div className="bg-rose-50 border border-rose-100 rounded-3xl p-6 flex items-start gap-4">
-          <div className="text-rose-600 text-2xl font-bold">⚠️</div>
-          <div>
-            <h4 className="font-bold text-rose-800 mb-1">Failed to analyze file</h4>
-            <p className="text-lg text-rose-600">{error}</p>
-          </div>
-        </div>
-)}
-
-      {/* Result Display */}
-      {result && (
-        <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-8 animate-fadeIn">
-          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 pb-6 border-b border-slate-100">
-            <div>
-              <div className="text-base font-bold text-blue-600 uppercase tracking-widest mb-1">
-                Detected Format Header: {result.code}
-              </div>
-              <h2 className="text-3xl font-black text-slate-900">
-                {result.year}
-              </h2>
-              {fileName && (
-                <p className="text-lg text-slate-500 mt-2 font-medium">
-                  File: <span className="text-slate-800 font-bold">{fileName}</span> ({fileSize})
-                </p>
-)}
-            </div>
-            <div className="bg-slate-50 px-6 py-4 rounded-2xl border border-slate-100 text-center md:text-right">
-              <div className="text-base font-bold text-slate-400 uppercase tracking-widest">Released Year</div>
-              <div className="text-2xl font-black text-slate-700">{result.released}</div>
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="md:col-span-2 space-y-4">
-              <h3 className="text-lg font-bold text-slate-800">Format Description</h3>
-              <p className="text-slate-600 leading-relaxed text-lg">{result.desc}</p>
-            </div>
-            <div className="bg-blue-50/50 rounded-2xl p-6 border border-blue-50">
-              <h4 className="text-base font-black text-blue-800 uppercase tracking-wider mb-2">SEO Suggestion</h4>
-              <p className="text-base text-blue-600 leading-relaxed">
-                Need to collaborate with users on different versions? Make sure to save down to <strong>AC1027 (2013 Format)</strong> if your clients run legacy AutoCAD 2014-2016 clients.
-              </p>
-            </div>
-          </div>
-
-          {/* Compatibility Grid */}
-          <div className="space-y-4">
-            <h3 className="text-lg font-bold text-slate-800">Software Compatibility Grid</h3>
-            <div className="overflow-x-auto">
-              <table className="w-full text-left border-collapse text-lg">
-                <thead>
-                  <tr className="border-b border-slate-100">
-                    <th className="py-3 font-bold text-slate-500 uppercase tracking-wider">CAD Platform</th>
-                    <th className="py-3 font-bold text-slate-500 uppercase tracking-wider">Support Level</th>
-                    <th className="py-3 font-bold text-slate-500 uppercase tracking-wider">Note</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-50">
-                  <tr>
-                    <td className="py-4 font-bold text-slate-800">Autodesk AutoCAD (2018+)</td>
-                    <td className="py-4">{renderBadge(result.compatibility.autocad)}</td>
-                    <td className="py-4 text-base text-slate-500">Native format ownership. Supports full object mapping.</td>
-                  </tr>
-                  <tr>
-                    <td className="py-4 font-bold text-slate-800">GstarCAD (2024+)</td>
-                    <td className="py-4">{renderBadge(result.compatibility.gstarcad)}</td>
-                    <td className="py-4 text-base text-slate-500">Excellent 1:1 format compatibility, native reading and fast saving.</td>
-                  </tr>
-                  <tr>
-                    <td className="py-4 font-bold text-slate-800">ZWCAD (2024+)</td>
-                    <td className="py-4">{renderBadge(result.compatibility.zwcad)}</td>
-                    <td className="py-4 text-base text-slate-500">Full block rendering and DWG database fidelity.</td>
-                  </tr>
-                  <tr>
-                    <td className="py-4 font-bold text-slate-800">DWG FastView (Mobile & Web)</td>
-                    <td className="py-4">{renderBadge(result.compatibility.dwgfastview)}</td>
-                    <td className="py-4 text-base text-slate-500">Best lightweight mobile viewer for this specific layout.</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-)}
-
-      {/* Manual Selection Dropdown */}
-      <div className="bg-slate-50 rounded-3xl border border-slate-100 p-8 space-y-6">
-        <div>
-          <h3 className="text-lg font-bold text-slate-800 mb-1">
-            Manual Code Explorer
+          <h3 className="text-lg font-black text-slate-900 mb-1">
+            Drop a local .dwg file or click to inspect its 6-byte magic header
           </h3>
-          <p className="text-base text-slate-500">
-            No drawing file handy? Manually inspect any DWG header code to test its cross-platform CAD software support matrix.
+          <p className="text-sm text-slate-500 font-medium">
+            Reads only the first 6 bytes (`AC10xx`) via browser FileReader API. Zero server uploads.
           </p>
         </div>
-        <div className="flex flex-wrap gap-3">
-          {Object.keys(VERSION_MAP).map((code) => (
+
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-4 items-end">
+          <div className="md:col-span-5">
+            <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
+              Lookup by Magic Header Code
+            </label>
+            <div className="flex gap-2">
+              <input
+                type="text"
+                data-testid="input-header-code"
+                value={manualCode}
+                onChange={(e) => setManualCode(e.target.value)}
+                placeholder="AC1032"
+                className="flex-1 h-11 px-3.5 rounded-xl bg-slate-50 border border-slate-200 text-base font-mono font-bold text-slate-900"
+              />
+              <button
+                type="button"
+                data-testid="btn-lookup-code"
+                onClick={handleManualLookup}
+                className="px-4 h-11 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-extrabold cursor-pointer"
+              >
+                Inspect Code
+              </button>
+            </div>
+          </div>
+          <div className="md:col-span-7 flex flex-wrap gap-2 justify-start md:justify-end">
             <button
-              key={code}
-              onClick={() => handleManualSelect(code)}
-              className={`px-4 py-2 rounded-xl text-base font-black border transition-all ${
-                result?.code === code
-                  ? 'bg-blue-600 border-blue-600 text-white shadow-lg shadow-blue-500/20'
-                  : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
-              }`}
+              type="button"
+              data-testid="btn-sample-ac1027"
+              onClick={() => handleSampleParse('AC1027')}
+              className="px-3.5 py-2.5 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 border border-blue-200 text-xs font-extrabold cursor-pointer"
             >
-              {code} ({VERSION_MAP[code].year.split(' ')[0]})
+              Test Sample AC1027 File
             </button>
-))}
-        </div>
-      </div>
-
-      {/* Interactive FAQ Section */}
-      <div className="space-y-6">
-        <h3 className="text-2xl font-black text-slate-900">DWG Version Compatibility FAQ</h3>
-        <div className="grid md:grid-cols-2 gap-6">
-          <div className="bg-white border border-slate-100 rounded-2xl p-6">
-            <h4 className="font-bold text-slate-800 mb-2">What is a DWG magic header code?</h4>
-            <p className="text-base text-slate-500 leading-relaxed">
-              Every DWG file begins with a 6-byte ascii code (e.g. AC1032) indicating the format database version it was written in. The CAD program reads this code first to decide whether it can unpack the vector data.
-            </p>
-          </div>
-          <div className="bg-white border border-slate-100 rounded-2xl p-6">
-            <h4 className="font-bold text-slate-800 mb-2">Why can&apos;t my AutoCAD open a newer DWG?</h4>
-            <p className="text-base text-slate-500 leading-relaxed">
-              Autodesk AutoCAD is not forward-compatible. If you run AutoCAD 2017 (AC1027), you cannot open a DWG saved in AutoCAD 2018 format (AC1032). You must convert it using a newer viewer or an alternative CAD tool.
-            </p>
-          </div>
-          <div className="bg-white border border-slate-100 rounded-2xl p-6">
-            <h4 className="font-bold text-slate-800 mb-2">Are alternative CAD tools 100% compatible?</h4>
-            <p className="text-base text-slate-500 leading-relaxed">
-              Modern IntelliCAD and ODA-based engines (GstarCAD, ZWCAD, etc.) are native DWG systems. They can read and write standard DWG formats directly without conversion, matching Autodesk&apos;s structural fidelity.
-            </p>
-          </div>
-          <div className="bg-white border border-slate-100 rounded-2xl p-6">
-            <h4 className="font-bold text-slate-800 mb-2">Is my file safe when dragging into this page?</h4>
-            <p className="text-base text-slate-500 leading-relaxed">
-              Yes, absolutely. We only use the local HTML5 FileReader API to read the first 6 characters in your browser. The file is never uploaded to any remote server or third-party database.
-            </p>
+            <button
+              type="button"
+              data-testid="copy-summary-button"
+              onClick={handleCopySummary}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-extrabold cursor-pointer"
+            >
+              {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+              {copied ? 'Copied' : 'Copy Result'}
+            </button>
+            <button
+              type="button"
+              data-testid="export-csv-button"
+              onClick={handleExportCsv}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-extrabold cursor-pointer"
+            >
+              <Download className="w-3.5 h-3.5" />
+              Export CSV Table
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Newsletter Hook */}
+      {loading && (
+        <div className="text-center py-6 text-slate-500 font-bold">Reading first 6 bytes...</div>
+      )}
+
+      {error && (
+        <div data-testid="validation-error" className="bg-rose-50 border border-rose-200 rounded-2xl p-5 text-rose-700 font-bold text-sm">
+          {error}
+        </div>
+      )}
+
+      <div className="bg-white rounded-3xl border border-slate-200 p-7 shadow-sm space-y-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-5 border-b border-slate-100">
+          <div>
+            <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">
+              Detected Header Code:{' '}
+              <span data-testid="result-code">{result ? result.code : '—'}</span>
+            </div>
+            <h2 className="text-2xl font-black text-slate-900" data-testid="result-year">
+              {result ? result.year : '—'}
+            </h2>
+            {fileName && (
+              <p className="text-sm text-slate-500 mt-1 font-medium">
+                Source: <span className="font-bold text-slate-800">{fileName}</span> ({fileSize})
+              </p>
+            )}
+          </div>
+          <div className="bg-slate-50 px-5 py-3 rounded-2xl border border-slate-100 text-left md:text-right">
+            <div className="text-xs font-bold text-slate-400 uppercase tracking-wider">Introduced</div>
+            <div className="text-xl font-black text-slate-800" data-testid="result-released">
+              {result ? result.firstReleaseYear : '—'}
+            </div>
+          </div>
+        </div>
+
+        <p className="text-sm text-slate-600 leading-relaxed font-medium">
+          {result ? result.desc : 'No valid header detected.'}
+        </p>
+
+        <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-xs text-slate-600 flex items-start gap-2">
+          <Info className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
+          <div>
+            <strong>Format Compatibility Note:</strong> AutoCAD releases are backward-compatible (newer releases open older AC10xx formats), not forward-compatible. Verify third-party CAD platform DWG version support against each vendor&apos;s release documentation.
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          <h3 className="text-sm font-black text-slate-800 uppercase tracking-wider">
+            Verified AutoCAD $ACADVER / DWG Header Codes
+          </h3>
+          <div className="flex flex-wrap gap-2.5">
+            {Object.keys(VERSION_MAP).map((code) => (
+              <button
+                key={code}
+                type="button"
+                data-testid={`btn-code-${code}`}
+                onClick={() => handleManualSelect(code)}
+                className={`px-3.5 py-2 rounded-xl text-xs font-extrabold border transition-all cursor-pointer ${
+                  result?.code === code
+                    ? 'bg-blue-600 border-blue-600 text-white'
+                    : 'bg-white border-slate-200 text-slate-700 hover:border-blue-300'
+                }`}
+              >
+                {code} ({VERSION_MAP[code].firstReleaseYear})
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <RelatedTools />
     </div>
-);
+  );
 }

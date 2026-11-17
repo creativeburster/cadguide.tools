@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Elevator Traffic Analysis & Wait Time Calculator",
-  description: "Calculate elevator round-trip time, handling capacity, and average wait time.",
+  title: "Up-Peak Elevator Traffic & Round-Trip Time Calculator",
+  description: "Calculate up-peak probable stops (S), highest reversal floor (H), round-trip time (RTT), interval, and 5-minute handling capacity.",
   path: '/toolbox/elevator-traffic-calculator',
 });
 
