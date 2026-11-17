@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { FileText, Upload, AlertTriangle, CheckCircle, TrendingUp, Shield, HelpCircle, Play } from 'lucide-react';
+import { FileText, Upload, AlertTriangle, CheckCircle, Shield, Play, Download, Copy, Check, RotateCcw } from 'lucide-react';
 
 interface DenialRecord {
   time: string;
@@ -16,72 +16,66 @@ interface UsagePoint {
   count: number;
 }
 
-const DEMO_LOG_DATA = `9:01:05 (adskflex) OUT: "87224ACD_2024_0F" designer01@WORKSTATION01
-9:02:15 (adskflex) OUT: "87224ACD_2024_0F" designer02@WORKSTATION02
-9:05:40 (adskflex) OUT: "86815REVIT_2023_0F" architect01@BIM-DESK01
-9:07:11 (adskflex) DENIED: "87224ACD_2024_0F" engineer03@LAPTOP-B (Max seat limit reached)
-9:15:33 (adskflex) IN: "87224ACD_2024_0F" designer01@WORKSTATION01
-9:20:00 (adskflex) OUT: "87224ACD_2024_0F" designer04@PC-CAD05
-9:22:12 (adskflex) DENIED: "87224ACD_2024_0F" designer01@WORKSTATION01 (User not in INCLUDE list)
-9:35:10 (adskflex) IN: "87224ACD_2024_0F" designer02@WORKSTATION02
-9:42:05 (adskflex) OUT: "86815REVIT_2023_0F" architect02@BIM-DESK02
-9:55:18 (adskflex) OUT: "87224ACD_2024_0F" designer03@WORKSTATION03
-10:10:44 (adskflex) IN: "86815REVIT_2023_0F" architect01@BIM-DESK01
-10:15:22 (adskflex) DENIED: "86815REVIT_2023_0F" engineer04@LAPTOP-C (License expired)
-10:30:11 (adskflex) OUT: "87224ACD_2024_0F" designer05@PC-CAD06
-11:00:00 (adskflex) IN: "87224ACD_2024_0F" designer04@PC-CAD05`;
+interface FeatureStats {
+  feature: string;
+  outCount: number;
+  inCount: number;
+  denialCount: number;
+  peakConcurrent: number;
+}
+
+const DEMO_LOG_DATA = `9:01:05 (adskflex) OUT: "FEATURE_2D" designer01@WORKSTATION01
+9:02:15 (adskflex) OUT: "FEATURE_2D" designer02@WORKSTATION02
+9:05:40 (adskflex) OUT: "FEATURE_BIM" architect01@BIM-DESK01
+9:07:11 (adskflex) DENIED: "FEATURE_2D" engineer03@LAPTOP-B (Max seat limit reached)
+9:15:33 (adskflex) IN: "FEATURE_2D" designer01@WORKSTATION01
+9:20:00 (adskflex) OUT: "FEATURE_2D" designer04@PC-CAD05
+9:22:12 (adskflex) DENIED: "FEATURE_2D" designer01@WORKSTATION01 (User not in INCLUDE list)
+9:35:10 (adskflex) IN: "FEATURE_2D" designer02@WORKSTATION02
+9:42:05 (adskflex) OUT: "FEATURE_BIM" architect02@BIM-DESK02
+9:55:18 (adskflex) OUT: "FEATURE_2D" designer03@WORKSTATION03
+10:10:44 (adskflex) IN: "FEATURE_BIM" architect01@BIM-DESK01
+10:15:22 (adskflex) DENIED: "FEATURE_BIM" engineer04@LAPTOP-C (License expired)
+10:30:11 (adskflex) OUT: "FEATURE_2D" designer05@PC-CAD06
+11:00:00 (adskflex) IN: "FEATURE_2D" designer04@PC-CAD05`;
+
+function toSafeAscii(input: string): string {
+  return input.replace(/[^\x20-\x7E\r\n\t]/g, '');
+}
 
 export default function FlexlmLogAnalyzerClient() {
-  const [logText, setLogText] = useState('');
-  const [fileName, setFileName] = useState<string | null>(null);
-  const [isDragging, setIsDragging] = useState(false);
+  const [logText, setLogText] = useState(DEMO_LOG_DATA);
+  const [fileName, setFileName] = useState<string>('demo_license_debug.log');
+  const [copied, setCopied] = useState(false);
 
-  // File loading handler
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
     setFileName(file.name);
     const reader = new FileReader();
     reader.onload = (event) => {
-      setLogText(event.target?.result as string || '');
+      setLogText(typeof event.target?.result === 'string' ? event.target.result : '');
     };
     reader.readAsText(file);
   };
 
-  // Drag and drop handlers
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(true);
-  };
-
-  const handleDragLeave = () => {
-    setIsDragging(false);
-  };
-
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false);
-    const file = e.dataTransfer.files?.[0];
-    if (file) {
-      setFileName(file.name);
-      const reader = new FileReader();
-      reader.onload = (event) => {
-        setLogText(event.target?.result as string || '');
-      };
-      reader.readAsText(file);
-    }
-  };
-
   const loadDemoData = () => {
-    setFileName('demo_lmgrd_debug.log');
+    setFileName('demo_license_debug.log');
     setLogText(DEMO_LOG_DATA);
+    setCopied(false);
   };
 
-  // Parsing Engine
-  const analysisResults = useMemo(() => {
-    if (!logText) return null;
+  const clearLog = () => {
+    setFileName('none');
+    setLogText('');
+    setCopied(false);
+  };
 
-    const lines = logText.split('\n');
+  const analysis = useMemo(() => {
+    const trimmed = logText.trim();
+    if (!trimmed) return null;
+
+    const lines = logText.split(/\r?\n/).filter((l) => l.trim().length > 0);
     let outCount = 0;
     let inCount = 0;
     let currentConcurrent = 0;
@@ -89,71 +83,67 @@ export default function FlexlmLogAnalyzerClient() {
 
     const denials: DenialRecord[] = [];
     const usageHistory: UsagePoint[] = [];
+    const featureMap: Record<string, { outCount: number; inCount: number; denialCount: number; current: number; peak: number }> = {};
 
-    // Feature and User usage stats map
-    const deniedFeatures: Record<string, number> = {};
-    const deniedUsers: Record<string, number> = {};
-    const deniedReasons: Record<string, number> = {};
-    const activeUserLicenses: Record<string, number> = {};
+    const ensureFeat = (f: string) => {
+      if (!featureMap[f]) {
+        featureMap[f] = { outCount: 0, inCount: 0, denialCount: 0, current: 0, peak: 0 };
+      }
+      return featureMap[f];
+    };
 
-    // Standard FLEXlm debug log regex patterns
-    const outRegex = /(\d{1,2}:\d{2}:\d{2})\s+\(\w+\)\s+OUT:\s+"([^"]+)"\s+(\S+)/i;
-    const inRegex = /(\d{1,2}:\d{2}:\d{2})\s+\(\w+\)\s+IN:\s+"([^"]+)"\s+(\S+)/i;
-    const deniedRegex = /(\d{1,2}:\d{2}:\d{2})\s+\(\w+\)\s+DENIED:\s+"([^"]+)"\s+(\S+)\s+\((.+)\)/i;
+    const outRegex = /(\d{1,2}:\d{2}:\d{2})\s+\([^)]+\)\s+OUT:\s+"([^"]+)"\s+(\S+)/i;
+    const inRegex = /(\d{1,2}:\d{2}:\d{2})\s+\([^)]+\)\s+IN:\s+"([^"]+)"\s+(\S+)/i;
+    const deniedRegex = /(\d{1,2}:\d{2}:\d{2})\s+\([^)]+\)\s+DENIED:\s+"([^"]+)"\s+(\S+)\s+\((.+)\)/i;
 
-    lines.forEach((line) => {
-      // 1. Check OUT event
+    for (const line of lines) {
       const outMatch = line.match(outRegex);
       if (outMatch) {
+        const [, time, feature] = outMatch;
         outCount++;
         currentConcurrent++;
-        if (currentConcurrent > maxConcurrent) {
-          maxConcurrent = currentConcurrent;
-        }
-        usageHistory.push({ time: outMatch[1], count: currentConcurrent });
-        activeUserLicenses[outMatch[3]] = (activeUserLicenses[outMatch[3]] || 0) + 1;
-        return;
+        if (currentConcurrent > maxConcurrent) maxConcurrent = currentConcurrent;
+        usageHistory.push({ time, count: currentConcurrent });
+        const fm = ensureFeat(feature);
+        fm.outCount++;
+        fm.current++;
+        if (fm.current > fm.peak) fm.peak = fm.current;
+        continue;
       }
 
-      // 2. Check IN event
       const inMatch = line.match(inRegex);
       if (inMatch) {
+        const [, time, feature] = inMatch;
         inCount++;
         currentConcurrent = Math.max(0, currentConcurrent - 1);
-        usageHistory.push({ time: inMatch[1], count: currentConcurrent });
-        if (activeUserLicenses[inMatch[3]]) {
-          activeUserLicenses[inMatch[3]] = Math.max(0, activeUserLicenses[inMatch[3]] - 1);
-        }
-        return;
+        usageHistory.push({ time, count: currentConcurrent });
+        const fm = ensureFeat(feature);
+        fm.inCount++;
+        fm.current = Math.max(0, fm.current - 1);
+        continue;
       }
 
-      // 3. Check DENIED event
       const deniedMatch = line.match(deniedRegex);
       if (deniedMatch) {
-        const time = deniedMatch[1];
-        const feature = deniedMatch[2];
-        const user = deniedMatch[3];
-        const reason = deniedMatch[4];
-
+        const [, time, feature, user, reason] = deniedMatch;
         denials.push({ time, feature, user, reason });
-        deniedFeatures[feature] = (deniedFeatures[feature] || 0) + 1;
-        deniedUsers[user] = (deniedUsers[user] || 0) + 1;
-        deniedReasons[reason] = (deniedReasons[reason] || 0) + 1;
+        const fm = ensureFeat(feature);
+        fm.denialCount++;
       }
-    });
+    }
 
-    // Sort stats
-    const topDeniedFeatures = Object.entries(deniedFeatures)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5);
+    const featureStats: FeatureStats[] = Object.entries(featureMap)
+      .map(([feature, d]) => ({
+        feature,
+        outCount: d.outCount,
+        inCount: d.inCount,
+        denialCount: d.denialCount,
+        peakConcurrent: d.peak,
+      }))
+      .sort((a, b) => b.outCount + b.denialCount - (a.outCount + a.denialCount));
 
-    const topDeniedUsers = Object.entries(deniedUsers)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 5);
-
-    const topDeniedReasons = Object.entries(deniedReasons)
-      .sort((a, b) => b[1] - a[1])
-      .slice(0, 3);
+    const totalRequests = outCount + denials.length;
+    const denialRatePct = totalRequests > 0 ? (denials.length / totalRequests) * 100 : 0;
 
     return {
       totalLines: lines.length,
@@ -161,284 +151,283 @@ export default function FlexlmLogAnalyzerClient() {
       inCount,
       denialCount: denials.length,
       maxConcurrent,
+      denialRatePct,
       usageHistory,
-      topDeniedFeatures,
-      topDeniedUsers,
-      topDeniedReasons,
-      denialsRecords: denials.slice(0, 10) // Limit to top 10 for table render
+      featureStats,
+      denials,
     };
   }, [logText]);
 
-  // SVG Chart path calculation
   const usageChartPath = useMemo(() => {
-    if (!analysisResults || analysisResults.usageHistory.length === 0) return '';
-    
-    const history = analysisResults.usageHistory;
-    const width = 320;
-    const height = 100;
+    if (!analysis || analysis.usageHistory.length === 0) return '';
+    const history = analysis.usageHistory;
     const paddingLeft = 30;
     const paddingRight = 10;
     const paddingTop = 10;
     const paddingBottom = 20;
-
+    const width = 320;
+    const height = 100;
     const chartWidth = width - paddingLeft - paddingRight;
     const chartHeight = height - paddingTop - paddingBottom;
-    const maxVal = Math.max(5, analysisResults.maxConcurrent + 2);
+    const maxVal = Math.max(1, analysis.maxConcurrent + 1);
 
-    let path = `M ${paddingLeft} ${height - paddingBottom}`;
-
-    history.forEach((pt, idx) => {
-      const x = paddingLeft + (idx / (history.length - 1)) * chartWidth;
+    const coords = history.map((pt, idx) => {
+      // Guard denominator when history.length === 1 to prevent division-by-zero NaN
+      const frac = history.length === 1 ? 0.5 : idx / (history.length - 1);
+      const x = paddingLeft + frac * chartWidth;
       const y = height - paddingBottom - (pt.count / maxVal) * chartHeight;
-      path += ` L ${x} ${y}`;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
     });
 
-    return path;
-  }, [analysisResults]);
+    return history.length === 1
+      ? `M ${paddingLeft} ${(height - paddingBottom).toFixed(1)} L ${coords[0]}`
+      : `M ${coords.join(' L ')}`;
+  }, [analysis]);
+
+  const handleCopy = async () => {
+    if (!analysis) return;
+    const text = [
+      `License Debug Log Audit Summary`,
+      `Lines: ${analysis.totalLines}, OUT: ${analysis.outCount}, IN: ${analysis.inCount}, DENIED: ${analysis.denialCount}, Peak Concurrent: ${analysis.maxConcurrent}, Denial Rate: ${analysis.denialRatePct.toFixed(2)}%`,
+    ].join('\n');
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1800);
+      }
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const handleDownloadCsv = () => {
+    if (!analysis) return;
+    const rows = [
+      ['Feature', 'OUT', 'IN', 'DENIED', 'Peak Concurrent'],
+      ...analysis.featureStats.map((f) => [
+        f.feature,
+        String(f.outCount),
+        String(f.inCount),
+        String(f.denialCount),
+        String(f.peakConcurrent),
+      ]),
+      ['ALL_TOTAL', String(analysis.outCount), String(analysis.inCount), String(analysis.denialCount), String(analysis.maxConcurrent)],
+    ];
+    const csv = toSafeAscii(rows.map((r) => r.map((c) => `"${c}"`).join(',')).join('\n'));
+    const blob = new Blob([csv], { type: 'text/csv;charset=ascii' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'license-debug-log-summary.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
 
   return (
-    <div className="flex flex-col gap-8">
-      {/* Offline drag and drop and loading panel */}
+    <div className="space-y-8">
+      <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-xs text-emerald-900 flex items-start gap-2.5">
+        <Shield className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
+        <span>
+          Client-side log parser: all debug log text is parsed locally in your browser without server uploads.
+        </span>
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-        {/* Left: File parsing card */}
-        <div className="lg:col-span-1 flex flex-col gap-6">
-          <div
-            onDragOver={handleDragOver}
-            onDragLeave={handleDragLeave}
-            onDrop={handleDrop}
-            className={`bg-white rounded-3xl border-2 border-dashed p-8 shadow-sm flex flex-col items-center justify-center text-center transition-all min-h-[300px] cursor-pointer ${
-              isDragging ? 'border-blue-500 bg-blue-50/20 scale-102' : 'border-slate-200 hover:border-slate-300'
-            }`}
-          >
-            <input
-              id="file-upload"
-              type="file"
-              accept=".log,.txt,.dat"
-              onChange={handleFileUpload}
-              className="hidden"
-            />
-            
-            <div className="w-16 h-16 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-600 mb-6 animate-pulse">
-              <Upload className="w-8 h-8" />
+        <div className="lg:col-span-1 space-y-4 bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-base font-black text-slate-900">Log Input ({fileName})</h2>
+            <div className="flex gap-1.5">
+              <button
+                type="button"
+                data-testid="btn-demo"
+                onClick={loadDemoData}
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-bold"
+              >
+                <Play className="w-3 h-3" />
+                Demo
+              </button>
+              <button
+                type="button"
+                data-testid="btn-clear"
+                onClick={clearLog}
+                className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-bold"
+              >
+                <RotateCcw className="w-3 h-3" />
+                Clear
+              </button>
             </div>
-
-            <label htmlFor="file-upload" className="cursor-pointer">
-              <span className="text-slate-800 font-black text-lg block hover:text-blue-600">Click to upload or drag and drop logs</span>
-              <span className="text-base text-slate-400 font-medium mt-2 block">Supports .log, .txt, .dat and other formats</span>
-            </label>
-
-            {fileName && (
-              <div className="mt-6 flex items-center gap-2 px-3 py-1.5 rounded-xl bg-slate-100 border border-slate-200/60 text-base font-bold text-slate-600">
-                <FileText className="w-4 h-4 text-slate-500" />
-                <span className="truncate max-w-[150px]">{fileName}</span>
-              </div>
-)}
-
-            <button
-              onClick={loadDemoData}
-              className="mt-6 flex items-center gap-1.5 px-4 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-base font-black text-white transition-all cursor-pointer shadow-md"
-            >
-              <Play className="w-3.5 h-3.5 text-blue-400" />
-              Load demo log (Demo)
-            </button>
           </div>
 
-          {/* Privacy and Security Tips */}
-          <div className="bg-emerald-50/50 rounded-3xl border border-emerald-100/60 p-6 flex gap-3 text-emerald-800">
-            <Shield className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
-            <div className="text-base leading-relaxed">
-              <p className="font-bold mb-1">100% Browser local analysis (zero data outflow)) </p>
-              <p>In order to ensure the enterprise network architecture and employee privacy security, this analyzer is completely based on HTML5 FileReader Technology. All text summarization and icon generation are in <b>Done in your local browser sandbox</b>, None of your log content will be uploaded to any server. </p>
-            </div>
+          <label className="flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl border border-dashed border-slate-300 bg-slate-50 hover:bg-slate-100 text-xs font-bold text-slate-700 cursor-pointer">
+            <Upload className="w-4 h-4 text-blue-600" />
+            <span>Upload .log / .txt file</span>
+            <input type="file" accept=".log,.txt,.dat" onChange={handleFileUpload} className="hidden" />
+          </label>
+
+          <div>
+            <label htmlFor="input-log" className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
+              Paste Log Lines
+            </label>
+            <textarea
+              id="input-log"
+              data-testid="input-log"
+              rows={11}
+              value={logText}
+              onChange={(e) => setLogText(e.target.value)}
+              placeholder='Paste lines matching HH:MM:SS (daemon) OUT:/IN:/DENIED: "FEATURE" user@host'
+              className="w-full p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-mono text-slate-900"
+            />
           </div>
         </div>
 
-        {/* Right: Statistical analysis panel */}
-        <div className="lg:col-span-2 flex flex-col gap-6">
-          {!analysisResults ? (
-            <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm flex flex-col items-center justify-center text-center flex-1 min-h-[300px]">
-              <HelpCircle className="w-12 h-12 text-slate-300 mb-4" />
-              <h3 className="text-slate-800 font-black text-lg">Waiting for log data to be imported...</h3>
-              <p className="text-lg text-slate-400 max-w-sm mt-2 leading-relaxed">
-                Please upload your FLEXlm (`lmgrd`) service debug log file on the left, or directly click &apos;Load Demo Log&apos;&apos;Experience the offline statistics panel with one click. 
-              </p>
+        <div className="lg:col-span-2 space-y-6">
+          <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-2.5">
+                <FileText className="w-5 h-5 text-blue-600" />
+                <h2 className="text-lg font-black text-slate-900">Parsed Log Summary</h2>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  data-testid="btn-copy"
+                  disabled={!analysis}
+                  onClick={handleCopy}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 disabled:opacity-40 text-white text-xs font-bold"
+                >
+                  {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                  {copied ? 'Copied' : 'Copy'}
+                </button>
+                <button
+                  type="button"
+                  data-testid="btn-download"
+                  disabled={!analysis}
+                  onClick={handleDownloadCsv}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-40 text-white text-xs font-bold"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Export CSV
+                </button>
+              </div>
             </div>
-) : (
-            <div className="flex flex-col gap-6">
-              
-              {/* Four core large indicator panels */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm">
-                  <span className="text-sm font-black text-slate-400 uppercase tracking-wider block">Total number of log lines</span>
-                  <span className="text-2xl font-black text-slate-800 mt-1 block">{analysisResults.totalLines}</span>
-                </div>
-                <div className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm">
-                  <span className="text-sm font-black text-slate-400 uppercase tracking-wider block">Maximum number of concurrencies</span>
-                  <span className="text-2xl font-black text-blue-600 mt-1 block flex items-center gap-1">
-                    {analysisResults.maxConcurrent}
-                    <TrendingUp className="w-4 h-4 text-blue-500" />
-                  </span>
-                </div>
-                <div className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm">
-                  <span className="text-sm font-black text-slate-400 uppercase tracking-wider block">Lending (OUT) times</span>
-                  <span className="text-2xl font-black text-emerald-600 mt-1 block">{analysisResults.outCount}</span>
-                </div>
-                <div className="bg-white rounded-2xl border border-slate-100 p-5 shadow-sm">
-                  <span className="text-sm font-black text-slate-400 uppercase tracking-wider block">DENIED times</span>
-                  <span className="text-2xl font-black text-red-500 mt-1 block flex items-center gap-1">
-                    {analysisResults.denialCount}
-                    {analysisResults.denialCount > 0 && <AlertTriangle className="w-4 h-4 text-red-500 animate-bounce" />}
-                  </span>
+
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              <div className="bg-blue-50 rounded-2xl p-4 border border-blue-100">
+                <div className="text-xs font-black text-blue-600 uppercase">Peak Concurrent</div>
+                <div className="text-2xl font-black text-blue-900 mt-1">
+                  <span data-testid="result-peak">{analysis ? String(analysis.maxConcurrent) : '—'}</span>
                 </div>
               </div>
-
-              {/* Trend Chart and Feature Rejection Ranking */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                {/* SVG 24Hourly concurrency trend chart */}
-                <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col">
-                  <div className="mb-4">
-                    <h4 className="text-slate-800 font-black text-lg">Concurrent authorization usage trend chart</h4>
-                    <p className="text-sm text-slate-400 mt-1">Concurrent Active Seats Over Timeline</p>
-                  </div>
-                  
-                  <div className="flex-1 min-h-[140px] bg-slate-50 rounded-2xl p-4 flex items-center justify-center border border-slate-100">
-                    {analysisResults.usageHistory.length > 0 ? (
-                      <svg viewBox="0 0 320 100" className="w-full h-auto">
-                        {/* Axes */}
-                        <line x1="30" y1="10" x2="30" y2="80" stroke="#cbd5e1" strokeWidth="1" />
-                        <line x1="30" y1="80" x2="310" y2="80" stroke="#cbd5e1" strokeWidth="1" />
-
-                        {/* Chart Path */}
-                        <path d={usageChartPath} fill="none" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-
-                        {/* Labels */}
-                        <text x="25" y="15" fill="#94a3b8" fontSize="7" textAnchor="end">{Math.max(5, analysisResults.maxConcurrent + 2)}</text>
-                        <text x="25" y="83" fill="#94a3b8" fontSize="7" textAnchor="end">0</text>
-                        <text x="310" y="90" fill="#94a3b8" fontSize="7" textAnchor="end">Timeline➔</text>
-                      </svg>
-) : (
-                      <span className="text-base text-slate-400">No concurrent point data</span>
-)}
-                  </div>
+              <div className="bg-emerald-50 rounded-2xl p-4 border border-emerald-100">
+                <div className="text-xs font-black text-emerald-600 uppercase">OUT Checkouts</div>
+                <div className="text-2xl font-black text-emerald-900 mt-1">
+                  <span data-testid="result-out">{analysis ? String(analysis.outCount) : '—'}</span>
                 </div>
-
-                {/* Ranking of Features with the Most Rejections */}
-                <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col">
-                  <div>
-                    <h4 className="text-slate-800 font-black text-lg">The most frequently rejected authorization modules (Feature)</h4>
-                    <p className="text-sm text-slate-400 mt-1">Top Denied Features Catalog</p>
-                  </div>
-
-                  <div className="flex flex-col gap-3 mt-4 flex-1 justify-center">
-                    {analysisResults.topDeniedFeatures.length > 0 ? (
-                      analysisResults.topDeniedFeatures.map(([feat, num]) => (
-                        <div key={feat} className="flex flex-col gap-1">
-                          <div className="flex justify-between text-base font-bold text-slate-700">
-                            <span className="truncate max-w-[160px] font-mono">{feat}</span>
-                            <span>{num} Rejected</span>
-                          </div>
-                          <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
-                            <div
-                              className="bg-red-500 h-full rounded-full"
-                              style={{ width: `${(num / analysisResults.denialCount) * 100}%` }}
-                            ></div>
-                          </div>
-                        </div>
-))
-) : (
-                      <div className="flex flex-col items-center justify-center py-6 text-slate-400 text-base gap-1.5">
-                        <CheckCircle className="w-8 h-8 text-emerald-500" />
-                        Safe! No loan rejection events detected
-                      </div>
-)}
-                  </div>
-                </div>
-
               </div>
-
-              {/* Reasons for rejection and ranking of rejected users */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                
-                {/* Troubleshooting reasons for rejection */}
-                <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm">
-                  <h4 className="text-slate-800 font-black text-lg mb-4">Diagnosis of main reasons for rejection</h4>
-                  <div className="flex flex-col gap-3">
-                    {analysisResults.topDeniedReasons.map(([reason, count]) => (
-                      <div key={reason} className="flex items-start gap-2.5 p-3 rounded-2xl bg-amber-50/50 border border-amber-100 text-base text-amber-900 leading-relaxed">
-                        <AlertTriangle className="w-4 h-4 text-amber-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <p className="font-black font-mono">{reason}</p>
-                          <p className="text-sm text-amber-700/80 mt-1">Appeared {count} times in total ➔ Recommended: Check License Configuration file and option group settings. </p>
-                        </div>
-                      </div>
-))}
-                    {analysisResults.topDeniedReasons.length === 0 && (
-                      <span className="text-base text-slate-400 text-center block py-6">Record without reason</span>
-)}
-                  </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-600 uppercase">IN Checkins</div>
+                <div className="text-2xl font-black text-slate-900 mt-1">
+                  <span data-testid="result-in">{analysis ? String(analysis.inCount) : '—'}</span>
                 </div>
-
-                {/* Ranking of most rejected users/workstations */}
-                <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm">
-                  <h4 className="text-slate-800 font-black text-lg mb-4">Frequently blocked users/workstations Top 5</h4>
-                  <div className="flex flex-col gap-2">
-                    {analysisResults.topDeniedUsers.map(([usr, num], idx) => (
-                      <div key={usr} className="flex items-center justify-between p-2.5 rounded-xl bg-slate-50 border border-slate-100 text-base font-semibold text-slate-700">
-                        <div className="flex items-center gap-2">
-                          <span className="w-5 h-5 rounded-full bg-slate-200 text-slate-600 flex items-center justify-center font-black text-sm">
-                            {idx + 1}
-                          </span>
-                          <span className="font-mono">{usr}</span>
-                        </div>
-                        <span className="font-black text-red-500">{num} Rejected</span>
-                      </div>
-))}
-                    {analysisResults.topDeniedUsers.length === 0 && (
-                      <span className="text-base text-slate-400 text-center block py-6">No user records</span>
-)}
-                  </div>
-                </div>
-
               </div>
+              <div className="bg-red-50 rounded-2xl p-4 border border-red-100">
+                <div className="text-xs font-black text-red-600 uppercase">DENIED Events</div>
+                <div className="text-2xl font-black text-red-900 mt-1">
+                  <span data-testid="result-denied">{analysis ? String(analysis.denialCount) : '—'}</span>
+                </div>
+              </div>
+            </div>
 
-              {/* Detailed log details form at the bottom (previous10Article) */}
-              {analysisResults.denialsRecords.length > 0 && (
-                <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm overflow-hidden">
-                  <h4 className="text-slate-800 font-black text-lg mb-4">Denials Log Stream</h4>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-left border-collapse text-base font-semibold text-slate-600">
-                      <thead>
-                        <tr className="border-b border-slate-100 text-slate-400 uppercase text-sm tracking-wider">
-                          <th className="py-2.5">Time</th>
-                          <th className="py-2.5">Feature</th>
-                          <th className="py-2.5">user@workstation</th>
-                          <th className="py-2.5">Reason for rejection</th>
+            {analysis && (
+              <>
+                <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                  <div className="text-xs font-bold text-slate-600 mb-2">Concurrent Active Sessions Over Log Events</div>
+                  {analysis.usageHistory.length > 0 ? (
+                    <svg viewBox="0 0 320 100" className="w-full h-28" data-testid="usage-chart">
+                      <line x1="30" y1="10" x2="30" y2="80" stroke="#cbd5e1" strokeWidth="1" />
+                      <line x1="30" y1="80" x2="310" y2="80" stroke="#cbd5e1" strokeWidth="1" />
+                      <path d={usageChartPath} fill="none" stroke="#2563eb" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                      <text x="25" y="15" fill="#64748b" fontSize="8" textAnchor="end">{Math.max(1, analysis.maxConcurrent + 1)}</text>
+                      <text x="25" y="83" fill="#64748b" fontSize="8" textAnchor="end">0</text>
+                    </svg>
+                  ) : (
+                    <p className="text-xs text-slate-500">No OUT/IN timestamp events detected.</p>
+                  )}
+                </div>
+
+                {analysis.featureStats.length > 0 && (
+                  <div className="overflow-x-auto border border-slate-200 rounded-2xl">
+                    <table className="w-full text-left text-xs" data-testid="feature-table">
+                      <thead className="bg-slate-100 text-slate-700 font-black uppercase">
+                        <tr>
+                          <th className="px-4 py-2">Feature</th>
+                          <th className="px-4 py-2 text-right">OUT</th>
+                          <th className="px-4 py-2 text-right">IN</th>
+                          <th className="px-4 py-2 text-right">DENIED</th>
+                          <th className="px-4 py-2 text-right">Feature Peak</th>
                         </tr>
                       </thead>
-                      <tbody>
-                        {analysisResults.denialsRecords.map((rec, idx) => (
-                          <tr key={idx} className="border-b border-slate-50 hover:bg-slate-50/40">
-                            <td className="py-3 font-mono text-slate-400">{rec.time}</td>
-                            <td className="py-3 font-mono text-slate-800">{rec.feature}</td>
-                            <td className="py-3 font-mono">{rec.user}</td>
-                            <td className="py-3 text-red-500 font-mono text-sm">{rec.reason}</td>
+                      <tbody className="divide-y divide-slate-100 font-mono">
+                        {analysis.featureStats.map((fs) => (
+                          <tr key={fs.feature}>
+                            <td className="px-4 py-2 font-bold text-slate-800">{fs.feature}</td>
+                            <td className="px-4 py-2 text-right">{fs.outCount}</td>
+                            <td className="px-4 py-2 text-right">{fs.inCount}</td>
+                            <td className="px-4 py-2 text-right text-red-700">{fs.denialCount}</td>
+                            <td className="px-4 py-2 text-right font-bold">{fs.peakConcurrent}</td>
                           </tr>
-))}
+                        ))}
                       </tbody>
                     </table>
                   </div>
-                </div>
-)}
+                )}
 
-            </div>
-)}
+                {analysis.denials.length === 0 ? (
+                  <div className="flex items-center gap-2 text-xs text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-xl p-3">
+                    <CheckCircle className="w-4 h-4 shrink-0" />
+                    <span>No DENIED checkout events detected in the parsed lines.</span>
+                  </div>
+                ) : (
+                  <div className="overflow-x-auto border border-slate-200 rounded-2xl">
+                    <table className="w-full text-left text-xs">
+                      <thead className="bg-red-50 text-red-900 font-black uppercase">
+                        <tr>
+                          <th className="px-4 py-2">Time</th>
+                          <th className="px-4 py-2">Feature</th>
+                          <th className="px-4 py-2">User@Host</th>
+                          <th className="px-4 py-2">Reason</th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100 font-mono">
+                        {analysis.denials.slice(0, 20).map((rec, i) => (
+                          <tr key={i}>
+                            <td className="px-4 py-2 text-slate-500">{rec.time}</td>
+                            <td className="px-4 py-2 text-slate-900">{rec.feature}</td>
+                            <td className="px-4 py-2">{rec.user}</td>
+                            <td className="px-4 py-2 text-red-700">{rec.reason}</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                )}
+              </>
+            )}
+
+            {!analysis && (
+              <div data-testid="empty-notice" className="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-xs text-slate-600 flex items-center gap-2">
+                <AlertTriangle className="w-4 h-4 text-amber-600" />
+                <span>Paste log lines or click Demo to parse OUT, IN, and DENIED events.</span>
+              </div>
+            )}
+          </div>
+
+          <RelatedTools />
         </div>
-
       </div>
-
-      <RelatedTools />
     </div>
-);
+  );
 }

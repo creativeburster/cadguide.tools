@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import ForceUnitConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Force Unit Converter",
-  description: "Convert between N, kN, MN, kgf, lbf, and ton-force.",
+  title: 'Force Unit Converter (N, kN, MN, kgf, tf, lbf, kip, dyn)',
+  description: 'Convert forces between N, kN, MN, mN, dyn, kgf, metric tf, lbf, kip, and ozf using exact physical gravity and pound definitions.',
   path: '/toolbox/force-unit-converter',
 });
 
@@ -13,7 +13,7 @@ export default function ForceUnitConverterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Force Unit Converter", path: '/toolbox/force-unit-converter' },
+    { name: 'Force Unit Converter', path: '/toolbox/force-unit-converter' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function ForceUnitConverterPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-6 uppercase tracking-[0.15em]">
-              Converter
+              Unit Conversion
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Force Unit <span className="text-purple-400">Converter</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Convert between N, kN, MN, kgf, lbf, and ton-force.
+              Convert between N, kN, MN, mN, dyn, kgf, metric tf, lbf, kip, and ozf using exact physical definitions.
             </p>
           </div>
         </section>

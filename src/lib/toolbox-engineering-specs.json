@@ -5795,123 +5795,186 @@
     ]
   },
   "flexlm-debug-log-analyzer": {
-    "title": "FLEXlm License Log Offline Analyzer",
-    "description": "Parse and audit your lmgrd network license debug logs locally in your browser. Generate reports on denied checkouts, concurrent usage peaks, and seat utilization charts without uploading server logs.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "PeakConcurrency = max_t(Σ OUT_events - Σ IN_events) • DenialRate = DENIED_events / TotalRequests (FlexNet Publisher Log Spec)",
-    "inputs": [],
-    "outputs": []
-  },
-  "flexlm-error-15-debugger": {
-    "title": "FLEXlm Network License Error -15 Troubleshooter",
-    "description": "An interactive diagnostic path to solve server port blocks, network timeouts, and firewall licensing issues for AutoCAD, Revit, SolidWorks, and other CAD applications.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for FLEXlm Network License Error -15 Troubleshooter",
+    "title": "License Debug Log Offline Analyzer",
+    "description": "Parse license server debug logs locally in your browser to inspect OUT, IN, DENIED counts and peak concurrency.",
+    "discipline": "Client-Side License Log Parsing & Analytics",
+    "standards": "Client-Side Line Parser for Standard OUT / IN / DENIED Log Entries",
+    "cadContext": "Review concurrent checkout peaks and denied feature counts before expanding concurrent license pools.",
+    "formula": "Peak_Concurrent = max_t(sum OUT - sum IN); Denial_Rate = DENIED / (OUT + DENIED)",
     "inputs": [
       {
-        "label": "Server IP/Hostname",
-        "val": "license-server"
-      },
-      {
-        "label": "lmgrd Main port",
-        "val": "27000"
-      },
-      {
-        "label": "Vendor plug-in service name",
-        "val": "adskflex (Autodesk/AutoCAD)"
-      },
-      {
-        "label": "Vendor Lock port",
-        "val": "2080"
-      }
-    ],
-    "outputs": []
-  },
-  "flow-rate-unit-converter": {
-    "title": "Flow Rate Unit Converter",
-    "description": "Convert between L/s, m3/h, GPM, CFM, and L/min.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 m3/h = 0.278 L/s = 4.403 GPM",
-    "inputs": [
-      {
-        "label": "Value",
-        "val": "100"
+        "label": "Log Input",
+        "val": "Built-in 14-line sample"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "1585.04"
+        "label": "Peak Concurrent",
+        "val": "4"
+      },
+      {
+        "label": "OUT Checkouts",
+        "val": "7"
+      },
+      {
+        "label": "IN Checkins",
+        "val": "4"
+      },
+      {
+        "label": "DENIED Events",
+        "val": "3"
+      }
+    ]
+  },
+  "flexlm-error-15-debugger": {
+    "title": "Network License Connection & TCP Port Diagnostic Script Generator",
+    "description": "Generate pure-ASCII Windows PowerShell DNS, environment variable, and TCP port connectivity scripts.",
+    "discipline": "Windows TCP Port & DNS Connectivity Diagnostics",
+    "standards": "Standard Windows PowerShell NetTCPIP / System.Net.Dns Read-Only Connectivity Script",
+    "cadContext": "Verify DNS resolution and bidirectional TCP reachability between CAD workstations and license servers.",
+    "formula": "Test-NetConnection -ComputerName <Host> -Port <1..65535>; Pure ASCII .ps1 export",
+    "inputs": [
+      {
+        "label": "License Server Host / IP",
+        "val": "license-server.local"
+      },
+      {
+        "label": "Primary License Port",
+        "val": "27000"
+      },
+      {
+        "label": "Vendor Daemon Port",
+        "val": "2080"
+      },
+      {
+        "label": "Client Environment Variable Name",
+        "val": "LICENSE_SERVER_SPEC"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Target Host",
+        "val": "license-server.local"
+      },
+      {
+        "label": "Main TCP Port",
+        "val": "27000"
+      },
+      {
+        "label": "Daemon TCP Port",
+        "val": "2080"
+      }
+    ]
+  },
+  "flow-rate-unit-converter": {
+    "title": "Volumetric Flow Rate Converter",
+    "description": "Convert volumetric flow rates between L/s, L/min, m3/s, m3/min, m3/h, US GPM, GPH, and CFM using exact factors.",
+    "discipline": "Engineering Metrology & Fluid Flow Unit Conversion",
+    "standards": "NIST SP 811 Exact Geometric Definitions (1 ft = 0.3048 m, 1 in = 0.0254 m, 1 US gal = 231 in3 = 3.785411784 L)",
+    "cadContext": "Harmonize pump and fan volumetric schedules between metric L/s / m3/h and imperial GPM / CFM.",
+    "formula": "Q_target = Q_source * (k_source_to_Ls / k_target_to_Ls)",
+    "inputs": [
+      {
+        "label": "Volumetric Flow Rate",
+        "val": "100"
+      },
+      {
+        "label": "From Unit",
+        "val": "L/s"
+      },
+      {
+        "label": "To Unit",
+        "val": "GPM"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Converted Flow",
+        "val": "1585.03 GPM"
+      },
+      {
+        "label": "Base Equivalent",
+        "val": "100.00 L/s"
       }
     ]
   },
   "flywheel-energy-calculator": {
-    "title": "Flywheel Energy & Inertia Calculator",
-    "description": "Calculate kinetic energy, inertia, and energy fluctuation of a flywheel.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "I=mr^2/2, E=I*w^2/2, dE=I*w^2*CS",
+    "title": "Flywheel Moment of Inertia & Kinetic Energy Calculator",
+    "description": "Calculate flywheel moment of inertia for solid disks and hollow rims, kinetic energy, cyclic delta, and rim speed.",
+    "discipline": "Rigid Body Rotational Dynamics",
+    "standards": "Rigid Cylinder & Annulus Moment of Inertia (I = 0.5*m*(ro^2 + ri^2)) & Rotational Kinetic Energy",
+    "cadContext": "Evaluate flywheel outer and inner radii from 3D CAD cross sections to estimate stored kinetic energy and rim tangential speed.",
+    "formula": "I = 0.5*m*(ro^2 + ri^2); omega = 2*pi*n/60; Ek = 0.5*I*omega^2; dE = I*omega^2*Cs; v_rim = omega*ro",
     "inputs": [
       {
-        "label": "Mass (kg)",
+        "label": "Rotor Mass m (kg)",
         "val": "50"
       },
       {
-        "label": "Radius (m)",
+        "label": "Outer Radius ro (m)",
         "val": "0.5"
       },
       {
-        "label": "Speed (RPM)",
+        "label": "Inner Radius ri (m)",
+        "val": "0"
+      },
+      {
+        "label": "Rotational Speed n (RPM)",
         "val": "300"
       },
       {
-        "label": "Fluctuation",
+        "label": "Speed Fluctuation Coeff Cs",
         "val": "0.05"
       }
     ],
     "outputs": [
       {
-        "label": "Inertia I",
-        "val": "6.250 kg.m2"
+        "label": "Moment of Inertia I",
+        "val": "6.2500 kg*m2"
       },
       {
-        "label": "Energy E",
+        "label": "Stored Kinetic Energy Ek",
         "val": "3084.25 J"
       },
       {
-        "label": "Energy Delta",
+        "label": "Cyclic Energy Delta dE",
         "val": "308.43 J"
+      },
+      {
+        "label": "Outer Rim Speed",
+        "val": "15.708 m/s"
       }
     ]
   },
   "force-unit-converter": {
     "title": "Force Unit Converter",
-    "description": "Convert between N, kN, MN, kgf, lbf, and ton-force.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 kgf = 9.807N, 1 lbf = 4.448N",
+    "description": "Convert between N, kN, MN, mN, dyn, kgf, tf, lbf, kip, and ozf using exact definitions.",
+    "discipline": "Engineering Metrology & Mechanics Force Conversion",
+    "standards": "NIST SP 811 Exact Mass & Gravity Definitions (1 lb = 0.45359237 kg, g_n = 9.80665 m/s2 => 1 lbf = 4.4482216152605 N)",
+    "cadContext": "Convert structural reaction loads and actuator forces accurately between SI Newtons and US Customary pound-force.",
+    "formula": "F_target = F_source * (k_source_to_N / k_target_to_N)",
     "inputs": [
       {
-        "label": "Value",
+        "label": "Force Value",
         "val": "1000"
       },
       {
-        "label": "From",
+        "label": "From Unit",
+        "val": "N"
+      },
+      {
+        "label": "To Unit",
         "val": "lbf"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "224.82"
+        "label": "Converted Force",
+        "val": "224.8089 lbf"
+      },
+      {
+        "label": "SI Base Equivalent",
+        "val": "1000 N"
       }
     ]
   },

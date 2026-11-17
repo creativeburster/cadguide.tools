@@ -4,9 +4,8 @@ import type { Metadata } from 'next';
 import FlexlmLogAnalyzerClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'FLEXlm License Log Offline Analyzer & Audit Tool',
-  description:
-    'Parse and audit your lmgrd network license debug logs locally in your browser. Generate reports on denied checkouts, concurrent usage peaks, and seat utilization charts without uploading server logs.',
+  title: 'License Debug Log Offline Analyzer (OUT / IN / DENIED)',
+  description: 'Parse license server debug logs locally in your browser to count OUT, IN, and DENIED checkout events and peak concurrent seats.',
   path: '/toolbox/flexlm-debug-log-analyzer',
 });
 
@@ -14,7 +13,7 @@ export default function FlexlmLogAnalyzerPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'FLEXlm Log Analyzer', path: '/toolbox/flexlm-debug-log-analyzer' },
+    { name: 'License Debug Log Analyzer', path: '/toolbox/flexlm-debug-log-analyzer' },
   ]);
 
   return (
@@ -31,13 +30,13 @@ export default function FlexlmLogAnalyzerPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Enterprise License Auditor
+              License Log Auditor
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              FLEXlm License Log <span className="text-blue-400">Offline Analyzer</span>
+              License Debug Log <span className="text-blue-400">Offline Analyzer</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              100% Browser parses lmgrd debug log locally. Graphical statistics of authorization denial rate, license concurrency peak and idle users, Ensure corporate log privacy compliance. 
+              Parse license checkout logs locally in your browser to inspect OUT, IN, DENIED counts, per-feature peaks, and rejection details.
             </p>
           </div>
         </section>
@@ -48,5 +47,5 @@ export default function FlexlmLogAnalyzerPage() {
         </section>
       </main>
     </>
-);
+  );
 }

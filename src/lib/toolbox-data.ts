@@ -508,14 +508,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'flexlm-error-15-debugger',
-    title: 'FLEXlm Network License Error -15 Connection troubleshooter',
-    description: 'An interactive diagnostic path to solve server port blocks, network timeouts, and firewall licensing issues.',
-    detailDesc: 'Resolve licensing issues (e.g. "Cannot connect to license server"). Tests port 27000-27009 status, firewall exclusions, and configures the ADSKFLEX_LICENSE_FILE environment variables.',
+    title: 'Network License Connection & TCP Port Diagnostic Script Generator',
+    description: 'Generate pure-ASCII Windows PowerShell DNS, environment variable, and TCP port connectivity scripts.',
+    detailDesc: 'Generates read-only PowerShell DNS resolution, environment variable inspection, and Test-NetConnection port audit scripts for configurable license server hosts and TCP ports.',
     category: 'troubleshoot',
     status: 'released',
     releasedDate: '2026-06-04',
     origin: 'native',
-    keywords: ['flexlm error 15', 'network license connection failed', 'port 27000 block', 'adskflex license file']
+    keywords: ['license port test', 'tcp connectivity', 'powershell port audit', 'network license connection']
   },
   {
     slug: 'drawing-lag-performance-cleaner',
@@ -3795,7 +3795,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     slug: 'force-unit-converter',
     title: 'Force Unit Converter',
     description: 'Convert between N, kN, MN, kgf, lbf, and ton-force. Free online engineering unit converter.',
-    detailDesc: '1 kgf = 9.807N, 1 lbf = 4.448N',
+    detailDesc: '1 kgf = 9.80665 N, 1 lbf = 4.4482216152605 N',
     category: 'converter',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -3817,7 +3817,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     slug: 'flow-rate-unit-converter',
     title: 'Flow Rate Unit Converter',
     description: 'Convert between L/s, m3/h, GPM, CFM, and L/min. Free online engineering unit converter.',
-    detailDesc: '1 m3/h = 0.278 L/s = 4.403 GPM',
+    detailDesc: '1 m3/h = 1000/3600 L/s = 4.402868 US GPM',
     category: 'converter',
     status: 'released',
     releasedDate: '2026-07-16',
