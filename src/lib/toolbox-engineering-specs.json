@@ -3648,181 +3648,158 @@
     ]
   },
   "concrete-volume-mix-calculator": {
-    "title": "Concrete Volume & Mix Calculator",
-    "description": "Calculate concrete volume for slabs, columns, and footings. Determine cement, sand, aggregate, and water quantities for standard mix ratios.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "{'Dry volume = wet volume × 1.54 (voids). Cement = 50kg per bag, 0.0347 m³. Sand density ≈ 1600 kg/m³. Aggregate density ≈ 1450 kg/m³. Water/cement ratio ≈ 0.5 for medium workability.'}",
+    "title": "Concrete Volume & Mix Ratio Calculator",
+    "description": "Calculate wet/dry concrete volume, IS 456:2000 nominal mix proportions (M5-M20), 50 kg cement bags, sand, coarse aggregate, and mixing water.",
+    "discipline": "Civil & Concrete Material Quantity Estimating",
+    "standards": "IS 456:2000 (Nominal Volumetric Concrete Mixes M5-M20) & NIST SP 811 Exact Volume Conversions",
+    "cadContext": "Extract net slab, footing, and circular column dimensions from structural GA drawings and adjust the dry-volume factor and bulk densities to match local quarry aggregate tests.",
+    "formula": "V_wet = V_net*(1 + waste/100); V_dry = V_wet*1.54; V_i = V_dry*(part_i/sum_parts); Cement = V_c*1440 kg (50 kg bags); Sand = V_s*1600 kg; Agg = V_a*1450 kg; Water = m_c*(w/c)",
     "inputs": [
       {
-        "label": "Shape Slab Column Footing Length (m)",
-        "val": "5"
+        "label": "Shape & Dimensions",
+        "val": "Slab 5 m x 4 m x 0.15 m (Count 1, Waste 5%)"
       },
       {
-        "label": "Width (m)",
-        "val": "4"
+        "label": "Mix Grade & Factors",
+        "val": "M15 (1:2:4), Dry factor 1.54, w/c 0.50"
       },
       {
-        "label": "Thickness/Depth (m)",
-        "val": "0.15"
-      },
-      {
-        "label": "Mix Ratio",
-        "val": "M15 (1:2:4)"
-      },
-      {
-        "label": "Waste Factor (%)",
-        "val": "5"
+        "label": "Bulk Densities (kg/m3)",
+        "val": "Cement 1440 (50 kg bag), Sand 1600, Agg 1450"
       }
     ],
     "outputs": [
       {
-        "label": "Concrete Volume",
-        "val": "3.150 m³"
+        "label": "Wet Order Volume",
+        "val": "3.150 m3 (111.24 ft3 / 4.12 yd3)"
+      },
+      {
+        "label": "Cement Required",
+        "val": "19.96 bags (997.92 kg, buy 20 bags)"
+      },
+      {
+        "label": "Sand / Coarse Aggregate / Water",
+        "val": "2217.60 kg / 4019.40 kg / 498.96 L"
       }
     ]
   },
   "concurrent-vs-named-breakeven-calculator": {
     "title": "Concurrent vs Named-User Break-Even",
-    "description": "Size concurrent (floating) seats from peak concurrency and compare annual cost against named-user licensing. Shows the break-even concurrent-seat premium for FLEXlm-style pools.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "N_concurrent = ceil(N_engineers × (ActiveHoursPerDay / 8) × ContentionFactor) • ROI_Breakeven = Cost_Floating / Cost_Named",
+    "description": "Size concurrent (floating) seats from peak concurrency and compare annual cost against named-user licensing with break-even seat price and seat ceiling.",
+    "discipline": "Software Asset Management (SAM) & CAD License Economics",
+    "standards": "Annual Named-User vs Floating Seat Pool Cost Break-Even Model",
+    "cadContext": "Use license server peak simultaneous seat logs over a 90-day engineering sprint to set peak concurrency % before choosing named-user vs network floating contracts.",
+    "formula": "C = ceil(N * peak_pct / 100); Cost_named = N * Pn; Cost_conc = C * Pc; Breakeven_Pc = Cost_named / C",
     "inputs": [
       {
-        "label": "Total users (named seats)",
-        "val": "50"
+        "label": "Total Named Users / Peak %",
+        "val": "50 users / 40%"
       },
       {
-        "label": "Peak concurrency %",
-        "val": "40"
-      },
-      {
-        "label": "Named-user $/yr",
-        "val": "1865"
-      },
-      {
-        "label": "Concurrent seat $/yr",
-        "val": "2800"
-      }
-    ],
-    "outputs": []
-  },
-  "contour-interval-calculator": {
-    "title": "Contour Interval Calculator",
-    "description": "Calculate optimal contour interval from map scale and elevation range.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "CI = scale_factor * elevation_range",
-    "inputs": [
-      {
-        "label": "Map Scale (1:)",
-        "val": "1000"
-      },
-      {
-        "label": "Elevation Range (m)",
-        "val": "50"
-      },
-      {
-        "label": "Terrain Type",
-        "val": "Flat Terrain (1x)"
+        "label": "Unit Annual Prices",
+        "val": "Named $1865/yr / Concurrent $2800/yr"
       }
     ],
     "outputs": [
       {
-        "label": "Contour Interval",
-        "val": "0.500000 m"
+        "label": "Required Floating Seats",
+        "val": "20 seats"
       },
       {
-        "label": "Number of Contours",
-        "val": "101.00"
+        "label": "Named vs Concurrent Annual Cost",
+        "val": "$93,250.00 vs $56,000.00 (Save $37,250.00/yr)"
+      },
+      {
+        "label": "Break-Even Concurrent Seat Ceiling",
+        "val": "$4,662.50/seat/yr (2.50x named)"
+      }
+    ]
+  },
+  "contour-interval-calculator": {
+    "title": "Contour Interval Calculator",
+    "description": "Calculate contour line count, index interval, ground horizontal spacing, and plotted sheet line spacing from map scale, elevation relief, and terrain slope.",
+    "discipline": "Topographic Surveying & Cartographic Mapping",
+    "standards": "Topographic Contour Interval & Plotted Map Scale Geometry",
+    "cadContext": "Verify that plotted contour spacing on paper sheets remains above 0.5 mm at your viewport scale (1:M) before publishing grading and DTM contour plans.",
+    "formula": "Lines = floor(dH/CI) + 1; Ground_Spacing = CI / (Slope%/100); Map_Spacing_mm = Ground_Spacing * 1000 / M",
+    "inputs": [
+      {
+        "label": "Map Scale / Elevation Range dH",
+        "val": "1:1000 / 50 m"
+      },
+      {
+        "label": "Contour Interval CI / Slope / Index Mult",
+        "val": "1.0 m / 10% / 5x"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Contour Lines / Index Interval",
+        "val": "51 lines (50.00 intervals) / 5.00 m"
+      },
+      {
+        "label": "Ground / Sheet Contour Spacing",
+        "val": "10.00 m / 10.00 mm"
       }
     ]
   },
   "cooling-load-calculator": {
     "title": "Cooling Load Calculator",
-    "description": "Calculate sensible, latent, and total cooling load for HVAC design.",
+    "description": "Calculate sensible, latent, total HVAC air-side cooling load, Sensible Heat Ratio (SHR), and refrigeration tonnage from moist-air flow equations.",
     "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "QS = 1.23*Q*dT, QL = 3*Q*dW, QT = QS+QL",
+    "standards": "ASHRAE Psychrometric Moist-Air Energy Balance Equations (1 RT = 3.51685 kW; Standard Air rho=1.202 kg/m3, cp=1.006 kJ/(kg*C), hwe=2454 kJ/kg)",
+    "cadContext": "Check supply airflow unit conversions (m3/h, L/s, m3/s, CFM) and SHR before sizing cooling coils and ductwork in MEP BIM models.",
+    "formula": "m_dot = rho * q(m3/s); Qs = m_dot * cp * dT; Ql = m_dot * hwe * (dw/1000); Qt = Qs + Ql; RT = Qt / 3.516852842",
     "inputs": [
       {
-        "label": "Airflow Q (m3/h)",
-        "val": "2000"
+        "label": "Airflow Q / Temp Diff dT / Humidity dw",
+        "val": "2000 m3/h (0.5556 m3/s) / 10 degC / 2 g/kg"
       },
       {
-        "label": "Temp Diff dT (C)",
-        "val": "10"
-      },
-      {
-        "label": "Humidity Diff dW (g/kg)",
-        "val": "2"
+        "label": "Moist Air Properties",
+        "val": "rho = 1.202 kg/m3, cp = 1.006 kJ/kgC, hwe = 2454 kJ/kg"
       }
     ],
     "outputs": [
       {
-        "label": "Sensible Load",
-        "val": "24.600 kW"
+        "label": "Sensible / Latent / Total Load",
+        "val": "6.72 kW / 3.28 kW / 10.00 kW"
       },
       {
-        "label": "Latent Load",
-        "val": "12.000 kW"
-      },
-      {
-        "label": "Total Load",
-        "val": "36.600 kW"
-      },
-      {
-        "label": "Tons",
-        "val": "10.407 TR"
+        "label": "Refrigeration Tons / SHR",
+        "val": "2.84 RT / 67.2%"
       }
     ]
   },
   "cooling-tower-sizing-calculator": {
     "title": "Cooling Tower Sizing & Range Calculator",
-    "description": "Calculate cooling tower tonnage, range, approach, and water consumption.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "Flow = 3.0 GPM/ton • Range = EWT - LWT • Approach = LWT - WBT (ASHRAE Systems & Equipment Handbook)",
+    "description": "Calculate condenser water flow from chiller heat rejection and temperature range, tower approach, evaporation, drift, blowdown by COC, and total makeup water.",
+    "discipline": "HVAC, Condenser Water Plants & Thermal Rejection Systems",
+    "standards": "SPX Cooling Tower Fundamentals (Eq. 3-5 Range, Approach, Evaporation 0.0008/degF, Drift 0.0002, Blowdown & Makeup) & ASHRAE Fundamentals",
+    "cadContext": "Size condenser water headers, basin makeup float valves, and bleed-off drains based on actual tower range (EWT - LWT) and cycles of concentration.",
+    "formula": "Flow = Q_rej / (4.186 * Range); Evap = Flow * Range(degF) * 0.0008; Drift = Flow * 0.0002; Blowdown = Evap/(COC - 1) - Drift; Makeup = Evap + Drift + Blowdown",
     "inputs": [
       {
-        "label": "Chiller Heat Load (Tons)",
-        "val": "250"
+        "label": "Chiller Load / HRF / Temperatures",
+        "val": "250 RT / 1.25 / EWT 35 C, LWT 30 C, WBT 26 C"
       },
       {
-        "label": "Entering Water Temp EWT (°C)",
-        "val": "35"
-      },
-      {
-        "label": "Leaving Water Temp LWT (°C)",
-        "val": "30"
-      },
-      {
-        "label": "Design Ambient Wet Bulb WBT (°C)",
-        "val": "26"
+        "label": "Water Chemistry Factors",
+        "val": "COC = 3, Evap 0.0008/degF, Drift 0.02%"
       }
     ],
     "outputs": [
       {
         "label": "Circulating Condenser Water Flow",
-        "val": "170.3 m³/h"
+        "val": "189.03 m3/h (832.29 GPM, 52.51 L/s)"
       },
       {
-        "label": "Cooling Range (EWT - LWT)",
-        "val": "5.0 °C"
+        "label": "Range / Approach",
+        "val": "5.0 C / 4.0 C"
       },
       {
-        "label": "Tower Approach (LWT - WBT)",
-        "val": "4.0 °C"
-      },
-      {
-        "label": "Makeup Water Evaporation Rate",
-        "val": "1.53 m³/h"
+        "label": "Evap / Drift / Blowdown / Makeup",
+        "val": "1.3610 / 0.0378 / 0.6427 / 2.0416 m3/h"
       }
     ]
   },

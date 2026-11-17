@@ -5,7 +5,7 @@ import ContourIntervalCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Contour Interval Calculator",
-  description: "Calculate optimal contour interval from map scale and elevation range.",
+  description: "Calculate contour interval line counts, index contour spacing, ground horizontal spacing, and plotted sheet spacing from map scale, relief, and terrain slope.",
   path: '/toolbox/contour-interval-calculator',
 });
 

@@ -5,7 +5,7 @@ import CoolingLoadCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Cooling Load Calculator",
-  description: "Calculate sensible, latent, and total cooling load for HVAC design.",
+  description: "Calculate sensible heat (hs = cp*rho*q*dT), latent heat (hl = rho*hwe*q*dw), total HVAC cooling load in kW/RT, and Sensible Heat Ratio (SHR).",
   path: '/toolbox/cooling-load-calculator',
 });
 

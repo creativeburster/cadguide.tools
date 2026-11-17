@@ -5,7 +5,7 @@ import ConcreteMixClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Concrete Volume & Mix Ratio Calculator',
-  description: 'Calculate concrete volume for slabs, columns, and footings. Determine cement, sand, aggregate, and water quantities for standard mix ratios.',
+  description: 'Calculate wet/dry concrete volume, IS 456:2000 nominal mix proportions (M5-M20), 50 kg cement bags (1440 kg/m3), sand, coarse aggregate, and mixing water.',
   path: '/toolbox/concrete-volume-mix-calculator',
 });
 

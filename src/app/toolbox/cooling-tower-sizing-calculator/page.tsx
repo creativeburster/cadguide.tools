@@ -5,7 +5,7 @@ import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Cooling Tower Sizing & Range Calculator",
-  description: "Calculate cooling tower tonnage, range, approach, and water consumption.",
+  description: "Calculate condenser water flow from chiller heat rejection and range, tower approach, evaporation loss, drift, blowdown by cycles of concentration, and total makeup water.",
   path: '/toolbox/cooling-tower-sizing-calculator',
 });
 

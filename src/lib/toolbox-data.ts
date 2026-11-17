@@ -1615,8 +1615,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'concrete-volume-mix-calculator',
     title: 'Concrete Volume & Mix Ratio Calculator',
-    description: 'Calculate concrete volume for slabs, columns, and footings. Determine cement, sand, aggregate, and water quantities.',
-    detailDesc: 'Concrete calculator: volume for slab/column/footing, mix ratio (M5-M25), cement bags, sand and aggregate volume/weight, water quantity. Includes waste factor and dry volume conversion.',
+    description: 'Calculate wet/dry concrete volume, IS 456:2000 nominal mix proportions (M5-M20), 50 kg cement bags, sand, aggregate, and water quantities.',
+    detailDesc: 'IS 456:2000 nominal volumetric concrete mix calculator with 1.54 dry-volume method, 1440 kg/m3 cement bulk density (50 kg bags), waste allowance, and NIST SP 811 ft3/yd3 conversions.',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-15',
@@ -2220,8 +2220,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cooling-load-calculator',
     title: 'Cooling Load Calculator',
-    description: 'Calculate sensible, latent, and total cooling load for HVAC design. Free browser-based engineering calculator.',
-    detailDesc: 'QS = 1.23*Q*dT, QL = 3*Q*dW, QT = QS+QL',
+    description: 'Calculate sensible, latent, and total HVAC moist-air cooling load in kW and refrigeration tons (RT).',
+    detailDesc: 'hs = cp*rho*q*dT, hl = rho*hwe*q*dw_kg (q in m3/s), Qt = hs + hl, RT = Qt / 3.51685, SHR = hs / Qt.',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -3519,8 +3519,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'contour-interval-calculator',
     title: 'Contour Interval Calculator',
-    description: 'Calculate optimal contour interval from map scale and elevation range.',
-    detailDesc: 'CI = scale_factor * elevation_range',
+    description: 'Calculate contour line count, index interval, ground horizontal spacing, and plotted sheet line spacing from map scale, elevation relief, and terrain slope.',
+    detailDesc: 'Lines = floor(dH/CI) + 1; Ground_Spacing = CI / (Slope%/100); Sheet_Spacing = Ground_Spacing * 1000 / M.',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -4355,8 +4355,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cooling-tower-sizing-calculator',
     title: "Cooling Tower Sizing & Range Calculator",
-    description: "Calculate cooling tower tonnage, range, approach, and water consumption.",
-    detailDesc: "tons = Q/12600. Range = T_hot-T_cold. Approach = T_cold-T_wb. Evaporation ~0.1% circulation per 1C range. Makeup = evap+drift+blowdown. Includes cycles of concentration.",
+    description: "Calculate condenser water flow from chiller heat rejection and range, tower approach, evaporation, drift, blowdown by COC, and total makeup water.",
+    detailDesc: "Flow = Q_rej / (4.186 * Range); Evap = Flow * Range(degF) * 0.0008; Drift = Flow * 0.0002; Blowdown = Evap/(COC - 1) - Drift; Makeup = Evap + Drift + Blowdown.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
