@@ -2143,8 +2143,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'deflection-angle-calculator',
     title: 'Beam Deflection Angle Calculator',
-    description: 'Calculate beam slope and deflection at any point for common loading conditions.',
-    detailDesc: 'For simply supported UDL: theta = w*x*(L^2-3x^2)/(6EI)',
+    description: 'Calculate exact Euler-Bernoulli beam slope and deflection at any point along simply supported and cantilever spans.',
+    detailDesc: 'For simply supported UDL: theta(x) = q*(L^3 - 6*L*x^2 + 4*x^3)/(24*E*I), delta(x) = q*x*(L^3 - 2*L*x^2 + x^3)/(24*E*I)',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -2946,8 +2946,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'damping-ratio-calculator',
     title: 'Damping Ratio Calculator',
-    description: 'Calculate damping ratio, damped frequency, and logarithmic decrement from vibration data.',
-    detailDesc: 'zeta = ln(x1/x2)/(2*pi*n)',
+    description: 'Calculate SDOF damping ratio, critical damping, damped frequency (zeta < 1), and logarithmic decrement.',
+    detailDesc: 'zeta = c/(2*sqrt(k*m)), fd = fn*sqrt(1-zeta^2) for zeta < 1, delta = 2*pi*zeta/sqrt(1-zeta^2)',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -3243,8 +3243,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'die-casting-pressure-calculator',
     title: 'Die Casting Pressure Calculator',
-    description: 'Calculate die casting injection pressure, die clamping force, and fill time.',
-    detailDesc: 'P = metal_pressure * overflow, F = P * projected_area',
+    description: 'Calculate die clamping force, machine tonnage, continuity-derived gate velocity, and cavity fill time.',
+    detailDesc: 'F_clamp = 0.1*P*A_proj*SF (kN), vg = (V_cav*1000)/(A_gate*t_fill)',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -3860,8 +3860,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'density-unit-converter',
     title: 'Density Unit Converter',
-    description: 'Convert between kg/m3, g/cm3, lb/ft3, lb/in3, and kg/L. Free online engineering unit converter.',
-    detailDesc: '1 g/cm3 = 1000 kg/m3 = 62.43 lb/ft3',
+    description: 'Convert between kg/m3, g/cm3, kg/L, lb/ft3, lb/in3, and lb/gal using exact SI/Avoirdupois factors.',
+    detailDesc: '1 g/cm3 = 1000 kg/m3 = 62.427961 lb/ft3 = 0.036127292 lb/in3',
     category: 'converter',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -6769,10 +6769,10 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'deep-drawing-calculator',
     title: 'Sheet Metal Deep Drawing Ratio, Force & Blank Holder Pressure Calculator',
-    description: 'Calculate drawing ratio (β), drawing force (kN), blank holder pressure, and press tonnage for cylindrical sheet metal cup drawing per DIN 8584 standards.',
-    detailDesc: 'Die stamping and sheet metal forming engineering calculator for evaluating cup drawing ratios, draw forces, and blank holder clamping forces to prevent wrinkling and tearing under DIN 8584.',
+    description: 'Calculate drawing ratio (β), logarithmic draw force (kN), blank holder force, and press tonnage for cylindrical sheet metal cup drawing.',
+    detailDesc: 'Die stamping and sheet metal forming engineering calculator for evaluating cup drawing ratios (beta = D0/d), draw forces, and blank holder clamping forces.',
     category: 'calculator',
-    keywords: ['deep drawing calculator', 'drawing ratio beta', 'drawing force sheet metal', 'blank holder force', 'din 8584 stamping press tonnage'],
+    keywords: ['deep drawing calculator', 'drawing ratio beta', 'drawing force sheet metal', 'blank holder force', 'stamping press tonnage'],
     origin: 'native',
     status: 'released',
     releasedDate: '2026-09-24'

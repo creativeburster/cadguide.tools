@@ -4167,11 +4167,11 @@
   },
   "damping-ratio-calculator": {
     "title": "Damping Ratio Calculator",
-    "description": "Calculate damping ratio and damped frequency from system parameters.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "zeta = c/(2*sqrt(k*m)), wd = wn*sqrt(1-zeta^2)",
+    "description": "Calculate SDOF damping ratio, critical damping, damped frequency (zeta < 1), and logarithmic decrement across all damping regimes.",
+    "discipline": "Mechanical Vibrations & Structural Dynamics",
+    "standards": "Linear Viscous SDOF Vibration Theory (undamped, underdamped 0 < zeta < 1, critically damped zeta = 1, overdamped zeta > 1)",
+    "cadContext": "Check natural vs damped resonance frequencies and logarithmic decrement decay rates when sizing isolators and harmonic dampers.",
+    "formula": "cc = 2*sqrt(k*m), zeta = c/cc, fd = fn*sqrt(1-zeta^2) for zeta < 1, delta = 2*pi*zeta/sqrt(1-zeta^2)",
     "inputs": [
       {
         "label": "Stiffness (N/m)",
@@ -4192,8 +4192,8 @@
         "val": "0.111803"
       },
       {
-        "label": "Damped Freq",
-        "val": "7.073 Hz"
+        "label": "Natural / Damped Freq",
+        "val": "7.118 Hz / 7.073 Hz"
       },
       {
         "label": "Log Decrement",
@@ -4203,128 +4203,133 @@
   },
   "deep-drawing-calculator": {
     "title": "Deep Drawing Calculator",
-    "description": "Calculate drawing ratio (β), drawing force (kN), blank holder pressure, and press tonnage for cylindrical sheet metal cup drawing per DIN 8584 standards.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Standardized parametric evaluation for Deep Drawing Calculator",
+    "description": "Calculate cylindrical cup drawing ratio (beta), logarithmic plastic draw force, blank holder force, and total press tonnage.",
+    "discipline": "Sheet Metal Forming & Stamping Tooling",
+    "standards": "Cylindrical Deep Drawing Mechanics (equal-area blank sizing, Limiting Drawing Ratio beta = D0/d, blank holder clamping balance)",
+    "cadContext": "Verify first-draw Limiting Drawing Ratio (LDR <= 2.0) and press tonnage margin before designing draw die rings and blank holders.",
+    "formula": "beta = D0/d, Fd = pi*d*t*Rm*eta_f*ln(beta)/1000, Fbh = (pi/4)*(D0^2 - (d+2t)^2)*p_bh/1000",
     "inputs": [
       {
         "label": "Punch Diameter d (mm)",
         "val": "55"
       },
       {
+        "label": "Blank Diameter D0 (mm)",
+        "val": "100"
+      },
+      {
         "label": "Sheet Thickness t (mm)",
         "val": "1.2"
       },
       {
-        "label": "Die Shoulder Radius rd (mm)",
-        "val": "6"
-      },
-      {
-        "label": "Material Tensile Rm (MPa)",
-        "val": "340"
+        "label": "Material Tensile Rm (MPa) / Friction eta",
+        "val": "340 / 1.15"
       },
       {
         "label": "Blank Holder Pressure (MPa)",
-        "val": "2"
-      }
-    ],
-    "outputs": []
-  },
-  "deflection-angle-calculator": {
-    "title": "Beam Deflection Angle Calculator",
-    "description": "Calculate beam slope and deflection at any point for common loading conditions.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "For simply supported UDL: theta = w*x*(L^2-3x^2)/(6EI)",
-    "inputs": [
-      {
-        "label": "Load w (kN/m)",
-        "val": "10"
-      },
-      {
-        "label": "Span L (m)",
-        "val": "5"
-      },
-      {
-        "label": "Position x (m)",
-        "val": "2.5"
-      },
-      {
-        "label": "Youngs E (GPa)",
-        "val": "200"
-      },
-      {
-        "label": "Inertia I (cm4)",
-        "val": "5000"
+        "val": "2.0"
       }
     ],
     "outputs": [
       {
-        "label": "Slope",
-        "val": "0.002604 rad"
+        "label": "Drawing Ratio (beta)",
+        "val": "1.8182"
       },
       {
-        "label": "Deflection",
-        "val": "8.138 mm"
+        "label": "Drawing / Blank Holder Force",
+        "val": "48.47 kN / 10.53 kN"
+      },
+      {
+        "label": "Total Press Force",
+        "val": "59.00 kN (6.02 tf)"
+      }
+    ]
+  },
+  "deflection-angle-calculator": {
+    "title": "Beam Deflection Angle Calculator",
+    "description": "Calculate exact Euler-Bernoulli beam slope theta(x) and deflection w(x) at any position along simply supported and cantilever spans.",
+    "discipline": "Structural Mechanics & Euler-Bernoulli Beam Theory",
+    "standards": "Euler-Bernoulli Beam Theory (theta(x) = dw/dx; simply supported and cantilever elastic curve solutions)",
+    "cadContext": "Evaluate end rotations at bolted/pinned connections and midspan elastic deflections on structural framing members.",
+    "formula": "Simply supported UDL: w(x) = qx(L^3 - 2Lx^2 + x^3)/(24EI), theta(x) = q(L^3 - 6Lx^2 + 4x^3)/(24EI)",
+    "inputs": [
+      {
+        "label": "Uniform Load q (kN/m)",
+        "val": "10"
+      },
+      {
+        "label": "Span L (m) / Pos x (m)",
+        "val": "5 / 1.25"
+      },
+      {
+        "label": "Youngs E (GPa) / Inertia I (cm4)",
+        "val": "200 / 5000"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Slope at x = 1.25 m",
+        "val": "0.003581 rad (0.2052 deg)"
+      },
+      {
+        "label": "Deflection at x / Max Deflection",
+        "val": "5.798 mm / 8.138 mm"
       }
     ]
   },
   "density-unit-converter": {
     "title": "Density Unit Converter",
-    "description": "Convert between kg/m3, g/cm3, lb/ft3, lb/in3, and kg/L.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 g/cm3 = 1000 kg/m3 = 62.43 lb/ft3",
+    "description": "Convert between kg/m3, g/cm3, kg/L, lb/ft3, lb/in3, and lb/gal using exact NIST SP 811 SI/Avoirdupois factors.",
+    "discipline": "Engineering Metrology & SI/Imperial Density Conversions",
+    "standards": "Exact International Length & Mass Definitions (1 lb = 0.45359237 kg, 1 ft = 0.3048 m, 1 in = 0.0254 m)",
+    "cadContext": "Reconcile CAD solid mass-property densities between metric (kg/m3, g/cm3) and US customary (lb/in3, lb/ft3) part templates.",
+    "formula": "1 g/cm3 = 1000 kg/m3 = 62.427961 lb/ft3 = 0.036127292 lb/in3",
     "inputs": [
       {
-        "label": "Value",
+        "label": "Value (g/cm3)",
         "val": "7.85"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "7850.00"
+        "label": "Metric (kg/m3)",
+        "val": "7850.00 kg/m3"
+      },
+      {
+        "label": "Imperial (lb/ft3 / lb/in3)",
+        "val": "490.0595 lb/ft3 / 0.283599 lb/in3"
       }
     ]
   },
   "die-casting-pressure-calculator": {
     "title": "Die Casting Pressure Calculator",
-    "description": "Calculate die casting injection pressure, die clamping force, and fill time.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "P = metal_pressure * overflow, F = P * projected_area",
+    "description": "Calculate die clamping force, machine tonnage, continuity-derived gate velocity, and cavity fill time.",
+    "discipline": "High-Pressure Die Casting & Tooling Engineering",
+    "standards": "Hydrostatic Projected-Area Clamping Equilibrium (F = P * A * SF) and Volumetric Gate Continuity (vg = V_cav / (A_gate * t_fill))",
+    "cadContext": "Balance cavity projected area against die casting machine locking tonnage and verify runner/gate area for target fill time.",
+    "formula": "F_clamp = 0.1 * P_MPa * A_cm2 * SF (kN); v_g = (V_cm3 * 1000) / (A_gate_mm2 * t_fill_ms) (m/s)",
     "inputs": [
       {
         "label": "Injection Pressure (MPa)",
         "val": "50"
       },
       {
-        "label": "Projected Area (cm2)",
-        "val": "200"
+        "label": "Projected Area (cm2) / Clamp SF",
+        "val": "200 / 1.0"
       },
       {
         "label": "Cavity Vol (cm3)",
         "val": "500"
       },
       {
-        "label": "Gate Area (mm2)",
-        "val": "50"
+        "label": "Gate Area (mm2) / Fill Time (ms)",
+        "val": "50 / 250"
       }
     ],
     "outputs": [
       {
         "label": "Clamping Force",
-        "val": "1000.00 kN"
-      },
-      {
-        "label": "Fill Time",
-        "val": "250.00 ms"
+        "val": "1000.00 kN (101.97 tf)"
       },
       {
         "label": "Gate Velocity",
