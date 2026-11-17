@@ -4,9 +4,8 @@ import type { Metadata } from 'next';
 import GDTSymbolClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'GD&T Symbol Reference Guide (ASME Y14.5)',
-  description:
-    'Interactive reference for ASME Y14.5 Geometric Dimensioning & Tolerancing symbols. Form, profile, orientation, location, and runout controls.',
+  title: 'GD&T Symbol Reference Guide (ASME Y14.5-2018)',
+  description: 'Interactive reference for the 12 active ASME Y14.5-2018 GD&T geometric characteristics, 2018-removed legacy symbols, and material condition modifiers.',
   path: '/toolbox/gdt-symbol-reference-guide',
 });
 
@@ -27,13 +26,13 @@ export default function GDTSymbolPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              ASME Y14.5 Reference
+              ASME Y14.5-2018 Reference
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              GD&T <span className="text-blue-400">Symbol Reference</span> Guide
+              GD&amp;T <span className="text-blue-400">Symbol Reference</span> Guide
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Browse all ASME Y14.5 Geometric Dimensioning & Tolerancing symbols by category. Form, profile, orientation, location, and runout with tolerance zone descriptions.
+              Browse the 12 active ASME Y14.5-2018 geometric characteristics, optional 2009 legacy symbols (Concentricity &amp; Symmetry), and modifiers.
             </p>
           </div>
         </section>

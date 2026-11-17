@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import GearForceCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Gear Tangential & Radial Force Calculator",
-  description: "Calculate tangential, radial, and axial forces on spur and helical gears.",
+  title: 'Spur & Helical Gear Mesh Force Calculator',
+  description: 'Calculate tangential, radial, axial thrust, and total normal gear mesh forces plus transverse pressure angle from torque and pitch diameter.',
   path: '/toolbox/gear-force-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function GearForceCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Gear Tangential & Radial Force Calculator", path: '/toolbox/gear-force-calculator' },
+    { name: 'Gear Force Calculator', path: '/toolbox/gear-force-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function GearForceCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Mechanical
+              Gear Mesh Kinematics
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Gear Tangential & Radial Force <span className="text-blue-400">Calculator</span>
+              Gear Tangential, Radial &amp; Axial Force <span className="text-blue-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate tangential, radial, and axial forces on spur and helical gears.
+              Compute Ft, Fr, Fa, total normal mesh force Fn, and transverse pressure angle for involute spur and helical gears.
             </p>
           </div>
         </section>

@@ -4,9 +4,8 @@ import type { Metadata } from 'next';
 import GCodeClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CNC G-Code & M-Code Quick Reference Cheatsheet',
-  description:
-    'Searchable index of common CNC G-codes and M-codes with descriptions, modal groups, and usage examples. Fanuc, Haas, Siemens, LinuxCNC.',
+  title: 'CNC G-Code & M-Code Quick Reference Sheet (LinuxCNC)',
+  description: 'Searchable quick reference for standard CNC G-codes (G0-G99) and M-codes (M0-M99) aligned with official LinuxCNC documentation.',
   path: '/toolbox/gcode-quick-reference-sheet',
 });
 
@@ -14,7 +13,7 @@ export default function GCodePage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'G-Code Reference', path: '/toolbox/gcode-quick-reference-sheet' },
+    { name: 'G-Code Quick Reference', path: '/toolbox/gcode-quick-reference-sheet' },
   ]);
 
   return (
@@ -33,7 +32,7 @@ export default function GCodePage() {
               G-Code <span className="text-blue-400">Quick Reference</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Searchable index of CNC G-codes and M-codes with descriptions, modal groups, and usage examples. Covers Fanuc, Haas, Siemens, and LinuxCNC.
+              Searchable index of 41 G-codes and 14 M-codes verified against LinuxCNC G-Code and M-Code documentation with pure-ASCII CSV export.
             </p>
           </div>
         </section>

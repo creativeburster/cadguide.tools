@@ -6231,94 +6231,106 @@
     ]
   },
   "gcode-quick-reference-sheet": {
-    "title": "G-Code Quick Reference",
-    "description": "Searchable index of common CNC G-codes and M-codes with descriptions, modal groups, and usage examples. Fanuc, Haas, Siemens, LinuxCNC.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Standardized parametric evaluation for G-Code Quick Reference",
+    "title": "CNC G-Code & M-Code Quick Reference Sheet (LinuxCNC)",
+    "description": "Searchable quick reference for 41 G-codes and 14 M-codes verified against official LinuxCNC documentation.",
+    "discipline": "CNC Machining & G-Code Programming Reference",
+    "standards": "LinuxCNC G-Code & M-Code Reference Documentation (g-code.html / m-code.html)",
+    "cadContext": "Cross-check CAM post-processor preamble blocks (units G20/G21, plane G17/G18/G19, work offset G54-G59, and tool length offset G43/G49) against controller-supported codes.",
+    "formula": "Lookup & filter index across 55 verified LinuxCNC G-codes (G0-G99) and M-codes (M0-M99)",
     "inputs": [],
     "outputs": []
   },
   "gdt-symbol-reference-guide": {
-    "title": "GD&T Symbol Reference Guide",
-    "description": "Interactive reference for ASME Y14.5 Geometric Dimensioning & Tolerancing symbols. Form, profile, orientation, location, and runout controls.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Standardized parametric evaluation for GD&T Symbol Reference Guide",
+    "title": "GD&T Symbol Reference Guide (ASME Y14.5-2018)",
+    "description": "Interactive reference for the 12 active ASME Y14.5-2018 GD&T symbols, 2018-removed legacy symbols, and feature control frame modifiers.",
+    "discipline": "Geometric Dimensioning & Tolerancing (GD&T)",
+    "standards": "ASME Y14.5-2018 Geometric Dimensioning and Tolerancing (GD&T Basics Symbols & 2009 vs 2018 Reference)",
+    "cadContext": "Audit CAD 3D model-based annotations and engineering drawing feature control frames to ensure Concentricity and Symmetry legacy callouts are replaced per ASME Y14.5-2018.",
+    "formula": "12 active ASME Y14.5-2018 geometric characteristics + 2 legacy 2009 symbols (Concentricity, Symmetry) + 5 modifiers (MMC, LMC, RFS default, Projected, Free State)",
     "inputs": [],
     "outputs": []
   },
   "gear-force-calculator": {
-    "title": "Gear Tangential & Radial Force Calculator",
-    "description": "Calculate tangential, radial, and axial forces on spur and helical gears.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "Ft=2T/d, Fr=Ft*tan(a)/cos(b), Fa=Ft*tan(b)",
+    "title": "Spur & Helical Gear Mesh Force Calculator",
+    "description": "Calculate tangential, radial, axial thrust, and total normal gear mesh forces plus transverse pressure angle.",
+    "discipline": "Mechanical Power Transmission & Gear Mesh Forces",
+    "standards": "Standard Involute Spur & Helical Gear Mesh Force Analysis",
+    "cadContext": "Transfer computed radial separating force Fr and axial thrust Fa from mesh geometry directly into shaft deflection and bearing life models.",
+    "formula": "Ft = 2000*T/d; Fr = Ft*tan(alpha_n)/cos(beta); Fa = Ft*tan(beta); Fn = sqrt(Ft^2+Fr^2+Fa^2); alpha_t = atan(tan(alpha_n)/cos(beta))",
     "inputs": [
       {
-        "label": "Torque (Nm)",
+        "label": "Transmitted Torque T (N*m)",
         "val": "200"
       },
       {
-        "label": "Pitch Dia (mm)",
-        "val": "50"
+        "label": "Pitch Circle Diameter d (mm)",
+        "val": "100"
       },
       {
-        "label": "Pressure Angle (deg)",
+        "label": "Normal Pressure Angle alpha_n (deg)",
         "val": "20"
       },
       {
-        "label": "Helix Angle (deg)",
-        "val": "0"
+        "label": "Helix Angle beta (deg)",
+        "val": "15"
       }
     ],
     "outputs": [
       {
-        "label": "Tangential Ft",
-        "val": "8000.00 N"
+        "label": "Tangential Force Ft",
+        "val": "4000.00 N"
       },
       {
-        "label": "Radial Fr",
-        "val": "2911.76 N"
+        "label": "Radial Force Fr",
+        "val": "1507.24 N"
       },
       {
-        "label": "Axial Fa",
-        "val": "0.000000 N"
+        "label": "Axial Thrust Fa",
+        "val": "1071.80 N"
+      },
+      {
+        "label": "Total Normal Force Fn",
+        "val": "4406.87 N"
+      },
+      {
+        "label": "Transverse Pressure Angle alpha_t",
+        "val": "20.65 deg"
       }
     ]
   },
   "gear-module-calculator": {
-    "title": "Gear Module Calculator",
-    "description": "Calculate gear module (m), pitch diameter (d), number of teeth (z), and center distance for metric spur gears per DIN 880.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "m = d / z = p / π • d_a = m × (z + 2) • d_f = m × (z - 2.5) • a = m × (z₁ + z₂) / 2 (ISO 54 / DIN 780)",
+    "title": "Gear Module, Pitch Diameter & Teeth Calculator",
+    "description": "Solve metric spur gear module, teeth count, or pitch diameter and compute blank diameters and mating center distance.",
+    "discipline": "Metric Spur Gear Geometry",
+    "standards": "Standard Full-Depth Metric Spur Gear Geometry (ha = m, hf = 1.25m)",
+    "cadContext": "Confirm gear blank outside diameter da, root fillet clearance df, and housing bore center distance a = m*(z1+z2)/2 before locking CAD assembly constraints.",
+    "formula": "m = d / z; p = pi * m; da = d + 2*m; df = d - 2.5*m; db = d * cos(alpha); a = m * (z1 + z2) / 2",
     "inputs": [
       {
-        "label": "Solve For Module Teeth Pitch Ø Teeth z₁",
-        "val": "24"
+        "label": "Solve For Mode",
+        "val": "Module (m)"
       },
       {
         "label": "Pitch Diameter d (mm)",
         "val": "48"
       },
       {
-        "label": "Calculate center distance (mating gear) Mating Gear Teeth z₂",
+        "label": "Teeth Count z1",
+        "val": "24"
+      },
+      {
+        "label": "Mating Gear Teeth z2",
         "val": "36"
+      },
+      {
+        "label": "Pressure Angle alpha (deg)",
+        "val": "20"
       }
     ],
     "outputs": [
       {
         "label": "Module m",
         "val": "2.0000 mm"
-      },
-      {
-        "label": "Teeth z₁",
-        "val": "24"
       },
       {
         "label": "Pitch Diameter d",
@@ -6335,38 +6347,62 @@
       {
         "label": "Circular Pitch p",
         "val": "6.2832 mm"
+      },
+      {
+        "label": "Base Diameter db",
+        "val": "45.1052 mm"
+      },
+      {
+        "label": "Center Distance a",
+        "val": "60.0000 mm"
       }
     ]
   },
   "gear-module-calculator-2": {
-    "title": "Gear Module & Pitch Calculator",
-    "description": "Calculate gear module, circular pitch, and diametral pitch from teeth and pitch diameter.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "m = d/z, p = pi*m, Pd = z/d",
+    "title": "Gear Module, Circular & Diametral Pitch Calculator",
+    "description": "Calculate gear module, circular pitch, diametral pitch, and blank diameters from teeth and pitch diameter.",
+    "discipline": "Metric & Imperial Gear Pitch Geometry",
+    "standards": "Standard Full-Depth Involute Spur Gear Pitch Relations (1 in = 25.4 mm)",
+    "cadContext": "Verify metric module and equivalent imperial diametral pitch Pd when substituting cutters or matching imported CAD gear blanks across unit systems.",
+    "formula": "m = d / z; p = pi * m; Pd = 25.4 / m; da = d + 2*m; df = d - 2.5*m; db = d * cos(alpha)",
     "inputs": [
       {
-        "label": "Pitch Dia (mm)",
+        "label": "Pitch Diameter d (mm)",
         "val": "60"
       },
       {
-        "label": "Number of Teeth",
+        "label": "Number of Teeth z",
+        "val": "20"
+      },
+      {
+        "label": "Pressure Angle alpha (deg)",
         "val": "20"
       }
     ],
     "outputs": [
       {
-        "label": "Module",
-        "val": "3.000 mm"
+        "label": "Metric Module m",
+        "val": "3.0000 mm"
       },
       {
-        "label": "Circular Pitch",
-        "val": "9.425 mm"
+        "label": "Circular Pitch p",
+        "val": "9.4248 mm"
       },
       {
-        "label": "Diametral Pitch",
-        "val": "8.467 1/in"
+        "label": "Diametral Pitch Pd",
+        "val": "8.4667 1/in"
+      },
+      {
+        "label": "Tip Diameter da",
+        "val": "66.0000 mm"
+      },
+      {
+        "label": "Root Diameter df",
+        "val": "52.5000 mm"
+      },
+      {
+        "label": "Base Diameter db",
+        "val": "56.3816 mm"
       }
     ]
   },

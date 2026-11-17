@@ -2,137 +2,233 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Info, Download } from 'lucide-react';
+import { Settings, Info, Download, Copy, Check, RotateCcw, AlertTriangle, Zap } from 'lucide-react';
 
-const STANDARD_MODULES = [0.3, 0.4, 0.5, 0.6, 0.8, 1.0, 1.25, 1.5, 2.0, 2.5, 3.0, 4.0, 5.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0, 25.0];
+function parseStrictPositive(raw: string): number {
+  const s = raw.trim();
+  if (s === '') return Number.NaN;
+  const n = Number(s);
+  return Number.isFinite(n) && n > 0 ? n : Number.NaN;
+}
+
+function toSafeAscii(input: string): string {
+  return input.replace(/[^\x20-\x7E\r\n\t]/g, '');
+}
+
+const QUICK_MODULES = ['1.0', '1.25', '1.5', '2.0', '2.5', '3.0', '4.0', '5.0'];
 
 export default function GearModuleClient() {
   const [solveFor, setSolveFor] = useState<'module' | 'teeth' | 'pitchDiameter'>('module');
-  const [moduleVal, setModuleVal] = useState<number>(2.0);
-  const [teeth, setTeeth] = useState<number>(24);
-  const [pitchDiameter, setPitchDiameter] = useState<number>(48);
-  const [teeth2, setTeeth2] = useState<number>(36);
-  const [showCenterDistance, setShowCenterDistance] = useState<boolean>(true);
+  const [moduleStr, setModuleStr] = useState('2.0');
+  const [teethStr, setTeethStr] = useState('24');
+  const [pitchDiaStr, setPitchDiaStr] = useState('48');
+  const [teeth2Str, setTeeth2Str] = useState('36');
+  const [alphaStr, setAlphaStr] = useState('20');
+  const [copied, setCopied] = useState(false);
+
+  const resetDefaults = () => {
+    setSolveFor('module');
+    setModuleStr('2.0');
+    setTeethStr('24');
+    setPitchDiaStr('48');
+    setTeeth2Str('36');
+    setAlphaStr('20');
+    setCopied(false);
+  };
 
   const result = useMemo(() => {
-    let m = moduleVal;
-    let z = teeth;
-    let d = pitchDiameter;
+    const z2 = parseStrictPositive(teeth2Str);
+    const alpha = parseStrictPositive(alphaStr);
+    if (!Number.isFinite(z2) || !Number.isFinite(alpha) || alpha >= 45) {
+      return { valid: false as const, errorMsg: 'Enter valid positive mating gear teeth z2 and pressure angle (0 < alpha < 45 deg).' };
+    }
+
+    let m = Number.NaN;
+    let z = Number.NaN;
+    let d = Number.NaN;
 
     if (solveFor === 'module') {
-      if (z > 0) m = d / z;
+      d = parseStrictPositive(pitchDiaStr);
+      z = parseStrictPositive(teethStr);
+      if (!Number.isFinite(d) || !Number.isFinite(z)) {
+        return { valid: false as const, errorMsg: 'Enter strictly positive pitch diameter d and teeth z1.' };
+      }
+      m = d / z;
     } else if (solveFor === 'teeth') {
-      if (m > 0) z = d / m;
-    } else if (solveFor === 'pitchDiameter') {
+      d = parseStrictPositive(pitchDiaStr);
+      m = parseStrictPositive(moduleStr);
+      if (!Number.isFinite(d) || !Number.isFinite(m)) {
+        return { valid: false as const, errorMsg: 'Enter strictly positive pitch diameter d and module m.' };
+      }
+      z = d / m;
+    } else {
+      m = parseStrictPositive(moduleStr);
+      z = parseStrictPositive(teethStr);
+      if (!Number.isFinite(m) || !Number.isFinite(z)) {
+        return { valid: false as const, errorMsg: 'Enter strictly positive module m and teeth z1.' };
+      }
       d = m * z;
     }
 
-    const centerDistance = showCenterDistance && m > 0 ? m * (z + teeth2) / 2 : 0;
     const addendum = m;
     const dedendum = 1.25 * m;
     const tipDiameter = d + 2 * addendum;
     const rootDiameter = d - 2 * dedendum;
     const circularPitch = Math.PI * m;
-    const baseDiameter = d * Math.cos(20 * Math.PI / 180);
+    const baseDiameter = d * Math.cos((alpha * Math.PI) / 180);
+    const centerDistance = (m * (z + z2)) / 2;
+
+    if (rootDiameter <= 0) {
+      return { valid: false as const, errorMsg: 'Computed root diameter is non-positive (teeth count too small for full-depth 1.25m dedendum).' };
+    }
 
     return {
-      module: m,
-      teeth: z,
-      pitchDiameter: d,
-      centerDistance,
+      valid: true as const,
+      m,
+      z,
+      d,
+      z2,
+      alpha,
       addendum,
       dedendum,
       tipDiameter,
       rootDiameter,
       circularPitch,
       baseDiameter,
-      teeth2,
+      centerDistance,
     };
-  }, [solveFor, moduleVal, teeth, pitchDiameter, teeth2, showCenterDistance]);
+  }, [solveFor, moduleStr, teethStr, pitchDiaStr, teeth2Str, alphaStr]);
 
-  const downloadCsv = () => {
-    const csv = [
-      ['Gear Module Calculator Report', ''],
-      ['Date', new Date().toLocaleDateString()],
-      ['', ''],
-      ['Input Parameters', ''],
-      ['Solved For', solveFor],
-      ['Module m (mm)', result.module.toFixed(4)],
-      ['Teeth z1', result.teeth],
-      ['Teeth z2', result.teeth2],
-      ['Pitch Diameter d (mm)', result.pitchDiameter.toFixed(4)],
-      ['', ''],
-      ['Calculated Results', ''],
-      ['Pitch Diameter d = m × z (mm)', result.pitchDiameter.toFixed(4)],
-      ['Tip Diameter da = d + 2m (mm)', result.tipDiameter.toFixed(4)],
-      ['Root Diameter df = d - 2.5m (mm)', result.rootDiameter.toFixed(4)],
-      ['Addendum ha = m (mm)', result.addendum.toFixed(4)],
-      ['Dedendum hf = 1.25m (mm)', result.dedendum.toFixed(4)],
-      ['Circular Pitch p = πm (mm)', result.circularPitch.toFixed(4)],
-      ['Base Diameter db = d·cos(20°) (mm)', result.baseDiameter.toFixed(4)],
-      ['Center Distance a = m(z1+z2)/2 (mm)', result.centerDistance.toFixed(4)],
-    ].map(r => r.join(',')).join('\n');
+  const handleCopy = async () => {
+    if (!result.valid) return;
+    const text = [
+      `Metric Spur Gear Geometry Summary`,
+      `SolveFor=${solveFor}, m=${result.m.toFixed(4)} mm, z1=${result.z.toFixed(2)}, z2=${result.z2}, alpha=${result.alpha} deg`,
+      `Pitch Diameter d = ${result.d.toFixed(4)} mm`,
+      `Tip Diameter da = ${result.tipDiameter.toFixed(4)} mm`,
+      `Root Diameter df = ${result.rootDiameter.toFixed(4)} mm`,
+      `Base Diameter db = ${result.baseDiameter.toFixed(4)} mm`,
+      `Circular Pitch p = ${result.circularPitch.toFixed(4)} mm`,
+      `Mating Center Distance a = ${result.centerDistance.toFixed(4)} mm`,
+    ].join('\n');
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1800);
+      }
+    } catch {
+      setCopied(false);
+    }
+  };
 
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+  const handleDownloadCsv = () => {
+    if (!result.valid) return;
+    const rows = [
+      ['Parameter', 'Value', 'Unit'],
+      ['Solved For', solveFor, '-'],
+      ['Module m', result.m.toFixed(4), 'mm'],
+      ['Teeth z1', result.z.toFixed(2), '-'],
+      ['Mating Gear Teeth z2', String(result.z2), '-'],
+      ['Pressure Angle alpha', String(result.alpha), 'deg'],
+      ['Pitch Diameter d = m*z1', result.d.toFixed(4), 'mm'],
+      ['Tip Diameter da = d + 2*m', result.tipDiameter.toFixed(4), 'mm'],
+      ['Root Diameter df = d - 2.5*m', result.rootDiameter.toFixed(4), 'mm'],
+      ['Base Diameter db = d*cos(alpha)', result.baseDiameter.toFixed(4), 'mm'],
+      ['Circular Pitch p = pi*m', result.circularPitch.toFixed(4), 'mm'],
+      ['Addendum ha = m', result.addendum.toFixed(4), 'mm'],
+      ['Dedendum hf = 1.25*m', result.dedendum.toFixed(4), 'mm'],
+      ['Center Distance a = m*(z1+z2)/2', result.centerDistance.toFixed(4), 'mm'],
+    ];
+    const csv = toSafeAscii(rows.map((r) => r.map((c) => `"${c}"`).join(',')).join('\n'));
+    const blob = new Blob([csv], { type: 'text/csv;charset=ascii' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'gear-module-calculation.csv';
+    a.download = 'gear-module-geometry.csv';
+    document.body.appendChild(a);
     a.click();
+    document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
 
+  const scaleFactor = result.valid && result.tipDiameter > 0 ? 120 / (result.tipDiameter / 2) : 1;
+
   return (
     <div className="space-y-8">
+      <div className="flex flex-wrap gap-2 items-center justify-between">
+        <div className="flex flex-wrap gap-2">
+          {([
+            { id: 'module', label: 'Solve Module (m)' },
+            { id: 'teeth', label: 'Solve Teeth (z1)' },
+            { id: 'pitchDiameter', label: 'Solve Pitch Dia (d)' },
+          ] as const).map((opt) => (
+            <button
+              key={opt.id}
+              type="button"
+              data-testid={`mode-${opt.id}`}
+              onClick={() => setSolveFor(opt.id)}
+              className={`px-4 py-2 rounded-xl text-xs font-black border transition-all ${
+                solveFor === opt.id
+                  ? 'bg-blue-600 border-blue-600 text-white'
+                  : 'bg-white border-slate-200 text-slate-700 hover:bg-slate-50'
+              }`}
+            >
+              {opt.label}
+            </button>
+          ))}
+        </div>
+        <button
+          type="button"
+          data-testid="btn-reset"
+          onClick={resetDefaults}
+          className="inline-flex items-center gap-1 px-3 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700"
+        >
+          <RotateCcw className="w-3.5 h-3.5" />
+          Reset Defaults
+        </button>
+      </div>
+
+      {!result.valid && (
+        <div
+          data-testid="error-banner"
+          className="p-4 rounded-2xl bg-red-50 border border-red-200 text-sm text-red-800 flex items-center gap-2.5"
+        >
+          <AlertTriangle className="w-4 h-4 text-red-600 shrink-0" />
+          <span>{result.errorMsg}</span>
+        </div>
+      )}
+
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Input Panel */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
               <Settings className="w-5 h-5" />
             </div>
-            <h2 className="text-lg font-black text-slate-900 tracking-tight">Parameters</h2>
-          </div>
-
-          <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Solve For</label>
-            <div className="grid grid-cols-3 gap-2">
-              {([
-                { id: 'module', label: 'Module' },
-                { id: 'teeth', label: 'Teeth' },
-                { id: 'pitchDiameter', label: 'Pitch Ø' },
-              ] as const).map(opt => (
-                <button
-                  key={opt.id}
-                  onClick={() => setSolveFor(opt.id)}
-                  className={`px-3 py-2.5 rounded-xl text-base font-black border transition-all ${
-                    solveFor === opt.id
-                      ? 'bg-blue-600 border-blue-600 text-white'
-                      : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'
-                  }`}
-                >
-                  {opt.label}
-                </button>
-              ))}
-            </div>
+            <h2 className="text-lg font-black text-slate-900">Gear Parameters</h2>
           </div>
 
           {solveFor !== 'module' && (
             <div>
-              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Module m (mm)</label>
+              <label htmlFor="input-module" className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
+                Module m (mm)
+              </label>
               <input
-                type="number"
-                step="0.1"
-                value={moduleVal}
-                onChange={e => setModuleVal(parseFloat(e.target.value) || 0)}
-                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
+                id="input-module"
+                data-testid="input-module"
+                type="text"
+                inputMode="decimal"
+                value={moduleStr}
+                onChange={(e) => setModuleStr(e.target.value)}
+                className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900"
               />
               <div className="mt-2 flex flex-wrap gap-1.5">
-                {STANDARD_MODULES.slice(6, 14).map(m => (
+                {QUICK_MODULES.map((m) => (
                   <button
                     key={m}
-                    onClick={() => setModuleVal(m)}
-                    className="px-2.5 py-1 rounded-lg text-sm font-bold bg-slate-50 text-slate-500 hover:bg-blue-50 hover:text-blue-600 border border-slate-100 transition-all"
+                    type="button"
+                    onClick={() => setModuleStr(m)}
+                    className="px-2 py-1 rounded-lg text-xs font-bold bg-slate-50 text-slate-600 hover:bg-blue-50 hover:text-blue-700 border border-slate-200"
                   >
                     {m}
                   </button>
@@ -143,161 +239,188 @@ export default function GearModuleClient() {
 
           {solveFor !== 'teeth' && (
             <div>
-              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Teeth z₁</label>
+              <label htmlFor="input-teeth" className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
+                Teeth Count z1
+              </label>
               <input
-                type="number"
-                step="1"
-                value={teeth}
-                onChange={e => setTeeth(parseInt(e.target.value) || 0)}
-                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
+                id="input-teeth"
+                data-testid="input-teeth"
+                type="text"
+                inputMode="decimal"
+                value={teethStr}
+                onChange={(e) => setTeethStr(e.target.value)}
+                className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900"
               />
             </div>
           )}
 
           {solveFor !== 'pitchDiameter' && (
             <div>
-              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Pitch Diameter d (mm)</label>
+              <label htmlFor="input-pitch-dia" className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
+                Pitch Diameter d (mm)
+              </label>
               <input
-                type="number"
-                step="0.1"
-                value={pitchDiameter}
-                onChange={e => setPitchDiameter(parseFloat(e.target.value) || 0)}
-                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
+                id="input-pitch-dia"
+                data-testid="input-pitch-dia"
+                type="text"
+                inputMode="decimal"
+                value={pitchDiaStr}
+                onChange={(e) => setPitchDiaStr(e.target.value)}
+                className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900"
               />
             </div>
           )}
 
-          <div className="pt-2 border-t border-slate-50">
-            <label className="flex items-center gap-3 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={showCenterDistance}
-                onChange={e => setShowCenterDistance(e.target.checked)}
-                className="w-4 h-4 rounded accent-blue-600"
-              />
-              <span className="text-base font-bold text-slate-600">Calculate center distance (mating gear)</span>
+          <div>
+            <label htmlFor="input-teeth2" className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
+              Mating Gear Teeth z2
             </label>
+            <input
+              id="input-teeth2"
+              data-testid="input-teeth2"
+              type="text"
+              inputMode="decimal"
+              value={teeth2Str}
+              onChange={(e) => setTeeth2Str(e.target.value)}
+              className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900"
+            />
           </div>
 
-          {showCenterDistance && (
-            <div>
-              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Mating Gear Teeth z₂</label>
-              <input
-                type="number"
-                step="1"
-                value={teeth2}
-                onChange={e => setTeeth2(parseInt(e.target.value) || 0)}
-                className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
-              />
-            </div>
-          )}
+          <div>
+            <label htmlFor="input-alpha" className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
+              Pressure Angle alpha (deg)
+            </label>
+            <input
+              id="input-alpha"
+              data-testid="input-alpha"
+              type="text"
+              inputMode="decimal"
+              value={alphaStr}
+              onChange={(e) => setAlphaStr(e.target.value)}
+              className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900"
+            />
+          </div>
         </div>
 
-        {/* Results Panel */}
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center justify-between mb-6">
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">Results</h2>
-              <button
-                onClick={downloadCsv}
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-base font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all"
-              >
-                <Download className="w-4 h-4" />
-                Export CSV
-              </button>
+          <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <h2 className="text-lg font-black text-slate-900">Spur Gear Dimensions</h2>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  data-testid="btn-copy"
+                  disabled={!result.valid}
+                  onClick={handleCopy}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 disabled:opacity-40 text-white text-xs font-bold"
+                >
+                  {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                  {copied ? 'Copied' : 'Copy'}
+                </button>
+                <button
+                  type="button"
+                  data-testid="btn-download"
+                  disabled={!result.valid}
+                  onClick={handleDownloadCsv}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-40 text-white text-xs font-bold"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Export CSV
+                </button>
+              </div>
             </div>
 
             <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-              {[
-                { label: 'Module m', value: result.module.toFixed(4), unit: 'mm', highlight: solveFor === 'module' },
-                { label: 'Teeth z₁', value: result.teeth.toString(), unit: '', highlight: solveFor === 'teeth' },
-                { label: 'Pitch Diameter d', value: result.pitchDiameter.toFixed(4), unit: 'mm', highlight: solveFor === 'pitchDiameter' },
-                { label: 'Tip Diameter da', value: result.tipDiameter.toFixed(4), unit: 'mm' },
-                { label: 'Root Diameter df', value: result.rootDiameter.toFixed(4), unit: 'mm' },
-                { label: 'Circular Pitch p', value: result.circularPitch.toFixed(4), unit: 'mm' },
-                { label: 'Base Diameter db', value: result.baseDiameter.toFixed(4), unit: 'mm' },
-                { label: 'Addendum ha', value: result.addendum.toFixed(4), unit: 'mm' },
-                { label: 'Dedendum hf', value: result.dedendum.toFixed(4), unit: 'mm' },
-              ].map(item => (
-                <div
-                  key={item.label}
-                  className={`rounded-2xl p-4 border transition-all ${
-                    item.highlight
-                      ? 'bg-blue-50 border-blue-200'
-                      : 'bg-slate-50 border-slate-100'
-                  }`}
-                >
-                  <p className="text-sm font-black text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
-                  <p className={`text-xl font-black ${item.highlight ? 'text-blue-600' : 'text-slate-900'}`}>
-                    {item.value}
-                    {item.unit && <span className="text-base text-slate-400 font-bold ml-1">{item.unit}</span>}
-                  </p>
+              <div className="bg-blue-50 rounded-2xl p-4 border border-blue-100">
+                <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">Module m</div>
+                <div className="text-2xl font-black text-blue-900">
+                  <span data-testid="result-module">{result.valid ? result.m.toFixed(4) : '—'}</span>{' '}
+                  <span className="text-sm text-blue-500">mm</span>
                 </div>
-              ))}
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Teeth z1</div>
+                <div className="text-2xl font-black text-slate-900">
+                  <span data-testid="result-teeth">{result.valid ? result.z.toFixed(2) : '—'}</span>
+                </div>
+              </div>
+              <div className="bg-emerald-50 rounded-2xl p-4 border border-emerald-100">
+                <div className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-1">Pitch Diameter d</div>
+                <div className="text-2xl font-black text-emerald-900">
+                  <span data-testid="result-pitch-dia">{result.valid ? result.d.toFixed(4) : '—'}</span>{' '}
+                  <span className="text-sm text-emerald-500">mm</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Tip Diameter da</div>
+                <div className="text-xl font-black text-slate-900">
+                  <span data-testid="result-tip">{result.valid ? result.tipDiameter.toFixed(4) : '—'}</span>{' '}
+                  <span className="text-xs text-slate-500">mm</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Root Diameter df</div>
+                <div className="text-xl font-black text-slate-900">
+                  <span data-testid="result-root">{result.valid ? result.rootDiameter.toFixed(4) : '—'}</span>{' '}
+                  <span className="text-xs text-slate-500">mm</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Circular Pitch p</div>
+                <div className="text-xl font-black text-slate-900">
+                  <span data-testid="result-pitch">{result.valid ? result.circularPitch.toFixed(4) : '—'}</span>{' '}
+                  <span className="text-xs text-slate-500">mm</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Base Diameter db</div>
+                <div className="text-xl font-black text-slate-900">
+                  <span data-testid="result-base">{result.valid ? result.baseDiameter.toFixed(4) : '—'}</span>{' '}
+                  <span className="text-xs text-slate-500">mm</span>
+                </div>
+              </div>
+              <div className="bg-indigo-50 rounded-2xl p-4 border border-indigo-100 col-span-2">
+                <div className="text-xs font-black text-indigo-600 uppercase tracking-wider mb-1">Center Distance a = m*(z1+z2)/2</div>
+                <div className="text-2xl font-black text-indigo-900">
+                  <span data-testid="result-center">{result.valid ? result.centerDistance.toFixed(4) : '—'}</span>{' '}
+                  <span className="text-sm text-indigo-500">mm</span>
+                </div>
+              </div>
             </div>
 
-            {showCenterDistance && (
-              <div className="mt-6 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 p-6 text-white">
-                <p className="text-base font-black uppercase tracking-wider opacity-80 mb-1">Center Distance (a = m × (z₁ + z₂) / 2)</p>
-                <p className="text-3xl font-black">
-                  {result.centerDistance.toFixed(4)}
-                  <span className="text-lg font-bold ml-2 opacity-80">mm</span>
-                </p>
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-xs text-slate-600 flex items-start gap-2">
+              <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+              <span>
+                Standard full-depth metric spur gear geometry (unshifted): m = d/z, ha = m, hf = 1.25m, da = d + 2m, df = d - 2.5m, p = pi*m, db = d*cos(alpha), a = m*(z1+z2)/2.
+              </span>
+            </div>
+          </div>
+
+          <div className="bg-white rounded-3xl border border-slate-200 p-6 shadow-sm">
+            <h3 className="text-sm font-black text-slate-900 uppercase tracking-wider mb-4">Concentric Reference Circles</h3>
+            {result.valid ? (
+              <div className="flex justify-center">
+                <svg data-testid="gear-svg" viewBox="0 0 300 300" className="w-full max-w-[260px]">
+                  <circle cx="150" cy="150" r={(result.tipDiameter / 2) * scaleFactor} fill="none" stroke="#1e40af" strokeWidth="1.5" />
+                  <circle cx="150" cy="150" r={(result.d / 2) * scaleFactor} fill="none" stroke="#3b82f6" strokeWidth="2" strokeDasharray="4 4" />
+                  <circle cx="150" cy="150" r={(result.baseDiameter / 2) * scaleFactor} fill="none" stroke="#60a5fa" strokeWidth="1.2" strokeDasharray="2 2" />
+                  <circle cx="150" cy="150" r={(result.rootDiameter / 2) * scaleFactor} fill="none" stroke="#93c5fd" strokeWidth="1.2" />
+                  <circle cx="150" cy="150" r="3" fill="#1e40af" />
+                </svg>
               </div>
+            ) : (
+              <div className="text-center py-8 text-xs font-bold text-slate-400">Enter valid gear parameters to render geometry circles.</div>
             )}
           </div>
 
-          {/* SVG Visualization */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-lg font-black text-slate-900 mb-4">Gear Geometry Visualization</h3>
-            <div className="flex justify-center">
-              <svg viewBox="0 0 300 300" className="w-full max-w-[300px]">
-                <circle cx="150" cy="150" r={Math.min(result.pitchDiameter * 1.2, 130)} fill="none" stroke="#3b82f6" strokeWidth="2" strokeDasharray="4 4" />
-                <circle cx="150" cy="150" r={Math.min(result.tipDiameter * 1.2, 130)} fill="none" stroke="#1e40af" strokeWidth="1.5" />
-                <circle cx="150" cy="150" r={Math.min(result.rootDiameter * 1.2, 130)} fill="none" stroke="#93c5fd" strokeWidth="1" />
-                <circle cx="150" cy="150" r={Math.min(result.baseDiameter * 1.2, 130)} fill="none" stroke="#60a5fa" strokeWidth="1" strokeDasharray="2 2" />
-                <circle cx="150" cy="150" r="3" fill="#1e40af" />
-                <line x1="150" y1="150" x2={150 + Math.min(result.pitchDiameter * 1.2, 130)} y2="150" stroke="#3b82f6" strokeWidth="1" />
-                <text x="155" y={150 - Math.min(result.pitchDiameter * 0.6, 65)} className="fill-blue-600 text-[8px] font-bold">d={result.pitchDiameter.toFixed(1)}</text>
-                <text x="155" y={150 - Math.min(result.tipDiameter * 0.6, 65)} className="fill-blue-800 text-[8px] font-bold">da={result.tipDiameter.toFixed(1)}</text>
-              </svg>
-            </div>
-            <div className="mt-4 flex flex-wrap gap-3 text-sm font-bold">
-              <span className="flex items-center gap-1.5"><span className="w-3 h-0.5 bg-blue-600"></span><span className="text-slate-600">Pitch Circle (d)</span></span>
-              <span className="flex items-center gap-1.5"><span className="w-3 h-0.5 bg-blue-800"></span><span className="text-slate-600">Tip Circle (da)</span></span>
-              <span className="flex items-center gap-1.5"><span className="w-3 h-0.5 bg-blue-300"></span><span className="text-slate-600">Root Circle (df)</span></span>
-              <span className="flex items-center gap-1.5"><span className="w-3 h-0.5 bg-blue-400 border-dashed"></span><span className="text-slate-600">Base Circle (db)</span></span>
-            </div>
-          </div>
-
-          {/* Formula Reference */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-2 mb-4">
-              <Info className="w-4 h-4 text-slate-400" />
-              <h3 className="text-lg font-black text-slate-900">Formula Reference</h3>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 text-base">
-              {[
-                ['Module', 'm = d / z'],
-                ['Pitch Diameter', 'd = m × z'],
-                ['Tip Diameter', 'da = d + 2m'],
-                ['Root Diameter', 'df = d − 2.5m'],
-                ['Circular Pitch', 'p = π × m'],
-                ['Base Diameter', 'db = d × cos(20°)'],
-                ['Center Distance', 'a = m × (z₁ + z₂) / 2'],
-                ['Addendum', 'ha = m'],
-              ].map(([name, formula]) => (
-                <div key={name} className="flex items-center justify-between bg-slate-50 rounded-xl px-4 py-3">
-                  <span className="font-bold text-slate-600">{name}</span>
-                  <code className="text-blue-600 font-mono font-bold">{formula}</code>
-                </div>
-              ))}
-            </div>
-          </div>
+          <RelatedTools />
         </div>
       </div>
-
-      <RelatedTools compact />
     </div>
   );
 }

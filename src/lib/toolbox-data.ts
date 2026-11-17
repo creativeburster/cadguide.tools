@@ -1024,13 +1024,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'gear-module-calculator',
     title: 'Gear Module, Pitch Diameter & Teeth Calculator',
-    description: 'Calculate gear module (m), pitch diameter, number of teeth, and center distance for metric spur gears.',
-    detailDesc: 'Enter any two of module, teeth count, or pitch diameter to calculate the third. Supports center distance calculation for two mating gears. Includes standard module series recommendations (DIN 780).',
+    description: 'Calculate metric spur gear module (m), pitch diameter (d), teeth count (z), blank diameters, and mating center distance.',
+    detailDesc: 'Solve any one of module, teeth count, or pitch diameter from the other two. Computes full-depth tip/root/base diameters, circular pitch, and mating center distance.',
     category: 'calculator',
     status: 'released',
     origin: 'native',
     releasedDate: '2026-07-09',
-    keywords: ['gear module calculator', 'spur gear pitch diameter', 'gear teeth calculation', 'dinv 780 module', 'metric gear calculator', 'gear center distance', 'm d z gear formula', 'module pitch circle diameter']
+    keywords: ['gear module calculator', 'spur gear pitch diameter', 'gear teeth calculation', 'metric gear calculator', 'gear center distance', 'm d z gear formula', 'module pitch circle diameter']
   },
   {
     slug: 'cnc-feed-rate-calculator',
@@ -1295,25 +1295,25 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gcode-quick-reference-sheet',
-    title: 'CNC G-Code & M-Code Quick Reference Cheatsheet',
-    description: 'Searchable index of common CNC G-codes (G0-G92) and M-codes (M0-M30) with descriptions, modal groups, and usage examples.',
-    detailDesc: 'A comprehensive, searchable reference for CNC programming G-codes and M-codes. Covers Fanuc, Haas, Siemens, and LinuxCNC dialects. Includes modal group classification and common canned cycles.',
+    title: 'CNC G-Code & M-Code Quick Reference Sheet (LinuxCNC)',
+    description: 'Searchable quick reference for standard CNC G-codes (G0-G99) and M-codes (M0-M99) aligned with LinuxCNC documentation.',
+    detailDesc: 'A searchable reference for 41 G-codes and 14 M-codes verified against official LinuxCNC G-Code and M-Code documentation with pure-ASCII CSV export.',
     category: 'cheatsheet',
     status: 'released',
     releasedDate: '2026-07-09',
     origin: 'native',
-    keywords: ['g-code reference', 'cnc m-code list', 'fanuc g-code cheat sheet', 'haas g-code reference', 'cnc programming codes', 'g-code modal groups']
+    keywords: ['g-code reference', 'cnc m-code list', 'linuxcnc g-code', 'cnc programming codes', 'g-code cheatsheet']
   },
   {
     slug: 'gdt-symbol-reference-guide',
-    title: 'GD&T Symbol Reference Guide (ASME Y14.5)',
-    description: 'Interactive reference for ASME Y14.5 Geometric Dimensioning & Tolerancing symbols. Form, profile, orientation, location, and runout controls with tolerance zone descriptions.',
-    detailDesc: 'Browse all ASME Y14.5 GD&T symbols by category: form, profile, orientation, location, and runout. Each symbol includes its tolerance zone type, datum references, material condition modifiers, and practical usage examples.',
+    title: 'GD&T Symbol Reference Guide (ASME Y14.5-2018)',
+    description: 'Interactive reference for the 12 active ASME Y14.5-2018 GD&T symbols, 2018-removed legacy symbols, and material modifiers.',
+    detailDesc: 'Browse the 12 active ASME Y14.5-2018 geometric characteristics by category (form, profile, orientation, location, runout), inspect Concentricity/Symmetry 2018 removal status, and review MMC/LMC/Projected/Free State modifiers.',
     category: 'cheatsheet',
     status: 'released',
     releasedDate: '2026-07-09',
     origin: 'native',
-    keywords: ['gd&t symbols', 'asme y14.5 reference', 'geometric dimensioning tolerancing', 'gdt symbol guide', 'tolerance zone types', 'datum reference frame']
+    keywords: ['gd&t symbols', 'asme y14.5-2018', 'geometric dimensioning tolerancing', 'gdt symbol guide', 'tolerance zone types', 'material condition modifiers']
   },
   {
     slug: 'iso-286-limits-fits-reference',
@@ -1977,14 +1977,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gear-force-calculator',
-    title: 'Gear Tangential & Radial Force Calculator',
-    description: 'Calculate tangential, radial, and axial forces on spur and helical gears.',
-    detailDesc: 'Ft=2T/d, Fr=Ft*tan(a)/cos(b), Fa=Ft*tan(b)',
+    title: 'Spur & Helical Gear Mesh Force Calculator',
+    description: 'Calculate tangential, radial, axial thrust, and normal forces plus transverse pressure angle on spur and helical gears.',
+    detailDesc: 'Ft = 2000*T/d, Fr = Ft*tan(alpha_n)/cos(beta), Fa = Ft*tan(beta), Fn = sqrt(Ft^2+Fr^2+Fa^2)',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["gear","mechanical","calculator"]
+    keywords: ["gear force","helical gear","spur gear","mechanical","calculator"]
   },
   {
     slug: 'mohr-circle-calculator',
@@ -2813,14 +2813,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gear-module-calculator-2',
-    title: 'Gear Module & Pitch Calculator',
-    description: 'Calculate gear module, circular pitch, and diametral pitch from teeth and pitch diameter.',
-    detailDesc: 'm = d/z, p = pi*m, Pd = z/d',
+    title: 'Gear Module, Circular & Diametral Pitch Calculator',
+    description: 'Calculate gear module, circular pitch, diametral pitch, and blank diameters from teeth and pitch diameter.',
+    detailDesc: 'm = d/z, p = pi*m, Pd = 25.4/m, da = d+2*m, df = d-2.5*m, db = d*cos(alpha)',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["gear","mechanical","calculator"]
+    keywords: ["gear module","diametral pitch","circular pitch","mechanical","calculator"]
   },
   {
     slug: 'rack-pinion-calculator',
