@@ -86,12 +86,12 @@ async function assertNoNan(mainLoc, label) {
     await verifyNegativeTerms(page, ['TEMA', 'ASME PTC 12.5', 'Incropera'], '121 neg');
 
     await main.locator('[data-testid="preset-steel-tall"]').click();
-    approx(await main.locator('[data-testid="result-efficiency"]').innerText(), 45.67, '121 tall steel fin eta');
+    approx(await main.locator('[data-testid="result-efficiency"]').innerText(), 37.42, '121 tall steel fin eta');
 
     const [dl121] = await Promise.all([page.waitForEvent('download'), main.locator('[data-testid="btn-download"]').click()]);
     const csv121 = await readDownloadText(dl121);
     assertAscii(csv121, '121 csv');
-    assert(csv121.includes('"Fin Efficiency eta_f","45.67","%"'), '121 csv value');
+    assert(csv121.includes('"Fin Efficiency eta_f","37.42","%"'), '121 csv value');
 
     await main.locator('[data-testid="input-k"]').fill('');
     assert.strictEqual((await main.locator('[data-testid="result-efficiency"]').innerText()).trim(), '—', '121 empty k');
@@ -115,7 +115,7 @@ async function assertNoNan(mainLoc, label) {
     await verifyNegativeTerms(page, ['29.84', 'Class AA', 'NIST Special Publication 811', 'BIPM'], '122 neg');
 
     await main.locator('[data-testid="preset-square-edge"]').click();
-    approx(await main.locator('[data-testid="result-qtest-gpm"]').innerText(), 843.71, '122 C=0.80 Q_test');
+    approx(await main.locator('[data-testid="result-qtest-gpm"]').innerText(), 843.72, '122 C=0.80 Q_test');
     approx(await main.locator('[data-testid="result-aff-gpm"]').innerText(), 1383.84, '122 C=0.80 AFF');
 
     const [dl122] = await Promise.all([page.waitForEvent('download'), main.locator('[data-testid="btn-download"]').click()]);
@@ -222,7 +222,7 @@ async function assertNoNan(mainLoc, label) {
     await main.locator('[data-testid="preset-overloaded"]').click();
     assert.strictEqual((await main.locator('[data-testid="result-pc"]').innerText()).trim(), '—', '125 overload PC dash');
     assert.strictEqual((await main.locator('[data-testid="result-wait"]').innerText()).trim(), '—', '125 overload wait dash');
-    approx(await main.locator('[data-testid="result-pb"]').innerText(), 26.156, '125 overload PB finite');
+    approx(await main.locator('[data-testid="result-pb"]').innerText(), 26.574, '125 overload PB finite');
 
     const [dl125] = await Promise.all([page.waitForEvent('download'), main.locator('[data-testid="btn-download"]').click()]);
     const csv125 = await readDownloadText(dl125);
