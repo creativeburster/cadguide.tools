@@ -2,196 +2,418 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, ArrowRight } from 'lucide-react';
+import { Settings, ArrowLeftRight, RotateCcw, Copy, Check, Download, AlertTriangle } from 'lucide-react';
 
 type Category = 'length' | 'mass' | 'force' | 'pressure' | 'energy' | 'power' | 'temperature' | 'velocity' | 'area';
 
-const CATEGORIES: { id: Category; name: string; icon: string }[] = [
-  { id: 'length', name: 'Length', icon: '📏' },
-  { id: 'mass', name: 'Mass', icon: '⚖️' },
-  { id: 'force', name: 'Force', icon: '💪' },
-  { id: 'pressure', name: 'Pressure', icon: '🗜️' },
-  { id: 'energy', name: 'Energy', icon: '⚡' },
-  { id: 'power', name: 'Power', icon: '🔌' },
-  { id: 'temperature', name: 'Temp', icon: '🌡️' },
-  { id: 'velocity', name: 'Velocity', icon: '🚀' },
-  { id: 'area', name: 'Area', icon: '📐' },
+// Exact physical/SI definitions: 1 ft = 0.3048 m, 1 in = 0.0254 m, 1 lb = 0.45359237 kg, g_n = 9.80665 m/s^2
+const LB_KG = 0.45359237;
+const GN = 9.80665;
+const LBF_N = LB_KG * GN; // 4.4482216152605 N exact
+const IN_M = 0.0254;
+const FT_M = 0.3048;
+const IN2_M2 = IN_M * IN_M; // 0.00064516 m2 exact
+const FT2_M2 = FT_M * FT_M; // 0.09290304 m2 exact
+const PSI_PA = LBF_N / IN2_M2;
+const BTU_J = 1055.05585262; // International Table BTU
+
+const CATEGORIES: { id: Category; name: string }[] = [
+  { id: 'length', name: 'Length' },
+  { id: 'mass', name: 'Mass' },
+  { id: 'force', name: 'Force' },
+  { id: 'pressure', name: 'Pressure' },
+  { id: 'energy', name: 'Energy' },
+  { id: 'power', name: 'Power' },
+  { id: 'temperature', name: 'Temperature' },
+  { id: 'velocity', name: 'Velocity' },
+  { id: 'area', name: 'Area' },
 ];
 
-const UNITS: Record<Category, { name: string; factor: number }[]> = {
+const UNITS: Record<Category, { id: string; name: string; factor: number }[]> = {
   length: [
-    { name: 'mm', factor: 0.001 },
-    { name: 'cm', factor: 0.01 },
-    { name: 'm', factor: 1 },
-    { name: 'km', factor: 1000 },
-    { name: 'in', factor: 0.0254 },
-    { name: 'ft', factor: 0.3048 },
-    { name: 'yd', factor: 0.9144 },
-    { name: 'mile', factor: 1609.344 },
+    { id: 'mm', name: 'mm', factor: 0.001 },
+    { id: 'cm', name: 'cm', factor: 0.01 },
+    { id: 'm', name: 'm', factor: 1 },
+    { id: 'km', name: 'km', factor: 1000 },
+    { id: 'in', name: 'in', factor: IN_M },
+    { id: 'ft', name: 'ft', factor: FT_M },
+    { id: 'yd', name: 'yd', factor: 0.9144 },
+    { id: 'mile', name: 'mile', factor: 1609.344 },
   ],
   mass: [
-    { name: 'mg', factor: 0.000001 },
-    { name: 'g', factor: 0.001 },
-    { name: 'kg', factor: 1 },
-    { name: 't', factor: 1000 },
-    { name: 'oz', factor: 0.0283495 },
-    { name: 'lb', factor: 0.453592 },
-    { name: 'ton (US)', factor: 907.185 },
+    { id: 'mg', name: 'mg', factor: 1e-6 },
+    { id: 'g', name: 'g', factor: 1e-3 },
+    { id: 'kg', name: 'kg', factor: 1 },
+    { id: 't', name: 't (metric)', factor: 1000 },
+    { id: 'oz', name: 'oz (avdp)', factor: LB_KG / 16 },
+    { id: 'lb', name: 'lb (avdp)', factor: LB_KG },
+    { id: 'ton_us', name: 'ton (US short)', factor: 2000 * LB_KG },
   ],
   force: [
-    { name: 'N', factor: 1 },
-    { name: 'kN', factor: 1000 },
-    { name: 'MN', factor: 1000000 },
-    { name: 'kgf', factor: 9.80665 },
-    { name: 'lbf', factor: 4.44822 },
-    { name: 'kip', factor: 4448.22 },
-    { name: 'dyne', factor: 0.00001 },
+    { id: 'n', name: 'N', factor: 1 },
+    { id: 'kn', name: 'kN', factor: 1000 },
+    { id: 'mn', name: 'MN', factor: 1e6 },
+    { id: 'kgf', name: 'kgf', factor: GN },
+    { id: 'lbf', name: 'lbf', factor: LBF_N },
+    { id: 'kip', name: 'kip', factor: 1000 * LBF_N },
+    { id: 'dyne', name: 'dyne', factor: 1e-5 },
   ],
   pressure: [
-    { name: 'Pa', factor: 1 },
-    { name: 'kPa', factor: 1000 },
-    { name: 'MPa', factor: 1000000 },
-    { name: 'bar', factor: 100000 },
-    { name: 'psi', factor: 6894.76 },
-    { name: 'ksi', factor: 6894760 },
-    { name: 'atm', factor: 101325 },
-    { name: 'mmHg', factor: 133.322 },
+    { id: 'pa', name: 'Pa', factor: 1 },
+    { id: 'kpa', name: 'kPa', factor: 1000 },
+    { id: 'mpa', name: 'MPa', factor: 1e6 },
+    { id: 'bar', name: 'bar', factor: 100000 },
+    { id: 'psi', name: 'psi', factor: PSI_PA },
+    { id: 'ksi', name: 'ksi', factor: 1000 * PSI_PA },
+    { id: 'atm', name: 'atm', factor: 101325 },
+    { id: 'mmhg', name: 'mmHg (0 C)', factor: 101325 / 760 },
   ],
   energy: [
-    { name: 'J', factor: 1 },
-    { name: 'kJ', factor: 1000 },
-    { name: 'MJ', factor: 1000000 },
-    { name: 'cal', factor: 4.184 },
-    { name: 'kcal', factor: 4184 },
-    { name: 'Wh', factor: 3600 },
-    { name: 'kWh', factor: 3600000 },
-    { name: 'BTU', factor: 1055.06 },
-    { name: 'ft-lb', factor: 1.35582 },
+    { id: 'j', name: 'J', factor: 1 },
+    { id: 'kj', name: 'kJ', factor: 1000 },
+    { id: 'mj', name: 'MJ', factor: 1e6 },
+    { id: 'cal', name: 'cal (th)', factor: 4.184 },
+    { id: 'kcal', name: 'kcal (th)', factor: 4184 },
+    { id: 'wh', name: 'Wh', factor: 3600 },
+    { id: 'kwh', name: 'kWh', factor: 3.6e6 },
+    { id: 'btu', name: 'BTU (IT)', factor: BTU_J },
+    { id: 'ftlb', name: 'ft-lbf', factor: FT_M * LBF_N },
   ],
   power: [
-    { name: 'W', factor: 1 },
-    { name: 'kW', factor: 1000 },
-    { name: 'MW', factor: 1000000 },
-    { name: 'hp', factor: 745.7 },
-    { name: 'BTU/h', factor: 0.293071 },
-    { name: 'ft-lb/s', factor: 1.35582 },
+    { id: 'w', name: 'W', factor: 1 },
+    { id: 'kw', name: 'kW', factor: 1000 },
+    { id: 'mw', name: 'MW', factor: 1e6 },
+    { id: 'hp', name: 'hp (550 ft-lbf/s)', factor: 550 * FT_M * LBF_N },
+    { id: 'btuh', name: 'BTU/h', factor: BTU_J / 3600 },
+    { id: 'ftlbs', name: 'ft-lbf/s', factor: FT_M * LBF_N },
   ],
   temperature: [
-    { name: '°C', factor: 1 },
-    { name: '°F', factor: 1 },
-    { name: 'K', factor: 1 },
+    { id: 'degC', name: 'deg C', factor: 1 },
+    { id: 'degF', name: 'deg F', factor: 1 },
+    { id: 'K', name: 'K', factor: 1 },
   ],
   velocity: [
-    { name: 'm/s', factor: 1 },
-    { name: 'km/h', factor: 0.277778 },
-    { name: 'mph', factor: 0.44704 },
-    { name: 'ft/s', factor: 0.3048 },
-    { name: 'knot', factor: 0.514444 },
+    { id: 'ms', name: 'm/s', factor: 1 },
+    { id: 'kmh', name: 'km/h', factor: 1000 / 3600 },
+    { id: 'mph', name: 'mph', factor: 0.44704 },
+    { id: 'fts', name: 'ft/s', factor: FT_M },
+    { id: 'knot', name: 'knot', factor: 1852 / 3600 },
   ],
   area: [
-    { name: 'mm²', factor: 0.000001 },
-    { name: 'cm²', factor: 0.0001 },
-    { name: 'm²', factor: 1 },
-    { name: 'ha', factor: 10000 },
-    { name: 'km²', factor: 1000000 },
-    { name: 'in²', factor: 0.00064516 },
-    { name: 'ft²', factor: 0.092903 },
-    { name: 'acre', factor: 4046.86 },
+    { id: 'mm2', name: 'mm2', factor: 1e-6 },
+    { id: 'cm2', name: 'cm2', factor: 1e-4 },
+    { id: 'm2', name: 'm2', factor: 1 },
+    { id: 'ha', name: 'ha', factor: 10000 },
+    { id: 'km2', name: 'km2', factor: 1e6 },
+    { id: 'in2', name: 'in2', factor: IN2_M2 },
+    { id: 'ft2', name: 'ft2', factor: FT2_M2 },
+    { id: 'acre', name: 'acre', factor: 4046.8564224 },
   ],
 };
 
-function convertTemp(value: number, from: string, to: string): number {
+function convertTemp(value: number, fromId: string, toId: string): { value: number; validKelvin: boolean } {
   let celsius = value;
-  if (from === '°F') celsius = (value - 32) * 5 / 9;
-  else if (from === 'K') celsius = value - 273.15;
+  if (fromId === 'degF') celsius = ((value - 32) * 5) / 9;
+  else if (fromId === 'K') celsius = value - 273.15;
 
-  if (to === '°C') return celsius;
-  if (to === '°F') return celsius * 9 / 5 + 32;
-  return celsius + 273.15;
+  const kelvin = celsius + 273.15;
+  if (!Number.isFinite(kelvin) || kelvin < 0) {
+    return { value: Number.NaN, validKelvin: false };
+  }
+  if (toId === 'degC') return { value: celsius, validKelvin: true };
+  if (toId === 'degF') return { value: (celsius * 9) / 5 + 32, validKelvin: true };
+  return { value: kelvin, validKelvin: true };
+}
+
+function parseStrictFinite(raw: string): number {
+  const s = raw.trim();
+  if (s === '') return Number.NaN;
+  const n = Number(s);
+  return Number.isFinite(n) ? n : Number.NaN;
+}
+
+function formatNum(n: number): string {
+  if (!Number.isFinite(n)) return '—';
+  if (n === 0) return '0';
+  const abs = Math.abs(n);
+  if (abs >= 1e9 || abs < 1e-5) return n.toExponential(4);
+  if (abs >= 1000) return n.toFixed(2);
+  if (abs >= 1) return n.toFixed(4);
+  return n.toFixed(6);
+}
+
+function toSafeAscii(input: string): string {
+  return input.replace(/[^\x20-\x7E\r\n\t]/g, '');
 }
 
 export default function UnitConverterClient() {
   const [category, setCategory] = useState<Category>('length');
-  const [fromUnit, setFromUnit] = useState(0);
-  const [toUnit, setToUnit] = useState(2);
-  const [inputValue, setInputValue] = useState(1);
+  const [fromUnitId, setFromUnitId] = useState('mm');
+  const [toUnitId, setToUnitId] = useState('ft');
+  const [valStr, setValStr] = useState('1000');
+  const [copied, setCopied] = useState(false);
 
-  const result = useMemo(() => {
-    const units = UNITS[category];
-    if (category === 'temperature') {
-      return convertTemp(inputValue, units[fromUnit].name, units[toUnit].name);
-    }
-    const baseValue = inputValue * units[fromUnit].factor;
-    return baseValue / units[toUnit].factor;
-  }, [category, fromUnit, toUnit, inputValue]);
+  const selectCategory = (cat: Category) => {
+    setCategory(cat);
+    const list = UNITS[cat];
+    setFromUnitId(list[0].id);
+    setToUnitId(list[Math.min(2, list.length - 1)].id);
+    setValStr(cat === 'temperature' ? '25' : cat === 'length' ? '1000' : '100');
+    setCopied(false);
+  };
+
+  const handleSwap = () => {
+    setFromUnitId(toUnitId);
+    setToUnitId(fromUnitId);
+    setCopied(false);
+  };
+
+  const handleReset = () => {
+    setCategory('length');
+    setFromUnitId('mm');
+    setToUnitId('ft');
+    setValStr('1000');
+    setCopied(false);
+  };
 
   const units = UNITS[category];
 
+  const result = useMemo(() => {
+    const val = parseStrictFinite(valStr);
+    const fromDef = units.find((u) => u.id === fromUnitId) ?? units[0];
+    const toDef = units.find((u) => u.id === toUnitId) ?? units[Math.min(1, units.length - 1)];
+
+    if (!Number.isFinite(val)) {
+      return { valid: false as const, errorMsg: 'Enter a valid finite numeric input.' };
+    }
+
+    if (category === 'temperature') {
+      const conv = convertTemp(val, fromDef.id, toDef.id);
+      if (!conv.validKelvin) {
+        return { valid: false as const, errorMsg: 'Temperature cannot be below absolute zero (0 K / -273.15 deg C).' };
+      }
+      const matrix = units.map((u) => ({
+        ...u,
+        converted: convertTemp(val, fromDef.id, u.id).value,
+      }));
+      return {
+        valid: true as const,
+        inputVal: val,
+        fromDef,
+        toDef,
+        converted: conv.value,
+        matrix,
+      };
+    }
+
+    const baseVal = val * fromDef.factor;
+    const converted = baseVal / toDef.factor;
+    const matrix = units.map((u) => ({
+      ...u,
+      converted: baseVal / u.factor,
+    }));
+
+    return {
+      valid: true as const,
+      inputVal: val,
+      fromDef,
+      toDef,
+      converted,
+      matrix,
+    };
+  }, [category, units, fromUnitId, toUnitId, valStr]);
+
+  const handleCopy = async () => {
+    if (!result.valid) return;
+    const text = `[${category.toUpperCase()}] ${result.inputVal} ${result.fromDef.name} = ${formatNum(result.converted)} ${result.toDef.name}`;
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1800);
+      }
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const handleDownloadCsv = () => {
+    if (!result.valid) return;
+    const rows = [
+      ['Category', category, '-'],
+      ['Input', String(result.inputVal), result.fromDef.name],
+      ['Target', formatNum(result.converted), result.toDef.name],
+      ...result.matrix.map((m) => ['Equivalent', formatNum(m.converted), m.name]),
+    ];
+    const csv = toSafeAscii(rows.map((r) => r.map((c) => `"${c}"`).join(',')).join('\n'));
+    const blob = new Blob([csv], { type: 'text/csv;charset=ascii' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'engineering-unit-conversion.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
   return (
     <div className="space-y-8">
-      {/* Category selector */}
       <div className="flex flex-wrap gap-2">
-        {CATEGORIES.map(c => (
-          <button key={c.id} onClick={() => { setCategory(c.id); setFromUnit(0); setToUnit(Math.min(2, UNITS[c.id].length - 1)); }}
-            className={`px-4 py-2.5 rounded-xl text-base font-black border transition-all ${category === c.id ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>
-            {c.icon} {c.name}
+        {CATEGORIES.map((c) => (
+          <button
+            key={c.id}
+            type="button"
+            data-testid={`cat-${c.id}`}
+            onClick={() => selectCategory(c.id)}
+            className={`px-4 py-2 rounded-xl text-sm font-bold border transition-colors ${
+              category === c.id
+                ? 'bg-blue-600 border-blue-600 text-white'
+                : 'bg-white border-slate-200 text-slate-700 hover:border-slate-300'
+            }`}
+          >
+            {c.name}
           </button>
         ))}
       </div>
 
+      {!result.valid && (
+        <div
+          data-testid="error-banner"
+          className="p-4 rounded-2xl bg-red-50 border border-red-200 text-sm text-red-800 flex items-center gap-2.5"
+        >
+          <AlertTriangle className="w-4 h-4 text-red-600 shrink-0" />
+          <span>{result.errorMsg}</span>
+        </div>
+      )}
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-        <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
-              <Settings className="w-5 h-5" />
+        <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
+                <Settings className="w-5 h-5" />
+              </div>
+              <h2 className="text-lg font-black text-slate-900 tracking-tight">Convert ({category})</h2>
             </div>
-            <h2 className="text-lg font-black text-slate-900 tracking-tight">Convert</h2>
+            <button
+              type="button"
+              data-testid="btn-reset"
+              onClick={handleReset}
+              className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              Reset
+            </button>
           </div>
 
           <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">From</label>
+            <label htmlFor="input-value" className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
+              From Value & Unit
+            </label>
             <div className="flex gap-3">
-              <input type="number" value={inputValue} onChange={e => setInputValue(parseFloat(e.target.value) || 0)}
-                className="flex-1 h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
-              <select value={fromUnit} onChange={e => setFromUnit(parseInt(e.target.value))}
-                className="w-32 h-12 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
-                {units.map((u, i) => <option key={i} value={i}>{u.name}</option>)}
+              <input
+                id="input-value"
+                data-testid="input-value"
+                type="text"
+                value={valStr}
+                onChange={(e) => setValStr(e.target.value)}
+                className="flex-1 h-12 px-4 rounded-2xl bg-slate-50 border border-slate-200 text-lg font-bold text-slate-900"
+              />
+              <select
+                data-testid="select-from"
+                value={fromUnitId}
+                onChange={(e) => setFromUnitId(e.target.value)}
+                className="w-40 h-12 px-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900"
+              >
+                {units.map((u) => (
+                  <option key={u.id} value={u.id}>
+                    {u.name}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
 
           <div className="flex justify-center">
-            <div className="w-10 h-10 bg-blue-50 rounded-full flex items-center justify-center text-blue-600">
-              <ArrowRight className="w-5 h-5" />
-            </div>
+            <button
+              type="button"
+              data-testid="btn-swap"
+              onClick={handleSwap}
+              className="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-blue-50 hover:bg-blue-100 text-blue-700 text-xs font-bold border border-blue-200"
+            >
+              <ArrowLeftRight className="w-4 h-4" />
+              Swap Units
+            </button>
           </div>
 
           <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">To</label>
-            <div className="flex gap-3">
-              <input type="number" value={result.toFixed(6)} readOnly
-                className="flex-1 h-12 px-4 rounded-2xl bg-blue-50 border border-blue-100 text-lg font-black text-blue-700" />
-              <select value={toUnit} onChange={e => setToUnit(parseInt(e.target.value))}
-                className="w-32 h-12 px-3 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
-                {units.map((u, i) => <option key={i} value={i}>{u.name}</option>)}
+            <label htmlFor="select-to" className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">
+              Target Unit
+            </label>
+            <div className="flex gap-3 items-center">
+              <div className="flex-1 h-12 px-4 rounded-2xl bg-blue-50 border border-blue-200 flex items-center text-lg font-black text-blue-900">
+                <span data-testid="result-converted">
+                  {result.valid ? formatNum(result.converted) : '—'}
+                </span>
+              </div>
+              <select
+                id="select-to"
+                data-testid="select-to"
+                value={toUnitId}
+                onChange={(e) => setToUnitId(e.target.value)}
+                className="w-40 h-12 px-3 rounded-2xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900"
+              >
+                {units.map((u) => (
+                  <option key={u.id} value={u.id}>
+                    {u.name}
+                  </option>
+                ))}
               </select>
             </div>
           </div>
+
+          <div className="flex gap-3 pt-2">
+            <button
+              type="button"
+              data-testid="btn-copy"
+              disabled={!result.valid}
+              onClick={handleCopy}
+              className="flex-1 py-2.5 px-4 rounded-xl bg-slate-900 hover:bg-slate-800 disabled:opacity-40 text-white text-xs font-bold flex items-center justify-center gap-1.5"
+            >
+              {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+              {copied ? 'Copied' : 'Copy'}
+            </button>
+            <button
+              type="button"
+              data-testid="btn-download"
+              disabled={!result.valid}
+              onClick={handleDownloadCsv}
+              className="flex-1 py-2.5 px-4 rounded-xl bg-blue-600 hover:bg-blue-700 disabled:opacity-40 text-white text-xs font-bold flex items-center justify-center gap-1.5"
+            >
+              <Download className="w-4 h-4" />
+              Export CSV
+            </button>
+          </div>
         </div>
 
-        <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-          <h2 className="text-lg font-black text-slate-900 tracking-tight mb-4">Quick Reference</h2>
+        <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm">
+          <h2 className="text-lg font-black text-slate-900 tracking-tight mb-4">Category Equivalents</h2>
           <div className="space-y-2">
-            {units.map((u, i) => (
-              <div key={i} className="flex items-center justify-between rounded-xl px-4 py-2.5 bg-slate-50 border border-slate-100">
-                <span className="text-lg font-bold text-slate-600">{u.name}</span>
-                <span className="text-lg font-black text-slate-900">
-                  {category === 'temperature'
-                    ? convertTemp(inputValue, units[fromUnit].name, u.name).toFixed(4)
-                    : ((inputValue * units[fromUnit].factor) / u.factor).toFixed(4)}
-                </span>
-              </div>
-            ))}
+            {units.map((u) => {
+              const row = result.valid ? result.matrix.find((m) => m.id === u.id) : null;
+              return (
+                <div
+                  key={u.id}
+                  className="flex items-center justify-between rounded-xl px-4 py-2.5 bg-slate-50 border border-slate-200"
+                >
+                  <span className="text-sm font-bold text-slate-700">{u.name}</span>
+                  <span data-testid={`matrix-${u.id}`} className="text-sm font-mono font-black text-slate-900">
+                    {row ? formatNum(row.converted) : '—'}
+                  </span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

@@ -6724,11 +6724,11 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'embodied-carbon-calculator',
-    title: 'Embodied Carbon Calculator (A1-A3 Cradle-to-Gate) — Building Materials LCA',
-    description: 'Calculate upfront embodied carbon (kgCO2e/m²) for structural concrete, steel, glass, and insulation per EN 15978 and RICS professional standards.',
-    detailDesc: 'Structural carbon accounting tool for AEC professionals. Evaluates upfront cradle-to-gate embodied carbon intensity (kgCO2e/m²) across structural materials with instant RIBA 2030 benchmark ratings.',
+    title: 'Embodied Carbon Calculator (A1-A3 Material Summation)',
+    description: 'Calculate upfront embodied carbon (tCO2e and kgCO2e/m2) from structural concrete, rebar, steel, and glazing quantities with editable reference factors.',
+    detailDesc: 'Structural carbon estimation tool evaluating upfront material embodied carbon intensity (kgCO2e/m2) from user-supplied material quantities and editable reference emission factors.',
     category: 'calculator',
-    keywords: ['embodied carbon', 'carbon footprint building', 'en 15978', 'riba 2030', 'lca concrete steel', 'building emissions'],
+    keywords: ['embodied carbon', 'carbon footprint building', 'material carbon', 'lca concrete steel', 'building emissions'],
     origin: 'native',
     status: 'released',
     releasedDate: '2026-09-24'

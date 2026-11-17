@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import UnitConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Engineering Unit Converter (Length, Force, Pressure, Energy)',
-  description: 'Convert between metric and imperial units: length, mass, force, pressure, energy, power, temperature, velocity, and area.',
+  title: 'Engineering Unit Converter (Length, Mass, Force, Pressure, Energy, Power)',
+  description: 'Convert between metric and imperial engineering units across 9 categories using exact SI and physical definitions.',
   path: '/toolbox/engineering-unit-converter',
 });
 
@@ -32,7 +32,7 @@ export default function UnitConverterPage() {
               Engineering <span className="text-blue-400">Unit</span> Converter
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Convert between metric and imperial units across 9 categories: length, mass, force, pressure, energy, power, temperature, velocity, and area.
+              Convert between metric and imperial units across 9 engineering categories using exact physical definitions.
             </p>
           </div>
         </section>

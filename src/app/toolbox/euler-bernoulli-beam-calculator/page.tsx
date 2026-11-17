@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import EulerBernoulliBeamCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Euler Beam Deflection Calculator",
-  description: "Calculate deflection at any point on a simply supported beam with point load.",
+  title: 'Euler-Bernoulli Beam Deflection & Slope Calculator',
+  description: 'Calculate deflection, exact slope dy/dx, support reactions, and bending moments for a simply supported Euler-Bernoulli beam under a point load.',
   path: '/toolbox/euler-bernoulli-beam-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function EulerBernoulliBeamCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Euler Beam Deflection Calculator", path: '/toolbox/euler-bernoulli-beam-calculator' },
+    { name: 'Euler Beam Deflection Calculator', path: '/toolbox/euler-bernoulli-beam-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function EulerBernoulliBeamCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Structural
+              Beam Mechanics
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Euler Beam Deflection <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate deflection at any point on a simply supported beam with point load.
+              Calculate deflection, slope dy/dx, support reactions, and bending moment at any coordinate on a simply supported beam with a point load.
             </p>
           </div>
         </section>

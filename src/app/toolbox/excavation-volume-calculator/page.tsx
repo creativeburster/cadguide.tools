@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import ExcavationVolumeCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Excavation Volume & Cost Calculator",
-  description: "Calculate excavation volume, truck loads, and cost from trench dimensions.",
+  title: 'Excavation Volume, Soil Swell & Haul Cost Calculator',
+  description: 'Calculate bank prismoidal trench or pit volume, bulked loose haul volume, truck loads, and total haulage cost.',
   path: '/toolbox/excavation-volume-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function ExcavationVolumeCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Excavation Volume & Cost Calculator", path: '/toolbox/excavation-volume-calculator' },
+    { name: 'Excavation Volume & Cost Calculator', path: '/toolbox/excavation-volume-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function ExcavationVolumeCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-red-500/10 text-red-400 border border-red-500/20 mb-6 uppercase tracking-[0.15em]">
-              Surveying
+              Earthwork & Quantity
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Excavation Volume & Cost <span className="text-red-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate excavation volume, truck loads, and cost from trench dimensions.
+              Calculate bank prismoidal excavation volume, loose soil haulage volume with swell factor, dump truck loads, and haul cost.
             </p>
           </div>
         </section>

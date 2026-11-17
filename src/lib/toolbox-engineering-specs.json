@@ -4988,104 +4988,170 @@
   },
   "embodied-carbon-calculator": {
     "title": "Embodied Carbon Calculator",
-    "description": "Calculate upfront embodied carbon (kgCO2e/m²) for structural concrete, steel, glass, and insulation per EN 15978 and RICS professional standards.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "GWP_total = Σ (Mass_i × ECF_i) (kg CO₂e, ICE Database v3.0 & EN 15978 Cradle-to-Gate Modules A1–A3)",
+    "description": "Calculate upfront embodied carbon (tCO2e and kgCO2e/m2) from structural concrete, rebar, steel, and glazing quantities with editable reference factors.",
+    "discipline": "Construction Material Quantity & Carbon Estimation",
+    "standards": "Cradle-to-Gate Material Quantity Summation (GWP = Sum of Quantity x Reference Emission Factor; verify factors against supplier EPDs)",
+    "cadContext": "Export structural concrete volumes, steel member tonnage, and curtain wall glazing schedules directly from BIM models before multiplying by project-specific emission factors.",
+    "formula": "GWP_total = V_conc*EF_conc + M_rebar*EF_rebar + M_steel*EF_steel + A_glaz*EF_glaz; Intensity = GWP_total / GFA",
     "inputs": [
       {
-        "label": "Gross Internal Floor Area (m²)",
+        "label": "Gross Floor Area (m2)",
         "val": "2500"
       },
       {
-        "label": "Structural Concrete Volume (m³)",
+        "label": "Concrete Volume (m3)",
         "val": "850"
       },
       {
-        "label": "Concrete Carbon Factor (kgCO₂e/m³)",
+        "label": "Concrete EF (kgCO2e/m3)",
         "val": "320"
       },
       {
-        "label": "Reinforcing Rebar Steel (Tonnes)",
+        "label": "Rebar Steel Weight (t)",
         "val": "85"
       },
       {
-        "label": "Structural Steel Sections (Tonnes)",
+        "label": "Rebar EF (kgCO2e/t)",
+        "val": "1400"
+      },
+      {
+        "label": "Structural Steel Weight (t)",
         "val": "45"
       },
       {
-        "label": "Facade Curtain Wall & Glazing Area (m²)",
-        "val": "650"
-      }
-    ],
-    "outputs": []
-  },
-  "energy-unit-converter": {
-    "title": "Energy Unit Converter",
-    "description": "Convert between J, kJ, MJ, kWh, cal, BTU, and ft-lbf.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 kWh = 3.6MJ = 3412 BTU",
-    "inputs": [
+        "label": "Structural Steel EF (kgCO2e/t)",
+        "val": "1800"
+      },
       {
-        "label": "Value",
-        "val": "1"
+        "label": "Glazing Area (m2)",
+        "val": "650"
+      },
+      {
+        "label": "Glazing EF (kgCO2e/m2)",
+        "val": "65"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "3412.32"
+        "label": "Total Embodied Carbon",
+        "val": "514.25 tCO2e"
+      },
+      {
+        "label": "Carbon Intensity per Floor Area",
+        "val": "205.70 kgCO2e/m2"
+      },
+      {
+        "label": "Concrete Contribution",
+        "val": "272.00 tCO2e (52.89%)"
+      },
+      {
+        "label": "Reinforcing Rebar",
+        "val": "119.00 tCO2e"
+      },
+      {
+        "label": "Structural Steel",
+        "val": "81.00 tCO2e"
+      },
+      {
+        "label": "Glazing & Curtain Wall",
+        "val": "42.25 tCO2e"
+      }
+    ]
+  },
+  "energy-unit-converter": {
+    "title": "Energy Unit Converter",
+    "description": "Convert between J, kJ, MJ, GJ, Wh, kWh, cal, kcal, BTU (IT), ft-lbf, and eV using exact physical conversion factors.",
+    "discipline": "Engineering Metrology & SI/Imperial Unit Conversion",
+    "standards": "NIST SP 811 Exact Base Definitions (1 ft = 0.3048 m, 1 lb = 0.45359237 kg, g_n = 9.80665 m/s2) and Exact SI / IT Definitions (1 cal_th = 4.184 J, 1 BTU_IT = 1055.05585262 J, 1 eV = 1.602176634e-19 J)",
+    "cadContext": "Convert thermal equipment ratings and motor power-hour estimates consistently between SI and IP schedules without rounded factor drift.",
+    "formula": "E_target = E_source * (k_source_to_J / k_target_to_J); 1 kWh = 3.6e6 J = 3412.14 BTU (IT)",
+    "inputs": [
+      {
+        "label": "Energy Value",
+        "val": "1"
+      },
+      {
+        "label": "From Unit",
+        "val": "kWh"
+      },
+      {
+        "label": "To Unit",
+        "val": "BTU (IT)"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Converted Value",
+        "val": "3412.14 BTU"
+      },
+      {
+        "label": "SI Base Equivalent",
+        "val": "3.6000e+6 J"
       }
     ]
   },
   "engineering-unit-converter": {
     "title": "Engineering Unit Converter",
-    "description": "Convert between metric and imperial units: length, mass, force, pressure, energy, power, temperature, velocity, and area.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Y_target = X_source × (k_source / k_target) (NIST SP 811 Exact SI Conversion Factors)",
+    "description": "Convert between metric and imperial engineering units across 9 categories using exact SI and physical definitions.",
+    "discipline": "Engineering Metrology & SI/Imperial Unit Conversion",
+    "standards": "NIST SP 811 Exact Definitions (1 ft = 0.3048 m, 1 lb = 0.45359237 kg) and Exact SI Unit Relationships",
+    "cadContext": "Verify length, area, force, pressure, energy, and power unit scaling when transferring parameters between metric ISO drawings and US Customary calculations.",
+    "formula": "Y_target = X_source * (k_source / k_target); Temperature: T_K = T_C + 273.15 >= 0 K",
     "inputs": [
       {
-        "label": "From",
-        "val": "Nominal"
+        "label": "Category",
+        "val": "Length"
       },
       {
-        "label": "To",
-        "val": "Nominal"
+        "label": "From Value",
+        "val": "1000"
+      },
+      {
+        "label": "From Unit",
+        "val": "mm"
+      },
+      {
+        "label": "To Unit",
+        "val": "ft"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Converted Value",
+        "val": "3.2808 ft"
+      },
+      {
+        "label": "Meters Equivalent",
+        "val": "1 m"
+      }
+    ]
   },
   "euler-bernoulli-beam-calculator": {
-    "title": "Euler Beam Deflection Calculator",
-    "description": "Calculate deflection at any point on a simply supported beam with point load.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "For x less than a: y = Pb*x/(6*L*EI)*(L^2-b^2-x^2)",
+    "title": "Euler-Bernoulli Beam Deflection & Slope Calculator",
+    "description": "Calculate deflection, exact slope dy/dx, support reactions, and bending moments on a simply supported beam under a point load.",
+    "discipline": "Mechanics of Materials & Structural Beam Theory",
+    "standards": "Euler-Bernoulli Simply Supported Beam Small-Deflection Equations (Prismatic Elastic Beam, Point Load)",
+    "cadContext": "Extract clear span L, load application offset a, and cross-sectional second moment of area I from structural framing details prior to deflection checking.",
+    "formula": "x <= a: y(x) = P*b*x*(L^2 - b^2 - x^2)/(6*L*E*I), theta(x) = dy/dx = P*b*(L^2 - b^2 - 3*x^2)/(6*L*E*I); ymax at l_short = min(a,b)",
     "inputs": [
       {
-        "label": "Load P (kN)",
+        "label": "Point Load P (kN)",
         "val": "20"
       },
       {
-        "label": "Position a (m)",
+        "label": "Load Position a (m)",
         "val": "2"
       },
       {
-        "label": "Span L (m)",
+        "label": "Beam Span L (m)",
         "val": "6"
       },
       {
-        "label": "Youngs E (GPa)",
+        "label": "Young Modulus E (GPa)",
         "val": "200"
       },
       {
-        "label": "Inertia I (cm4)",
+        "label": "Second Moment I (cm4)",
         "val": "5000"
       },
       {
@@ -5095,60 +5161,84 @@
     ],
     "outputs": [
       {
-        "label": "Deflection",
-        "val": "7.667 mm"
+        "label": "Deflection y(x)",
+        "val": "7.6667 mm"
       },
       {
         "label": "Max Deflection",
-        "val": "7.742 mm"
+        "val": "7.7416 mm"
       },
       {
-        "label": "Slope",
-        "val": "0.004444 rad"
+        "label": "Slope dy/dx at x",
+        "val": "-0.000556 rad"
+      },
+      {
+        "label": "Left Reaction RA",
+        "val": "13.333 kN"
+      },
+      {
+        "label": "Right Reaction RB",
+        "val": "6.667 kN"
+      },
+      {
+        "label": "Max Bending Moment Mmax",
+        "val": "26.667 kN*m"
       }
     ]
   },
   "excavation-volume-calculator": {
     "title": "Excavation Volume & Cost Calculator",
-    "description": "Calculate excavation volume, truck loads, and cost from trench dimensions.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "V = L*W*D, loads = V/truck_volume",
+    "description": "Calculate bank prismoidal trench or pit volume, loose bulked volume with swell factor, dump truck loads, and haulage cost.",
+    "discipline": "Earthwork Quantity Takeoff & Construction Estimating",
+    "standards": "Prismoidal Earthwork Volume Formula with Soil Bulking / Swell Allowance",
+    "cadContext": "Verify trench bottom dimensions, side slope batters, and civil grading cut depth from Civil 3D / CAD corridor sections before scheduling haul trucks.",
+    "formula": "V_bank = (D/6)*(A_bottom + A_top + 4*A_mid); V_loose = V_bank*(1 + swell/100); Loads = ceil(V_loose / Capacity)",
     "inputs": [
       {
-        "label": "Trench Length (m)",
+        "label": "Bottom Length L (m)",
         "val": "50"
       },
       {
-        "label": "Trench Width (m)",
+        "label": "Bottom Width W (m)",
         "val": "1"
       },
       {
-        "label": "Depth (m)",
+        "label": "Excavation Depth D (m)",
         "val": "2"
       },
       {
-        "label": "Truck Capacity (m3)",
-        "val": "10"
+        "label": "Side Slope Ratio (H:1V)",
+        "val": "0"
       },
       {
-        "label": "Cost per Load ($)",
-        "val": "50"
+        "label": "Soil Swell (%)",
+        "val": "25"
+      },
+      {
+        "label": "Truck Loose Capacity (m3)",
+        "val": "15"
+      },
+      {
+        "label": "Haul Cost per Load (USD)",
+        "val": "120"
       }
     ],
     "outputs": [
       {
-        "label": "Volume",
+        "label": "Bank Volume (In-Situ)",
         "val": "100.00 m3"
       },
       {
-        "label": "Truck Loads",
-        "val": "10.000"
+        "label": "Loose Volume (Bulked)",
+        "val": "125.00 m3"
       },
       {
-        "label": "Total Cost",
-        "val": "500.00 $"
+        "label": "Truck Loads",
+        "val": "9 loads"
+      },
+      {
+        "label": "Total Haul Cost",
+        "val": "1080.00 USD"
       }
     ]
   },

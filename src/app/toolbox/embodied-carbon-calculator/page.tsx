@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import EmbodiedCarbonCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Embodied Carbon Calculator (A1-A3 Cradle-to-Gate) — Building Materials LCA',
-  description: 'Calculate upfront embodied carbon (kgCO2e/m²) for structural concrete, steel, glass, and insulation per EN 15978 and RICS professional standards.',
+  title: 'Embodied Carbon Calculator (A1-A3 Material Summation)',
+  description: 'Calculate upfront embodied carbon (tCO2e and kgCO2e/m2) from structural concrete, rebar, steel, and glazing quantities with editable reference factors.',
   path: '/toolbox/embodied-carbon-calculator',
 });
 
@@ -26,13 +26,13 @@ export default function EmbodiedCarbonCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 mb-6 uppercase tracking-[0.15em]">
-              ESG & Sustainability
+              Sustainability Estimation
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Embodied Carbon <span className="text-emerald-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Estimate upfront structural carbon intensity (kgCO₂e/m²) across concrete, rebar, steel, and glazing per EN 15978 and RICS standards.
+              Estimate upfront structural carbon intensity (kgCO2e/m2) across concrete, rebar, structural steel, and glazing quantities using editable emission factors.
             </p>
           </div>
         </section>
