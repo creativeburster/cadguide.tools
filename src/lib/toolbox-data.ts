@@ -1449,14 +1449,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gear-ratio-speed-calculator',
-    title: 'Gear Ratio & Speed Calculator (Spur, Planetary)',
-    description: 'Calculate gear ratio, output speed (RPM), output torque, and center distance for spur gear pairs and planetary gear sets.',
-    detailDesc: 'Gear ratio calculator for spur gear pairs (z2/z1) and planetary gear sets (1+zr/zs). Computes output RPM, output torque with efficiency, and center distance. Supports metric module input.',
+    title: 'Gear Ratio, Output Speed & Torque Calculator (Spur & Planetary)',
+    description: 'Calculate gear ratio, output speed (RPM), output torque, mechanical power, and center distance for spur pairs and planetary sets.',
+    detailDesc: 'Spur pair ratio z2/z1 with center distance m*(z1+z2)/2, and epicyclic planetary ratio 1 + zr/zs with efficiency-adjusted output torque and power.',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-15',
     origin: 'native',
-    keywords: ['gear ratio', 'gear speed calculator', 'planetary gear', 'spur gear', 'output rpm', 'gear torque', 'center distance', 'gear train', 'reduction ratio', 'planetary gear ratio']
+    keywords: ['gear ratio', 'gear speed calculator', 'planetary gear', 'spur gear', 'output rpm', 'gear torque', 'center distance', 'gear train']
   },
   {
     slug: 'hydraulic-cylinder-force-calculator',
@@ -2318,14 +2318,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'generator-sizing-calculator',
-    title: 'Generator Sizing Calculator',
-    description: 'Calculate generator kVA requirement from connected load, demand factor, and starting method.',
-    detailDesc: 'Sgen = Ptotal * DF / (PF * efficiency)',
+    title: 'Three-Phase AC Generator kVA & Line Current Sizing Calculator',
+    description: 'Calculate generator kVA requirement, required kW, 3-phase line current, and prime mover shaft power from demand factor and margin.',
+    detailDesc: 'P_demand = P_conn*DF, P_req = P_demand*(1+margin/100), S_req = P_req/PF, I_line = 1000*S_req/(sqrt(3)*V_LL), P_shaft = P_req/eta_alt',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["generator","electrical","calculator"]
+    keywords: ["generator sizing","kva calculator","line current","three-phase generator","electrical","calculator"]
   },
   {
     slug: 'battery-capacity-calculator',
@@ -3429,14 +3429,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gear-ratio-belt-calculator',
-    title: 'Belt Drive Ratio Calculator',
-    description: 'Calculate belt drive ratio, center distance, and belt length for two-pulley systems.',
-    detailDesc: 'i = D2/D1, L = 2C + pi*(D1+D2)/2 + (D2-D1)^2/(4C)',
+    title: 'Two-Pulley Belt Drive Ratio & Exact Pitch Length Calculator',
+    description: 'Calculate belt drive speed ratio, driven RPM, belt speed, wrap angle, and exact vs approximate belt length.',
+    detailDesc: 'i = D2/D1, L_exact = 2C*cos(phi) + pi*(D1+D2)/2 + |D2-D1|*phi',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["belt","mechanical","calculator"]
+    keywords: ["belt drive","pulley ratio","belt length","wrap angle","mechanical","calculator"]
   },
   {
     slug: 'water-hammer-calculator',
@@ -3639,14 +3639,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gear-ratio-bike-calculator',
-    title: 'Bicycle Gear Ratio Calculator',
-    description: 'Calculate bicycle gear ratio, development, and cadence speed. Free browser-based engineering calculator.',
-    detailDesc: 'Ratio = chainring/cog, speed = ratio * wheel * cadence',
+    title: 'Bicycle Gear Ratio, Development, Gear Inches & Gain Ratio Calculator',
+    description: 'Calculate bicycle drivetrain gear ratio, meters of development, gear inches, gain ratio, and cruising speed.',
+    detailDesc: 'R = chainring/cog, M = R*pi*Dw, GI = R*Dw/25.4, GR = (Dw/(2*Lc))*R, V = M*cadence*0.06',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["Calculate","bicycle","gear","ratio","development","and","cadence","speed."]
+    keywords: ["bicycle gear ratio","development","gear inches","gain ratio","cadence speed","calculator"]
   },
   {
     slug: 'horsepower-torque-calculator',
@@ -3661,14 +3661,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gear-module-pitch-calculator',
-    title: 'Gear Module and Diametral Pitch Calculator',
-    description: 'Convert between metric module and imperial diametral pitch. Free online engineering unit converter.',
-    detailDesc: 'm = 25.4/DP, d = m*z',
+    title: 'Gear Module, Diametral Pitch & Circular Pitch Converter',
+    description: 'Convert between metric module (mm), imperial diametral pitch (DP), and circular pitch (mm/in) using exact 25.4 mm/in.',
+    detailDesc: 'm = 25.4/DP, p_mm = pi*m, CP_in = pi/DP, d_mm = m*z',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["Convert","between","metric","module","and","imperial","diametral","pitch."]
+    keywords: ["gear module","diametral pitch","circular pitch","unit converter","calculator"]
   },
   {
     slug: 'shaft-diameter-calculator',

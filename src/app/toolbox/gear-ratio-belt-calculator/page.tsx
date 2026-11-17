@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import GearRatioBeltCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Belt Drive Ratio Calculator",
-  description: "Calculate belt drive ratio, center distance, and belt length for two-pulley systems.",
+  title: 'Two-Pulley Belt Drive Ratio & Exact Pitch Length Calculator',
+  description: 'Calculate open belt drive speed ratio, driven RPM, belt speed, small-pulley wrap angle, and exact vs approximate belt pitch length.',
   path: '/toolbox/gear-ratio-belt-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function GearRatioBeltCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Belt Drive Ratio Calculator", path: '/toolbox/gear-ratio-belt-calculator' },
+    { name: 'Belt Drive Ratio Calculator', path: '/toolbox/gear-ratio-belt-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function GearRatioBeltCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Mechanical
+              Belt Drive Kinematics
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Belt Drive Ratio <span className="text-blue-400">Calculator</span>
+              Belt Drive Ratio &amp; Length <span className="text-blue-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate belt drive ratio, center distance, and belt length for two-pulley systems.
+              Compute drive ratio, driven pulley speed, belt speed, wrap angle, and exact tangent belt pitch length with interference checks.
             </p>
           </div>
         </section>

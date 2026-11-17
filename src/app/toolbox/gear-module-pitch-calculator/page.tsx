@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import GearModulePitchCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Gear Module and Diametral Pitch Calculator",
-  description: "Convert between metric module and imperial diametral pitch.",
+  title: 'Gear Module, Diametral Pitch & Circular Pitch Converter',
+  description: 'Convert between metric module (mm), imperial diametral pitch (DP, 1/in), and circular pitch (mm/in) using exact 25.4 mm/in conversion.',
   path: '/toolbox/gear-module-pitch-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function GearModulePitchCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Gear Module and Diametral Pitch Calculator", path: '/toolbox/gear-module-pitch-calculator' },
+    { name: 'Gear Module & Diametral Pitch Calculator', path: '/toolbox/gear-module-pitch-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function GearModulePitchCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Mechanical
+              Metric / Imperial Pitch
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Gear Module and Diametral Pitch <span className="text-blue-400">Calculator</span>
+              Gear Module &amp; Diametral Pitch <span className="text-blue-400">Converter</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Convert between metric module and imperial diametral pitch.
+              Convert metric module, imperial diametral pitch, circular pitch, and pitch diameter in mm and inches.
             </p>
           </div>
         </section>

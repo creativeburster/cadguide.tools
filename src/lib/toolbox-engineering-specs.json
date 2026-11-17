@@ -6407,210 +6407,266 @@
     ]
   },
   "gear-module-pitch-calculator": {
-    "title": "Gear Module and Diametral Pitch Calculator",
-    "description": "Convert between metric module and imperial diametral pitch.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "m = 25.4/DP, d = m*z",
+    "title": "Gear Module, Diametral Pitch & Circular Pitch Converter",
+    "description": "Convert between metric module (mm), imperial diametral pitch (DP), and circular pitch (mm/in) using exact 25.4 mm/in.",
+    "discipline": "Metric & Imperial Gear Pitch Conversion",
+    "standards": "Metric Module (m), Imperial Diametral Pitch (DP) & Circular Pitch Conversion (1 in = 25.4 mm exact)",
+    "cadContext": "Verify cutter tooth pitch and pitch circle diameter when converting imported inch-based imperial gear models to metric CAD assemblies.",
+    "formula": "m = 25.4 / DP; p_mm = pi * m; CP_in = pi / DP; d_mm = m * z; d_in = d_mm / 25.4",
     "inputs": [
       {
-        "label": "Value",
-        "val": "2"
-      },
-      {
-        "label": "Teeth",
-        "val": "20"
-      },
-      {
-        "label": "Mode",
+        "label": "Input Mode",
         "val": "Metric Module (m)"
+      },
+      {
+        "label": "Metric Module m (mm)",
+        "val": "2.5"
+      },
+      {
+        "label": "Number of Teeth z",
+        "val": "32"
       }
     ],
     "outputs": [
       {
-        "label": "Module",
-        "val": "2.000 mm"
+        "label": "Metric Module m",
+        "val": "2.5000 mm"
       },
       {
-        "label": "Diametral Pitch",
-        "val": "12.700 1/in"
+        "label": "Diametral Pitch DP",
+        "val": "10.1600 1/in"
       },
       {
-        "label": "Pitch Dia",
-        "val": "40.000 mm"
+        "label": "Circular Pitch p (mm)",
+        "val": "7.8540 mm"
+      },
+      {
+        "label": "Circular Pitch CP (in)",
+        "val": "0.3092 in"
+      },
+      {
+        "label": "Pitch Dia d (mm)",
+        "val": "80.00 mm (3.1496 in)"
       }
     ]
   },
   "gear-ratio-belt-calculator": {
-    "title": "Belt Drive Ratio Calculator",
-    "description": "Calculate belt drive ratio, center distance, and belt length for two-pulley systems.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "i = D2/D1, L = 2C + pi*(D1+D2)/2 + (D2-D1)^2/(4C)",
+    "title": "Two-Pulley Belt Drive Ratio & Exact Pitch Length Calculator",
+    "description": "Calculate open belt drive speed ratio, driven RPM, belt speed, wrap angle, and exact vs approximate belt length.",
+    "discipline": "Belt Drive Kinematics & Geometry",
+    "standards": "Open Two-Pulley Belt Drive Kinematics & Exact/Approximate Pitch Length Geometry",
+    "cadContext": "Check shaft center distance clearance C > (D1+D2)/2 and small-pulley arc of contact in CAD layouts before selecting standard endless belt pitch lengths.",
+    "formula": "i = D2/D1; phi = asin(|D2-D1|/(2C)); theta_small = 180 - (360/pi)*phi; L_exact = 2C*cos(phi) + pi*(D1+D2)/2 + |D2-D1|*phi",
     "inputs": [
       {
-        "label": "Driver Dia D1 (mm)",
+        "label": "Driver Pitch Dia D1 (mm)",
         "val": "100"
       },
       {
-        "label": "Driven Dia D2 (mm)",
+        "label": "Driven Pitch Dia D2 (mm)",
         "val": "300"
       },
       {
-        "label": "Center Distance (mm)",
+        "label": "Center Distance C (mm)",
         "val": "500"
       },
       {
-        "label": "Driver Speed (RPM)",
+        "label": "Driver Speed n1 (RPM)",
         "val": "1800"
       }
     ],
     "outputs": [
       {
-        "label": "Gear Ratio",
+        "label": "Exact Belt Length L_exact",
+        "val": "1648.39 mm"
+      },
+      {
+        "label": "2nd-Order Approx L_approx",
+        "val": "1648.32 mm"
+      },
+      {
+        "label": "Drive Ratio i",
         "val": "3.000 :1"
       },
       {
-        "label": "Driven Speed",
+        "label": "Driven Speed n2",
         "val": "600.00 RPM"
       },
       {
-        "label": "Belt Length",
-        "val": "1648.32 mm"
+        "label": "Belt Speed v",
+        "val": "9.425 m/s"
+      },
+      {
+        "label": "Small-Pulley Wrap Angle",
+        "val": "156.93 deg"
       }
     ]
   },
   "gear-ratio-bike-calculator": {
-    "title": "Bicycle Gear Ratio Calculator",
-    "description": "Calculate bicycle gear ratio, development, and cadence speed.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "Ratio = chainring/cog, speed = ratio * wheel * cadence",
+    "title": "Bicycle Gear Ratio, Development, Gear Inches & Gain Ratio Calculator",
+    "description": "Calculate bicycle drivetrain gear ratio, meters of development, gear inches, gain ratio, and cruising speed.",
+    "discipline": "Bicycle Drivetrain Kinematics",
+    "standards": "Bicycle Drivetrain Gear Ratio, Development, Gear Inches & Gain Ratio Kinematics",
+    "cadContext": "Compare chainring-cassette tooth combinations, tire rolling diameter Dw, and crank arm length Lc before sizing frame chainstay clearance.",
+    "formula": "R = Nf/Nr; Development = R*pi*(Dw/1000); GearInches = R*(Dw/25.4); GainRatio = (Dw/(2*Lc))*R; V = Development*cadence*0.06",
     "inputs": [
       {
-        "label": "Chainring (teeth)",
+        "label": "Chainring Teeth Nf",
         "val": "52"
       },
       {
-        "label": "Cog (teeth)",
+        "label": "Rear Cog Teeth Nr",
         "val": "11"
       },
       {
-        "label": "Wheel Dia (mm)",
-        "val": "700"
+        "label": "Wheel Outer Dia Dw (mm)",
+        "val": "672"
       },
       {
-        "label": "Cadence (RPM)",
+        "label": "Crank Length Lc (mm)",
+        "val": "172.5"
+      },
+      {
+        "label": "Pedaling Cadence (RPM)",
         "val": "90"
       }
     ],
     "outputs": [
       {
-        "label": "Gear Ratio",
-        "val": "4.727 :1"
+        "label": "Gear Ratio Nf/Nr",
+        "val": "4.7273 :1"
       },
       {
-        "label": "Speed",
-        "val": "56.137 km/h"
+        "label": "Road Speed",
+        "val": "53.89 km/h (33.49 mph)"
       },
       {
-        "label": "Development",
-        "val": "10.396 m"
+        "label": "Development (Rollout)",
+        "val": "9.980 m"
+      },
+      {
+        "label": "Gear Inches",
+        "val": "125.08 in"
+      },
+      {
+        "label": "Gain Ratio",
+        "val": "9.208"
       }
     ]
   },
   "gear-ratio-speed-calculator": {
-    "title": "Gear Ratio Speed & Torque Calculator",
-    "description": "Calculate gear ratio, output speed (RPM), output torque, and center distance for spur, helical, and planetary gear trains.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "{gearType === 'spur'",
+    "title": "Gear Ratio, Output Speed & Torque Calculator (Spur & Planetary)",
+    "description": "Calculate gear ratio, output speed (RPM), output torque, mechanical power, and center distance for spur pairs and planetary sets.",
+    "discipline": "Spur & Epicyclic Planetary Gear Kinematics",
+    "standards": "Spur Gear Pair & Epicyclic Planetary Gear Train Kinematics (Fixed Ring Carrier Output)",
+    "cadContext": "Validate housing bore center distance m*(z1+z2)/2 for spur reductions and confirm ring-to-sun teeth feasibility (zr > zs) in planetary transmissions.",
+    "formula": "Spur: i = z2/z1, a = m*(z1+z2)/2 | Planetary (fixed ring): i = 1 + zr/zs, zp = (zr-zs)/2 | Both: n_out = n_in/i, T_out = T_in*i*eta",
     "inputs": [
       {
-        "label": "Gear Type Spur Pair Planetary Input Speed (RPM)",
-        "val": "1800"
+        "label": "Gear Architecture",
+        "val": "Spur Gear Pair"
       },
       {
-        "label": "Input Torque (Nm)",
-        "val": "50"
-      },
-      {
-        "label": "Efficiency (%)",
-        "val": "98"
-      },
-      {
-        "label": "Driver Teeth (z₁)",
+        "label": "Driver Teeth z1",
         "val": "20"
       },
       {
-        "label": "Driven Teeth (z₂)",
+        "label": "Driven Teeth z2",
         "val": "60"
       },
       {
-        "label": "Module (mm)",
-        "val": "2"
+        "label": "Metric Module m (mm)",
+        "val": "2.0"
+      },
+      {
+        "label": "Input Speed n_in (RPM)",
+        "val": "1800"
+      },
+      {
+        "label": "Input Torque T_in (N*m)",
+        "val": "50"
+      },
+      {
+        "label": "Stage Efficiency eta (%)",
+        "val": "98"
       }
     ],
     "outputs": [
       {
-        "label": "Gear Ratio",
+        "label": "Gear Ratio i",
         "val": "3.000 :1"
       },
       {
-        "label": "Output Speed",
-        "val": "600.0 RPM"
+        "label": "Output Speed n_out",
+        "val": "600.00 RPM"
       },
       {
-        "label": "Output Torque",
-        "val": "147.0 Nm"
+        "label": "Output Torque T_out",
+        "val": "147.00 N*m"
       },
       {
-        "label": "Center Distance",
-        "val": "80.0 mm"
+        "label": "Center Distance a",
+        "val": "80.00 mm"
+      },
+      {
+        "label": "Input / Output Power",
+        "val": "9.425 kW / 9.236 kW"
       }
     ]
   },
   "generator-sizing-calculator": {
-    "title": "Generator Sizing Calculator",
-    "description": "Calculate generator kVA requirement from connected load, demand factor, and starting method.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Sgen = Ptotal * DF / (PF * efficiency)",
+    "title": "Three-Phase AC Generator kVA & Line Current Sizing Calculator",
+    "description": "Calculate required standby/prime generator kVA, real electrical power (kW), 3-phase line current (A), and prime mover shaft power.",
+    "discipline": "Three-Phase Electrical Power Sizing",
+    "standards": "Three-Phase AC Standby/Prime Generator kVA, Line Current & Prime Mover Sizing",
+    "cadContext": "Carry steady-state demand kW, rated kVA, and 3-phase line current directly onto electrical one-line diagrams, ATS feeder schedules, and exhaust/room ventilation heat rejection sheets.",
+    "formula": "P_demand = P_conn*DF; P_req = P_demand*(1+margin/100); S_req = P_req/PF; I_line = 1000*S_req/(sqrt(3)*V_LL); P_shaft = P_req/eta_alt",
     "inputs": [
       {
-        "label": "Connected Load (kW)",
+        "label": "Connected Real Load P_conn (kW)",
         "val": "80"
       },
       {
-        "label": "Demand Factor",
-        "val": "0.7"
+        "label": "Demand Factor DF",
+        "val": "0.70"
       },
       {
-        "label": "Power Factor",
-        "val": "0.8"
-      },
-      {
-        "label": "Future Margin (%)",
+        "label": "Expansion / Step Margin (%)",
         "val": "20"
+      },
+      {
+        "label": "Rated Power Factor PF",
+        "val": "0.80"
+      },
+      {
+        "label": "Three-Phase Voltage V_LL (V)",
+        "val": "400"
+      },
+      {
+        "label": "Alternator Efficiency eta_alt",
+        "val": "0.92"
       }
     ],
     "outputs": [
       {
-        "label": "Demand Load",
-        "val": "56.000 kW"
+        "label": "Apparent Power S_req",
+        "val": "84.00 kVA"
       },
       {
-        "label": "Generator kVA",
-        "val": "84.000 kVA"
+        "label": "Required Real Power P_req",
+        "val": "67.20 kW"
       },
       {
-        "label": "Generator kW",
-        "val": "67.200 kW"
+        "label": "3-Phase Line Current I_line",
+        "val": "121.24 A"
+      },
+      {
+        "label": "Demand Load P_demand",
+        "val": "56.00 kW"
+      },
+      {
+        "label": "Prime Mover Shaft Power P_shaft",
+        "val": "73.04 kW"
       }
     ]
   },

@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import GearRatioBikeCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Bicycle Gear Ratio Calculator",
-  description: "Calculate bicycle gear ratio, development, and cadence speed.",
+  title: 'Bicycle Gear Ratio, Development, Gear Inches & Gain Ratio Calculator',
+  description: 'Calculate bicycle drivetrain gear ratio, rollout development (m), gear inches, crank gain ratio, and cruising speed (km/h and mph) from teeth and wheel size.',
   path: '/toolbox/gear-ratio-bike-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function GearRatioBikeCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Bicycle Gear Ratio Calculator", path: '/toolbox/gear-ratio-bike-calculator' },
+    { name: 'Bicycle Gear Ratio Calculator', path: '/toolbox/gear-ratio-bike-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function GearRatioBikeCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Mechanical
+              Bicycle Drivetrain Kinematics
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Bicycle Gear Ratio <span className="text-blue-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate bicycle gear ratio, development, and cadence speed.
+              Compute gear ratio, meters of development, gear inches, gain ratio, and road speed from chainring/cog teeth and wheel outer diameter.
             </p>
           </div>
         </section>

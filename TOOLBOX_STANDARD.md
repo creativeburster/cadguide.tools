@@ -173,7 +173,8 @@ flowchart LR
 | 25 | fin-efficiency-calculator、fire-hydrant-flow-calculator、fire-resistance-rating-calculator、fire-sprinkler-coverage-calculator、flexlm-concurrent-seats-queue | 0836019c～ae86b6da（待复核） |
 | 26 | flexlm-debug-log-analyzer、flexlm-error-15-debugger、flow-rate-unit-converter、flywheel-energy-calculator、force-unit-converter | db003506（待复核） |
 | 27 | forging-force-calculator、friction-force-calculator、fsw-welding-calculator、gasket-seal-calculator、gas-pipe-sizing-calculator | 70127142（待复核） |
-| 28 | gcode-quick-reference-sheet、gdt-symbol-reference-guide、gear-force-calculator、gear-module-calculator、gear-module-calculator-2 | 待复核 |
+| 28 | gcode-quick-reference-sheet、gdt-symbol-reference-guide、gear-force-calculator、gear-module-calculator、gear-module-calculator-2 | 8a27c905（待复核） |
+| 29 | gear-module-pitch-calculator、gear-ratio-belt-calculator、gear-ratio-bike-calculator、gear-ratio-speed-calculator、generator-sizing-calculator | 待复核 |
 
 ---
 
