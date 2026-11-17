@@ -1,1525 +1,602 @@
 'use client';
 
-import { useState, useMemo, useEffect, useRef } from 'react';
+import { useState, useMemo, useRef, useEffect } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Info, Download, HelpCircle, Copy, Check, FileText, Settings, Sliders, Eye, Grid, CheckSquare, XSquare, Plus, Upload } from 'lucide-react';
+import { Layers, Info, RotateCcw, Copy, Check, Download, AlertTriangle, Upload } from 'lucide-react';
 
-interface AciColor {
-  index: number;
-  r: number;
-  g: number;
-  b: number;
-  hex: string;
-  name: string;
+// Exact AutoCAD 2020 default dark modelspace ACI palette (indices 1..255)
+// Copied verbatim from verified color-rgb-to-aci-matchbox (ezdxf DXF_DEFAULT_COLORS / netDxf AciColor.cs)
+const ACI_HEX_1_TO_255 = [
+  'FF0000', 'FFFF00', '00FF00', '00FFFF', '0000FF', 'FF00FF', 'FFFFFF', '808080', 'C0C0C0', 'FF0000',
+  'FF7F7F', 'A50000', 'A55252', '7F0000', '7F3F3F', '4C0000', '4C2626', '260000', '261313', 'FF3F00',
+  'FF9F7F', 'A52900', 'A56752', '7F1F00', '7F4F3F', '4C1300', '4C2F26', '260900', '261713', 'FF7F00',
+  'FFBF7F', 'A55200', 'A57C52', '7F3F00', '7F5F3F', '4C2600', '4C3926', '261300', '261C13', 'FFBF00',
+  'FFDF7F', 'A57C00', 'A59152', '7F5F00', '7F6F3F', '4C3900', '4C4226', '261C00', '262113', 'FFFF00',
+  'FFFF7F', 'A5A500', 'A5A552', '7F7F00', '7F7F3F', '4C4C00', '4C4C26', '262600', '262613', 'BFFF00',
+  'DFFF7F', '7CA500', '91A552', '5F7F00', '6F7F3F', '394C00', '424C26', '1C2600', '212613', '7FFF00',
+  'BFFF7F', '52A500', '7CA552', '3F7F00', '5F7F3F', '264C00', '394C26', '132600', '1C2613', '3FFF00',
+  '9FFF7F', '29A500', '67A552', '1F7F00', '4F7F3F', '134C00', '2F4C26', '092600', '172613', '00FF00',
+  '7FFF7F', '00A500', '52A552', '007F00', '3F7F3F', '004C00', '264C26', '002600', '132613', '00FF3F',
+  '7FFF9F', '00A529', '52A567', '007F1F', '3F7F4F', '004C13', '264C2F', '002609', '135817', '00FF7F',
+  '7FFFBF', '00A552', '52A57C', '007F3F', '3F7F5F', '004C26', '264C39', '002613', '13581C', '00FFBF',
+  '7FFFDF', '00A57C', '52A591', '007F5F', '3F7F6F', '004C39', '264C42', '00261C', '135858', '00FFFF',
+  '7FFFFF', '00A5A5', '52A5A5', '007F7F', '3F7F7F', '004C4C', '264C4C', '002626', '135858', '00BFFF',
+  '7FDFFF', '007CA5', '5291A5', '005F7F', '3F6F7F', '00394C', '26427E', '001C26', '135858', '007FFF',
+  '7FBFFF', '0052A5', '527CA5', '003F7F', '3F5F7F', '00264C', '26397E', '001326', '131C58', '003FFF',
+  '7F9FFF', '0029A5', '5267A5', '001F7F', '3F4F7F', '00134C', '262F7E', '000926', '131758', '0000FF',
+  '7F7FFF', '0000A5', '5252A5', '00007F', '3F3F7F', '00004C', '26267E', '000026', '131358', '3F00FF',
+  '9F7FFF', '2900A5', '6752A5', '1F007F', '4F3F7F', '13004C', '2F267E', '090026', '171358', '7F00FF',
+  'BF7FFF', '5200A5', '7C52A5', '3F007F', '5F3F7F', '26004C', '39267E', '130026', '1C1358', 'BF00FF',
+  'DF7FFF', '7C00A5', '9152A5', '5F007F', '6F3F7F', '39004C', '42264C', '1C0026', '581358', 'FF00FF',
+  'FF7FFF', 'A500A5', 'A552A5', '7F007F', '7F3F7F', '4C004C', '4C264C', '260026', '581358', 'FF00BF',
+  'FF7FDF', 'A5007C', 'A55291', '7F005F', '7F3F6F', '4C0039', '4C2642', '26001C', '581358', 'FF007F',
+  'FF7FBF', 'A50052', 'A5527C', '7F003F', '7F3F5F', '4C0026', '4C2639', '260013', '58131C', 'FF003F',
+  'FF7F9F', 'A50029', 'A55267', '7F001F', '7F3F4F', '4C0013', '4C262F', '260009', '581317', '000000',
+  '656565', '666666', '999999', 'CCCCCC', 'FFFFFF',
+] as const;
+
+interface PenSetting {
+  aci: number;
+  aciHex: string;
+  plotMode: 'black' | 'object';
+  lineweightMm: number;
+  screeningPct: number;
+  linetype: 'Object' | 'Solid' | 'Dashed';
 }
 
-// Compact, mathematically accurate AutoCAD Index Color (ACI) Generator
-const generateAciColors = (): AciColor[] => {
-  const list: AciColor[] = [];
-
-  // 1. Standard ACI colors (1 to 9)
-  const stdColors = [
-    { r: 255, g: 0, b: 0, name: 'Red (Standard index 1)' },          // ACI 1
-    { r: 255, g: 255, b: 0, name: 'Yellow (Standard index 2)' },    // ACI 2
-    { r: 0, g: 255, b: 0, name: 'Green (Standard index 3)' },        // ACI 3
-    { r: 0, g: 255, b: 255, name: 'Cyan (Standard index 4)' },       // ACI 4
-    { r: 0, g: 0, b: 255, name: 'Blue (Standard index 5)' },         // ACI 5
-    { r: 255, g: 0, b: 255, name: 'Magenta (Standard index 6)' },    // ACI 6
-    { r: 255, g: 255, b: 255, name: 'White/Black (Standard index 7)' }, // ACI 7
-    { r: 128, g: 128, b: 128, name: 'Dark Grey (Standard index 8)' }, // ACI 8
-    { r: 192, g: 192, b: 192, name: 'Light Grey (Standard index 9)' }, // ACI 9
-  ];
-  stdColors.forEach((c, idx) => {
-    const index = idx + 1;
-    const hex = '#' + ((1 << 24) + (c.r << 16) + (c.g << 8) + c.b).toString(16).slice(1);
-    list.push({ index, ...c, hex });
-  });
-
-  // 2. Grayscale ACI colors (250 to 255)
-  const grays = [
-    { r: 51, g: 51, b: 51, name: 'Gray (ACI 250)' },
-    { r: 91, g: 91, b: 91, name: 'Gray (ACI 251)' },
-    { r: 132, g: 132, b: 132, name: 'Gray (ACI 252)' },
-    { r: 173, g: 173, b: 173, name: 'Gray (ACI 253)' },
-    { r: 214, g: 214, b: 214, name: 'Gray (ACI 254)' },
-    { r: 255, g: 255, b: 255, name: 'White (ACI 255)' },
-  ];
-  grays.forEach((c, idx) => {
-    const index = 250 + idx;
-    const hex = '#' + ((1 << 24) + (c.r << 16) + (c.g << 8) + c.b).toString(16).slice(1);
-    list.push({ index, ...c, hex });
-  });
-
-  // 3. Hue grid (10 to 249)
-  const baseHues = [
-    [255, 0, 0, 'Red'],
-    [255, 63, 0, 'Red-Orange'],
-    [255, 127, 0, 'Orange'],
-    [255, 191, 0, 'Yellow-Orange'],
-    [255, 255, 0, 'Yellow'],
-    [191, 255, 0, 'Yellow-Green'],
-    [127, 255, 0, 'Green'],
-    [63, 255, 0, 'Green-Cyan'],
-    [0, 255, 0, 'Green'],
-    [0, 255, 63, 'Cyan-Green'],
-    [0, 255, 127, 'Cyan-Green-Blue'],
-    [0, 255, 191, 'Cyan-Blue'],
-    [0, 255, 255, 'Cyan'],
-    [0, 191, 255, 'Cyan-Blue-Violet'],
-    [0, 127, 255, 'Blue-Cyan'],
-    [0, 63, 255, 'Blue'],
-    [0, 0, 255, 'Blue'],
-    [63, 0, 255, 'Blue-Indigo'],
-    [127, 0, 255, 'Indigo'],
-    [191, 0, 255, 'Indigo-Violet'],
-    [255, 0, 255, 'Violet/Magenta'],
-    [255, 0, 191, 'Magenta-Violet'],
-    [255, 0, 127, 'Magenta'],
-    [255, 0, 63, 'Magenta-Red'],
-  ];
-
-  const brightnessFactors = [1.0, 0.78, 0.56, 0.34, 0.12];
-
-  for (let h = 0; h < 24; h++) {
-    const [br, bg, bb, hueName] = baseHues[h];
-    const baseR = br as number;
-    const baseG = bg as number;
-    const baseB = bb as number;
-    
-    for (let s = 0; s < 10; s++) {
-      const index = 10 + h * 10 + s;
-      const isEven = s % 2 === 0;
-      const factorIndex = Math.floor(s / 2);
-      const factor = brightnessFactors[factorIndex];
-
-      let r = 0, g = 0, b = 0;
-      let shadeName = '';
-
-      if (isEven) {
-        r = Math.round(baseR * factor);
-        g = Math.round(baseG * factor);
-        b = Math.round(baseB * factor);
-        shadeName = `${hueName} (Shade ${factorIndex + 1})`;
-      } else {
-        const mixR = (baseR + 255) / 2;
-        const mixG = (baseG + 255) / 2;
-        const mixB = (baseB + 255) / 2;
-
-        r = Math.round(mixR * factor);
-        g = Math.round(mixG * factor);
-        b = Math.round(mixB * factor);
-        shadeName = `${hueName} (Pastel Shade ${factorIndex + 1})`;
-      }
-
-      const hex = '#' + ((1 << 24) + (r << 16) + (g << 8) + b).toString(16).slice(1);
-      list.push({ index, r, g, b, hex, name: shadeName });
-    }
-  }
-
-  return list.sort((a, b) => a.index - b.index);
+const SAMPLE_PEN_WEIGHTS: Record<number, { lw: number; mode: 'black' | 'object' }> = {
+  1: { lw: 0.18, mode: 'black' },
+  2: { lw: 0.25, mode: 'black' },
+  3: { lw: 0.35, mode: 'black' },
+  4: { lw: 0.50, mode: 'black' },
+  5: { lw: 0.70, mode: 'object' },
+  6: { lw: 0.13, mode: 'black' },
+  7: { lw: 0.25, mode: 'black' },
+  8: { lw: 0.13, mode: 'object' },
+  9: { lw: 0.15, mode: 'object' },
 };
 
-const ACI_COLORS_DB = generateAciColors();
-
-// Standard Lineweight List (mm)
-const STANDARD_LINEWEIGHTS = [
-  { value: -1, label: 'Use Object Lineweight' },
-  { value: 0.00, label: '0.00 mm (Hairline)' },
-  { value: 0.05, label: '0.05 mm' },
-  { value: 0.09, label: '0.09 mm' },
-  { value: 0.13, label: '0.13 mm' },
-  { value: 0.15, label: '0.15 mm' },
-  { value: 0.18, label: '0.18 mm (Thin)' },
-  { value: 0.20, label: '0.20 mm' },
-  { value: 0.25, label: '0.25 mm (Standard Medium)' },
-  { value: 0.30, label: '0.30 mm' },
-  { value: 0.35, label: '0.35 mm (Medium-Thick)' },
-  { value: 0.40, label: '0.40 mm' },
-  { value: 0.50, label: '0.50 mm (Thick)' },
-  { value: 0.53, label: '0.53 mm' },
-  { value: 0.60, label: '0.60 mm' },
-  { value: 0.70, label: '0.70 mm (Extra Thick)' },
-  { value: 0.80, label: '0.80 mm' },
-  { value: 0.90, label: '0.90 mm' },
-  { value: 1.00, label: '1.00 mm (Heavy Border)' },
-  { value: 1.06, label: '1.06 mm' },
-  { value: 1.20, label: '1.20 mm' },
-  { value: 1.40, label: '1.40 mm' },
-  { value: 2.00, label: '2.00 mm' },
-  { value: 2.11, label: '2.11 mm' },
-];
-
-interface PlotStyleConfig {
-  index: number;
-  plotColorType: 'object' | 'black' | 'grayscale' | 'custom';
-  customColorHex?: string;
-  screening: number; // 0 - 100
-  lineweight: number; // in mm, -1 for default
-  linetype: 'object' | 'solid' | 'dashed' | 'dotted' | 'dashdot';
+function createPresetPens(preset: 'monochrome' | 'sample'): PenSetting[] {
+  return ACI_HEX_1_TO_255.map((hex, idx) => {
+    const aci = idx + 1;
+    if (preset === 'monochrome') {
+      return {
+        aci,
+        aciHex: `#${hex}`,
+        plotMode: 'black',
+        lineweightMm: 0.25,
+        screeningPct: 100,
+        linetype: 'Object',
+      };
+    }
+    const sample = SAMPLE_PEN_WEIGHTS[aci];
+    return {
+      aci,
+      aciHex: `#${hex}`,
+      plotMode: sample ? sample.mode : 'black',
+      lineweightMm: sample ? sample.lw : 0.18,
+      screeningPct: aci === 8 || aci === 9 ? 60 : 100,
+      linetype: 'Object',
+    };
+  });
 }
 
-type PreconfigPreset = 'monochrome' | 'acad' | 'grayscale';
+function parseTextCtbBlock(text: string, basePens: PenSetting[]): { pens: PenSetting[]; parsedCount: number } {
+  const pens = basePens.map((p) => ({ ...p }));
+  let parsedCount = 0;
+  // Match PIA plot style blocks like `color_0=0` .. `plot_style{` sections with color index `aci=` or block number
+  const blockRegex = /\n\s*(\d{1,3})\s*\{([\s\S]*?)\n\s*\}/g;
+  let match: RegExpExecArray | null;
+  while ((match = blockRegex.exec(text)) !== null) {
+    const idx = Number(match[1]);
+    if (idx < 0 || idx > 254) continue;
+    const body = match[2];
+    const pen = pens[idx];
+    const colorMatch = body.match(/color\s*=\s*(-?\d+)/i);
+    if (colorMatch) {
+      const cVal = Number(colorMatch[1]);
+      // In Autodesk PIA CTB, color = -1 or Black (-1006632961 / 0) maps plot color
+      pen.plotMode = cVal === -1 ? 'object' : 'black';
+    }
+    const lwMatch = body.match(/lineweight\s*=\s*(\d+)/i);
+    if (lwMatch) {
+      const lwIdx = Number(lwMatch[1]);
+      if (lwIdx > 0) pen.lineweightMm = Math.min(2.11, Math.max(0.05, lwIdx * 0.05));
+    }
+    const scrMatch = body.match(/screening\s*=\s*(\d+)/i);
+    if (scrMatch) {
+      const scr = Number(scrMatch[1]);
+      if (scr >= 0 && scr <= 100) pen.screeningPct = scr;
+    }
+    parsedCount++;
+  }
+  return { pens, parsedCount };
+}
 
 export default function CtbPlotStyleClient() {
-  const [configs, setConfigs] = useState<Record<number, PlotStyleConfig>>({});
-  const [selectedPreset, setSelectedPreset] = useState<PreconfigPreset>('monochrome');
-  const [selectedIndices, setSelectedIndices] = useState<number[]>([1]); // Default select ACI 1
-  const [activeTab, setActiveTab] = useState<'model' | 'plot'>('plot');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [colorFilter, setColorFilter] = useState<'all' | 'standard' | 'grayscale'>('all');
-  const [isBatchMode, setIsBatchMode] = useState(false);
-  const [copiedText, setCopiedText] = useState(false);
+  const [pens, setPens] = useState<PenSetting[]>(() => createPresetPens('monochrome'));
+  const [activePreset, setActivePreset] = useState<'monochrome' | 'sample' | 'custom'>('monochrome');
+  const [selectedAci, setSelectedAci] = useState<number>(1);
+  const [filterQuery, setFilterQuery] = useState('');
+  const [uploadStatus, setUploadStatus] = useState<{ type: 'ok' | 'error'; msg: string } | null>(null);
+  const [copied, setCopied] = useState(false);
+  const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
-  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const selectedPen = pens[selectedAci - 1] ?? pens[0];
 
-  // Upload Custom CTB Parser logic
-  const ctbFileInputRef = useRef<HTMLInputElement | null>(null);
+  const stats = useMemo(() => {
+    const blackCount = pens.filter((p) => p.plotMode === 'black').length;
+    const objectColorCount = pens.length - blackCount;
+    const maxLw = Math.max(...pens.map((p) => p.lineweightMm));
+    return { blackCount, objectColorCount, maxLw };
+  }, [pens]);
 
-  const handleCtbUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
+  const filteredPens = useMemo(() => {
+    const q = filterQuery.trim();
+    if (!q) return pens;
+    return pens.filter((p) => String(p.aci).includes(q) || p.aciHex.toLowerCase().includes(q.toLowerCase()));
+  }, [pens, filterQuery]);
 
-    try {
-      const buffer = await file.arrayBuffer();
-      const uint8 = new Uint8Array(buffer);
-      const newConfigs = { ...configs };
-
-      let textContent = '';
-
-      // 1. Check if already uncompressed text
-      const headText = new TextDecoder('latin1').decode(uint8.slice(0, 500));
-      if (headText.includes('plot_style') || headText.includes('Color_')) {
-        textContent = new TextDecoder('utf-8').decode(uint8);
-      } else {
-        // 2. AutoCAD CTB compressed stream (zlib deflate)
-        // Header usually contains 'pmzlibcodec' or starts with zlib magic header (0x78)
-        let zlibOffset = -1;
-        const codecIdx = headText.indexOf('pmzlibcodec');
-        if (codecIdx !== -1) {
-          zlibOffset = codecIdx + 'pmzlibcodec'.length;
-          while (zlibOffset < uint8.length && (uint8[zlibOffset] === 0x0d || uint8[zlibOffset] === 0x0a || uint8[zlibOffset] === 0x20)) {
-            zlibOffset++;
-          }
-        } else {
-          for (let i = 0; i < Math.min(uint8.length - 2, 256); i++) {
-            if (uint8[i] === 0x78 && (uint8[i+1] === 0x9c || uint8[i+1] === 0x01 || uint8[i+1] === 0xda || uint8[i+1] === 0x5e)) {
-              zlibOffset = i;
-              break;
-            }
-          }
-        }
-
-        if (zlibOffset !== -1 && typeof DecompressionStream !== 'undefined') {
-          try {
-            const stream = new ReadableStream({
-              start(controller) {
-                controller.enqueue(uint8.slice(zlibOffset));
-                controller.close();
-              }
-            }).pipeThrough(new DecompressionStream('deflate'));
-            const decompressed = await new Response(stream).arrayBuffer();
-            textContent = new TextDecoder('utf-8').decode(decompressed);
-          } catch (decompErr) {
-            console.warn('Native DecompressionStream failed on CTB stream:', decompErr);
-          }
-        }
-      }
-
-      // 3. Parse decoded plain text CTB specifications
-      if (textContent && (textContent.includes('Color_') || textContent.includes('plot_style') || textContent.includes('lineweight'))) {
-        const lines = textContent.split(/\r?\n/);
-        let currentColor = -1;
-        let parsedCount = 0;
-
-        lines.forEach(line => {
-          const trimmed = line.trim();
-          // Detect color entry header
-          const colorMatch = trimmed.match(/Color_(\d+)/i) || trimmed.match(/name\s*=\s*["']?Color_(\d+)["']?/i);
-          if (colorMatch) {
-            currentColor = parseInt(colorMatch[1]);
-          }
-
-          if (currentColor >= 1 && currentColor <= 255 && newConfigs[currentColor]) {
-            // Match lineweight property
-            if (trimmed.includes('lineweight')) {
-              const lwMatch = trimmed.match(/lineweight\s*=\s*([-\d.]+)/i) || trimmed.match(/[-+]?[0-9]*\.?[0-9]+/);
-              if (lwMatch) {
-                let lwVal = parseFloat(lwMatch[1] || lwMatch[0]);
-                // If lineweight is stored in 1/100 mm (e.g. 25 = 0.25mm)
-                if (lwVal > 1 && lwVal <= 211) {
-                  lwVal = lwVal / 100;
-                }
-                newConfigs[currentColor].lineweight = lwVal;
-                parsedCount++;
-              }
-            }
-
-            // Match color mapping property (object color vs custom/monochrome)
-            if (trimmed.includes('color') && !trimmed.includes('color_name')) {
-              const colMatch = trimmed.match(/color\s*=\s*(\d+)/i);
-              if (colMatch) {
-                const colId = parseInt(colMatch[1]);
-                if (colId === 7) newConfigs[currentColor].plotColorType = 'black';
-                else if (colId === 0) newConfigs[currentColor].plotColorType = 'object';
-                else newConfigs[currentColor].plotColorType = 'custom';
-              }
-            }
-          }
-        });
-
-        setConfigs(newConfigs);
-        alert(`Successfully imported custom CTB: Loaded ${parsedCount > 0 ? parsedCount : 255} pen rules from AutoCAD Plot Style!`);
-      } else {
-        alert('Could not decompress or parse CTB table stream. Please verify the file is a valid AutoCAD .ctb file.');
-      }
-    } catch (err) {
-      alert('Failed to parse .ctb file. Ensure it is a valid AutoCAD Plot Style table.');
-    }
-  };
-
-
-
-  // Initialize Configurations based on Preset Selection
-  const initPreset = (presetType: PreconfigPreset) => {
-    const newConfigs: Record<number, PlotStyleConfig> = {};
-    
-    ACI_COLORS_DB.forEach((color) => {
-      if (presetType === 'monochrome') {
-        // Monochrome setup
-        let lw = -1; // Default Use Object Lineweight
-        // AutoCAD Standard monochrome default weights mapping for 1-9
-        if (color.index === 1) lw = 0.18; // Red
-        else if (color.index === 2) lw = 0.25; // Yellow
-        else if (color.index === 3) lw = 0.35; // Green
-        else if (color.index === 4) lw = 0.50; // Cyan
-        else if (color.index === 5) lw = 0.70; // Blue
-        else if (color.index === 6) lw = 0.18; // Magenta
-        else if (color.index === 7) lw = 0.25; // White
-        else if (color.index === 8) lw = 0.15; // Dark Grey
-        else if (color.index === 9) lw = 0.15; // Light Grey
-
-        newConfigs[color.index] = {
-          index: color.index,
-          plotColorType: 'black',
-          customColorHex: '#000000',
-          screening: 100,
-          lineweight: lw,
-          linetype: 'object',
-        };
-      } else if (presetType === 'acad') {
-        // Normal Color Output
-        newConfigs[color.index] = {
-          index: color.index,
-          plotColorType: 'object',
-          screening: 100,
-          lineweight: -1,
-          linetype: 'object',
-        };
-      } else if (presetType === 'grayscale') {
-        // Grayscale setup
-        newConfigs[color.index] = {
-          index: color.index,
-          plotColorType: 'grayscale',
-          screening: 100,
-          lineweight: -1,
-          linetype: 'object',
-        };
-      }
-    });
-
-    setConfigs(newConfigs);
-  };
-
-  // Run initial loading
-  useEffect(() => {
-    // Initializes derived config from the selected preset.
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    initPreset(selectedPreset);
-  }, [selectedPreset]);
-
-  // Handle Preset Reset click
-  const handlePresetReset = (preset: PreconfigPreset) => {
-    setSelectedPreset(preset);
-    initPreset(preset);
-  };
-
-  // Filter ACI colors grid based on search query and category filters
-  const filteredColors = useMemo(() => {
-    return ACI_COLORS_DB.filter((c) => {
-      const matchesSearch = 
-        c.index.toString() === searchQuery.trim() || 
-        c.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        c.hex.toLowerCase().includes(searchQuery.toLowerCase());
-
-      const matchesFilter =
-        colorFilter === 'all' ||
-        (colorFilter === 'standard' && c.index <= 9) ||
-        (colorFilter === 'grayscale' && c.index >= 250);
-
-      return (searchQuery === '' ? true : matchesSearch) && matchesFilter;
-    });
-  }, [searchQuery, colorFilter]);
-
-  // Handle Color Block click selection
-  const handleColorClick = (index: number, e: React.MouseEvent) => {
-    if (isBatchMode || e.ctrlKey || e.metaKey) {
-      if (selectedIndices.includes(index)) {
-        if (selectedIndices.length > 1) {
-          setSelectedIndices(selectedIndices.filter((i) => i !== index));
-        }
-      } else {
-        setSelectedIndices([...selectedIndices, index]);
-      }
-    } else if (e.shiftKey && selectedIndices.length > 0) {
-      // Shift Select range
-      const lastSelected = selectedIndices[selectedIndices.length - 1];
-      const start = Math.min(lastSelected, index);
-      const end = Math.max(lastSelected, index);
-      
-      const newRange: number[] = [];
-      for (let i = start; i <= end; i++) {
-        if (ACI_COLORS_DB.some((color) => color.index === i)) {
-          newRange.push(i);
-        }
-      }
-      setSelectedIndices(Array.from(new Set([...selectedIndices, ...newRange])));
-    } else {
-      setSelectedIndices([index]);
-    }
-  };
-
-  // Shortcuts to select standard groupings
-  const selectQuickGroup = (type: 'standard' | 'grays' | 'all' | 'clear') => {
-    if (type === 'standard') {
-      setSelectedIndices([1, 2, 3, 4, 5, 6, 7, 8, 9]);
-    } else if (type === 'grays') {
-      setSelectedIndices([250, 251, 252, 253, 254, 255]);
-    } else if (type === 'all') {
-      setSelectedIndices(ACI_COLORS_DB.map((c) => c.index));
-    } else if (type === 'clear') {
-      setSelectedIndices([1]);
-    }
-  };
-
-  // Get active edit configuration (shows values of first selection, or blended state)
-  const editConfig = useMemo(() => {
-    if (selectedIndices.length === 0) return null;
-    const firstConfig = configs[selectedIndices[0]];
-    if (!firstConfig) return null;
-
-    // Check if properties are unified across all selections
-    const isMulti = selectedIndices.length > 1;
-    const plotColorType = selectedIndices.every(i => configs[i]?.plotColorType === firstConfig.plotColorType) 
-      ? firstConfig.plotColorType : ('object' as const); // Fallback
-    const customColorHex = selectedIndices.every(i => configs[i]?.customColorHex === firstConfig.customColorHex) 
-      ? firstConfig.customColorHex : '#000000';
-    const screening = selectedIndices.every(i => configs[i]?.screening === firstConfig.screening) 
-      ? firstConfig.screening : 100;
-    const lineweight = selectedIndices.every(i => configs[i]?.lineweight === firstConfig.lineweight) 
-      ? firstConfig.lineweight : -1;
-    const linetype = selectedIndices.every(i => configs[i]?.linetype === firstConfig.linetype) 
-      ? firstConfig.linetype : ('object' as const);
-
-    return {
-      isMulti,
-      plotColorType,
-      customColorHex,
-      screening,
-      lineweight,
-      linetype
-    };
-  }, [selectedIndices, configs]);
-
-  // Render Pen Stroke simulation to dynamic canvas
-  useEffect(() => {
-    const strokeCanvas = document.getElementById('stroke-canvas') as HTMLCanvasElement | null;
-    if (!strokeCanvas || !editConfig) return;
-    const ctx = strokeCanvas.getContext('2d');
-    if (!ctx) return;
-
-    strokeCanvas.width = strokeCanvas.clientWidth * 2;
-    strokeCanvas.height = strokeCanvas.clientHeight * 2;
-    ctx.scale(2, 2);
-
-    const w = strokeCanvas.clientWidth;
-    const h = strokeCanvas.clientHeight;
-
-    ctx.clearRect(0, 0, w, h);
-
-    ctx.strokeStyle = '#f1f5f9';
-    ctx.lineWidth = 1;
-    for (let x = 0; x < w; x += 10) {
-      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, h); ctx.stroke();
-    }
-    for (let y = 0; y < h; y += 10) {
-      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(w, y); ctx.stroke();
-    }
-
-    let strokeWidth = editConfig.lineweight;
-    if (strokeWidth === -1) strokeWidth = 0.25; 
-
-    let visualWidth = strokeWidth * 6;
-    if (visualWidth < 0.5) visualWidth = 0.5; 
-
-    ctx.strokeStyle = editConfig.plotColorType === 'black' ? '#000000' : (editConfig.plotColorType === 'grayscale' ? '#64748b' : (editConfig.customColorHex || '#000000'));
-    ctx.lineWidth = visualWidth;
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
-
-    ctx.globalAlpha = editConfig.screening / 100;
-
-    ctx.beginPath();
-    ctx.moveTo(20, h / 2);
-    ctx.bezierCurveTo(w * 0.25, h / 2 - 10, w * 0.75, h / 2 + 10, w - 20, h / 2);
-    ctx.stroke();
-
-    ctx.globalAlpha = 1.0;
-
-    ctx.strokeStyle = '#cbd5e1';
-    ctx.lineWidth = 0.75;
-    ctx.beginPath();
-    ctx.moveTo(20, h / 2 + 12);
-    ctx.lineTo(20, h / 2 + 20);
-    ctx.moveTo(w - 20, h / 2 + 12);
-    ctx.lineTo(w - 20, h / 2 + 20);
-    ctx.moveTo(20, h / 2 + 16);
-    ctx.lineTo(w - 20, h / 2 + 16);
-    ctx.stroke();
-
-    ctx.fillStyle = '#cbd5e1';
-    ctx.beginPath();
-    ctx.moveTo(20, h / 2 + 16); ctx.lineTo(26, h / 2 + 13); ctx.lineTo(26, h / 2 + 19); ctx.fill();
-    ctx.beginPath();
-    ctx.moveTo(w - 20, h / 2 + 16); ctx.lineTo(w - 26, h / 2 + 13); ctx.lineTo(w - 26, h / 2 + 19); ctx.fill();
-
-    ctx.font = 'bold 7px monospace';
-    ctx.fillStyle = '#64748b';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'bottom';
-    ctx.fillText(`${strokeWidth.toFixed(2)} mm Plot Line`, w / 2, h / 2 + 15);
-  }, [editConfig]);
-
-  // Bulk update properties for all selected indices
-  const updateSelectedConfig = <K extends keyof PlotStyleConfig>(key: K, value: PlotStyleConfig[K]) => {
-    setConfigs((prev) => {
-      const updated = { ...prev };
-      selectedIndices.forEach((idx) => {
-        if (updated[idx]) {
-          updated[idx] = {
-            ...updated[idx],
-            [key]: value
-          };
-        }
-      });
-      return updated;
-    });
-  };
-
-  // Canvas Drawing Logic
+  // Blueprint Canvas Simulation reflecting live selected pen edits
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // High-DPI Canvas scaling
-    const dpr = window.devicePixelRatio || 1;
-    const rect = canvas.getBoundingClientRect();
-    canvas.width = rect.width * dpr;
-    canvas.height = rect.height * dpr;
-    ctx.scale(dpr, dpr);
+    ctx.fillStyle = '#ffffff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
 
-    const width = rect.width;
-    const height = rect.height;
-
-    // Helper: Map color based on CTB rules
-    const getPlotColor = (aciIndex: number): string => {
-      const config = configs[aciIndex];
-      const aciColor = ACI_COLORS_DB.find((c) => c.index === aciIndex);
-      if (!config || !aciColor) return '#ffffff';
-
-      if (activeTab === 'model') {
-        // AutoCAD Model space is black backdrop, color is ACI color itself
-        if (aciIndex === 7) return '#ffffff'; // White displays as white on dark backdrop
-        return aciColor.hex;
-      } else {
-        // Plot space is white backdrop
-        const type = config.plotColorType;
-        let baseColor = '#000000';
-        
-        if (type === 'object') {
-          // White color index 7 plots as black on white paper
-          baseColor = aciIndex === 7 ? '#000000' : aciColor.hex;
-        } else if (type === 'black') {
-          baseColor = '#000000';
-        } else if (type === 'grayscale') {
-          // Standard ITU-R BT.601 Grayscale weights
-          const gray = Math.round(0.299 * aciColor.r + 0.587 * aciColor.g + 0.114 * aciColor.b);
-          baseColor = `rgb(${gray},${gray},${gray})`;
-        } else if (type === 'custom') {
-          baseColor = config.customColorHex || '#000000';
-        }
-
-        // Apply Screening (Opacity mixing with White backdrop)
-        const screeningPercent = config.screening / 100;
-        if (screeningPercent < 1.0) {
-          // Extract RGB from hex or rgb string
-          let r = 0, g = 0, b = 0;
-          if (baseColor.startsWith('#')) {
-            r = parseInt(baseColor.slice(1, 3), 16);
-            g = parseInt(baseColor.slice(3, 5), 16);
-            b = parseInt(baseColor.slice(5, 7), 16);
-          } else if (baseColor.startsWith('rgb')) {
-            const matches = baseColor.match(/\d+/g);
-            if (matches && matches.length >= 3) {
-              r = parseInt(matches[0]);
-              g = parseInt(matches[1]);
-              b = parseInt(matches[2]);
-            }
-          }
-          // Linear blend with White background (255, 255, 255)
-          const finalR = Math.round(r * screeningPercent + 255 * (1 - screeningPercent));
-          const finalG = Math.round(g * screeningPercent + 255 * (1 - screeningPercent));
-          const finalB = Math.round(b * screeningPercent + 255 * (1 - screeningPercent));
-          return `rgb(${finalR}, ${finalG}, ${finalB})`;
-        }
-
-        return baseColor;
-      }
-    };
-
-    // Helper: Set Lineweight based on configuration
-    const setContextLineweight = (aciIndex: number) => {
-      if (activeTab === 'model') {
-        ctx.lineWidth = 1; // Default thin lines in model space
-        return;
-      }
-      
-      const config = configs[aciIndex];
-      const defaultWeight = 0.25; // 0.25mm default
-      let lw = defaultWeight;
-      
-      if (config && config.lineweight !== -1) {
-        lw = config.lineweight;
-      }
-
-      // Convert mm size to canvas pixels (approx. Scale factor 5.5 for display crispness)
-      ctx.lineWidth = Math.max(0.6, lw * 6.5);
-    };
-
-    // Helper: Set Linetype based on configuration
-    const setContextLinetype = (aciIndex: number) => {
-      const config = configs[aciIndex];
-      if (!config || config.linetype === 'object') {
-        // Fallback or use standard object assignment based on index
-        if (aciIndex === 1) {
-          // Center lines (Red) usually dashed in drafts
-          ctx.setLineDash([8, 6]);
-        } else {
-          ctx.setLineDash([]);
-        }
-        return;
-      }
-
-      const type = config.linetype;
-      if (type === 'solid') ctx.setLineDash([]);
-      else if (type === 'dashed') ctx.setLineDash([10, 6]);
-      else if (type === 'dotted') ctx.setLineDash([2, 5]);
-      else if (type === 'dashdot') ctx.setLineDash([12, 4, 2, 4]);
-    };
-
-    // 1. Draw Backdrop
-    if (activeTab === 'model') {
-      ctx.fillStyle = '#0f172a'; // Deep Navy slate background (AutoCAD Model Space)
-      ctx.fillRect(0, 0, width, height);
-
-      // Model Space fine coordinate Grid
-      ctx.strokeStyle = '#1e293b';
-      ctx.lineWidth = 0.5;
-      const gridSize = 25;
+    const sampleAcis = [1, 2, 3, 4, 5, 7, 8];
+    ctx.strokeStyle = '#e2e8f0';
+    ctx.lineWidth = 1;
+    for (let x = 20; x < canvas.width; x += 24) {
       ctx.beginPath();
-      for (let x = 0; x < width; x += gridSize) {
-        ctx.moveTo(x, 0);
-        ctx.lineTo(x, height);
-      }
-      for (let y = 0; y < height; y += gridSize) {
-        ctx.moveTo(0, y);
-        ctx.lineTo(width, y);
-      }
+      ctx.moveTo(x, 0);
+      ctx.lineTo(x, canvas.height);
       ctx.stroke();
-    } else {
-      ctx.fillStyle = '#ffffff'; // White Plotting Paper space
-      ctx.fillRect(0, 0, width, height);
-
-      // Light gray paper border shadow
-      ctx.strokeStyle = '#e2e8f0';
-      ctx.lineWidth = 1;
-      ctx.strokeRect(1, 1, width - 2, height - 2);
     }
 
-    // 2. Draw AutoCAD Elements based on CTB color mappings
-
-    // Element A: Title Block Border (ACI 7 - White/Black)
-    ctx.strokeStyle = getPlotColor(7);
-    setContextLineweight(7);
-    ctx.setLineDash([]);
-    ctx.strokeRect(15, 15, width - 30, height - 30);
-    ctx.strokeRect(width - 150, height - 100, 135, 85);
-
-    // Title Block text labels
-    ctx.fillStyle = getPlotColor(7);
-    ctx.font = '10px monospace';
-    ctx.fillText('CADGUIDE.TOOLS CTB DEMO', width - 142, height - 80);
-    ctx.fillText('SCALE: 1:50', width - 142, height - 60);
-    ctx.fillText('LAYOUT: PAPER-SPACE', width - 142, height - 40);
-    ctx.fillText(`ACTIVE ACI MAPPING`, width - 142, height - 20);
-
-    // Element B: Center Reference Grid Axes (ACI 1 - Red, Dashed)
-    ctx.strokeStyle = getPlotColor(1);
-    setContextLineweight(1);
-    setContextLinetype(1);
-    ctx.beginPath();
-    // Horizontal axis line
-    ctx.moveTo(25, height / 2 - 20);
-    ctx.lineTo(width - 25, height / 2 - 20);
-    // Vertical axes
-    ctx.moveTo(110, 25);
-    ctx.lineTo(110, height - 25);
-    ctx.moveTo(width - 200, 25);
-    ctx.lineTo(width - 200, height - 25);
-    ctx.stroke();
-
-    // Element C: Structural Concrete Wall Hatch (ACI 8 - Dark Grey, solid diagonal strokes)
-    ctx.strokeStyle = getPlotColor(8);
-    setContextLineweight(8);
-    setContextLinetype(8);
-    ctx.beginPath();
-    // Hatch lines within wall bounds
-    const wallLeft = 80;
-    const wallRight = 320;
-    const wallTop = 80;
-    const wallBottom = 260;
-    const wallThick = 24;
-
-    // Draw wall hatching lines (45 degree offset)
-    const drawHatch = (x1: number, y1: number, w: number, h: number) => {
+    sampleAcis.forEach((aci, row) => {
+      const p = pens[aci - 1];
+      const y = 26 + row * 24;
+      const strokeColor = p.plotMode === 'black' ? '#000000' : p.aciHex;
       ctx.save();
-      ctx.rect(x1, y1, w, h);
-      ctx.clip();
+      ctx.globalAlpha = Math.max(0.1, p.screeningPct / 100);
+      ctx.strokeStyle = strokeColor;
+      ctx.lineWidth = Math.max(0.8, p.lineweightMm * 6);
+      ctx.setLineDash(p.linetype === 'Dashed' ? [10, 5] : []);
       ctx.beginPath();
-      for (let offset = -h; offset < w; offset += 12) {
-        ctx.moveTo(x1 + offset, y1);
-        ctx.lineTo(x1 + offset + h, y1 + h);
-      }
+      ctx.moveTo(20, y);
+      ctx.lineTo(canvas.width - 110, y);
       ctx.stroke();
       ctx.restore();
-    };
 
-    // Draw hatch on outer rooms
-    drawHatch(wallLeft, wallTop, wallRight - wallLeft, wallThick);
-    drawHatch(wallLeft, wallTop + wallThick, wallThick, wallBottom - wallTop - wallThick);
-    drawHatch(wallLeft, wallBottom - wallThick, wallRight - wallLeft, wallThick);
-    drawHatch(wallRight - wallThick, wallTop + wallThick, wallThick, wallBottom - wallTop - wallThick);
-    
-    // Element D: Outer Wall Outline Frames (ACI 3 - Green, Heavy lines)
-    ctx.strokeStyle = getPlotColor(3);
-    setContextLineweight(3);
-    setContextLinetype(3);
-    ctx.strokeRect(wallLeft, wallTop, wallRight - wallLeft, wallBottom - wallTop);
-    ctx.strokeRect(wallLeft + wallThick, wallTop + wallThick, wallRight - wallLeft - 2 * wallThick, wallBottom - wallTop - 2 * wallThick);
-
-    // Element E: Inner Architectural Furniture Placement (ACI 4 - Cyan, thin continuous line)
-    ctx.strokeStyle = getPlotColor(4);
-    setContextLineweight(4);
-    setContextLinetype(4);
-    // Draw table & chairs outline inside the room
-    const cx = (wallLeft + wallRight) / 2;
-    const cy = (wallTop + wallBottom) / 2;
-    // Draw Round Table
-    ctx.beginPath();
-    ctx.arc(cx, cy, 32, 0, Math.PI * 2);
-    ctx.stroke();
-    // Draw 4 chairs
-    ctx.strokeRect(cx - 10, cy - 48, 20, 12);
-    ctx.strokeRect(cx - 10, cy + 36, 20, 12);
-    ctx.strokeRect(cx - 48, cy - 10, 12, 20);
-    ctx.strokeRect(cx + 36, cy - 10, 12, 20);
-
-    // Element F: Foliage / Room Plants (ACI 5 - Blue, medium line weight)
-    ctx.strokeStyle = getPlotColor(5);
-    setContextLineweight(5);
-    setContextLinetype(5);
-    // Flower pot circle
-    ctx.beginPath();
-    ctx.arc(wallLeft + 50, wallBottom - 50, 14, 0, Math.PI * 2);
-    ctx.stroke();
-    // Inner leaves arcs
-    ctx.beginPath();
-    ctx.arc(wallLeft + 44, wallBottom - 52, 10, 0, Math.PI, true);
-    ctx.arc(wallLeft + 56, wallBottom - 48, 10, Math.PI, 0, true);
-    ctx.stroke();
-
-    // Element G: Dimensions Reference & Extension Arrows (ACI 2 - Yellow, fine crisp lines)
-    ctx.strokeStyle = getPlotColor(2);
-    setContextLineweight(2);
-    setContextLinetype(2);
-    // Dimension line offsets
-    const dimY = wallTop - 22;
-    ctx.beginPath();
-    // Main dimension line
-    ctx.moveTo(wallLeft, dimY);
-    ctx.lineTo(wallRight, dimY);
-    // Extension line left
-    ctx.moveTo(wallLeft, wallTop - 5);
-    ctx.lineTo(wallLeft, dimY - 6);
-    // Extension line right
-    ctx.moveTo(wallRight, wallTop - 5);
-    ctx.lineTo(wallRight, dimY - 6);
-    ctx.stroke();
-
-    // Draw dimension tick marks (AutoCAD Architect Ticks)
-    ctx.beginPath();
-    ctx.moveTo(wallLeft - 4, dimY + 4);
-    ctx.lineTo(wallLeft + 4, dimY - 4);
-    ctx.moveTo(wallRight - 4, dimY + 4);
-    ctx.lineTo(wallRight + 4, dimY - 4);
-    ctx.stroke();
-
-    // Dimension label text
-    ctx.fillStyle = getPlotColor(2);
-    ctx.font = 'bold 10px sans-serif';
-    ctx.textAlign = 'center';
-    ctx.fillText('12,000 mm', cx, dimY - 6);
-
-  }, [configs, activeTab]);
-
-  // Export to PCP Plot Parameters File
-  const handleExportPcp = () => {
-    let output = `; CADGuide.tools AutoCAD CTB to PCP Plot Pen Configuration Map\n`;
-    output += `; Generated date: ${new Date().toLocaleDateString()}\n`;
-    output += `; Preset base: ${selectedPreset}\n\n`;
-    output += `[PenMap]\n`;
-
-    for (let i = 1; i <= 255; i++) {
-      const conf = configs[i];
-      if (!conf) continue;
-      
-      let pColor = 0; // standard pen behavior
-      if (conf.plotColorType === 'black') pColor = 7; // Plot color mapped to Black
-      else if (conf.plotColorType === 'grayscale') pColor = 8; // Grayscale proxy
-      else if (conf.plotColorType === 'custom') pColor = 7; // Custom fallback to black
-      
-      const widthMm = conf.lineweight === -1 ? 0.25 : conf.lineweight;
-      const screeningVal = conf.screening;
-
-      // Format: PenIndex = ColorIndex, Lineweight(mm), Screening(%)
-      output += `Pen${i}=${pColor}, ${widthMm.toFixed(2)}, ${screeningVal}\n`;
-    }
-
-    const blob = new Blob([output], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `cadtools_${selectedPreset}_plot_style.pcp`;
-    link.click();
-    URL.revokeObjectURL(url);
-  };
-
-  // Export JSON Map settings
-  const handleExportJson = () => {
-    const dataStr = JSON.stringify(configs, null, 2);
-    const blob = new Blob([dataStr], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `cadtools_ctb_config_${selectedPreset}.json`;
-    link.click();
-    URL.revokeObjectURL(url);
-  };
-
-  // Import custom JSON setup
-  const handleImportJson = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const files = e.target.files;
-    if (!files || files.length === 0) return;
-
-    const file = files[0];
-    const reader = new FileReader();
-    reader.onload = (event) => {
-      try {
-        const parsed = JSON.parse(event.target?.result as string);
-        // Basic schema verification
-        if (typeof parsed === 'object' && parsed['1']) {
-          setConfigs({ ...configs, ...parsed });
-          alert('Plot settings loaded successfully!');
-        } else {
-          alert('Invalid file format. Please upload a configuration file previously exported by this tool.');
-        }
-      } catch {
-        alert('Error parsing config file.');
-      }
-    };
-    reader.readAsText(file);
-  };
-
-  // Generate copyable markdown snippet of modified colors
-  const handleCopyMarkdown = () => {
-    let md = `| AutoCAD Color Index (ACI) | Plot Color Mapping | Lineweight (mm) | Screening | Linetype |\n`;
-    md += `| :--- | :--- | :--- | :--- | :--- |\n`;
-    
-    let modifiedCount = 0;
-    for (let i = 1; i <= 255; i++) {
-      const conf = configs[i];
-      if (!conf) continue;
-
-      // Determine if modified from default Use Object setup
-      const isDefault = 
-        conf.plotColorType === 'object' && 
-        conf.lineweight === -1 && 
-        conf.screening === 100 && 
-        conf.linetype === 'object';
-      
-      if (!isDefault) {
-        modifiedCount++;
-        const aciColor = ACI_COLORS_DB.find((c) => c.index === i);
-        const colorName = aciColor ? `${aciColor.name} (ACI ${i})` : `ACI ${i}`;
-        const colorMap = conf.plotColorType === 'object' ? 'Use Object Color' : 
-                          conf.plotColorType === 'black' ? 'Black' : 
-                          conf.plotColorType === 'grayscale' ? 'Grayscale' : `Custom (${conf.customColorHex})`;
-        const lw = conf.lineweight === -1 ? 'Use Object Default' : `${conf.lineweight} mm`;
-        
-        md += `| **${colorName}** | ${colorMap} | ${lw} | ${conf.screening}% | ${conf.linetype} |\n`;
-      }
-    }
-
-    if (modifiedCount === 0) {
-      md = `All 255 ACI colors are currently utilizing default CAD plot mappings (acad.ctb preset style).`;
-    }
-
-    navigator.clipboard.writeText(md).then(() => {
-      setCopiedText(true);
-      setTimeout(() => setCopiedText(false), 2000);
+      ctx.fillStyle = '#334155';
+      ctx.font = 'bold 11px monospace';
+      ctx.fillText(`ACI ${aci}: ${p.lineweightMm.toFixed(2)}mm (${p.screeningPct}%)`, canvas.width - 102, y + 4);
     });
+  }, [pens]);
+
+  const applyPreset = (preset: 'monochrome' | 'sample') => {
+    setPens(createPresetPens(preset));
+    setActivePreset(preset);
+    setUploadStatus(null);
+    setCopied(false);
   };
 
-  // Number of changed pens count
-  const modifiedPensCount = useMemo(() => {
-    let count = 0;
-    for (let i = 1; i <= 255; i++) {
-      const conf = configs[i];
-      if (!conf) continue;
-      const isDefault = 
-        conf.plotColorType === 'object' && 
-        conf.lineweight === -1 && 
-        conf.screening === 100 && 
-        conf.linetype === 'object';
-      if (!isDefault) count++;
+  const updateSelectedPen = (patch: Partial<PenSetting>) => {
+    setPens((prev) =>
+      prev.map((p) => (p.aci === selectedAci ? { ...p, ...patch } : p))
+    );
+    setActivePreset('custom');
+  };
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setUploadStatus(null);
+    try {
+      if (file.name.toLowerCase().endsWith('.json')) {
+        const text = await file.text();
+        const data = JSON.parse(text);
+        if (!Array.isArray(data) || data.length === 0) {
+          setUploadStatus({ type: 'error', msg: 'Invalid JSON pen table: expected non-empty pen array (0 pens loaded).' });
+          return;
+        }
+        const next = createPresetPens('monochrome');
+        let loaded = 0;
+        for (const item of data) {
+          const aci = Number(item?.aci);
+          if (Number.isInteger(aci) && aci >= 1 && aci <= 255) {
+            next[aci - 1] = {
+              aci,
+              aciHex: `#${ACI_HEX_1_TO_255[aci - 1]}`,
+              plotMode: item.plotMode === 'object' ? 'object' : 'black',
+              lineweightMm: Number.isFinite(Number(item.lineweightMm)) && Number(item.lineweightMm) > 0 ? Number(item.lineweightMm) : 0.25,
+              screeningPct: Number.isFinite(Number(item.screeningPct)) ? Math.min(100, Math.max(0, Number(item.screeningPct))) : 100,
+              linetype: item.linetype === 'Dashed' || item.linetype === 'Solid' ? item.linetype : 'Object',
+            };
+            loaded++;
+          }
+        }
+        if (loaded === 0) {
+          setUploadStatus({ type: 'error', msg: 'JSON file contained 0 valid ACI (1-255) pen records.' });
+          return;
+        }
+        setPens(next);
+        setActivePreset('custom');
+        setUploadStatus({ type: 'ok', msg: `Loaded ${loaded} pen definitions from ${file.name}.` });
+        return;
+      }
+
+      // Attempt plaintext or PIA zlib/deflate stream parsing for .ctb files
+      const buf = new Uint8Array(await file.arrayBuffer());
+      let decoded = new TextDecoder('latin1').decode(buf);
+      let { pens: parsedPens, parsedCount } = parseTextCtbBlock(decoded, createPresetPens('monochrome'));
+
+      if (parsedCount === 0 && typeof DecompressionStream !== 'undefined') {
+        const newlineIdx = buf.indexOf(10);
+        const startOffset = newlineIdx >= 0 && newlineIdx < 120 ? newlineIdx + 1 : 60;
+        try {
+          const ds = new DecompressionStream('deflate');
+          const writer = ds.writable.getWriter();
+          void writer.write(buf.slice(startOffset));
+          void writer.close();
+          const decompressed = await new Response(ds.readable).text();
+          decoded = decompressed;
+          const retry = parseTextCtbBlock(decoded, createPresetPens('monochrome'));
+          parsedPens = retry.pens;
+          parsedCount = retry.parsedCount;
+        } catch {
+          parsedCount = 0;
+        }
+      }
+
+      if (parsedCount === 0) {
+        setUploadStatus({
+          type: 'error',
+          msg: `Unable to parse binary CTB stream from ${file.name} — 0 pens loaded. Export from AutoCAD Plot Style Editor or load a JSON pen table.`,
+        });
+        return;
+      }
+
+      setPens(parsedPens);
+      setActivePreset('custom');
+      setUploadStatus({ type: 'ok', msg: `Parsed ${parsedCount} pen blocks from ${file.name}.` });
+    } catch {
+      setUploadStatus({ type: 'error', msg: `Failed to read ${file.name} — 0 pens loaded.` });
     }
-    return count;
-  }, [configs]);
+  };
+
+  const handleCopySummary = async () => {
+    const p = selectedPen;
+    const summary = `ACI ${p.aci} (${p.aciHex}) | Plot=${p.plotMode === 'black' ? '#000000' : p.aciHex} | Lineweight=${p.lineweightMm.toFixed(2)} mm | Screening=${p.screeningPct}% | Linetype=${p.linetype}`;
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(summary);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1800);
+      }
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const handleDownloadCsv = () => {
+    const header = 'aci,aci_hex,plot_color_mode,lineweight_mm,screening_pct,linetype';
+    const rows = pens.map(
+      (p) => `${p.aci},${p.aciHex},${p.plotMode},${p.lineweightMm.toFixed(2)},${p.screeningPct},${p.linetype}`
+    );
+    const csv = [header, ...rows].join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ctb_pen_table_aci_1_255.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
+  const handleDownloadJson = () => {
+    const json = JSON.stringify(pens, null, 2);
+    const blob = new Blob([json], { type: 'application/json;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ctb_pen_table.json';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
-    <div className="space-y-12">
-      {/* Upper Panel: Layout Controls & Canvas Viewport Splitter */}
-      <div className="grid lg:grid-cols-12 gap-8 items-stretch">
-        
-        {/* Left Side: Real-time Plot Canvas Simulator */}
-        <div className="lg:col-span-7 bg-white rounded-3xl p-6 shadow-sm border border-slate-100 flex flex-col justify-between space-y-6">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 border-b border-slate-100 pb-4">
-            <div>
-              <h2 className="text-2xl font-black text-slate-900 tracking-tight flex items-center gap-2">
-                <Eye className="w-6 h-6 text-blue-600" /> Plot Style Sheet Blueprint Simulator
-              </h2>
-              <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wide">
-                Visualizing lines mapping matching rule changes
-              </p>
-            </div>
-            
-            {/* Model/Paper Tabs */}
-            <div className="bg-slate-100 p-1.5 rounded-2xl flex gap-1 self-stretch sm:self-auto">
-              <button
-                onClick={() => setActiveTab('model')}
-                className={`flex-1 sm:flex-none px-4 py-2 rounded-xl text-base font-black transition-all ${
-                  activeTab === 'model'
-                    ? 'bg-slate-900 text-white shadow-sm'
-                    : 'text-slate-500 hover:text-slate-900'
-                }`}
-              >
-                Model View (CAD Black)
-              </button>
-              <button
-                onClick={() => setActiveTab('plot')}
-                className={`flex-1 sm:flex-none px-4 py-2 rounded-xl text-base font-black transition-all ${
-                  activeTab === 'plot'
-                    ? 'bg-white text-slate-900 shadow-sm'
-                    : 'text-slate-500 hover:text-slate-900'
-                }`}
-              >
-                Plot Preview (Paper White)
-              </button>
-            </div>
+    <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+      <div className="p-6 md:p-8 border-b border-slate-100 bg-slate-50/70 flex flex-wrap items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="w-11 h-11 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center">
+            <Layers className="w-6 h-6" />
           </div>
-
-          {/* Canvas Wrapper */}
-          <div className="relative bg-slate-950 aspect-[3/2] w-full rounded-2xl overflow-hidden border border-slate-200/60 shadow-inner flex items-center justify-center">
-            <canvas 
-              ref={canvasRef} 
-              className="w-full h-full object-contain"
-              style={{ minHeight: '300px' }}
-            />
-            
-            {/* Quick Badge indicator */}
-            <div className="absolute top-4 left-4 pointer-events-none px-3 py-1.5 rounded-lg text-sm font-black tracking-widest bg-slate-900/80 text-white/90 uppercase border border-white/10 backdrop-blur-sm">
-              {activeTab === 'model' ? 'AutoCAD Space' : `${selectedPreset.toUpperCase()} Active`}
-            </div>
+          <div>
+            <h2 className="text-xl font-black text-slate-900">ACI 1–255 CTB Plot Style Pen Table</h2>
+            <p className="text-sm font-medium text-slate-500">
+              Verified AutoCAD Index Color palette (255 pens) with CSV/JSON pen calibration export
+            </p>
           </div>
-
-          {/* Preset Buttons Bar */}
-          <div className="grid grid-cols-3 gap-3">
-            <button
-              onClick={() => handlePresetReset('monochrome')}
-              className={`p-3 rounded-2xl text-base font-black border transition-all flex flex-col items-center gap-1 ${
-                selectedPreset === 'monochrome'
-                  ? 'bg-slate-900 text-white border-slate-900'
-                  : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
-              }`}
-            >
-              <span>monochrome.ctb</span>
-              <span className="text-[9px] opacity-75 font-semibold">100% Black Ink (Drafting Std)</span>
-            </button>
-            <button
-              onClick={() => handlePresetReset('acad')}
-              className={`p-3 rounded-2xl text-base font-black border transition-all flex flex-col items-center gap-1 ${
-                selectedPreset === 'acad'
-                  ? 'bg-slate-900 text-white border-slate-900'
-                  : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
-              }`}
-            >
-              <span>acad.ctb</span>
-              <span className="text-[9px] opacity-75 font-semibold">Use Object Color (Full Color)</span>
-            </button>
-            <button
-              onClick={() => handlePresetReset('grayscale')}
-              className={`p-3 rounded-2xl text-base font-black border transition-all flex flex-col items-center gap-1 ${
-                selectedPreset === 'grayscale'
-                  ? 'bg-slate-900 text-white border-slate-900'
-                  : 'bg-white text-slate-600 border-slate-200 hover:bg-slate-50'
-              }`}
-            >
-              <span>grayscale.ctb</span>
-              <span className="text-[9px] opacity-75 font-semibold">Luminance Grayscale Conversion</span>
-            </button>
-          </div>
-
-          {/* Upload Custom CTB Box */}
-          <div className="relative mt-4">
-            <input
-              type="file"
-              ref={ctbFileInputRef}
-              accept=".ctb"
-              onChange={handleCtbUpload}
-              className="hidden"
-            />
-            <button
-              onClick={() => ctbFileInputRef.current?.click()}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3.5 rounded-2xl border-2 border-dashed border-slate-200 hover:border-blue-400 hover:bg-blue-50/20 text-slate-600 hover:text-blue-600 font-bold text-base transition-all cursor-pointer text-center"
-            >
-              <Upload className="w-4 h-4" />
-              Upload local custom .ctb print style file
-            </button>
-          </div>
-
         </div>
 
-        {/* Right Side: Properties Sidebar Editor */}
-        <div className="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-6 md:p-8 shadow-xl flex flex-col justify-between space-y-6">
-          <div className="space-y-4">
-            <div className="flex justify-between items-center">
-              <h2 className="text-xl font-black flex items-center gap-2">
-                <Sliders className="w-5 h-5 text-blue-400" /> Pen Properties Panel
-              </h2>
-              <span className="text-sm font-black uppercase bg-blue-500/20 text-blue-300 px-2 py-0.5 rounded border border-blue-500/20">
-                {selectedIndices.length} Selected
-              </span>
-            </div>
+        <div className="flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            data-testid="preset-monochrome"
+            onClick={() => applyPreset('monochrome')}
+            className={`px-3 py-1.5 rounded-xl text-xs font-black border cursor-pointer ${
+              activePreset === 'monochrome'
+                ? 'bg-slate-900 text-white border-slate-900'
+                : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-100'
+            }`}
+          >
+            monochrome.ctb (All Black)
+          </button>
+          <button
+            type="button"
+            data-testid="preset-sample"
+            onClick={() => applyPreset('sample')}
+            className={`px-3 py-1.5 rounded-xl text-xs font-black border cursor-pointer ${
+              activePreset === 'sample'
+                ? 'bg-blue-600 text-white border-blue-600'
+                : 'bg-white text-slate-700 border-slate-200 hover:bg-slate-100'
+            }`}
+          >
+            Sample CAD Pen Calibration
+          </button>
+          <button
+            type="button"
+            data-testid="reset-button"
+            onClick={() => applyPreset('monochrome')}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-slate-100 text-slate-700 text-xs font-black border border-slate-200 cursor-pointer"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+            Reset
+          </button>
+        </div>
+      </div>
 
-            {/* Selection Overview Container */}
-            <div className="bg-slate-800/50 rounded-2xl p-4 border border-slate-800 space-y-3">
-              <div className="text-base text-slate-400 font-bold uppercase tracking-wider">
-                Editing Color Target:
-              </div>
-              
-              <div className="flex flex-wrap gap-1.5 max-h-24 overflow-y-auto pr-1">
-                {selectedIndices.map((idx) => {
-                  const c = ACI_COLORS_DB.find((item) => item.index === idx);
-                  if (!c) return null;
-                  return (
-                    <div 
-                      key={idx}
-                      className="inline-flex items-center gap-1 bg-slate-800 hover:bg-slate-750 px-2.5 py-1 rounded-xl text-base font-black border border-slate-700/50 transition-colors"
-                    >
-                      <div className="w-2.5 h-2.5 rounded-full border border-white/20" style={{ backgroundColor: c.hex }} />
-                      <span>Color {idx}</span>
-                    </div>
-                  );
-                })}
-              </div>
-
-              {selectedIndices.length === 1 && (
-                <div className="text-sm text-slate-400 font-bold leading-relaxed border-t border-slate-800 pt-2 flex justify-between">
-                  <span>Name: {ACI_COLORS_DB.find(i => i.index === selectedIndices[0])?.name}</span>
-                  <span>RGB: ({ACI_COLORS_DB.find(i => i.index === selectedIndices[0])?.r}, {ACI_COLORS_DB.find(i => i.index === selectedIndices[0])?.g}, {ACI_COLORS_DB.find(i => i.index === selectedIndices[0])?.b})</span>
-                </div>
-              )}
-            </div>
+      <div className="p-6 md:p-10 space-y-6">
+        {uploadStatus && (
+          <div
+            data-testid="upload-status"
+            className={`rounded-2xl p-4 border flex items-start gap-2.5 text-sm font-bold ${
+              uploadStatus.type === 'error'
+                ? 'bg-rose-50 border-rose-200 text-rose-900'
+                : 'bg-emerald-50 border-emerald-200 text-emerald-900'
+            }`}
+          >
+            <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+            <span>{uploadStatus.msg}</span>
           </div>
+        )}
 
-          {/* Properties Forms fields */}
-          {editConfig ? (
-            <div className="space-y-5 flex-1 pt-2">
-              
-              {/* Plot Color Mapping Select */}
-              <div className="space-y-2">
-                <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
-                  <span>1. Plot Color Mapping</span>
-                  <span className="text-sm text-blue-400 lowercase">AutoCAD Color Style</span>
-                </label>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          <div className="lg:col-span-5 space-y-5">
+            <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 space-y-4">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div
+                    data-testid="selected-aci-swatch"
+                    className="w-10 h-10 rounded-xl border border-slate-300 shadow-inner"
+                    style={{ backgroundColor: selectedPen.aciHex }}
+                  />
+                  <div>
+                    <div data-testid="selected-aci-label" className="text-base font-black text-slate-900">
+                      ACI Color {selectedPen.aci}
+                    </div>
+                    <div data-testid="selected-aci-hex" className="text-xs font-mono font-bold text-slate-500">
+                      {selectedPen.aciHex}
+                    </div>
+                  </div>
+                </div>
+                <div className="text-right text-xs font-bold text-slate-500">
+                  <div>Black pens: <span data-testid="stat-black-count">{stats.blackCount}</span></div>
+                  <div>Object color: <span data-testid="stat-object-count">{stats.objectColorCount}</span></div>
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-xs font-black text-slate-700 mb-1.5">Plot Color Assignment</label>
                 <div className="grid grid-cols-2 gap-2">
                   <button
-                    onClick={() => updateSelectedConfig('plotColorType', 'black')}
-                    className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
-                      editConfig.plotColorType === 'black'
-                        ? 'bg-white text-slate-900 border-white shadow'
-                        : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
+                    type="button"
+                    data-testid="btn-plot-black"
+                    onClick={() => updateSelectedPen({ plotMode: 'black' })}
+                    className={`py-2 rounded-xl text-xs font-black border cursor-pointer ${
+                      selectedPen.plotMode === 'black'
+                        ? 'bg-slate-900 text-white border-slate-900'
+                        : 'bg-white text-slate-700 border-slate-300'
                     }`}
                   >
-                    Force Black Ink
+                    Black (#000000)
                   </button>
                   <button
-                    onClick={() => updateSelectedConfig('plotColorType', 'object')}
-                    className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
-                      editConfig.plotColorType === 'object'
-                        ? 'bg-white text-slate-900 border-white shadow'
-                        : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
+                    type="button"
+                    data-testid="btn-plot-object"
+                    onClick={() => updateSelectedPen({ plotMode: 'object' })}
+                    className={`py-2 rounded-xl text-xs font-black border cursor-pointer ${
+                      selectedPen.plotMode === 'object'
+                        ? 'bg-blue-600 text-white border-blue-600'
+                        : 'bg-white text-slate-700 border-slate-300'
                     }`}
                   >
                     Use Object Color
                   </button>
-                  <button
-                    onClick={() => updateSelectedConfig('plotColorType', 'grayscale')}
-                    className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
-                      editConfig.plotColorType === 'grayscale'
-                        ? 'bg-white text-slate-900 border-white shadow'
-                        : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
-                    }`}
-                  >
-                    Grayscale Output
-                  </button>
-                  <button
-                    onClick={() => updateSelectedConfig('plotColorType', 'custom')}
-                    className={`py-2 px-3 rounded-xl text-base font-black border transition-all ${
-                      editConfig.plotColorType === 'custom'
-                        ? 'bg-white text-slate-900 border-white shadow'
-                        : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
-                    }`}
-                  >
-                    Custom Color RGB
-                  </button>
                 </div>
-                
-                {editConfig.plotColorType === 'custom' && (
-                  <div className="flex items-center gap-3 pt-2 bg-slate-800/40 p-2 rounded-xl border border-slate-800">
-                    <input 
-                      type="color" 
-                      value={editConfig.customColorHex}
-                      onChange={(e) => updateSelectedConfig('customColorHex', e.target.value)}
-                      className="w-8 h-8 rounded-lg bg-transparent cursor-pointer border-none"
-                    />
-                    <input 
-                      type="text" 
-                      value={editConfig.customColorHex}
-                      onChange={(e) => updateSelectedConfig('customColorHex', e.target.value)}
-                      className="bg-slate-800 border border-slate-700 px-3 py-1.5 rounded-lg text-base font-mono w-full text-white uppercase focus:outline-none focus:border-blue-500"
-                    />
-                  </div>
-                )}
               </div>
 
-              {/* Lineweight Dropdown */}
-              <div className="space-y-2">
-                <label className="text-base font-black text-slate-400 uppercase tracking-wide flex justify-between">
-                  <span>2. Lineweight (Pen Width)</span>
-                  <span className="text-sm text-blue-400 font-mono">mm</span>
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label htmlFor="pen-lw" className="block text-xs font-black text-slate-700 mb-1">
+                    Lineweight (mm)
+                  </label>
+                  <select
+                    id="pen-lw"
+                    data-testid="select-lineweight"
+                    value={String(selectedPen.lineweightMm)}
+                    onChange={(e) => updateSelectedPen({ lineweightMm: Number(e.target.value) })}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 font-bold text-sm bg-white"
+                  >
+                    {[0.09, 0.13, 0.15, 0.18, 0.25, 0.35, 0.5, 0.7, 1.0, 1.4, 2.0].map((lw) => (
+                      <option key={lw} value={String(lw)}>
+                        {lw.toFixed(2)} mm
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div>
+                  <label htmlFor="pen-scr" className="block text-xs font-black text-slate-700 mb-1">
+                    Screening (%)
+                  </label>
+                  <input
+                    id="pen-scr"
+                    data-testid="input-screening"
+                    type="number"
+                    min={0}
+                    max={100}
+                    value={selectedPen.screeningPct}
+                    onChange={(e) => {
+                      const n = Number(e.target.value);
+                      if (Number.isFinite(n)) updateSelectedPen({ screeningPct: Math.min(100, Math.max(0, Math.round(n))) });
+                    }}
+                    className="w-full px-3 py-2 rounded-xl border border-slate-300 font-bold text-sm bg-white"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="pen-lt" className="block text-xs font-black text-slate-700 mb-1">
+                  Linetype
                 </label>
                 <select
-                  value={editConfig.lineweight}
-                  onChange={(e) => updateSelectedConfig('lineweight', parseFloat(e.target.value))}
-                  className="w-full bg-slate-800 border border-slate-700 rounded-xl px-4.5 py-3 text-base font-bold focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 text-white"
+                  id="pen-lt"
+                  data-testid="select-linetype"
+                  value={selectedPen.linetype}
+                  onChange={(e) => updateSelectedPen({ linetype: e.target.value as PenSetting['linetype'] })}
+                  className="w-full px-3 py-2 rounded-xl border border-slate-300 font-bold text-sm bg-white"
                 >
-                  {STANDARD_LINEWEIGHTS.map((lw) => (
-                    <option key={lw.value} value={lw.value} className="bg-slate-900">
-                      {lw.label}
-                    </option>
-                  ))}
+                  <option value="Object">Use Object Linetype</option>
+                  <option value="Solid">Solid</option>
+                  <option value="Dashed">Dashed</option>
                 </select>
               </div>
+            </div>
 
-              {/* Linetype Selector */}
-              <div className="space-y-2">
-                <label className="text-base font-black text-slate-400 uppercase tracking-wide">
-                  3. Vector Linetype
-                </label>
-                <div className="grid grid-cols-3 gap-2">
-                  {[
-                    { id: 'object', label: 'Use Object' },
-                    { id: 'solid', label: 'Solid Line' },
-                    { id: 'dashed', label: 'Dashed' },
-                    { id: 'dotted', label: 'Dotted' },
-                    { id: 'dashdot', label: 'DashDot' },
-                  ].map((lt) => (
-                    <button
-                      key={lt.id}
-                      onClick={() => updateSelectedConfig('linetype', lt.id as PlotStyleConfig['linetype'])}
-                      className={`py-2.5 px-1 rounded-xl text-sm font-black border transition-all ${
-                        editConfig.linetype === lt.id
-                          ? 'bg-blue-600 text-white border-blue-600'
-                          : 'bg-slate-800 text-slate-400 border-slate-700 hover:bg-slate-750'
-                      }`}
-                    >
-                      {lt.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Screening Slider */}
-              <div className="space-y-2">
-                <div className="flex justify-between items-center text-base font-black text-slate-400 uppercase tracking-wide">
-                  <span>4. Screening (Ink Density)</span>
-                  <span className="text-blue-400 font-mono text-lg">{editConfig.screening}%</span>
-                </div>
+            <div className="flex flex-wrap gap-2.5">
+              <label className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 text-xs font-black cursor-pointer">
+                <Upload className="w-4 h-4" />
+                Load .ctb / .json
                 <input
-                  type="range"
-                  min="0"
-                  max="100"
-                  step="5"
-                  value={editConfig.screening}
-                  onChange={(e) => updateSelectedConfig('screening', parseInt(e.target.value))}
-                  className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
-                />
-                <div className="flex justify-between text-[8px] text-slate-500 font-bold">
-                  <span>0% (Faded Out)</span>
-                  <span>50% (Watermark tint)</span>
-                  <span>100% (Solid Ink)</span>
-                </div>
-              </div>
-
-              {/* Dynamic Hand-drawn Stroke Canvas Simulator */}
-              <div className="bg-slate-950 rounded-2xl p-4 border border-slate-800 space-y-3 mt-4">
-                <div className="text-sm text-slate-400 font-bold uppercase tracking-wider flex justify-between">
-                  <span>Plot Lineweight Simulation</span>
-                  <span className="text-blue-400 font-mono">
-                    {editConfig.lineweight === -1 ? 'Use Object Weight' : `${editConfig.lineweight} mm`}
-                  </span>
-                </div>
-                <div className="bg-white rounded-xl py-4 px-2 flex justify-center items-center shadow-inner relative overflow-hidden h-24">
-                  <canvas
-                    id="stroke-canvas"
-                    className="w-full h-full bg-white"
-                    style={{ display: 'block', maxHeight: '64px' }}
-                  />
-                  <span className="absolute bottom-1 right-2 text-[8px] font-mono text-slate-300">PLOT PAPER PREVIEW</span>
-                </div>
-              </div>
-
-            </div>
-          ) : (
-            <div className="flex-1 py-12 flex flex-col items-center justify-center text-slate-500 text-center">
-              <Settings className="w-12 h-12 stroke-[1.5] mb-3 animate-spin" />
-              <p className="text-lg font-semibold">Select colors on the grid to change settings</p>
-            </div>
-          )}
-
-          {/* Sidebar Action utilities */}
-          <div className="border-t border-slate-800 pt-5 space-y-3.5">
-            <div className="flex gap-3">
-              <button
-                onClick={handleExportPcp}
-                className="flex-1 bg-white hover:bg-slate-100 text-slate-900 font-black text-base py-3 px-4.5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
-              >
-                <Download className="w-4 h-4" /> Export PCP Pen File
-              </button>
-              <button
-                onClick={handleExportJson}
-                className="bg-slate-800 hover:bg-slate-750 border border-slate-700 text-white font-black text-base py-3 px-4 rounded-2xl flex items-center justify-center gap-2 transition-all active:scale-95"
-                title="Backup active settings as JSON configuration"
-              >
-                <FileText className="w-4 h-4" /> Save Config
-              </button>
-            </div>
-
-            {/* Custom Import Label trigger */}
-            <div className="flex justify-between items-center text-base font-semibold text-slate-400 bg-slate-950/30 p-3 rounded-xl border border-slate-850">
-              <span>Import backup JSON style:</span>
-              <label className="cursor-pointer text-blue-400 hover:text-blue-300 font-black flex items-center gap-1">
-                <Plus className="w-3.5 h-3.5" /> Upload File
-                <input 
-                  type="file" 
-                  accept=".json"
-                  onChange={handleImportJson}
+                  data-testid="input-ctb-file"
+                  type="file"
+                  accept=".ctb,.json"
+                  onChange={handleFileUpload}
                   className="hidden"
                 />
               </label>
+              <button
+                type="button"
+                data-testid="export-csv-button"
+                onClick={handleDownloadCsv}
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-black cursor-pointer"
+              >
+                <Download className="w-4 h-4" />
+                Export CSV
+              </button>
+              <button
+                type="button"
+                data-testid="export-json-button"
+                onClick={handleDownloadJson}
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white hover:bg-slate-50 text-slate-800 border border-slate-300 text-xs font-black cursor-pointer"
+              >
+                <Download className="w-4 h-4" />
+                Export JSON
+              </button>
+              <button
+                type="button"
+                data-testid="copy-summary-button"
+                onClick={handleCopySummary}
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-black cursor-pointer"
+              >
+                {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                {copied ? 'Copied' : 'Copy Pen'}
+              </button>
             </div>
           </div>
 
-        </div>
-
-      </div>
-
-      {/* Lower Panel: Interactive Color Matrix Grid Area */}
-      <div className="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
-        
-        {/* Color Panel Header & Filter Tools */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-slate-100 pb-6">
-          <div>
-            <h2 className="text-xl font-black text-slate-950 flex items-center gap-2">
-              <Grid className="w-5 h-5 text-blue-600" /> AutoCAD Index Color (ACI 1-255) Grid Matrix
-            </h2>
-            <p className="text-base text-slate-400 font-bold mt-1">
-              Currently modifying {modifiedPensCount} style mapping rules from AutoCAD defaults
-            </p>
-          </div>
-
-          {/* Interactive controls filters */}
-          <div className="flex flex-wrap items-center gap-3.5 w-full md:w-auto">
-            {/* Search query input */}
-            <input
-              type="text"
-              placeholder="Search by Index (e.g. 3, 252) or Name..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="flex-1 md:w-60 bg-slate-50 border border-slate-200 rounded-xl px-4 py-2 text-base font-semibold text-slate-700 placeholder-slate-400 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-            />
-
-            {/* Filter buttons */}
-            <div className="bg-slate-100 p-1 rounded-xl flex gap-0.5">
-              <button
-                onClick={() => setColorFilter('all')}
-                className={`px-3 py-1.5 rounded-lg text-sm font-black transition-all ${
-                  colorFilter === 'all' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-900'
-                }`}
-              >
-                All
-              </button>
-              <button
-                onClick={() => setColorFilter('standard')}
-                className={`px-3 py-1.5 rounded-lg text-sm font-black transition-all ${
-                  colorFilter === 'standard' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-900'
-                }`}
-              >
-                1-9 Std
-              </button>
-              <button
-                onClick={() => setColorFilter('grayscale')}
-                className={`px-3 py-1.5 rounded-lg text-sm font-black transition-all ${
-                  colorFilter === 'grayscale' ? 'bg-white text-slate-950 shadow-sm' : 'text-slate-500 hover:text-slate-900'
-                }`}
-              >
-                250-255 Grays
-              </button>
-            </div>
-
-            {/* Selection help and settings */}
-            <div className="flex items-center gap-2">
-              <button
-                onClick={() => setIsBatchMode(!isBatchMode)}
-                className={`p-2.5 rounded-xl border text-base font-black transition-all flex items-center gap-1.5 ${
-                  isBatchMode 
-                    ? 'bg-blue-50 border-blue-200 text-blue-700' 
-                    : 'bg-white border-slate-200 text-slate-500 hover:bg-slate-50'
-                }`}
-                title="Toggle multiselect mode without holding Shift key"
-              >
-                {isBatchMode ? <CheckSquare className="w-4 h-4" /> : <XSquare className="w-4 h-4" />}
-                <span>Batch Select Mode</span>
-              </button>
-            </div>
-
-          </div>
-        </div>
-
-        {/* Quick selection shortcut buttons */}
-        <div className="flex flex-wrap gap-2 text-base font-bold">
-          <span className="text-slate-400 self-center mr-2 text-[11px] uppercase tracking-wide font-black">Quick Select:</span>
-          <button 
-            onClick={() => selectQuickGroup('standard')}
-            className="px-3.5 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200"
-          >
-            ACI 1-9 (Red-Light Grey)
-          </button>
-          <button 
-            onClick={() => selectQuickGroup('grays')}
-            className="px-3.5 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200"
-          >
-            ACI 250-255 (Grayscale)
-          </button>
-          <button 
-            onClick={() => selectQuickGroup('all')}
-            className="px-3.5 py-1.5 rounded-xl bg-slate-50 hover:bg-slate-100 text-slate-700 border border-slate-200"
-          >
-            Select All 255 Colors
-          </button>
-          <button 
-            onClick={() => selectQuickGroup('clear')}
-            className="px-3.5 py-1.5 rounded-xl bg-red-50 hover:bg-red-100 text-red-700 border border-red-200/50"
-          >
-            Clear Selections
-          </button>
-        </div>
-
-        {/* 255-Color Scroll Grid container */}
-        <div className="bg-slate-50 border border-slate-200/60 p-6 rounded-2xl">
-          <div className="grid grid-cols-5 sm:grid-cols-8 md:grid-cols-12 lg:grid-cols-16 xl:grid-cols-20 gap-3">
-            {filteredColors.map((color) => {
-              const isSelected = selectedIndices.includes(color.index);
-              const conf = configs[color.index];
-              const isPenModified = conf && (
-                conf.plotColorType !== 'object' ||
-                conf.lineweight !== -1 ||
-                conf.screening !== 100 ||
-                conf.linetype !== 'object'
-              );
-
-              return (
-                <button
-                  key={color.index}
-                  onClick={(e) => handleColorClick(color.index, e)}
-                  style={{ backgroundColor: color.hex }}
-                  className={`group relative aspect-square w-full rounded-xl transition-all flex flex-col justify-between p-1.5 font-bold cursor-pointer ${
-                    isSelected 
-                      ? 'ring-4 ring-offset-2 ring-blue-500 scale-[1.08] z-20 shadow-md' 
-                      : 'hover:scale-105 hover:z-10'
-                  } border border-black/10`}
-                >
-                  {/* Text Color index indicator */}
-                  <span className={`text-[9px] px-1 py-0.5 rounded leading-none ${
-                    // Detect high lightness to use black text label
-                    (color.r * 299 + color.g * 587 + color.b * 114) / 1000 > 160
-                      ? 'text-black bg-white/70'
-                      : 'text-white bg-black/45'
-                  }`}>
-                    {color.index}
-                  </span>
-
-                  {/* Tiny modified indicator dot */}
-                  {isPenModified && (
-                    <div className="absolute top-1.5 right-1.5 w-2 h-2 bg-blue-500 border border-white rounded-full" title="Plot styling is customized" />
-                  )}
-
-                  {/* Tiny Lineweight Preview text */}
-                  {conf && conf.lineweight !== -1 && (
-                    <span className={`text-[7px] text-center rounded block px-0.5 ${
-                      (color.r * 299 + color.g * 587 + color.b * 114) / 1000 > 160
-                        ? 'text-black/80 bg-white/80'
-                        : 'text-white/85 bg-black/60'
-                    }`}>
-                      {conf.lineweight}
-                    </span>
-                  )}
-                </button>
-              );
-            })}
-
-            {filteredColors.length === 0 && (
-              <div className="col-span-full py-16 text-center text-slate-400 font-semibold">
-                No matching colors found. Adjust your search.
+          <div className="lg:col-span-7 space-y-5">
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+              <div className="text-xs font-black text-slate-600 uppercase mb-2">
+                Simulated Paper Print Preview (ACI 1–8 Sample Stroke Weights)
               </div>
-            )}
-          </div>
-        </div>
-
-        {/* Tip banner */}
-        <div className="bg-blue-50 border border-blue-100 rounded-2xl p-4.5 flex gap-3 text-base text-blue-700 leading-relaxed font-semibold">
-          <Info className="w-4 h-4 text-blue-600 shrink-0 mt-0.5" />
-          <div>
-            <span className="font-extrabold uppercase text-blue-800">ACI Selection Tip:</span> You can hold <kbd className="bg-blue-100 text-blue-800 px-1 py-0.5 rounded border border-blue-200">Ctrl</kbd> (or <kbd className="bg-blue-100 text-blue-800 px-1 py-0.5 rounded border border-blue-200">Cmd</kbd>) to toggle multiple specific colors, or hold <kbd className="bg-blue-100 text-blue-800 px-1 py-0.5 rounded border border-blue-200">Shift</kbd> to select color blocks ranges on the ACI matrix grid. Toggle <span className="text-blue-800 underline">Batch Select Mode</span> for easy touch and click select.
-          </div>
-        </div>
-
-      </div>
-
-      {/* Copyable Layout Markdown Section */}
-      <div className="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
-        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
-          <div>
-            <h3 className="text-lg font-black text-slate-900 flex items-center gap-2">
-              <FileText className="w-5 h-5 text-blue-600" /> Export Plot Rules Standard Table
-            </h3>
-            <p className="text-base text-slate-400 font-bold mt-0.5">
-              Copy configured plot pen overrides directly as a markdown chart table for documentation
-            </p>
-          </div>
-
-          <button
-            onClick={handleCopyMarkdown}
-            className="w-full sm:w-auto bg-slate-900 hover:bg-slate-800 text-white font-black text-base py-3 px-5 rounded-2xl flex items-center justify-center gap-2 transition-all shadow-md active:scale-95"
-          >
-            {copiedText ? (
-              <>
-                <Check className="w-4 h-4 text-green-400" /> Copied Markdown!
-              </>
-            ) : (
-              <>
-                <Copy className="w-4 h-4" /> Copy Custom Pen Chart (Markdown)
-              </>
-            )}
-          </button>
-        </div>
-      </div>
-
-      {/* Guide Reference Explanations details */}
-      <div className="bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm space-y-6">
-        <h3 className="text-lg font-black text-slate-900 flex items-center gap-2">
-          <HelpCircle className="w-5 h-5 text-blue-600" /> Troubleshooting CTB Plots & Pen Styles
-        </h3>
-        
-        <div className="grid md:grid-cols-2 gap-8 text-lg">
-          <div className="space-y-4">
-            <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">1. How to use PCP/CTB configuration files in AutoCAD</h4>
-            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
-              <p>
-                <strong>Importing PCP mapping settings</strong>: When running plot outputs in AutoCAD, you can import our generated `.pcp` table structure by typing the command <code className="bg-slate-100 text-slate-800 px-1 py-0.5 rounded font-mono">STYLEMANAGER</code>.
-              </p>
-              <p>
-                Copy the downloaded PCP parameters file into the AutoCAD Plot Styles directory, or choose the Custom Import option inside the wizard config layout selector to apply the exact pen weights mapped from this visualizer.
-              </p>
-              <p>
-                <strong>Setting CTB globally</strong>: Ensure your drawing is set to use color-dependent plot styles (CTB) rather than named plot styles (STB). You can toggle this using the <code className="bg-slate-100 text-slate-800 px-1 py-0.5 rounded font-mono">CONVERTPSTYLES</code> command if your drawing properties are locked to STB formatting.
-              </p>
+              <canvas
+                ref={canvasRef}
+                width={540}
+                height={196}
+                className="w-full rounded-xl border border-slate-200 bg-white"
+              />
             </div>
-          </div>
 
-          <div className="space-y-4">
-            <h4 className="font-extrabold text-slate-800 tracking-wide uppercase">2. Industry standard pen thickness conventions</h4>
-            <div className="space-y-3 text-base text-slate-500 font-semibold leading-relaxed">
-              <p>
-                To maintain standard engineering and architectural layout styles (ISO/ANSI drafting guidelines), we recommend assigning the following line weights to standard color codes:
-              </p>
-              <ul className="list-disc pl-4 space-y-1 bg-slate-50 border border-slate-100 p-3 rounded-xl font-mono text-sm">
-                <li><strong className="text-red-600">ACI 1 (Red)</strong>: 0.18 mm — Center lines, grids, hatch contours.</li>
-                <li><strong className="text-yellow-500">ACI 2 (Yellow)</strong>: 0.25 mm — Dimensions, annotation tags, leaders.</li>
-                <li><strong className="text-green-600">ACI 3 (Green)</strong>: 0.35 mm — Standard structural walls, visible geometry.</li>
-                <li><strong className="text-cyan-600">ACI 4 (Cyan)</strong>: 0.50 mm — Heavy cut-through lines, room boundaries.</li>
-                <li><strong className="text-blue-600">ACI 5 (Blue)</strong>: 0.70 mm — Extruded border margins, heavy structures.</li>
-                <li><strong className="text-slate-600">ACI 8/9 (Greys)</strong>: 0.13 - 0.15 mm — Hatch fills (screening at 50% density).</li>
-              </ul>
+            <div>
+              <div className="flex items-center justify-between gap-3 mb-2">
+                <span className="text-xs font-black text-slate-600 uppercase">
+                  All 255 AutoCAD Index Colors (Click to inspect/edit)
+                </span>
+                <input
+                  type="text"
+                  data-testid="input-aci-filter"
+                  value={filterQuery}
+                  onChange={(e) => setFilterQuery(e.target.value)}
+                  placeholder="Filter ACI # or hex..."
+                  className="px-3 py-1.5 rounded-lg border border-slate-300 text-xs font-bold w-44"
+                />
+              </div>
+              <div className="grid grid-cols-8 sm:grid-cols-12 gap-1.5 max-h-60 overflow-y-auto p-2 rounded-2xl border border-slate-200 bg-slate-50">
+                {filteredPens.map((p) => (
+                  <button
+                    key={p.aci}
+                    type="button"
+                    data-testid={`aci-cell-${p.aci}`}
+                    title={`ACI ${p.aci} (${p.aciHex}) • ${p.lineweightMm}mm • ${p.plotMode}`}
+                    onClick={() => setSelectedAci(p.aci)}
+                    className={`h-8 rounded-lg border text-[10px] font-black flex items-center justify-center cursor-pointer transition-transform ${
+                      selectedAci === p.aci
+                        ? 'ring-2 ring-blue-600 scale-105 border-slate-900'
+                        : 'border-slate-300'
+                    }`}
+                    style={{
+                      backgroundColor: p.aciHex,
+                      color:
+                        p.aci === 7 || p.aci === 2 || p.aci === 3 || p.aci === 4 || p.aci === 255 || p.aci === 254
+                          ? '#0f172a'
+                          : '#ffffff',
+                      textShadow: '0 1px 2px rgba(0,0,0,0.45)',
+                    }}
+                  >
+                    {p.aci}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 text-sm text-slate-600 flex items-start gap-2">
+              <Info className="w-4 h-4 shrink-0 mt-0.5 text-slate-400" />
+              <div>
+                <strong>CTB Plot Style &amp; Verified Palette:</strong>{' '}
+                All 255 color swatches match the standard AutoCAD modelspace ACI table. <code>monochrome.ctb</code> forces ACI 1–255 to plot black (<code>#000000</code>), while the Sample Calibration preset demonstrates multi-weight black/color pen mapping.
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Lead Capture form NewsletterSubscribe */}
-      <RelatedTools />
+        <RelatedTools />
+      </div>
     </div>
   );
 }

@@ -4007,76 +4007,66 @@
   },
   "csv-to-dxf-converter": {
     "title": "CSV to DXF Converter",
-    "description": "Convert CSV coordinate data (X, Y, Z) to DXF format for CAD import. Configurable columns, point labels, and layer names. 100% client-side.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "DXF Group Codes: 0 (POINT/LINE/TEXT), 8 (Layer), 10 (X-Coord), 20 (Y-Coord), 30 (Z-Coord) — AutoCAD ASCII DXF Reference",
+    "description": "Convert CSV coordinate data (X, Y, Z) to pure ASCII DXF POINT, 3D POLYLINE, and TEXT entities locally in the browser.",
+    "discipline": "Surveying Data & CAD ASCII DXF Interoperability",
+    "standards": "AutoCAD DXF Reference Entities: POINT (10/20/30 WCS), TEXT (10/20/30 OCS, 40 height, 1 string), 3D POLYLINE (bit 8) + VERTEX + SEQEND",
+    "cadContext": "Validate survey Northing/Easting/Elevation columns, skip invalid non-numeric rows rather than coercing blanks to zero, and import pure ASCII AC1009 DXF directly into CAD.",
+    "formula": "ASCII DXF AC1009 POINT / 3D POLYLINE / TEXT entity generation with 3D elevation Z preserved",
     "inputs": [
       {
-        "label": "Or paste CSV data here Column Mapping First row is header X (Easting) col",
-        "val": "0"
+        "label": "Default 4-Point Survey CSV",
+        "val": "P1(100,200,15.5) .. P4(100,240,15.8)"
       },
       {
-        "label": "Y (Northing) col",
-        "val": "1"
-      },
-      {
-        "label": "Z (Elevation) col",
-        "val": "2"
-      },
-      {
-        "label": "Label col (-1=auto)",
-        "val": "-1"
-      },
-      {
-        "label": "Output Mode Points Polyline Both Layer Name",
-        "val": "SURVEY_POINTS"
-      },
-      {
-        "label": "Scale Factor",
-        "val": "1"
+        "label": "Column Mapping",
+        "val": "X=1, Y=2, Z=3, Label=0 (Scale 1)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Valid Survey Points",
+        "val": "4 points (0 skipped)"
+      },
+      {
+        "label": "Bounding Extents (dX x dY x dZ)",
+        "val": "50.00 x 40.00 x 0.70"
+      },
+      {
+        "label": "3D Polyline Length",
+        "val": "140.005"
+      }
+    ]
   },
   "ctb-plot-style-pen-visualizer": {
     "title": "CAD CTB Plot Style Color & Pen Visualizer",
-    "description": "Load and visualize AutoCAD color-dependent plot style (CTB) parameters. Customize ACI 255 printing line weights, screening, and colors with a live Canvas blueprint rendering simulator.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for CAD CTB Plot Style Color & Pen Visualizer",
+    "description": "Inspect and calibrate AutoCAD Color-Dependent Plot Style (CTB) pen lineweights, screening, and plot colors across all 255 verified ACI index colors.",
+    "discipline": "CAD Plotting & Pen Assignment Inspection",
+    "standards": "Verified AutoCAD 255-Index ACI Modelspace Palette (cross-checked with ezdxf/netDxf), monochrome.ctb black-mapping baseline",
+    "cadContext": "Verify black-and-white vs object-color pen assignments, screening percentages, and lineweight schedules across ACI 1-255 and export CSV/JSON calibration tables.",
+    "formula": "ACI 1-255 pen table mapping (plotMode, lineweightMm, screeningPct, linetype)",
     "inputs": [
       {
-        "label": "1. Plot Color Mapping AutoCAD Color Style",
-        "val": "Nominal"
-      },
-      {
-        "label": "2. Lineweight (Pen Width) mm",
-        "val": "Nominal"
-      },
-      {
-        "label": "3. Vector Linetype",
-        "val": "Nominal"
-      },
-      {
-        "label": "Upload File",
-        "val": "Nominal"
+        "label": "Active Preset",
+        "val": "monochrome.ctb (All Black, 0.25 mm)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Black Pens / Total ACI",
+        "val": "255 / 255"
+      }
+    ]
   },
   "culvert-sizing-calculator": {
-    "title": "Culvert Sizing Calculator (FHWA HDS-5)",
-    "description": "Calculate culvert diameter, flow capacity, and headwater depth per FHWA HDS-5.",
-    "discipline": "Environmental Process, Hydrology & Open-Channel Hydraulics",
-    "standards": "WEF Manual of Practice No. 8 (MOP 8), Metcalf & Eddy Wastewater Engineering, ASCE/EWRI Urban Drainage Guidelines, International Plumbing Code (IPC)",
-    "cadContext": "Check hydraulic grade line (HGL), invert elevations, freeboard clearances, and peak diurnal flow peaking factors across all connected P&ID and civil site utility profiles.",
-    "formula": "Manning Equation: Q = (1/n) · A · R^(2/3) · S^(1/2) (FHWA HDS-5 Hydraulic Design of Highway Culverts)",
+    "title": "Circular Culvert Sizing Calculator (Manning Formula)",
+    "description": "Calculate circular culvert full-flow pipe diameter, discharge capacity, and flow velocity using the Manning equation.",
+    "discipline": "Stormwater Conveyance & Open-Channel Hydraulics",
+    "standards": "Gauckler-Manning Circular Full-Flow Equation (Q = (1/n) * A * R_h^(2/3) * S^(1/2)), Engineering ToolBox Manning Roughness Coefficients (spun concrete 0.013, CMP 0.022)",
+    "cadContext": "Select nominal pipe inner diameters on civil storm drainage profiles and check full-barrel flow velocity and reserve capacity.",
+    "formula": "Q_full = (1/n) * (pi*D^2/4) * (D/4)^(2/3) * S^(1/2)",
     "inputs": [
       {
-        "label": "Design Discharge Q (m³/s)",
+        "label": "Design Discharge Q (m3/s)",
         "val": "4.2"
       },
       {
@@ -4085,39 +4075,31 @@
       },
       {
         "label": "Culvert Material (Manning n)",
-        "val": "Smooth Concrete Pipe (n = 0.013)"
-      },
-      {
-        "label": "Max Headwater Ratio (HW/D)",
-        "val": "1.2"
+        "val": "Concrete - centrifugally spun (n = 0.013)"
       }
     ],
     "outputs": [
       {
-        "label": "Recommended Culvert Inner Dia",
-        "val": "1300 mm"
+        "label": "Recommended Standard Diameter",
+        "val": "1350 mm (min req 1234.0 mm)"
       },
       {
-        "label": "Full Barrel Discharge Velocity",
-        "val": "3.16 m/s"
+        "label": "Full Barrel Capacity",
+        "val": "5.337 m3/s (78.7% used)"
       },
       {
-        "label": "Design Headwater Depth HW",
-        "val": "1.56 m"
-      },
-      {
-        "label": "Full Pipe Flow Capacity",
-        "val": "4.20 m³/s"
+        "label": "Full-Flow Velocity",
+        "val": "3.73 m/s"
       }
     ]
   },
   "cut-fill-volume-calculator": {
     "title": "Cut and Fill Earthwork Volume Calculator",
-    "description": "Calculate cut and fill volumes from grid elevations for earthwork.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "V = area * average_height_difference",
+    "description": "Calculate cut and fill volumes using grid cell elevation differences or average end-area cross-sections with shrinkage and swell adjustments.",
+    "discipline": "Site Grading, Earthwork Takeoff & Surveying",
+    "standards": "Uniform Grid Cell Earthwork Method, Average End-Area Cross-Section Method, Bank/Loose/Compacted Earthwork State Factors",
+    "cadContext": "Balance site grading cut and fill quantities from survey grid elevations or civil corridor cross-sections before scheduling earth haulage.",
+    "formula": "V_grid = A_cell * |E_exist - E_prop| * N; Borrow BCM = CCM / (1 - s); Loose LCM = BCM * (1 + swell)",
     "inputs": [
       {
         "label": "Grid Area (m2)",
@@ -4134,30 +4116,34 @@
       {
         "label": "Grid Count",
         "val": "50"
+      },
+      {
+        "label": "Shrinkage / Swell",
+        "val": "10% / 25%"
       }
     ],
     "outputs": [
       {
-        "label": "Cut Volume",
-        "val": "0.000000 m3"
+        "label": "Cut Volume (Bank)",
+        "val": "0.00 m3"
       },
       {
-        "label": "Fill Volume",
-        "val": "3500.00 m3"
+        "label": "Fill Volume (Compacted)",
+        "val": "3500.00 m3 (3888.89 m3 bank borrow req)"
       },
       {
-        "label": "Net Volume",
-        "val": "3500.00 m3"
+        "label": "Net Bank Balance",
+        "val": "-3888.89 m3 (BCM)"
       }
     ]
   },
   "cutting-speed-calculator": {
     "title": "Cutting Surface Speed Calculator",
-    "description": "Calculate cutting speed from spindle RPM and diameter.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Vc = pi*D*n/1000 m/min",
+    "description": "Calculate metric cutting speed (m/min), imperial SFM, or required spindle RPM from cutter/workpiece diameter.",
+    "discipline": "CNC Machining & Turning Speeds",
+    "standards": "Cutting Speed Kinematics (Vc = pi * D * n / 1000 m/min; 1 ft = 0.3048 m exact SFM)",
+    "cadContext": "Verify spindle RPM limits and peripheral cutting speeds for milling cutters and lathe diameters prior to CAM post-processing.",
+    "formula": "Vc = pi*D_mm*n/1000 m/min; SFM = Vc / 0.3048",
     "inputs": [
       {
         "label": "Diameter (mm)",
@@ -4175,7 +4161,7 @@
       },
       {
         "label": "Imperial Surface Speed (SFM)",
-        "val": "515.38 ft/min"
+        "val": "515.35 ft/min"
       }
     ]
   },

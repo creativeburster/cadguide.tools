@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Culvert Sizing Calculator (FHWA HDS-5)",
-  description: "Calculate culvert diameter, flow capacity, and headwater depth per FHWA HDS-5.",
+  title: "Circular Culvert Sizing Calculator (Manning Formula)",
+  description: "Calculate circular culvert full-flow pipe diameter, discharge capacity, and flow velocity using the Manning equation.",
   path: '/toolbox/culvert-sizing-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Culvert Sizing Calculator (FHWA HDS-5)", path: '/toolbox/culvert-sizing-calculator' },
+    { name: "Circular Culvert Sizing Calculator (Manning Formula)", path: '/toolbox/culvert-sizing-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Open-Channel Hydraulics
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Culvert Sizing Calculator (FHWA HDS-5)
+              Circular Culvert Sizing Calculator (Manning Formula)
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate culvert diameter, flow capacity, and headwater depth per FHWA HDS-5.
+              Size circular storm culverts for full-flow gravity capacity and velocity using the Manning equation and standard concrete/corrugated roughness coefficients.
             </p>
           </div>
         </section>

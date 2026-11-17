@@ -458,8 +458,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'ctb-plot-style-pen-visualizer',
     title: 'CAD CTB Plot Style Color & Pen Thickness Visualizer',
-    description: 'Load your color-dependent plot style (CTB) files to visualize and export pen width calibrations.',
-    detailDesc: 'Upload custom .ctb style sheets. The client-side parser decodes index colors to display pen weights (mm), screening, and linestyles in a searchable 255-color grid. Export as printable PDF or JSON.',
+    description: 'Configure and visualize color-dependent plot style (CTB) parameters across all 255 ACI colors and export pen tables.',
+    detailDesc: 'Inspect verified ACI 1-255 colors, toggle black vs object-color plotting (monochrome.ctb or sample pen calibration), edit lineweights (mm) and screening, preview canvas stroke weights, and export CSV or JSON.',
     category: 'converter',
     status: 'released',
     releasedDate: '2026-06-04',
@@ -2715,8 +2715,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'cut-fill-volume-calculator',
     title: 'Cut & Fill Volume Calculator',
-    description: 'Calculate cut and fill earthwork volumes from grid levels. Free browser-based engineering calculator.',
-    detailDesc: 'V = A_grid * sum(depths)/n for each grid cell',
+    description: 'Calculate cut and fill earthwork volumes from grid levels or cross-sections with shrinkage and swell adjustments. Free browser-based engineering calculator.',
+    detailDesc: 'Grid cell volume V = A_cell*|E_exist-E_prop|*N and average end-area ((A1+A2)/2)*L with compaction shrinkage and excavation swell factors.',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -4486,14 +4486,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'culvert-sizing-calculator',
-    title: "Culvert Sizing Calculator (FHWA HDS-5)",
-    description: "Calculate culvert diameter, flow capacity, and headwater depth per FHWA HDS-5.",
-    detailDesc: "Inlet control HW = H_c+h_f+V^2/2g. Outlet control HW = H+TW-d_c. Q = A*sqrt(2g*H/K). Checks: HW<roadway, outlet velocity<permissible. Includes edge conditions.",
+    title: "Circular Culvert Sizing Calculator (Manning Formula)",
+    description: "Calculate circular culvert full-flow pipe diameter, discharge capacity, and flow velocity using the Manning equation.",
+    detailDesc: "Sizes standard circular storm pipes via Q_full = (1/n)*A*R_h^(2/3)*S^(1/2) with concrete and corrugated metal roughness coefficients.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["culvert sizing calculator","fhwa hds-5","culvert design","culvert capacity","headwater depth","inlet control","outlet control","culvert diameter","highway drainage","box culvert"]
+    keywords: ["culvert sizing calculator","manning equation","culvert design","culvert capacity","pipe diameter","highway drainage"]
   },
   {
     slug: 'stormwater-detention-calculator',
