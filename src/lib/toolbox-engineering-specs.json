@@ -5507,223 +5507,292 @@
     ]
   },
   "fin-efficiency-calculator": {
-    "title": "Fin Efficiency Calculator",
-    "description": "Calculate fin efficiency and effectiveness for heat sink design.",
-    "discipline": "Thermodynamics, Heat Transfer & Thermal Management",
-    "standards": "TEMA Standards (Tubular Exchanger Manufacturers Association), ASME PTC 12.5, Incropera & DeWitt Fundamentals of Heat and Mass Transfer",
-    "cadContext": "Account for surface fouling resistances, contact interface thermal resistance, and temperature-dependent fluid thermophysical properties when translating baseline calculations into detailed thermal CAD designs.",
-    "formula": "eta = tanh(m*L)/(m*L), m = sqrt(2*h/(k*t))",
+    "title": "Fin Efficiency & Effectiveness Calculator",
+    "description": "Calculate straight rectangular fin efficiency, effectiveness ratio, fin parameter m, and heat dissipation.",
+    "discipline": "Conduction-Convection Heat Transfer & Fin Arrays",
+    "standards": "1D Straight Rectangular Fin Heat Transfer Model with Corrected Adiabatic-Tip Length (Lc = L + t/2)",
+    "cadContext": "Extract fin thickness t, height L, and extrusion length w from heatsink CAD profiles before sizing fin arrays.",
+    "formula": "Lc = L + t/2; P = 2*(w+t); Ac = w*t; m = sqrt(h*P/(k*Ac)); eta_f = tanh(m*Lc)/(m*Lc); q_f = eta_f*h*(P*Lc)*dT; eps_f = q_f/(h*Ac*dT)",
     "inputs": [
       {
-        "label": "Fin Length (mm)",
+        "label": "Fin Length L (mm)",
         "val": "50"
       },
       {
-        "label": "Fin Thickness (mm)",
+        "label": "Fin Thickness t (mm)",
         "val": "2"
       },
       {
-        "label": "Thermal Cond k (W/mK)",
+        "label": "Fin Width w (mm)",
+        "val": "30"
+      },
+      {
+        "label": "Thermal Conductivity k (W/m*K)",
         "val": "200"
       },
       {
-        "label": "Heat Coeff h (W/m2K)",
+        "label": "Convection Coeff h (W/m2*K)",
         "val": "50"
       },
       {
-        "label": "Fin Width (mm)",
-        "val": "30"
+        "label": "Base Excess Temp dT_b (K)",
+        "val": "50"
       }
     ],
     "outputs": [
       {
-        "label": "Fin Efficiency",
-        "val": "0.833237"
+        "label": "Fin Efficiency eta_f",
+        "val": "81.89 %"
       },
       {
-        "label": "Fin Effectiveness",
-        "val": "0.063246"
+        "label": "Fin Effectiveness eps_f",
+        "val": "44.55 ratio"
       },
       {
-        "label": "Heat Dissipated",
-        "val": "6.249 W"
+        "label": "Heat Dissipated q_f",
+        "val": "6.682 W"
+      },
+      {
+        "label": "Fin Parameter m",
+        "val": "16.3299 1/m"
       }
     ]
   },
   "fire-hydrant-flow-calculator": {
     "title": "Fire Hydrant Flow & Pressure Calculator (NFPA 291)",
-    "description": "Calculate fire hydrant discharge flow rate, residual pressure, and water supply adequacy.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Q_test = 29.84 · Cd · d² · √P_pitot • Q_20 = Q_test · ((P_s - 20) / (P_s - P_r))^0.54 (NFPA 291)",
+    "description": "Calculate Pitot discharge Q = 29.83*C*d^2*sqrt(Pp)*N and projected available fire flow at 20 psi residual.",
+    "discipline": "Municipal Fire Water Supply & Hydrant Testing",
+    "standards": "NFPA 291 Pitot Discharge & Hazen-Williams Available Fire Flow Formulas (Q = 29.83*C*d^2*sqrt(Pp)*N, C = 0.90/0.80/0.70, exponent 0.54)",
+    "cadContext": "Record static, residual, and pitot gauge pressures together with hydrant nozzle diameter and outlet count on civil utility site plans.",
+    "formula": "Q = 29.83 * C * d^2 * sqrt(Pp) * N; AFF = Q * ((Ps - 20)/(Ps - Pr))^0.54",
     "inputs": [
       {
-        "label": "Static Pressure P_s (psi)",
+        "label": "Static Pressure Ps (psi)",
         "val": "70"
       },
       {
-        "label": "Residual Pressure P_r (psi)",
+        "label": "Residual Pressure Pr (psi)",
         "val": "50"
       },
       {
-        "label": "Pitot Gauge Pressure P_p (psi)",
+        "label": "Pitot Pressure Pp (psi)",
         "val": "32"
       },
       {
-        "label": "Hydrant Outlet Dia (inches)",
-        "val": "2.5 inch Standard Hose Nozzle"
+        "label": "Outlet Diameter d (in)",
+        "val": "2.5"
       },
       {
-        "label": "Orifice Discharge Coeff Cd",
-        "val": "0.90 (Smooth Rounded Nozzle)"
+        "label": "Discharge Coeff C",
+        "val": "0.90"
+      },
+      {
+        "label": "Outlets Flowing N",
+        "val": "1"
+      },
+      {
+        "label": "Target Residual (psi)",
+        "val": "20"
       }
     ],
     "outputs": [
       {
-        "label": "Available Fire Flow at 20 psi Residual",
-        "val": "1557 GPM"
+        "label": "Available Fire Flow (AFF at 20 psi)",
+        "val": "1556.82 GPM"
       },
       {
-        "label": "Flow Rate During Test (Pitot)",
-        "val": "950 GPM"
+        "label": "Test Pitot Discharge Q",
+        "val": "949.18 GPM"
       },
       {
-        "label": "NFPA 291 Color Class Rating",
-        "val": "Class AA (Light Blue: ≥1500 GPM)"
-      },
-      {
-        "label": "Equivalent Metric Discharge",
-        "val": "98.3 L/s"
+        "label": "Metric AFF Equivalent",
+        "val": "98.22 L/s"
       }
     ]
   },
   "fire-resistance-rating-calculator": {
-    "title": "Fire Resistance Rating Calculator (IBC Table 601)",
-    "description": "Calculate required fire resistance rating per IBC Table 601 based on construction type and occupancy.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "R = [C1 · (W/D) + C2] · h (IBC Section 722 & UL Fire Resistance Directory)",
+    "title": "Steel Section Factor & Fire Protection Heating Calculator",
+    "description": "Calculate steel section factor Hp/As, lumped thermal time constant, heating time to critical temperature, and insulation thickness.",
+    "discipline": "Structural Thermal Fire Engineering (Simplified Analytical)",
+    "standards": "1D Lumped Thermal Capacitance Model for Insulated Steel Members (Hp/As Section Factor)",
+    "cadContext": "Determine heated perimeter Hp from structural member exposure geometry (3-sided beam vs 4-sided column) and cross-sectional area As from steel shape tables.",
+    "formula": "tau = dp*rho_s*c_s / (kp*(Hp/As)); t_crit = -tau * ln((Tf - Tcrit)/(Tf - T0)) / 60",
     "inputs": [
       {
-        "label": "Structural Member",
-        "val": "Structural Steel Column"
+        "label": "Mode",
+        "val": "Solve Heating Time"
       },
       {
-        "label": "Required Fire Resistance (hours)",
-        "val": "2 Hours (IBC Type IB / Noncombustible)"
+        "label": "Heated Perimeter Hp (m)",
+        "val": "1.60"
       },
       {
-        "label": "Fireproofing System",
-        "val": "Type X Fire-Rated Gypsum Board"
+        "label": "Steel Area As (m2)",
+        "val": "0.0100"
+      },
+      {
+        "label": "Protection Thickness dp (mm)",
+        "val": "25"
+      },
+      {
+        "label": "Insulation Cond kp (W/m*K)",
+        "val": "0.12"
+      },
+      {
+        "label": "Steel Density rho_s (kg/m3)",
+        "val": "7850"
+      },
+      {
+        "label": "Steel Specific Heat c_s (J/kg*K)",
+        "val": "600"
+      },
+      {
+        "label": "Initial Temp T0 (deg C)",
+        "val": "20"
+      },
+      {
+        "label": "Equiv. Fire Temp Tf (deg C)",
+        "val": "950"
+      },
+      {
+        "label": "Critical Steel Temp Tcrit (deg C)",
+        "val": "538"
       }
     ],
     "outputs": [
       {
-        "label": "Min Protective Layer Thickness",
-        "val": "31.8 mm (2 layers 5/8\" Type X)"
+        "label": "Section Factor Hp/As",
+        "val": "160.0 1/m"
       },
       {
-        "label": "Specified Hourly Rating",
-        "val": "2 Hours ASTM E119"
+        "label": "Thermal Time Constant tau",
+        "val": "6132.81 s"
       },
       {
-        "label": "Estimated Cladding Added Mass",
-        "val": "24.0 kg/m²"
-      },
-      {
-        "label": "Critical Steel Limiting Temp",
-        "val": "538°C (1000°F)"
+        "label": "Time to Critical Steel Temp",
+        "val": "83.22 min"
       }
     ]
   },
   "fire-sprinkler-coverage-calculator": {
-    "title": "Fire Sprinkler Coverage Calculator",
-    "description": "Calculate fire sprinkler head count, coverage area per head, and spacing compliance per NFPA 13 hazard classifications.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "NFPA 13: coverage = spacing × branch distance, heads = ceil(area / coverage)",
+    "title": "Fire Sprinkler Coverage & Spacing Calculator (NFPA 13)",
+    "description": "Calculate orthogonal fire sprinkler grid count, coverage area per head, and NFPA 13 spacing compliance.",
+    "discipline": "Fire Protection Sprinkler Layout",
+    "standards": "NFPA 13 Hydraulically Calculated Unobstructed Standard Spray (Light: 225 ft2/15 ft, Ordinary: 130 ft2/15 ft, Extra >0.25: 100 ft2/12 ft)",
+    "cadContext": "Lay out branch lines and sprinkler head spacing directly over architectural reflected ceiling grids while maintaining <= half max spacing to walls.",
+    "formula": "Coverage = S * B; Grid_Heads = ceil(L/S) * ceil(W/B); Max_Wall_Dist = S_max / 2",
     "inputs": [
       {
-        "label": "Hazard Classification",
+        "label": "Unit System",
+        "val": "Metric"
+      },
+      {
+        "label": "Hazard Class",
         "val": "Light Hazard"
       },
       {
-        "label": "Room L ( m )",
+        "label": "Room L (m)",
         "val": "30"
       },
       {
-        "label": "Room W ( m )",
+        "label": "Room W (m)",
         "val": "20"
       },
       {
-        "label": "Sprinkler Spacing ( m )",
+        "label": "Sprinkler Spacing S (m)",
         "val": "4.0"
       },
       {
-        "label": "Branch Line Distance ( m )",
+        "label": "Branch Distance B (m)",
         "val": "4.0"
       }
     ],
     "outputs": [
       {
         "label": "Room Area",
-        "val": "600 m²"
+        "val": "600.00 m2"
       },
       {
         "label": "Coverage/Head",
-        "val": "16.0 m²"
+        "val": "16.00 m2"
       },
       {
-        "label": "Heads Needed",
-        "val": "38"
+        "label": "Grid Heads",
+        "val": "40 heads"
+      },
+      {
+        "label": "Max Wall Dist",
+        "val": "2.30 m"
       }
     ]
   },
   "flexlm-concurrent-seats-queue": {
-    "title": "FLEXlm Network License Optimization Calculator",
-    "description": "Calculate the optimal number of floating CAD/BIM software licenses using the Erlang-C queuing algorithm. Minimize license denials and reduce IT budget costs.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for FLEXlm Network License Optimization Calculator",
+    "title": "Concurrent License Pool Queue Calculator (Erlang-B & Erlang-C)",
+    "description": "Calculate offered traffic in Erlangs, Erlang-B denial probability, Erlang-C queuing delay, and editable budget comparison.",
+    "discipline": "Stochastic Queuing Theory & License Pool Sizing",
+    "standards": "Erlang-B Loss Formula (No Queuing) & Erlang-C Delay Formula (M/M/m Queue, Valid for m > A)",
+    "cadContext": "Compare concurrent network license pool seat requirements against named-user subscription tiers based on team concurrency logs.",
+    "formula": "A = U*(Hd/Hw)*Fp; B(m,A) recursion -> P_B; P_C = m*B / (m - A*(1 - B)); W_q = P_C*Ts/(m - A)*60",
     "inputs": [
       {
-        "label": "1. Target CAD Software & Cost Profile",
-        "val": "AutoCAD (Autodesk)"
-      },
-      {
-        "label": "Total Engineers / Users (U) 50 Users",
+        "label": "Active Team Users U",
         "val": "50"
       },
       {
-        "label": "Avg Daily Drafting Hours (Hd) 3 Hours",
-        "val": "3"
+        "label": "Avg Daily Usage Hd (hr)",
+        "val": "3.0"
       },
       {
-        "label": "Shift Windows (Hw) 8 hrs",
-        "val": "8"
+        "label": "Shift Window Hw (hr)",
+        "val": "8.0"
       },
       {
-        "label": "Peak Load Factor (Fp) 1.3 x",
+        "label": "Peak Multiplier Fp",
         "val": "1.3"
       },
       {
-        "label": "Target License Denial Probability 5 %",
-        "val": "5"
+        "label": "Avg Session Duration Ts (hr)",
+        "val": "2.0"
       },
       {
-        "label": "License Pool Size (m) 34 Seats",
+        "label": "License Pool Seats m",
         "val": "34"
       },
       {
-        "label": "Average CAD Session Duration (Ts) 2 Hours",
-        "val": "2"
+        "label": "Floating Seat Cost (USD/yr)",
+        "val": "3000"
+      },
+      {
+        "label": "Named Seat Cost (USD/yr)",
+        "val": "2000"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Offered Load A",
+        "val": "24.375 Erlangs"
+      },
+      {
+        "label": "Erlang-B Denial P_B",
+        "val": "1.291 %"
+      },
+      {
+        "label": "Erlang-C Queue P_C",
+        "val": "4.417 %"
+      },
+      {
+        "label": "Avg Wait (Queue)",
+        "val": "0.55 min"
+      },
+      {
+        "label": "Named Total",
+        "val": "100000 USD/yr"
+      },
+      {
+        "label": "Floating Pool Total",
+        "val": "102000 USD/yr"
+      }
+    ]
   },
   "flexlm-debug-log-analyzer": {
     "title": "FLEXlm License Log Offline Analyzer",

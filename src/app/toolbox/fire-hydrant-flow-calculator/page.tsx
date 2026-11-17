@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Fire Hydrant Flow & Pressure Calculator (NFPA 291)",
-  description: "Calculate fire hydrant discharge flow rate, residual pressure, and water supply adequacy.",
+  title: 'Fire Hydrant Flow & Pitot Discharge Calculator (NFPA 291)',
+  description: 'Calculate hydrant test discharge Q = 29.83*C*d^2*sqrt(P)*N and projected available fire flow at 20 psi residual using NFPA 291 formulas.',
   path: '/toolbox/fire-hydrant-flow-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Fire Hydrant Flow & Pressure Calculator (NFPA 291)", path: '/toolbox/fire-hydrant-flow-calculator' },
+    { name: 'Fire Hydrant Flow & Pressure Calculator (NFPA 291)', path: '/toolbox/fire-hydrant-flow-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Hydrant Flow Testing
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Fire Hydrant Flow & Pressure Calculator (NFPA 291)
+              Fire Hydrant Flow & Pressure Calculator <span className="text-orange-400">(NFPA 291)</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate fire hydrant discharge flow rate, residual pressure, and water supply adequacy.
+              Compute test Pitot discharge and project available fire flow at target residual pressure using NFPA 291 hydraulic formulas.
             </p>
           </div>
         </section>

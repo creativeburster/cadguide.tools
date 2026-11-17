@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Fire Resistance Rating Calculator (IBC Table 601)",
-  description: "Calculate required fire resistance rating per IBC Table 601 based on construction type and occupancy.",
+  title: 'Steel Section Factor & Fire Protection Heating Calculator',
+  description: 'Calculate steel section factor Hp/As, thermal time constant, lumped heating time to critical temperature, and required insulation thickness.',
   path: '/toolbox/fire-resistance-rating-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Fire Resistance Rating Calculator (IBC Table 601)", path: '/toolbox/fire-resistance-rating-calculator' },
+    { name: 'Fire Resistance Thermal Calculator', path: '/toolbox/fire-resistance-rating-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Thermal Fire Protection
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Fire Resistance Rating Calculator (IBC Table 601)
+              Steel Section Factor & <span className="text-orange-400">Fire Heating</span> Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate required fire resistance rating per IBC Table 601 based on construction type and occupancy.
+              Compute section factor Hp/As, lumped thermal time constant, heating time to critical steel temperature, or required insulation thickness.
             </p>
           </div>
         </section>

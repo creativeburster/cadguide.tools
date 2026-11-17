@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import FinEfficiencyCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Fin Efficiency Calculator",
-  description: "Calculate fin efficiency and effectiveness for heat sink design.",
+  title: 'Fin Efficiency, Effectiveness & Heat Transfer Calculator',
+  description: 'Calculate straight rectangular heat sink fin efficiency, effectiveness ratio, fin parameter m, and single-fin heat dissipation.',
   path: '/toolbox/fin-efficiency-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function FinEfficiencyCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Fin Efficiency Calculator", path: '/toolbox/fin-efficiency-calculator' },
+    { name: 'Fin Efficiency Calculator', path: '/toolbox/fin-efficiency-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function FinEfficiencyCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Thermal
+              Thermal Management
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Fin Efficiency <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate fin efficiency and effectiveness for heat sink design.
+              Compute straight rectangular fin efficiency eta_f, fin effectiveness ratio eps_f, and convective heat dissipation q_f.
             </p>
           </div>
         </section>
