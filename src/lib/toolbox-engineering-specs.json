@@ -5979,38 +5979,50 @@
     ]
   },
   "forging-force-calculator": {
-    "title": "Forging Force Calculator",
-    "description": "Calculate forging force and work for hot and cold forging operations.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "F = sigma_f * A * flow_factor",
+    "title": "Forging Force & Press Tonnage Calculator",
+    "description": "Calculate maximum forging force (kN), metric press tonnage (tf), stroke deformation work (kJ), and mean die pressure.",
+    "discipline": "Metal Forming & Plastic Forging Mechanics",
+    "standards": "Open/Closed-Die Plastic Upset & Impression Forging Mechanics (g_n = 9.80665 m/s^2 per NIST SP 811)",
+    "cadContext": "Ensure the projected plan area A extracted from your 3D CAD parting-plane sketch includes the die flash land, and confirm press tonnage margin before sizing bolster and die-shoe clearances.",
+    "formula": "F_max = (sigma_f * A * Qf) / 1000 (kN); F_tf = F_max / 9.80665; W = eta_w * F_max * (dh / 1000) (kJ); p_avg = sigma_f * Qf (MPa)",
     "inputs": [
       {
-        "label": "Flow Stress (MPa)",
+        "label": "Flow Stress sigma_f (MPa)",
         "val": "200"
       },
       {
-        "label": "Area (mm2)",
+        "label": "Projected Area incl. Flash A (mm2)",
         "val": "5000"
       },
       {
-        "label": "Flow Factor",
+        "label": "Friction & Shape Factor Qf",
         "val": "1.2"
       },
       {
-        "label": "Reduction (mm)",
+        "label": "Deformation Stroke dh (mm)",
         "val": "10"
+      },
+      {
+        "label": "Stroke Work Fill Factor eta_w",
+        "val": "0.85"
       }
     ],
     "outputs": [
       {
-        "label": "Forging Force",
+        "label": "Max Forging Force F_max",
         "val": "1200.00 kN"
       },
       {
-        "label": "Forging Work",
-        "val": "12.000 kJ"
+        "label": "Metric Press Tonnage",
+        "val": "122.37 tf"
+      },
+      {
+        "label": "Stroke Deformation Work W",
+        "val": "10.20 kJ"
+      },
+      {
+        "label": "Mean Die Face Pressure p_avg",
+        "val": "240.00 MPa"
       }
     ]
   },
@@ -6025,78 +6037,94 @@
     "outputs": []
   },
   "friction-force-calculator": {
-    "title": "Friction Force Calculator",
-    "description": "Calculate friction force, normal force on flat and inclined surfaces.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Ff=u*N, N=mg*cos(theta)",
+    "title": "Coulomb Friction Force & Inclined Plane Calculator",
+    "description": "Calculate normal force, max static friction, kinetic friction, critical friction angle, and incline motion state.",
+    "discipline": "Engineering Statics & Dry Tribology",
+    "standards": "Classical Coulomb Dry Friction & Inclined Plane Equilibrium (g_n = 9.80665 m/s^2 per NIST SP 811)",
+    "cadContext": "Compare surface-normal contact forces and self-locking ramp angles against fixture clamp and chute geometry tolerances before finalizing part-transfer or locating-pad designs.",
+    "formula": "N = m*g*cos(theta); Fg = m*g*sin(theta); Fs_max = mu_s*N; Fk = mu_k*N; theta_crit = atan(mu_s)",
     "inputs": [
       {
-        "label": "Mass (kg)",
+        "label": "Block Mass m (kg)",
         "val": "100"
       },
       {
-        "label": "Friction Coeff",
-        "val": "0.3"
+        "label": "Incline Angle theta (deg)",
+        "val": "15"
       },
       {
-        "label": "Incline Angle (deg)",
-        "val": "0"
+        "label": "Static Friction Coeff mu_s",
+        "val": "0.35"
+      },
+      {
+        "label": "Kinetic Friction Coeff mu_k",
+        "val": "0.30"
+      },
+      {
+        "label": "Gravity g (m/s2)",
+        "val": "9.80665"
       }
     ],
     "outputs": [
       {
-        "label": "Normal Force",
-        "val": "981.00 N"
+        "label": "Normal Force N",
+        "val": "947.25 N"
       },
       {
-        "label": "Friction Force",
-        "val": "294.30 N"
+        "label": "Gravity Component Fg",
+        "val": "253.81 N"
       },
       {
-        "label": "Gravity Component",
-        "val": "0.000000 N"
+        "label": "Max Static Friction Fs_max",
+        "val": "331.54 N"
+      },
+      {
+        "label": "Kinetic Friction Fk",
+        "val": "284.17 N"
+      },
+      {
+        "label": "Critical Friction Angle",
+        "val": "19.29 deg (STATIC)"
       }
     ]
   },
   "fsw-welding-calculator": {
-    "title": "Friction Stir Welding Parameter Calculator",
-    "description": "Calculate FSW tool rotation, traverse speed, and heat input from material and thickness.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "Heat = k * omega / v",
+    "title": "FSW Spindle Power & Linear Heat Input Calculator",
+    "description": "Calculate Friction Stir Welding spindle mechanical power (kW), weld pitch (mm/rev), and linear heat input (J/mm).",
+    "discipline": "Solid-State Joining & Friction Stir Welding",
+    "standards": "Friction Stir Welding (FSW) Spindle Power & Linear Heat Input Mechanics",
+    "cadContext": "Verify that programmed CAM feed rate and spindle RPM keep weld pitch within qualified tool shoulder windows while matching available spindle torque capacity.",
+    "formula": "P_mech = (2*pi*n*M)/60000 (kW); pitch = v/n (mm/rev); Q_lin = (eta * P_mech * 1000) / (v/60) (J/mm)",
     "inputs": [
       {
-        "label": "Material",
-        "val": "Aluminum Alloy (k=50)"
+        "label": "Spindle Torque M (N*m)",
+        "val": "45"
       },
       {
-        "label": "Thickness (mm)",
-        "val": "6"
-      },
-      {
-        "label": "Tool RPM",
+        "label": "Spindle Speed n (RPM)",
         "val": "1200"
       },
       {
-        "label": "Traverse Speed (mm/min)",
+        "label": "Traverse Speed v (mm/min)",
         "val": "200"
+      },
+      {
+        "label": "Heat Transfer Efficiency eta",
+        "val": "0.90"
       }
     ],
     "outputs": [
       {
-        "label": "Heat Input",
-        "val": "300.00 J/mm"
+        "label": "Linear Heat Input Q_lin",
+        "val": "1526.81 J/mm"
       },
       {
-        "label": "Plunge Force",
-        "val": "17.000 kN"
+        "label": "Spindle Power P_mech",
+        "val": "5.655 kW"
       },
       {
-        "label": "Quality Index",
-        "val": "0.500000"
+        "label": "Weld Pitch",
+        "val": "0.1667 mm/rev (6.00 rev/mm)"
       }
     ]
   },
@@ -6111,86 +6139,94 @@
     "outputs": []
   },
   "gas-pipe-sizing-calculator": {
-    "title": "Gas Pipe Sizing Calculator (IFGC / NFPA 54)",
-    "description": "Calculate natural gas and propane pipe sizes per IFGC and NFPA 54.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Q = 3550 · [ΔH · D^5 / (S · L · (1 + 3.6/D + 0.03·D))]^0.5 (Spitzglass Low-Pressure Equation / NFPA 54)",
+    "title": "Natural Gas Low-Pressure Pipe Sizing Calculator (Spitzglass)",
+    "description": "Calculate low-pressure natural gas pipe capacity (cfh and m3/h) using the Spitzglass equation.",
+    "discipline": "Low-Pressure Fuel Gas Flow Sizing",
+    "standards": "Engineering ToolBox Low-Pressure (<= 1 psig) Spitzglass Natural Gas Pipe Equation",
+    "cadContext": "Map equivalent lengths of elbows, tees, and isolation valves from your piping isometric into total run length L before checking pipe ID against appliance CFH demand.",
+    "formula": "k = sqrt(d^5 / (1 + 3.6/d + 0.03*d)); q = 3550 * k * sqrt(h / (L * SG)) (cfh)",
     "inputs": [
       {
-        "label": "Connected Gas Load (kBTU/h)",
-        "val": "450"
+        "label": "Actual Inside Diameter d (in)",
+        "val": "0.622"
       },
       {
-        "label": "Longest Equivalent Pipe Run (m)",
-        "val": "35"
+        "label": "Allowable Pressure Drop h (in. w.c.)",
+        "val": "0.3"
       },
       {
-        "label": "Supply Pressure Tier",
-        "val": "Low Pressure (0.5 psi / 14 in. w.c. Standard)"
+        "label": "Equivalent Length L (ft)",
+        "val": "60"
       },
       {
-        "label": "Pipe Material",
-        "val": "Schedule 40 Black Iron Steel"
+        "label": "Gas Specific Gravity SG",
+        "val": "0.60"
+      },
+      {
+        "label": "Target Appliance Demand (cfh)",
+        "val": "30"
       }
     ],
     "outputs": [
       {
-        "label": "Recommended Nominal Pipe Size (NPS)",
-        "val": "2\" NPS"
+        "label": "Allowable Flow Capacity q_cap",
+        "val": "37.90 cfh (1.073 m3/h)"
       },
       {
-        "label": "Volumetric Gas Consumption",
-        "val": "428.6 CFH (ft³/h)"
+        "label": "Spitzglass Geometric Factor k",
+        "val": "0.1170"
       },
       {
-        "label": "Computed Internal Diameter ID",
-        "val": "131.1 mm"
-      },
-      {
-        "label": "Allowable Pressure Drop Limit",
-        "val": "0.5 in. w.c. (1.2 mbar)"
+        "label": "Demand Utilization",
+        "val": "79.15% (ADEQUATE CAPACITY)"
       }
     ]
   },
   "gasket-seal-calculator": {
-    "title": "Gasket Sealing Pressure Calculator",
-    "description": "Calculate gasket seating pressure and bolt torque for flanged joints.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Wm = A*g*y, T = Wm*k*d/2",
+    "title": "Flange Gasket Seating & Bolt Torque Calculator",
+    "description": "Calculate total gasket seating load, per-bolt preload, nut-factor bolt torque, and nominal shank stress for flanged joints.",
+    "discipline": "Bolted Flange Joints & Sealing Mechanics",
+    "standards": "Bolted Flange Gasket Seating Preload & Nut-Factor Torque Mechanics",
+    "cadContext": "Cross-check gasket contact face area from your flange CAD model against bolt count and stud pitch circle clearances to avoid bolt yielding during seating.",
+    "formula": "W_req = Ag*sigma_g/1000 (kN); F_bolt = W_req/nb (kN); T = K*(F_bolt*1000)*(d/1000) (N*m); sigma_shank = 4*F_bolt*1000/(pi*d^2)",
     "inputs": [
       {
-        "label": "Gasket Area (cm2)",
-        "val": "50"
+        "label": "Effective Gasket Area Ag (mm2)",
+        "val": "5000"
       },
       {
-        "label": "Y Factor (MPa)",
+        "label": "Target Seating Stress sigma_g (MPa)",
         "val": "69"
       },
       {
-        "label": "Bolt Dia (mm)",
+        "label": "Flange Bolt Count nb",
+        "val": "8"
+      },
+      {
+        "label": "Nominal Bolt Diameter d (mm)",
         "val": "16"
       },
       {
-        "label": "Nut Factor K",
-        "val": "0.2"
+        "label": "Nut Torque Factor K",
+        "val": "0.20"
       }
     ],
     "outputs": [
       {
-        "label": "Seating Force",
+        "label": "Total Seating Load W_req",
         "val": "345.00 kN"
       },
       {
-        "label": "Bolt Torque",
-        "val": "552.00 Nm"
+        "label": "Preload per Bolt F_bolt",
+        "val": "43.125 kN"
       },
       {
-        "label": "Bolt Stress",
-        "val": "1715.89 MPa"
+        "label": "Torque per Bolt T",
+        "val": "138.00 N*m"
+      },
+      {
+        "label": "Nominal Shank Stress",
+        "val": "214.49 MPa"
       }
     ]
   },

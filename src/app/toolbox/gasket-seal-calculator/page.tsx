@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import GasketSealCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Gasket Sealing Pressure Calculator",
-  description: "Calculate gasket seating pressure and bolt torque for flanged joints.",
+  title: 'Flange Gasket Seating & Bolt Torque Calculator',
+  description: 'Calculate total gasket seating load, per-bolt preload, nut-factor tightening torque, and nominal shank stress for bolted flange joints.',
   path: '/toolbox/gasket-seal-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function GasketSealCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Gasket Sealing Pressure Calculator", path: '/toolbox/gasket-seal-calculator' },
+    { name: 'Gasket Sealing Pressure Calculator', path: '/toolbox/gasket-seal-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function GasketSealCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Mechanical
+              Bolted Joints
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Gasket Sealing Pressure <span className="text-blue-400">Calculator</span>
+              Gasket Seating &amp; Bolt Torque <span className="text-blue-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate gasket seating pressure and bolt torque for flanged joints.
+              Compute total flange gasket seating force, individual bolt preload, nut-factor tightening torque, and nominal shank stress.
             </p>
           </div>
         </section>

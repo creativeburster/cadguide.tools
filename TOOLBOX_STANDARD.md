@@ -171,7 +171,8 @@ flowchart LR
 | 23 | embodied-carbon-calculator、energy-unit-converter、engineering-unit-converter、euler-bernoulli-beam-calculator、excavation-volume-calculator | d4cc7a87（待复核） |
 | 24 | extrusion-pressure-calculator、fan-law-calculator、fatal-error-diagnostic-wizard、fatigue-life-calculator、fillet-weld-size-calculator | 1ac5c15d（待复核） |
 | 25 | fin-efficiency-calculator、fire-hydrant-flow-calculator、fire-resistance-rating-calculator、fire-sprinkler-coverage-calculator、flexlm-concurrent-seats-queue | 0836019c～ae86b6da（待复核） |
-| 26 | flexlm-debug-log-analyzer、flexlm-error-15-debugger、flow-rate-unit-converter、flywheel-energy-calculator、force-unit-converter | 待复核 |
+| 26 | flexlm-debug-log-analyzer、flexlm-error-15-debugger、flow-rate-unit-converter、flywheel-energy-calculator、force-unit-converter | db003506（待复核） |
+| 27 | forging-force-calculator、friction-force-calculator、fsw-welding-calculator、gasket-seal-calculator、gas-pipe-sizing-calculator | 待复核 |
 
 ---
 

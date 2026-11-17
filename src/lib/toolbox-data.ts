@@ -1779,14 +1779,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'friction-force-calculator',
-    title: 'Friction Force Calculator',
-    description: 'Calculate friction force, normal force on flat and inclined surfaces. Free browser-based engineering calculator.',
-    detailDesc: 'Ff=u*N, N=mg*cos(theta)',
+    title: 'Coulomb Friction Force & Inclined Plane Calculator',
+    description: 'Calculate normal force, max static friction, kinetic friction, critical friction angle, and incline motion state.',
+    detailDesc: 'N = m*g*cos(theta), Fg = m*g*sin(theta), Fs_max = mu_s*N, Fk = mu_k*N',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["friction","mechanical","calculator"]
+    keywords: ["friction","inclined plane","mechanical","calculator"]
   },
   {
     slug: 'pulley-system-calculator',
@@ -2439,14 +2439,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'forging-force-calculator',
-    title: 'Forging Force Calculator',
-    description: 'Calculate forging force and work for hot and cold forging operations. Free browser-based engineering calculator.',
-    detailDesc: 'F = sigma_f * A * flow_factor',
+    title: 'Forging Force & Press Tonnage Calculator',
+    description: 'Calculate maximum forging force (kN), metric press tonnage (tf), stroke deformation work (kJ), and mean die pressure.',
+    detailDesc: 'F_max = sigma_f * A * Qf / 1000 (kN), F_tf = F_max / 9.80665, W = eta_w * F_max * dh / 1000',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["forging","manufacturing","calculator"]
+    keywords: ["forging","press tonnage","manufacturing","calculator"]
   },
   {
     slug: 'extrusion-pressure-calculator',
@@ -3231,14 +3231,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'fsw-welding-calculator',
-    title: 'Friction Stir Welding Parameter Calculator',
-    description: 'Calculate FSW tool rotation, traverse speed, and heat input from material and thickness.',
-    detailDesc: 'Heat = k * omega / v',
+    title: 'FSW Spindle Power & Linear Heat Input Calculator',
+    description: 'Calculate Friction Stir Welding spindle mechanical power (kW), weld pitch (mm/rev), and linear heat input (J/mm).',
+    detailDesc: 'P_mech = 2*pi*n*M/60000, pitch = v/n, Q_lin = (eta * P_mech * 1000) / (v / 60)',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["friction","manufacturing","calculator"]
+    keywords: ["friction stir welding","fsw","heat input","manufacturing","calculator"]
   },
   {
     slug: 'die-casting-pressure-calculator',
@@ -3760,14 +3760,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gasket-seal-calculator',
-    title: 'Gasket Sealing Pressure Calculator',
-    description: 'Calculate gasket seating pressure and bolt torque for flanged joints. Free browser-based engineering calculator.',
-    detailDesc: 'Wm = A*g*y, T = Wm*k*d/2',
+    title: 'Flange Gasket Seating & Bolt Torque Calculator',
+    description: 'Calculate total gasket seating load, per-bolt preload, nut-factor bolt torque, and nominal shank stress for flanged joints.',
+    detailDesc: 'W_req = Ag * sigma_g / 1000, F_bolt = W_req / nb, T = K * F_bolt * d',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["Calculate","gasket","seating","pressure","and","bolt","torque","for","flanged","joints."]
+    keywords: ["gasket seating","bolt torque","flange preload","mechanical","calculator"]
   },
   {
     slug: 'gyroscope-precession-calculator',
@@ -4332,14 +4332,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gas-pipe-sizing-calculator',
-    title: "Gas Pipe Sizing Calculator (IFGC / NFPA 54)",
-    description: "Calculate natural gas and propane pipe sizes per IFGC and NFPA 54.",
-    detailDesc: "Q = 0.0017*d^2.623*sqrt((P1^2-P2^2)/(L*T*S)) high pressure. Low pressure: sqrt(2*P_drop/(L*T*S)). Includes longest run method, steel/CSST/copper factors. BTU to CFH.",
+    title: "Natural Gas Low-Pressure Pipe Sizing Calculator (Spitzglass)",
+    description: "Calculate low-pressure natural gas pipe capacity (cfh and m3/h) using the Spitzglass equation.",
+    detailDesc: "Low-pressure (<= 1 psig) Spitzglass equation: k = sqrt(d^5 / (1 + 3.6/d + 0.03*d)), q = 3550 * k * sqrt(h / (L * SG)). Includes Schedule 40 actual inside diameters.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["gas pipe sizing","ifgc gas pipe","nfpa 54","natural gas pipe","propane pipe sizing","gas line calculator","gas flow calculation","pipe diameter gas","gas pressure drop","csst sizing","fuel gas piping"]
+    keywords: ["gas pipe sizing","spitzglass equation","natural gas pipe","gas line calculator","gas flow calculation","pipe diameter gas","gas pressure drop","fuel gas piping"]
   },
   {
     slug: 'hot-water-circulation-calculator',

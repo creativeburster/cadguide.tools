@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import ForgingForceCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Forging Force Calculator",
-  description: "Calculate forging force and work for hot and cold forging operations.",
+  title: 'Forging Force & Press Tonnage Calculator',
+  description: 'Calculate maximum forging force (kN), metric press tonnage (tf), stroke deformation work (kJ), and mean die pressure from flow stress and projected area.',
   path: '/toolbox/forging-force-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function ForgingForceCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Forging Force Calculator", path: '/toolbox/forging-force-calculator' },
+    { name: 'Forging Force Calculator', path: '/toolbox/forging-force-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function ForgingForceCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-6 uppercase tracking-[0.15em]">
-              Manufacturing
+              Forming &amp; Forging
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Forging Force <span className="text-purple-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate forging force and work for hot and cold forging operations.
+              Compute maximum forging load, metric tonnage (g = 9.80665 m/s2), stroke deformation energy, and mean die pressure.
             </p>
           </div>
         </section>

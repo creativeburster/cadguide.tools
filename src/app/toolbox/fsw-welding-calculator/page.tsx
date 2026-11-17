@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import FswWeldingCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Friction Stir Welding Parameter Calculator",
-  description: "Calculate FSW tool rotation, traverse speed, and heat input from material and thickness.",
+  title: 'FSW Spindle Power & Linear Heat Input Calculator',
+  description: 'Calculate Friction Stir Welding (FSW) spindle mechanical power (kW), weld pitch (mm/rev), revolution density (rev/mm), and linear heat input (J/mm).',
   path: '/toolbox/fsw-welding-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function FswWeldingCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Friction Stir Welding Parameter Calculator", path: '/toolbox/fsw-welding-calculator' },
+    { name: 'FSW Spindle Power & Heat Input Calculator', path: '/toolbox/fsw-welding-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function FswWeldingCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-6 uppercase tracking-[0.15em]">
-              Manufacturing
+              Solid-State Welding
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Friction Stir Welding Parameter <span className="text-purple-400">Calculator</span>
+              FSW Spindle Power &amp; <span className="text-purple-400">Heat Input</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate FSW tool rotation, traverse speed, and heat input from material and thickness.
+              Compute mechanical spindle power, advance-per-revolution pitch, and linear heat input from spindle torque, RPM, and feed rate.
             </p>
           </div>
         </section>
