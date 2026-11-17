@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import GlazingWindLoadCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Glazing Wind Load & Deflection Calculator — ASTM E1300 / IBC Curtain Wall',
-  description: 'Calculate curtain wall glass panel deflection, bending stress, and allowable wind pressure per ASTM E1300 and IBC building codes.',
+  title: 'Architectural Glazing Wind Load & Plate Deflection Calculator',
+  description: 'Calculate 4-side simply supported glass panel center deflection, maximum bending stress, and allowable deflection limits under uniform wind pressure using Kirchhoff-Love Navier plate series.',
   path: '/toolbox/glazing-wind-load-calculator',
 });
 
@@ -26,13 +26,13 @@ export default function GlazingWindLoadCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-sky-500/10 text-sky-400 border border-sky-500/20 mb-6 uppercase tracking-[0.15em]">
-              Facade & Curtain Wall
+              Facade Plate Mechanics
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Glazing Wind Load <span className="text-sky-400">Calculator</span>
+              Glazing Wind Load &amp; Plate Deflection <span className="text-sky-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Verify curtain wall and architectural glass deflection, surface stress, and allowable design pressure under wind loads per ASTM E1300.
+              Compute center deflection and maximum bending stress for 4-side simply supported rectangular glass panels under uniform wind load.
             </p>
           </div>
         </section>

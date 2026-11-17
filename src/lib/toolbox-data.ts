@@ -2483,14 +2483,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'grinding-ratio-calculator',
-    title: 'Grinding Ratio Calculator',
-    description: 'Calculate grinding ratio (G-ratio) from volume of material removed and wheel wear.',
-    detailDesc: 'G = Vmetal / Vwheel',
+    title: 'Grinding Ratio (G-Ratio) & Specific Grinding Energy Calculator',
+    description: 'Calculate volumetric grinding ratio (G = Vw/Vs), removal rate (mm3/s), specific grinding energy (J/mm3), and total net energy.',
+    detailDesc: 'G = Vw/Vs, Qw_s = Qw/60, u = (1000*P_net)/Qw_s, E_total = (u*Vw)/1000',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["grinding","manufacturing","calculator"]
+    keywords: ["grinding ratio","specific grinding energy","manufacturing","calculator"]
   },
   {
     slug: 'edm-material-removal-calculator',
@@ -2703,14 +2703,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gradient-grade-calculator',
-    title: 'Gradient & Grade Calculator',
-    description: 'Calculate gradient percentage, angle, and elevation difference for surveying.',
-    detailDesc: 'grade% = rise/run*100, angle = atan(rise/run)',
+    title: 'Gradient Percentage, Slope Angle & Slope Distance Calculator',
+    description: 'Calculate surveying gradient percentage, mm/m per mille, slope angle, grade ratio, and slope distance.',
+    detailDesc: 'grade% = (rise/run)*100, perMille = (rise/run)*1000, angle = atan2(rise,run), slopeDist = hypot(run,rise)',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["gradient","surveying","calculator"]
+    keywords: ["gradient","slope angle","slope distance","surveying","calculator"]
   },
   {
     slug: 'cut-fill-volume-calculator',
@@ -3187,14 +3187,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'grinding-wheel-speed-calculator',
-    title: 'Grinding Wheel Speed Calculator',
-    description: 'Calculate grinding wheel surface speed, RPM, and MRR from wheel specs.',
-    detailDesc: 'v = pi*D*n/1000, MRR = doc*feed*width',
+    title: 'Grinding Wheel Surface Speed & Specific MRR Calculator',
+    description: 'Calculate grinding wheel surface speed (m/s and SFPM), volumetric MRR, specific removal rate Qw\' (mm3/(mm*s)), and speed ratio.',
+    detailDesc: 'vs = pi*ds*n/60000, Qw = ae*vw*bd, Qw_prime = Qw/(60*bd), qs = vs/(vw/60000)',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["grinding","manufacturing","calculator"]
+    keywords: ["grinding wheel speed","specific mrr","surface speed sfpm","manufacturing","calculator"]
   },
   {
     slug: 'polishing-time-calculator',
@@ -4387,14 +4387,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'grease-trap-sizing-calculator',
-    title: "Grease Trap Sizing Calculator (ASME / PDI)",
-    description: "Calculate grease interceptor capacity and flow rate for commercial kitchens.",
-    detailDesc: "PDI: GPM = sum(fixture_flow)*0.75*duty_factor. Capacity = GPM*retention_time(30min). ASME: Q = L*W*D*7.48/drain_time. Kitchen type factors. Min 25 GPM.",
+    title: "Grease Interceptor Volumetric Flow Sizing Calculator",
+    description: "Calculate sink fixture volume, peak drain-down discharge rate (GPM), commercial interceptor flow tier, and grease holding capacity.",
+    detailDesc: "Volumetric compartment sink drain-down sizing: V_gal = (N*L*W*D)/231, V_load = V_gal * fillFactor, Q_calc = V_load / t_drain + Q_extra. Standard commercial GPM tier rounding and 2 lb/GPM grease storage.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["grease trap sizing","grease interceptor","asme a112.14","pdi grease trap","commercial kitchen plumbing","grease trap capacity","flow rate grease","kitchen drainage","interceptor sizing","restaurant grease trap"]
+    keywords: ["grease trap sizing","grease interceptor","commercial kitchen plumbing","grease trap capacity","flow rate grease","kitchen drainage","interceptor sizing"]
   },
   {
     slug: 'rigid-pavement-calculator',
@@ -6735,11 +6735,11 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'glazing-wind-load-calculator',
-    title: 'Architectural Glazing Wind Load & Deflection Calculator (ASTM E1300)',
-    description: 'Calculate glass center deflection, surface bending stress, and maximum allowable design wind pressure for 4-side supported architectural glazing per ASTM E1300.',
-    detailDesc: 'Curtain wall and facade engineering tool for verifying monolithic and insulated glass unit (IGU) structural capacity against design wind pressure and ASTM L/60 or L/175 deflection limits.',
+    title: 'Architectural Glazing Wind Load & Plate Deflection Calculator',
+    description: 'Calculate 4-side simply supported glass panel center deflection, bending stress, and allowable deflection limits using Navier plate series.',
+    detailDesc: 'Kirchhoff-Love 4-side simply supported linear-elastic rectangular plate analysis under uniform wind pressure (odd harmonics m,n = 1..19) against L/175 and L/60 limits.',
     category: 'calculator',
-    keywords: ['glazing wind load', 'glass deflection calculator', 'astm e1300', 'curtain wall glass thickness', 'facade structural calculation'],
+    keywords: ['glazing wind load', 'glass deflection calculator', 'navier plate series', 'curtain wall glass thickness', 'facade structural calculation'],
     origin: 'native',
     status: 'released',
     releasedDate: '2026-09-24'

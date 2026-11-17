@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import GrindingWheelSpeedCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Grinding Wheel Speed Calculator",
-  description: "Calculate grinding wheel surface speed, RPM, and MRR from wheel specs.",
+  title: 'Grinding Wheel Surface Speed & Specific MRR Calculator',
+  description: 'Calculate grinding wheel peripheral speed (m/s and SFPM), volumetric MRR (mm3/min), specific removal rate per unit width Qw\' (mm3/(mm*s)), and speed ratio qs.',
   path: '/toolbox/grinding-wheel-speed-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function GrindingWheelSpeedCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Grinding Wheel Speed Calculator", path: '/toolbox/grinding-wheel-speed-calculator' },
+    { name: 'Grinding Wheel Speed Calculator', path: '/toolbox/grinding-wheel-speed-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function GrindingWheelSpeedCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-6 uppercase tracking-[0.15em]">
-              Manufacturing
+              Grinding Kinematics
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Grinding Wheel Speed <span className="text-purple-400">Calculator</span>
+              Grinding Wheel Speed &amp; <span className="text-purple-400">Specific MRR</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate grinding wheel surface speed, RPM, and MRR from wheel specs.
+              Compute peripheral wheel speed (m/s &amp; SFPM), volumetric removal rate, specific MRR per unit width Qw&apos;, and grinding speed ratio.
             </p>
           </div>
         </section>

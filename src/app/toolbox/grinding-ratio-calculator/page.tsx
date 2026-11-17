@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import GrindingRatioCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Grinding Ratio Calculator",
-  description: "Calculate grinding ratio (G-ratio) from volume of material removed and wheel wear.",
+  title: 'Grinding Ratio (G-Ratio) & Specific Grinding Energy Calculator',
+  description: 'Calculate volumetric grinding ratio (G = Vw/Vs), per-second removal rate (mm3/s), specific grinding energy (J/mm3), and total net energy from measured power and wear.',
   path: '/toolbox/grinding-ratio-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function GrindingRatioCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Grinding Ratio Calculator", path: '/toolbox/grinding-ratio-calculator' },
+    { name: 'Grinding Ratio Calculator', path: '/toolbox/grinding-ratio-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function GrindingRatioCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-6 uppercase tracking-[0.15em]">
-              Manufacturing
+              Abrasive Machining
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Grinding Ratio <span className="text-purple-400">Calculator</span>
+              Grinding Ratio &amp; <span className="text-purple-400">Specific Energy</span> Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate grinding ratio (G-ratio) from volume of material removed and wheel wear.
+              Compute volumetric G-ratio and specific grinding energy (J/mm3) directly from measured metal removal, wheel wear, and net grinding power.
             </p>
           </div>
         </section>

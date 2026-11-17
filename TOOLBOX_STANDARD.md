@@ -174,7 +174,8 @@ flowchart LR
 | 26 | flexlm-debug-log-analyzer、flexlm-error-15-debugger、flow-rate-unit-converter、flywheel-energy-calculator、force-unit-converter | db003506（待复核） |
 | 27 | forging-force-calculator、friction-force-calculator、fsw-welding-calculator、gasket-seal-calculator、gas-pipe-sizing-calculator | 70127142（待复核） |
 | 28 | gcode-quick-reference-sheet、gdt-symbol-reference-guide、gear-force-calculator、gear-module-calculator、gear-module-calculator-2 | 8a27c905（待复核） |
-| 29 | gear-module-pitch-calculator、gear-ratio-belt-calculator、gear-ratio-bike-calculator、gear-ratio-speed-calculator、generator-sizing-calculator | 待复核 |
+| 29 | gear-module-pitch-calculator、gear-ratio-belt-calculator、gear-ratio-bike-calculator、gear-ratio-speed-calculator、generator-sizing-calculator | 0b4a6c6a（待复核） |
+| 30 | glazing-wind-load-calculator、gradient-grade-calculator、grease-trap-sizing-calculator、grinding-ratio-calculator、grinding-wheel-speed-calculator | 待复核 |
 
 ---
 

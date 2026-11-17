@@ -2,197 +2,327 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Settings, Zap, Info, RotateCcw, Copy, Check, Download, AlertTriangle } from 'lucide-react';
 
-interface CalculationOutput {
-  primary: { label: string; val: string; unit: string };
-  secondary: Array<{ label: string; val: string; unit: string }>;
-  status?: { pass: boolean; text: string };
+function parseStrictPositive(raw: string): number {
+  const s = raw.trim();
+  if (s === '') return Number.NaN;
+  const n = Number(s);
+  return Number.isFinite(n) && n > 0 ? n : Number.NaN;
 }
 
-const computeFn: (vals: string[]) => CalculationOutput = (vals) => {
-      const sinks = parseFloat(vals[0]) || 2;
-      const volType = vals[1] || '45x45x30';
-      const dish = parseFloat(vals[2]) || 1;
-      const bowlVolLiters = volType === '45x45x30' ? (45 * 45 * 30) / 1000 : (60 * 60 * 35) / 1000;
-      const sinkGallons = (sinks * 3 * bowlVolLiters * 0.75) * 0.264172; // 75% fill factor
-      const dishGpm = dish * 20;
-      const peakGpm = (sinkGallons / 2) + dishGpm; // 2 minute drain time
-      const interceptorGpm = Math.ceil(peakGpm / 5) * 5;
-      const greaseRetentionLbs = interceptorGpm * 2;
-      return {
-        primary: { label: 'Min Certified Flow Rating', val: interceptorGpm.toString(), unit: 'GPM' },
-        secondary: [
-          { label: 'Minimum Grease Holding Capacity', val: greaseRetentionLbs.toString(), unit: 'lbs' },
-          { label: 'Estimated Peak Discharge Flow', val: peakGpm.toFixed(1), unit: 'GPM' },
-          { label: 'Equivalent Metric Liquid Volume', val: (interceptorGpm * 3.785 * 30).toFixed(0), unit: 'Liters' }
-        ],
-        status: { pass: interceptorGpm >= 20, text: interceptorGpm >= 20 ? 'PDI-G101 STANDARD CERTIFIED' : 'MINIMUM 20 GPM MANDATED' }
-      };
-    };
+function parseStrictNonNegative(raw: string): number {
+  const s = raw.trim();
+  if (s === '') return Number.NaN;
+  const n = Number(s);
+  return Number.isFinite(n) && n >= 0 ? n : Number.NaN;
+}
 
-const DEFAULT_INPUTS = ["2","45x45x30","1"];
+function toSafeAscii(input: string): string {
+  return input.replace(/[^\x20-\x7E\r\n\t]/g, '');
+}
 
-export default function CalculatorClient() {
-  const [inputs, setInputs] = useState<string[]>(DEFAULT_INPUTS);
+const STANDARD_GPM_TIERS = [4, 7, 10, 15, 20, 25, 35, 50, 75, 100];
+const GAL_TO_LITER = 3.785411784;
 
-  const updateInput = (idx: number, val: string) => {
-    const next = [...inputs];
-    next[idx] = val;
-    setInputs(next);
+function selectStandardFlowTier(calcGpm: number): number {
+  for (const tier of STANDARD_GPM_TIERS) {
+    if (calcGpm <= tier) return tier;
+  }
+  return Math.ceil(calcGpm / 25) * 25;
+}
+
+export default function GreaseTrapSizingCalculatorClient() {
+  const [compStr, setCompStr] = useState('3');
+  const [lenStr, setLenStr] = useState('18');
+  const [widStr, setWidStr] = useState('18');
+  const [depStr, setDepStr] = useState('12');
+  const [fillStr, setFillStr] = useState('0.75');
+  const [drainStr, setDrainStr] = useState('1.0');
+  const [extraGpmStr, setExtraGpmStr] = useState('0');
+  const [copied, setCopied] = useState(false);
+
+  const resetDefaults = () => {
+    setCompStr('3');
+    setLenStr('18');
+    setWidStr('18');
+    setDepStr('12');
+    setFillStr('0.75');
+    setDrainStr('1.0');
+    setExtraGpmStr('0');
+    setCopied(false);
   };
 
   const result = useMemo(() => {
-    try {
-      return computeFn(inputs);
-    } catch {
+    const comp = parseStrictPositive(compStr);
+    const len = parseStrictPositive(lenStr);
+    const wid = parseStrictPositive(widStr);
+    const dep = parseStrictPositive(depStr);
+    const fill = parseStrictPositive(fillStr);
+    const drain = parseStrictPositive(drainStr);
+    const extraGpm = parseStrictNonNegative(extraGpmStr);
+
+    if (
+      !Number.isFinite(comp) ||
+      !Number.isFinite(len) ||
+      !Number.isFinite(wid) ||
+      !Number.isFinite(dep) ||
+      !Number.isFinite(fill) ||
+      !Number.isFinite(drain) ||
+      !Number.isFinite(extraGpm) ||
+      fill > 1
+    ) {
       return {
-        primary: { label: 'Calculation Error', val: '—', unit: '' },
-        secondary: [],
-        status: { pass: false, text: 'Invalid Input Values' }
+        valid: false as const,
+        errorMsg: 'Enter strictly positive compartment count, dimensions (in), drain period (min), non-negative extra flow, and 0 < fill factor <= 1.',
       };
     }
-  }, [inputs]);
+
+    const totalVolIn3 = comp * len * wid * dep;
+    const totalVolGal = totalVolIn3 / 231;
+    const effectiveLoadGal = totalVolGal * fill;
+    const effectiveLoadLiters = effectiveLoadGal * GAL_TO_LITER;
+    const calcFlowGpm = effectiveLoadGal / drain + extraGpm;
+    const ratedFlowGpm = selectStandardFlowTier(calcFlowGpm);
+    const minGreaseLbs = ratedFlowGpm * 2;
+
+    return {
+      valid: true as const,
+      comp,
+      len,
+      wid,
+      dep,
+      fill,
+      drain,
+      extraGpm,
+      totalVolGal,
+      effectiveLoadGal,
+      effectiveLoadLiters,
+      calcFlowGpm,
+      ratedFlowGpm,
+      minGreaseLbs,
+    };
+  }, [compStr, lenStr, widStr, depStr, fillStr, drainStr, extraGpmStr]);
+
+  const handleCopy = async () => {
+    if (!result.valid) return;
+    const text = [
+      `Volumetric Grease Interceptor Sizing Summary`,
+      `Sink: ${result.comp} x ${result.len}x${result.wid}x${result.dep} in, Fill=${result.fill}, Drain=${result.drain} min, Extra=${result.extraGpm} GPM`,
+      `Geometric Sink Volume = ${result.totalVolGal.toFixed(2)} gal`,
+      `Effective Drain Load = ${result.effectiveLoadGal.toFixed(2)} gal (${result.effectiveLoadLiters.toFixed(2)} L)`,
+      `Peak Discharge Flow Rate = ${result.calcFlowGpm.toFixed(2)} GPM`,
+      `Recommended Commercial Rating = ${result.ratedFlowGpm} GPM (Min Grease Capacity = ${result.minGreaseLbs} lbs)`,
+    ].join('\n');
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(text);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1800);
+      }
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const handleDownloadCsv = () => {
+    if (!result.valid) return;
+    const rows = [
+      ['Parameter', 'Value', 'Unit'],
+      ['Sink Compartments', String(result.comp), 'ea'],
+      ['Bowl Length', String(result.len), 'in'],
+      ['Bowl Width', String(result.wid), 'in'],
+      ['Bowl Depth', String(result.dep), 'in'],
+      ['Fill Factor', String(result.fill), '-'],
+      ['Drain Period', String(result.drain), 'min'],
+      ['Additional Fixture Flow', String(result.extraGpm), 'GPM'],
+      ['Total Geometric Volume', result.totalVolGal.toFixed(2), 'gal'],
+      ['Effective Liquid Load', result.effectiveLoadGal.toFixed(2), 'gal'],
+      ['Effective Metric Volume', result.effectiveLoadLiters.toFixed(2), 'L'],
+      ['Calculated Peak Discharge Flow', result.calcFlowGpm.toFixed(2), 'GPM'],
+      ['Recommended Commercial Rating', String(result.ratedFlowGpm), 'GPM'],
+      ['Minimum Grease Holding Capacity (2 lb/GPM)', String(result.minGreaseLbs), 'lbs'],
+    ];
+    const csv = toSafeAscii(rows.map((r) => r.map((c) => `"${c}"`).join(',')).join('\n'));
+    const blob = new Blob([csv], { type: 'text/csv;charset=ascii' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'grease-interceptor-volumetric-sizing.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="space-y-8">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left Column: Parameter Inputs */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
-              <Settings className="w-5 h-5" />
-            </div>
-            <div>
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs & Parameters</h2>
-              <p className="text-xs text-slate-500 font-medium">Adjust values to recalculate</p>
-            </div>
-          </div>
-
-          <div className="space-y-4">
-          <div key="0">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Commercial 3-Compartment Sinks Count</label>
-            <input
-              type="number"
-              step="1"
-              value={inputs[0]}
-              onChange={(e) => updateInput(0, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          <div key="1">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Sink Bowl Dimensions (cm)</label>
-            <select
-              value={inputs[1]}
-              onChange={(e) => updateInput(1, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all cursor-pointer"
-            >
-              <option key="45x45x30" value="45x45x30">{"45 × 45 × 30 cm Standard Wash Basin"}</option>
-              <option key="60x60x35" value="60x60x35">{"60 × 60 × 35 cm Heavy Pot Sink"}</option>
-            </select>
-          </div>
-          <div key="2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Commercial Dishwasher Count</label>
-            <input
-              type="number"
-              step="1"
-              value={inputs[2]}
-              onChange={(e) => updateInput(2, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          </div>
-
-          <button
-            onClick={() => setInputs(DEFAULT_INPUTS)}
-            className="w-full py-3 rounded-xl text-sm font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
-          >
-            Reset Defaults
-          </button>
-        </div>
-
-        {/* Right Column: Results & Engineering Metrics */}
-        <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
-                  <Zap className="w-5 h-5" />
-                </div>
-                <h2 className="text-lg font-black text-slate-900 tracking-tight">Calculated Outputs</h2>
-              </div>
-              {result.status && (
-                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-black tracking-wide uppercase border ${
-                  result.status.pass
-                    ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                    : 'bg-amber-50 text-amber-700 border-amber-200'
-                }`}>
-                  {result.status.pass ? (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  ) : (
-                    <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
-                  )}
-                  <span>{result.status.text}</span>
-                </div>
-              )}
-            </div>
-
-            {/* Primary Result Banner */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50/40 rounded-2xl p-6 border border-blue-100">
-              <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-2">
-                {result.primary.label}
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl sm:text-5xl font-black text-blue-900 tracking-tight">
-                  {result.primary.val}
-                </span>
-                {result.primary.unit && (
-                  <span className="text-lg font-bold text-blue-600">
-                    {result.primary.unit}
-                  </span>
-                )}
-              </div>
-            </div>
-
-            {/* Secondary Metrics Grid */}
-            {result.secondary && result.secondary.length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {result.secondary.map((metric, idx) => (
-                  <div key={idx} className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 line-clamp-1">
-                      {metric.label}
-                    </div>
-                    <div className="text-xl font-black text-slate-900">
-                      {metric.val}
-                      {metric.unit && <span className="text-xs font-medium text-slate-500 ml-1.5">{metric.unit}</span>}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-
-          {/* Engineering Methodology & Formula Card */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-600">
-                <Info className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-base font-black text-slate-900 tracking-tight">Governing Engineering Formula & Standards</h3>
-                <p className="text-xs text-slate-500 font-medium">Standardized calculation procedure</p>
-              </div>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <p className="text-xs sm:text-sm text-slate-700 font-mono font-medium leading-relaxed block break-words">
-                {"Flow Rate = (Total Fixture Capacity × 0.75) / 2 min Drain Period (PDI G-101 / ASME A112.14.3)"}
-              </p>
-            </div>
-          </div>
-        </div>
+      <div className="flex flex-wrap gap-2 items-center">
+        <button
+          type="button"
+          data-testid="btn-drain-1min"
+          onClick={() => setDrainStr('1.0')}
+          className={`px-3 py-1.5 rounded-xl text-xs font-bold border ${
+            drainStr === '1.0' ? 'bg-orange-600 border-orange-600 text-white' : 'bg-white border-slate-200 text-slate-700'
+          }`}
+        >
+          1.0 min Drain Period (Strict)
+        </button>
+        <button
+          type="button"
+          data-testid="btn-drain-2min"
+          onClick={() => setDrainStr('2.0')}
+          className={`px-3 py-1.5 rounded-xl text-xs font-bold border ${
+            drainStr === '2.0' ? 'bg-orange-600 border-orange-600 text-white' : 'bg-white border-slate-200 text-slate-700'
+          }`}
+        >
+          2.0 min Drain Period (Standard)
+        </button>
+        <button
+          type="button"
+          data-testid="btn-reset"
+          onClick={resetDefaults}
+          className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700"
+        >
+          <RotateCcw className="w-3.5 h-3.5" />
+          Reset Defaults
+        </button>
       </div>
 
-      <RelatedTools />
+      {!result.valid && (
+        <div
+          data-testid="error-banner"
+          className="p-4 rounded-2xl bg-red-50 border border-red-200 text-sm text-red-800 flex items-center gap-2.5"
+        >
+          <AlertTriangle className="w-4 h-4 text-red-600 shrink-0" />
+          <span>{result.errorMsg}</span>
+        </div>
+      )}
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-3.5">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
+              <Settings className="w-5 h-5" />
+            </div>
+            <h2 className="text-lg font-black text-slate-900">Fixture Volume Inputs</h2>
+          </div>
+
+          {[
+            { id: 'compartments', label: 'Sink Compartments N', val: compStr, set: setCompStr },
+            { id: 'len', label: 'Compartment Length L (in)', val: lenStr, set: setLenStr },
+            { id: 'wid', label: 'Compartment Width W (in)', val: widStr, set: setWidStr },
+            { id: 'dep', label: 'Compartment Depth D (in)', val: depStr, set: setDepStr },
+            { id: 'fill', label: 'Fill Factor (typ. 0.75)', val: fillStr, set: setFillStr },
+            { id: 'drain', label: 'Drain-Down Time (min)', val: drainStr, set: setDrainStr },
+            { id: 'extra', label: 'Additional Fixture Flow (GPM)', val: extraGpmStr, set: setExtraGpmStr },
+          ].map((f) => (
+            <div key={f.id}>
+              <label htmlFor={`input-${f.id}`} className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
+                {f.label}
+              </label>
+              <input
+                id={`input-${f.id}`}
+                data-testid={`input-${f.id}`}
+                type="text"
+                inputMode="decimal"
+                value={f.val}
+                onChange={(e) => f.set(e.target.value)}
+                className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900"
+              />
+            </div>
+          ))}
+        </div>
+
+        <div className="lg:col-span-2 space-y-6">
+          <div className="bg-white rounded-3xl border border-slate-200 p-6 sm:p-8 shadow-sm space-y-5">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-emerald-50 rounded-xl flex items-center justify-center text-emerald-600">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <h2 className="text-lg font-black text-slate-900">Interceptor Capacity &amp; Flow Tier</h2>
+              </div>
+              <div className="flex gap-2">
+                <button
+                  type="button"
+                  data-testid="btn-copy"
+                  disabled={!result.valid}
+                  onClick={handleCopy}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 disabled:opacity-40 text-white text-xs font-bold"
+                >
+                  {copied ? <Check className="w-3.5 h-3.5" /> : <Copy className="w-3.5 h-3.5" />}
+                  {copied ? 'Copied' : 'Copy'}
+                </button>
+                <button
+                  type="button"
+                  data-testid="btn-download"
+                  disabled={!result.valid}
+                  onClick={handleDownloadCsv}
+                  className="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-orange-600 hover:bg-orange-700 disabled:opacity-40 text-white text-xs font-bold"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Export CSV
+                </button>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
+                <div className="text-xs font-black text-orange-600 uppercase tracking-wider mb-1">Recommended Flow Tier</div>
+                <div className="text-2xl font-black text-orange-950">
+                  <span data-testid="result-rated">{result.valid ? result.ratedFlowGpm : '—'}</span>{' '}
+                  <span className="text-sm text-orange-600">GPM</span>
+                </div>
+              </div>
+              <div className="bg-blue-50 rounded-2xl p-4 border border-blue-100">
+                <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">Min Grease Storage</div>
+                <div className="text-2xl font-black text-blue-900">
+                  <span data-testid="result-grease">{result.valid ? result.minGreaseLbs : '—'}</span>{' '}
+                  <span className="text-sm text-blue-500">lbs</span>
+                </div>
+              </div>
+              <div className="bg-emerald-50 rounded-2xl p-4 border border-emerald-100">
+                <div className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-1">Calculated Discharge</div>
+                <div className="text-2xl font-black text-emerald-900">
+                  <span data-testid="result-qcalc">{result.valid ? result.calcFlowGpm.toFixed(2) : '—'}</span>{' '}
+                  <span className="text-sm text-emerald-500">GPM</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Geometric Sink Volume</div>
+                <div className="text-xl font-black text-slate-900">
+                  <span data-testid="result-vgal">{result.valid ? result.totalVolGal.toFixed(2) : '—'}</span>{' '}
+                  <span className="text-xs text-slate-500">gal</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Effective Drain Load</div>
+                <div className="text-xl font-black text-slate-900">
+                  <span data-testid="result-vload">{result.valid ? result.effectiveLoadGal.toFixed(2) : '—'}</span>{' '}
+                  <span className="text-xs text-slate-500">gal</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Effective Metric Volume</div>
+                <div className="text-xl font-black text-slate-900">
+                  <span data-testid="result-vliters">{result.valid ? result.effectiveLoadLiters.toFixed(2) : '—'}</span>{' '}
+                  <span className="text-xs text-slate-500">L</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200 text-xs text-slate-600 flex items-start gap-2">
+              <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+              <span>
+                Volumetric sink drain-down sizing: V_gal = (N*L*W*D)/231 (1 US gal = 231 in3 exact), V_load = V_gal * fillFactor, Q_calc = V_load / t_drain + Q_extra. Standard commercial interceptor flow tiers tested: 4, 7, 10, 15, 20, 25, 35, 50, 75, 100 GPM (with 2 lb/GPM minimum grease holding ratio). Always confirm drain-down period and local plumbing authority rules before equipment procurement.
+              </span>
+            </div>
+          </div>
+
+          <RelatedTools />
+        </div>
+      </div>
     </div>
   );
 }

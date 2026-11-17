@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import GradientGradeCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Gradient & Grade Calculator",
-  description: "Calculate gradient percentage, angle, and elevation difference for surveying.",
+  title: 'Gradient Percentage, Slope Angle & Slope Distance Calculator',
+  description: 'Calculate civil surveying gradient percentage, mm/m per mille, slope angle (deg), grade ratio (1:N), and true slope distance from horizontal run and vertical rise.',
   path: '/toolbox/gradient-grade-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function GradientGradeCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Gradient & Grade Calculator", path: '/toolbox/gradient-grade-calculator' },
+    { name: 'Gradient & Grade Calculator', path: '/toolbox/gradient-grade-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function GradientGradeCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-red-500/10 text-red-400 border border-red-500/20 mb-6 uppercase tracking-[0.15em]">
-              Surveying
+              Surveying Trigonometry
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Gradient & Grade <span className="text-red-400">Calculator</span>
+              Gradient &amp; Grade <span className="text-red-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate gradient percentage, angle, and elevation difference for surveying.
+              Convert horizontal run and vertical elevation change into grade percentage, mm/m fall, slope angle, ratio, and hypotenuse distance.
             </p>
           </div>
         </section>

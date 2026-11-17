@@ -6671,189 +6671,242 @@
     ]
   },
   "glazing-wind-load-calculator": {
-    "title": "Glazing Wind Load Calculator",
-    "description": "Calculate curtain wall glass panel deflection, bending stress, and allowable wind pressure per ASTM E1300 and IBC building codes.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "q_z = 0.613 × K_z × K_zt × K_d × V² (N/m², ASCE 7-22 Chapter 26) • t_min = √(P_design × A / σ_allow)",
+    "title": "Architectural Glazing Wind Load & Plate Deflection Calculator",
+    "description": "Calculate 4-side simply supported glass panel center deflection, bending stress, and allowable deflection limits using Navier plate series.",
+    "discipline": "Facade Structural Plate Mechanics",
+    "standards": "Four-Side Simply Supported Rectangular Thin-Plate Navier Double Sine Series (Kirchhoff-Love Linear Plate Theory, m,n = 1..19)",
+    "cadContext": "Verify clear mullion glazing bite dimensions and edge support continuity on curtain-wall CAD shop drawings before evaluating L/175 seal or L/60 deflection limits.",
+    "formula": "D = E*t^3/(12*(1-nu^2)); w0 = sum_{m,n odd<=19} [16*q / (pi^6 * D * m * n * ((m/a)^2 + (n/b)^2)^2)] * sin(m*pi/2)*sin(n*pi/2); sigma_max = 6*max(Mx, My)/t^2",
     "inputs": [
       {
-        "label": "Width a (mm)",
+        "label": "Panel Width W (mm)",
         "val": "1500"
       },
       {
-        "label": "Height b (mm)",
+        "label": "Panel Height H (mm)",
         "val": "2400"
       },
       {
-        "label": "Design Wind Load (kPa)",
+        "label": "Uniform Wind Pressure q (kPa)",
         "val": "1.8"
       },
       {
-        "label": "Nominal Thickness (mm)",
+        "label": "Monolithic Thickness t (mm)",
         "val": "10"
       },
       {
-        "label": "Heat Treatment Type",
-        "val": "Fully Tempered (FT)"
+        "label": "Elastic Modulus E (MPa)",
+        "val": "70000"
       },
       {
-        "label": "Deflection Standard Limit",
-        "val": "L / 175 (Strict Structural Seal)"
+        "label": "Poisson Ratio nu",
+        "val": "0.22"
+      },
+      {
+        "label": "Deflection Divisor",
+        "val": "175"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Center Deflection w0",
+        "val": "12.35 mm"
+      },
+      {
+        "label": "Max Bending Stress sigma_max",
+        "val": "20.45 MPa"
+      },
+      {
+        "label": "Allowable Deflection (a / 175)",
+        "val": "8.57 mm (DEFLECTION EXCEEDS LIMIT)"
+      }
+    ]
   },
   "gradient-grade-calculator": {
-    "title": "Gradient & Grade Calculator",
-    "description": "Calculate gradient percentage, angle, and elevation difference for surveying.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "grade% = rise/run*100, angle = atan(rise/run)",
+    "title": "Gradient Percentage, Slope Angle & Slope Distance Calculator",
+    "description": "Calculate surveying gradient percentage, mm/m per mille, slope angle, grade ratio, and slope distance.",
+    "discipline": "Surveying & Civil Grading Trigonometry",
+    "standards": "Surveying & Civil Grade, Slope Angle, Ratio & Slope Distance Trigonometry",
+    "cadContext": "Transfer exact civil grading percentages, mm/m per-mille falls, and 3D hypotenuse slope lengths between site grading plans and pipe trench invert schedules.",
+    "formula": "Grade% = (rise / run)*100; PerMille = (rise / run)*1000 mm/m; Angle = atan2(rise, run)*(180/pi); SlopeDist = sqrt(run^2 + rise^2)",
     "inputs": [
       {
-        "label": "Horizontal Dist (m)",
+        "label": "Horizontal Distance / Run (m)",
         "val": "100"
       },
       {
-        "label": "Elevation Diff (m)",
+        "label": "Elevation Difference / Rise (m)",
         "val": "5"
       }
     ],
     "outputs": [
       {
-        "label": "Grade",
+        "label": "Grade Percentage",
         "val": "5.000 %"
       },
       {
-        "label": "Angle",
-        "val": "2.862 deg"
+        "label": "Per Mille (mm/m)",
+        "val": "50.00 mm/m"
+      },
+      {
+        "label": "Slope Angle",
+        "val": "2.8624 deg"
       },
       {
         "label": "Slope Distance",
-        "val": "100.12 m"
+        "val": "100.1249 m"
+      },
+      {
+        "label": "Grade Ratio",
+        "val": "1 : 20.00"
       }
     ]
   },
   "grease-trap-sizing-calculator": {
-    "title": "Grease Trap Sizing Calculator (ASME / PDI)",
-    "description": "Calculate grease interceptor capacity and flow rate for commercial kitchens.",
-    "discipline": "Environmental Process, Hydrology & Open-Channel Hydraulics",
-    "standards": "WEF Manual of Practice No. 8 (MOP 8), Metcalf & Eddy Wastewater Engineering, ASCE/EWRI Urban Drainage Guidelines, International Plumbing Code (IPC)",
-    "cadContext": "Check hydraulic grade line (HGL), invert elevations, freeboard clearances, and peak diurnal flow peaking factors across all connected P&ID and civil site utility profiles.",
-    "formula": "Flow Rate = (Total Fixture Capacity × 0.75) / 2 min Drain Period (PDI G-101 / ASME A112.14.3)",
+    "title": "Grease Interceptor Volumetric Flow Sizing Calculator",
+    "description": "Calculate sink fixture volume, peak drain-down discharge rate (GPM), commercial interceptor flow tier, and grease holding capacity.",
+    "discipline": "Volumetric Fixture Drain-Down Sizing",
+    "standards": "Volumetric Compartment Sink Drain-Down Sizing Method (1 US gal = 231 in^3 exact; Commercial Tiers 4..100 GPM @ 2 lb/GPM)",
+    "cadContext": "Cross-check commercial kitchen 3-compartment sink basin interior dimensions on architectural fixture schedules before sizing inline hydromechanical grease interceptors.",
+    "formula": "V_gal = (N*L*W*D)/231; V_load = V_gal * fillFactor; Q_calc = V_load / t_drain + Q_extra (GPM)",
     "inputs": [
       {
-        "label": "Commercial 3-Compartment Sinks Count",
-        "val": "2"
+        "label": "Sink Compartments N",
+        "val": "3"
       },
       {
-        "label": "Sink Bowl Dimensions (cm)",
-        "val": "45 × 45 × 30 cm Standard Wash Basin"
+        "label": "Bowl Dimensions L x W x D (in)",
+        "val": "18 x 18 x 12"
       },
       {
-        "label": "Commercial Dishwasher Count",
-        "val": "1"
+        "label": "Fill Factor",
+        "val": "0.75"
+      },
+      {
+        "label": "Drain-Down Time (min)",
+        "val": "1.0"
+      },
+      {
+        "label": "Additional Fixture Flow (GPM)",
+        "val": "0"
       }
     ],
     "outputs": [
       {
-        "label": "Min Certified Flow Rating",
-        "val": "60 GPM"
+        "label": "Geometric Sink Volume",
+        "val": "50.49 gal"
       },
       {
-        "label": "Minimum Grease Holding Capacity",
-        "val": "120 lbs"
+        "label": "Effective Drain Load",
+        "val": "37.87 gal (143.35 L)"
       },
       {
-        "label": "Estimated Peak Discharge Flow",
-        "val": "56.1 GPM"
+        "label": "Calculated Discharge Flow",
+        "val": "37.87 GPM"
       },
       {
-        "label": "Equivalent Metric Liquid Volume",
-        "val": "6813 Liters"
+        "label": "Recommended Flow Tier",
+        "val": "50 GPM"
+      },
+      {
+        "label": "Min Grease Storage",
+        "val": "100 lbs"
       }
     ]
   },
   "grinding-ratio-calculator": {
-    "title": "Grinding Ratio Calculator",
-    "description": "Calculate grinding ratio (G-ratio) from volume of material removed and wheel wear.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "G = V_metal / V_wheel • Specific Energy u = u_size(a_p) · (v_s / 30)^0.15 (Malkin & Guo Grinding Model)",
+    "title": "Grinding Ratio (G-Ratio) & Specific Grinding Energy Calculator",
+    "description": "Calculate volumetric grinding ratio (G = Vw/Vs), removal rate (mm3/s), specific grinding energy (J/mm3), and total net energy.",
+    "discipline": "Abrasive Machining & Grinding Efficiency",
+    "standards": "Volumetric Grinding Ratio (G-Ratio) & Specific Grinding Energy First-Principles Balance",
+    "cadContext": "Log measured stock-removal volumes and wheel radial wear compensation offsets from CNC cylindrical or surface grinders to track dressing intervals and thermal burn thresholds.",
+    "formula": "G = Vw / Vs; Qw_s = Qw / 60 (mm3/s); u = (1000 * P_net) / Qw_s (J/mm3); E_total = (u * Vw) / 1000 (kJ)",
     "inputs": [
       {
-        "label": "Metal Removed (mm3)",
+        "label": "Workpiece Material Removed Vw (mm3)",
         "val": "50000"
       },
       {
-        "label": "Wheel Wear (mm3)",
+        "label": "Wheel Abrasive Wear Vs (mm3)",
         "val": "500"
       },
       {
-        "label": "Depth of Cut (mm)",
-        "val": "0.01"
+        "label": "Net Grinding Power P_net (kW)",
+        "val": "2.5"
       },
       {
-        "label": "Wheel Speed (m/s)",
-        "val": "30"
+        "label": "Material Removal Rate Qw (mm3/min)",
+        "val": "1200"
       }
     ],
     "outputs": [
       {
-        "label": "Grinding G-Ratio (G)",
+        "label": "Grinding Ratio G",
         "val": "100.00"
       },
       {
-        "label": "Specific Energy (u)",
-        "val": "70.000 J/mm³"
+        "label": "Specific Grinding Energy u",
+        "val": "125.00 J/mm3"
+      },
+      {
+        "label": "Removal Rate Qw_s",
+        "val": "20.00 mm3/s"
+      },
+      {
+        "label": "Total Net Energy E_total",
+        "val": "6250.00 kJ"
       }
     ]
   },
   "grinding-wheel-speed-calculator": {
-    "title": "Grinding Wheel Speed Calculator",
-    "description": "Calculate grinding wheel surface speed, RPM, and MRR from wheel specs.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "v = pi*D*n/1000, MRR = doc*feed*width",
+    "title": "Grinding Wheel Surface Speed & Specific MRR Calculator",
+    "description": "Calculate grinding wheel surface speed (m/s and SFPM), volumetric MRR, specific removal rate Qw' (mm3/(mm*s)), and speed ratio.",
+    "discipline": "Grinding Pass Kinematics",
+    "standards": "Grinding Wheel Peripheral Velocity & Width-Normalized Specific Material Removal Rate (Qw')",
+    "cadContext": "Validate programmed spindle RPM against wheel blotter maximum peripheral speed (m/s and SFPM) and verify specific removal rate Qw' per millimeter of wheel contact width in CAM grinding cycles.",
+    "formula": "vs = (pi*ds*n)/60000 (m/s); Qw = ae*vw*bd (mm3/min); Qw' = Qw/(60*bd) = (ae*vw)/60 (mm3/(mm*s)); qs = vs/(vw/60000)",
     "inputs": [
       {
-        "label": "Wheel Dia (mm)",
+        "label": "Wheel Outer Diameter ds (mm)",
         "val": "200"
       },
       {
-        "label": "Wheel RPM",
+        "label": "Spindle Speed n (RPM)",
         "val": "3000"
       },
       {
-        "label": "Depth of Cut (mm)",
-        "val": "0.01"
+        "label": "Radial Depth of Cut ae (mm)",
+        "val": "0.02"
       },
       {
-        "label": "Feed Rate (mm/min)",
-        "val": "500"
+        "label": "Workpiece Table Feed vw (mm/min)",
+        "val": "12000"
       },
       {
-        "label": "Width (mm)",
+        "label": "Active Grinding Width bd (mm)",
         "val": "20"
       }
     ],
     "outputs": [
       {
-        "label": "Surface Speed",
-        "val": "31.416 m/s"
+        "label": "Wheel Surface Speed vs",
+        "val": "31.416 m/s (6184.24 SFPM)"
       },
       {
-        "label": "MRR",
-        "val": "100.00 mm3/min"
+        "label": "Volumetric MRR Qw",
+        "val": "4800.00 mm3/min"
       },
       {
-        "label": "Specific MRR",
-        "val": "0.200000 mm3/mm"
+        "label": "Specific MRR Qw' (per s)",
+        "val": "4.000 mm3/(mm*s)"
+      },
+      {
+        "label": "Specific MRR Qw' (per min)",
+        "val": "240.00 mm3/(mm*min)"
+      },
+      {
+        "label": "Speed Ratio qs = vs/vw",
+        "val": "157.08"
       }
     ]
   },

@@ -1,19 +1,19 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
-import CalculatorClient from './calculator-client';
+import GreaseTrapSizingCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Grease Trap Sizing Calculator (ASME / PDI)",
-  description: "Calculate grease interceptor capacity and flow rate for commercial kitchens.",
+  title: 'Grease Interceptor Volumetric Flow Sizing Calculator',
+  description: 'Calculate sink fixture volume (US gallons and liters), peak drain-down discharge rate (GPM), commercial interceptor flow tier, and minimum grease storage (lbs).',
   path: '/toolbox/grease-trap-sizing-calculator',
 });
 
-export default function CalculatorPage() {
+export default function GreaseTrapSizingCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Grease Trap Sizing Calculator (ASME / PDI)", path: '/toolbox/grease-trap-sizing-calculator' },
+    { name: 'Grease Trap Sizing Calculator', path: '/toolbox/grease-trap-sizing-calculator' },
   ]);
 
   return (
@@ -26,18 +26,18 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Commercial Kitchen Plumbing
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Grease Trap Sizing Calculator (ASME / PDI)
+              Grease Interceptor <span className="text-orange-400">Sizing Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate grease interceptor capacity and flow rate for commercial kitchens.
+              Compute volumetric compartment sink drain-down discharge rate (GPM), recommended standard flow rating tier, and minimum grease retention capacity.
             </p>
           </div>
         </section>
         <section className="py-16 max-w-[1200px] mx-auto px-6 md:px-12">
-          <CalculatorClient />
+          <GreaseTrapSizingCalculatorClient />
           <ToolboxEngineeringGuide slug="grease-trap-sizing-calculator" />
         </section>
       </main>
