@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import FatigueLifeClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Fatigue Life (S-N Curve) Calculator',
-  description: 'Calculate fatigue life cycles from stress amplitude using Basquin equation and S-N curves. Supports steel and aluminum with endurance limit.',
+  title: 'Fatigue Life (Basquin S-N Curve & Goodman) Calculator',
+  description: 'Calculate finite fatigue life cycles from alternating and mean stresses using two-point log-linear Basquin S-N and Modified Goodman equations.',
   path: '/toolbox/fatigue-life-calculator',
 });
 
@@ -26,13 +26,13 @@ export default function FatigueLifePage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-red-500/10 text-red-400 border border-red-500/20 mb-6 uppercase tracking-[0.15em]">
-              Mechanical Fatigue Design
+              Fatigue S-N Modeling
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Fatigue Life <span className="text-red-400">S-N Curve</span> Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate fatigue life cycles from stress amplitude using the Basquin equation. Supports steel and aluminum with endurance limit and surface finish factors.
+              Compute modified endurance limit, Basquin exponent b, Goodman equivalent stress, and predicted load cycles N.
             </p>
           </div>
         </section>

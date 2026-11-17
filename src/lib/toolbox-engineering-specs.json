@@ -5243,51 +5243,71 @@
     ]
   },
   "extrusion-pressure-calculator": {
-    "title": "Extrusion Pressure Calculator",
-    "description": "Calculate extrusion pressure and force from reduction ratio and flow stress.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "p = sigma_f * (a + b*ln(r) + m*ln(r))",
+    "title": "Direct Extrusion Pressure & Ram Force Calculator",
+    "description": "Calculate extrusion ratio, ideal pressure, total extrusion pressure with container friction, and ram force from billet and die dimensions.",
+    "discipline": "Metal Forming & Plasticity Mechanics",
+    "standards": "Direct Extrusion Empirical Upper-Bound / Johnson Formula (p_ext = Yf*(a + b*ln(R) + 2*mu*Lb/D0))",
+    "cadContext": "Verify container bore D0, die orifice diameter Df, and billet slug length Lb in press tooling drawings before sizing hydraulic ram tonnage.",
+    "formula": "R = (D0/Df)^2; p_ideal = Yf*ln(R); p_ext = Yf*(a + b*ln(R) + 2*mu*Lb/D0); F = p_ext*pi*D0^2/4000",
     "inputs": [
       {
-        "label": "Flow Stress (MPa)",
+        "label": "Billet Diameter D0 (mm)",
+        "val": "100"
+      },
+      {
+        "label": "Extrudate Diameter Df (mm)",
+        "val": "30"
+      },
+      {
+        "label": "Billet Length Lb (mm)",
+        "val": "200"
+      },
+      {
+        "label": "Mean Flow Stress Yf (MPa)",
         "val": "150"
       },
       {
-        "label": "Reduction Ratio",
-        "val": "10"
+        "label": "Container Friction mu",
+        "val": "0.10"
       },
       {
-        "label": "Die Angle (deg)",
-        "val": "45"
+        "label": "Johnson Constant a",
+        "val": "0.8"
       },
       {
-        "label": "Billet Dia (mm)",
-        "val": "100"
+        "label": "Johnson Factor b",
+        "val": "1.2"
       }
     ],
     "outputs": [
       {
-        "label": "Extrusion Pressure",
-        "val": "925.59 MPa"
+        "label": "Extrusion Ratio R",
+        "val": "11.1111"
       },
       {
-        "label": "Extrusion Force",
-        "val": "7269.60 kN"
+        "label": "Ideal Pressure",
+        "val": "361.19 MPa"
+      },
+      {
+        "label": "Total Extrusion Pressure",
+        "val": "613.43 MPa"
+      },
+      {
+        "label": "Total Ram Force",
+        "val": "4817.87 kN"
       }
     ]
   },
   "fan-law-calculator": {
-    "title": "Fan Affinity Law Calculator",
-    "description": "Calculate fan performance changes with speed using affinity laws for flow, pressure, and power.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Q2/Q1=N2/N1, P2/P1=(N2/N1)^2, W2/W1=(N2/N1)^3",
+    "title": "Fan Affinity Laws Calculator",
+    "description": "Calculate centrifugal fan airflow, pressure, shaft power, and equivalent static pressure across speed, wheel diameter, and gas density changes.",
+    "discipline": "HVAC & Turbomachinery Similarity Laws",
+    "standards": "Centrifugal Fan Affinity Laws (q2/q1 = (n2/n1)*(d2/d1)^3, dp2/dp1 = (n2/n1)^2*(d2/d1)^2*(rho2/rho1), P2/P1 = (n2/n1)^3*(d2/d1)^5*(rho2/rho1))",
+    "cadContext": "Cross-check scaled static pressure and motor kW against ductwork pressure drop schedules and VFD electrical feeder sizing.",
+    "formula": "Q2 = Q1*(N2/N1)*(D2/D1)^3; dp2 = dp1*(N2/N1)^2*(D2/D1)^2*(rho2/rho1); P2 = P1*(N2/N1)^3*(D2/D1)^5*(rho2/rho1)",
     "inputs": [
       {
-        "label": "Old Speed N1 (RPM)",
+        "label": "Baseline Speed N1 (RPM)",
         "val": "1200"
       },
       {
@@ -5295,112 +5315,194 @@
         "val": "900"
       },
       {
-        "label": "Old Flow Q1 (m3/s)",
-        "val": "5"
+        "label": "Baseline Diameter D1 (mm)",
+        "val": "600"
       },
       {
-        "label": "Old Pressure P1 (Pa)",
+        "label": "New Diameter D2 (mm)",
+        "val": "600"
+      },
+      {
+        "label": "Baseline Density rho1 (kg/m3)",
+        "val": "1.20"
+      },
+      {
+        "label": "New Density rho2 (kg/m3)",
+        "val": "1.20"
+      },
+      {
+        "label": "Baseline Flow Q1 (m3/s)",
+        "val": "5.0"
+      },
+      {
+        "label": "Baseline Pressure dp1 (Pa)",
         "val": "500"
       },
       {
-        "label": "Old Power W1 (kW)",
-        "val": "3"
+        "label": "Baseline Power P1 (kW)",
+        "val": "3.0"
       }
     ],
     "outputs": [
       {
-        "label": "New Flow Q2",
+        "label": "New Volume Flow Q2",
         "val": "3.750 m3/s"
       },
       {
-        "label": "New Pressure P2",
+        "label": "New Pressure dp2",
         "val": "281.25 Pa"
       },
       {
-        "label": "New Power W2",
-        "val": "1.266 kW"
+        "label": "New Shaft Power P2",
+        "val": "1.2656 kW"
+      },
+      {
+        "label": "Equiv. Static Pressure ESP",
+        "val": "281.25 Pa"
       }
     ]
   },
   "fatal-error-diagnostic-wizard": {
-    "title": "AutoCAD Fatal Error Diagnostic Wizard",
-    "description": "Diagnose the exact root cause of your AutoCAD fatal error crashes (Access Violation c0000005, e06d7363h, 0x0000). Get tailored step-by-step repair guides for dll and registry conflicts.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "AutoCAD Exception 0xC0000005 / 0xE06D7363 Stack Trace & Graphics Hardware Acceleration (3DCONFIG) Triage",
+    "title": "AutoCAD Fatal Error & Drawing Recovery Diagnostic Wizard",
+    "description": "Structured recovery checklists using documented Autodesk AutoCAD file repair commands (RECOVER, RECOVERALL, AUDIT, PURGE, -PURGE, DRAWINGRECOVERY).",
+    "discipline": "CAD Drawing Recovery & File Maintenance",
+    "standards": "Autodesk AutoCAD 2025 Help (Repair Damaged Drawing Files GUID-353D7074, Recovering from a System Failure GUID-DDDADE14, -PURGE Command GUID-C3876E92)",
+    "cadContext": "Run RECOVERALL before detaching corrupted external references, use AUDIT and -PURGE iteratively, and inspect _recover.dwg, .sv$, and .bak files in DRAWINGRECOVERY.",
+    "formula": "Workflow Triage: RECOVER / RECOVERALL -> AUDIT (AUDITCTL=1) & PURGE / -PURGE -> DRAWINGRECOVERY (.sv$ / .bak / _recover.dwg)",
     "inputs": [
       {
-        "label": "Search for a specific error code",
-        "val": "Standard"
+        "label": "Selected Workflow",
+        "val": "Damaged DWG / Fatal Error Opening File"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Primary Recovery Command",
+        "val": "RECOVERALL"
+      }
+    ]
   },
   "fatigue-life-calculator": {
-    "title": "Fatigue Life S-N Curve Calculator",
-    "description": "Calculate fatigue life cycles from stress amplitude using Basquin equation and S-N curves. Supports steel and aluminum with endurance limit.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "{'Basquin equation: Sa = a × N^b, where a = Sut²/Se, b = -0.085. Steel has endurance limit (infinite life below Se). Aluminum has NO endurance limit — always finite life. Surface and size factors reduce Se.'}",
+    "title": "Fatigue Life (Basquin S-N Curve & Goodman) Calculator",
+    "description": "Calculate finite fatigue life cycles from alternating and mean stress using two-point Basquin S-N and Modified Goodman equations.",
+    "discipline": "High-Cycle Mechanical Fatigue Analysis",
+    "standards": "Two-Point Log-Linear Basquin S-N Curve (Anchored at 10^3 and 10^6 cycles) with Modified Goodman Mean Stress Correction",
+    "cadContext": "Verify hot-spot alternating and mean principal stresses at fillet transitions and bolt holes before estimating finite high-cycle fatigue life.",
+    "formula": "Se = ka*kb*Se_prime; S_1000 = f*Sut; b = -log10(S_1000/Se)/3; a = S_1000^2/Se; sigma_a_eq = sigma_a/(1 - sigma_m/Sut); N = (sigma_a_eq/a)^(1/b)",
     "inputs": [
       {
-        "label": "Material",
-        "val": "Steel (Sut=600 MPa)"
+        "label": "Material Preset",
+        "val": "Carbon Steel Ref"
       },
       {
-        "label": "Stress Amplitude Sa (MPa)",
-        "val": "200"
+        "label": "Ultimate Strength Sut (MPa)",
+        "val": "600"
       },
       {
-        "label": "Surface Finish Factor",
-        "val": "0.85 — Machined"
+        "label": "Base Endurance Limit Se_prime (MPa)",
+        "val": "300"
       },
       {
-        "label": "Size Factor",
-        "val": "0.9"
-      }
-    ],
-    "outputs": []
-  },
-  "fillet-weld-size-calculator": {
-    "title": "Fillet Weld Size Calculator",
-    "description": "Calculate minimum fillet weld size and throat thickness.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "Throat = 0.707*leg",
-    "inputs": [
-      {
-        "label": "Thicker Plate (mm)",
-        "val": "12"
+        "label": "10^3-Cycle Fraction f",
+        "val": "0.85"
       },
       {
-        "label": "Thinner Plate (mm)",
-        "val": "8"
+        "label": "Surface Factor ka",
+        "val": "0.85"
       },
       {
-        "label": "Weld Strength (MPa)",
-        "val": "200"
+        "label": "Size Factor kb",
+        "val": "0.90"
       },
       {
-        "label": "Force (kN)",
+        "label": "Alternating Stress sigma_a (MPa)",
+        "val": "280"
+      },
+      {
+        "label": "Mean Stress sigma_m (MPa)",
         "val": "50"
       }
     ],
     "outputs": [
       {
-        "label": "Min Leg Size",
-        "val": "3.000 mm"
+        "label": "Modified Se",
+        "val": "229.50 MPa"
       },
       {
-        "label": "Required Leg",
-        "val": "1.000 mm"
+        "label": "S_1000 (f*Sut)",
+        "val": "510.00 MPa"
       },
       {
-        "label": "Throat",
-        "val": "2.121 mm"
+        "label": "Goodman Eq. Stress",
+        "val": "305.45 MPa"
+      },
+      {
+        "label": "Basquin Exponent b",
+        "val": "-0.115596"
+      },
+      {
+        "label": "Predicted Fatigue Life N",
+        "val": "84310 cycles"
+      }
+    ]
+  },
+  "fillet-weld-size-calculator": {
+    "title": "Fillet Weld Throat Stress & Capacity Calculator",
+    "description": "Calculate equal-leg fillet weld effective throat thickness, throat shear stress, design and allowable shear capacity, and required leg size.",
+    "discipline": "Welded Structural Connection Mechanics",
+    "standards": "Equal-Leg Fillet Weld Throat Geometry (te = w / sqrt(2)) & Nominal Weld Shear Strength (Fnw = 0.60 * FEXX)",
+    "cadContext": "Verify weld symbol leg size w, effective length Lw after end returns or craters, and connected plate thicknesses on shop fabrication drawings.",
+    "formula": "te = w / sqrt(2); tau = 1000*F/(te*Lw); Rn = 0.60*FEXX*te*Lw/1000; phi*Rn = phi*Rn; Rn/Omega = Rn/Omega",
+    "inputs": [
+      {
+        "label": "Equal Weld Leg Size w (mm)",
+        "val": "6"
+      },
+      {
+        "label": "Effective Weld Length Lw (mm)",
+        "val": "200"
+      },
+      {
+        "label": "Filler Strength FEXX (MPa)",
+        "val": "485"
+      },
+      {
+        "label": "Applied Shear Force F (kN)",
+        "val": "120"
+      },
+      {
+        "label": "LRFD Resistance Factor phi",
+        "val": "0.75"
+      },
+      {
+        "label": "ASD Safety Factor Omega",
+        "val": "2.00"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Effective Throat te",
+        "val": "4.2426 mm"
+      },
+      {
+        "label": "Throat Shear Stress tau",
+        "val": "141.42 MPa"
+      },
+      {
+        "label": "Design Strength (phi*Rn)",
+        "val": "185.19 kN"
+      },
+      {
+        "label": "Allowable Strength (Rn/Omega)",
+        "val": "123.46 kN"
+      },
+      {
+        "label": "Required Leg (phi=0.75)",
+        "val": "3.89 mm"
+      },
+      {
+        "label": "Required Leg (Omega=2.00)",
+        "val": "5.83 mm"
       }
     ]
   },

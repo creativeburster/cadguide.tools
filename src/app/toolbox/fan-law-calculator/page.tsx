@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import FanLawCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Fan Affinity Law Calculator",
-  description: "Calculate fan performance changes with speed using affinity laws for flow, pressure, and power.",
+  title: 'Fan Affinity Laws Calculator (Speed, Diameter & Density)',
+  description: 'Calculate centrifugal fan airflow, static pressure, shaft power, and equivalent static pressure when changing speed (RPM), impeller diameter, or air density.',
   path: '/toolbox/fan-law-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function FanLawCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Fan Affinity Law Calculator", path: '/toolbox/fan-law-calculator' },
+    { name: 'Fan Affinity Law Calculator', path: '/toolbox/fan-law-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function FanLawCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-green-500/10 text-green-400 border border-green-500/20 mb-6 uppercase tracking-[0.15em]">
-              HVAC
+              HVAC & Fan Laws
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Fan Affinity Law <span className="text-green-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate fan performance changes with speed using affinity laws for flow, pressure, and power.
+              Calculate scaled volume flow, pressure, and shaft power across speed (RPM), wheel diameter, and gas density changes.
             </p>
           </div>
         </section>

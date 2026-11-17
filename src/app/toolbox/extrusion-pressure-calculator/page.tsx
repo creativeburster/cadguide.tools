@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import ExtrusionPressureCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Extrusion Pressure Calculator",
-  description: "Calculate extrusion pressure and force from reduction ratio and flow stress.",
+  title: 'Direct Extrusion Pressure & Ram Force Calculator',
+  description: 'Calculate extrusion ratio, ideal pressure, total extrusion pressure with container friction, and ram force from billet and die dimensions.',
   path: '/toolbox/extrusion-pressure-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function ExtrusionPressureCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Extrusion Pressure Calculator", path: '/toolbox/extrusion-pressure-calculator' },
+    { name: 'Extrusion Pressure Calculator', path: '/toolbox/extrusion-pressure-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function ExtrusionPressureCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-purple-500/10 text-purple-400 border border-purple-500/20 mb-6 uppercase tracking-[0.15em]">
-              Manufacturing
+              Metal Forming
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Extrusion Pressure <span className="text-purple-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate extrusion pressure and force from reduction ratio and flow stress.
+              Calculate extrusion ratio, homogeneous pressure, total direct extrusion pressure, and press ram force.
             </p>
           </div>
         </section>

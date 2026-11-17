@@ -168,7 +168,8 @@ flowchart LR
 | 20 | domestic-water-demand-calculator、door-schedule-quantity-calculator、drag-force-calculator、drawing-lag-performance-cleaner、drill-bit-size-chart | c4a84e1c（待复核） |
 | 21 | drilling-time-calculator、drywall-quantity-calculator、duct-pressure-loss-calculator、duct-size-friction-loss-calculator、duct-sizing-calculator | 0afcd0f1（待复核） |
 | 22 | dwg-version-checker、dxf-watermark-layer-parser、edm-material-removal-calculator、egress-width-calculator、elevator-traffic-calculator | b30e888e（待复核） |
-| 23 | embodied-carbon-calculator、energy-unit-converter、engineering-unit-converter、euler-bernoulli-beam-calculator、excavation-volume-calculator | 待复核 |
+| 23 | embodied-carbon-calculator、energy-unit-converter、engineering-unit-converter、euler-bernoulli-beam-calculator、excavation-volume-calculator | d4cc7a87（待复核） |
+| 24 | extrusion-pressure-calculator、fan-law-calculator、fatal-error-diagnostic-wizard、fatigue-life-calculator、fillet-weld-size-calculator | 待复核 |
 
 ---
 
