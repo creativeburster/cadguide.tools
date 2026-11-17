@@ -164,7 +164,8 @@ flowchart LR
 | 16 | concrete-volume-mix-calculator、concurrent-vs-named-breakeven-calculator、contour-interval-calculator、cooling-load-calculator、cooling-tower-sizing-calculator（跳过聚合路由目录 convert） | 458540d4（待复核） |
 | 17 | coordinate-converter-calculator、corrosion-rate-calculator、coupling-torque-calculator、crane-load-calculator、crane-sling-calculator | 65b21863（待复核） |
 | 18 | csv-to-dxf-converter、ctb-plot-style-pen-visualizer、culvert-sizing-calculator、cut-fill-volume-calculator、cutting-speed-calculator | 82ad164c（待复核） |
-| 19 | damping-ratio-calculator、deep-drawing-calculator、deflection-angle-calculator、density-unit-converter、die-casting-pressure-calculator | 待复核 |
+| 19 | damping-ratio-calculator、deep-drawing-calculator、deflection-angle-calculator、density-unit-converter、die-casting-pressure-calculator | afb9cfc6（待复核） |
+| 20 | domestic-water-demand-calculator、door-schedule-quantity-calculator、drag-force-calculator、drawing-lag-performance-cleaner、drill-bit-size-chart | 待复核 |
 
 ---
 

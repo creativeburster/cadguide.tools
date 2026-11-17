@@ -4339,85 +4339,65 @@
   },
   "domestic-water-demand-calculator": {
     "title": "Domestic Water Demand & Flow Rate Calculator",
-    "description": "Calculate building domestic water demand, peak flow, and pipe sizing per Hunter",
-    "discipline": "Environmental Process, Hydrology & Open-Channel Hydraulics",
-    "standards": "WEF Manual of Practice No. 8 (MOP 8), Metcalf & Eddy Wastewater Engineering, ASCE/EWRI Urban Drainage Guidelines, International Plumbing Code (IPC)",
-    "cadContext": "Check hydraulic grade line (HGL), invert elevations, freeboard clearances, and peak diurnal flow peaking factors across all connected P&ID and civil site utility profiles.",
-    "formula": "Hunter Modified Probabilistic Model: Peak Flow = f(WSFU) (International Plumbing Code Table E103.3)",
+    "description": "Interpolate building peak domestic water demand (GPM, L/s, m3/h) and minimum pipe inner diameter from verified WSFU lookup nodes.",
+    "discipline": "Building Plumbing Hydraulics & Domestic Water Supply",
+    "standards": "Engineering ToolBox Water Supply Fixture Units Lookup Curves (Without Flush Valves 1-50 WSFU; With Flush Valves 5-50 WSFU)",
+    "cadContext": "Verify cold and hot domestic water riser flow velocities and minimum inner pipe diameters on MEP plumbing schematics.",
+    "formula": "Piecewise linear WSFU-to-GPM lookup interpolation; D_min = sqrt(4*Q/(pi*v_max))",
     "inputs": [
       {
         "label": "Total Water Supply Fixture Units (WSFU)",
-        "val": "160"
+        "val": "15"
       },
       {
-        "label": "Flush Device System",
-        "val": "Flush Tank Predominant (Residential / Office)"
+        "label": "Flush System Type",
+        "val": "Without Flush Valves (Flush Tanks)"
       },
       {
-        "label": "Required Residual Pressure (bar)",
-        "val": "2.5"
+        "label": "Max Design Velocity (m/s)",
+        "val": "2.0"
       }
     ],
     "outputs": [
       {
-        "label": "Peak Probable Domestic Flow Rate",
-        "val": "16.08 m³/h"
+        "label": "Peak Probable Flow Rate",
+        "val": "17.50 GPM (1.104 L/s / 3.975 m3/h)"
       },
       {
-        "label": "Hunter Curve Demand Flow",
-        "val": "70.8 GPM"
-      },
-      {
-        "label": "Recommended Main Supply Header ID",
-        "val": "57 mm"
-      },
-      {
-        "label": "Specified Residual Head at Fixture",
-        "val": "25.5 m H₂O"
+        "label": "Minimum Header Pipe Inner Dia",
+        "val": "26.51 mm"
       }
     ]
   },
   "door-schedule-quantity-calculator": {
     "title": "Door Schedule & Hardware Quantity Calculator",
-    "description": "Calculate door count, frame count, and hardware sets for building door schedules.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Total Doors = ceil(Rooms × Ratio × Floors) • Hinges: 3 per non-rated, 4 per fire door (IBC Chapter 10 / NFPA 80)",
+    "description": "Calculate door openings, leaf counts, fire-rated closers, locksets, and height-based hinges per NFPA 80 Section 6.4.3.1.1.",
+    "discipline": "Architectural Door Schedules & Builders Hardware",
+    "standards": "NFPA 80 Section 6.4.3.1.1 (2 hinges up to 60 in. height plus 1 hinge per additional 30 in. or fraction thereof)",
+    "cadContext": "Reconcile BIM door leaf heights, single/double leaf counts, fire-rated closers, and hinge schedules prior to issuing Division 08 hardware sets.",
+    "formula": "Openings = ceil(Rooms*Ratio)*Storeys; Hinges/Leaf = 2 if H <= 60 in else 2 + ceil((H - 60)/30)",
     "inputs": [
       {
-        "label": "Total Habitable / Office Rooms",
-        "val": "40"
+        "label": "Rooms per Floor / Ratio / Storeys",
+        "val": "40 / 1.25 / 4"
       },
       {
-        "label": "Door-to-Room Multiplier",
-        "val": "1.25"
-      },
-      {
-        "label": "Fire-Rated Door Percentage (%)",
-        "val": "25"
-      },
-      {
-        "label": "Number of Typical Storeys",
-        "val": "4"
+        "label": "Door Leaf Height (in) / Fire-Rated (%)",
+        "val": "84 / 25%"
       }
     ],
     "outputs": [
       {
-        "label": "Total Building Door Openings",
-        "val": "200 leafs"
+        "label": "Total Openings & Leaves",
+        "val": "200 openings (200 leaves)"
       },
       {
-        "label": "Fire & Smoke Rated Doors (20-90min)",
-        "val": "50 doors"
+        "label": "Architectural Hinges (3 / leaf @ 84 in)",
+        "val": "600 hinges"
       },
       {
-        "label": "Heavy-Duty Ball Bearing Hinges",
-        "val": "650 hinges"
-      },
-      {
-        "label": "Overhead Door Closers (UL Listed)",
-        "val": "50 closers"
+        "label": "Fire-Rated Closers / Locksets",
+        "val": "50 closers / 200 locksets"
       }
     ]
   },
@@ -4433,11 +4413,11 @@
   },
   "drag-force-calculator": {
     "title": "Drag Force Calculator",
-    "description": "Calculate aerodynamic and hydrodynamic drag force.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Fd = 0.5*rho*v^2*Cd*A",
+    "description": "Calculate quadratic aerodynamic/hydrodynamic drag force, dynamic pressure, and drag power.",
+    "discipline": "Fluid Mechanics & Aerodynamics",
+    "standards": "Quadratic Drag Equation (Fd = 0.5 * rho * u^2 * Cd * A, Dynamic Pressure q = 0.5 * rho * u^2)",
+    "cadContext": "Estimate wind or fluid drag loads on exposed structural cladding, vehicles, and submerged piping supports.",
+    "formula": "Fd = 0.5*rho*u^2*Cd*A, q = 0.5*rho*u^2, Pd = Fd*u",
     "inputs": [
       {
         "label": "Density (kg/m3)",
@@ -4462,30 +4442,45 @@
         "val": "363.83 N"
       },
       {
-        "label": "Drag Power",
-        "val": "10.915 kW"
+        "label": "Drag Power / Dynamic Pressure",
+        "val": "10.915 kW / 551.25 Pa"
       }
     ]
   },
   "drawing-lag-performance-cleaner": {
     "title": "Drawing Lag & DWG Performance Cleaner",
-    "description": "Diagnose viewport lag, giant DWG file size, and slow opening speeds in AutoCAD. Generate highly optimized custom AutoLISP code to purge regapps and reset scale list edit configurations.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Drawing Lag & DWG Performance Cleaner",
-    "inputs": [],
+    "description": "Inspect ASCII DXF table bloat (APPID, LAYER, BLOCK, DGN dictionary hits) locally and generate pure ASCII AutoCAD cleanup .scr scripts.",
+    "discipline": "AutoCAD Drawing Hygiene & ASCII DXF Diagnostics",
+    "standards": "Autodesk AutoCAD 2025 Core Help Commands: PURGE / -PURGE (Regapps, Zero-length, Empty text, Orphaned DGN Data), PURGEAECDATA, AUDIT / AUDITCTL, OVERKILL",
+    "cadContext": "Audit large ASCII DXF headers and run documented AutoCAD purge routines on backup drawings to relieve viewport lag.",
+    "formula": "Read-only ASCII DXF group-code table inspection + documented .scr command checklist",
+    "inputs": [
+      {
+        "label": "Sample ASCII DXF Inspection",
+        "val": "3 APPIDs, 2 LAYERs, 4 ENTITIES"
+      }
+    ],
     "outputs": []
   },
   "drill-bit-size-chart": {
     "title": "Drill Bit Size Chart Number · Letter · Fractional",
-    "description": "Complete drill bit size chart: number drills (#1-#80), letter drills (A-Z), and fractional inch drills with metric conversions and tap drill applications.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Standardized parametric evaluation for Drill Bit Size Chart Number · Letter · Fractional",
-    "inputs": [],
-    "outputs": []
+    "description": "Complete 138-size drill chart (#80-#1, Letter A-Z, Fractional 1/64\"-1/2\") with exact 25.4 mm conversions, closest-bit finder, and verified Unified tap drills.",
+    "discipline": "Machining Hole Sizing & Thread Tapping Reference",
+    "standards": "ASME B94.11M Twist Drill Standard (#80-#1, A-Z, Fractional) and Unified Thread Standard (UNC/UNF/UNEF cutting tap drill chart)",
+    "cadContext": "Look up exact twist drill hole callouts and verified UNC/UNF/UNEF tap drill sizes directly for CNC CAM drilling operations.",
+    "formula": "Exact 1 inch = 25.4 mm metric equivalence across 138 ASME B94.11M standard drill sizes",
+    "inputs": [
+      {
+        "label": "Target Hole Diameter (mm)",
+        "val": "5.10"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Closest Standard Drill",
+        "val": "#7 (0.2010 in / 5.105 mm) -> 1/4-20 UNC"
+      }
+    ]
   },
   "drilling-time-calculator": {
     "title": "Drilling Time & Thrust Calculator",

@@ -1,537 +1,397 @@
 'use client';
 
-import { useState, useMemo, useRef } from 'react';
+import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Copy, Check, Code2, Zap, Gauge, Upload, Download, FileText, RefreshCw, Sliders, CheckCircle, AlertTriangle, Eye, Info } from 'lucide-react';
+import { Wrench, Info, RotateCcw, Copy, Check, Download, Upload, AlertTriangle } from 'lucide-react';
+
+const SAMPLE_ASCII_DXF = [
+  '0', 'SECTION', '2', 'HEADER', '9', '$ACADVER', '1', 'AC1032', '0', 'ENDSEC',
+  '0', 'SECTION', '2', 'TABLES',
+  '0', 'TABLE', '2', 'APPID',
+  '0', 'APPID', '2', 'ACAD',
+  '0', 'APPID', '2', 'THIRD_PARTY_GIS',
+  '0', 'APPID', '2', 'DGN_IMPORT_REGAPP',
+  '0', 'ENDTAB',
+  '0', 'TABLE', '2', 'LAYER',
+  '0', 'LAYER', '2', '0',
+  '0', 'LAYER', '2', 'ARCH_WALLS',
+  '0', 'ENDTAB',
+  '0', 'TABLE', '2', 'LTYPE',
+  '0', 'LTYPE', '2', 'CONTINUOUS',
+  '0', 'ENDTAB',
+  '0', 'ENDSEC',
+  '0', 'SECTION', '2', 'ENTITIES',
+  '0', 'LINE', '8', 'ARCH_WALLS', '10', '0.0', '20', '0.0', '11', '100.0', '21', '0.0',
+  '0', 'LINE', '8', 'ARCH_WALLS', '10', '100.0', '20', '0.0', '11', '100.0', '21', '50.0',
+  '0', 'POINT', '8', '0', '10', '0.0', '20', '0.0', '30', '0.0',
+  '0', 'TEXT', '8', '0', '10', '10.0', '20', '10.0', '40', '2.5', '1', 'ROOM 101',
+  '0', 'ENDSEC',
+  '0', 'EOF',
+].join('\n');
+
+interface DxfAuditStats {
+  totalLines: number;
+  byteSize: number;
+  appidCount: number;
+  layerCount: number;
+  ltypeCount: number;
+  blockCount: number;
+  entityCount: number;
+  dgnDictionaryHits: number;
+  isValidDxf: boolean;
+}
+
+function inspectAsciiDxf(text: string): DxfAuditStats {
+  const lines = text.split(/\r?\n/);
+  let appidCount = 0;
+  let layerCount = 0;
+  let ltypeCount = 0;
+  let blockCount = 0;
+  let entityCount = 0;
+  let dgnDictionaryHits = 0;
+  let inEntities = false;
+  let hasSection = false;
+
+  for (let i = 0; i < lines.length - 1; i += 2) {
+    const code = lines[i].trim();
+    const val = lines[i + 1].trim();
+    if (code === '0' && val === 'SECTION') {
+      hasSection = true;
+    } else if (code === '2' && val === 'ENTITIES') {
+      inEntities = true;
+    } else if (code === '0' && val === 'ENDSEC') {
+      inEntities = false;
+    } else if (code === '0' && val === 'APPID') {
+      appidCount++;
+    } else if (code === '0' && val === 'LAYER') {
+      layerCount++;
+    } else if (code === '0' && val === 'LTYPE') {
+      ltypeCount++;
+    } else if (code === '0' && val === 'BLOCK') {
+      blockCount++;
+    } else if (inEntities && code === '0' && val !== 'VERTEX' && val !== 'SEQEND' && val !== 'ENDSEC') {
+      entityCount++;
+    }
+    if (val.includes('ACAD_DGNLINESTYLECOMP')) {
+      dgnDictionaryHits++;
+    }
+  }
+
+  return {
+    totalLines: lines.length,
+    byteSize: text.length,
+    appidCount,
+    layerCount,
+    ltypeCount,
+    blockCount,
+    entityCount,
+    dgnDictionaryHits,
+    isValidDxf: hasSection && text.includes('EOF'),
+  };
+}
 
 export default function DrawingLagCleanerClient() {
-  const [cleanMode, setCleanMode] = useState<'lisp' | 'dxf'>('lisp');
-  const [cleanRegapp, setCleanRegapp] = useState(true);
-  const [cleanScalelist, setCleanScalelist] = useState(true);
-  const [cleanOrphanBlock, setCleanOrphanBlock] = useState(true);
-  const [runAudit, setRunAudit] = useState(true);
-  const [indexDgnLine, setIndexDgnLine] = useState(false); // DGN bloat check
-  
-  const [copiedText, setCopiedText] = useState<string | null>(null);
+  const [enableAudit, setEnableAudit] = useState(true);
+  const [enableAecPurge, setEnableAecPurge] = useState(true);
+  const [enableOverkill, setEnableOverkill] = useState(false);
+  const [enablePurgeDialogHint, setEnablePurgeDialogHint] = useState(true);
+  const [dxfText, setDxfText] = useState(SAMPLE_ASCII_DXF);
+  const [dxfFileName, setDxfFileName] = useState('sample-bloat-check.dxf');
+  const [copied, setCopied] = useState(false);
 
-  // Online DXF Cleaning States
-  const fileInputRef = useRef<HTMLInputElement>(null);
-  const [dxfFile, setDxfFile] = useState<File | null>(null);
-  const [isCleaning, setIsCleaning] = useState(false);
-  const [isCleaned, setIsCleaned] = useState(false);
-  const [cleanedBlobUrl, setCleanedBlobUrl] = useState<string | null>(null);
-  const [cleanStats, setCleanStats] = useState({ dgnRemoved: 0, regappRemoved: 0, scalesReset: 0, total: 0 });
-  const [logHistory, setLogHistory] = useState<string[]>([]);
+  const handleReset = () => {
+    setEnableAudit(true);
+    setEnableAecPurge(true);
+    setEnableOverkill(false);
+    setEnablePurgeDialogHint(true);
+    setDxfText(SAMPLE_ASCII_DXF);
+    setDxfFileName('sample-bloat-check.dxf');
+    setCopied(false);
+  };
 
-  // Clean DXF logic using Lossless Metadata Masking Engine
-  const handleCleanDxf = () => {
-    if (!dxfFile) return;
-    setIsCleaning(true);
-    setIsCleaned(false);
-    setCleanedBlobUrl(null);
-    setCleanStats({ dgnRemoved: 0, regappRemoved: 0, scalesReset: 0, total: 0 });
-    setLogHistory([
-      '[System] Initializing DXF drawing optimization engine...',
-      '[System] Loading drawing ASCII database...'
-    ]);
+  const handleUploadDxf = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setDxfFileName(file.name);
+    const txt = await file.text();
+    setDxfText(txt);
+  };
 
-    const reader = new FileReader();
-    reader.onload = (e) => {
-      try {
-        const text = e.target?.result as string;
-        if (!text) throw new Error('Empty file');
+  const auditStats = useMemo(() => inspectAsciiDxf(dxfText), [dxfText]);
 
-        let cleanedText = text;
-        let dgnRemoved = 0;
-        let regappRemoved = 0;
-        let scalesReset = 0;
+  const scriptText = useMemo(() => {
+    const lines: string[] = [
+      ';; =========================================================================',
+      ';; AutoCAD Drawing Lag & Bloat Cleanup Checklist Script (Pure ASCII .scr)',
+      ';; Based strictly on Autodesk AutoCAD 2025 Core Help Command Reference',
+      ';; Save a backup copy of your .dwg before running cleanup commands.',
+      ';; =========================================================================',
+      '',
+    ];
 
-        setLogHistory(prev => [...prev, '[Purger] File loaded successfully. Scanning DGN dictionaries...']);
+    if (enableAudit) {
+      lines.push(
+        ';; 1. Enable AUDITCTL = 1 (.adt log) and inspect errors with AUDIT',
+        'AUDITCTL',
+        '1',
+        ''
+      );
+    }
 
-        // 1. DGN bloat removal
-        const dgnRegex = /ACAD_DGNLINESTYLECOMP/gi;
-        const dgnMatches = text.match(dgnRegex);
-        if (dgnMatches) {
-          dgnRemoved = dgnMatches.length;
-          cleanedText = cleanedText.replace(dgnRegex, 'ACAD_DGN_CLN');
-          setLogHistory(prev => [...prev, `[Purger] Found and bypassed DGN linear style bloat: ${dgnRemoved} entries.`]);
-        }
+    if (enableAecPurge) {
+      lines.push(
+        ';; 2. PURGEAECDATA (Only works when no Xrefs are attached and no visible AEC objects exist)',
+        'PURGEAECDATA',
+        'Yes',
+        ''
+      );
+    }
 
-        // 2. Regapps purging
-        const regappKeywords = /ACAD_PSEUDO_DXF|AECTOOLS_.*|AEC_.*|AECTO_.*|ACAD_DGNLINESTYLECOMP_SHX|XRECORD_.*|RAK_.*|ADSK_.*/gi;
-        const regappMatches = text.match(regappKeywords);
-        if (regappMatches) {
-          regappRemoved = regappMatches.length;
-          let regAppIdx = 0;
-          cleanedText = cleanedText.replace(regappKeywords, () => `ACAD_CLN_REG_${++regAppIdx}`);
-          setLogHistory(prev => [...prev, `[Purger] Found and bypassed redundant registered applications: ${regappRemoved} entries.`]);
-        }
+    if (enableOverkill) {
+      lines.push(
+        ';; 3. Remove duplicate/overlapping lines, arcs, and zero-length polyline segments',
+        'OVERKILL',
+        ''
+      );
+    }
 
-        // 3. Annotations scales clean
-        const scaleRegex = /ACAD_SCALELIST/gi;
-        const scaleMatches = text.match(scaleRegex);
-        if (scaleMatches) {
-          scalesReset = scaleMatches.length;
-          cleanedText = cleanedText.replace(scaleRegex, 'ACAD_SCALELIST_CLN');
-          setLogHistory(prev => [...prev, `[Purger] Found and bypassed scale lists dictionary: ${scalesReset} entries.`]);
-        }
+    if (enablePurgeDialogHint) {
+      lines.push(
+        ';; 4. Interactive PURGE / -PURGE checklist:',
+        ';; Run PURGE (or command-line -PURGE) to remove unused block definitions, layers,',
+        ';; linetypes, registered applications, zero-length geometry, empty text objects,',
+        ';; and select "Orphaned Data" in the Purge dialog to purge unneeded DGN linestyles.',
+        'PURGE',
+        ''
+      );
+    }
 
-        const total = dgnRemoved + regappRemoved + scalesReset;
-        
-        const blob = new Blob([cleanedText], { type: 'text/plain;charset=utf-8' });
-        const url = URL.createObjectURL(blob);
+    lines.push(';; End of script');
+    return lines.join('\r\n').replace(/[^\x20-\x7E\r\n\t]/g, '');
+  }, [enableAudit, enableAecPurge, enableOverkill, enablePurgeDialogHint]);
 
-        setCleanedBlobUrl(url);
-        setCleanStats({ dgnRemoved, regappRemoved, scalesReset, total });
-        setIsCleaned(true);
-        setLogHistory(prev => [
-          ...prev, 
-          `[System] Optimization complete! Total issues sanitized: ${total}.`,
-          `[System] 100% Geometry integrity verified. Cleaned drawing ready for plotting.`
-        ]);
-
-      } catch (err) {
-        setLogHistory(prev => [...prev, '[Error] Sanitization aborted. The file structure is not valid ASCII DXF.']);
-        alert('File purging failed. Ensure it is ASCII DXF format.');
-      } finally {
-        setIsCleaning(false);
+  const handleCopyScript = async () => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(scriptText);
+        setCopied(true);
+        setTimeout(() => setCopied(false), 1800);
       }
-    };
-    reader.readAsText(dxfFile);
+    } catch {
+      setCopied(false);
+    }
   };
 
-  const handleDownloadCleaned = () => {
-    if (!cleanedBlobUrl || !dxfFile) return;
-    const cleanedName = dxfFile.name.replace(/\.dxf$/i, '_purged.dxf');
-    const link = document.createElement('a');
-    link.href = cleanedBlobUrl;
-    link.download = cleanedName;
-    link.click();
-  };
-
-  // AutoLISP compiler logic
-  const compiledLispScript = useMemo(() => {
-    let internalCommands = '';
-
-    if (cleanRegapp) {
-      internalCommands += `  (princ "\\nSilently clearing remnants of registered applications (Regapps)...")
-  (command "-PURGE" "R" "*" "N")\n`;
-    }
-
-    if (cleanScalelist) {
-      internalCommands += `  (princ "\\nResetting redundant annotation scale list (Scale List Edit)...")
-  (if (dictremove (namedobjdict) "ACAD_SCALELIST")
-    (princ "\\n✓ The proportion list dictionary was reset successfully.")
-    (princ "\\n- No redundant scale dictionary detected.")
-)\n`;
-    }
-
-    if (cleanOrphanBlock) {
-      internalCommands += `  (princ "\\nPerforming three rounds of powerful PURGE to clean up orphaned blocks, Layers and Linetypes...")
-  (command "-PURGE" "A" "*" "N")
-  (command "-PURGE" "A" "*" "N")
-  (command "-PURGE" "A" "*" "N")\n`;
-    }
-
-    if (runAudit) {
-      internalCommands += `  (princ "\\nVerifying and fixing drawing database geometry errors (AUDIT)...")
-  (command "_AUDIT" "Y")\n`;
-    }
-
-    if (indexDgnLine) {
-      internalCommands += `  (princ "\\nScanning and stripping DGN linear expansion features (DICT)...")
-  (dictremove (namedobjdict) "ACAD_DGNLINESTYLECOMP")\n`;
-    }
-
-    return `; ==========================================================
-; CADGuide.tools DWG One-click silent cleaning macro for drawing lags (AutoLISP)
-; ==========================================================
-(defun c:CLEANDWG ()
-  (setvar "CMDECHO" 0)
-  (setvar "EXPERT" 3)
-  (princ "\\n--- Start in-depth optimization of the drawing database ---")
-  
-${internalCommands}
-  (setvar "EXPERT" 0)
-  (setvar "CMDECHO" 1)
-  (princ "\\n==================================================")
-  (princ "\\n✓ Congratulations! The drawings have been optimized and cleaned up. File size has been significantly reduced.")
-  (princ "\\n==================================================")
-  (princ)
-)
-(princ "\\nLoading successfully! Enter [ CLEANDWG ] and press Enter to perform a deep clean. \\n") (princ)`;
-  }, [cleanRegapp, cleanScalelist, cleanOrphanBlock, runAudit, indexDgnLine]);
-
-  const handleCopy = (text: string, id: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedText(id);
-    setTimeout(() => setCopiedText(null), 2000);
+  const handleDownloadScr = () => {
+    const blob = new Blob([scriptText], { type: 'text/plain;charset=ascii;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'autocad_lag_cleanup.scr';
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   return (
-    <div className="flex flex-col gap-8">
-      {/* Mode Switch Tabs */}
-      <div className="flex bg-slate-100 p-1 rounded-2xl w-fit self-center">
+    <div className="bg-white rounded-3xl shadow-xl border border-slate-200 overflow-hidden">
+      <div className="p-6 md:p-8 border-b border-slate-100 bg-slate-50/70 flex flex-wrap items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <div className="w-11 h-11 rounded-2xl bg-blue-100 text-blue-700 flex items-center justify-center">
+            <Wrench className="w-6 h-6" />
+          </div>
+          <div>
+            <h2 className="text-xl font-black text-slate-900">AutoCAD Drawing Lag Cleanup &amp; Read-Only DXF Inspector</h2>
+            <p className="text-sm font-medium text-slate-500">
+              Documented AutoCAD command script generator plus client-side read-only ASCII DXF table counter
+            </p>
+          </div>
+        </div>
+
         <button
-          onClick={() => setCleanMode('lisp')}
-          className={`px-6 py-2.5 rounded-xl text-base font-black transition-all cursor-pointer ${
-            cleanMode === 'lisp' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
-          }`}
+          type="button"
+          data-testid="reset-button"
+          onClick={handleReset}
+          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white hover:bg-slate-100 text-slate-700 text-xs font-black border border-slate-200 cursor-pointer"
         >
-          ⚡ Generate AutoLISP Macro (No Upload)
-        </button>
-        <button
-          onClick={() => setCleanMode('dxf')}
-          className={`px-6 py-2.5 rounded-xl text-base font-black transition-all cursor-pointer ${
-            cleanMode === 'dxf' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
-          }`}
-        >
-          🚀 Online DXF Database Purger (Fast Clean)
+          <RotateCcw className="w-3.5 h-3.5" />
+          Reset
         </button>
       </div>
 
-      {cleanMode === 'lisp' && (
-        <>
-          {/* Top dynamic SVG display drawing optimization"Vacuum cleaner scan effect */}
-          <div className="bg-slate-900 rounded-3xl border border-slate-800 p-6 md:p-8 shadow-2xl relative overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/50 to-transparent pointer-events-none"></div>
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8 z-10 relative">
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="w-2.5 h-2.5 rounded-full bg-blue-500 animate-ping"></span>
-                  <h2 className="text-white font-black text-lg tracking-tight">DWG Database physical structure purification</h2>
-                </div>
-                <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
-                  DWG Database Structural Purification
-                </p>
-              </div>
-              <div className="px-3 py-1 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20 text-base font-black">
-                LISP compiler
-              </div>
-            </div>
+      <div className="p-6 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="lg:col-span-6 space-y-5">
+          <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 space-y-3">
+            <div className="text-xs font-black text-slate-600 uppercase">Cleanup Commands Included in .scr Script</div>
 
-            {/* SVG Drawing Area */}
-            <div className="w-full flex items-center justify-center bg-slate-950/60 rounded-2xl border border-slate-800/80 py-8 px-4 relative">
-              <svg viewBox="0 0 500 140" className="w-full max-w-[450px] h-auto" aria-label="CAD Optimization Scanner">
-                {/* Grid overlay */}
-                <defs>
-                  <pattern id="gridPattern" width="20" height="20" patternUnits="userSpaceOnUse">
-                    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#1e293b" strokeWidth="0.5" />
-                  </pattern>
-                </defs>
-                <rect width="500" height="140" fill="url(#gridPattern)" rx="8" />
-
-                {/* CAD Drawing Sheet Frame */}
-                <rect x="50" y="20" width="400" height="100" fill="none" stroke="#334155" strokeWidth="1.5" strokeDasharray="6 3" />
-                
-                {/* Drawing lines / entities (representing clutter) */}
-                {cleanOrphanBlock && (
-                  <>
-                    <path d="M 80 40 L 120 80 M 110 30 L 70 90" stroke="#f43f5e" strokeWidth="1" strokeDasharray="1 2" opacity="0.6" />
-                    <circle cx="280" cy="50" r="15" fill="none" stroke="#f43f5e" strokeWidth="1" strokeDasharray="2 2" opacity="0.5" />
-                  </>
-                )}
-                
-                {/* Cleaned entities */}
-                <path d="M 180 80 Q 250 30 320 80 M 150 50 L 380 50" stroke="#10b981" strokeWidth="1.5" />
-                <rect x="340" y="70" width="30" height="20" fill="none" stroke="#3b82f6" strokeWidth="1.5" />
-
-                {/* Laser scanning beam */}
-                <g>
-                  <line x1="250" y1="15" x2="250" y2="125" stroke="#3b82f6" strokeWidth="2.5" opacity="0.8" />
-                  <rect x="247" y="15" width="6" height="110" fill="url(#laserGlow)" opacity="0.3" />
-                  <animateTransform
-                    attributeName="transform"
-                    type="translate"
-                    values="-120 0; 120 0; -120 0"
-                    dur="6s"
-                    repeatCount="indefinite"
-                  />
-                </g>
-                
-                <linearGradient id="laserGlow" x1="0" y1="0" x2="1" y2="0">
-                  <stop offset="0%" stopColor="#3b82f6" stopOpacity="0" />
-                  <stop offset="50%" stopColor="#60a5fa" stopOpacity="1" />
-                  <stop offset="100%" stopColor="#3b82f6" stopOpacity="0" />
-                </linearGradient>
-              </svg>
-            </div>
-          </div>
-
-          {/* Main panel layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            
-            {/* Left: Caton feature selection configuration */}
-            <div className="lg:col-span-1 flex flex-col gap-6">
-              <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col gap-5">
-                <h3 className="text-slate-800 font-black text-xl tracking-tight flex items-center gap-2">
-                  <Gauge className="w-4 h-4 text-blue-500" />
-                  Causing symptoms and cleaning scope
-                </h3>
-
-                {/* Checkbox Selector */}
-                <div className="flex flex-col gap-4">
-                  
-                  {/* Option 1: Regapps */}
-                  <label className="flex items-start gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={cleanRegapp}
-                      onChange={(e) => setCleanRegapp(e.target.checked)}
-                      className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
-                    />
-                    <div className="text-base">
-                      <span className="font-bold text-slate-700 block">Register Application Cleanup (Regapps)</span>
-                      <span className="text-slate-400">For oversized capacity (hundreds of lines in dozens of lines)MB) Deep cleaning of the drawings. </span>
-                    </div>
-                  </label>
-
-                  {/* Option 2: Scale List */}
-                  <label className="flex items-start gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={cleanScalelist}
-                      onChange={(e) => setCleanScalelist(e.target.checked)}
-                      className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
-                    />
-                    <div className="text-base">
-                      <span className="font-bold text-slate-700 block">Reset Scale List</span>
-                      <span className="text-slate-400">Solve the problem of drawings getting stuck and unresponsive for several seconds when the viewport is zoomed or switched between layouts. </span>
-                    </div>
-                  </label>
-
-                  {/* Option 3: Orphan Blocks */}
-                  <label className="flex items-start gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={cleanOrphanBlock}
-                      onChange={(e) => setCleanOrphanBlock(e.target.checked)}
-                      className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
-                    />
-                    <div className="text-base">
-                      <span className="font-bold text-slate-700 block">Powerful PURGE redundant garbage</span>
-                      <span className="text-slate-400">Perform three rounds of deep PURGE to clear out irrelevant blocks and empty layers hidden at the bottom. </span>
-                    </div>
-                  </label>
-
-                  {/* Option 4: Audit */}
-                  <label className="flex items-start gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={runAudit}
-                      onChange={(e) => setRunAudit(e.target.checked)}
-                      className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
-                    />
-                    <div className="text-base">
-                      <span className="font-bold text-slate-700 block">Database Physical Verification (AUDIT)</span>
-                      <span className="text-slate-400">Check the coordinates of 3D primitive nodes and automatically delete damage, Misplaced malformed data. </span>
-                    </div>
-                  </label>
-
-                  {/* Option 5: DGN line check */}
-                  <label className="flex items-start gap-3 cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={indexDgnLine}
-                      onChange={(e) => setIndexDgnLine(e.target.checked)}
-                      className="w-4 h-4 mt-0.5 rounded text-blue-600 border-slate-300 focus:ring-blue-500"
-                    />
-                    <div className="text-base">
-                      <span className="font-bold text-red-500 block">Unshelled DGN bloated linear style (DGN Style)</span>
-                      <span className="text-slate-400">Stripping of very large line style dictionaries leftover from MicroStation import. </span>
-                    </div>
-                  </label>
-
-                </div>
-              </div>
-            </div>
-
-            {/* Right couplet: generated AutoLISP Code */}
-            <div className="lg:col-span-2 flex flex-col gap-6">
-              <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex-1 flex flex-col justify-between min-h-[460px]">
-                
-                <div className="flex flex-col gap-5">
-                  <div>
-                    <h3 className="text-slate-900 font-black text-xl tracking-tight">AutoLISP Macro code real-time compilation</h3>
-                    <p className="text-base text-slate-400 mt-1">
-                      This can be done within CAD as `.lsp` File load or paste and run directly in the command line. 
-                    </p>
-                  </div>
-
-                  {/* LISP Code view */}
-                  <div className="bg-slate-900 text-slate-300 p-5 rounded-2xl border border-slate-800 font-mono text-base flex flex-col gap-4">
-                    <div className="flex justify-between items-center text-sm text-slate-500">
-                      <span className="flex items-center gap-1"><Code2 className="w-3.5 h-3.5" /> cleandwg.lsp Source code</span>
-                      <button
-                        onClick={() => handleCopy(compiledLispScript, 'lispCode')}
-                        className="text-slate-400 hover:text-white flex items-center gap-1 transition-colors cursor-pointer"
-                      >
-                        {copiedText === 'lispCode' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
-                        {copiedText === 'lispCode' ? 'Copied ' : 'Copy command'}
-                      </button>
-                    </div>
-                    <div className="max-h-[180px] overflow-y-auto bg-slate-950/40 p-2 rounded-lg text-slate-300 text-sm">
-                      <pre className="whitespace-pre">{compiledLispScript}</pre>
-                    </div>
-                  </div>
-
-                  {/* Core Principles and Operation Manual */}
-                  <div className="bg-blue-50 rounded-2xl border border-blue-100 p-5 flex gap-3 text-blue-900">
-                    <Zap className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-                    <div className="text-base leading-relaxed">
-                      <p className="font-black text-slate-800 mb-1">Instructions for use and operation: </p>
-                      <ol className="list-decimal list-inside space-y-1 mt-2 text-slate-700 font-medium">
-                        <li>Copy the code generated above to create a plain text file on the desktop, Rename to <span className="font-mono bg-blue-100 px-1.5 rounded font-black text-blue-800">cleandwg.lsp</span>. </li>
-                        <li>Open the drawing that needs slimming and cleaning in AutoCAD, Drag the `cleandwg.lsp` file you just saved into the drawing viewport. </li>
-                        <li>Enter in the CAD command bar: <span className="font-mono bg-blue-100 px-1.5 rounded font-black text-blue-800">CLEANDWG</span> and press Enter to silently purify and reorganize the drawing database. </li>
-                        <li><b>Lazy solution</b>: You can also directly copy the entire code, at the CAD command line press Ctrl+V Paste and run directly. </li>
-                      </ol>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-        </>
-      )}
-
-      {cleanMode === 'dxf' && (
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-          {/* Left: Drag and drop region */}
-          <div className="lg:col-span-5 bg-white border border-slate-100 rounded-3xl p-6 md:p-8 shadow-sm flex flex-col justify-between space-y-6">
-            <div>
-              <h3 className="text-slate-900 font-black text-lg tracking-tight flex items-center gap-2">
-                <Upload className="w-5 h-5 text-blue-600" /> Online Database Optimizer
-              </h3>
-              <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
-                100% Client-side sandbox purification
-              </p>
-              <p className="text-base text-slate-500 mt-3 leading-relaxed">
-                Directly drop your ASCII format `.dxf` drawing files. The system will inspect and wipe DGN Style blocks and Regapps directly in browser memory without sending a single byte to external servers.
-              </p>
-            </div>
-
-            <div
-              onClick={() => fileInputRef.current?.click()}
-              className="border-2 border-dashed border-slate-200 hover:border-blue-450 hover:bg-slate-50/50 rounded-2xl p-8 flex flex-col items-center justify-center text-center cursor-pointer transition-all min-h-[200px]"
-            >
+            <label className="flex items-start gap-2.5 text-sm font-bold text-slate-800 cursor-pointer">
               <input
-                type="file"
-                ref={fileInputRef}
-                accept=".dxf"
-                onChange={(e) => {
-                  if (e.target.files && e.target.files.length > 0) {
-                    setDxfFile(e.target.files[0]);
-                    setIsCleaned(false);
-                    setCleanedBlobUrl(null);
-                  }
-                }}
-                className="hidden"
+                type="checkbox"
+                data-testid="chk-audit"
+                checked={enableAudit}
+                onChange={(e) => setEnableAudit(e.target.checked)}
+                className="mt-1 rounded border-slate-300"
               />
-              <FileText className="w-10 h-10 text-slate-300 mb-3" />
-              {dxfFile ? (
-                <div>
-                  <span className="text-base font-bold text-slate-800 block truncate max-w-[200px]">{dxfFile.name}</span>
-                  <span className="text-sm text-slate-400">{(dxfFile.size / 1024 / 1024).toFixed(2)} MB</span>
-                </div>
-              ) : (
-                <div>
-                  <span className="text-base font-bold text-slate-700 block">Click or Drag DXF to load</span>
-                  <span className="text-sm text-slate-400">Supports files up to 100MB</span>
-                </div>
-              )}
-            </div>
+              <span>
+                AUDITCTL = 1 &amp; AUDIT Guidance
+                <span className="block text-xs font-normal text-slate-500">Enables .adt audit log output before running AUDIT database error checks.</span>
+              </span>
+            </label>
 
-            <div className="flex flex-col gap-3">
-              {isCleaned ? (
-                <button
-                  onClick={handleDownloadCleaned}
-                  className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-black py-3 rounded-2xl shadow-md hover:shadow-lg transition-all text-base flex items-center justify-center gap-1.5 cursor-pointer animate-fadeIn"
-                >
-                  <Download className="w-4 h-4" /> Download Slimmed Drawing (.DXF)
-                </button>
-              ) : (
-                <button
-                  onClick={handleCleanDxf}
-                  disabled={!dxfFile || isCleaning}
-                  className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-slate-350 text-white font-black py-3 rounded-2xl shadow-md hover:shadow-lg transition-all text-base flex items-center justify-center gap-1.5 cursor-pointer"
-                >
-                  {isCleaning ? (
-                    <>
-                      <RefreshCw className="w-4 h-4 animate-spin" /> Optimizing database...
-                    </>
-                  ) : (
-                    <>
-                      <Zap className="w-4 h-4" /> One-click Fast Purge Lag
-                    </>
-                  )}
-                </button>
-              )}
-            </div>
+            <label className="flex items-start gap-2.5 text-sm font-bold text-slate-800 cursor-pointer">
+              <input
+                type="checkbox"
+                data-testid="chk-aec"
+                checked={enableAecPurge}
+                onChange={(e) => setEnableAecPurge(e.target.checked)}
+                className="mt-1 rounded border-slate-300"
+              />
+              <span>
+                PURGEAECDATA (Yes)
+                <span className="block text-xs font-normal text-slate-500">Removes invisible AEC data when no xrefs are attached and no visible AEC objects remain.</span>
+              </span>
+            </label>
+
+            <label className="flex items-start gap-2.5 text-sm font-bold text-slate-800 cursor-pointer">
+              <input
+                type="checkbox"
+                data-testid="chk-overkill"
+                checked={enableOverkill}
+                onChange={(e) => setEnableOverkill(e.target.checked)}
+                className="mt-1 rounded border-slate-300"
+              />
+              <span>
+                OVERKILL (Duplicate Geometry Cleanup)
+                <span className="block text-xs font-normal text-slate-500">Removes duplicate or overlapping lines, arcs, and zero-length polyline segments.</span>
+              </span>
+            </label>
+
+            <label className="flex items-start gap-2.5 text-sm font-bold text-slate-800 cursor-pointer">
+              <input
+                type="checkbox"
+                data-testid="chk-purge"
+                checked={enablePurgeDialogHint}
+                onChange={(e) => setEnablePurgeDialogHint(e.target.checked)}
+                className="mt-1 rounded border-slate-300"
+              />
+              <span>
+                PURGE / -PURGE (Regapps, Zero-Length, Empty Text &amp; Orphaned DGN Data)
+                <span className="block text-xs font-normal text-slate-500">Opens PURGE so you can clean unreferenced definitions and select Orphaned Data for DGN linestyles.</span>
+              </span>
+            </label>
           </div>
 
-          {/* Right: terminal logs & stats */}
-          <div className="lg:col-span-7 flex flex-col justify-between gap-6">
-            {/* Logs console */}
-            <div className="bg-slate-950 border border-slate-800 rounded-3xl p-6 shadow-2xl flex-1 flex flex-col justify-between min-h-[300px] relative overflow-hidden">
-              <div className="flex justify-between items-center pb-3 border-b border-slate-800 mb-3">
-                <span className="text-base font-mono font-black text-slate-400 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  Purification Console Output
-                </span>
+          <div className="space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-black text-slate-600 uppercase">Generated Pure ASCII .scr Script</span>
+              <div className="flex gap-2">
                 <button
-                  onClick={() => setLogHistory([])}
-                  className="text-[9px] font-mono text-slate-500 hover:text-slate-300 cursor-pointer"
+                  type="button"
+                  data-testid="copy-summary-button"
+                  onClick={handleCopyScript}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-slate-900 hover:bg-slate-800 text-white text-xs font-black cursor-pointer"
                 >
-                  clear
+                  {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                  {copied ? 'Copied' : 'Copy Script'}
+                </button>
+                <button
+                  type="button"
+                  data-testid="export-scr-button"
+                  onClick={handleDownloadScr}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-blue-600 hover:bg-blue-700 text-white text-xs font-black cursor-pointer"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Download .scr
                 </button>
               </div>
-
-              <div className="flex-1 overflow-y-auto max-h-[160px] font-mono text-sm text-emerald-400/90 flex flex-col gap-1.5 scrollbar-thin">
-                {logHistory.length > 0 ? (
-                  logHistory.map((log, index) => (
-                    <div key={index} className="leading-relaxed whitespace-pre-wrap">{log}</div>
-                  ))
-                ) : (
-                  <div className="text-slate-600 italic">Waiting for file upload and optimization action...</div>
-                )}
-              </div>
-
-              {isCleaned && (
-                <div className="mt-4 pt-4 border-t border-slate-800 grid grid-cols-3 gap-4 text-center animate-fadeIn">
-                  <div className="p-3 bg-slate-900/40 rounded-xl border border-slate-800/60">
-                    <span className="text-[9px] font-bold text-slate-400 uppercase block">DGN Styles Bypassed</span>
-                    <span className="text-emerald-400 font-black text-lg font-mono mt-0.5">{cleanStats.dgnRemoved}</span>
-                  </div>
-                  <div className="p-3 bg-slate-900/40 rounded-xl border border-slate-800/60">
-                    <span className="text-[9px] font-bold text-slate-400 uppercase block">Regapps Purged</span>
-                    <span className="text-emerald-400 font-black text-lg font-mono mt-0.5">{cleanStats.regappRemoved}</span>
-                  </div>
-                  <div className="p-3 bg-slate-900/40 rounded-xl border border-slate-800/60">
-                    <span className="text-[9px] font-bold text-slate-400 uppercase block">Scales Neutralized</span>
-                    <span className="text-emerald-400 font-black text-lg font-mono mt-0.5">{cleanStats.scalesReset}</span>
-                  </div>
-                </div>
-              )}
             </div>
-
-            {/* Geek guide card */}
-            <div className="bg-blue-50 border border-blue-100 p-5 rounded-2xl flex gap-3 text-blue-900 text-base leading-relaxed">
-              <Info className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
-              <div>
-                <h4 className="font-extrabold text-slate-800 mb-1">Online Purging Mechanics:</h4>
-                <p className="text-slate-600 font-medium">
-                  We modify non-geometry object tables inside the DXF database. The process bypasses nested layers and layout definitions safely. AutoCAD will automatically purge unused references upon opening and saving the file.
-                </p>
-              </div>
-            </div>
+            <pre
+              data-testid="script-preview"
+              className="rounded-2xl bg-slate-950 text-emerald-300 font-mono text-[11px] p-4 overflow-x-auto leading-relaxed max-h-64"
+            >
+              {scriptText}
+            </pre>
           </div>
         </div>
-      )}
 
-      <RelatedTools />
+        <div className="lg:col-span-6 space-y-5">
+          <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 space-y-4">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <div>
+                <h3 className="text-sm font-black text-slate-900">Read-Only ASCII DXF Bloat Inspector</h3>
+                <p className="text-xs text-slate-500 font-medium">
+                  Inspecting: <span className="font-mono font-bold text-slate-700">{dxfFileName}</span> (diagnostic read-only — does not rewrite DXF)
+                </p>
+              </div>
+              <label className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white hover:bg-slate-100 text-slate-700 border border-slate-300 text-xs font-black cursor-pointer">
+                <Upload className="w-3.5 h-3.5" />
+                Inspect .dxf
+                <input
+                  data-testid="input-dxf-upload"
+                  type="file"
+                  accept=".dxf"
+                  onChange={handleUploadDxf}
+                  className="hidden"
+                />
+              </label>
+            </div>
+
+            {!auditStats.isValidDxf && (
+              <div className="rounded-xl p-3 bg-amber-50 border border-amber-200 flex items-center gap-2 text-xs font-bold text-amber-900">
+                <AlertTriangle className="w-4 h-4 text-amber-600 shrink-0" />
+                <span>Input does not contain ASCII DXF SECTION/EOF markers (binary DWG/DXF cannot be inspected as plain ASCII text).</span>
+              </div>
+            )}
+
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <div className="bg-white rounded-xl p-3.5 border border-slate-200">
+                <div className="text-[11px] font-black text-slate-400 uppercase">Registered APPIDs</div>
+                <div data-testid="stat-appid" className="text-2xl font-black text-slate-900">{auditStats.appidCount}</div>
+              </div>
+              <div className="bg-white rounded-xl p-3.5 border border-slate-200">
+                <div className="text-[11px] font-black text-slate-400 uppercase">Layers Defined</div>
+                <div data-testid="stat-layers" className="text-2xl font-black text-slate-900">{auditStats.layerCount}</div>
+              </div>
+              <div className="bg-white rounded-xl p-3.5 border border-slate-200">
+                <div className="text-[11px] font-black text-slate-400 uppercase">DXF Entities</div>
+                <div data-testid="stat-entities" className="text-2xl font-black text-slate-900">{auditStats.entityCount}</div>
+              </div>
+              <div className="bg-white rounded-xl p-3.5 border border-slate-200">
+                <div className="text-[11px] font-black text-slate-400 uppercase">Linetypes / Blocks</div>
+                <div className="text-lg font-black text-slate-900">{auditStats.ltypeCount} / {auditStats.blockCount}</div>
+              </div>
+              <div className="bg-white rounded-xl p-3.5 border border-slate-200">
+                <div className="text-[11px] font-black text-slate-400 uppercase">DGN Dict Hits</div>
+                <div data-testid="stat-dgn" className="text-2xl font-black text-slate-900">{auditStats.dgnDictionaryHits}</div>
+              </div>
+              <div className="bg-white rounded-xl p-3.5 border border-slate-200">
+                <div className="text-[11px] font-black text-slate-400 uppercase">ASCII Size</div>
+                <div className="text-lg font-black text-slate-900">{auditStats.byteSize} B</div>
+              </div>
+            </div>
+
+            <textarea
+              data-testid="input-dxf-text"
+              rows={5}
+              value={dxfText}
+              onChange={(e) => {
+                setDxfFileName('pasted-text.dxf');
+                setDxfText(e.target.value);
+              }}
+              className="w-full px-3 py-2 rounded-xl border border-slate-300 font-mono text-[11px] text-slate-800 bg-white"
+            />
+          </div>
+
+          <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 text-sm text-slate-600 flex items-start gap-2">
+            <Info className="w-4 h-4 shrink-0 mt-0.5 text-slate-400" />
+            <div>
+              <strong>Official AutoCAD Command Scope:</strong>{' '}
+              Includes <code>AUDIT</code> / <code>AUDITCTL</code>, <code>PURGE</code> / <code>-PURGE</code> (named definitions, registered applications, zero-length geometry, empty text objects, and Orphaned Data for DGN linestyles), <code>PURGEAECDATA</code>, and <code>OVERKILL</code>.
+            </div>
+          </div>
+
+          <RelatedTools />
+        </div>
+      </div>
     </div>
-);
+  );
 }

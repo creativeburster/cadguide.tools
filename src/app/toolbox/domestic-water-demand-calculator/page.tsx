@@ -5,7 +5,7 @@ import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Domestic Water Demand & Flow Rate Calculator",
-  description: "Calculate building domestic water demand, peak flow, and pipe sizing per Hunter's method.",
+  description: "Calculate building domestic water demand, peak probable flow, and pipe sizing from verified Hunter WSFU-to-GPM lookup tables.",
   path: '/toolbox/domestic-water-demand-calculator',
 });
 
@@ -26,13 +26,13 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Plumbing Hydraulics
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Domestic Water Demand & Flow Rate Calculator
+              Domestic Water Demand &amp; Flow Rate Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate building domestic water demand, peak flow, and pipe sizing per Hunter's method.
+              Interpolate peak building domestic water demand and minimum header diameter from published WSFU-to-GPM lookup curves.
             </p>
           </div>
         </section>

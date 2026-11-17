@@ -1,13 +1,12 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import DrawingLagCleanerClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Drawing Lag & Slow DWG File Performance LISP Cleaner',
+  title: 'Drawing Lag & Slow DWG File Performance Cleanup Script & DXF Inspector',
   description:
-    'Diagnose viewport lag, giant DWG file size, and slow opening speeds in AutoCAD. Generate highly optimized custom AutoLISP code to purge regapps and reset scale list edit configurations.',
+    'Generate documented AutoCAD .scr cleanup checklists (PURGE, -PURGE, PURGEAECDATA, AUDIT, OVERKILL) and run a read-only ASCII DXF bloat table inspection locally.',
   path: '/toolbox/drawing-lag-performance-cleaner',
 });
 
@@ -35,10 +34,10 @@ export default function DrawingLagCleanerPage() {
               CAD Optimization Suite
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Drawing Lag & <span className="text-blue-400">DWG Performance</span> Cleaner
+              Drawing Lag &amp; <span className="text-blue-400">DWG Performance</span> Cleaner
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Solve CAD viewport zoom lag, DWG file size inflation, and extremely slow drawing load times. Interactively generate custom AutoLISP recovery scripts.
+              Inspect ASCII DXF table counts locally and generate documented AutoCAD .scr cleanup checklists for PURGE, PURGEAECDATA, AUDIT, and OVERKILL.
             </p>
           </div>
         </section>

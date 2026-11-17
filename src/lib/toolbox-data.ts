@@ -519,14 +519,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'drawing-lag-performance-cleaner',
-    title: 'Drawing Lag & Slow DWG File Integrity diagnostic',
-    description: 'Diagnose laggy viewports and massive dwg files by scanning for scales, regapps, and bloat.',
-    detailDesc: 'Analyze your lag symptoms. Guides you through purge commands, removing excessive scale lists (SCALELISTEDIT), binding corrupt Xrefs, and cleaning orphan regapp blocks.',
+    title: 'Drawing Lag & Slow DWG File Performance Cleanup Script',
+    description: 'Inspect ASCII DXF table bloat locally and generate documented AutoCAD .scr cleanup scripts for PURGE, PURGEAECDATA, AUDIT, and OVERKILL.',
+    detailDesc: 'Read-only ASCII DXF diagnostic counter (APPID, LAYER, LTYPE, BLOCK, ENTITIES, DGN hits) paired with a pure ASCII AutoCAD .scr script generator for documented cleanup commands.',
     category: 'troubleshoot',
     status: 'released',
     releasedDate: '2026-06-04',
     origin: 'native',
-    keywords: ['slow dwg file', 'cad viewport lag', 'cleanup scalelistedit', 'orphan regapps bloat']
+    keywords: ['slow dwg file', 'cad viewport lag', 'autocad purge script', 'orphan regapps bloat']
   },
   {
     slug: 'missing-font-shx-resolver',
@@ -1406,13 +1406,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'drill-bit-size-chart',
     title: 'Drill Bit Size Chart (Number, Letter & Fractional)',
-    description: 'Complete drill bit size chart: number drills (#1-#80), letter drills (A-Z), and fractional inch drills with metric conversions and tap drill applications.',
-    detailDesc: '120+ drill sizes from #80 (0.34mm) to 1/2" (12.7mm): number drills with inch/mm conversions, letter drills A-Z, fractional inch drills, metric drill equivalents, and tap drill applications for UNC/UNF threads.',
+    description: 'Complete 138-size drill bit chart (#80-#1, letter A-Z, fractional 1/64"-1/2") with exact 25.4 mm conversions and verified UNC/UNF/UNEF tap drill applications.',
+    detailDesc: '138 standard ASME B94.11M drill sizes from #80 (0.343 mm) to 1/2" (12.700 mm): 80 number drills, 26 letter drills, and 32 fractional drills with Unified Thread Standard tap drill pairings.',
     category: 'cheatsheet',
     status: 'released',
     releasedDate: '2026-07-15',
     origin: 'native',
-    keywords: ['drill bit size chart', 'number drill', 'letter drill', 'fractional drill', 'drill size conversion', 'tap drill size', 'drill chart metric imperial', 'ansi b94.11', 'drill bit mm to inch']
+    keywords: ['drill bit size chart', 'number drill', 'letter drill', 'fractional drill', 'drill size conversion', 'tap drill size', 'drill chart metric imperial', 'asme b94.11m', 'drill bit mm to inch']
   },
   {
     slug: 'material-properties-reference',
@@ -4179,13 +4179,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'door-schedule-quantity-calculator',
     title: "Door Schedule & Hardware Quantity Calculator",
-    description: "Calculate door count, frame count, and hardware sets for building door schedules.",
-    detailDesc: "Doors per floor = room_count*door_ratio. Hardware: 3 hinges (4 fire-rated), 1 lockset, 1 closer (fire/smoke), 1 stop. ADA lever handle, threshold, sweep requirements.",
+    description: "Calculate door openings, leaf counts, fire closers, locksets, and height-based hinges per NFPA 80 Section 6.4.3.1.1.",
+    detailDesc: "Openings = ceil(rooms * ratio) * storeys; NFPA 80 Sec. 6.4.3.1.1 hinges per leaf = 2 up to 60 in. height plus 1 per additional 30 in. or fraction thereof.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["door schedule calculator","door hardware quantity","door count","hinge count","door closer","lockset count","fire rated door hardware","door frame count","ada door hardware","building hardware"]
+    keywords: ["door schedule calculator","door hardware quantity","door count","hinge count","door closer","lockset count","fire rated door hardware","nfpa 80"]
   },
   {
     slug: 'wall-insulation-u-value-calculator',
@@ -4366,13 +4366,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'domestic-water-demand-calculator',
     title: "Domestic Water Demand & Flow Rate Calculator",
-    description: "Calculate building domestic water demand, peak flow, and pipe sizing per Hunter's method.",
-    detailDesc: "Peak flow from WSFU using Hunter curve. Includes diversity factor, simultaneous use, ASPE/IPC fixture unit tables. Pipe sizing from velocity (max 2.4 m/s hot, 3.0 cold).",
+    description: "Interpolate peak domestic water demand and minimum header pipe diameter from verified Hunter WSFU lookup curves.",
+    detailDesc: "Piecewise linear interpolation across Engineering ToolBox WSFU-to-GPM reference curves (without flush valves 1-50 WSFU; with flush valves 5-50 WSFU) and velocity pipe ID sizing.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["domestic water demand","water supply sizing","hunters method","water fixture units","wsfu calculator","peak water flow","building water supply","plumbing water demand","pipe sizing water","aspe standards"]
+    keywords: ["domestic water demand","water supply sizing","wsfu calculator","peak water flow","building water supply","pipe sizing water"]
   },
   {
     slug: 'sump-pump-sizing-calculator',
