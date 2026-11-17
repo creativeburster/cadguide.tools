@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CraneLoadCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Crane Lifting Capacity Calculator",
-  description: "Calculate crane lifting capacity, boom stress, and overturning moment.",
+  title: "Crane Overturning Stability & Moment Calculator",
+  description: "Calculate crane overturning moment, stabilizing counterweight moment, tipping load, and stability-limited rated capacity.",
   path: '/toolbox/crane-load-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CraneLoadCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Crane Lifting Capacity Calculator", path: '/toolbox/crane-load-calculator' },
+    { name: "Crane Overturning Stability & Moment Calculator", path: '/toolbox/crane-load-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function CraneLoadCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Structural
+              Rigging &amp; Stability
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Crane Lifting Capacity <span className="text-orange-400">Calculator</span>
+              Crane Overturning Stability <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate crane lifting capacity, boom stress, and overturning moment.
+              Calculate crane overturning moment, counterweight stabilizing moment, tipping load, and ASME B30 stability-limited rated fraction.
             </p>
           </div>
         </section>

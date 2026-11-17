@@ -3805,11 +3805,11 @@
   },
   "coordinate-converter-calculator": {
     "title": "Coordinate System Converter",
-    "description": "Convert between lat/long and UTM coordinate systems.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "Lat/lon to UTM zone and easting/northing",
+    "description": "Convert between WGS 84 geographic coordinates (latitude/longitude) and UTM Easting/Northing with inverse verification.",
+    "discipline": "Geodesy, Coordinate Transformations & Surveying",
+    "standards": "WGS 84 Ellipsoid (a = 6,378,137 m, f = 1/298.257223563), Universal Transverse Mercator (6-degree zones, k0 = 0.9996, 80S to 84N)",
+    "cadContext": "Verify coordinate reference system (CRS) zone numbers, central meridians, and grid scale factors before importing survey control points or civil alignments into Civil 3D or GIS layers.",
+    "formula": "Transverse Mercator ellipsoidal series with k0 = 0.9996, FE = 500,000 m, FN = 0 (North) or 10,000,000 m (South)",
     "inputs": [
       {
         "label": "Latitude (deg)",
@@ -3823,25 +3823,25 @@
     "outputs": [
       {
         "label": "UTM Zone",
-        "val": "50.000"
+        "val": "50N (Band S)"
       },
       {
         "label": "Easting",
-        "val": "448760 m"
+        "val": "448709.38 m"
       },
       {
         "label": "Northing",
-        "val": "4410546 m"
+        "val": "4416830.56 m"
       }
     ]
   },
   "corrosion-rate-calculator": {
     "title": "Corrosion Rate Calculator",
-    "description": "Calculate corrosion rate from mass loss and exposure area.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "CR = 87.6*W/(D*A*T) mm/year",
+    "description": "Calculate uniform mass-loss corrosion rate in mm/yr and mpy from coupon mass loss, density, area, and exposure hours.",
+    "discipline": "Materials Engineering & Corrosion Testing",
+    "standards": "ASTM G1 Mass-Loss Method (CR = K * W / (A * T * D), K = 8.76e4 for mm/y, K = 3.45e6 for mpy)",
+    "cadContext": "Compare measured annual corrosion penetration rates against vessel or piping wall-thickness corrosion allowances specified in CAD/piping material classes.",
+    "formula": "CR_mm_yr = (8.76e4 * W_g) / (A_cm2 * T_h * D_g_cm3)",
     "inputs": [
       {
         "label": "Mass Loss (g)",
@@ -3856,32 +3856,36 @@
         "val": "20"
       },
       {
-        "label": "Time (days)",
+        "label": "Time (days = 8760 h)",
         "val": "365"
+      },
+      {
+        "label": "Allowance (mm)",
+        "val": "1.5"
       }
     ],
     "outputs": [
       {
         "label": "Corrosion Rate",
-        "val": "0.000764 mm/yr"
+        "val": "0.031847 mm/yr (1.2543 mpy)"
       },
       {
         "label": "Penetration",
-        "val": "0.000764 mm"
+        "val": "0.031847 mm"
       },
       {
         "label": "Life Estimate",
-        "val": "1962.50 years"
+        "val": "47.10 years"
       }
     ]
   },
   "coupling-torque-calculator": {
     "title": "Coupling Torque Calculator",
-    "description": "Calculate coupling nominal and design torque from power and speed.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "Tn=P*9550/n, Td=Tn*SF",
+    "description": "Calculate nominal and service-factored coupling design torque from shaft power and rotational speed.",
+    "discipline": "Machine Elements & Rotational Power Transmission",
+    "standards": "Rotational Mechanics Power-Torque Identity (P = tau * omega, omega = 2 * pi * n / 60)",
+    "cadContext": "Size shaft couplings, keyways, and drive shafts using factored design torque before finalizing solid models and BOM part selections.",
+    "formula": "omega = 2*pi*n/60, Tn = 30000*P_kW/(pi*n), Td = Tn*SF",
     "inputs": [
       {
         "label": "Power (kW)",
@@ -3899,21 +3903,21 @@
     "outputs": [
       {
         "label": "Nominal Torque",
-        "val": "79.583 Nm"
+        "val": "79.5775 Nm"
       },
       {
         "label": "Design Torque",
-        "val": "119.38 Nm"
+        "val": "119.37 Nm (1056.48 lbf*in)"
       }
     ]
   },
   "crane-load-calculator": {
-    "title": "Crane Lifting Capacity Calculator",
-    "description": "Calculate crane lifting capacity, boom stress, and overturning moment.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "M = W*r, SF = stabilizing moment/overturning moment",
+    "title": "Crane Overturning Stability & Moment Calculator",
+    "description": "Calculate crane overturning moment, stabilizing counterweight moment, tipping load, and stability-limited rated capacity.",
+    "discipline": "Rigging Engineering & Static Moment Equilibrium",
+    "standards": "Static Moment Equilibrium (Sigma M = 0), ASME B30 Stability-Limited Rated Fraction (75% crawler / 85% outrigger)",
+    "cadContext": "Check lift radius, boom deadweight CG offset, and counterweight moment margins during lift planning before consulting OEM structural load charts.",
+    "formula": "Mo = W*R + Wb*Rb, Ms = CW*d, SF = Ms/Mo, W_tip = (Ms - Wb*Rb)/R",
     "inputs": [
       {
         "label": "Load W (kN)",
@@ -3930,6 +3934,10 @@
       {
         "label": "CW Distance (m)",
         "val": "3"
+      },
+      {
+        "label": "Rated Fraction (%)",
+        "val": "75"
       }
     ],
     "outputs": [
@@ -3942,18 +3950,18 @@
         "val": "600.00 kNm"
       },
       {
-        "label": "Safety Factor",
-        "val": "1.200"
+        "label": "Safety Factor & Rated",
+        "val": "1.200 (W_tip = 60.00 kN, Rated = 45.00 kN)"
       }
     ]
   },
   "crane-sling-calculator": {
     "title": "Crane Sling Tension Calculator",
-    "description": "Calculate sling tension and load distribution for multi-leg sling configurations.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "T = W/(n*sin(theta))",
+    "description": "Calculate per-leg sling tension, minimum required single-leg Working Load Limit (WLL), horizontal force, and MBL.",
+    "discipline": "Rigging Engineering & Lifting Hardware",
+    "standards": "Static Rigging Force Resolution (T = (W/n)/sin(theta)), Angle Factor (1/sin(theta)), Design Factor (MBL = WLL * DF)",
+    "cadContext": "Verify lifting lug orientation, spreader-bar compression loads, and single-leg sling WLL ratings on fabrication rigging drawings.",
+    "formula": "T = (W / n) / sin(theta), Required Single-Leg WLL >= T, MBL = T * DF",
     "inputs": [
       {
         "label": "Load Weight (kN)",
@@ -3968,21 +3976,21 @@
         "val": "60"
       },
       {
-        "label": "Safety Factor",
-        "val": "6"
+        "label": "Design Factor",
+        "val": "5"
       }
     ],
     "outputs": [
       {
-        "label": "Sling Tension",
+        "label": "Sling Tension (= Min. Leg WLL)",
         "val": "28.868 kN"
       },
       {
-        "label": "Required WLL",
-        "val": "173.21 kN"
+        "label": "Minimum Breaking Load (5:1)",
+        "val": "144.34 kN"
       },
       {
-        "label": "Vertical Load",
+        "label": "Vertical Share / Leg",
         "val": "25.000 kN"
       }
     ]

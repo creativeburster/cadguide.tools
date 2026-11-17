@@ -161,7 +161,8 @@ flowchart LR
 | 13 | cloud-dwg-to-step-iges-converter、cloud-dxf-to-gcode-laser-converter、clutch-torque-calculator、cnc-cycle-time-calculator、cnc-feed-rate-calculator | 1dd07e61～8d66c030（已通过复核，已 push，2026-11-13） |
 | 14 | cnc-gcode-feed-calculator、cnc-speeds-feeds-reference、coating-thickness-calculator、color-rgb-to-aci-matchbox、column-base-plate-calculator | f3ba6876～e73a62a6（已通过复核，已 push，2026-11-13） |
 | 15 | column-buckling-calculator、composite-section-calculator、concrete-mix-design-calculator、concrete-slab-calculator、concrete-slab-volume-calculator | d2ffe43f～c26d674f（已通过复核，已 push，2026-11-13） |
-| 16 | concrete-volume-mix-calculator、concurrent-vs-named-breakeven-calculator、contour-interval-calculator、cooling-load-calculator、cooling-tower-sizing-calculator（跳过聚合路由目录 convert） | 待复核 |
+| 16 | concrete-volume-mix-calculator、concurrent-vs-named-breakeven-calculator、contour-interval-calculator、cooling-load-calculator、cooling-tower-sizing-calculator（跳过聚合路由目录 convert） | 458540d4（待复核） |
+| 17 | coordinate-converter-calculator、corrosion-rate-calculator、coupling-torque-calculator、crane-load-calculator、crane-sling-calculator | 待复核 |
 
 ---
 
