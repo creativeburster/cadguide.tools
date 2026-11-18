@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineRevitFamilyCheckerAuditClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online Revit Family File (.rfa) Auditors & Checkers | CADGuide.tools',
-  description: 'Compare the best Revit family file checkers. Audit RFA size bloat, verify shared parameters compliance, and optimize BIM performance.',
+  title: 'BIM Family (.rfa) CFBF Signature & QA Budget Auditor | CADGuide.tools',
+  description: 'Inspect local .rfa Compound File Binary Format (D0 CF 11 E0) bytes and evaluate file size, nesting depth, CAD import, and mesh triangle QA budgets.',
   path: '/toolbox/online-revit-family-checker-audit',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineRevitFamilyCheckerAuditPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'BIM Revit Family File Integrity & Parameter Auditor', path: '/toolbox/online-revit-family-checker-audit' },
+    { name: 'BIM Family CFBF & QA Budget Auditor', path: '/toolbox/online-revit-family-checker-audit' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlineRevitFamilyCheckerAuditPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              BIM Family QA Preflight
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              BIM Revit Family File Integrity & Parameter Auditor
+              BIM Family (.rfa) CFBF Signature &amp; QA Budget Auditor
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Check local CFBF container bytes and quantify `.rfa` size, nesting depth, and triangle budget compliance.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlineRevitFamilyCheckerAuditPage() {
         </section>
       </main>
     </>
-);
+  );
 }

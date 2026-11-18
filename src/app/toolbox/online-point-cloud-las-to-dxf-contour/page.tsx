@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlinePointCloudLasToDxfContourClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online Point Cloud LAS to DXF Contour Tools Review | CADGuide.tools',
-  description: 'Benchmark online utilities to generate DXF topographic contours from raw LiDAR LAS files. Learn terrain elevation mapping.',
+  title: 'LAS Header Inspector & Elevation-Banded DXF Point Exporter | CADGuide.tools',
+  description: 'Inspect local ASPRS LASF binary headers and bucket ASCII X Y Z point clouds into elevation-banded DXF POINT layers in your browser with zero uploads.',
   path: '/toolbox/online-point-cloud-las-to-dxf-contour',
 });
 
@@ -13,7 +13,7 @@ export default function OnlinePointCloudLasToDxfContourPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online Point Cloud LAS to DXF Terrain Contour Generator', path: '/toolbox/online-point-cloud-las-to-dxf-contour' },
+    { name: 'LAS Header & Elevation-Banded DXF Exporter', path: '/toolbox/online-point-cloud-las-to-dxf-contour' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlinePointCloudLasToDxfContourPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Point Cloud Preflight
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online Point Cloud LAS to DXF Terrain Contour Generator
+              LAS Header Inspector &amp; Elevation-Banded DXF Point Exporter
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Verify `LASF` headers locally and export elevation-banded 3D `POINT` layers to ASCII `.dxf`.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlinePointCloudLasToDxfContourPage() {
         </section>
       </main>
     </>
-);
+  );
 }

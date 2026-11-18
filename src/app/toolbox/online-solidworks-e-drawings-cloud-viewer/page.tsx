@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineSolidworksEDrawingsCloudViewerClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online SolidWorks eDrawings SLDPRT/SLDASM Viewers | CADGuide.tools',
-  description: 'Lookup and benchmark online SLDPRT and SLDASM viewers. Verify CAD file rendering fidelity and review sharing privacy rules.',
+  title: '3D Assembly CFBF Container Inspector & Tessellation Size Calculator | CADGuide.tools',
+  description: 'Check local .sldprt/.sldasm Compound File Binary Format bytes in your browser and size assembly defeaturing triangle counts and Binary STL export footprints.',
   path: '/toolbox/online-solidworks-e-drawings-cloud-viewer',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineSolidworksEDrawingsCloudViewerPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online SolidWorks eDrawings (SLDPRT/SLDASM) Viewer', path: '/toolbox/online-solidworks-e-drawings-cloud-viewer' },
+    { name: 'Assembly CFBF Inspector & Tessellation Calculator', path: '/toolbox/online-solidworks-e-drawings-cloud-viewer' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlineSolidworksEDrawingsCloudViewerPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Assembly Export Sizing
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online SolidWorks eDrawings (SLDPRT/SLDASM) Viewer
+              3D Assembly CFBF Container Inspector &amp; Tessellation Size Calculator
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Check CFBF signatures locally and compute lightweight assembly triangle counts and STL sizes.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlineSolidworksEDrawingsCloudViewerPage() {
         </section>
       </main>
     </>
-);
+  );
 }

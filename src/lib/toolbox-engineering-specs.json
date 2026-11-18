@@ -9717,119 +9717,144 @@
     ]
   },
   "online-point-cloud-las-to-dxf-contour": {
-    "title": "Online Point Cloud LAS to DXF Terrain Contour Generator",
-    "description": "Benchmark online utilities to generate DXF topographic contours from raw LiDAR LAS files. Learn terrain elevation mapping.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "Standardized parametric evaluation for Online Point Cloud LAS to DXF Terrain Contour Generator",
+    "title": "LAS Point Cloud Inspector & Elevation Contour DXF Generator",
+    "description": "Reads local LAS binary signatures and ASCII XYZ/CSV elevation samples in-browser, computes elevation bands, and exports clean ASCII DXF/CSV contour summaries.",
+    "discipline": "Surveying / Reality Capture",
+    "standards": "ASPRS LAS Format (Wikipedia): https://en.wikipedia.org/wiki/LAS_file_format | AutoCAD DXF Format (Wikipedia): https://en.wikipedia.org/wiki/AutoCAD_DXF",
+    "cadContext": "Browser-side File API binary signature check (LASF) and elevation interval grouping prior to importing 3D contours into civil CAD workflows.",
+    "formula": "Delta_Z = Z_max - Z_min; N_bands = floor(Z_max / interval) - floor(Z_min / interval) + 1",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Sample Points (Z)",
+        "val": "6 points spanning Z = 100.00 m to 106.00 m"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Contour Interval",
+        "val": "2.0 m"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Vertical Relief (Delta_Z)",
+        "val": "6.0000 m"
+      },
+      {
+        "label": "Elevation Bands",
+        "val": "4 bands (DXF LWPOLYLINE / POINT preview)"
+      }
+    ]
   },
   "online-point-cloud-to-mesh-converter": {
-    "title": "Online Point Cloud (LAS/PTS) to Watertight Mesh Converter",
-    "description": "Lookup online tools to convert LiDAR point clouds (LAS/PTS) to watertight CAD meshes. Compare reconstruction quality.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Standardized parametric evaluation for Online Point Cloud (LAS/PTS) to Watertight Mesh Converter",
+    "title": "Point Cloud Subsampling & Binary STL Mesh Budget Calculator",
+    "description": "Calculates bounding-box point density, surface voxel grid resolution, estimated triangle counts, and binary STL output file size before desktop meshing.",
+    "discipline": "Reality Capture / Reverse Engineering",
+    "standards": "CloudCompare Documentation: https://www.cloudcompare.org/doc/wiki/index.php/Main_Page | STL File Format (Wikipedia): https://en.wikipedia.org/wiki/STL_(file_format)",
+    "cadContext": "Binary STL uses an 80-byte header, 4-byte uint32 facet count, and 50 bytes per triangle; voxel size directly drives facet memory before CAD import.",
+    "formula": "V_bbox = L*W*H; rho = N_pts / V_bbox; N_surf = 2*(L*W + W*H + L*H)/v^2; Size_bytes = 84 + 50*N_tri",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Bounding Box (L x W x H)",
+        "val": "20 m x 10 m x 5 m (1,000.00 m^3)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Raw Points / Target Voxel",
+        "val": "1,000,000 pts / 0.05 m (2 tri/surface voxel)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Estimated Facets",
+        "val": "560,000 triangles"
+      },
+      {
+        "label": "Binary STL Budget",
+        "val": "28,000,084 bytes (26.7030 MB)"
+      }
+    ]
   },
   "online-revit-family-checker-audit": {
-    "title": "BIM Revit Family File Integrity & Parameter Auditor",
-    "description": "Compare the best Revit family file checkers. Audit RFA size bloat, verify shared parameters compliance, and optimize BIM performance.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for BIM Revit Family File Integrity & Parameter Auditor",
+    "title": "Revit Family (.rfa) CFBF Header Inspector & QA Budget Audit",
+    "description": "Inspects local .rfa Compound File Binary Format (CFBF) magic bytes in-browser and audits model family file size, geometry triangle count, and parameter overhead.",
+    "discipline": "BIM / Family QA",
+    "standards": "Compound File Binary Format (Wikipedia): https://en.wikipedia.org/wiki/Compound_File_Binary_Format",
+    "cadContext": "Checks the local CFBF D0 CF 11 E0 file header in-browser without uploading proprietary .rfa models, paired with configurable QA size and facet budgets.",
+    "formula": "Size_ratio = (S_file / S_limit)*100%; Facet_ratio = (N_tri / N_limit)*100%; Header match: D0 CF 11 E0",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Family Size / Limit",
+        "val": "1,200 KB / 2,000 KB limit"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Geometry Facets / Limit",
+        "val": "2,500 tris / 5,000 tris limit"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "File & Facet Utilization",
+        "val": "60.0000% size | 50.0000% facets"
+      },
+      {
+        "label": "Audit Gate Status",
+        "val": "PASS (0 failed checks)"
+      }
+    ]
   },
   "online-skp-to-fbx-cloud-converter": {
-    "title": "Online SketchUp SKP to FBX Render Mesh Converter",
-    "description": "Benchmark online utilities to convert SketchUp SKP scenes to textured FBX models. Review UV coordinate mapping and render exports.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online SketchUp SKP to FBX Render Mesh Converter",
+    "title": "SketchUp / FBX Mesh & Texture VRAM Budget Calculator",
+    "description": "Inspects local SKP/FBX file signatures in-browser and estimates GPU geometry buffer and uncompressed RGBA8 mipmapped texture memory before export.",
+    "discipline": "Architectural Visualization / 3D Asset Prep",
+    "standards": "FBX Format Overview (Wikipedia): https://en.wikipedia.org/wiki/FBX | Khronos glTF 2.0 Specification: https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html",
+    "cadContext": "Estimates GPU vertex/index buffers (32 bytes/vertex + 12 bytes/triangle) and uncompressed 32-bit RGBA texture footprint for real-time FBX/glTF viewers.",
+    "formula": "Mem_geo = (32*N_vert + 12*N_tri)/1048576; Mem_tex = N_tex * res^2 * 4 * mipFactor / 1048576",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Mesh Complexity",
+        "val": "100,000 triangles, 100,000 vertices"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Textures & Resolution",
+        "val": "4 x 1024 px RGBA8 (mip factor 1.00)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Geometry Buffer Memory",
+        "val": "4.1962 MB"
+      },
+      {
+        "label": "Texture & Total Footprint",
+        "val": "16.0000 MB textures -> 20.1962 MB total"
+      }
+    ]
   },
   "online-solidworks-e-drawings-cloud-viewer": {
-    "title": "Online SolidWorks eDrawings (SLDPRT/SLDASM) Viewer",
-    "description": "Lookup and benchmark online SLDPRT and SLDASM viewers. Verify CAD file rendering fidelity and review sharing privacy rules.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online SolidWorks eDrawings (SLDPRT/SLDASM) Viewer",
+    "title": "SolidWorks / eDrawings CFBF Inspector & Lightweight Facet Budget",
+    "description": "Verifies local .sldprt/.sldasm/.easm CFBF signatures in-browser and calculates active triangle count and binary STL export size after part suppression.",
+    "discipline": "MCAD / Assembly Review",
+    "standards": "Compound File Binary Format (Wikipedia): https://en.wikipedia.org/wiki/Compound_File_Binary_Format | STL File Format (Wikipedia): https://en.wikipedia.org/wiki/STL_(file_format)",
+    "cadContext": "Checks the local CFBF D0 CF 11 E0 signature in-browser and estimates tessellated polygon load when suppressing fasteners or subassemblies.",
+    "formula": "N_active = N_comp*(1 - s/100); N_tri = N_active * T_avg; STL_bytes = 84 + 50*N_tri",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Assembly Components & Suppression",
+        "val": "400 components, 25% suppressed (2,000 tri/comp)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "STL Format Header + Facet Record",
+        "val": "84 bytes + 50 bytes/triangle"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Active Tessellated Triangles",
+        "val": "300.00 active comps -> 600,000 tris"
+      },
+      {
+        "label": "Uncompressed Binary STL Budget",
+        "val": "30,000,084 bytes (28.6103 MB)"
+      }
+    ]
   },
   "online-step-to-obj-gltf-converter": {
     "title": "Online STEP to glTF/OBJ Rendering Mesh Converter",

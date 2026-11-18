@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineSkpToFbxCloudConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online SketchUp SKP to FBX Mesh Converters Review | CADGuide.tools',
-  description: 'Benchmark online utilities to convert SketchUp SKP scenes to textured FBX models. Review UV coordinate mapping and render exports.',
+  title: '3D Render Mesh & RGBA8 Texture VRAM Budget Calculator | CADGuide.tools',
+  description: 'Calculate vertex/index buffer sizes and uncompressed RGBA8 texture GPU memory budgets prior to exporting SKP architectural scenes to Autodesk FBX.',
   path: '/toolbox/online-skp-to-fbx-cloud-converter',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineSkpToFbxCloudConverterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online SketchUp SKP to FBX Render Mesh Converter', path: '/toolbox/online-skp-to-fbx-cloud-converter' },
+    { name: '3D Mesh & Texture VRAM Budget Calculator', path: '/toolbox/online-skp-to-fbx-cloud-converter' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlineSkpToFbxCloudConverterPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Render Exchange Sizing
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online SketchUp SKP to FBX Render Mesh Converter
+              3D Render Mesh &amp; RGBA8 Texture VRAM Budget Calculator
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Budget vertex/index buffers and RGBA8 texture footprint before exporting scenes to FBX.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlineSkpToFbxCloudConverterPage() {
         </section>
       </main>
     </>
-);
+  );
 }
