@@ -9148,14 +9148,14 @@
   },
   "natural-frequency-calculator": {
     "title": "Natural Frequency Calculator",
-    "description": "Calculate natural frequency of spring-mass, beam, and shaft systems.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "fn = 1/(2pi)*sqrt(k/m) for SDOF",
+    "description": "Calculate undamped SDOF natural frequency, angular frequency, period, equivalent stiffness, and static deflection for spring-mass, cantilever, and simply supported beam systems.",
+    "discipline": "Mechanical Vibration & Structural Dynamics",
+    "standards": "Undamped SDOF Euler-Bernoulli Beam Theory & Standard Gravity g = 9.80665 m/s^2 (ISO 80000)",
+    "cadContext": "Validate lumped-mass spring stiffness k_eq = 3EI/L^3 (cantilever) or 48EI/L^3 (simply supported) against CAD cross-section second moment of area I before running modal FEA.",
+    "formula": "omega_n = sqrt(k_eq / m), fn = omega_n / (2 * pi), T = 1 / fn",
     "inputs": [
       {
-        "label": "System Type",
+        "label": "System Model",
         "val": "Linear Lumped Spring-Mass"
       },
       {
@@ -9163,62 +9163,66 @@
         "val": "10000"
       },
       {
-        "label": "Mass m (kg)",
+        "label": "Effective Mass m (kg)",
         "val": "10"
-      },
-      {
-        "label": "Length L (m)",
-        "val": "1"
       }
     ],
     "outputs": [
       {
-        "label": "Natural Freq",
-        "val": "5.033 Hz"
+        "label": "Natural Frequency fn",
+        "val": "5.0329 Hz"
       },
       {
-        "label": "Angular Freq",
-        "val": "31.623 rad/s"
+        "label": "Angular Frequency omega_n",
+        "val": "31.6228 rad/s"
       },
       {
-        "label": "Period",
-        "val": "0.198692 s"
+        "label": "Natural Period T",
+        "val": "0.19869 s"
       }
     ]
   },
   "notch-stress-calculator": {
     "title": "Notch Stress Concentration Calculator",
-    "description": "Calculate stress concentration factor at notches and fillets.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "Kt = 1 + 2*sqrt(a/r), sigma_max = Kt*sigma_nom",
+    "description": "Evaluate elastic notch stress concentration Kt, peak stress sigma_max, user-editable Neuber sensitivity q, and effective fatigue factor Kf.",
+    "discipline": "Solid Mechanics & Fatigue Notch Analysis",
+    "standards": "Inglis Elliptical Stress Concentration Formulation & Parametric Neuber Sensitivity Relationship",
+    "cadContext": "Inspect corner fillet radii r and groove depths a directly from 2D CAD cross-sections to evaluate sensitivity to mesh refinement singularities in FEA.",
+    "formula": "Kt = 1 + 2 * sqrt(a / r), q = 1 / (1 + sqrt(rho* / r)), Kf = 1 + q * (Kt - 1)",
     "inputs": [
       {
         "label": "Nominal Stress (MPa)",
         "val": "100"
       },
       {
-        "label": "Notch Depth (mm)",
+        "label": "Notch Depth a (mm)",
         "val": "2"
       },
       {
-        "label": "Notch Radius (mm)",
+        "label": "Notch Root Radius r (mm)",
+        "val": "0.5"
+      },
+      {
+        "label": "Neuber Length rho* (mm)",
         "val": "0.5"
       }
     ],
     "outputs": [
       {
-        "label": "Kt Factor",
-        "val": "5.000"
+        "label": "Theoretical Kt",
+        "val": "5.0000"
       },
       {
-        "label": "Peak Stress",
-        "val": "500.00 MPa"
+        "label": "Peak Stress sigma_max",
+        "val": "500.0000 MPa"
       },
       {
-        "label": "Notch Sensitivity",
-        "val": "0.500000"
+        "label": "Notch Sensitivity q",
+        "val": "0.50000"
+      },
+      {
+        "label": "Fatigue Factor Kf",
+        "val": "3.0000"
       }
     ]
   },
@@ -9234,97 +9238,115 @@
   },
   "oee-calculator": {
     "title": "OEE Calculator",
-    "description": "Calculate Overall Equipment Effectiveness (OEE) with Availability, Performance, and Quality metrics. Analyze the Six Big Losses per TPM and SEMI E10 standards.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "OEE = Availability × Performance × Quality • Availability = RunTime / PlannedProductionTime (SEMI E10 / ISO 22400)",
+    "description": "Calculate Overall Equipment Effectiveness (OEE) across Availability, Performance, and Quality with shift downtime, speed loss, and quality loss breakdown.",
+    "discipline": "Manufacturing Operations & Production Metrics",
+    "standards": "ISO 22400-2:2014 (Key Performance Indicators for Manufacturing Operations Management)",
+    "cadContext": "Align CAM simulated ideal cycle times per part with shop-floor shift schedules and scrap tracking to benchmark realistic throughput.",
+    "formula": "Availability = OperatingTime / PlannedTime, Performance = (TotalUnits * IdealCycle) / OperatingTimeSec, Quality = GoodUnits / TotalUnits, OEE = A * P * Q",
     "inputs": [
       {
         "label": "Shift Duration (Hours)",
         "val": "8"
       },
       {
-        "label": "Planned Breaks (Mins)",
+        "label": "Planned Breaks (min)",
         "val": "60"
       },
       {
-        "label": "Total Produced",
-        "val": "1050"
+        "label": "Unplanned Downtime (min)",
+        "val": "45"
       },
       {
-        "label": "Defective Units",
-        "val": "35"
-      }
-    ],
-    "outputs": []
-  },
-  "ohms-law-calculator": {
-    "title": "Ohm's Law Calculator",
-    "description": "Calculate voltage, current, resistance, and power using Ohm",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "{'V = I × R. P = V × I = I² × R = V²/R. Enter any two known values; the calculator solves for all four. Leave unknown fields blank.'}",
-    "inputs": [
-      {
-        "label": "Voltage (V)",
-        "val": "12"
+        "label": "Ideal Cycle (sec/part)",
+        "val": "20"
       },
       {
-        "label": "Current (I)",
-        "val": "Standard"
-      },
-      {
-        "label": "Resistance (R)",
-        "val": "Standard"
-      },
-      {
-        "label": "Power (P)",
-        "val": "Standard"
+        "label": "Total Units / Defective Units",
+        "val": "1050 / 35"
       }
     ],
     "outputs": [
       {
-        "label": "Voltage",
-        "val": "12.0000 V"
+        "label": "Availability (A)",
+        "val": "89.2857%"
       },
       {
-        "label": "Current",
-        "val": "0.0000 A"
+        "label": "Performance (P)",
+        "val": "93.3333%"
       },
       {
-        "label": "Resistance",
-        "val": "0.0000 Ω"
+        "label": "Quality (Q)",
+        "val": "96.6667%"
       },
       {
-        "label": "Power",
-        "val": "0.0000 W"
+        "label": "Overall OEE",
+        "val": "80.5556%"
+      }
+    ]
+  },
+  "ohms-law-calculator": {
+    "title": "Ohm's Law Calculator",
+    "description": "Solve DC resistive circuit Voltage (V), Current (I), Resistance (R), Power (P), and Conductance (G) from any explicitly selected pair of positive quantities.",
+    "discipline": "Electrical Circuit Fundamentals",
+    "standards": "Ohm's Law Linear Resistive Model & Joule Heating Power Identity",
+    "cadContext": "Verify coil loads, heater currents, and resistive drop ratings before sizing schematic conductors and panel protective devices.",
+    "formula": "V = I * R, P = V * I = I^2 * R = V^2 / R, G = 1 / R",
+    "inputs": [
+      {
+        "label": "Known Pair",
+        "val": "Voltage (V) & Resistance (R)"
+      },
+      {
+        "label": "Voltage V (V)",
+        "val": "12"
+      },
+      {
+        "label": "Resistance R (ohm)",
+        "val": "4"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Current I",
+        "val": "3.0000 A"
+      },
+      {
+        "label": "Power P",
+        "val": "36.0000 W"
+      },
+      {
+        "label": "Conductance G",
+        "val": "0.25000 S"
       }
     ]
   },
   "online-3d-cad-viewer-collaborator": {
-    "title": "Cloud 3D CAD/BIM Multi-User Viewer & Mockup Portal",
-    "description": "Benchmark top online WebGL CAD viewers. Compare rendering accuracy, redline markup tools, and secure project sharing.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Cloud 3D CAD/BIM Multi-User Viewer & Mockup Portal",
+    "title": "3D CAD File Preflight Inspector (STEP, STL, OBJ)",
+    "description": "Client-side local preflight parser for ISO-10303-21 STEP schemas and entity counts, ASCII and binary STL triangle counts, and Wavefront OBJ bounding box dimensions.",
+    "discipline": "CAD Exchange & Mesh Inspection",
+    "standards": "ISO 10303-21 (STEP Part 21), STL (Binary & ASCII), Wavefront OBJ Specification",
+    "cadContext": "Inspect header metadata, entity counts, and mesh bounding extents locally in your browser prior to downstream CAM or 3D printing without uploading files.",
+    "formula": "Binary STL Expected Bytes = 84 + 50 * Triangles; Bounding Span = max(coord) - min(coord)",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Supported Sources",
+        "val": "Local .stp/.step, .stl (ASCII/Binary), .obj text or file"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Default Sample",
+        "val": "STEP AP214 AUTOMOTIVE_DESIGN Sample"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "STEP Entities Parsed",
+        "val": "8 (#1..#8)"
+      },
+      {
+        "label": "Upload Footprint",
+        "val": "0 bytes uploaded (browser-local)"
+      }
+    ]
   },
   "online-cad-license-audit-shield": {
     "title": "Enterprise CAD Software Asset Management (SAM) Self-Check Guide",

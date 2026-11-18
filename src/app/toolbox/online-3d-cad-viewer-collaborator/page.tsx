@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import Online3dCadViewerCollaboratorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Cloud 3D CAD/BIM Viewers & Collab Portals Review | CADGuide.tools',
-  description: 'Benchmark top online WebGL CAD viewers. Compare rendering accuracy, redline markup tools, and secure project sharing.',
+  title: '3D CAD File Preflight Inspector (STEP, STL, OBJ) | CADGuide.tools',
+  description: 'Inspect ISO-10303-21 STEP schemas, ASCII and binary STL triangle counts, and Wavefront OBJ bounding boxes locally in your browser without uploading files.',
   path: '/toolbox/online-3d-cad-viewer-collaborator',
 });
 
@@ -13,7 +13,7 @@ export default function Online3dCadViewerCollaboratorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Cloud 3D CAD/BIM Multi-User Viewer & Mockup Portal', path: '/toolbox/online-3d-cad-viewer-collaborator' },
+    { name: '3D CAD File Preflight Inspector', path: '/toolbox/online-3d-cad-viewer-collaborator' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function Online3dCadViewerCollaboratorPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Client-Side 3D Inspection
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Cloud 3D CAD/BIM Multi-User Viewer & Mockup Portal
+              3D CAD File Preflight Inspector (STEP, STL, OBJ)
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Parse STEP schemas, STL facets, and Wavefront OBJ bounding boxes directly in your browser with zero file uploads.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function Online3dCadViewerCollaboratorPage() {
         </section>
       </main>
     </>
-);
+  );
 }

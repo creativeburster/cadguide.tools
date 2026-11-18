@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OEECalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'OEE Calculator (Overall Equipment Effectiveness) — TPM & Lean Manufacturing',
-  description: 'Calculate Overall Equipment Effectiveness (OEE) with Availability, Performance, and Quality metrics. Analyze the Six Big Losses per TPM and SEMI E10 standards.',
+  title: 'OEE Calculator (Overall Equipment Effectiveness)',
+  description: 'Calculate Overall Equipment Effectiveness (OEE) with Availability, Performance, Quality, and downtime loss breakdown aligned with ISO 22400-2:2014.',
   path: '/toolbox/oee-calculator',
 });
 
@@ -26,13 +26,13 @@ export default function OEECalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Lean Manufacturing & TPM
+              Manufacturing Operations
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               OEE <span className="text-blue-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate Overall Equipment Effectiveness (Availability × Performance × Quality) and pinpoint the Six Big Losses per TPM and SEMI E10 guidelines.
+              Calculate Overall Equipment Effectiveness (Availability x Performance x Quality) and time loss breakdown.
             </p>
           </div>
         </section>
