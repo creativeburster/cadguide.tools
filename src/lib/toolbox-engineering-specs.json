@@ -9349,119 +9349,164 @@
     ]
   },
   "online-cad-license-audit-shield": {
-    "title": "Enterprise CAD Software Asset Management (SAM) Self-Check Guide",
-    "description": "Compare the best tools and checklists for enterprise Software Asset Management (SAM): inventory CAD seats, remove unauthorized installs, and limit outbound telemetry per your privacy policy.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Enterprise CAD Software Asset Management (SAM) Self-Check Guide",
+    "title": "CAD Floating License Utilization & Header Preflight Calculator",
+    "description": "Model concurrent floating CAD seat demand, idle-timeout reclamation capacity, and inspect local DWG/DXF AC10xx version signatures in the browser.",
+    "discipline": "CAD License Capacity & Version Preflight",
+    "standards": "DWG AC1015-AC1032 Header Signatures & Parametric Concurrency Utilization Model",
+    "cadContext": "Measure active engineer demand against owned floating seats and verify version compatibility headers before archiving CAD deliverables.",
+    "formula": "PeakSeats = ((Engineers * (ActiveHours + min(IdleHold, Timeout)/60)) / ShiftHours) * PeakFactor",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Owned Seats / Engineers",
+        "val": "25 / 40"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
+        "label": "Active / Shift Hours",
+        "val": "4 / 8 h"
       },
       {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Idle Hold / Timeout",
+        "val": "60 / 15 min"
+      },
+      {
+        "label": "Peak Factor",
+        "val": "1.2"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Peak Demand (With Timeout)",
+        "val": "25.5000 seats"
+      },
+      {
+        "label": "Peak Demand (No Timeout)",
+        "val": "30.0000 seats"
+      },
+      {
+        "label": "Reclaimed Equivalent",
+        "val": "4.5000 seats"
+      }
+    ]
   },
   "online-dgn-to-dwg-converter": {
-    "title": "Online Bentley DGN to AutoCAD DWG Layer Converter",
-    "description": "Compare DGN to DWG online converters. Review level-to-layer mappings, cell library preservation, and Bentley baseline conversions.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online Bentley DGN to AutoCAD DWG Layer Converter",
+    "title": "DGN to DWG Unit Scale Calculator & DGNIMPORT Script Builder",
+    "description": "Calculate Master:Sub:Positional scaling from Bentley DGN units into AutoCAD DWG INSUNITS, read local .dgn header bytes, and export pure-ASCII DGNIMPORT scripts.",
+    "discipline": "CAD Unit Scaling & Script Automation",
+    "standards": "AutoCAD 2025 DGNIMPORT Command & INSUNITS System Variable (1=Inches, 2=Feet, 4=Millimeters, 6=Meters)",
+    "cadContext": "Establish the exact coordinate unit scale ratio and positional resolution before executing DGNIMPORT in desktop AutoCAD.",
+    "formula": "ScaleFactor = UnitInMm(DGN_Master) / UnitInMm(DWG_Target); UOR_per_Master = SubPerMaster * PosPerSub",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "DGN Master -> DWG Target",
+        "val": "Meters (m) -> Millimeters (INSUNITS=4)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
+        "label": "Sub / Master & Pos / Sub",
+        "val": "1000 & 100"
       },
       {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Sample Coordinate",
+        "val": "12.5 m"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Scale Factor",
+        "val": "1000.0000"
+      },
+      {
+        "label": "Scaled Coordinate",
+        "val": "12500.0000 mm"
+      },
+      {
+        "label": "UORs per Master",
+        "val": "100000"
+      }
+    ]
   },
   "online-dwg-compare-diff-viewer": {
-    "title": "Cloud DWG Revision Difference & Compare Visualizer",
-    "description": "Compare DWG revision difference online. Review high-fidelity visual overlays, red/green entity highlighting, and version controls.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Cloud DWG Revision Difference & Compare Visualizer",
+    "title": "DXF Revision Layer & Entity Diff Inspector",
+    "description": "Compare two local ASCII DXF files in the browser to report added/removed LAYER table entries, per-entity-type count deltas, and CSV change logs.",
+    "discipline": "CAD Revision Diff & Audit",
+    "standards": "AutoCAD DXF ASCII Section Structure (TABLES / ENTITIES) & COMPARE Command Workflow",
+    "cadContext": "Review layer additions and entity-count deltas locally from ASCII DXF exports prior to visual overlay checks with AutoCAD COMPARE.",
+    "formula": "NetEntityDelta = TotalEntities(RevB) - TotalEntities(RevA); Delta_type = CountB - CountA",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Revision A Entities",
+        "val": "4 (2 LINE, 1 CIRCLE, 1 TEXT)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Revision B Entities",
+        "val": "6 (3 LINE, 1 LWPOLYLINE, 1 CIRCLE, 1 TEXT)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Net Entity Delta",
+        "val": "+2"
+      },
+      {
+        "label": "Added Layers",
+        "val": "A-FURN"
+      }
+    ]
   },
   "online-dwg-layer-splitter-cloud": {
-    "title": "Online DWG Layer Splitter & Batch Drawing Separator",
-    "description": "Compare online DWG layer splitters. Review batch level isolation, WBLOCK coordinate alignments, and custom layer script builders.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online DWG Layer Splitter & Batch Drawing Separator",
+    "title": "DXF Layer Entity Counter & AutoCAD -WBLOCK Split Script Builder",
+    "description": "Parse ASCII DXF group codes to inventory entities per layer locally and build pure-ASCII AutoCAD -LAYER and -WBLOCK separation scripts.",
+    "discipline": "CAD Layer Management & Script Automation",
+    "standards": "AutoCAD 2025 -LAYER, -WBLOCK, and CMDECHO Commands; ASCII DXF Group Code 8 (Layer Name)",
+    "cadContext": "Isolate populated discipline layers cleanly using generated -LAYER/-WBLOCK command scripts anchored at 0,0.",
+    "formula": "PopulatedLayers = count(layer where EntityCount(code 8 == layer) > 0)",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Sample DXF Layers",
+        "val": "4 declared (0, A-WALL, A-DOOR, E-LIGHT)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Output Prefix",
+        "val": "SPLIT_"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Populated Layers",
+        "val": "3 (A-DOOR, A-WALL, E-LIGHT)"
+      },
+      {
+        "label": "Total Entities",
+        "val": "6"
+      }
+    ]
   },
   "online-dwg-to-dxf-batch-converter": {
-    "title": "Online Bulk DWG / DXF Format Mutual Converter",
-    "description": "Benchmark bulk DWG to DXF batch online converters. Find speed-optimized translators that keep text encoding and scripting safety.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online Bulk DWG / DXF Format Mutual Converter",
+    "title": "DWG Header Inspector & Batch SAVEAS DXF Script Generator",
+    "description": "Verify local .dwg AC10xx magic bytes, estimate batch throughput time, and generate headless AutoCAD Core Console OPEN/SAVEAS DXF scripts.",
+    "discipline": "CAD Batch Conversion & Core Console Scripting",
+    "standards": "AutoCAD Core Console (accoreconsole.exe), OPEN / SAVEAS DXF Commands, DWG AC1015-AC1032 Header Table",
+    "cadContext": "Audit native DWG release codes locally and generate reproducible SAVEAS DXF batch scripts for offline Core Console execution.",
+    "formula": "BatchTimeSec = DrawingCount * SecondsPerDrawing; BatchTimeMin = BatchTimeSec / 60",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Target DXF / Precision",
+        "val": "DXF 2018 / 16 decimal places"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Batch File Count / Sec per DWG",
+        "val": "20 / 3 s"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Scripted Drawings",
+        "val": "4"
+      },
+      {
+        "label": "Estimated Batch Time",
+        "val": "60.0000 s (1.0000 min)"
+      }
+    ]
   },
   "online-dwg-to-pdf-cloud-printer": {
     "title": "Online DWG to Vector PDF Batch Cloud Printer",

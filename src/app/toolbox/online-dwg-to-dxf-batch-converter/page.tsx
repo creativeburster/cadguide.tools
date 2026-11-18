@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineDwgToDxfBatchConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online Bulk DWG to DXF Batch Converters Review | CADGuide.tools',
-  description: 'Benchmark bulk DWG to DXF batch online converters. Find speed-optimized translators that keep text encoding and scripting safety.',
+  title: 'DWG Header Inspector & Batch SAVEAS DXF Script Generator | CADGuide.tools',
+  description: 'Inspect local .dwg AC10xx version headers, estimate batch export time, and download pure-ASCII AutoCAD Core Console SAVEAS DXF scripts.',
   path: '/toolbox/online-dwg-to-dxf-batch-converter',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineDwgToDxfBatchConverterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online Bulk DWG / DXF Format Mutual Converter', path: '/toolbox/online-dwg-to-dxf-batch-converter' },
+    { name: 'DWG Header Inspector & Batch DXF Script Generator', path: '/toolbox/online-dwg-to-dxf-batch-converter' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlineDwgToDxfBatchConverterPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Core Console Automation
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online Bulk DWG / DXF Format Mutual Converter
+              DWG Header Inspector &amp; Batch SAVEAS DXF Script Generator
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Verify 6-byte `AC10xx` DWG signatures locally and generate headless `OPEN`/`SAVEAS DXF` batch scripts.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlineDwgToDxfBatchConverterPage() {
         </section>
       </main>
     </>
-);
+  );
 }

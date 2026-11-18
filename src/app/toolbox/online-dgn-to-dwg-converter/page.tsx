@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineDgnToDwgConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online DGN to DWG Converters & Layer Mappers | CADGuide.tools',
-  description: 'Compare DGN to DWG online converters. Review level-to-layer mappings, cell library preservation, and Bentley baseline conversions.',
+  title: 'DGN to DWG Unit Scale Calculator & DGNIMPORT Script Builder | CADGuide.tools',
+  description: 'Inspect local .dgn leading bytes, calculate exact Master:Sub:Positional unit scaling into DWG INSUNITS, and export pure-ASCII AutoCAD DGNIMPORT scripts.',
   path: '/toolbox/online-dgn-to-dwg-converter',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineDgnToDwgConverterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online Bentley DGN to AutoCAD DWG Layer Converter', path: '/toolbox/online-dgn-to-dwg-converter' },
+    { name: 'DGN to DWG Unit Scale & Script Builder', path: '/toolbox/online-dgn-to-dwg-converter' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlineDgnToDwgConverterPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              DGN Interoperability Prep
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online Bentley DGN to AutoCAD DWG Layer Converter
+              DGN to DWG Unit Scale Calculator &amp; DGNIMPORT Script Builder
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Verify Master:Sub:Positional scaling, inspect local `.dgn` bytes, and generate pure-ASCII `DGNIMPORT` batch scripts.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlineDgnToDwgConverterPage() {
         </section>
       </main>
     </>
-);
+  );
 }

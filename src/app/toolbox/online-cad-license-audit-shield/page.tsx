@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineCadLicenseAuditShieldClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD Software Asset Management (SAM) & Telemetry Privacy Tools | CADGuide.tools',
-  description: 'Compare the best tools and checklists for enterprise Software Asset Management (SAM): inventory CAD seats, remove unauthorized installs, and limit outbound telemetry per your privacy policy.',
+  title: 'CAD Floating License Utilization & Header Preflight Calculator | CADGuide.tools',
+  description: 'Model floating concurrent CAD seat utilization, idle timeout reclamation capacity, and inspect local DWG/DXF version signatures in your browser.',
   path: '/toolbox/online-cad-license-audit-shield',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineCadLicenseAuditShieldPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Enterprise CAD Software Asset Management (SAM) Self-Check Guide', path: '/toolbox/online-cad-license-audit-shield' },
+    { name: 'CAD Floating License Utilization Calculator', path: '/toolbox/online-cad-license-audit-shield' },
   ]);
 
   return (
@@ -30,13 +30,13 @@ export default function OnlineCadLicenseAuditShieldPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              License Capacity Planning
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Enterprise CAD Software Asset Management (SAM) Self-Check Guide
+              CAD Floating License Utilization &amp; Header Preflight Calculator
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct navigation to objective in-depth SAM and telemetry-privacy tooling evaluations. 
+              Estimate concurrent floating seat demand, timeout reclamation savings, and inspect local DWG/DXF AC10xx headers.
             </p>
           </div>
         </section>
@@ -47,5 +47,5 @@ export default function OnlineCadLicenseAuditShieldPage() {
         </section>
       </main>
     </>
-);
+  );
 }
