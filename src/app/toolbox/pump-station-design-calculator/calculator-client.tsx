@@ -1,117 +1,114 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Settings, Zap, Info, Download } from 'lucide-react';
 
-interface CalculationOutput {
-  primary: { label: string; val: string; unit: string };
-  secondary: Array<{ label: string; val: string; unit: string }>;
-  status?: { pass: boolean; text: string };
+interface PumpStationResult {
+  valid: boolean;
+  error?: string;
+  qPumpM3h: number;
+  cycleTimeMin: number;
+  wetWellMinVolM3: number;
+  basinAreaM2: number;
+  circularDiaM: number;
 }
 
-const computeFn: (vals: string[]) => CalculationOutput = (vals) => {
-      const qPeak = parseFloat(vals[0]) || 180;
-      const starts = parseFloat(vals[1]) || 6;
-      const duty = parseFloat(vals[2]) || 2;
-      const qPump = qPeak / Math.max(1, duty); // m3/h per pump
-      // Wet well live volume V = (q_pump * T) / 4 = (q_pump * 60/starts) / 4
-      const cycleMin = 60 / starts;
-      const vLive = (qPump * (cycleMin / 60)) / 4;
-      const diaMm = Math.sqrt((4 * vLive) / (Math.PI * 1.5)) * 1000; // Assuming 1.5m operating band
-      return {
-        primary: { label: 'Effective Wet Well Live Volume', val: vLive.toFixed(2), unit: 'm³' },
-        secondary: [
-          { label: 'Single Pump Required Capacity', val: qPump.toFixed(1), unit: 'm³/h' },
-          { label: 'Minimum Basin Diameter (1.5m live depth)', val: Math.ceil(diaMm / 100) * 100 + ' mm', unit: '' },
-          { label: 'Full Operating Cycle Time', val: cycleMin.toFixed(0), unit: 'minutes' }
-        ],
-        status: { pass: vLive >= 1.0, text: 'HYDRAULIC RETENTION & START CYCLE ADEQUATE' }
-      };
-    };
+function solvePumpStation(
+  qPeakStr: string,
+  maxStartsStr: string,
+  dutyPumpsStr: string,
+  activeDepthMStr: string
+): PumpStationResult {
+  if ([qPeakStr, maxStartsStr, dutyPumpsStr, activeDepthMStr].some((s) => s.trim() === '')) {
+    return { valid: false, error: 'All flow rate, start frequency, duty count, and active depth inputs are required.', qPumpM3h: 0, cycleTimeMin: 0, wetWellMinVolM3: 0, basinAreaM2: 0, circularDiaM: 0 };
+  }
+  const qPeak = Number(qPeakStr);
+  const starts = Number(maxStartsStr);
+  const duty = Number(dutyPumpsStr);
+  const depthM = Number(activeDepthMStr);
 
-const DEFAULT_INPUTS = ["180","6","2"];
+  if (![qPeak, starts, duty, depthM].every(Number.isFinite)) {
+    return { valid: false, error: 'All inputs must be valid finite numbers.', qPumpM3h: 0, cycleTimeMin: 0, wetWellMinVolM3: 0, basinAreaM2: 0, circularDiaM: 0 };
+  }
+  if (qPeak <= 0 || starts <= 0 || !Number.isInteger(duty) || duty < 1 || depthM <= 0) {
+    return { valid: false, error: 'Require Q_peak > 0, starts/hr > 0, integer duty pumps >= 1, and active water depth > 0.', qPumpM3h: 0, cycleTimeMin: 0, wetWellMinVolM3: 0, basinAreaM2: 0, circularDiaM: 0 };
+  }
+
+  const qPumpM3h = qPeak / duty;
+  const cycleTimeMin = 60 / starts;
+  const wetWellMinVolM3 = (qPumpM3h * (cycleTimeMin / 60)) / 4;
+  const basinAreaM2 = wetWellMinVolM3 / depthM;
+  const circularDiaM = Math.sqrt((4 * basinAreaM2) / Math.PI);
+
+  return { valid: true, qPumpM3h, cycleTimeMin, wetWellMinVolM3, basinAreaM2, circularDiaM };
+}
 
 export default function CalculatorClient() {
-  const [inputs, setInputs] = useState<string[]>(DEFAULT_INPUTS);
+  const [qPeakStr, setQPeakStr] = useState('180');
+  const [startsStr, setStartsStr] = useState('6');
+  const [dutyStr, setDutyStr] = useState('2');
+  const [depthStr, setDepthStr] = useState('1.5');
 
-  const updateInput = (idx: number, val: string) => {
-    const next = [...inputs];
-    next[idx] = val;
-    setInputs(next);
+  const res = solvePumpStation(qPeakStr, startsStr, dutyStr, depthStr);
+
+  const downloadCsv = () => {
+    if (!res.valid) return;
+    const rows = [
+      ['Pump Station Wet Well Sizing Report', ''],
+      ['Peak Inflow Rate (m3/h)', qPeakStr],
+      ['Max Pump Starts per Hour', startsStr],
+      ['Duty Pump Count', dutyStr],
+      ['Active Operating Depth (m)', depthStr],
+      ['Per-Pump Required Flow (m3/h)', res.qPumpM3h.toFixed(4)],
+      ['Minimum Start Cycle Period (min)', res.cycleTimeMin.toFixed(2)],
+      ['Minimum Effective Live Volume (m3)', res.wetWellMinVolM3.toFixed(4)],
+      ['Required Basin Plan Area (m2)', res.basinAreaM2.toFixed(4)],
+      ['Equivalent Circular Wet Well Dia (m)', res.circularDiaM.toFixed(4)],
+    ];
+    const csv = rows.map((r) => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'pump-station-wet-well.csv';
+    a.click();
+    URL.revokeObjectURL(url);
   };
-
-  const result = useMemo(() => {
-    try {
-      return computeFn(inputs);
-    } catch {
-      return {
-        primary: { label: 'Calculation Error', val: '—', unit: '' },
-        secondary: [],
-        status: { pass: false, text: 'Invalid Input Values' }
-      };
-    }
-  }, [inputs]);
 
   return (
     <div className="space-y-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left Column: Parameter Inputs */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
               <Settings className="w-5 h-5" />
             </div>
-            <div>
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs & Parameters</h2>
-              <p className="text-xs text-slate-500 font-medium">Adjust values to recalculate</p>
-            </div>
+            <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs &amp; Parameters</h2>
           </div>
 
-          <div className="space-y-4">
-          <div key="0">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Peak Inflow Flow Rate (m³/h)</label>
-            <input
-              type="number"
-              step="10"
-              value={inputs[0]}
-              onChange={(e) => updateInput(0, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
+          <div>
+            <label className="text-xs font-black text-slate-400 uppercase block mb-1.5">Peak Design Flow (m^3/h)</label>
+            <input type="text" inputMode="decimal" data-testid="input-qpeak" value={qPeakStr} onChange={(e) => setQPeakStr(e.target.value)} className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-100 text-base font-bold" />
           </div>
-          <div key="1">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Max Pump Starts Per Hour</label>
-            <select
-              value={inputs[1]}
-              onChange={(e) => updateInput(1, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all cursor-pointer"
-            >
-              <option key="6" value="6">{"6 Starts/hr (10 min cycle - Medium/Large Pumps)"}</option>
-              <option key="10" value="10">{"10 Starts/hr (6 min cycle - Small Submersible)"}</option>
-              <option key="4" value="4">{"4 Starts/hr (15 min cycle - Heavy Industrial)"}</option>
-            </select>
+          <div>
+            <label className="text-xs font-black text-slate-400 uppercase block mb-1.5">Max Motor Starts / Hour</label>
+            <input type="text" inputMode="decimal" data-testid="input-starts" value={startsStr} onChange={(e) => setStartsStr(e.target.value)} className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-100 text-base font-bold" />
           </div>
-          <div key="2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Number of Duty Operating Pumps</label>
-            <input
-              type="number"
-              step="1"
-              value={inputs[2]}
-              onChange={(e) => updateInput(2, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
+          <div>
+            <label className="text-xs font-black text-slate-400 uppercase block mb-1.5">Duty Operating Pumps</label>
+            <input type="text" inputMode="numeric" data-testid="input-duty" value={dutyStr} onChange={(e) => setDutyStr(e.target.value)} className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-100 text-base font-bold" />
           </div>
+          <div>
+            <label className="text-xs font-black text-slate-400 uppercase block mb-1.5">Active Drawdown Depth (m)</label>
+            <input type="text" inputMode="decimal" data-testid="input-depth" value={depthStr} onChange={(e) => setDepthStr(e.target.value)} className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-100 text-base font-bold" />
           </div>
 
-          <button
-            onClick={() => setInputs(DEFAULT_INPUTS)}
-            className="w-full py-3 rounded-xl text-sm font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
-          >
+          <button type="button" onClick={() => { setQPeakStr('180'); setStartsStr('6'); setDutyStr('2'); setDepthStr('1.5'); }} className="w-full py-3 rounded-xl text-sm font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
             Reset Defaults
           </button>
         </div>
 
-        {/* Right Column: Results & Engineering Metrics */}
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
             <div className="flex items-center justify-between">
@@ -121,78 +118,49 @@ export default function CalculatorClient() {
                 </div>
                 <h2 className="text-lg font-black text-slate-900 tracking-tight">Calculated Outputs</h2>
               </div>
-              {result.status && (
-                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-black tracking-wide uppercase border ${
-                  result.status.pass
-                    ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                    : 'bg-amber-50 text-amber-700 border-amber-200'
-                }`}>
-                  {result.status.pass ? (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  ) : (
-                    <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
-                  )}
-                  <span>{result.status.text}</span>
+              <button type="button" onClick={downloadCsv} disabled={!res.valid} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-black bg-purple-50 text-purple-700 border border-purple-100 hover:bg-purple-100 disabled:opacity-50">
+                <Download className="w-4 h-4" />
+                Export CSV
+              </button>
+            </div>
+
+            {!res.valid ? (
+              <div data-testid="validation-error" className="rounded-2xl bg-red-50 border border-red-200 px-5 py-4 text-base font-bold text-red-700">{res.error}</div>
+            ) : (
+              <>
+                <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+                  <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-1">Minimum Effective Wet Well Live Volume</div>
+                  <div className="text-4xl font-black text-blue-900" data-testid="res-vmin">{res.wetWellMinVolM3.toFixed(4)} <span className="text-lg font-bold text-blue-600">m^3</span></div>
                 </div>
-              )}
-            </div>
 
-            {/* Primary Result Banner */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50/40 rounded-2xl p-6 border border-blue-100">
-              <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-2">
-                {result.primary.label}
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl sm:text-5xl font-black text-blue-900 tracking-tight">
-                  {result.primary.val}
-                </span>
-                {result.primary.unit && (
-                  <span className="text-lg font-bold text-blue-600">
-                    {result.primary.unit}
-                  </span>
-                )}
-              </div>
-            </div>
-
-            {/* Secondary Metrics Grid */}
-            {result.secondary && result.secondary.length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {result.secondary.map((metric, idx) => (
-                  <div key={idx} className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 line-clamp-1">
-                      {metric.label}
-                    </div>
-                    <div className="text-xl font-black text-slate-900">
-                      {metric.val}
-                      {metric.unit && <span className="text-xs font-medium text-slate-500 ml-1.5">{metric.unit}</span>}
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                  <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                    <div className="text-xs font-bold text-slate-500 uppercase mb-1">Single Pump Capacity</div>
+                    <div className="text-xl font-black text-slate-900" data-testid="res-qpump">{res.qPumpM3h.toFixed(2)} m^3/h</div>
                   </div>
-                ))}
-              </div>
+                  <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                    <div className="text-xs font-bold text-slate-500 uppercase mb-1">Basin Plan Area</div>
+                    <div className="text-xl font-black text-slate-900" data-testid="res-area">{res.basinAreaM2.toFixed(4)} m^2</div>
+                  </div>
+                  <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                    <div className="text-xs font-bold text-slate-500 uppercase mb-1">Min Circular Dia</div>
+                    <div className="text-xl font-black text-slate-900" data-testid="res-dia">{res.circularDiaM.toFixed(4)} m</div>
+                  </div>
+                </div>
+              </>
             )}
+
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 flex items-start gap-2.5 text-sm text-slate-600">
+              <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+              <span>
+                Analytical worst-case pump cycle derivation: cycle time T = V/Q_in + V/(Q_pump - Q_in) is minimized at Q_in = 0.5*Q_pump, yielding V_min = Q_pump * T_min / 4. Add a standby pump per project redundancy criteria.
+              </span>
+            </div>
           </div>
 
-          {/* Engineering Methodology & Formula Card */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-600">
-                <Info className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-base font-black text-slate-900 tracking-tight">Governing Engineering Formula & Standards</h3>
-                <p className="text-xs text-slate-500 font-medium">Standardized calculation procedure</p>
-              </div>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <p className="text-xs sm:text-sm text-slate-700 font-mono font-medium leading-relaxed block break-words">
-                {"V_live = (Q_pump × t_cycle) / 4 • Q_pump = Q_peak / N_duty (WEF MOP 8 Design of Wastewater Stations)"}
-              </p>
-            </div>
-          </div>
+          <RelatedTools compact />
         </div>
       </div>
-
-      <RelatedTools />
     </div>
   );
 }

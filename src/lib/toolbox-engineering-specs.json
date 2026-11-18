@@ -10685,214 +10685,142 @@
     ]
   },
   "pulley-system-calculator": {
-    "title": "Pulley Mechanical Advantage Calculator",
-    "description": "Calculate mechanical advantage and effort force for pulley systems.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "MA=n, F=W/MA, L=MA*d",
+    "title": "Pulley System Mechanical Advantage & Friction Calculator",
+    "description": "Calculates actual mechanical advantage, haul effort force, system efficiency, rope pull distance, and overhead anchor load accounting for per-sheave friction.",
+    "discipline": "Rigging & Mechanical Advantage Kinematics",
+    "standards": "Geometric Block-and-Tackle Sheave Series: MA_actual = (1 - eta_s^n)/(1 - eta_s)",
+    "cadContext": "Computes cumulative sheave bearing friction reduction relative to ideal rope-fall advantage and evaluates overhead structural anchor load W + F_effort.",
+    "formula": "MA_actual = (1 - eta_s^n)/(1 - eta_s); F_pull = W / MA_actual; eta_sys = MA_actual / n",
     "inputs": [
       {
-        "label": "Load (N)",
-        "val": "1000"
+        "label": "Load & Sheave Falls",
+        "val": "W = 1000 N, n = 4 falls, Lift = 2 m"
       },
       {
-        "label": "Supporting Ropes",
-        "val": "4"
-      },
-      {
-        "label": "Lift Distance (m)",
-        "val": "2"
+        "label": "Sheave Efficiency",
+        "val": "eta_s = 0.96 per sheave"
       }
     ],
     "outputs": [
       {
-        "label": "Mech Advantage",
-        "val": "4.000 :1"
+        "label": "Actual MA & Haul Force",
+        "val": "3.7663 :1 | F_pull = 265.510 N"
       },
       {
-        "label": "Effort Force",
-        "val": "250.00 N"
-      },
-      {
-        "label": "Rope Length",
-        "val": "8.000 m"
+        "label": "System Efficiency & Rope Length",
+        "val": "94.158% | 8.00 m"
       }
     ]
   },
   "pump-affinity-law-calculator": {
-    "title": "Pump Affinity Law Calculator",
-    "description": "Calculate new flow rate, head pressure, and shaft power when changing pump speed or impeller diameter per affinity laws.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Q₂/Q₁ = (N₂/N₁) × (D₂/D₁) • H₂/H₁ = (N₂/N₁)² × (D₂/D₁)² • P₂/P₁ = (N₂/N₁)³ × (D₂/D₁)³ (ANSI/HI 1.3)",
+    "title": "Centrifugal Pump Affinity Laws Calculator",
+    "description": "Evaluates scaled flow, head, and shaft power for both constant-diameter VFD speed variation and geometrically similar pump impeller/speed families.",
+    "discipline": "Turbomachinery & Centrifugal Pump Scaling",
+    "standards": "Wikipedia Affinity Laws: https://en.wikipedia.org/wiki/Affinity_laws",
+    "cadContext": "Explicitly separates constant-diameter speed scaling (Q~N, H~N^2, P~rho*N^3) from full geometric similarity scaling (Q~N*D^3, H~N^2*D^2, P~rho*N^3*D^5).",
+    "formula": "Q2/Q1 = (N2/N1)*(D2/D1)^3; H2/H1 = (N2/N1)^2*(D2/D1)^2; P2/P1 = (rho2/rho1)*(N2/N1)^3*(D2/D1)^5",
     "inputs": [
       {
-        "label": "Change Mode Speed Change Impeller Trim Baseline (Condition 1) Flow Q₁ (m³/h)",
-        "val": "100"
+        "label": "Baseline Point",
+        "val": "Q1 = 100 m^3/h, H1 = 30 m, P1 = 15 kW, rho1 = rho2 = 1000 kg/m^3"
       },
       {
-        "label": "Head H₁ (m)",
-        "val": "30"
-      },
-      {
-        "label": "Power P₁ (kW)",
-        "val": "15"
-      },
-      {
-        "label": "N₁ (RPM)",
-        "val": "1450"
-      },
-      {
-        "label": "N₂ (RPM)",
-        "val": "1750"
+        "label": "Speed Scaling (Fixed D)",
+        "val": "N1 = 1450 rpm -> N2 = 1750 rpm"
       }
     ],
     "outputs": [
       {
-        "label": "Flow Q₂",
-        "val": "120.69 m³/h"
+        "label": "Scaled Flow & Head",
+        "val": "Q2 = 120.6897 m^3/h | H2 = 43.6980 m"
       },
       {
-        "label": "Head H₂",
-        "val": "43.70 m"
-      },
-      {
-        "label": "Power P₂",
-        "val": "26.37 kW"
+        "label": "Scaled Shaft Power",
+        "val": "P2 = 26.3695 kW"
       }
     ]
   },
   "pump-head-calculator": {
-    "title": "Pump Head & Power Calculator",
-    "description": "Calculate pump total dynamic head, hydraulic power, and motor power from flow rate and pipe parameters.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "H = static + friction + velocity head, Ph = rho*g*Q*H, Pm = Ph/eta",
+    "title": "Pump Total Dynamic Head & Darcy-Weisbach Power Calculator",
+    "description": "Calculates pipe flow velocity, Darcy-Weisbach friction head loss (fixed d in meters), total dynamic head, hydraulic power, and motor input power.",
+    "discipline": "Piping Hydraulics & Fluid Systems",
+    "standards": "ISO 80000 Standard Gravity g = 9.80665 m/s^2; Darcy-Weisbach Friction Head Equation",
+    "cadContext": "Uses consistent meter conversion for pipe inside diameter d and ISO 80000 gravity g = 9.80665 m/s^2 across head and power steps.",
+    "formula": "v = Q/(pi*d^2/4); hf = f*(L/d)*(v^2/(2*g)); TDH = Hs + hf; Pm = rho*g*Q*TDH / (eta_p*eta_m*1000)",
     "inputs": [
       {
-        "label": "Flow Rate Q (L/s)",
-        "val": "50"
+        "label": "Flow & Pipe Geometry",
+        "val": "Q = 50 L/s, Hs = 20 m, L = 100 m, d = 150 mm, f = 0.02"
       },
       {
-        "label": "Static Head (m)",
-        "val": "20"
-      },
-      {
-        "label": "Pipe Length (m)",
-        "val": "100"
-      },
-      {
-        "label": "Pipe Dia (mm)",
-        "val": "150"
-      },
-      {
-        "label": "Friction f",
-        "val": "0.02"
-      },
-      {
-        "label": "Pump Eff",
-        "val": "0.75"
+        "label": "Fluid & Efficiencies",
+        "val": "rho = 1000 kg/m^3, eta_p = 0.75, eta_m = 0.95"
       }
     ],
     "outputs": [
       {
-        "label": "Friction Head",
-        "val": "0.000005 m"
+        "label": "Velocity & Friction Head",
+        "val": "v = 2.8294 m/s | hf = 5.4423 m | TDH = 25.4423 m"
       },
       {
-        "label": "Total Head",
-        "val": "20.000 m"
-      },
-      {
-        "label": "Hydraulic Power",
-        "val": "9.810 kW"
-      },
-      {
-        "label": "Motor Power",
-        "val": "13.080 kW"
+        "label": "Hydraulic & Motor Power",
+        "val": "Ph = 12.4752 kW | Pm = 17.5090 kW"
       }
     ]
   },
   "pump-power-calculator": {
-    "title": "Pump Hydraulic Power Calculator",
-    "description": "Calculate hydraulic and shaft power for pumps from head and flow.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Ph = rho*g*Q*H, Ps = Ph/eta",
+    "title": "Pump Hydraulic, Shaft & Electrical Power Calculator",
+    "description": "Calculates fluid hydraulic power, required shaft power, motor electrical input power, and daily energy consumption using standard gravity g = 9.80665 m/s^2.",
+    "discipline": "Fluid Power & Pumping Systems",
+    "standards": "ISO 80000 Standard Gravity g = 9.80665 m/s^2",
+    "cadContext": "Exposes both pump hydraulic efficiency and motor efficiency as editable inputs for transparent nameplate motor sizing.",
+    "formula": "Ph = rho*g*(Q/3600)*H / 1000; Ps = Ph / eta_p; Pm = Ps / eta_m",
     "inputs": [
       {
-        "label": "Flow Rate (m3/h)",
-        "val": "100"
+        "label": "Duty Point",
+        "val": "Q = 100 m^3/h, H = 30 m, rho = 1000 kg/m^3"
       },
       {
-        "label": "Head (m)",
-        "val": "30"
-      },
-      {
-        "label": "Efficiency",
-        "val": "0.75"
-      },
-      {
-        "label": "Density (kg/m3)",
-        "val": "1000"
+        "label": "Drivetrain Efficiencies",
+        "val": "eta_p = 0.75, eta_m = 0.95"
       }
     ],
     "outputs": [
       {
-        "label": "Hydraulic Power",
-        "val": "8.175 kW"
+        "label": "Hydraulic & Shaft Power",
+        "val": "Ph = 8.1722 kW | Ps = 10.8963 kW"
       },
       {
-        "label": "Shaft Power",
-        "val": "10.900 kW"
-      },
-      {
-        "label": "Motor Power",
-        "val": "11.474 kW"
+        "label": "Motor Electrical Power",
+        "val": "Pm = 11.4698 kW (275.28 kWh/day)"
       }
     ]
   },
   "pump-station-design-calculator": {
-    "title": "Pump Station Design Flow Calculator",
-    "description": "Calculate pump station design flow, wet well volume, and pump selection for wastewater and stormwater.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "V_live = (Q_pump × t_cycle) / 4 • Q_pump = Q_peak / N_duty (WEF MOP 8 Design of Wastewater Stations)",
+    "title": "Pump Station Wet Well Volume & Cycle Calculator",
+    "description": "Computes per-pump required flow, minimum active wet well live volume V_min = Q_pump*T_min/4, required basin plan area, and equivalent circular diameter.",
+    "discipline": "Municipal Hydraulics & Wet Well Design",
+    "standards": "Worst-Case Pump Start Cycle Optimization: V_min = Q_pump * T_min / 4 (at Q_in = 0.5*Q_pump)",
+    "cadContext": "Exposes max motor starts/hr, duty pump count, and active drawdown depth as user-editable parameters.",
+    "formula": "Q_pump = Q_peak / N_duty; T_min = 60 / starts; V_min = Q_pump*(T_min/60)/4; A = V_min / depth",
     "inputs": [
       {
-        "label": "Peak Inflow Flow Rate (m³/h)",
-        "val": "180"
+        "label": "Flow, Starts & Pumps",
+        "val": "Q_peak = 180 m^3/h, max_starts = 6 /hr, duty = 2 pumps"
       },
       {
-        "label": "Max Pump Starts Per Hour",
-        "val": "6 Starts/hr (10 min cycle - Medium/Large Pumps)"
-      },
-      {
-        "label": "Number of Duty Operating Pumps",
-        "val": "2"
+        "label": "Active Drawdown Depth",
+        "val": "depth = 1.5 m"
       }
     ],
     "outputs": [
       {
-        "label": "Effective Wet Well Live Volume",
-        "val": "3.75 m³"
+        "label": "Single Pump Flow & Live Vol",
+        "val": "Q_pump = 90.00 m^3/h | V_min = 3.7500 m^3"
       },
       {
-        "label": "Single Pump Required Capacity",
-        "val": "90.0 m³/h"
-      },
-      {
-        "label": "Minimum Basin Diameter (1.5m live depth)",
-        "val": "1800 mm"
-      },
-      {
-        "label": "Full Operating Cycle Time",
-        "val": "10 minutes"
+        "label": "Plan Area & Circular Dia",
+        "val": "A = 2.5000 m^2 | D = 1.7841 m"
       }
     ]
   },
