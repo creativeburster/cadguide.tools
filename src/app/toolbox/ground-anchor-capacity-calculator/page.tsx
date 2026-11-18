@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Ground Anchor Capacity Calculator (FHWA)",
-  description: "Calculate ground anchor ultimate capacity, bond length, and design load for tieback systems.",
+  title: 'Ground Anchor Pullout Capacity Calculator',
+  description: 'Calculate cylindrical grout-ground bond pullout resistance, allowable anchor tension, and recommended strand count for tieback ground anchors.',
   path: '/toolbox/ground-anchor-capacity-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Ground Anchor Capacity Calculator (FHWA)", path: '/toolbox/ground-anchor-capacity-calculator' },
+    { name: 'Ground Anchor Pullout Capacity Calculator', path: '/toolbox/ground-anchor-capacity-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Geotechnical Mechanics
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Ground Anchor Capacity Calculator (FHWA)
+              Ground Anchor Pullout Capacity <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate ground anchor ultimate capacity, bond length, and design load for tieback systems.
+              Calculate cylindrical grout-ground bond pullout resistance, allowable anchor tension, and recommended strand count for tieback systems.
             </p>
           </div>
         </section>

@@ -1515,14 +1515,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'hardness-converter',
-    title: 'Hardness Converter (HRC, HV, HB, HRB, N/mm²)',
-    description: 'Convert between Rockwell (HRC, HRB), Vickers (HV), Brinell (HB), and tensile strength (N/mm²) hardness scales.',
-    detailDesc: 'Hardness scale converter based on ASTM E140 and ISO 18265: Rockwell C (HRC), Rockwell B (HRB), Vickers (HV), Brinell (HB), and estimated tensile strength. Interpolated conversion table for steels.',
+    title: 'Hardness Scale Converter (HRC, HV, HB, HRB, HLD)',
+    description: 'Convert between Rockwell (HRC, HRB), Vickers (HV), Brinell (HB), and Leeb (HLD) hardness scales for steels.',
+    detailDesc: 'Hardness scale interpolation based on the ASTM E140 / ISO 18265 steel comparison chart: Rockwell C (HRC), Rockwell B (HRB), Vickers (HV), Brinell (HB), and Leeb (HLD).',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-15',
     origin: 'native',
-    keywords: ['hardness converter', 'hrc to hv', 'rockwell to vickers', 'brinell to rockwell', 'hardness scale', 'astm e140', 'tensile strength estimate', 'hrb conversion']
+    keywords: ['hardness converter', 'hrc to hv', 'rockwell to vickers', 'brinell to rockwell', 'hardness scale', 'astm e140', 'iso 18265', 'leeb hld']
   },
   {
     slug: 'bend-allowance-calculator',
@@ -2967,14 +2967,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gyroscopic-couple-calculator',
-    title: 'Gyroscopic Couple Calculator',
-    description: 'Calculate gyroscopic couple and precession for rotating discs. Free browser-based engineering calculator.',
-    detailDesc: 'C = I*omega*omega_p',
+    title: 'Gyroscopic Couple & Bearing Reaction Calculator',
+    description: 'Calculate reactive gyroscopic couple and bearing support reaction force for rotating rotors.',
+    detailDesc: 'C = I*omega_s*omega_p, F_b = C/L_b',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["gyroscopic","mechanical","calculator"]
+    keywords: ["gyroscopic couple","bearing reaction","rotordynamics","calculator"]
   },
   {
     slug: 'manometer-pressure-calculator',
@@ -3771,14 +3771,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'gyroscope-precession-calculator',
-    title: 'Gyroscope Precession Calculator',
-    description: 'Calculate gyroscopic precession rate from spin rate and applied torque.',
-    detailDesc: 'Omega_p = T/(I*omega_s)',
+    title: 'Gyroscope Precession Rate & Angular Momentum Calculator',
+    description: 'Calculate steady-state gyroscopic precession rate (rad/s, deg/s, RPM) and spin angular momentum from spin speed, inertia, and torque.',
+    detailDesc: 'H = I*omega_s, Omega_p = T/H',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["Calculate","gyroscopic","precession","rate","from","spin","rate","and","applied","torque."]
+    keywords: ["gyroscope","precession","angular momentum","dynamics","calculator"]
   },
   {
     slug: 'pressure-unit-converter',
@@ -4244,14 +4244,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'ground-anchor-capacity-calculator',
-    title: "Ground Anchor Capacity Calculator (FHWA)",
-    description: "Calculate ground anchor ultimate capacity, bond length, and design load for tieback systems.",
-    detailDesc: "T_ult = pi*D_b*L_b*tau_bond. tau 50-400 kPa by soil. Design = T_ult/FS (2.0 permanent, 1.5 temp). Free length min 3m soil, 1m rock. Includes creep and corrosion protection.",
+    title: 'Ground Anchor Pullout Capacity Calculator',
+    description: 'Calculate cylindrical grout-ground bond pullout resistance, allowable anchor tension, and recommended strand count for tieback systems.',
+    detailDesc: 'T_ult = pi*D_b*L_b*tau_bond, T_allow = T_ult/FS, Strands = ceil(T_allow/P_strand). Cylindrical bond interface skin-friction approximation.',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["ground anchor capacity","tieback anchor","soil nail","ground anchor design","bond length","grout bond stress","anchor load","fhwa anchor","geotechnical anchor","rock anchor"]
+    keywords: ["ground anchor capacity","tieback anchor","soil nail","ground anchor design","bond length","grout bond stress","anchor load","geotechnical anchor","rock anchor"]
   },
   {
     slug: 'liquefaction-potential-calculator',
@@ -4574,14 +4574,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'grounding-grid-calculator',
-    title: "Grounding Grid Resistance Calculator (IEEE 80)",
-    description: "Calculate grounding grid resistance, step and touch voltage per IEEE 80 standard.",
-    detailDesc: "IEEE 80: R_g = rho*(ln(L/sqrt(A)) + 0.5*(1+1/(2.5+1.5*L/r))^0.5). Step voltage E_step = (rho*0.116)/sqrt(t). Touch voltage E_touch = (rho*0.157)/sqrt(t). Includes grid geometry, rod count, soil resistivity.",
+    title: 'Substation Grounding Grid Resistance Calculator',
+    description: 'Calculate substation buried grounding mesh resistance, equivalent radius, and conductor density for uniform soil.',
+    detailDesc: 'Sverak equation: R_g = rho * (1/L_t + (1/sqrt(20*A))*(1 + 1/(1 + h*sqrt(20/A)))). Includes grid area, equivalent circle radius, and conductor density L_t/A.',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["grounding grid calculator","ieee 80","ground resistance","step voltage","touch voltage","grounding design","soil resistivity","grid geometry","ground rod","earthing calculation","electrical safety"]
+    keywords: ["grounding grid calculator","sverak equation","ground resistance","substation earthing","soil resistivity","grid geometry","earthing calculation"]
   },
   {
     slug: 'arc-flash-calculator',

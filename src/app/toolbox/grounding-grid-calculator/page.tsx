@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Grounding Grid Resistance Calculator (IEEE 80)",
-  description: "Calculate grounding grid resistance, step and touch voltage per IEEE 80 standard.",
+  title: 'Substation Grounding Grid Resistance Calculator',
+  description: 'Calculate substation earth mat grid resistance, equivalent radius, and conductor density using the uniform-soil Sverak equation.',
   path: '/toolbox/grounding-grid-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Grounding Grid Resistance Calculator (IEEE 80)", path: '/toolbox/grounding-grid-calculator' },
+    { name: 'Substation Grounding Grid Resistance Calculator', path: '/toolbox/grounding-grid-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Substation Earthing
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Grounding Grid Resistance Calculator (IEEE 80)
+              Grounding Grid Resistance <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate grounding grid resistance, step and touch voltage per IEEE 80 standard.
+              Estimate substation buried grounding mesh resistance, equivalent circle radius, and conductor density for uniform soil.
             </p>
           </div>
         </section>

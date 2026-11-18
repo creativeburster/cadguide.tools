@@ -6911,12 +6911,12 @@
     ]
   },
   "ground-anchor-capacity-calculator": {
-    "title": "Ground Anchor Capacity Calculator (FHWA)",
-    "description": "Calculate ground anchor ultimate capacity, bond length, and design load for tieback systems.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "T_ult = π · D_b · L_b · τ_bond • T_allow = T_ult / FS (FHWA-IF-99-015 / BS EN 1537 Ground Anchors)",
+    "title": "Ground Anchor Pullout Capacity Calculator",
+    "description": "Calculate cylindrical grout-ground bond pullout resistance, allowable anchor tension, and recommended strand count for tieback systems.",
+    "discipline": "Geotechnical Engineering & Earth Retention Mechanics",
+    "standards": "Cylindrical Grout-Ground Skin-Friction Bond Pullout Model (Preliminary Sizing; Verify by Field Acceptance Testing)",
+    "cadContext": "Document drill hole diameter D_b, bond length L_b, unbonded free length, and design proof-test tension directly on excavation shoring elevation sheets.",
+    "formula": "T_ult = pi * (D_b / 1000) * L_b * tau_bond; T_allow = T_ult / FS; Strands = ceil(T_allow / P_strand)",
     "inputs": [
       {
         "label": "Drill Hole Diameter D_b (mm)",
@@ -6927,17 +6927,21 @@
         "val": "8.0"
       },
       {
-        "label": "Ground Bond Stress τ_bond (kPa)",
-        "val": "140 kPa (Medium Dense Sand & Gravel)"
+        "label": "Ground Bond Stress tau_bond (kPa)",
+        "val": "140"
       },
       {
         "label": "Design Factor of Safety (FS)",
-        "val": "2.0 (Permanent Retaining Anchors)"
+        "val": "2.0"
+      },
+      {
+        "label": "15.2 mm Strand Working Load (kN)",
+        "val": "150"
       }
     ],
     "outputs": [
       {
-        "label": "Allowable Design Anchor Tension",
+        "label": "Allowable Design Anchor Tension (T_allow)",
         "val": "263.9 kN"
       },
       {
@@ -6945,8 +6949,12 @@
         "val": "527.8 kN"
       },
       {
-        "label": "Recommended 15.2mm (0.6\") Strands",
+        "label": "Recommended 15.2 mm Strands",
         "val": "2 strands"
+      },
+      {
+        "label": "Bond Zone Surface Area",
+        "val": "3.770 m2"
       },
       {
         "label": "Bond Zone Surface Perimeter",
@@ -6955,23 +6963,23 @@
     ]
   },
   "grounding-grid-calculator": {
-    "title": "Grounding Grid Resistance Calculator (IEEE 80)",
-    "description": "Calculate grounding grid resistance, step and touch voltage per IEEE 80 standard.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "R_g = ρ · [1/L_t + (1/√(20A)) · (1 + 1/(1 + h·√(20/A)))] (IEEE Std 80-2013 Guide for Safety in AC Substation Grounding)",
+    "title": "Substation Grounding Grid Resistance Calculator",
+    "description": "Calculate substation buried grounding mesh resistance, equivalent circle radius, and conductor density using the uniform-soil Sverak equation.",
+    "discipline": "Substation Earthing & Power System Grounding",
+    "standards": "Sverak Uniform-Soil Substation Grounding Mesh Resistance Equation (Preliminary Low-Frequency R_g Estimate)",
+    "cadContext": "Verify grid area A, buried conductor total length L_t, and target 1.0 ohm earth resistance before detailing grounding trench layouts and ground rod grids.",
+    "formula": "R_g = rho * [ 1/L_t + (1 / sqrt(20*A)) * (1 + 1 / (1 + h * sqrt(20/A))) ]; r_eq = sqrt(A / pi)",
     "inputs": [
       {
-        "label": "Soil Resistivity ρ (Ω·m)",
+        "label": "Soil Resistivity rho (ohm-m)",
         "val": "100"
       },
       {
-        "label": "Grid Length (m)",
+        "label": "Grid Length L (m)",
         "val": "40"
       },
       {
-        "label": "Grid Width (m)",
+        "label": "Grid Width W (m)",
         "val": "30"
       },
       {
@@ -6979,26 +6987,26 @@
         "val": "0.8"
       },
       {
-        "label": "Total Mesh Conductor Length (m)",
+        "label": "Total Buried Conductor Length L_t (m)",
         "val": "380"
       }
     ],
     "outputs": [
       {
         "label": "Ground Grid Resistance R_g",
-        "val": "1.49 Ω"
+        "val": "1.49 ohm"
       },
       {
         "label": "Substation Earth Mat Area",
-        "val": "1200 m²"
+        "val": "1200 m2"
       },
       {
-        "label": "Conductor Density Ratio (Lt / A)",
-        "val": "0.32 m/m²"
+        "label": "Equivalent Circle Radius",
+        "val": "19.54 m"
       },
       {
-        "label": "Industrial Target Ground Resistance",
-        "val": "< 1.0 Ω Threshold"
+        "label": "Conductor Density Ratio (L_t / A)",
+        "val": "0.317 m/m2"
       }
     ]
   },
@@ -7013,23 +7021,23 @@
     "outputs": []
   },
   "gyroscope-precession-calculator": {
-    "title": "Gyroscope Precession Calculator",
-    "description": "Calculate gyroscopic precession rate from spin rate and applied torque.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Omega_p = T/(I*omega_s)",
+    "title": "Gyroscope Precession Rate & Angular Momentum Calculator",
+    "description": "Calculate steady-state rigid-body gyroscopic precession velocity and spin angular momentum from rotor RPM, inertia, and external torque.",
+    "discipline": "Rotational Rigid-Body Dynamics",
+    "standards": "Classical Euler-Newton Orthogonal Rigid-Body Steady Precession Law (Omega_p << omega_s)",
+    "cadContext": "Evaluate gimbal actuator torque requirements and gyroscopic angular momentum storage during flywheel and CMG assembly CAD sizing.",
+    "formula": "omega_s = 2*pi*n/60; H = I*omega_s; Omega_p = T / H; n_p = 60*Omega_p/(2*pi)",
     "inputs": [
       {
-        "label": "Spin Speed (RPM)",
+        "label": "Spin Speed n (RPM)",
         "val": "3000"
       },
       {
-        "label": "Inertia I (kg.m2)",
+        "label": "Polar Moment of Inertia I (kg-m2)",
         "val": "0.02"
       },
       {
-        "label": "Torque (Nm)",
+        "label": "Applied Torque T (Nm)",
         "val": "0.5"
       }
     ],
@@ -7041,59 +7049,100 @@
       {
         "label": "Angular Velocity (deg/s)",
         "val": "4.559 deg/s"
+      },
+      {
+        "label": "Precession Speed (RPM)",
+        "val": "0.7599 RPM"
+      },
+      {
+        "label": "Spin Angular Momentum H",
+        "val": "6.2832 N-m-s"
       }
     ]
   },
   "gyroscopic-couple-calculator": {
-    "title": "Gyroscopic Couple Calculator",
-    "description": "Calculate gyroscopic couple and precession for rotating discs.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "C = I*omega*omega_p",
+    "title": "Gyroscopic Couple & Bearing Reaction Calculator",
+    "description": "Calculate reactive gyroscopic couple and induced radial bearing support reaction force for spinning rotors.",
+    "discipline": "Rotational Rigid-Body Dynamics & Bearing Sizing",
+    "standards": "Orthogonal Axis Forced-Precession Gyroscopic Couple Law (C = I * omega_s * omega_p)",
+    "cadContext": "Include gyroscopic couple radial bearing reactions (F_b = C / L_b) when checking rolling bearing dynamic life for marine, railway, and aerospace rotors.",
+    "formula": "omega_s = 2*pi*n_s/60; omega_p = 2*pi*n_p/60; C = I*omega_s*omega_p; F_b = C / L_b",
     "inputs": [
       {
-        "label": "Inertia I (kg.m2)",
+        "label": "Polar Inertia I (kg-m2)",
         "val": "0.5"
       },
       {
-        "label": "Spin Speed (RPM)",
+        "label": "Spin Speed n_s (RPM)",
         "val": "3000"
       },
       {
-        "label": "Precession Speed (RPM)",
+        "label": "Precession Speed n_p (RPM)",
         "val": "60"
+      },
+      {
+        "label": "Bearing Support Span L_b (m)",
+        "val": "0.4"
       }
     ],
     "outputs": [
       {
-        "label": "Gyro Couple",
+        "label": "Gyroscopic Couple C",
         "val": "986.96 Nm"
       },
       {
-        "label": "Spin Angular",
+        "label": "Bearing Radial Reaction F_b",
+        "val": "2467.40 N"
+      },
+      {
+        "label": "Spin Angular Velocity omega_s",
         "val": "314.16 rad/s"
       },
       {
-        "label": "Precession Angular",
+        "label": "Precession Angular Velocity omega_p",
         "val": "6.283 rad/s"
       }
     ]
   },
   "hardness-converter": {
-    "title": "Hardness Converter",
-    "description": "Convert between Rockwell (HRC, HRB), Vickers (HV), Brinell (HB), and tensile strength (N/mm²) hardness scales for steels and metals.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "Conversions are approximate for carbon and alloy steels. Actual values may vary by material composition, test method, and specimen preparation. Tensile strength estimate: σu ≈ 3.45 × HB (for steel).",
+    "title": "Hardness Scale Converter (HRC, HV, HB, HRB, HLD)",
+    "description": "Approximate monotonic interpolation across Rockwell C (HRC), Rockwell B (HRB), Vickers (HV), Brinell (HB), and Leeb (HLD) hardness scales for steels.",
+    "discipline": "Materials Testing & Heat Treatment Metrology",
+    "standards": "Wikipedia Steel Hardness Comparison Chart (citing ASTM E140 and ISO 18265 for carbon and alloy steels)",
+    "cadContext": "Translate customer drawing hardness callouts (e.g., 45 HRC case/core specification) into equivalent HB or HV inspection targets without mixing austenitic or non-ferrous alloys.",
+    "formula": "Piecewise linear interpolation over monotonically ordered steel hardness comparison rows (HRC, HV, HB, HRB, HLD)",
     "inputs": [
       {
-        "label": "Hardness Scale Rockwell C Vickers Brinell Rockwell B Value ( HRC )",
+        "label": "Hardness Scale",
+        "val": "HRC"
+      },
+      {
+        "label": "Hardness Value",
         "val": "45"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Rockwell C (HRC)",
+        "val": "45.0 HRC"
+      },
+      {
+        "label": "Vickers (HV)",
+        "val": "460.0 HV"
+      },
+      {
+        "label": "Brinell (HB)",
+        "val": "427.0 HB"
+      },
+      {
+        "label": "Rockwell B (HRB)",
+        "val": "115.0 HRB"
+      },
+      {
+        "label": "Leeb (HLD)",
+        "val": "677.0 HLD"
+      }
+    ]
   },
   "harmonic-drive-calculator": {
     "title": "Harmonic Drive Ratio Calculator",

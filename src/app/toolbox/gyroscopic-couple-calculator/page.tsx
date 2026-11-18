@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import GyroscopicCoupleCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Gyroscopic Couple Calculator",
-  description: "Calculate gyroscopic couple and precession for rotating discs.",
+  title: 'Gyroscopic Couple & Bearing Reaction Calculator',
+  description: 'Calculate reactive gyroscopic couple (C = I*omega_s*omega_p) and induced radial bearing support reaction force for rotating rotors.',
   path: '/toolbox/gyroscopic-couple-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function GyroscopicCoupleCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Gyroscopic Couple Calculator", path: '/toolbox/gyroscopic-couple-calculator' },
+    { name: 'Gyroscopic Couple Calculator', path: '/toolbox/gyroscopic-couple-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function GyroscopicCoupleCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Mechanical
+              Rotational Dynamics
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Gyroscopic Couple <span className="text-blue-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate gyroscopic couple and precession for rotating discs.
+              Calculate reactive gyroscopic torque and radial bearing reaction loads for spinning discs undergoing forced precession.
             </p>
           </div>
         </section>
