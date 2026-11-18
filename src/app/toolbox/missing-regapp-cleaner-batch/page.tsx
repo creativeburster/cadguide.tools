@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import MissingRegappCleanerClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'AutoCAD Massive Regapp Bloat LISP Cleaner Batch Generator | CADGuide.tools',
+  title: 'AutoCAD Regapp DXF APPID Inspector & -PURGE Script Generator | CADGuide.tools',
   description:
-    'Online generation of batch cleaning CAD registration applications (Regapp) Bloated residual AutoLISP macro code and .scr Batch drawing control script. Helps shrink drawing size 80%, completely solve the problem of viewport freezing and slow drawing opening.',
+    'Inspect ASCII DXF APPID registered application entries locally in your browser and generate pure-ASCII AutoCAD -PURGE / AUDIT scripts and AutoLISP cleanup helpers.',
   path: '/toolbox/missing-regapp-cleaner-batch',
 });
 
@@ -34,10 +34,10 @@ export default function MissingRegappCleanerPage() {
               CAD Performance Tuning Wizard
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Regapp <span className="text-blue-400">Drawing registration application slimming script generator</span>
+              Regapp <span className="text-blue-400">DXF Inspector &amp; -PURGE Script Generator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Solve the problem of inexplicable increase in the size of CAD drawings, Viewport panning stuck nemesis. Custom generated silent cleaning Regapp Rubbish AutoLISP plugin, and get a one-click fully automatic scanning and batch cleaning script for multiple images. 
+              Inspect ASCII DXF APPID registered application records locally and generate pure-ASCII AutoCAD -PURGE, AUDIT, and AutoLISP cleanup scripts.
             </p>
           </div>
         </section>

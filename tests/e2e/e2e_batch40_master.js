@@ -1,11 +1,10 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-// Batch 40 E2E Master Script: Tools 196-200 (skipped mastercam-shortcuts-sheet) + #201 regression
+// Batch 40 E2E Master Script: Tools 196-200 (skipped mastercam-shortcuts-sheet)
 // 196. manifold-pressure-calculator
 // 197. manometer-pressure-calculator
 // 198. mass-unit-converter
 // 199. mat-foundation-stress-calculator
 // 200. material-density-calculator
-// 201. material-properties-reference (moved to Batch 41 #1 per review; retained in regression)
 
 const { chromium } = require('playwright');
 const assert = require('assert');
@@ -314,36 +313,6 @@ async function runTests() {
 
     await main.locator('[data-testid="btn-reset"]').click();
     approx(await main.locator('[data-testid="result-mass-kg"]').innerText(), 11.775, `${label} reset`);
-    await assertClipboardRejectSafe(page, main, label);
-    console.log(`[PASS] ${label}`);
-  }
-
-  // 201. material-properties-reference (Batch 41 #1)
-  {
-    const label = '201 material-properties-reference';
-    await openToolPage(page, `${BASE_URL}/toolbox/material-properties-reference`, '[data-testid="input-search"]');
-    const main = page.getByRole('main').last();
-    await assertZeroNumberInputs(main, label);
-    await verifyNegativeTerms(page, BANNED_B40_TERMS, label);
-
-    approx(await main.locator('[data-testid="result-count"]').innerText(), 14, `${label} total 14 grades`);
-
-    await main.locator('[data-testid="preset-6061"]').click();
-    approx(await main.locator('[data-testid="result-count"]').innerText(), 1, `${label} 6061 count`);
-    assert.strictEqual((await main.locator('[data-testid="result-top-grade"]').innerText()).trim(), 'Aluminum 6061', `${label} 6061 grade`);
-    approx(await main.locator('[data-testid="result-top-density"]').innerText(), 2.7, `${label} 6061 rho`);
-    approx(await main.locator('[data-testid="result-top-modulus"]').innerText(), 68, `${label} 6061 E`);
-
-    await main.locator('[data-testid="btn-reset"]').click();
-    approx(await main.locator('[data-testid="result-count"]').innerText(), 14, `${label} reset`);
-
-    const [dl] = await Promise.all([page.waitForEvent('download'), main.locator('[data-testid="btn-download"]').click()]);
-    const csv = await readDownloadText(dl);
-    assertAscii(csv, `${label} csv`);
-    assert(csv.includes('ASTM A36 Structural Steel,steel,7.8,250,400-550,200,0.26,11.7'), `${label} csv A36`);
-    assert(csv.includes('Titanium Ti-6Al-4V,titanium,4.429,880,900-950,104-113,0.31-0.37,8.6'), `${label} csv Ti64`);
-
-    await assertNoNan(main, label);
     await assertClipboardRejectSafe(page, main, label);
     console.log(`[PASS] ${label}`);
   }

@@ -38,7 +38,7 @@ export default function MissingFontResolverPage() {
               Missing CAD fonts and <span className="text-blue-400">SHX Substitution</span> Matching box
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Solving the issue of drawings that are full of question marks (?) and garbled text. Enter the missing font name, match the best copyright-free replacement solution and one-click configuration script. 
+              Look up substitute SHX font entries and generate pure-ASCII acad.fmp mapping tables and FONTALT scripts based on Autodesk AutoCAD documentation.
             </p>
           </div>
         </section>

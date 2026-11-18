@@ -2,449 +2,437 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Download, FileCode, CheckCircle, Cpu, Info, Settings, Layers } from 'lucide-react';
+import { Download, FileCode, Info, Settings, Upload, RotateCcw, Copy, Check, ExternalLink } from 'lucide-react';
+
+const SAMPLE_BLOATED_DXF = [
+  '0', 'SECTION', '2', 'HEADER', '9', '$ACADVER', '1', 'AC1032', '0', 'ENDSEC',
+  '0', 'SECTION', '2', 'TABLES',
+  '0', 'TABLE', '2', 'APPID',
+  '0', 'APPID', '2', 'ACAD',
+  '0', 'APPID', '2', 'ORPHAN_GIS_LINK',
+  '0', 'APPID', '2', 'LEGACY_TARCH_XDATA',
+  '0', 'APPID', '2', 'DGN_ORPHAN_REGAPP',
+  '0', 'ENDTAB',
+  '0', 'TABLE', '2', 'LAYER',
+  '0', 'LAYER', '2', '0',
+  '0', 'LAYER', '2', 'WALLS',
+  '0', 'ENDTAB',
+  '0', 'ENDSEC',
+  '0', 'SECTION', '2', 'ENTITIES',
+  '0', 'LINE', '8', 'WALLS', '10', '0', '20', '0', '11', '100', '21', '0',
+  '0', 'ENDSEC',
+  '0', 'EOF',
+].join('\n');
+
+const SAMPLE_CLEAN_DXF = [
+  '0', 'SECTION', '2', 'HEADER', '9', '$ACADVER', '1', 'AC1032', '0', 'ENDSEC',
+  '0', 'SECTION', '2', 'TABLES',
+  '0', 'TABLE', '2', 'APPID',
+  '0', 'APPID', '2', 'ACAD',
+  '0', 'ENDTAB',
+  '0', 'TABLE', '2', 'LAYER',
+  '0', 'LAYER', '2', '0',
+  '0', 'ENDTAB',
+  '0', 'ENDSEC',
+  '0', 'SECTION', '2', 'ENTITIES',
+  '0', 'LINE', '8', '0', '10', '0', '20', '0', '11', '50', '21', '0',
+  '0', 'ENDSEC',
+  '0', 'EOF',
+].join('\n');
+
+interface DxfRegappInspection {
+  validDxf: boolean;
+  acadVer: string;
+  appIds: string[];
+  nonAcadAppIds: string[];
+  layerCount: number;
+  entityCount: number;
+}
+
+function inspectAsciiDxfRegapps(text: string): DxfRegappInspection {
+  const lines = text.split(/\r?\n/);
+  const appIds: string[] = [];
+  let acadVer = 'UNKNOWN';
+  let layerCount = 0;
+  let entityCount = 0;
+  let inEntities = false;
+  let hasSection = false;
+
+  for (let i = 0; i < lines.length - 1; i += 2) {
+    const code = lines[i].trim();
+    const val = lines[i + 1].trim();
+    if (code === '0' && val === 'SECTION') {
+      hasSection = true;
+    } else if (code === '2' && val === 'ENTITIES') {
+      inEntities = true;
+    } else if (code === '0' && val === 'ENDSEC') {
+      inEntities = false;
+    } else if (code === '9' && val === '$ACADVER' && i + 3 < lines.length) {
+      acadVer = lines[i + 3].trim();
+    } else if (code === '0' && val === 'APPID') {
+      for (let j = i + 2; j < lines.length - 1; j += 2) {
+        const nc = lines[j].trim();
+        const nv = lines[j + 1].trim();
+        if (nc === '0') break;
+        if (nc === '2') {
+          appIds.push(nv);
+          break;
+        }
+      }
+    } else if (code === '0' && val === 'LAYER') {
+      layerCount++;
+    } else if (inEntities && code === '0' && val !== 'VERTEX' && val !== 'SEQEND' && val !== 'ENDSEC') {
+      entityCount++;
+    }
+  }
+
+  const nonAcadAppIds = appIds.filter((a) => a.toUpperCase() !== 'ACAD');
+  return {
+    validDxf: hasSection && text.includes('EOF'),
+    acadVer,
+    appIds,
+    nonAcadAppIds,
+    layerCount,
+    entityCount,
+  };
+}
+
+const OFFICIAL_LINKS = [
+  {
+    name: 'Autodesk AutoCAD 2025 Help — -PURGE (Command: registered applications, Verify Each Name)',
+    url: 'https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core/files/GUID-C3876E92-3478-449C-8FAB-DA760B2EDD09.htm',
+  },
+  {
+    name: 'Autodesk AutoCAD 2025 Help — Repair Damaged Drawing Files (AUDIT, AUDITCTL)',
+    url: 'https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core/files/GUID-353D7074-378B-401E-A983-B2E6C1930264.htm',
+  },
+  {
+    name: 'Autodesk AutoCAD 2025 Help — CMDECHO (System Variable)',
+    url: 'https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core/files/GUID-E7599129-5A3B-4121-A0C3-A625CA96E55B.htm',
+  },
+  {
+    name: 'Autodesk AutoCAD 2025 Developer Help — AutoCAD Core Console',
+    url: 'https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core-Console/files/AUTOCAD_CORE_CONSOLE.html',
+  },
+];
+
+function toAscii(s: string): string {
+  return s.replace(/[^\x20-\x7E\r\n\t]/g, '');
+}
 
 export default function MissingRegappCleanerClient() {
-  // States
-  const [isStartupRun, setIsStartupRun] = useState(false);
-  const [isPurgeAll, setIsPurgeAll] = useState(true);
-  const [isAutoSaveClose, setIsAutoSaveClose] = useState(false);
-  const [logFileReport, setLogFileReport] = useState(true);
-  const [bloatedSize, setBloatedSize] = useState(48); // MB
-  const [activeTab, setActiveTab] = useState<'lisp' | 'bat' | 'scr'>('lisp');
-  const [cleanProgress, setCleanProgress] = useState<'idle' | 'cleaning' | 'done'>('idle');
-  const [cleanedSizeResult, setCleanedSizeResult] = useState<number | null>(null);
+  const [dxfText, setDxfText] = useState(SAMPLE_BLOATED_DXF);
+  const [fileName, setFileName] = useState('sample-bloated-regapps.dxf');
+  const [purgeAll, setPurgeAll] = useState(true);
+  const [runAudit, setRunAudit] = useState(true);
+  const [setAuditCtl, setSetAuditCtl] = useState(true);
+  const [echoOff, setEchoOff] = useState(true);
+  const [activeTab, setActiveTab] = useState<'scr' | 'lisp'>('scr');
+  const [copied, setCopied] = useState(false);
 
-  // Clean Simulation
-  const triggerCleanSimulation = () => {
-    setCleanProgress('cleaning');
-    setCleanedSizeResult(null);
-    setTimeout(() => {
-      setCleanProgress('done');
-      // Typically Regapps bloat reduction can shrink dwg down to 5-15% of its bloated size
-      const reduction = Math.max(1.2, parseFloat((bloatedSize * 0.08).toFixed(1)));
-      setCleanedSizeResult(reduction);
-    }, 2500);
+  const inspection = useMemo(() => inspectAsciiDxfRegapps(dxfText), [dxfText]);
+
+  const scripts = useMemo(() => {
+    const scrLines = [
+      '; AutoCAD Registered Application Cleanup Script (.scr)',
+      '; Create a backup copy of your drawing before running -PURGE or AUDIT.',
+    ];
+    if (setAuditCtl) {
+      scrLines.push('; Set AUDITCTL = 1 to write an .adt audit log file', 'AUDITCTL', '1');
+    }
+    scrLines.push(
+      '; Purge registered applications without verify prompt',
+      '-PURGE',
+      'R',
+      '*',
+      'N'
+    );
+    if (purgeAll) {
+      scrLines.push('; Purge all unreferenced named objects', '-PURGE', 'A', '*', 'N');
+    }
+    if (runAudit) {
+      scrLines.push('; Run AUDIT and choose Yes to fix detected errors', 'AUDIT', 'Y');
+    }
+
+    const lispLines = [
+      ';; AutoLISP Regapp Cleanup Helper (Pure ASCII)',
+      ';; Save a backup copy of your drawing before running CLEANDWG.',
+      '(defun c:CleanDwg (/)',
+      `  (setvar "CMDECHO" ${echoOff ? 0 : 1})`,
+    ];
+    if (setAuditCtl) {
+      lispLines.push('  (setvar "AUDITCTL" 1)');
+    }
+    lispLines.push('  (command "-PURGE" "R" "*" "N")');
+    if (purgeAll) {
+      lispLines.push('  (command "-PURGE" "A" "*" "N")');
+    }
+    if (runAudit) {
+      lispLines.push('  (command "AUDIT" "Y")');
+    }
+    lispLines.push('  (setvar "CMDECHO" 1)', '  (princ)', ')');
+
+    return {
+      scr: toAscii(scrLines.join('\r\n') + '\r\n'),
+      lisp: toAscii(lispLines.join('\r\n') + '\r\n'),
+    };
+  }, [purgeAll, runAudit, setAuditCtl, echoOff]);
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const f = e.target.files?.[0];
+    if (!f) return;
+    setFileName(f.name);
+    const txt = await f.slice(0, 4 * 1024 * 1024).text();
+    setDxfText(txt);
   };
 
-  // Compile LISP Code
-  const lispCode = useMemo(() => {
-    let code = `;; =========================================================================\n`;
-    code += `;; AutoLISP dwg optimization script\n`;
-    code += `;; Generated by CADGuide.tools\n`;
-    code += `;; -------------------------------------------------------------------------\n`;
-    code += `;; 💡 Instructions for use: After loading, enter on the command line CleanDwg Press Enter to start drawing cleanup. \n`;
-    code += `;; =========================================================================\n\n`;
-    code += `(defun c:CleanDwg (/)\n`;
-    code += `  (setvar "CMDECHO" 0)\n`;
-    if (logFileReport) {
-      code += `  (princ "\\n[CADGuide] Begin cleaning up drawing database and redundant registered application aliases...")\n`;
-    }
-    code += `  \n`;
-    code += `  ;; Core drawing slimming: delete all registered applications without prompting (Regapp)\n`;
-    code += `  (command "-PURGE" "R" "*" "N")\n`;
-    code += `  \n`;
-    if (isPurgeAll) {
-      code += `  ;; Clean up all unused blocks, dimension styles, multiline style, line style, Text styles and layers, etc\n`;
-      code += `  (command "-PURGE" "A" "*" "N")\n`;
-      code += `  \n`;
-    }
-    code += `  (setvar "CMDECHO" 1)\n`;
-    if (logFileReport) {
-      code += `  (princ "\\n[CADGuide] The drawings have been optimized and completely eliminated Regapp with invalid block data! ")\n`;
-    }
-    code += `  (princ)\n`;
-    code += `)\n\n`;
-
-    if (isStartupRun) {
-      code += `;; Register S::STARTUP hook to automatically run cleanup on drawing open\n`;
-      code += `(defun-q S::STARTUP ()\n`;
-      code += `  (c:CleanDwg)\n`;
-      if (isAutoSaveClose) {
-        code += `  (command "_.qsave")\n`;
-        code += `  (command "_.close")\n`;
-      }
-      code += `  (princ)\n`;
-      code += `)\n`;
-    }
-
-    return code;
-  }, [isStartupRun, isPurgeAll, isAutoSaveClose, logFileReport]);
-
-  // Compile BAT script payload using official headless accoreconsole
-  const batCode = useMemo(() => {
-    return `@echo off
-setlocal enabledelayedexpansion
-echo ===================================================
-echo   CADGuide Batch Drawing RegApp Optimizer
-echo   Powered by AutoCAD Headless Core Console (accoreconsole.exe)
-echo ===================================================
-
-:: 1. Prepare Single Drawing Cleaner Script
-echo (load "cleanup.lsp") > clean_run.scr
-echo CleanDwg >> clean_run.scr
-echo _qsave >> clean_run.scr
-echo _quit >> clean_run.scr
-
-:: 2. Locate accoreconsole.exe in standard AutoCAD install paths
-set "ACCORE="
-for %%Y in (2027 2026 2025 2024 2023 2022 2021 2020) do (
-    if exist "C:\\Program Files\\Autodesk\\AutoCAD %%Y\\accoreconsole.exe" (
-        set "ACCORE=C:\\Program Files\\Autodesk\\AutoCAD %%Y\\accoreconsole.exe"
-        goto :FOUND
-    )
-)
-:FOUND
-if "%ACCORE%"=="" (
-    echo [WARNING] accoreconsole.exe was not detected in default directories.
-    echo Please edit this .bat file and set your custom AutoCAD directory path.
-    pause
-    exit /b
-)
-
-echo Found AutoCAD Engine: %ACCORE%
-echo Processing all .dwg files in current folder in headless silent mode...
-echo.
-
-for %%F in (*.dwg) do (
-    echo Optimizing: %%F ...
-    "%ACCORE%" /i "%%F" /s clean_run.scr /l en-US > nul 2>&1
-    echo [OK] Done: %%F
-)
-
-if exist clean_run.scr del clean_run.scr > nul 2>&1
-echo ===================================================
-echo ✓ Batch optimization completed for all drawings!
-echo ===================================================
-pause`;
-  }, []);
-
-  // Compile SCR command sequences
-  const scrCode = useMemo(() => {
-    let code = `; AutoCAD Script file for batch execution\n`;
-    code += `; Generated by CADGuide.tools\n`;
-    code += `; -------------------------------------------------------------------------\n`;
-    code += `; Usage: In AutoCAD, run SCRIPT and select this file to batch open and clean drawings.\n\n`;
-    code += `OPEN "C:\\Drawings\\FloorPlan_A.dwg"\n`;
-    code += `(load "cleanup.lsp")\n`;
-    code += `CleanDwg\n`;
-    code += `QSAVE\n`;
-    code += `CLOSE\n`;
-    code += `OPEN "C:\\Drawings\\SiteMap_B.dwg"\n`;
-    code += `(load "cleanup.lsp")\n`;
-    code += `CleanDwg\n`;
-    code += `QSAVE\n`;
-    code += `CLOSE\n`;
-    code += `; (You can continue to expand this list based on the actual drawing absolute path)`;
-
-    return code;
-  }, []);
-
-  // Trigger downloads for both files
-  const downloadLisp = () => {
-    const blob = new Blob([lispCode], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'cleanup.lsp';
-    link.click();
-    URL.revokeObjectURL(url);
+  const resetDefaults = () => {
+    setDxfText(SAMPLE_BLOATED_DXF);
+    setFileName('sample-bloated-regapps.dxf');
+    setPurgeAll(true);
+    setRunAudit(true);
+    setSetAuditCtl(true);
+    setEchoOff(true);
+    setActiveTab('scr');
+    setCopied(false);
   };
 
-  const downloadBat = () => {
-    const blob = new Blob([batCode], { type: 'text/plain;charset=utf-8' });
+  const handleCopy = async () => {
+    const payload = activeTab === 'scr' ? scripts.scr : scripts.lisp;
+    try {
+      if (!navigator.clipboard || typeof navigator.clipboard.writeText !== 'function') return;
+      await navigator.clipboard.writeText(payload);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const downloadFile = (text: string, fname: string) => {
+    const blob = new Blob([text], { type: 'text/plain;charset=us-ascii' });
     const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'generate_scr.bat';
-    link.click();
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = fname;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
 
   return (
-    <div className="flex flex-col gap-8">
-      {/* Parameters and settings panel */}
+    <div className="space-y-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-        {/* Left: Clean parameter control panel */}
-        <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm flex flex-col justify-between gap-6">
-          <div>
-            <h2 className="text-slate-900 font-black text-lg tracking-tight flex items-center gap-2">
-              <Settings className="w-5 h-5 text-blue-500" />
-              Clean up configuration items
-            </h2>
-            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
-              Purge Optimization Options
-            </p>
-            
-            {/* Toggles */}
-            <div className="flex flex-col gap-4 mt-6">
-              
-              <label className="flex items-start gap-3 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={isPurgeAll}
-                  onChange={(e) => setIsPurgeAll(e.target.checked)}
-                  className="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500/20"
-                />
-                <div>
-                  <span className="text-base font-bold text-slate-800">Deep comprehensive cleaning (Purge All)</span>
-                  <p className="text-sm text-slate-400 leading-normal mt-0.5">In addition to Regapp, also eliminate other redundant unused layers in the drawing. Block and text styles. </p>
-                </div>
-              </label>
-
-              <label className="flex items-start gap-3 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={isStartupRun}
-                  onChange={(e) => {
-                    setIsStartupRun(e.target.checked);
-                    if (!e.target.checked) setIsAutoSaveClose(false);
-                  }}
-                  className="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500/20"
-                />
-                <div>
-                  <span className="text-base font-bold text-slate-800">Automatic silent cleaning on drawing open (S::STARTUP)</span>
-                  <p className="text-sm text-slate-400 leading-normal mt-0.5">Utilizes the AutoLISP loading mechanism to silently execute CleanDwg whenever AutoCAD starts or a drawing is opened.</p>
-                </div>
-              </label>
-
-              <label className={`flex items-start gap-3 cursor-pointer transition-opacity ${!isStartupRun ? 'opacity-40 pointer-events-none' : ''}`}>
-                <input
-                  type="checkbox"
-                  checked={isAutoSaveClose}
-                  onChange={(e) => setIsAutoSaveClose(e.target.checked)}
-                  disabled={!isStartupRun}
-                  className="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500/20"
-                />
-                <div>
-                  <span className="text-base font-bold text-slate-800">Automatically save and exit after cleaning is completed</span>
-                  <p className="text-sm text-slate-400 leading-normal mt-0.5">Specifically used for batch SCR script calls. After completing the deep reconstruction of Regapp, directly QSAVE and close the window. </p>
-                </div>
-              </label>
-
-              <label className="flex items-start gap-3 cursor-pointer">
-                <input
-                  type="checkbox"
-                  checked={logFileReport}
-                  onChange={(e) => setLogFileReport(e.target.checked)}
-                  className="mt-1 rounded border-slate-300 text-blue-600 focus:ring-blue-500/20"
-                />
-                <div>
-                  <span className="text-base font-bold text-slate-800">Command line output cleanup success report</span>
-                  <p className="text-sm text-slate-400 leading-normal mt-0.5">After execution, output in the CAD command line Cleaned Summary Report to confirm successful execution. </p>
-                </div>
-              </label>
-
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-6 shadow-sm space-y-5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Settings className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-black text-slate-900">Cleanup Options &amp; DXF</h2>
             </div>
+            <button
+              type="button"
+              data-testid="btn-reset"
+              onClick={resetDefaults}
+              className="inline-flex items-center gap-1 px-3 py-1.5 rounded-xl text-xs font-black bg-slate-100 text-slate-700 hover:bg-slate-200 cursor-pointer"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              Reset
+            </button>
           </div>
 
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-wrap gap-2">
             <button
-              onClick={downloadLisp}
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-blue-600 hover:bg-blue-700 text-white font-black text-lg shadow-md hover:shadow-lg transition-all cursor-pointer w-full"
+              type="button"
+              data-testid="preset-bloated"
+              onClick={() => {
+                setDxfText(SAMPLE_BLOATED_DXF);
+                setFileName('sample-bloated-regapps.dxf');
+              }}
+              className="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-700 cursor-pointer"
             >
-              <Download className="w-4 h-4" />
-              Download cleanup.lsp
+              Sample 1: 4 APPIDs (3 Non-ACAD)
             </button>
             <button
-              onClick={downloadBat}
-              className="flex items-center justify-center gap-2 px-4 py-3 rounded-2xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-base transition-all cursor-pointer w-full"
+              type="button"
+              data-testid="preset-clean"
+              onClick={() => {
+                setDxfText(SAMPLE_CLEAN_DXF);
+                setFileName('sample-clean-regapps.dxf');
+              }}
+              className="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-blue-50 hover:text-blue-700 cursor-pointer"
             >
-              Download generate_scr.bat (batch)
+              Sample 2: Clean DXF (1 APPID)
             </button>
+          </div>
+
+          <div>
+            <label className="flex items-center justify-center gap-2 w-full py-3 px-4 rounded-2xl border-2 border-dashed border-slate-300 bg-slate-50 hover:bg-blue-50/40 text-xs font-bold text-slate-700 cursor-pointer">
+              <Upload className="w-4 h-4 text-blue-600" />
+              <span>Inspect Local ASCII .DXF (0 Upload)</span>
+              <input type="file" accept=".dxf,.txt" onChange={handleFileUpload} className="hidden" />
+            </label>
+            <p className="text-xs text-slate-500 mt-1.5">Active file: <strong>{fileName}</strong></p>
+          </div>
+
+          <div className="space-y-3 text-sm">
+            <label className="flex items-center gap-2.5 cursor-pointer font-bold text-slate-700">
+              <input type="checkbox" data-testid="checkbox-purge-all" checked={purgeAll} onChange={(e) => setPurgeAll(e.target.checked)} className="w-4 h-4 accent-blue-600" />
+              <span>Include -PURGE All (*, N)</span>
+            </label>
+            <label className="flex items-center gap-2.5 cursor-pointer font-bold text-slate-700">
+              <input type="checkbox" data-testid="checkbox-audit" checked={runAudit} onChange={(e) => setRunAudit(e.target.checked)} className="w-4 h-4 accent-blue-600" />
+              <span>Run AUDIT (Fix errors: Y)</span>
+            </label>
+            <label className="flex items-center gap-2.5 cursor-pointer font-bold text-slate-700">
+              <input type="checkbox" data-testid="checkbox-auditctl" checked={setAuditCtl} onChange={(e) => setSetAuditCtl(e.target.checked)} className="w-4 h-4 accent-blue-600" />
+              <span>Set AUDITCTL = 1 (.adt log)</span>
+            </label>
+            <label className="flex items-center gap-2.5 cursor-pointer font-bold text-slate-700">
+              <input type="checkbox" data-testid="checkbox-cmdecho" checked={echoOff} onChange={(e) => setEchoOff(e.target.checked)} className="w-4 h-4 accent-blue-600" />
+              <span>Set CMDECHO = 0 in AutoLISP</span>
+            </label>
           </div>
         </div>
 
-        {/* Right: Drawing stutter simulates compression and SVG Filter animation */}
-        <div className="bg-slate-950 rounded-3xl border border-slate-800 p-6 shadow-2xl flex flex-col justify-between min-h-[300px] lg:col-span-2 relative overflow-hidden text-white">
-          <div className="absolute inset-0 bg-gradient-to-tr from-slate-900/50 to-transparent pointer-events-none"></div>
+        <div className="lg:col-span-2 space-y-6">
+          <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm space-y-5">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h2 className="text-lg font-black text-slate-900">Local DXF APPID Table Inspection</h2>
+              <span
+                data-testid="badge-status"
+                className={`px-3 py-1 rounded-full text-xs font-black uppercase ${
+                  !inspection.validDxf
+                    ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                    : inspection.nonAcadAppIds.length > 0
+                    ? 'bg-amber-50 text-amber-700 border border-amber-200'
+                    : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                }`}
+              >
+                {!inspection.validDxf
+                  ? 'INVALID ASCII DXF'
+                  : inspection.nonAcadAppIds.length > 0
+                  ? `${inspection.nonAcadAppIds.length} NON-ACAD REGAPPS FOUND`
+                  : 'CLEAN APPID TABLE'}
+              </span>
+            </div>
 
-          <div>
-            <h2 className="text-white font-black text-lg tracking-tight flex items-center gap-2">
-              <Cpu className="w-5 h-5 text-blue-400" />
-              Registered Application (Regapp) Drawing Cleaning Simulation
-            </h2>
-            <p className="text-base text-slate-400 font-bold mt-1 uppercase tracking-wider">
-              Live Cleaning & Compression Simulator
-            </p>
-          </div>
-
-          {/* Simulation graphics part */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center py-6">
-            <div className="flex flex-col gap-4">
-              <div className="flex justify-between text-base font-bold text-slate-400">
-                <span>Set initial drawing size (MB)</span>
-                <span className="text-blue-400 font-mono text-lg">{bloatedSize} MB</span>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="bg-blue-50 rounded-2xl p-4 border border-blue-100">
+                <div className="text-xs font-black text-blue-500 uppercase mb-1">Total APPIDs</div>
+                <div className="text-2xl font-black text-blue-900">
+                  <span data-testid="result-appid-total">{inspection.validDxf ? inspection.appIds.length : '—'}</span>
+                </div>
               </div>
-              <input
-                type="range"
-                min="5"
-                max="150"
-                value={bloatedSize}
-                onChange={(e) => {
-                  if (cleanProgress !== 'cleaning') {
-                    setBloatedSize(parseInt(e.target.value));
-                    setCleanProgress('idle');
-                    setCleanedSizeResult(null);
-                  }
-                }}
-                disabled={cleanProgress === 'cleaning'}
-                className="w-full h-1.5 bg-slate-800 rounded-lg appearance-none cursor-pointer accent-blue-500"
-              />
-              <p className="text-sm text-slate-500 leading-relaxed">
-                DWG files exported from BIM or civil surveying software often accumulate thousands of orphaned RegApp dictionary entries, causing massive file bloating, copy-paste delays, and severe drawing lag.
-              </p>
+              <div className="bg-amber-50 rounded-2xl p-4 border border-amber-100">
+                <div className="text-xs font-black text-amber-600 uppercase mb-1">Non-ACAD APPIDs</div>
+                <div className="text-2xl font-black text-amber-900">
+                  <span data-testid="result-non-acad">{inspection.validDxf ? inspection.nonAcadAppIds.length : '—'}</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase mb-1">DXF Layers</div>
+                <div className="text-2xl font-black text-slate-900">
+                  <span data-testid="result-layers">{inspection.validDxf ? inspection.layerCount : '—'}</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase mb-1">ENTITIES Count</div>
+                <div className="text-2xl font-black text-slate-900">
+                  <span data-testid="result-entities">{inspection.validDxf ? inspection.entityCount : '—'}</span>
+                </div>
+              </div>
             </div>
 
-            {/* SVG Animation visualization */}
-            <div className="flex flex-col items-center justify-center min-h-[140px] bg-slate-900/60 rounded-2xl border border-slate-850 p-4 relative">
-              
-              {cleanProgress === 'idle' && (
-                <div className="text-center py-4 flex flex-col items-center gap-2">
-                  <span className="text-3xl animate-bounce">📊</span>
-                  <button
-                    onClick={triggerCleanSimulation}
-                    className="px-4 py-2 rounded-xl bg-blue-500/10 hover:bg-blue-500/20 text-blue-400 border border-blue-500/20 font-black text-base transition-all cursor-pointer"
-                  >
-                    Simulate Expected Size Reduction
-                  </button>
-                </div>
-)}
+            {inspection.validDxf && inspection.appIds.length > 0 && (
+              <div className="text-xs font-mono bg-slate-50 rounded-xl p-3 border border-slate-200 text-slate-700" data-testid="result-appid-list">
+                Detected APPID records ({inspection.acadVer}): {inspection.appIds.join(', ')}
+              </div>
+            )}
 
-              {cleanProgress === 'cleaning' && (
-                <div className="w-full flex flex-col items-center gap-3">
-                  <svg viewBox="0 0 100 40" className="w-24 h-10">
-                    <line x1="10" y1="20" x2="90" y2="20" stroke="#334155" strokeWidth="2" strokeDasharray="5 5" />
-                    {/* Bloat particles getting filtered */}
-                    <circle cx="20" cy="15" r="2" fill="#ef4444" className="animate-ping" />
-                    <circle cx="35" cy="25" r="1.5" fill="#f59e0b" className="animate-ping" />
-                    <circle cx="50" cy="20" r="3" fill="#3b82f6" className="animate-[spin_2s_linear_infinite]" />
-                    <circle cx="75" cy="20" r="1.5" fill="#10b981" />
-                  </svg>
-                  <span className="text-sm text-slate-400 font-mono tracking-widest animate-pulse uppercase">
-                    PURGING REGAPPS & RESCALING DICTIONARY...
-                  </span>
-                </div>
-)}
+            <div className="flex flex-wrap items-center justify-between gap-3 pt-2 border-t border-slate-100">
+              <div className="flex gap-1 bg-slate-100 p-1 rounded-xl">
+                <button
+                  type="button"
+                  data-testid="tab-scr"
+                  onClick={() => setActiveTab('scr')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-bold cursor-pointer ${
+                    activeTab === 'scr' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600'
+                  }`}
+                >
+                  purge_regapps.scr
+                </button>
+                <button
+                  type="button"
+                  data-testid="tab-lisp"
+                  onClick={() => setActiveTab('lisp')}
+                  className={`px-3 py-1.5 rounded-lg text-xs font-bold cursor-pointer ${
+                    activeTab === 'lisp' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-600'
+                  }`}
+                >
+                  cleanup.lsp
+                </button>
+              </div>
+              <div className="flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  data-testid="btn-copy"
+                  onClick={handleCopy}
+                  className="px-3.5 py-2 rounded-xl text-xs font-black bg-slate-900 text-white hover:bg-slate-800 cursor-pointer flex items-center gap-1.5"
+                >
+                  {copied ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
+                  <span>{copied ? 'Copied' : 'Copy Script'}</span>
+                </button>
+                <button
+                  type="button"
+                  data-testid="btn-download"
+                  onClick={() => downloadFile(scripts.scr, 'purge_regapps.scr')}
+                  className="px-3.5 py-2 rounded-xl text-xs font-black bg-blue-600 text-white hover:bg-blue-700 cursor-pointer flex items-center gap-1.5"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  <span>Download .scr</span>
+                </button>
+                <button
+                  type="button"
+                  data-testid="btn-download-lisp"
+                  onClick={() => downloadFile(scripts.lisp, 'cleanup.lsp')}
+                  className="px-3.5 py-2 rounded-xl text-xs font-black bg-emerald-600 text-white hover:bg-emerald-700 cursor-pointer flex items-center gap-1.5"
+                >
+                  <FileCode className="w-3.5 h-3.5" />
+                  <span>Download .lsp</span>
+                </button>
+              </div>
+            </div>
 
-              {cleanProgress === 'done' && cleanedSizeResult && (
-                <div className="text-center py-2 flex flex-col items-center gap-2">
-                  <CheckCircle className="w-8 h-8 text-emerald-400" />
-                  <div className="flex items-baseline gap-2 mt-1">
-                    <span className="text-base line-through text-slate-500 font-mono">{bloatedSize}MB</span>
-                    <span className="text-lg font-black text-emerald-400 font-mono">{cleanedSizeResult}MB</span>
-                  </div>
-                  <span className="text-[9px] font-black text-emerald-500 bg-emerald-500/10 px-2 py-0.5 rounded-full border border-emerald-500/20">
-                    The drawing was successfully slimmed {((1 - cleanedSizeResult / bloatedSize) * 100).toFixed(1)}%! 
-                  </span>
-                </div>
-)}
+            <pre data-testid="preview-script" className="p-4 rounded-2xl bg-slate-900 text-slate-100 text-xs font-mono overflow-x-auto">
+              {activeTab === 'scr' ? scripts.scr : scripts.lisp}
+            </pre>
+          </div>
 
+          <div className="bg-white rounded-3xl border border-slate-100 p-6 shadow-sm space-y-3">
+            <div className="flex items-center gap-2 text-base font-black text-slate-900">
+              <Info className="w-5 h-5 text-blue-600" />
+              <span>Official Autodesk Documentation Sources</span>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {OFFICIAL_LINKS.map((link) => (
+                <a
+                  key={link.url}
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-between gap-2 p-3 rounded-xl bg-slate-50 border border-slate-200 hover:border-blue-300 text-xs font-bold text-slate-800"
+                >
+                  <span>{link.name}</span>
+                  <ExternalLink className="w-4 h-4 text-blue-600 shrink-0" />
+                </a>
+              ))}
             </div>
           </div>
 
-          <div className="text-sm text-slate-400 leading-normal border-t border-slate-800 pt-3 flex gap-2">
-            <Info className="w-4 h-4 text-blue-400 flex-shrink-0" />
-            <span>Benchmark Notice: This simulator provides size reduction estimates. To optimize and strip RegApps from your real DWG drawings, download the generated headless BAT or LISP script below.</span>
-          </div>
-
+          <RelatedTools />
         </div>
       </div>
-
-      {/* Code preview Tabs */}
-      <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6 pb-6 border-b border-slate-100">
-          <div>
-            <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
-              <FileCode className="w-5 h-5 text-blue-500" />
-              Script code preview area
-            </h3>
-            <p className="text-base text-slate-400 font-bold mt-1">You can directly copy and paste the code into the CAD command line to execute</p>
-          </div>
-
-          <div className="flex gap-1 bg-slate-100 p-1 rounded-xl">
-            <button
-              onClick={() => setActiveTab('lisp')}
-              className={`px-3 py-1.5 rounded-lg text-base font-bold transition-all cursor-pointer ${
-                activeTab === 'lisp' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
-              }`}
-            >
-              cleanup.lsp
-            </button>
-            <button
-              onClick={() => setActiveTab('bat')}
-              className={`px-3 py-1.5 rounded-lg text-base font-bold transition-all cursor-pointer ${
-                activeTab === 'bat' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
-              }`}
-            >
-              generate_scr.bat (batch processing)
-            </button>
-            <button
-              onClick={() => setActiveTab('scr')}
-              className={`px-3 py-1.5 rounded-lg text-base font-bold transition-all cursor-pointer ${
-                activeTab === 'scr' ? 'bg-white text-slate-900 shadow-sm' : 'text-slate-500 hover:text-slate-800'
-              }`}
-            >
-              batch_clean.scr (Demo example)
-            </button>
-          </div>
-        </div>
-
-        {/* Core preview display */}
-        <div className="bg-slate-900 text-slate-300 font-mono text-base p-6 rounded-2xl overflow-x-auto max-h-[400px] border border-slate-950 relative select-all">
-          <pre className="whitespace-pre">
-            {activeTab === 'lisp' && lispCode}
-            {activeTab === 'bat' && batCode}
-            {activeTab === 'scr' && scrCode}
-          </pre>
-        </div>
-      </div>
-
-      {/* Geek’s Guide to Productivity – Where Regapp Comes from and How to Clean It Up */}
-      <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm flex flex-col gap-6">
-        <div>
-          <h3 className="text-slate-900 font-black text-xl tracking-tight flex items-center gap-2">
-            <Layers className="w-5 h-5 text-blue-500" />
-            CAD Registered application (Regapp) bloated in-depth science popularization and geek guide
-          </h3>
-          <p className="text-base text-slate-400 mt-1 uppercase tracking-wide">
-            CAD Regapp Registry Bloat & Professional Troubleshooting Guide
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-base leading-relaxed text-slate-500">
-          <div>
-            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-              1. What is Regapp spam? 
-            </h4>
-            <p>
-              `Regapp` (Registered Application) Is used by AutoCAD to identify external application extended entity data (Xdata) the underlying registry. When you use 3D BIM Software map, may contain complex TArch (Tangent), when drawing a 3D entity plug-in, a large number of registered application records will be written to the bottom layer of the drawing. Even if the plug-in has been uninstalled, these dictionary data will still be**Inherited from generation to generation and split into each associated external reference (Xref) or copied geometry**, resulting in meaningless self-inflation of drawings. 
-            </p>
-          </div>
-          <div>
-            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-              2. Normal PURGE and silent command line PURGE
-            </h4>
-            <p>
-              In the AutoCAD GUI, the standard PURGE dialog does not purge RegApps by default, and interactive prompts interrupt batch processing. To purge silently across drawings, use the command-line equivalent <b>`-PURGE`</b> with argument <b>`R`</b> (Registered Applications), enter <b>`*`</b> for all names, and select <b>`N`</b> to skip verification prompts.
-            </p>
-          </div>
-          <div>
-            <h4 className="font-bold text-slate-800 text-lg mb-1.5 flex items-center gap-1">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-              3. Unattended batch cleanup with accoreconsole or script
-            </h4>
-            <p>
-              When dealing with hundreds of drawings, batch execution via AutoCAD's headless console (accoreconsole.exe) or an automated script (.scr) is the fastest approach. Our generated script batch opens each DWG silently, runs CleanDwg to eliminate RegApp clutter, saves changes, and terminates smoothly without interrupting your workflow.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <RelatedTools />
     </div>
-);
+  );
 }

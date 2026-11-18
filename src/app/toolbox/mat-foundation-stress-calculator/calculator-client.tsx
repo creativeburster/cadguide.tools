@@ -462,7 +462,16 @@ export default function CalculatorClient() {
               </li>
               <li>
                 <strong>Concrete Unit Weight Assumption (γc):</strong> Normal-weight plain concrete density typically
-                ranges around 2240–2400 kg/m³. The editable default of 24.5 kN/m³ is a common engineering assumption
+                ranges around{' '}
+                <a
+                  href="https://www.engineeringtoolbox.com/concrete-properties-d_1223.html"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-blue-600 underline hover:text-blue-800"
+                >
+                  2240–2400 kg/m³ (Engineering ToolBox)
+                </a>
+                . The editable default of 24.5 kN/m³ is a common engineering assumption
                 for reinforced concrete; adjust γc per project reinforcement ratio and local design specifications.
               </li>
               <li>

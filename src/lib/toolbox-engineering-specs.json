@@ -8697,106 +8697,186 @@
     "outputs": []
   },
   "milling-mrr-calculator": {
-    "title": "Milling MRR Calculator",
-    "description": "Calculate material removal rate (MRR), feed rate, spindle RPM, and cutting time for CNC milling operations with speed and feed formulas.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "RPM = Vc×1000/(π×D). Feed = RPM × fz × Z. MRR = WOC × DOC × Feed / 1000 (cm³/min). Power ≈ MRR × k (k≈0.5 for steel, varies by material). Values are starting points for carbide tools.",
+    "title": "Milling MRR & Cutting Power Calculator",
+    "description": "Calculate spindle RPM, table feed rate, material removal rate (MRR), pass cutting time, and net cutting power for CNC milling.",
+    "discipline": "CNC Milling & Machining Kinematics",
+    "standards": "Standard CNC Milling Kinematics (Closed-Form Analytical Model; user-adjustable kc assumption)",
+    "cadContext": "Transfer calculated spindle RPM, feed rate, and radial/axial step-over bounds (ae <= D) directly into your CAM toolpath operation parameters.",
+    "formula": "n = 1000*Vc/(pi*D); vf = n*fz*Z; Q = ae*ap*vf/1000; tc = 60*L/vf; Pc = ae*ap*vf*kc/6e7",
     "inputs": [
       {
-        "label": "Material",
-        "val": "Aluminum 6061"
-      },
-      {
-        "label": "Custom Speeds Tool Diameter (mm)",
+        "label": "Cutter Diameter D (mm)",
         "val": "10"
       },
       {
-        "label": "Number of Flutes",
+        "label": "Number of Flutes Z",
         "val": "3"
       },
       {
-        "label": "Width of Cut (mm)",
+        "label": "Cutting Speed Vc (m/min)",
+        "val": "500"
+      },
+      {
+        "label": "Chip Load fz (mm/tooth)",
+        "val": "0.10"
+      },
+      {
+        "label": "Radial Width of Cut ae (mm)",
         "val": "8"
       },
       {
-        "label": "Depth of Cut (mm)",
+        "label": "Axial Depth of Cut ap (mm)",
         "val": "2"
       },
       {
-        "label": "Cut Length (mm)",
+        "label": "Cut Path Length L (mm)",
         "val": "100"
+      },
+      {
+        "label": "Assumed Specific Cutting Force kc (N/mm2)",
+        "val": "800"
       }
     ],
     "outputs": [
       {
-        "label": "Material Removal Rate",
-        "val": "76.4 cm³/min"
+        "label": "Material Removal Rate (Q)",
+        "val": "76.39 cm3/min"
       },
       {
-        "label": "Feed Rate",
-        "val": "4775 mm/min"
+        "label": "Table Feed Rate (vf)",
+        "val": "4774.6 mm/min"
+      },
+      {
+        "label": "Spindle Speed (n)",
+        "val": "15915.5 RPM"
+      },
+      {
+        "label": "Cutting Time (tc)",
+        "val": "1.26 s"
+      },
+      {
+        "label": "Net Cutting Power (Pc)",
+        "val": "1.019 kW"
       }
     ]
   },
   "missing-font-shx-resolver": {
-    "title": "Missing CAD fonts and SHX Substitution Matching box",
-    "description": "Lookup recommended backup SHX font substitutes for missing AutoCAD/BIM fonts (e.g. tssdeng, hztxt, gbcbig). Fix garbled Chinese text and question marks.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Standardized parametric evaluation for Missing CAD fonts and SHX Substitution Matching box",
-    "inputs": [],
-    "outputs": []
+    "title": "Missing CAD Fonts & SHX Substitute Generator",
+    "description": "Generate pure-ASCII acad.fmp font mapping tables and FONTALT substitute scripts based on Autodesk AutoCAD FONTALT and FONTMAP documentation.",
+    "discipline": "CAD Text Style & Font Mapping Configuration",
+    "standards": "Autodesk AutoCAD Help — FONTALT, FONTMAP (acad.fmp), STYLE, and Substitute Fonts",
+    "cadContext": "Save generated mappings into acad.fmp (pointed to by FONTMAP) or run the .scr script to assign FONTALT and refresh viewports with REGEN.",
+    "formula": "original_font;substitute_font (semicolon-delimited FMP entry) + FONTALT <fallback_font>",
+    "inputs": [
+      {
+        "label": "FONTALT Fallback Font",
+        "val": "simplex.shx"
+      },
+      {
+        "label": "Missing Font List",
+        "val": "hztxt.shx, tssdchn.shx, tssdeng.shx, romanc.shx (4 lines)"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Parsed Missing Fonts",
+        "val": "4 entries"
+      },
+      {
+        "label": "Default Catalog Rows",
+        "val": "7 fonts"
+      },
+      {
+        "label": "Active FONTALT",
+        "val": "simplex.shx"
+      }
+    ]
   },
   "missing-regapp-cleaner-batch": {
-    "title": "Regapp Drawing registration application slimming script generator",
-    "description": "Online generation of batch cleaning CAD registration applications (Regapp) Bloated residual AutoLISP macro code and .scr Batch drawing control script. Helps shrink drawing size 80%, completely solve the problem of viewport freezing and slow drawing opening.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Standardized parametric evaluation for Regapp Drawing registration application slimming script generator",
-    "inputs": [],
-    "outputs": []
+    "title": "AutoCAD Regapp DXF APPID Inspector & -PURGE Script Generator",
+    "description": "Inspect ASCII DXF APPID registered application records locally and generate pure-ASCII -PURGE, AUDIT, and AutoLISP cleanup scripts.",
+    "discipline": "CAD Drawing Database Hygiene & Purge Automation",
+    "standards": "Autodesk AutoCAD Help — -PURGE (registered applications), AUDIT, AUDITCTL, CMDECHO, and AutoCAD Core Console",
+    "cadContext": "Inspect exported ASCII DXF APPID tables for non-ACAD entries and run the pure-ASCII -PURGE / AUDIT script inside AutoCAD after backing up drawings.",
+    "formula": "ASCII DXF APPID Table Count + -PURGE R * N / -PURGE A * N / AUDIT Y",
+    "inputs": [
+      {
+        "label": "Active Sample DXF",
+        "val": "sample-bloated-regapps.dxf"
+      },
+      {
+        "label": "Purge All Unreferenced Objects",
+        "val": "Enabled"
+      },
+      {
+        "label": "Run AUDIT (Fix Errors: Y)",
+        "val": "Enabled"
+      },
+      {
+        "label": "Set AUDITCTL = 1 (.adt log)",
+        "val": "Enabled"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Total APPIDs",
+        "val": "4"
+      },
+      {
+        "label": "Non-ACAD APPIDs",
+        "val": "3"
+      },
+      {
+        "label": "DXF Layers",
+        "val": "2"
+      },
+      {
+        "label": "ENTITIES Count",
+        "val": "1"
+      }
+    ]
   },
   "mohr-circle-calculator": {
     "title": "Mohr Circle Stress Calculator",
-    "description": "Calculate principal stresses, max shear, and Mohr circle parameters from 2D stress state.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "sigma1,2=(sx+sy)/2+/-sqrt((sx-sy)/2)^2+txy^2",
+    "description": "Calculate principal stresses, maximum in-plane shear stress, principal orientation angle, and plane-stress Von Mises stress from 2D stress components.",
+    "discipline": "2D Mechanics of Materials & Plane Stress Transformation",
+    "standards": "2D Plane Stress Transformation Mechanics (Mohr Circle Analytical Equations)",
+    "cadContext": "Use principal stresses and principal axis angles to evaluate structural cross-sections and validate FEA 2D surface stress tensor orientations.",
+    "formula": "sigma_avg=(sx+sy)/2; R=sqrt(((sx-sy)/2)^2+txy^2); sigma1,2=sigma_avg+/-R; theta_p=0.5*atan2(2*txy,sx-sy)",
     "inputs": [
       {
-        "label": "Sigma X (MPa)",
+        "label": "Normal Stress Sigma X (MPa)",
         "val": "80"
       },
       {
-        "label": "Sigma Y (MPa)",
+        "label": "Normal Stress Sigma Y (MPa)",
         "val": "20"
       },
       {
-        "label": "Tau XY (MPa)",
+        "label": "Shear Stress Tau XY (MPa)",
         "val": "30"
       }
     ],
     "outputs": [
       {
-        "label": "Principal s1",
+        "label": "Major Principal Stress (s1)",
         "val": "92.426 MPa"
       },
       {
-        "label": "Principal s2",
+        "label": "Minor Principal Stress (s2)",
         "val": "7.574 MPa"
       },
       {
-        "label": "Max Shear",
+        "label": "Max In-Plane Shear (tmax)",
         "val": "42.426 MPa"
       },
       {
-        "label": "Angle",
+        "label": "Principal Angle (theta_p)",
         "val": "22.500 deg"
+      },
+      {
+        "label": "Von Mises (svm)",
+        "val": "88.882 MPa"
       }
     ]
   },
