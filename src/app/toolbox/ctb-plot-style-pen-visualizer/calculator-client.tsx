@@ -117,12 +117,25 @@ export default function CtbPlotStyleClient() {
   const [pens, setPens] = useState<PenSetting[]>(() => createPresetPens('monochrome'));
   const [activePreset, setActivePreset] = useState<'monochrome' | 'sample' | 'custom'>('monochrome');
   const [selectedAci, setSelectedAci] = useState<number>(1);
+  const [screeningStr, setScreeningStr] = useState<string>('100');
   const [filterQuery, setFilterQuery] = useState('');
   const [uploadStatus, setUploadStatus] = useState<{ type: 'ok' | 'error'; msg: string } | null>(null);
   const [copied, setCopied] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
 
   const selectedPen = pens[selectedAci - 1] ?? pens[0];
+
+  const screeningValidation = useMemo(() => {
+    const trimmed = screeningStr.trim();
+    if (trimmed === '') {
+      return { valid: false, value: Number.NaN };
+    }
+    const n = Number(trimmed);
+    if (!Number.isFinite(n) || !Number.isInteger(n) || n < 0 || n > 100) {
+      return { valid: false, value: Number.NaN };
+    }
+    return { valid: true, value: n };
+  }, [screeningStr]);
 
   const stats = useMemo(() => {
     const blackCount = pens.filter((p) => p.plotMode === 'black').length;
@@ -179,7 +192,10 @@ export default function CtbPlotStyleClient() {
   }, [pens]);
 
   const applyPreset = (preset: 'monochrome' | 'sample') => {
-    setPens(createPresetPens(preset));
+    const nextPens = createPresetPens(preset);
+    setPens(nextPens);
+    const nextSelected = nextPens[selectedAci - 1] ?? nextPens[0];
+    setScreeningStr(String(nextSelected.screeningPct));
     setActivePreset(preset);
     setUploadStatus(null);
     setCopied(false);
@@ -225,6 +241,7 @@ export default function CtbPlotStyleClient() {
           return;
         }
         setPens(next);
+        setScreeningStr(String((next[selectedAci - 1] ?? next[0]).screeningPct));
         setActivePreset('custom');
         setUploadStatus({ type: 'ok', msg: `Loaded ${loaded} pen definitions from ${file.name}.` });
         return;
@@ -262,6 +279,7 @@ export default function CtbPlotStyleClient() {
       }
 
       setPens(parsedPens);
+      setScreeningStr(String((parsedPens[selectedAci - 1] ?? parsedPens[0]).screeningPct));
       setActivePreset('custom');
       setUploadStatus({ type: 'ok', msg: `Parsed ${parsedCount} pen blocks from ${file.name}.` });
     } catch {
@@ -451,22 +469,43 @@ export default function CtbPlotStyleClient() {
                   </select>
                 </div>
                 <div>
-                  <label htmlFor="pen-scr" className="block text-xs font-black text-slate-700 mb-1">
-                    Screening (%)
-                  </label>
+                  <div className="flex items-center justify-between mb-1">
+                    <label htmlFor="pen-scr" className="block text-xs font-black text-slate-700">
+                      Screening (%)
+                    </label>
+                    <span className="text-xs font-mono font-bold text-slate-500">
+                      Active:{' '}
+                      <span data-testid="result-screening">
+                        {screeningValidation.valid ? selectedPen.screeningPct : '—'}
+                      </span>
+                      %
+                    </span>
+                  </div>
                   <input
                     id="pen-scr"
                     data-testid="input-screening"
-                    type="number"
-                    min={0}
-                    max={100}
-                    value={selectedPen.screeningPct}
+                    type="text"
+                    inputMode="numeric"
+                    value={screeningStr}
                     onChange={(e) => {
-                      const n = Number(e.target.value);
-                      if (Number.isFinite(n)) updateSelectedPen({ screeningPct: Math.min(100, Math.max(0, Math.round(n))) });
+                      const raw = e.target.value;
+                      setScreeningStr(raw);
+                      const trimmed = raw.trim();
+                      if (trimmed === '') return;
+                      const n = Number(trimmed);
+                      if (Number.isFinite(n) && Number.isInteger(n) && n >= 0 && n <= 100) {
+                        updateSelectedPen({ screeningPct: n });
+                      }
                     }}
-                    className="w-full px-3 py-2 rounded-xl border border-slate-300 font-bold text-sm bg-white"
+                    className={`w-full px-3 py-2 rounded-xl border font-bold text-sm bg-white ${
+                      screeningValidation.valid ? 'border-slate-300' : 'border-rose-400 bg-rose-50/40'
+                    }`}
                   />
+                  {!screeningValidation.valid && (
+                    <p data-testid="screening-error" className="text-xs font-bold text-rose-600 mt-1">
+                      Enter an integer from 0 to 100.
+                    </p>
+                  )}
                 </div>
               </div>
 
@@ -564,7 +603,10 @@ export default function CtbPlotStyleClient() {
                     type="button"
                     data-testid={`aci-cell-${p.aci}`}
                     title={`ACI ${p.aci} (${p.aciHex}) • ${p.lineweightMm}mm • ${p.plotMode}`}
-                    onClick={() => setSelectedAci(p.aci)}
+                    onClick={() => {
+                      setSelectedAci(p.aci);
+                      setScreeningStr(String(p.screeningPct));
+                    }}
                     className={`h-8 rounded-lg border text-[10px] font-black flex items-center justify-center cursor-pointer transition-transform ${
                       selectedAci === p.aci
                         ? 'ring-2 ring-blue-600 scale-105 border-slate-900'

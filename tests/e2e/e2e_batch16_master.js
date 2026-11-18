@@ -243,20 +243,25 @@ async function runTests() {
 
     // Default: 2000 m3/h (0.555556 m3/s), dT=10 C, dw=2 g/kg, rho=1.202, cp=1.006, hwe=2454
     // Qs = 6.72 kW, Ql = 3.28 kW, Qt = 10.00 kW, Tons = 2.84 RT
-    assertClose(await readLeadingNumber(page, 'result-sensible'), 6.72, 0.002, '79 default Qs');
-    assertClose(await readLeadingNumber(page, 'result-latent'), 3.28, 0.002, '79 default Ql');
+    assertClose(await readLeadingNumber(page, 'result-sensible'), 6.72, 0.001, '79 default Qs');
+    assertClose(await readLeadingNumber(page, 'result-latent'), 3.28, 0.001, '79 default Ql');
     assertClose(await readLeadingNumber(page, 'result-total'), 10.0, 0.001, '79 default Qt');
-    assertClose(await readLeadingNumber(page, 'result-tons'), 2.84, 0.002, '79 default RT');
+    assertClose(await readLeadingNumber(page, 'result-tons'), 2.84, 0.001, '79 default RT');
 
     // Switch to 1000 CFM (= 0.4719474432 m3/s), dw=0 -> Qs = 1.202*0.4719474432*1.006*10 = 5.7068 kW, Ql = 0.00 kW
     await page.selectOption('[data-testid="select-flow-unit"]', 'cfm');
     await page.fill('[data-testid="input-airflow"]', '1000');
     await page.fill('[data-testid="input-dw"]', '0');
-    assertClose(await readLeadingNumber(page, 'result-sensible'), 5.71, 0.002, '79 CFM Qs');
+    assertClose(await readLeadingNumber(page, 'result-sensible'), 5.71, 0.001, '79 CFM Qs');
     assertClose(await readLeadingNumber(page, 'result-latent'), 0.0, 0.001, '79 dw=0 Ql');
 
     await page.click('[data-testid="reset-button"]');
-    await verifyDownloadCsv(page, '[data-testid="export-csv-button"]', ['sensible_load,6.7178', 'total_load,9.9953'], '79');
+    await verifyDownloadCsv(
+      page,
+      '[data-testid="export-csv-button"]',
+      ['sensible_load,6.7178', 'latent_load,3.2775', 'total_load,9.9953', 'refrigeration_tons,2.8421'],
+      '79'
+    );
     await verifyRejectedClipboardDoesNotReportCopied(page, '[data-testid="copy-summary-button"]', '79');
 
     for (const badVal of ['', 'abc', '2000m3h', '0']) {

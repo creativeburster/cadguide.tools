@@ -170,6 +170,28 @@ async function runTests() {
     assertEqual((await page.locator('[data-testid="selected-aci-label"]').innerText()).trim(), 'ACI Color 112', '87 select ACI 112');
     assertEqual((await page.locator('[data-testid="selected-aci-hex"]').innerText()).trim(), '#00A552', '87 ACI 112 hex');
 
+    // Verify controlled string input-screening: valid edit ('75') updates, invalid values ('', 'abc', '150') preserve last valid pen value and display '—'
+    assertEqual(await page.inputValue('[data-testid="input-screening"]'), '100', '87 initial screening input');
+    assertEqual((await page.locator('[data-testid="result-screening"]').innerText()).trim(), '100', '87 initial screening readout');
+    await page.fill('[data-testid="input-screening"]', '75');
+    assertEqual((await page.locator('[data-testid="result-screening"]').innerText()).trim(), '75', '87 valid screening=75');
+    assertEqual(await page.locator('[data-testid="screening-error"]').count(), 0, '87 no screening error when valid');
+
+    for (const badScr of ['', 'abc', '150']) {
+      await page.fill('[data-testid="input-screening"]', badScr);
+      assertEqual(await page.inputValue('[data-testid="input-screening"]'), badScr, `87 raw screening input="${badScr}"`);
+      assertEqual((await page.locator('[data-testid="result-screening"]').innerText()).trim(), '—', `87 invalid screening="${badScr}"`);
+      assertEqual(await page.locator('[data-testid="screening-error"]').isVisible(), true, `87 error visible for="${badScr}"`);
+      await verifyNoNaNOrInfinity(page, `87 invalid screening="${badScr}"`);
+    }
+
+    await verifyDownloadContains(
+      page,
+      '[data-testid="export-csv-button"]',
+      ['112,#00A552,black,0.25,75,Object'],
+      '87 CSV retains valid 75'
+    );
+
     // Switch to Sample CAD Pen Calibration preset -> ACI 5, 8, 9 plot as object color (3 object pens, 252 black pens)
     await page.click('[data-testid="preset-sample"]');
     assertEqual((await page.locator('[data-testid="stat-black-count"]').innerText()).trim(), '252', '87 sample preset black pens');
@@ -187,6 +209,8 @@ async function runTests() {
     }
 
     await page.click('[data-testid="reset-button"]');
+    assertEqual(await page.inputValue('[data-testid="input-screening"]'), '100', '87 reset screening input');
+    assertEqual((await page.locator('[data-testid="result-screening"]').innerText()).trim(), '100', '87 reset screening readout');
     await verifyDownloadContains(
       page,
       '[data-testid="export-csv-button"]',
