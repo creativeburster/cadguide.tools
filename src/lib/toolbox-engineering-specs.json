@@ -11262,179 +11262,193 @@
   },
   "retaining-wall-calculator": {
     "title": "Retaining Wall Earth Pressure Calculator",
-    "description": "Calculate active and passive earth pressure using Rankine method.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "Ka=tan(45-f/2)^2, Pa=0.5*g*H^2*Ka",
+    "description": "Calculate Rankine active and passive lateral earth pressure coefficients, surcharge thrust, total active force, and overturning moment.",
+    "discipline": "Geotechnical & Retaining Wall Equilibrium",
+    "standards": "Rankine Lateral Earth Pressure Theory: Ka = (1 - sin(phi)) / (1 + sin(phi)), Kp = (1 + sin(phi)) / (1 - sin(phi)) (Wikipedia: Lateral earth pressure)",
+    "cadContext": "Apply Rankine active thrust and surface surcharge resultant moments directly when sketching gravity or cantilever retaining wall stems in civil grading profiles.",
+    "formula": "Pa = 0.5 * Ka * gamma * H^2 + Ka * q * H ; Pp = 0.5 * Kp * gamma * H^2 ; Mo = Pa_soil * (H/3) + Pa_q * (H/2)",
     "inputs": [
       {
-        "label": "Soil Density (kN/m3)",
+        "label": "Soil Unit Weight (kN/m3)",
         "val": "18"
       },
       {
-        "label": "Wall Height (m)",
+        "label": "Retained Height H (m)",
         "val": "4"
       },
       {
-        "label": "Friction Angle (deg)",
+        "label": "Friction Angle phi (deg)",
         "val": "30"
+      },
+      {
+        "label": "Surface Surcharge q (kPa)",
+        "val": "10"
       }
     ],
     "outputs": [
       {
-        "label": "Active Pressure",
-        "val": "48.000 kN/m"
+        "label": "Total Active Lateral Force Pa",
+        "val": "61.333 kN/m"
       },
       {
-        "label": "Passive Pressure",
+        "label": "Passive Soil Resistance Pp",
         "val": "432.00 kN/m"
       },
       {
-        "label": "Ka",
-        "val": "0.333333"
+        "label": "Overturning Moment Mo",
+        "val": "90.667 kN*m/m"
       },
       {
-        "label": "Kp",
-        "val": "3.000"
+        "label": "Rankine Ka / Kp",
+        "val": "0.3333 / 3.0000"
       }
     ]
   },
   "retaining-wall-sliding-calculator": {
     "title": "Retaining Wall Sliding Stability Calculator",
-    "description": "Calculate factor of safety against sliding and overturning for cantilever retaining walls.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "FS_sliding = (ΣV · μ) / P_a • P_a = 0.5 · K_a · γ · H² • K_a = (1-sinφ)/(1+sinφ) (Rankine Earth Pressure)",
+    "description": "Calculate sliding and overturning factors of safety for L-shaped cantilever retaining walls using Rankine active earth pressure.",
+    "discipline": "Geotechnical & Retaining Wall Equilibrium",
+    "standards": "Rankine Active Thrust & Rigid-Body Static Equilibrium (Wikipedia: Lateral earth pressure)",
+    "cadContext": "Verify stem and footing concrete dimensions, base friction mu, and backfill weights against sliding and overturning before issuing retaining wall sections.",
+    "formula": "FS_slide = (mu * Sum_V + c_b * B) / Pa ; FS_ot = Mr / Mo ; Pa = 0.5 * Ka * gamma_s * H^2",
     "inputs": [
       {
-        "label": "Retained Stem Height H (m)",
-        "val": "4.5"
+        "label": "Height / Base Width (m)",
+        "val": "4.5 / 2.8"
       },
       {
-        "label": "Footing Base Width B (m)",
-        "val": "2.8"
+        "label": "Stem / Base Thickness (m)",
+        "val": "0.4 / 0.5"
       },
       {
-        "label": "Backfill Unit Weight γ (kN/m³)",
-        "val": "18.5"
+        "label": "Concrete / Backfill Unit Weight",
+        "val": "24 / 18.5 kN/m3"
       },
       {
-        "label": "Soil Friction Angle φ (°)",
-        "val": "32"
-      },
-      {
-        "label": "Base-Soil Friction Coefficient μ",
-        "val": "0.45"
+        "label": "Friction phi / Base mu / Cohesion",
+        "val": "32 deg / 0.45 / 0 kPa"
       }
     ],
     "outputs": [
       {
-        "label": "Sliding Factor of Safety (FS_s)",
-        "val": "1.99 FS"
+        "label": "Sliding Factor of Safety (FS_slide)",
+        "val": "1.9516"
       },
       {
-        "label": "Active Lateral Driving Thrust (Pa)",
-        "val": "57.6 kN/m"
+        "label": "Active Lateral Thrust Pa",
+        "val": "57.55 kN/m"
       },
       {
-        "label": "Base Sliding Frictional Resistance",
-        "val": "114.5 kN/m"
+        "label": "Sliding Resistance (Sum V = 249.6)",
+        "val": "112.32 kN/m"
       },
       {
         "label": "Overturning Factor of Safety (FS_ot)",
-        "val": "4.13 FS"
+        "val": "3.9254"
       }
     ]
   },
   "revit-family-param-calculator": {
     "title": "Revit Family Parameter Calculator",
-    "description": "Calculate Revit family type parameters and dimensional constraints.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Rough opening = dim + 2*clearance",
+    "description": "Calculate Revit family rough opening clearance dimensions, bounding volume, linear array instance counts, and spacing formulas.",
+    "discipline": "Parametric BIM Family Geometry & Array Expressions",
+    "standards": "Geometric Clearance Offsets & Linear Array Constraint Formulas",
+    "cadContext": "Verify parametric family formula expressions (Rough Width, Rough Height, Array Count, and Actual Pitch) before testing type catalogs inside your BIM family editor.",
+    "formula": "Rough W = W + 2 * SideClr ; Rough H = H + HeadClr ; Count = max(2, ceil(Span / MaxSpacing) + 1)",
     "inputs": [
       {
-        "label": "Width (mm)",
-        "val": "900"
+        "label": "Opening W x H x D (mm)",
+        "val": "900 x 2100 x 400"
       },
       {
-        "label": "Height (mm)",
-        "val": "2100"
+        "label": "Side / Head Clearance (mm)",
+        "val": "50 / 50"
       },
       {
-        "label": "Depth (mm)",
-        "val": "400"
+        "label": "Linear Array Span (mm)",
+        "val": "3600"
       },
       {
-        "label": "Clearance (mm)",
-        "val": "50"
+        "label": "Max Array Pitch (mm)",
+        "val": "600"
       }
     ],
     "outputs": [
       {
-        "label": "Rough Opening W",
-        "val": "1000.00 mm"
+        "label": "Rough Opening Width x Height",
+        "val": "1000.0 mm x 2150.0 mm"
       },
       {
-        "label": "Rough Opening H",
-        "val": "2200.00 mm"
+        "label": "Bounding Box Volume",
+        "val": "0.8600 m3"
       },
       {
-        "label": "Bounding Box Vol",
-        "val": "1.100 m3"
+        "label": "Linear Array Count",
+        "val": "7"
+      },
+      {
+        "label": "Actual Array Spacing",
+        "val": "600.00 mm"
       }
     ]
   },
   "revit-performance-diagnostic-wizard": {
     "title": "Revit Performance Diagnostic",
-    "description": "Diagnose slow Revit models, laggy navigation, and long sync times with an interactive troubleshooting wizard.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Revit Performance Diagnostic",
-    "inputs": [],
-    "outputs": []
-  },
-  "revit-room-area-calculator": {
-    "title": "Revit Room Area & Volume Calculator",
-    "description": "Calculate room area, volume, and perimeter from dimensions for BIM planning.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "A = L*W, V = A*H, P = 2*(L+W)",
+    "description": "Interactive checklist to troubleshoot slow Revit models, heavy families, link bloat, view templates, and Synchronize with Central delays using Autodesk Revit Help steps.",
+    "discipline": "BIM Model Maintenance & Autodesk Revit Help Workflows",
+    "standards": "Autodesk Revit Official Help: Purge Unused Objects, Linking Models, Manage Links, and About Delays When Using Synchronize with Central",
+    "cadContext": "Review linked CAD/Revit references via Manage Links, purge unused project objects with open worksets, and follow Synchronize with Central recovery paths without relying on arbitrary heuristics.",
+    "formula": "Interactive 5-Category Model Bottleneck Triage & Official Help Command Checklist",
     "inputs": [
       {
-        "label": "Room Length (m)",
-        "val": "5"
-      },
-      {
-        "label": "Room Width (m)",
-        "val": "4"
-      },
-      {
-        "label": "Room Height (m)",
-        "val": "3"
+        "label": "Diagnostic Categories",
+        "val": "5 interactive areas (Families, Links, Views, Worksharing, CAD Imports)"
       }
     ],
     "outputs": [
       {
-        "label": "Floor Area",
+        "label": "Official Reference Workflows",
+        "val": "Direct links to Autodesk Revit Help guides + Copyable commands + TXT checklist"
+      }
+    ]
+  },
+  "revit-room-area-calculator": {
+    "title": "Revit Room Area & Volume Calculator",
+    "description": "Calculate clear net floor area, wall-centerline gross area, net wall finish area after openings, volume, and perimeter.",
+    "discipline": "BIM Spatial Takeoff & Architectural Room Scheduling",
+    "standards": "Rectangular Room Geometry, Opening Deductions & Wall-Centerline Offsets",
+    "cadContext": "Compare clear finish face boundaries against wall centerline measurement areas and net wall paint/plaster areas when auditing BIM room schedules.",
+    "formula": "A_net = L * W ; A_center = (L + 2*t_half)*(W + 2*t_half) ; A_wall_net = 2*(L+W)*H - A_open",
+    "inputs": [
+      {
+        "label": "Clear L x W x H (m)",
+        "val": "5 x 4 x 3"
+      },
+      {
+        "label": "Opening Deduction (m2)",
+        "val": "4"
+      },
+      {
+        "label": "Wall Half-Thickness (m)",
+        "val": "0.10"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Net Clear Floor Area",
         "val": "20.000 m2"
       },
       {
-        "label": "Wall Area",
-        "val": "54.000 m2"
+        "label": "Centerline Gross Area",
+        "val": "21.840 m2"
       },
       {
-        "label": "Volume",
-        "val": "60.000 m3"
+        "label": "Net Wall Finish Area",
+        "val": "50.000 m2"
       },
       {
-        "label": "Perimeter",
-        "val": "18.000 m"
+        "label": "Room Volume / Perimeter",
+        "val": "60.000 m3 / 18.000 m"
       }
     ]
   },
