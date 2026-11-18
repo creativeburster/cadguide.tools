@@ -4,8 +4,9 @@ import type { Metadata } from 'next';
 import OnlineStepToStlSlicerHelperClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online STEP to Sliced STL Mesh Converters & 3D Slicers | CADGuide.tools',
-  description: 'Compare the best online CAD tools converting 3D parametric STEP files to optimized watertight polygonal STL meshes with precise chordal deviation parameters.',
+  title: 'STEP to STL Tessellation Resolution & Binary Size Calculator | CADGuide.tools',
+  description:
+    'Inspect local STEP or binary STL headers in-browser and calculate governing chordal/angular circle discretization segments, layer staircase cusp height, and STL byte budgets.',
   path: '/toolbox/online-step-to-stl-slicer-helper',
 });
 
@@ -13,7 +14,7 @@ export default function OnlineStepToStlSlicerHelperPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'STEP to Sliced STL Mesh Resolution Cloud Helper', path: '/toolbox/online-step-to-stl-slicer-helper' },
+    { name: 'STEP to STL Tessellation Resolution Calculator', path: '/toolbox/online-step-to-stl-slicer-helper' },
   ]);
 
   return (
@@ -30,13 +31,14 @@ export default function OnlineStepToStlSlicerHelperPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Client-Side STEP / STL Preflight &amp; Meshing Resolution
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              STEP to Sliced STL Mesh Resolution Cloud Helper
+              STEP to STL Tessellation Resolution &amp; Slicer Helper
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Check local STEP or binary STL integrity privately in-browser and calculate tessellation segments, staircase cusp error, and STL file size before slicing.
+            </p>
           </div>
         </section>
 
@@ -46,5 +48,5 @@ export default function OnlineStepToStlSlicerHelperPage() {
         </section>
       </main>
     </>
-);
+  );
 }

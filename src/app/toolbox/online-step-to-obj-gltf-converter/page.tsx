@@ -4,8 +4,9 @@ import type { Metadata } from 'next';
 import OnlineStepToObjGltfConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online STEP to glTF/OBJ Converters & Slicers | CADGuide.tools',
-  description: 'Compare the best tools to polygonize STEP boundary representation models to OBJ or glTF files for VR/WebGL development.',
+  title: 'STEP to glTF / OBJ Tessellation & Buffer Budget | CADGuide.tools',
+  description:
+    'Inspect local STEP ISO-10303-21 schemas or binary glTF headers in-browser and calculate chordal deviation arc segments and glTF 2.0 binary buffer footprints.',
   path: '/toolbox/online-step-to-obj-gltf-converter',
 });
 
@@ -13,7 +14,7 @@ export default function OnlineStepToObjGltfConverterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online STEP to glTF/OBJ Rendering Mesh Converter', path: '/toolbox/online-step-to-obj-gltf-converter' },
+    { name: 'STEP to glTF / OBJ Tessellation Calculator', path: '/toolbox/online-step-to-obj-gltf-converter' },
   ]);
 
   return (
@@ -30,13 +31,14 @@ export default function OnlineStepToObjGltfConverterPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Client-Side STEP / glTF Preflight &amp; Tessellation Sizing
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online STEP to glTF/OBJ Rendering Mesh Converter
+              STEP to glTF / OBJ Tessellation &amp; Buffer Budget
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Check local STEP or binary glTF headers privately in your browser and size circle discretization segments and GPU buffer memory before export.
+            </p>
           </div>
         </section>
 
@@ -46,5 +48,5 @@ export default function OnlineStepToObjGltfConverterPage() {
         </section>
       </main>
     </>
-);
+  );
 }

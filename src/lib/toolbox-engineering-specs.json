@@ -9857,50 +9857,60 @@
     ]
   },
   "online-step-to-obj-gltf-converter": {
-    "title": "Online STEP to glTF/OBJ Rendering Mesh Converter",
-    "description": "Compare the best tools to polygonize STEP boundary representation models to OBJ or glTF files for VR/WebGL development.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online STEP to glTF/OBJ Rendering Mesh Converter",
+    "title": "STEP to glTF / OBJ Tessellation & Buffer Budget",
+    "description": "Reads local ISO-10303-21 STEP schemas or binary glTF headers in-browser and computes chordal deviation arc discretization and glTF 2.0 buffer memory.",
+    "discipline": "CAD Interoperability / 3D Asset Prep",
+    "standards": "ISO 10303-21 (STEP): https://en.wikipedia.org/wiki/ISO_10303-21 | Khronos glTF 2.0 Specification: https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html | Wavefront OBJ: https://en.wikipedia.org/wiki/Wavefront_.obj_file",
+    "cadContext": "Checks local STEP FILE_SCHEMA tags (AP203/AP214/AP242) or glTF magic bytes without network upload, then sizes circular tessellation segments and GPU vertex/index buffers.",
+    "formula": "N_seg = ceil(pi / arccos(1 - delta / R)); Err = R * (1 - cos(pi / N_seg)); Buf_bytes = 32*N_vert + 12*N_tri",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Cylinder Radius & Chord Tol",
+        "val": "R = 25 mm, delta = 0.05 mm"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Target Mesh Footprint",
+        "val": "50,000 triangles, 35,000 vertices"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Minimum Circle Segments",
+        "val": "50 segments (Actual error 0.049334 mm)"
+      },
+      {
+        "label": "glTF Binary Buffer Size",
+        "val": "1,720,000 bytes (1.6403 MB)"
+      }
+    ]
   },
   "online-step-to-stl-slicer-helper": {
-    "title": "STEP to Sliced STL Mesh Resolution Cloud Helper",
-    "description": "Compare the best online CAD tools converting 3D parametric STEP files to optimized watertight polygonal STL meshes with precise chordal deviation parameters.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for STEP to Sliced STL Mesh Resolution Cloud Helper",
+    "title": "STEP to STL Tessellation Resolution & Slicer Helper",
+    "description": "Verifies local STEP headers or binary STL byte structure in-browser and calculates governing chordal/angular segments, layer staircase cusp height, and STL size.",
+    "discipline": "Additive Manufacturing / CAD Meshing",
+    "standards": "ISO 10303-21 (STEP): https://en.wikipedia.org/wiki/ISO_10303-21 | STL File Format: https://en.wikipedia.org/wiki/STL_(file_format)",
+    "cadContext": "Validates binary STL byte length (84 + 50 * N_tri) or STEP headers locally before slicing, and compares chordal vs angular discretization with layer cusp error.",
+    "formula": "N_seg = max(ceil(pi / arccos(1 - delta/R)), ceil(360 / alpha_max)); Cusp = h_layer * cos(theta); STL_B = 84 + 50*N_tri",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Mesh & Deflection Settings",
+        "val": "R = 20 mm, delta = 0.02 mm, angle <= 15 deg"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Layer Height / Slope / Facets",
+        "val": "0.20 mm layer, 45 deg slope, 20,000 tris"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Segments & Staircase Cusp",
+        "val": "71 circle segments | Cusp = 0.1414 mm"
+      },
+      {
+        "label": "Binary STL File Size",
+        "val": "1,000,084 bytes (0.9538 MB)"
+      }
+    ]
   },
   "onshape-shortcuts-sheet": {
     "title": "Onshape Keyboard Shortcuts Complete Reference",
@@ -9914,117 +9924,85 @@
   },
   "orifice-flow-calculator": {
     "title": "Orifice Plate Flow Calculator",
-    "description": "Calculate flow rate through an orifice plate using Bernoulli and discharge coefficient.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Q = Cd*A*sqrt(2*dP/rho)",
+    "description": "Computes incompressible volumetric flow, mass flow rate, approach velocity factor, and upstream pipe velocity across a concentric orifice plate.",
+    "discipline": "Fluid Mechanics & Flow Measurement",
+    "standards": "Orifice Plate Equations & ISO 5167 Overview (Wikipedia): https://en.wikipedia.org/wiki/Orifice_plate",
+    "cadContext": "Requires 0 < d < D and includes the velocity-of-approach factor 1/sqrt(1 - beta^4) for concentric orifice flow sizing.",
+    "formula": "beta = d/D; Ev = 1/sqrt(1 - beta^4); Q = Cd * Ev * (pi*d^2/4) * sqrt(2*dP/rho); m_dot = rho*Q",
     "inputs": [
       {
-        "label": "Pipe Dia (mm)",
-        "val": "100"
+        "label": "Pipe & Orifice Diameter",
+        "val": "D = 100 mm, d = 50 mm (beta = 0.5000)"
       },
       {
-        "label": "Orifice Dia (mm)",
-        "val": "50"
-      },
-      {
-        "label": "Pressure Drop (kPa)",
-        "val": "10"
-      },
-      {
-        "label": "Density (kg/m3)",
-        "val": "1000"
-      },
-      {
-        "label": "Discharge Cd",
-        "val": "0.62"
+        "label": "dP / Density / Discharge Cd",
+        "val": "10 kPa, 1000 kg/m^3, Cd = 0.62"
       }
     ],
     "outputs": [
       {
-        "label": "Flow Rate",
-        "val": "5.444 L/s"
+        "label": "Volumetric & Mass Flow",
+        "val": "5.6224 L/s | 5.6224 kg/s"
       },
       {
-        "label": "Velocity",
-        "val": "0.693181 m/s"
+        "label": "Upstream Pipe Velocity",
+        "val": "0.7159 m/s (Ev = 1.0328)"
       }
     ]
   },
   "paint-coverage-calculator": {
-    "title": "Paint Coverage and Cost Calculator",
-    "description": "Calculate paint quantity, coverage, and cost from surface area.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "Volume = Area * coats / coverage_rate",
+    "title": "Paint Coverage, DFT/WFT & Cost Calculator",
+    "description": "Calculates theoretical spreading rate from dry film thickness (DFT) and volume solids percentage, wet film thickness (WFT), paint volume with wastage, and cost.",
+    "discipline": "Coatings & Quantity Estimation",
+    "standards": "Geometric volume conservation from Dry Film Thickness (DFT um) and Volume Solids (%)",
+    "cadContext": "Computes theoretical spreading rate directly from user-entered DFT and VS% alongside adjustable application loss factor and unit paint price.",
+    "formula": "R_theo = 10*VS/DFT; WFT = DFT/(VS/100); V_req = (A*coats/R_theo)*(1 + loss/100)",
     "inputs": [
       {
-        "label": "Surface Area (m2)",
-        "val": "100"
+        "label": "Area / Coats / DFT / VS%",
+        "val": "100 m^2, 2 coats, 50 um DFT, 50% VS"
       },
       {
-        "label": "Coats",
-        "val": "2"
-      },
-      {
-        "label": "Coverage Rate (m2/L)",
-        "val": "10"
-      },
-      {
-        "label": "Paint Price ($/L)",
-        "val": "15"
+        "label": "Loss Factor & Unit Price",
+        "val": "10% loss, $15/L"
       }
     ],
     "outputs": [
       {
-        "label": "Paint Needed",
-        "val": "20.000 L"
+        "label": "Spreading Rate & WFT",
+        "val": "10.000 m^2/L | WFT = 100.0 um"
       },
       {
-        "label": "Cost",
-        "val": "300.00 $"
-      },
-      {
-        "label": "Wastage 10pct",
-        "val": "2.000 L"
+        "label": "Total Paint & Cost",
+        "val": "22.000 L ($330.00)"
       }
     ]
   },
   "paint-quantity-calculator": {
-    "title": "Paint Quantity Calculator",
-    "description": "Calculate paint liters needed from area, coats, and coverage rate.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "L = A * coats / coverage",
+    "title": "Paint Quantity & Container Takeoff Calculator",
+    "description": "Computes net paintable surface area after deducting doors and windows, required coating volume including waste allowance, and whole-container count.",
+    "discipline": "Architectural Finishing & BIM Takeoff",
+    "standards": "Net area takeoff arithmetic with user-configured waste factor and container volume",
+    "cadContext": "Subtracts opening schedules from gross elevation areas taken off BIM models and rounds up to whole pails/cans.",
+    "formula": "A_net = A_gross - A_open; L = (A_net * coats / cov) * (1 + waste/100); Cans = ceil(L / V_can)",
     "inputs": [
       {
-        "label": "Area (m2)",
-        "val": "50"
+        "label": "Gross Area & Openings",
+        "val": "60 m^2 gross - 10 m^2 openings = 50.00 m^2 net"
       },
       {
-        "label": "Number of Coats",
-        "val": "2"
-      },
-      {
-        "label": "Coverage (m2/L)",
-        "val": "10"
-      },
-      {
-        "label": "Waste Factor (%)",
-        "val": "5"
+        "label": "Coats / Rate / Waste / Can Size",
+        "val": "2 coats, 10 m^2/L, 5% waste, 5 L cans"
       }
     ],
     "outputs": [
       {
-        "label": "Paint Needed",
+        "label": "Required Paint Volume",
         "val": "10.500 L"
       },
       {
-        "label": "Cans 5L",
-        "val": "3.000"
+        "label": "Containers Needed",
+        "val": "3 cans (15.00 L total)"
       }
     ]
   },
