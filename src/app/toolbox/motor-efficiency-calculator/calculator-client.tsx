@@ -1,199 +1,297 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useMemo, useState } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Check, Copy, Download, ExternalLink, Info, RotateCcw, Settings, Zap } from 'lucide-react';
 
-interface CalculationOutput {
-  primary: { label: string; val: string; unit: string };
-  secondary: Array<{ label: string; val: string; unit: string }>;
-  status?: { pass: boolean; text: string };
+interface MotorEffPreset {
+  id: string;
+  label: string;
+  pOut: string;
+  pIn: string;
+  freq: string;
+  poles: string;
+  rpm: string;
 }
 
-const computeFn: (vals: string[]) => CalculationOutput = (vals) => {
-      const pOut = parseFloat(vals[0]) || 37;
-      const pIn = parseFloat(vals[1]) || 39.8;
-      const rpm = parseFloat(vals[2]) || 1475;
-      const eff = (pOut / Math.max(0.1, pIn)) * 100;
-      const losses = pIn - pOut;
-      const ns = 1500; // 4-pole default
-      const slip = ((ns - rpm) / ns) * 100;
-      let ieClass = 'IE1 (Standard Efficiency)';
-      if (eff >= 94.5) ieClass = 'IE4 (Super Premium Efficiency)';
-      else if (eff >= 93.3) ieClass = 'IE3 (Premium Efficiency)';
-      else if (eff >= 91.2) ieClass = 'IE2 (High Efficiency)';
-      return {
-        primary: { label: 'Operating Efficiency (η)', val: eff.toFixed(2), unit: '%' },
-        secondary: [
-          { label: 'Internal Heat Dissipation Losses', val: losses.toFixed(2), unit: 'kW' },
-          { label: 'Estimated IEC 60034-30-1 Class', val: ieClass, unit: '' },
-          { label: 'Rotor Slip Percentage', val: slip.toFixed(2), unit: '%' }
-        ],
-        status: { pass: eff >= 91.0, text: eff >= 91.0 ? 'COMPLIANT WITH ENERGY REGULATIONS' : 'LOW EFFICIENCY (SUB-IE2)' }
-      };
-    };
+const PRESETS: MotorEffPreset[] = [
+  { id: '50hz-4p-37kw', label: '37 kW 50Hz 4-Pole', pOut: '37', pIn: '40', freq: '50', poles: '4', rpm: '1475' },
+  { id: '60hz-4p-75kw', label: '75 kW 60Hz 4-Pole', pOut: '75', pIn: '80', freq: '60', poles: '4', rpm: '1780' },
+  { id: '50hz-2p-15kw', label: '15 kW 50Hz 2-Pole', pOut: '15', pIn: '16.5', freq: '50', poles: '2', rpm: '2940' },
+];
 
-const DEFAULT_INPUTS = ["37","39.8","1475"];
+const parsePos = (raw: string): number | null => {
+  const s = raw.trim();
+  if (!s) return null;
+  const n = Number(s);
+  return Number.isFinite(n) && n > 0 ? n : null;
+};
+
+const fmt = (n: number | null, dec = 4) => (n === null || !Number.isFinite(n) ? '—' : n.toFixed(dec));
 
 export default function CalculatorClient() {
-  const [inputs, setInputs] = useState<string[]>(DEFAULT_INPUTS);
+  const [pOutStr, setPOutStr] = useState('37');
+  const [pInStr, setPInStr] = useState('40');
+  const [freqStr, setFreqStr] = useState('50');
+  const [polesStr, setPolesStr] = useState('4');
+  const [rpmStr, setRpmStr] = useState('1475');
+  const [copied, setCopied] = useState(false);
 
-  const updateInput = (idx: number, val: string) => {
-    const next = [...inputs];
-    next[idx] = val;
-    setInputs(next);
+  const applyPreset = (p: MotorEffPreset) => {
+    setPOutStr(p.pOut);
+    setPInStr(p.pIn);
+    setFreqStr(p.freq);
+    setPolesStr(p.poles);
+    setRpmStr(p.rpm);
   };
 
-  const result = useMemo(() => {
-    try {
-      return computeFn(inputs);
-    } catch {
-      return {
-        primary: { label: 'Calculation Error', val: '—', unit: '' },
-        secondary: [],
-        status: { pass: false, text: 'Invalid Input Values' }
-      };
+  const calc = useMemo(() => {
+    const pOut = parsePos(pOutStr);
+    const pIn = parsePos(pInStr);
+    const freq = parsePos(freqStr);
+    const poles = parsePos(polesStr);
+    const rpm = parsePos(rpmStr);
+
+    if (
+      pOut === null ||
+      pIn === null ||
+      freq === null ||
+      poles === null ||
+      rpm === null ||
+      !Number.isInteger(poles) ||
+      poles < 2 ||
+      poles % 2 !== 0
+    ) {
+      return { valid: false as const, error: 'Enter positive numbers and an even integer pole count (>= 2).' };
     }
-  }, [inputs]);
+    if (pOut >= pIn) {
+      return { valid: false as const, error: 'Mechanical shaft output P_out must be less than electrical input P_in.' };
+    }
+    const ns = (120 * freq) / poles;
+    if (rpm > ns) {
+      return { valid: false as const, error: `Rotor speed (${rpm} RPM) cannot exceed synchronous speed (${ns} RPM) in motoring mode.` };
+    }
+
+    const eff = (pOut / pIn) * 100;
+    const losses = pIn - pOut;
+    const slip = ((ns - rpm) / ns) * 100;
+    const torque = (pOut * 1000 * 60) / (2 * Math.PI * rpm);
+    return { valid: true as const, error: '', eff, losses, ns, slip, torque };
+  }, [pOutStr, pInStr, freqStr, polesStr, rpmStr]);
+
+  const handleCopy = async () => {
+    if (!calc.valid) return;
+    const summary = `Efficiency=${calc.eff.toFixed(4)}% | Losses=${calc.losses.toFixed(4)} kW | Ns=${calc.ns.toFixed(2)} RPM | Slip=${calc.slip.toFixed(4)}% | Torque=${calc.torque.toFixed(4)} N*m`;
+    try {
+      await navigator.clipboard?.writeText(summary);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const handleDownload = () => {
+    if (!calc.valid) return;
+    const rows = [
+      ['metric', 'value', 'unit'],
+      ['efficiency_pct', calc.eff.toFixed(4), '%'],
+      ['power_losses_kw', calc.losses.toFixed(4), 'kW'],
+      ['synchronous_speed_rpm', calc.ns.toFixed(2), 'RPM'],
+      ['slip_pct', calc.slip.toFixed(4), '%'],
+      ['shaft_torque_nm', calc.torque.toFixed(4), 'N*m'],
+    ];
+    const csv = rows.map((r) => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'motor-efficiency-analysis.csv';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  const fields = [
+    { id: 'pout', label: 'Shaft Output Power P_out (kW)', val: pOutStr, set: setPOutStr },
+    { id: 'pin', label: 'Electrical Input Power P_in (kW)', val: pInStr, set: setPInStr },
+    { id: 'freq', label: 'Supply Frequency f (Hz)', val: freqStr, set: setFreqStr },
+    { id: 'poles', label: 'Number of Poles P (even int)', val: polesStr, set: setPolesStr },
+    { id: 'rpm', label: 'Measured Rotor Speed nr (RPM)', val: rpmStr, set: setRpmStr },
+  ];
 
   return (
     <div className="space-y-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left Column: Parameter Inputs */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
+            <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
               <Settings className="w-5 h-5" />
             </div>
             <div>
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs & Parameters</h2>
-              <p className="text-xs text-slate-500 font-medium">Adjust values to recalculate</p>
+              <h2 className="text-lg font-black text-slate-900 tracking-tight">Motor Parameters</h2>
+              <p className="text-xs text-slate-500 font-medium">P_out &lt; P_in, nr &le; Ns</p>
             </div>
           </div>
 
-          <div className="space-y-4">
-          <div key="0">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Rated Shaft Output Power (kW)</label>
-            <input
-              type="number"
-              step="5"
-              value={inputs[0]}
-              onChange={(e) => updateInput(0, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
+          <div className="flex flex-wrap gap-2">
+            {PRESETS.map((p) => (
+              <button
+                key={p.id}
+                type="button"
+                data-testid={`preset-${p.id}`}
+                onClick={() => applyPreset(p)}
+                className="px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-orange-50 hover:text-orange-700 transition-colors cursor-pointer"
+              >
+                {p.label}
+              </button>
+            ))}
           </div>
-          <div key="1">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Measured Electrical Input Power (kW)</label>
-            <input
-              type="number"
-              step="0.2"
-              value={inputs[1]}
-              onChange={(e) => updateInput(1, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          <div key="2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Nameplate Full-Load Speed (RPM)</label>
-            <input
-              type="number"
-              step="5"
-              value={inputs[2]}
-              onChange={(e) => updateInput(2, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
+
+          <div className="space-y-3.5">
+            {fields.map((f) => (
+              <div key={f.id}>
+                <label htmlFor={`meff-${f.id}`} className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">
+                  {f.label}
+                </label>
+                <input
+                  id={`meff-${f.id}`}
+                  type="text"
+                  inputMode="decimal"
+                  data-testid={`input-${f.id}`}
+                  value={f.val}
+                  onChange={(e) => f.set(e.target.value)}
+                  className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-800 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                />
+              </div>
+            ))}
           </div>
 
           <button
-            onClick={() => setInputs(DEFAULT_INPUTS)}
-            className="w-full py-3 rounded-xl text-sm font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
+            type="button"
+            data-testid="btn-reset"
+            onClick={() => applyPreset(PRESETS[0])}
+            className="w-full py-3 rounded-xl text-sm font-black bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all cursor-pointer flex items-center justify-center gap-2"
           >
-            Reset Defaults
+            <RotateCcw className="w-4 h-4" />
+            <span>Reset Defaults</span>
           </button>
         </div>
 
-        {/* Right Column: Results & Engineering Metrics */}
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-3">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
                   <Zap className="w-5 h-5" />
                 </div>
-                <h2 className="text-lg font-black text-slate-900 tracking-tight">Calculated Outputs</h2>
+                <h2 className="text-lg font-black text-slate-900 tracking-tight">Calculated Performance</h2>
               </div>
-              {result.status && (
-                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-black tracking-wide uppercase border ${
-                  result.status.pass
-                    ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                    : 'bg-amber-50 text-amber-700 border-amber-200'
-                }`}>
-                  {result.status.pass ? (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  ) : (
-                    <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
-                  )}
-                  <span>{result.status.text}</span>
-                </div>
-              )}
+              <span
+                data-testid="badge-status"
+                className={`px-3 py-1 rounded-full text-xs font-black uppercase ${
+                  calc.valid ? 'bg-emerald-50 text-emerald-700 border border-emerald-200' : 'bg-amber-50 text-amber-700 border border-amber-200'
+                }`}
+              >
+                {calc.valid ? 'MOTORING VALIDATED' : 'INVALID INPUT'}
+              </span>
             </div>
 
-            {/* Primary Result Banner */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50/40 rounded-2xl p-6 border border-blue-100">
-              <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-2">
-                {result.primary.label}
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl sm:text-5xl font-black text-blue-900 tracking-tight">
-                  {result.primary.val}
-                </span>
-                {result.primary.unit && (
-                  <span className="text-lg font-bold text-blue-600">
-                    {result.primary.unit}
-                  </span>
-                )}
-              </div>
-            </div>
-
-            {/* Secondary Metrics Grid */}
-            {result.secondary && result.secondary.length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {result.secondary.map((metric, idx) => (
-                  <div key={idx} className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 line-clamp-1">
-                      {metric.label}
-                    </div>
-                    <div className="text-xl font-black text-slate-900">
-                      {metric.val}
-                      {metric.unit && <span className="text-xs font-medium text-slate-500 ml-1.5">{metric.unit}</span>}
-                    </div>
-                  </div>
-                ))}
+            {!calc.valid && (
+              <div className="rounded-2xl bg-amber-50 border border-amber-200 px-4 py-3 text-xs font-semibold text-amber-800">
+                {calc.error}
               </div>
             )}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
+                <div className="text-xs font-black text-orange-500 uppercase tracking-wider mb-1">Operating Efficiency (η)</div>
+                <div className="text-3xl font-black text-orange-800">
+                  <span data-testid="result-eff">{fmt(calc.valid ? calc.eff : null, 4)}</span>
+                  <span className="text-base text-orange-500 ml-1.5">%</span>
+                </div>
+              </div>
+              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+                <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-1">Total Power Losses</div>
+                <div className="text-3xl font-black text-blue-800">
+                  <span data-testid="result-loss">{fmt(calc.valid ? calc.losses : null, 4)}</span>
+                  <span className="text-base text-blue-500 ml-1.5">kW</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                <div className="text-xs font-bold text-slate-500 uppercase mb-1">Synchronous Speed (Ns)</div>
+                <div className="text-xl font-black text-slate-800">
+                  <span data-testid="result-ns">{fmt(calc.valid ? calc.ns : null, 2)}</span>
+                  <span className="text-xs text-slate-500 ml-1">RPM</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                <div className="text-xs font-bold text-slate-500 uppercase mb-1">Rotor Slip (s)</div>
+                <div className="text-xl font-black text-slate-800">
+                  <span data-testid="result-slip">{fmt(calc.valid ? calc.slip : null, 4)}</span>
+                  <span className="text-xs text-slate-500 ml-1">%</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+                <div className="text-xs font-bold text-slate-500 uppercase mb-1">Shaft Torque (T)</div>
+                <div className="text-xl font-black text-slate-800">
+                  <span data-testid="result-torque">{fmt(calc.valid ? calc.torque : null, 4)}</span>
+                  <span className="text-xs text-slate-500 ml-1">N·m</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-wrap gap-3 pt-1">
+              <button
+                type="button"
+                data-testid="btn-copy"
+                disabled={!calc.valid}
+                onClick={handleCopy}
+                className="px-4 py-2.5 rounded-xl text-xs font-black bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-40 cursor-pointer flex items-center gap-2"
+              >
+                {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
+                <span>{copied ? 'Copied' : 'Copy Summary'}</span>
+              </button>
+              <button
+                type="button"
+                data-testid="btn-download"
+                disabled={!calc.valid}
+                onClick={handleDownload}
+                className="px-4 py-2.5 rounded-xl text-xs font-black bg-orange-600 text-white hover:bg-orange-700 disabled:opacity-40 cursor-pointer flex items-center gap-2"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download CSV</span>
+              </button>
+            </div>
+
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 space-y-2 text-xs text-slate-600">
+              <div className="flex items-start gap-2 font-medium">
+                <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                <span>
+                  η = (P_out / P_in) × 100%; Ns = 120·f / P; slip s = (Ns − nr) / Ns; shaft torque T = 1000·P_out / (2π·nr / 60).
+                </span>
+              </div>
+              <div className="pl-6">
+                <a
+                  href="https://en.wikipedia.org/wiki/Induction_motor"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
+                >
+                  <span>Reference: Induction motor synchronous speed &amp; slip</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
           </div>
 
-          {/* Engineering Methodology & Formula Card */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-600">
-                <Info className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-base font-black text-slate-900 tracking-tight">Governing Engineering Formula & Standards</h3>
-                <p className="text-xs text-slate-500 font-medium">Standardized calculation procedure</p>
-              </div>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <p className="text-xs sm:text-sm text-slate-700 font-mono font-medium leading-relaxed block break-words">
-                {"η = (P_out / P_in) × 100% • Slip = (N_sync - N_rotor) / N_sync (IEC 60034-2-1 / NEMA MG 1)"}
-              </p>
-            </div>
-          </div>
+          <RelatedTools />
         </div>
       </div>
-
-      <RelatedTools />
     </div>
   );
 }

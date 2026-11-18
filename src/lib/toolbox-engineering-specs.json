@@ -8882,14 +8882,14 @@
   },
   "moment-inertia-shape-calculator": {
     "title": "Moment of Inertia Shape Calculator",
-    "description": "Calculate moment of inertia for rectangle, circle, tube, and I-beam sections.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "I_rect=bh3/12, I_circle=pi*d4/64",
+    "description": "Calculate centroidal second moments of area (Ix, Iy), polar moment J, area, elastic section modulus Zx, and radius of gyration rx.",
+    "discipline": "Structural & Mechanical Cross-Section Properties",
+    "standards": "Closed-Form Planar Second Moment of Area Mechanics (Reference: https://en.wikipedia.org/wiki/List_of_second_moments_of_area)",
+    "cadContext": "Cross-check extruded structural profiles, custom hollow tubes, and welded I-sections in CAD assemblies before running bending deflection or torsional shear checks.",
+    "formula": "Rect: Ix=bh^3/12, Iy=hb^3/12; Circle: Ix=pi*D^4/64; Annulus: Ix=pi*(D^4-di^4)/64; I-Beam: Ix=[bf*H^3-(bf-tw)*(H-2*tf)^3]/12",
     "inputs": [
       {
-        "label": "Shape",
+        "label": "Profile Shape",
         "val": "Solid Rectangle (b x h)"
       },
       {
@@ -8899,38 +8899,42 @@
       {
         "label": "Height h (mm)",
         "val": "200"
-      },
-      {
-        "label": "Inner Dia (mm)",
-        "val": "80"
-      },
-      {
-        "label": "Outer Dia (mm)",
-        "val": "100"
       }
     ],
     "outputs": [
       {
-        "label": "Ix",
-        "val": "6666.67 cm4"
+        "label": "Second Moment Ix",
+        "val": "6666.6667 cm4"
       },
       {
-        "label": "Iy",
-        "val": "1666.67 cm4"
+        "label": "Second Moment Iy",
+        "val": "1666.6667 cm4"
       },
       {
-        "label": "Polar J",
-        "val": "8333.33 cm4"
+        "label": "Polar Moment J",
+        "val": "8333.3333 cm4"
+      },
+      {
+        "label": "Section Area A",
+        "val": "200.0000 cm2"
+      },
+      {
+        "label": "Elastic Modulus Zx",
+        "val": "666.6667 cm3"
+      },
+      {
+        "label": "Radius of Gyration rx",
+        "val": "5.7735 cm"
       }
     ]
   },
   "mortar-quantity-calculator": {
     "title": "Mortar Quantity Calculator",
-    "description": "Calculate mortar volume and cement bags for brick and block walls.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "V_mortar = wall_volume * mortar_ratio",
+    "description": "Calculate net wet mortar volume, dry bulk mix volume with wastage, cement bags, and sand volume for masonry walls.",
+    "discipline": "Civil & Masonry Quantity Takeoff",
+    "standards": "Volumetric Masonry Mortar Takeoff with Editable Mix Ratio, Dry Bulk Factor, Wastage, and Cement Loose Density Assumptions",
+    "cadContext": "Align wall areas and thickness schedules extracted from BIM/CAD masonry partitions with editable project mix proportions before issuing procurement quantities.",
+    "formula": "V_wall = L*H*(T/1000); V_wet = V_wall*r; V_dry = V_wet*k_dry*(1+w/100); V_cem = V_dry*cp/(cp+sp); Bags = ceil(V_cem*rho/bagWt)",
     "inputs": [
       {
         "label": "Wall Length (m)",
@@ -8945,142 +8949,190 @@
         "val": "230"
       },
       {
-        "label": "Mortar Ratio",
-        "val": "0.15"
+        "label": "Assumed Mortar Volume Ratio",
+        "val": "0.20"
+      },
+      {
+        "label": "Mix Ratio (Cement : Sand)",
+        "val": "1 : 4"
+      },
+      {
+        "label": "Assumed Dry Factor / Wastage",
+        "val": "1.33 / 10%"
+      },
+      {
+        "label": "Assumed Cement Density / Bag",
+        "val": "1440 kg/m3 / 50 kg"
       }
     ],
     "outputs": [
       {
-        "label": "Mortar Volume",
-        "val": "1.035 m3"
+        "label": "Gross Wall Volume",
+        "val": "6.9000 m3"
       },
       {
-        "label": "Cement Bags",
-        "val": "7.000"
+        "label": "Net Wet Mortar Volume",
+        "val": "1.3800 m3"
       },
       {
-        "label": "Sand",
-        "val": "0.828000 m3"
+        "label": "Dry Mix Volume (w/ Wastage)",
+        "val": "2.0189 m3"
+      },
+      {
+        "label": "Cement Bags (Rounded Up)",
+        "val": "12 bags"
+      },
+      {
+        "label": "Sand Volume",
+        "val": "1.6152 m3"
       }
     ]
   },
   "motor-efficiency-calculator": {
-    "title": "Motor Efficiency & Loss Calculator (IEC 60034)",
-    "description": "Calculate motor efficiency, losses, and IE class per IEC 60034-2-1 standards.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "η = (P_out / P_in) × 100% • Slip = (N_sync - N_rotor) / N_sync (IEC 60034-2-1 / NEMA MG 1)",
+    "title": "Motor Efficiency, Loss & Slip Calculator",
+    "description": "Calculate electric motor efficiency, power dissipation losses, synchronous speed, induction rotor slip, and shaft torque.",
+    "discipline": "Electrical & Electromechanical Drive Systems",
+    "standards": "Electromechanical Power Balance & Induction Motor Synchronous/Slip Relations (Reference: https://en.wikipedia.org/wiki/Induction_motor)",
+    "cadContext": "Record motor nameplate frequency, pole count, electrical input power, and rated shaft torque consistently across mechanical drive layouts and electrical load schedules.",
+    "formula": "eta = (P_out / P_in)*100%; P_loss = P_in - P_out; Ns = 120*f/P; slip = ((Ns - nr)/Ns)*100%; T = 1000*P_out/(2*pi*nr/60)",
     "inputs": [
       {
-        "label": "Rated Shaft Output Power (kW)",
+        "label": "Shaft Output Power P_out (kW)",
         "val": "37"
       },
       {
-        "label": "Measured Electrical Input Power (kW)",
-        "val": "39.8"
+        "label": "Electrical Input Power P_in (kW)",
+        "val": "40"
       },
       {
-        "label": "Nameplate Full-Load Speed (RPM)",
+        "label": "Supply Frequency f (Hz)",
+        "val": "50"
+      },
+      {
+        "label": "Number of Poles P",
+        "val": "4"
+      },
+      {
+        "label": "Measured Rotor Speed nr (RPM)",
         "val": "1475"
       }
     ],
     "outputs": [
       {
-        "label": "Operating Efficiency (η)",
-        "val": "92.96 %"
+        "label": "Operating Efficiency (eta)",
+        "val": "92.5000 %"
       },
       {
-        "label": "Internal Heat Dissipation Losses",
-        "val": "2.80 kW"
+        "label": "Total Power Losses",
+        "val": "3.0000 kW"
       },
       {
-        "label": "Estimated IEC 60034-30-1 Class",
-        "val": "IE2 (High Efficiency)"
+        "label": "Synchronous Speed (Ns)",
+        "val": "1500.00 RPM"
       },
       {
-        "label": "Rotor Slip Percentage",
-        "val": "1.67 %"
+        "label": "Rotor Slip (s)",
+        "val": "1.6667 %"
+      },
+      {
+        "label": "Shaft Torque (T)",
+        "val": "239.5417 N*m"
       }
     ]
   },
   "motor-starting-current-calculator": {
     "title": "Motor Starting Current Calculator",
-    "description": "Calculate motor starting current, full load current, and starting torque ratio.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Istart = IFL * K, where K = 6-7 for DOL",
+    "description": "Calculate motor full-load current, DOL/reduced-voltage line starting current, apparent power kVA, and starting torque ratio.",
+    "discipline": "Electrical Drive Starting & Feeder Sizing",
+    "standards": "AC Motor Steady-State Current Balance & Starter Line-Current Scaling (DOL 1x, Star-Delta 1/3x, Autotransformer tap^2x)",
+    "cadContext": "Use calculated line starting current and inrush kVA to cross-check switchgear trip curves, contactor ratings, and feeder voltage drop in electrical schematics.",
+    "formula": "I_FL = 1000*P/(k_ph*V*eta*PF); I_DOL = I_FL*K; I_start = I_DOL*k_starter; S_start = k_ph*V*I_start/1000",
     "inputs": [
       {
-        "label": "Motor Power (kW)",
+        "label": "Rated Shaft Power (kW)",
         "val": "15"
       },
       {
-        "label": "Voltage (V)",
+        "label": "Line Voltage (V)",
         "val": "400"
       },
       {
-        "label": "Efficiency",
-        "val": "0.9"
+        "label": "Efficiency / PF",
+        "val": "0.90 / 0.85"
       },
       {
-        "label": "PF",
-        "val": "0.85"
-      },
-      {
-        "label": "Starting Multiplier",
+        "label": "LRC Multiplier (K)",
         "val": "6.5"
       },
       {
-        "label": "Phase",
-        "val": "3-Phase AC (√3 Factor)"
+        "label": "Phase / Starter",
+        "val": "3-Phase / DOL"
       }
     ],
     "outputs": [
       {
-        "label": "Full Load Current",
-        "val": "28.301 A"
+        "label": "Full Load Current (I_FL)",
+        "val": "28.3015 A"
       },
       {
-        "label": "Starting Current",
-        "val": "183.96 A"
+        "label": "Line Starting Current (I_start)",
+        "val": "183.9596 A"
       },
       {
-        "label": "Starting kVA",
-        "val": "127.45 kVA"
+        "label": "Starting Apparent Power",
+        "val": "127.4510 kVA"
+      },
+      {
+        "label": "Torque vs DOL",
+        "val": "100.00 %"
       }
     ]
   },
   "mrr-calculator": {
     "title": "Material Removal Rate Calculator",
-    "description": "Calculate material removal rate for milling, turning, and drilling operations.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "MRR = width*depth*feed for milling, MRR = pi*d*f*vc for turning",
+    "description": "Calculate volumetric material removal rate (MRR), mass removal rate, and net cutting power for milling, turning, and drilling operations.",
+    "discipline": "Machining & Metal Cutting Kinematics",
+    "standards": "Analytical Metal-Cutting MRR Kinematics (with user-editable material density and specific cutting force kc assumptions)",
+    "cadContext": "Validate spindle load and roughing removal rates alongside toolpath step-over, axial depth, and feed-rate parameters in CAM setups.",
+    "formula": "Milling: Q=ae*ap*vf/1000; Turning: Q=Vc*f*ap; Drilling: Q=(pi*D^2/4)*[1000*Vc/(pi*D)]*fr/1000; Pc=Q_mm3*kc/6e7",
     "inputs": [
       {
-        "label": "Width of Cut (mm)",
+        "label": "Operation Mode",
+        "val": "Milling"
+      },
+      {
+        "label": "Width of Cut ae (mm)",
         "val": "10"
       },
       {
-        "label": "Depth of Cut (mm)",
+        "label": "Depth of Cut ap (mm)",
         "val": "2"
       },
       {
-        "label": "Feed Rate (mm/min)",
+        "label": "Feed Rate vf (mm/min)",
         "val": "500"
+      },
+      {
+        "label": "Density / Assumed kc",
+        "val": "7.85 g/cm3 / 1800 N/mm2"
       }
     ],
     "outputs": [
       {
-        "label": "Removal Rate (mm³)",
-        "val": "10000 mm3/min"
+        "label": "Volumetric MRR (cm3/min)",
+        "val": "10.0000 cm3/min"
       },
       {
-        "label": "Removal Rate (cm³)",
-        "val": "10.000 cm3/min"
+        "label": "Volumetric MRR (mm3/min)",
+        "val": "10000.00 mm3/min"
+      },
+      {
+        "label": "Mass Removal Rate",
+        "val": "78.5000 g/min"
+      },
+      {
+        "label": "Net Cutting Power",
+        "val": "0.30000 kW"
       }
     ]
   },

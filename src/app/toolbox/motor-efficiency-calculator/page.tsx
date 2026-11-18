@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Motor Efficiency & Loss Calculator (IEC 60034)",
-  description: "Calculate motor efficiency, losses, and IE class per IEC 60034-2-1 standards.",
+  title: 'Motor Efficiency, Loss & Slip Calculator',
+  description: 'Calculate electric motor efficiency, power dissipation losses, synchronous speed, rotor slip, and shaft torque.',
   path: '/toolbox/motor-efficiency-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Motor Efficiency & Loss Calculator (IEC 60034)", path: '/toolbox/motor-efficiency-calculator' },
+    { name: 'Motor Efficiency, Loss & Slip Calculator', path: '/toolbox/motor-efficiency-calculator' },
   ]);
 
   return (
@@ -26,13 +26,13 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Electrical &amp; Drive Systems
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Motor Efficiency & Loss Calculator (IEC 60034)
+              Motor Efficiency, Loss &amp; Slip <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate motor efficiency, losses, and IE class per IEC 60034-2-1 standards.
+              Compute shaft efficiency, total power losses, synchronous speed, induction rotor slip, and rated shaft torque.
             </p>
           </div>
         </section>
