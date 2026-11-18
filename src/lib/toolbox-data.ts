@@ -321,14 +321,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'k-factor-calculator',
-    title: 'DIN 6935 Sheet Metal Bend Allowance & K-Factor Calculator',
+    title: 'Sheet Metal Bend Allowance & K-Factor Calculator',
     description: 'Calculate sheet metal bend deduction, bend allowance, and flat pattern blank size.',
-    detailDesc: 'Apply standard DIN 6935 metal bending formulas to compute sheet metal flat lengths. Featuring dynamic SVG visualizations of inner bend radius, thickness, and neutral fiber shifting.',
+    detailDesc: 'Apply sheet metal neutral-axis bending formulas to compute sheet metal flat lengths. Featuring dynamic SVG visualizations of inner bend radius, thickness, and neutral fiber shifting.',
     category: 'calculator',
     status: 'released',
     origin: 'native',
     releasedDate: '2026-06-04',
-    keywords: ['k-factor calculator', 'bend allowance', 'bend deduction', 'sheet metal flat length', 'din 6935']
+    keywords: ['k-factor calculator', 'bend allowance', 'bend deduction', 'sheet metal flat length']
   },
   {
     slug: 'flexlm-concurrent-seats-queue',
@@ -1329,13 +1329,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'iso-metric-thread-reference',
     title: 'ISO Metric Thread & Tap Drill Size Reference',
-    description: 'Complete ISO metric thread table (M1.6–M48) with coarse/fine pitch, tap drill sizes, clearance holes, and thread engagement data.',
-    detailDesc: 'Searchable ISO 261 metric thread reference covering M1.6 to M48 coarse pitch and M8 to M30 fine pitch threads. Includes tap drill diameters, ISO 273 clearance hole sizes (close/normal), thread tolerance classes (4H-8g), and thread engagement guidelines.',
+    description: 'ISO 68-1 / ISO 261 / ISO 262 metric screw thread table (M1.6 to M56) with coarse/fine pitch and tap drill diameters.',
+    detailDesc: 'Searchable ISO 68-1 / ISO 261 / ISO 262 metric thread reference covering M1.6 to M56 coarse pitch and M8 to M39 fine pitch threads with recommended tap drill diameters.',
     category: 'cheatsheet',
     status: 'released',
     releasedDate: '2026-07-15',
     origin: 'native',
-    keywords: ['iso metric thread', 'tap drill size', 'thread pitch', 'm6 m8 m10', 'clearance hole', 'thread tolerance', 'iso 261', 'iso 965', 'metric fine thread', 'tap drill chart']
+    keywords: ['iso metric thread', 'tap drill size', 'thread pitch', 'm6 m8 m10', 'iso 68-1', 'iso 261', 'iso 262', 'metric fine thread', 'tap drill chart']
   },
   {
     slug: 'aws-welding-symbol-reference',

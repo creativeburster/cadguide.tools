@@ -8099,91 +8099,130 @@
     ]
   },
   "iso-2768-general-tolerances-reference": {
-    "title": "General Tolerances Reference Table",
-    "description": "ISO 2768-1/2 general tolerances for linear dimensions, angular dimensions, and geometrical tolerances (fine, medium, coarse, very coarse).",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Standardized parametric evaluation for General Tolerances Reference Table",
-    "inputs": [],
-    "outputs": []
-  },
-  "iso-286-limits-fits-reference": {
-    "title": "Limits & Fits Reference Table",
-    "description": "Searchable ISO 286-1/2 limits and fits reference: IT tolerance grades, shaft/hole fundamental deviations, and common fit combinations with applications.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Standardized parametric evaluation for Limits & Fits Reference Table",
-    "inputs": [],
-    "outputs": []
-  },
-  "iso-metric-thread-reference": {
-    "title": "Metric Thread & Tap Drill Reference Table",
-    "description": "Complete ISO metric thread table (M1.6–M48) with coarse/fine pitch, tap drill sizes, clearance holes, and thread engagement data.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "Standardized parametric evaluation for Metric Thread & Tap Drill Reference Table",
-    "inputs": [],
-    "outputs": []
-  },
-  "k-factor-calculator": {
-    "title": "Sheet Metal K-Factor & Bend Calculator",
-    "description": "Calculate sheet metal bend allowance, bend deduction, outside setback, and flat pattern length using DIN 6935 standards with a dynamic interactive SVG diagram.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Standardized parametric evaluation for Sheet Metal K-Factor & Bend Calculator",
+    "title": "ISO 2768 General Tolerances Reference Table",
+    "description": "ISO 2768-1 linear and angular tolerances (f, m, c, v) and ISO 2768-2 flatness and perpendicularity limits (H, K, L).",
+    "discipline": "Engineering Drawing & General Geometrical Tolerancing",
+    "standards": "ISO 2768-1 (Linear & Angular), ISO 2768-2 (Geometrical H, K, L)",
+    "cadContext": "Apply standard title-block general tolerances (such as ISO 2768-mK) on mechanical part drawings so non-critical dimensions omit explicit individual callouts.",
+    "formula": "Lookup by nominal dimension band and accuracy class (f/m/c/v and H/K/L)",
     "inputs": [
       {
-        "label": "Dimension Reference",
-        "val": "Nominal"
-      },
-      {
-        "label": "K-Factor Calculation",
-        "val": "Nominal"
-      }
-    ],
-    "outputs": []
-  },
-  "keyway-stress-calculator": {
-    "title": "Keyway Shear & Crushing Stress Calculator",
-    "description": "Calculate shear and compressive stress on a key transmitting torque.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "tau=2T/(d*w*l), sigma_c=4T/(d*h*l)",
-    "inputs": [
-      {
-        "label": "Torque (Nm)",
-        "val": "500"
-      },
-      {
-        "label": "Shaft Dia (mm)",
-        "val": "30"
-      },
-      {
-        "label": "Key Width (mm)",
-        "val": "8"
-      },
-      {
-        "label": "Key Height (mm)",
-        "val": "7"
-      },
-      {
-        "label": "Key Length (mm)",
-        "val": "25"
+        "label": "Nominal Dimension / Classes",
+        "val": "25 mm / ISO 2768-mK"
       }
     ],
     "outputs": [
       {
-        "label": "Shear Stress",
-        "val": "166.67 MPa"
+        "label": "Linear / Angular Deviation",
+        "val": "+/-0.2 mm / +/-0 deg 30 min"
       },
       {
-        "label": "Crushing Stress",
-        "val": "380.95 MPa"
+        "label": "Flatness / Perpendicularity",
+        "val": "0.1 mm / 0.4 mm"
+      }
+    ]
+  },
+  "iso-286-limits-fits-reference": {
+    "title": "ISO 286 Limits & Fits Reference Table",
+    "description": "ISO 286 IT5-IT11 tolerance grade bandwidths (0 to 3150 mm) and 10 standard preferred clearance, transition, and interference fits.",
+    "discipline": "Shaft-Hole Fits & Precision Assembly Tolerancing",
+    "standards": "ISO 286-1 (IT Tolerance Grades), Standard Preferred Fits (H11/c11 through H7/u6)",
+    "cadContext": "Select preferred hole-basis fits such as H7/g6 (sliding), H7/h6 (location), H7/k6 (transition), or H7/p6 (press fit) before computing exact upper/lower deviations.",
+    "formula": "Standard IT bandwidths by nominal diameter range up to 3150 mm",
+    "inputs": [
+      {
+        "label": "Nominal Diameter",
+        "val": "50 mm (> 30 to 50 mm band)"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "IT6 / IT7 Grade Width",
+        "val": "16 um / 25 um"
+      },
+      {
+        "label": "Preferred Sliding Fit",
+        "val": "H7/g6 (Hole-basis)"
+      }
+    ]
+  },
+  "iso-metric-thread-reference": {
+    "title": "ISO Metric Thread & Tap Drill Reference",
+    "description": "ISO 68-1 / ISO 261 / ISO 262 metric screw thread sizes (M1.6 to M56) with coarse and fine pitch tap drill diameters.",
+    "discipline": "Metric Screw Thread & Machining Tap Drill Metrology",
+    "standards": "ISO 68-1 (Basic Profile), ISO 261 (General Plan), ISO 262 (Selected Coarse & Fine Series)",
+    "cadContext": "Look up exact coarse and fine metric pitches alongside standard ~75% engagement pre-tap drill diameters when modeling tapped holes.",
+    "formula": "Standard coarse & fine pitch series with recommended pre-tap drill diameters",
+    "inputs": [
+      {
+        "label": "Thread Series",
+        "val": "M1.6x0.35 to M56x5.5 (Coarse & Fine, 44 sizes)"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "M6x1 / M10x1.5 Tap Drills",
+        "val": "5.00 mm / 8.50 mm"
+      },
+      {
+        "label": "M12x1.25 Fine Tap Drill",
+        "val": "10.80 mm"
+      }
+    ]
+  },
+  "k-factor-calculator": {
+    "title": "Sheet Metal K-Factor & Bend Allowance Calculator",
+    "description": "Calculate bend allowance (BA), outside setback (OS), bend deduction (BD), and flat pattern blank length with empirical R/T auto K-factor options.",
+    "discipline": "Sheet Metal Fabrication & Press Brake Forming",
+    "standards": "Neutral-Axis Circular Bend Allowance & Outside-Apex Deduction Geometry",
+    "cadContext": "Validate K-factor neutral axis shift and flat blank length in CAD sheet-metal parts for both apex (outside flange) and tangent dimensioning schemes.",
+    "formula": "BA = alpha_rad * (R + K * T), OS = tan(alpha / 2) * (R + T), BD = 2 * OS - BA",
+    "inputs": [
+      {
+        "label": "Thickness T / Inside Radius R / Angle",
+        "val": "2.0 mm / 2.0 mm / 90 deg"
+      },
+      {
+        "label": "Flanges F1, F2 (Apex) / K-Factor",
+        "val": "50 mm, 50 mm / 0.44"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Flat Pattern Length L",
+        "val": "96.524 mm"
+      },
+      {
+        "label": "BA / BD / OS",
+        "val": "4.524 / 3.476 / 4.000 mm"
+      }
+    ]
+  },
+  "keyway-stress-calculator": {
+    "title": "Parallel Key & Keyway Stress Calculator",
+    "description": "Calculate tangential shear force, key shear stress, hub bearing stress, and safety factors for parallel shaft keys.",
+    "discipline": "Shaft Power Transmission & Machine Elements",
+    "standards": "Parallel Key Shear & Sidewall Crushing Mechanics",
+    "cadContext": "Check both key shear stress tau = F/(b*L) and hub/shaft sidewall bearing stress sigma_c = 2*F/(h*L) against material yield strength before finalizing keyway length.",
+    "formula": "F = 2000*T/d, tau = F/(b*L), sigma_c = 2*F/(h*L)",
+    "inputs": [
+      {
+        "label": "Torque T / Shaft Dia d",
+        "val": "250 Nm / 40 mm"
+      },
+      {
+        "label": "Key b x h x L / Yield Strength",
+        "val": "12 x 8 x 50 mm / 360 MPa"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Shear Stress / Shear SF",
+        "val": "20.833 MPa / 9.97x"
+      },
+      {
+        "label": "Bearing Stress / Bearing SF",
+        "val": "62.500 MPa / 5.76x"
       }
     ]
   },

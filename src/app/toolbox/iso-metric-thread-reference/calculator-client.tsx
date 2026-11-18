@@ -1,95 +1,292 @@
 'use client';
 
-import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
+import { useState } from 'react';
+import { RelatedTools } from '@/components/related-tools';
+import { Search, Wrench, RotateCcw, Copy, Download, Check } from 'lucide-react';
 
-const CATEGORIES = [
-  { id: 'coarse', name: '🔩 Coarse Pitch (M)' },
-  { id: 'fine', name: '🔩 Fine Pitch (MF)' },
-  { id: 'clearance', name: '⭕ Clearance Holes' },
-  { id: 'data', name: '📐 Thread Specs' },
+type PitchFilter = 'all' | 'Coarse' | 'Fine';
+
+interface MetricThreadRow {
+  designation: string;
+  majorMm: number;
+  pitchMm: number;
+  series: 'Coarse' | 'Fine';
+  tapDrillMm: number;
+}
+
+// Verified verbatim against AmesWeb Metric Tap Drill Chart (ISO 68-1 / ISO 261 / ISO 262)
+const METRIC_THREADS: MetricThreadRow[] = [
+  { designation: 'M1.6x0.35', majorMm: 1.6, pitchMm: 0.35, series: 'Coarse', tapDrillMm: 1.25 },
+  { designation: 'M2x0.4', majorMm: 2.0, pitchMm: 0.4, series: 'Coarse', tapDrillMm: 1.6 },
+  { designation: 'M2.5x0.45', majorMm: 2.5, pitchMm: 0.45, series: 'Coarse', tapDrillMm: 2.05 },
+  { designation: 'M3x0.5', majorMm: 3.0, pitchMm: 0.5, series: 'Coarse', tapDrillMm: 2.5 },
+  { designation: 'M3.5x0.6', majorMm: 3.5, pitchMm: 0.6, series: 'Coarse', tapDrillMm: 2.9 },
+  { designation: 'M4x0.7', majorMm: 4.0, pitchMm: 0.7, series: 'Coarse', tapDrillMm: 3.3 },
+  { designation: 'M5x0.8', majorMm: 5.0, pitchMm: 0.8, series: 'Coarse', tapDrillMm: 4.2 },
+  { designation: 'M6x1', majorMm: 6.0, pitchMm: 1.0, series: 'Coarse', tapDrillMm: 5.0 },
+  { designation: 'M8x1.25', majorMm: 8.0, pitchMm: 1.25, series: 'Coarse', tapDrillMm: 6.8 },
+  { designation: 'M8x1', majorMm: 8.0, pitchMm: 1.0, series: 'Fine', tapDrillMm: 7.0 },
+  { designation: 'M10x1.5', majorMm: 10.0, pitchMm: 1.5, series: 'Coarse', tapDrillMm: 8.5 },
+  { designation: 'M10x1.25', majorMm: 10.0, pitchMm: 1.25, series: 'Fine', tapDrillMm: 8.8 },
+  { designation: 'M10x1', majorMm: 10.0, pitchMm: 1.0, series: 'Fine', tapDrillMm: 9.0 },
+  { designation: 'M12x1.75', majorMm: 12.0, pitchMm: 1.75, series: 'Coarse', tapDrillMm: 10.2 },
+  { designation: 'M12x1.5', majorMm: 12.0, pitchMm: 1.5, series: 'Fine', tapDrillMm: 10.5 },
+  { designation: 'M12x1.25', majorMm: 12.0, pitchMm: 1.25, series: 'Fine', tapDrillMm: 10.8 },
+  { designation: 'M14x2', majorMm: 14.0, pitchMm: 2.0, series: 'Coarse', tapDrillMm: 12.0 },
+  { designation: 'M14x1.5', majorMm: 14.0, pitchMm: 1.5, series: 'Fine', tapDrillMm: 12.5 },
+  { designation: 'M16x2', majorMm: 16.0, pitchMm: 2.0, series: 'Coarse', tapDrillMm: 14.0 },
+  { designation: 'M16x1.5', majorMm: 16.0, pitchMm: 1.5, series: 'Fine', tapDrillMm: 14.5 },
+  { designation: 'M18x2.5', majorMm: 18.0, pitchMm: 2.5, series: 'Coarse', tapDrillMm: 15.5 },
+  { designation: 'M18x1.5', majorMm: 18.0, pitchMm: 1.5, series: 'Fine', tapDrillMm: 16.5 },
+  { designation: 'M20x2.5', majorMm: 20.0, pitchMm: 2.5, series: 'Coarse', tapDrillMm: 17.5 },
+  { designation: 'M20x2', majorMm: 20.0, pitchMm: 2.0, series: 'Fine', tapDrillMm: 18.0 },
+  { designation: 'M20x1.5', majorMm: 20.0, pitchMm: 1.5, series: 'Fine', tapDrillMm: 18.5 },
+  { designation: 'M22x2.5', majorMm: 22.0, pitchMm: 2.5, series: 'Coarse', tapDrillMm: 19.5 },
+  { designation: 'M22x1.5', majorMm: 22.0, pitchMm: 1.5, series: 'Fine', tapDrillMm: 20.5 },
+  { designation: 'M24x3', majorMm: 24.0, pitchMm: 3.0, series: 'Coarse', tapDrillMm: 21.0 },
+  { designation: 'M24x2', majorMm: 24.0, pitchMm: 2.0, series: 'Fine', tapDrillMm: 22.0 },
+  { designation: 'M27x3', majorMm: 27.0, pitchMm: 3.0, series: 'Coarse', tapDrillMm: 24.0 },
+  { designation: 'M27x2', majorMm: 27.0, pitchMm: 2.0, series: 'Fine', tapDrillMm: 25.0 },
+  { designation: 'M30x3.5', majorMm: 30.0, pitchMm: 3.5, series: 'Coarse', tapDrillMm: 26.5 },
+  { designation: 'M30x2', majorMm: 30.0, pitchMm: 2.0, series: 'Fine', tapDrillMm: 28.0 },
+  { designation: 'M33x3.5', majorMm: 33.0, pitchMm: 3.5, series: 'Coarse', tapDrillMm: 29.5 },
+  { designation: 'M33x2', majorMm: 33.0, pitchMm: 2.0, series: 'Fine', tapDrillMm: 31.0 },
+  { designation: 'M36x4', majorMm: 36.0, pitchMm: 4.0, series: 'Coarse', tapDrillMm: 32.0 },
+  { designation: 'M36x3', majorMm: 36.0, pitchMm: 3.0, series: 'Fine', tapDrillMm: 33.0 },
+  { designation: 'M39x4', majorMm: 39.0, pitchMm: 4.0, series: 'Coarse', tapDrillMm: 35.0 },
+  { designation: 'M39x3', majorMm: 39.0, pitchMm: 3.0, series: 'Fine', tapDrillMm: 36.0 },
+  { designation: 'M42x4.5', majorMm: 42.0, pitchMm: 4.5, series: 'Coarse', tapDrillMm: 37.5 },
+  { designation: 'M45x4.5', majorMm: 45.0, pitchMm: 4.5, series: 'Coarse', tapDrillMm: 40.5 },
+  { designation: 'M48x5', majorMm: 48.0, pitchMm: 5.0, series: 'Coarse', tapDrillMm: 43.0 },
+  { designation: 'M52x5', majorMm: 52.0, pitchMm: 5.0, series: 'Coarse', tapDrillMm: 47.0 },
+  { designation: 'M56x5.5', majorMm: 56.0, pitchMm: 5.5, series: 'Coarse', tapDrillMm: 50.5 },
 ];
 
-const SHORTCUTS = [
-  // Coarse pitch threads (M = metric coarse)
-  { keys: 'M1.6', command: 'Pitch 0.35 · Tap Ø 1.25mm', category: 'coarse', description: 'Smallest standard metric thread. Used in miniature instruments and electronics. Tap drill: 1.25mm (#55 drill approx).' },
-  { keys: 'M2', command: 'Pitch 0.4 · Tap Ø 1.6mm', category: 'coarse', description: 'Small precision thread. Used in electronics, optical instruments, and model making. Tap drill: 1.6mm (#52 drill).' },
-  { keys: 'M2.5', command: 'Pitch 0.45 · Tap Ø 2.05mm', category: 'coarse', description: 'Common in electronics and small assemblies. Tap drill: 2.05mm (#46 drill approx).' },
-  { keys: 'M3', command: 'Pitch 0.5 · Tap Ø 2.5mm', category: 'coarse', description: 'Very common small thread. Used in electronics, brackets, and general hardware. Tap drill: 2.5mm (#39 drill). 75% thread engagement.' },
-  { keys: 'M4', command: 'Pitch 0.7 · Tap Ø 3.3mm', category: 'coarse', description: 'Common in consumer products and light machinery. Tap drill: 3.3mm (#30 drill). 75% thread engagement.' },
-  { keys: 'M5', command: 'Pitch 0.8 · Tap Ø 4.2mm', category: 'coarse', description: 'Widely used in automotive, electronics, and general engineering. Tap drill: 4.2mm (#19 drill). 75% thread engagement.' },
-  { keys: 'M6', command: 'Pitch 1.0 · Tap Ø 5.0mm', category: 'coarse', description: 'Most common metric thread. Used everywhere in machinery, automotive, and construction. Tap drill: 5.0mm (#9 drill or 5mm). 75% thread engagement.' },
-  { keys: 'M8', command: 'Pitch 1.25 · Tap Ø 6.8mm', category: 'coarse', description: 'Standard for medium-duty fastening. Used in furniture, machinery, automotive. Tap drill: 6.8mm (#H drill). 75% thread engagement.' },
-  { keys: 'M10', command: 'Pitch 1.5 · Tap Ø 8.5mm', category: 'coarse', description: 'Common structural and machinery thread. Tap drill: 8.5mm (Q drill). 75% thread engagement.' },
-  { keys: 'M12', command: 'Pitch 1.75 · Tap Ø 10.2mm', category: 'coarse', description: 'Heavy-duty fastening for structural and automotive applications. Tap drill: 10.2mm (#X drill or 10.2mm).' },
-  { keys: 'M14', command: 'Pitch 2.0 · Tap Ø 12.0mm', category: 'coarse', description: 'Used in automotive and heavy machinery. Tap drill: 12.0mm. Note: M14 is less common than M12/M16.' },
-  { keys: 'M16', command: 'Pitch 2.0 · Tap Ø 14.0mm', category: 'coarse', description: 'Major structural and machinery fastening. Tap drill: 14.0mm. Very common in construction equipment.' },
-  { keys: 'M20', command: 'Pitch 2.5 · Tap Ø 17.5mm', category: 'coarse', description: 'Heavy structural fastening. Used in construction, bridges, heavy machinery. Tap drill: 17.5mm.' },
-  { keys: 'M24', command: 'Pitch 3.0 · Tap Ø 21.0mm', category: 'coarse', description: 'Very heavy-duty fastening. Used in large structures and equipment. Tap drill: 21.0mm.' },
-  { keys: 'M30', command: 'Pitch 3.5 · Tap Ø 26.5mm', category: 'coarse', description: 'Extra heavy-duty. Used in heavy machinery, pressure vessels, and structural connections. Tap drill: 26.5mm.' },
-  { keys: 'M36', command: 'Pitch 4.0 · Tap Ø 32.0mm', category: 'coarse', description: 'Large structural fastening. Used in heavy construction and mining equipment. Tap drill: 32.0mm.' },
-  { keys: 'M42', command: 'Pitch 4.5 · Tap Ø 37.5mm', category: 'coarse', description: 'Very large fastening for heavy industrial applications. Tap drill: 37.5mm.' },
-  { keys: 'M48', command: 'Pitch 5.0 · Tap Ø 43.0mm', category: 'coarse', description: 'Largest commonly referenced metric coarse thread. Used in major structural connections. Tap drill: 43.0mm.' },
+export default function IsoMetricThreadReferenceClient() {
+  const [searchStr, setSearchStr] = useState('');
+  const [series, setSeries] = useState<PitchFilter>('all');
+  const [copied, setCopied] = useState(false);
 
-  // Fine pitch threads (MF = metric fine)
-  { keys: 'M8×1.0', command: 'Fine · Tap Ø 7.0mm', category: 'fine', description: 'Fine pitch M8. Used where finer adjustment or better sealing needed. Common in hydraulic fittings and precision instruments.' },
-  { keys: 'M10×1.25', command: 'Fine · Tap Ø 8.8mm', category: 'fine', description: 'Fine pitch M10. Used in automotive spark plugs, hydraulic fittings, and precision assemblies. Tap drill: 8.8mm.' },
-  { keys: 'M10×1.0', command: 'Fine · Tap Ø 9.0mm', category: 'fine', description: 'Extra fine M10. Used in optical instruments and measuring equipment. Tap drill: 9.0mm.' },
-  { keys: 'M12×1.5', command: 'Fine · Tap Ø 10.5mm', category: 'fine', description: 'Fine pitch M12. Common in hydraulic systems and automotive applications. Tap drill: 10.5mm.' },
-  { keys: 'M12×1.25', command: 'Fine · Tap Ø 10.8mm', category: 'fine', description: 'Extra fine M12. Used in precision instruments and spark plug threads. Tap drill: 10.8mm.' },
-  { keys: 'M16×1.5', command: 'Fine · Tap Ø 14.5mm', category: 'fine', description: 'Fine pitch M16. Very common in hydraulic fittings and automotive wheel studs. Tap drill: 14.5mm.' },
-  { keys: 'M20×1.5', command: 'Fine · Tap Ø 18.5mm', category: 'fine', description: 'Fine pitch M20. Standard for hydraulic fittings and high-pressure connections. Tap drill: 18.5mm.' },
-  { keys: 'M20×2.0', command: 'Fine · Tap Ø 18.0mm', category: 'fine', description: 'Medium fine M20. Used in heavy machinery where both strength and precision needed. Tap drill: 18.0mm.' },
-  { keys: 'M24×2.0', command: 'Fine · Tap Ø 22.0mm', category: 'fine', description: 'Fine pitch M24. Used in heavy hydraulic systems and large precision assemblies. Tap drill: 22.0mm.' },
-  { keys: 'M30×2.0', command: 'Fine · Tap Ø 28.0mm', category: 'fine', description: 'Fine pitch M30. Common in high-pressure hydraulic fittings and aerospace. Tap drill: 28.0mm.' },
+  const q = searchStr.trim().toLowerCase();
+  const filtered = METRIC_THREADS.filter(r => {
+    if (series !== 'all' && r.series !== series) return false;
+    if (!q) return true;
+    return (
+      r.designation.toLowerCase().includes(q) ||
+      String(r.tapDrillMm).includes(q) ||
+      r.series.toLowerCase().includes(q)
+    );
+  });
 
-  // Clearance holes
-  { keys: 'M3 Close', command: 'Ø 3.2mm', category: 'clearance', description: 'Close fit clearance hole for M3 bolt. Used where precise alignment is required. ISO 273 fit: close.' },
-  { keys: 'M3 Normal', command: 'Ø 3.4mm', category: 'clearance', description: 'Normal fit clearance hole for M3 bolt. Standard clearance for general applications. ISO 273 fit: medium.' },
-  { keys: 'M4 Close', command: 'Ø 4.3mm', category: 'clearance', description: 'Close fit clearance hole for M4 bolt. ISO 273 fit: close.' },
-  { keys: 'M4 Normal', command: 'Ø 4.5mm', category: 'clearance', description: 'Normal fit clearance hole for M4 bolt. ISO 273 fit: medium.' },
-  { keys: 'M5 Close', command: 'Ø 5.3mm', category: 'clearance', description: 'Close fit clearance hole for M5 bolt. ISO 273 fit: close.' },
-  { keys: 'M5 Normal', command: 'Ø 5.5mm', category: 'clearance', description: 'Normal fit clearance hole for M5 bolt. ISO 273 fit: medium.' },
-  { keys: 'M6 Close', command: 'Ø 6.4mm', category: 'clearance', description: 'Close fit clearance hole for M6 bolt. Used where alignment matters. ISO 273 fit: close.' },
-  { keys: 'M6 Normal', command: 'Ø 6.6mm', category: 'clearance', description: 'Normal fit clearance hole for M6 bolt. Most common clearance for M6. ISO 273 fit: medium.' },
-  { keys: 'M8 Close', command: 'Ø 8.4mm', category: 'clearance', description: 'Close fit clearance hole for M8 bolt. ISO 273 fit: close.' },
-  { keys: 'M8 Normal', command: 'Ø 9.0mm', category: 'clearance', description: 'Normal fit clearance hole for M8 bolt. ISO 273 fit: medium.' },
-  { keys: 'M10 Close', command: 'Ø 10.5mm', category: 'clearance', description: 'Close fit clearance hole for M10 bolt. ISO 273 fit: close.' },
-  { keys: 'M10 Normal', command: 'Ø 11.0mm', category: 'clearance', description: 'Normal fit clearance hole for M10 bolt. ISO 273 fit: medium.' },
-  { keys: 'M12 Close', command: 'Ø 13.0mm', category: 'clearance', description: 'Close fit clearance hole for M12 bolt. ISO 273 fit: close.' },
-  { keys: 'M12 Normal', command: 'Ø 13.5mm', category: 'clearance', description: 'Normal fit clearance hole for M12 bolt. ISO 273 fit: medium.' },
-  { keys: 'M16 Close', command: 'Ø 17.0mm', category: 'clearance', description: 'Close fit clearance hole for M16 bolt. ISO 273 fit: close.' },
-  { keys: 'M16 Normal', command: 'Ø 17.5mm', category: 'clearance', description: 'Normal fit clearance hole for M16 bolt. ISO 273 fit: medium.' },
-  { keys: 'M20 Close', command: 'Ø 21.0mm', category: 'clearance', description: 'Close fit clearance hole for M20 bolt. ISO 273 fit: close.' },
-  { keys: 'M20 Normal', command: 'Ø 22.0mm', category: 'clearance', description: 'Normal fit clearance hole for M20 bolt. ISO 273 fit: medium.' },
+  const featured = filtered[0] ?? null;
 
-  // Thread specifications
-  { keys: 'Thread Class 6H', command: 'Hole Tolerance', category: 'data', description: 'Standard internal thread tolerance for general applications. Used with 6g external thread for normal fits. ISO 965-1.' },
-  { keys: 'Thread Class 6g', command: 'Shaft Tolerance', category: 'data', description: 'Standard external thread tolerance. Default for most commercial metric bolts. Provides 6μm plating allowance. ISO 965-1.' },
-  { keys: 'Thread Class 4H/4h', command: 'Precision Tolerance', category: 'data', description: 'Tighter tolerance for precision applications. Used in aerospace and high-precision assemblies. ISO 965-1.' },
-  { keys: 'Thread Class 7H/8g', command: 'Rough Tolerance', category: 'data', description: 'Wider tolerance for rough applications. Used in structural steel and general construction. ISO 965-1.' },
-  { keys: '75% Engagement', command: 'Standard Tap Drill', category: 'data', description: '75% thread engagement is the standard for most tapping applications. Balances strength and ease of tapping. Higher % = stronger but harder to tap.' },
-  { keys: '50% Engagement', command: 'Reduced Tap Drill', category: 'data', description: '50% thread engagement is sufficient for most low-stress applications in soft materials. Easier to tap, less tap breakage. Not recommended for hard materials.' },
-];
+  const handleReset = () => {
+    setSearchStr('');
+    setSeries('all');
+  };
 
-const TIPS = [
-  {
-    title: 'Tap drill formula: Major Ø − Pitch',
-    content: 'For metric threads, tap drill diameter = major diameter minus pitch. Example: M10×1.5 → 10 − 1.5 = 8.5mm. This gives approximately 75% thread engagement, which is the standard for most applications. For hard or brittle materials, use a slightly larger drill (lower engagement) to reduce tap breakage.'
-  },
-  {
-    title: 'Coarse vs Fine pitch selection',
-    content: 'Coarse pitch (M) is the default for general fastening — stronger, easier to assemble, and more tolerant of damage. Fine pitch (MF) is used for: (1) thin walls where full thread depth is limited, (2) adjustment/locking applications, (3) hydraulic/pressure fittings where sealing matters, and (4) vibration resistance (finer threads resist loosening better).'
-  },
-];
+  const handleCopy = async () => {
+    if (filtered.length === 0) return;
+    const text = [
+      'ISO Metric Coarse & Fine Thread Tap Drill Reference',
+      ...filtered.slice(0, 15).map(r => `${r.designation} (${r.series}): Pitch ${r.pitchMm} mm | Tap Drill ${r.tapDrillMm.toFixed(2)} mm`),
+    ].join('\n');
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
 
-export default function ThreadReferenceClient() {
+  const handleDownload = () => {
+    if (filtered.length === 0) return;
+    const rows = [
+      ['designation', 'series', 'major_mm', 'pitch_mm', 'tap_drill_mm'],
+      ...filtered.map(r => [r.designation, r.series, String(r.majorMm), String(r.pitchMm), r.tapDrillMm.toFixed(2)]),
+    ];
+    const csv = rows.map(r => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'iso-metric-threads-tap-drill.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <ShortcutCheatsheetClient
-      title="ISO Metric Thread"
-      subtitle="Complete ISO metric thread reference: M1.6–M48 coarse/fine pitch, tap drill sizes, clearance holes, and thread specifications."
-      categories={CATEGORIES}
-      shortcuts={SHORTCUTS}
-      tips={TIPS}
-    />
+    <div className="space-y-8">
+      <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600">
+              <Wrench className="w-5 h-5" />
+            </div>
+            <div>
+              <h2 className="text-lg font-black text-slate-900 tracking-tight">ISO 261 / 262 Metric Threads</h2>
+              <p className="text-sm text-slate-500 font-medium">Coarse &amp; fine pitch sizes M1.6 to M56 with recommended tap drill diameters</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              data-testid="preset-m6"
+              onClick={() => {
+                setSeries('Coarse');
+                setSearchStr('M6x1');
+              }}
+              className="px-3 py-2 rounded-xl text-xs font-bold bg-slate-50 hover:bg-orange-50 text-slate-700 border border-slate-200"
+            >
+              M6 x 1.0 Coarse
+            </button>
+            <button
+              type="button"
+              data-testid="preset-m10-coarse"
+              onClick={() => {
+                setSeries('Coarse');
+                setSearchStr('M10x1.5');
+              }}
+              className="px-3 py-2 rounded-xl text-xs font-bold bg-slate-50 hover:bg-orange-50 text-slate-700 border border-slate-200"
+            >
+              M10 x 1.5 Coarse
+            </button>
+            <button
+              type="button"
+              data-testid="preset-m12-fine"
+              onClick={() => {
+                setSeries('Fine');
+                setSearchStr('M12x1.25');
+              }}
+              className="px-3 py-2 rounded-xl text-xs font-bold bg-slate-50 hover:bg-orange-50 text-slate-700 border border-slate-200"
+            >
+              M12 x 1.25 Fine
+            </button>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+          <div className="md:col-span-2 relative">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+            <input
+              type="text"
+              data-testid="input-search"
+              value={searchStr}
+              onChange={e => setSearchStr(e.target.value)}
+              placeholder="Search thread (e.g. M8x1.25, M10x1.5, 6.8)..."
+              className="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900"
+            />
+          </div>
+          <div className="flex gap-2">
+            {(['all', 'Coarse', 'Fine'] as PitchFilter[]).map(f => (
+              <button
+                key={f}
+                type="button"
+                data-testid={`filter-${f.toLowerCase()}`}
+                onClick={() => setSeries(f)}
+                className={`flex-1 py-2.5 rounded-xl text-sm font-bold border ${
+                  series === f ? 'bg-slate-900 text-white border-slate-900' : 'bg-slate-50 text-slate-600 border-slate-200'
+                }`}
+              >
+                {f === 'all' ? 'All' : f}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
+            <div className="text-xs font-black text-orange-600 uppercase tracking-wider mb-1">Matching Sizes</div>
+            <div className="text-2xl font-black text-orange-900">
+              <span data-testid="result-count">{filtered.length}</span>
+            </div>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+            <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Top Match</div>
+            <div className="text-xl font-black text-slate-900">
+              <span data-testid="result-top-thread">{featured ? featured.designation : '—'}</span>
+            </div>
+          </div>
+          <div className="bg-blue-50 rounded-2xl p-4 border border-blue-100">
+            <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">Pitch</div>
+            <div className="text-xl font-black text-blue-900">
+              <span data-testid="result-top-pitch">{featured ? String(featured.pitchMm) : '—'}</span>{' '}
+              <span className="text-sm text-blue-600">mm</span>
+            </div>
+          </div>
+          <div className="bg-emerald-50 rounded-2xl p-4 border border-emerald-100">
+            <div className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-1">Tap Drill</div>
+            <div className="text-xl font-black text-emerald-900">
+              <span data-testid="result-top-drill">{featured ? featured.tapDrillMm.toFixed(2) : '—'}</span>{' '}
+              <span className="text-sm text-emerald-600">mm</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          <button
+            type="button"
+            data-testid="btn-reset"
+            onClick={handleReset}
+            className="py-2.5 px-4 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5"
+          >
+            <RotateCcw className="w-4 h-4" /> Reset
+          </button>
+          <button
+            type="button"
+            data-testid="btn-copy"
+            onClick={handleCopy}
+            className="py-2.5 px-4 rounded-xl text-sm font-bold bg-orange-50 text-orange-700 hover:bg-orange-100 flex items-center gap-1.5"
+          >
+            {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+            {copied ? 'Copied' : 'Copy Visible Rows'}
+          </button>
+          <button
+            type="button"
+            data-testid="btn-download"
+            onClick={handleDownload}
+            className="py-2.5 px-4 rounded-xl text-sm font-bold bg-slate-900 text-white hover:bg-slate-800 flex items-center gap-1.5"
+          >
+            <Download className="w-4 h-4" /> Export CSV
+          </button>
+        </div>
+
+        <div className="overflow-x-auto border border-slate-100 rounded-2xl">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-slate-50 text-slate-500 font-black uppercase text-xs">
+              <tr>
+                <th className="px-4 py-3">Designation</th>
+                <th className="px-4 py-3">Series</th>
+                <th className="px-4 py-3 text-right">Major Dia (mm)</th>
+                <th className="px-4 py-3 text-right">Pitch (mm)</th>
+                <th className="px-4 py-3 text-right">Tap Drill (mm)</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100">
+              {filtered.map(r => (
+                <tr key={r.designation} className="hover:bg-orange-50/40">
+                  <td className="px-4 py-2.5 font-mono font-bold text-slate-900">{r.designation}</td>
+                  <td className="px-4 py-2.5 font-bold text-slate-600">{r.series}</td>
+                  <td className="px-4 py-2.5 text-right font-mono">{r.majorMm.toFixed(1)}</td>
+                  <td className="px-4 py-2.5 text-right font-mono">{r.pitchMm.toFixed(2)}</td>
+                  <td className="px-4 py-2.5 text-right font-bold text-orange-800">{r.tapDrillMm.toFixed(2)}</td>
+                </tr>
+              ))}
+              {filtered.length === 0 && (
+                <tr>
+                  <td colSpan={5} className="px-4 py-6 text-center text-slate-400">
+                    No matching metric thread sizes found.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <RelatedTools />
+    </div>
   );
 }

@@ -1,76 +1,418 @@
 'use client';
 
-import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
+import { useState } from 'react';
+import { RelatedTools } from '@/components/related-tools';
+import { Ruler, Search, RotateCcw, Copy, Download, Check, AlertTriangle } from 'lucide-react';
 
-const CATEGORIES = [
-  { id: 'linear', name: '📏 Linear Tolerances' },
-  { id: 'angular', name: '📐 Angular Tolerances' },
-  { id: 'geo', name: '⫶ Geometrical Tolerances' },
-  { id: 'usage', name: '💡 Usage Guide' },
+type LinearClass = 'f' | 'm' | 'c' | 'v';
+type GeoClass = 'H' | 'K' | 'L';
+
+interface LinearRow {
+  label: string;
+  minExcl: number;
+  maxIncl: number;
+  f: number | null;
+  m: number | null;
+  c: number | null;
+  v: number | null;
+}
+
+interface AngularRow {
+  label: string;
+  minExcl: number;
+  maxIncl: number;
+  fm: string;
+  c: string;
+  v: string;
+}
+
+interface GeoRow {
+  label: string;
+  minExcl: number;
+  maxIncl: number;
+  H: number;
+  K: number;
+  L: number;
+}
+
+// Verified verbatim against ISO 2768-1 / 2768-2 tables (AmesWeb)
+const LINEAR_ROWS: LinearRow[] = [
+  { label: '0.5 to 3 mm', minExcl: 0.5, maxIncl: 3, f: 0.05, m: 0.1, c: 0.2, v: null },
+  { label: '> 3 to 6 mm', minExcl: 3, maxIncl: 6, f: 0.05, m: 0.1, c: 0.3, v: 0.5 },
+  { label: '> 6 to 30 mm', minExcl: 6, maxIncl: 30, f: 0.1, m: 0.2, c: 0.5, v: 1.0 },
+  { label: '> 30 to 120 mm', minExcl: 30, maxIncl: 120, f: 0.15, m: 0.3, c: 0.8, v: 1.5 },
+  { label: '> 120 to 400 mm', minExcl: 120, maxIncl: 400, f: 0.2, m: 0.5, c: 1.2, v: 2.5 },
+  { label: '> 400 to 1000 mm', minExcl: 400, maxIncl: 1000, f: 0.3, m: 0.8, c: 2.0, v: 4.0 },
+  { label: '> 1000 to 2000 mm', minExcl: 1000, maxIncl: 2000, f: 0.5, m: 1.2, c: 3.0, v: 6.0 },
+  { label: '> 2000 to 4000 mm', minExcl: 2000, maxIncl: 4000, f: null, m: 2.0, c: 4.0, v: 8.0 },
 ];
 
-const SHORTCUTS = [
-  // Linear tolerances (ISO 2768-1) — per size range, per class
-  { keys: '0.5–3mm', command: 'f: ±0.05 · m: ±0.1 · c: ±0.2 · v: ±0.5', category: 'linear', description: 'Smallest dimension range. Fine class ±0.05mm for precision parts. Medium ±0.1mm is the default for most drawings. Coarse ±0.2mm for non-critical features.' },
-  { keys: '3–6mm', command: 'f: ±0.05 · m: ±0.1 · c: ±0.3 · v: ±0.8', category: 'linear', description: 'Small dimensions. Fine and medium remain the same as 0.5-3mm. Coarse increases to ±0.3mm. Very coarse ±0.8mm for rough castings.' },
-  { keys: '6–30mm', command: 'f: ±0.1 · m: ±0.2 · c: ±0.5 · v: ±1.2', category: 'linear', description: 'Common range for most machined parts. Medium ±0.2mm is standard for general engineering. Fine ±0.1mm for precision fits.' },
-  { keys: '30–120mm', command: 'f: ±0.15 · m: ±0.3 · c: ±0.8 · v: ±2.0', category: 'linear', description: 'Medium size range. Medium ±0.3mm covers most general machinery. Fine ±0.15mm for precision components. Coarse ±0.8mm for structural parts.' },
-  { keys: '120–400mm', command: 'f: ±0.2 · m: ±0.5 · c: ±1.2 · v: ±3.0', category: 'linear', description: 'Large dimensions. Medium ±0.5mm standard for large machined parts. Coarse ±1.2mm for structural and welded fabrications.' },
-  { keys: '400–1000mm', command: 'f: ±0.3 · m: ±0.8 · c: ±2.0 · v: ±4.0', category: 'linear', description: 'Very large dimensions. Medium ±0.8mm for large fabrications. Coarse ±2.0mm for structural steel. Very coarse ±4.0mm for large castings.' },
-  { keys: '1000–2000mm', command: 'f: ±0.5 · m: ±1.2 · c: ±3.0 · v: ±6.0', category: 'linear', description: 'Extra large dimensions. Fine ±0.5mm rarely used at this scale. Medium ±1.2mm for large precision fabrications. Coarse ±3.0mm for structural.' },
-  { keys: '2000–4000mm', command: 'f: — · m: ±2.0 · c: ±4.0 · v: ±8.0', category: 'linear', description: 'Largest range covered by ISO 2768. Fine class not defined. Medium ±2.0mm for large welded structures. Very coarse ±8.0mm for very large castings.' },
-
-  // Angular tolerances (ISO 2768-1)
-  { keys: '≤10°', command: 'f: ±1° · m: ±1° · c: ±1°30′ · v: ±3°', category: 'angular', description: 'Small angles up to 10°. Fine and medium both ±1°. Coarse ±1°30′. Very coarse ±3° for rough angular features.' },
-  { keys: '10–50°', command: 'f: ±0°30′ · m: ±0°30′ · c: ±1° · v: ±2°', category: 'angular', description: 'Medium angles. Fine and medium ±0°30′. Coarse ±1°. Very coarse ±2°. Applied to angles on drawings without individual tolerance.' },
-  { keys: '50–120°', command: 'f: ±0°20′ · m: ±0°20′ · c: ±0°30′ · v: ±1°', category: 'angular', description: 'Large angles. Fine and medium ±0°20′. Coarse ±0°30′. Very coarse ±1°. Common for chamfers and bevels.' },
-  { keys: '120–400°', command: 'f: ±0°10′ · m: ±0°10′ · c: ±0°15′ · v: ±0°30′', category: 'angular', description: 'Very large angles (reflex). Fine and medium ±0°10′. Coarse ±0°15′. Very coarse ±0°30′. Rare in practice.' },
-  { keys: 'Length ≤10mm', command: 'f: ±1° · m: ±1° · c: ±1°30′ · v: ±3°', category: 'angular', description: 'Angular tolerance depends on the shorter side length of the angle. For short sides ≤10mm, tolerances are wider due to measurement difficulty.' },
-  { keys: 'Length 10–50mm', command: 'f: ±0°30′ · m: ±0°30′ · c: ±1° · v: ±2°', category: 'angular', description: 'For angle sides 10-50mm. Medium ±0°30′ is standard for chamfers and bevels on typical machined parts.' },
-  { keys: 'Length 50–120mm', command: 'f: ±0°20′ · m: ±0°20′ · c: ±0°30′ · v: ±1°', category: 'angular', description: 'For angle sides 50-120mm. Medium ±0°20′ for general engineering. Fine ±0°20′ same as medium.' },
-  { keys: 'Length 120–400mm', command: 'f: ±0°10′ · m: ±0°10′ · c: ±0°15′ · v: ±0°30′', category: 'angular', description: 'For angle sides 120-400mm. Tolerances tighten with longer sides because angular error translates to larger linear deviation.' },
-
-  // Geometrical tolerances (ISO 2768-2)
-  { keys: 'Flatness ≤100mm', command: 'f: 0.02 · m: 0.05 · c: 0.1 · v: 0.2', category: 'geo', description: 'Flatness tolerance for surfaces up to 100mm. Values in mm. Fine 0.02mm for precision ground surfaces. Medium 0.05mm for general machined faces.' },
-  { keys: 'Flatness 100–300mm', command: 'f: 0.05 · m: 0.1 · c: 0.2 · v: 0.5', category: 'geo', description: 'Flatness for 100-300mm surfaces. Medium 0.1mm standard for machined mounting surfaces. Coarse 0.2mm for non-critical faces.' },
-  { keys: 'Flatness 300–1000mm', command: 'f: 0.1 · m: 0.2 · c: 0.4 · v: 0.8', category: 'geo', description: 'Flatness for 300-1000mm surfaces. Medium 0.2mm for large machine bases. Coarse 0.4mm for structural mounting surfaces.' },
-  { keys: 'Straightness ≤100mm', command: 'f: 0.02 · m: 0.05 · c: 0.1 · v: 0.2', category: 'geo', description: 'Straightness for edges/lines up to 100mm. Same values as flatness. Fine 0.02mm for precision guides. Medium 0.05mm for general edges.' },
-  { keys: 'Straightness 100–300mm', command: 'f: 0.05 · m: 0.1 · c: 0.2 · v: 0.5', category: 'geo', description: 'Straightness for 100-300mm. Medium 0.1mm for general machined edges. Coarse 0.2mm for non-critical features.' },
-  { keys: 'Perpendicularity ≤100mm', command: 'f: 0.05 · m: 0.1 · c: 0.2 · v: 0.5', category: 'geo', description: 'Perpendicularity for features up to 100mm. Medium 0.1mm for general machined corners. Fine 0.05mm for precision square features.' },
-  { keys: 'Perpendicularity 100–300mm', command: 'f: 0.1 · m: 0.2 · c: 0.4 · v: 0.8', category: 'geo', description: 'Perpendicularity for 100-300mm. Medium 0.2mm for standard machined brackets. Coarse 0.4mm for structural brackets.' },
-  { keys: 'Symmetry ≤100mm', command: 'f: 0.05 · m: 0.1 · c: 0.2 · v: 0.5', category: 'geo', description: 'Symmetry tolerance for features up to 100mm. Medium 0.1mm for general symmetric features. Fine 0.05mm for precision.' },
-  { keys: 'Circular runout ≤100mm', command: 'f: 0.02 · m: 0.05 · c: 0.1 · v: 0.2', category: 'geo', description: 'Circular runout for diameters up to 100mm. Fine 0.02mm for precision shafts. Medium 0.05mm for general rotating parts.' },
-  { keys: 'Circular runout 100–300mm', command: 'f: 0.05 · m: 0.1 · c: 0.2 · v: 0.5', category: 'geo', description: 'Circular runout for 100-300mm diameters. Medium 0.1mm for general shafts and journals. Coarse 0.2mm for non-critical rotations.' },
-
-  // Usage guide
-  { keys: 'Drawing indication', command: 'ISO 2768-mK', category: 'usage', description: 'General tolerance class indicated in title block or near drawing. Format: ISO 2768-mK where m = linear/angular class (f/m/c/v) and K = geometrical class (A/B/C/D). Example: ISO 2768-mK means medium linear + class K geometrical.' },
-  { keys: 'Class A (geo)', command: 'Geometrical — Fine', category: 'usage', description: 'ISO 2768-2 geometrical class A corresponds to fine tolerances. Used for precision instruments and measuring equipment. Equivalent to f class for linear.' },
-  { keys: 'Class B (geo)', command: 'Geometrical — Medium', category: 'usage', description: 'ISO 2768-2 geometrical class B corresponds to medium tolerances. Default for general engineering. Equivalent to m class for linear.' },
-  { keys: 'Class C (geo)', command: 'Geometrical — Coarse', category: 'usage', description: 'ISO 2768-2 geometrical class C corresponds to coarse tolerances. Used for structural and non-critical parts. Equivalent to c class for linear.' },
-  { keys: 'Class D (geo)', command: 'Geometrical — Very Coarse', category: 'usage', description: 'ISO 2768-2 geometrical class D corresponds to very coarse tolerances. Used for castings, forgings, and rough fabrications. Equivalent to v class for linear.' },
-  { keys: 'When to specify', command: 'Individual > General', category: 'usage', description: 'General tolerances apply ONLY when no individual tolerance is indicated. If a dimension has its own tolerance (e.g. 50±0.01), the individual tolerance takes precedence. General tolerances cover the rest.' },
-  { keys: 'New vs old', command: 'ISO 2768 replaces DIN 7168', category: 'usage', description: 'ISO 2768 superseded DIN 7168. The old German standard used the same f/m/c/g classes (g = very coarse, now v in ISO). Many European drawings still reference DIN 7168 — values are identical.' },
+const ANGULAR_ROWS: AngularRow[] = [
+  { label: 'up to 10 mm', minExcl: 0, maxIncl: 10, fm: '1 deg 00 min', c: '1 deg 30 min', v: '3 deg 00 min' },
+  { label: '> 10 to 50 mm', minExcl: 10, maxIncl: 50, fm: '0 deg 30 min', c: '1 deg 00 min', v: '2 deg 00 min' },
+  { label: '> 50 to 120 mm', minExcl: 50, maxIncl: 120, fm: '0 deg 20 min', c: '0 deg 30 min', v: '1 deg 00 min' },
+  { label: '> 120 to 400 mm', minExcl: 120, maxIncl: 400, fm: '0 deg 10 min', c: '0 deg 15 min', v: '0 deg 30 min' },
+  { label: '> 400 mm', minExcl: 400, maxIncl: Infinity, fm: '0 deg 05 min', c: '0 deg 10 min', v: '0 deg 20 min' },
 ];
 
-const TIPS = [
-  {
-    title: 'Medium (m) is the default — don\'t over-specify',
-    content: 'ISO 2768-m is the most common general tolerance class. It covers the vast majority of machined parts. Only use fine (f) when precision is truly required — it increases cost significantly. Coarse (c) is appropriate for structural and non-critical features. Always indicate the class in the drawing title block.'
-  },
-  {
-    title: 'General tolerances reduce drawing clutter',
-    content: 'The purpose of ISO 2768 is to avoid specifying tolerances on every dimension. Only dimensions that need tighter or different tolerances get individual indications. All other dimensions are covered by the general tolerance class in the title block. This makes drawings cleaner and easier to read. Example: title block says "ISO 2768-mK", a dimension marked 50 is ±0.3mm, but 50±0.01 overrides to the tighter tolerance.'
-  },
+const FLATNESS_ROWS: GeoRow[] = [
+  { label: 'up to 10 mm', minExcl: 0, maxIncl: 10, H: 0.02, K: 0.05, L: 0.1 },
+  { label: '> 10 to 30 mm', minExcl: 10, maxIncl: 30, H: 0.05, K: 0.1, L: 0.2 },
+  { label: '> 30 to 100 mm', minExcl: 30, maxIncl: 100, H: 0.1, K: 0.2, L: 0.4 },
+  { label: '> 100 to 300 mm', minExcl: 100, maxIncl: 300, H: 0.2, K: 0.4, L: 0.8 },
+  { label: '> 300 to 1000 mm', minExcl: 300, maxIncl: 1000, H: 0.3, K: 0.6, L: 1.2 },
+  { label: '> 1000 to 3000 mm', minExcl: 1000, maxIncl: 3000, H: 0.4, K: 0.8, L: 1.6 },
 ];
+
+const PERP_ROWS: GeoRow[] = [
+  { label: 'up to 100 mm', minExcl: 0, maxIncl: 100, H: 0.2, K: 0.4, L: 0.6 },
+  { label: '> 100 to 300 mm', minExcl: 100, maxIncl: 300, H: 0.3, K: 0.6, L: 1.0 },
+  { label: '> 300 to 1000 mm', minExcl: 300, maxIncl: 1000, H: 0.4, K: 0.8, L: 1.5 },
+  { label: '> 1000 to 3000 mm', minExcl: 1000, maxIncl: 3000, H: 0.5, K: 1.0, L: 2.0 },
+];
+
+const POS_RE = /^(?:\d+(?:\.\d*)?|\.\d+)$/;
+
+function parseDim(raw: string): number | null {
+  const t = raw.trim();
+  if (!POS_RE.test(t)) return null;
+  const v = Number(t);
+  return Number.isFinite(v) && v > 0 ? v : null;
+}
 
 export default function Iso2768ReferenceClient() {
+  const [dimStr, setDimStr] = useState('25');
+  const [linClass, setLinClass] = useState<LinearClass>('m');
+  const [geoClass, setGeoClass] = useState<GeoClass>('K');
+  const [searchStr, setSearchStr] = useState('');
+  const [copied, setCopied] = useState(false);
+
+  const dim = parseDim(dimStr);
+  const dimLinearOk = dim !== null && dim >= 0.5 && dim <= 4000;
+  const dimGeoOk = dim !== null && dim > 0 && dim <= 3000;
+
+  const linearMatch =
+    dimLinearOk && dim !== null
+      ? LINEAR_ROWS.find(r => (r.minExcl === 0.5 ? dim >= 0.5 && dim <= r.maxIncl : dim > r.minExcl && dim <= r.maxIncl)) ?? null
+      : null;
+
+  const linearTol = linearMatch ? linearMatch[linClass] : null;
+  const flatnessMatch = dimGeoOk && dim !== null ? FLATNESS_ROWS.find(r => dim > r.minExcl && dim <= r.maxIncl) ?? null : null;
+  const perpMatch = dimGeoOk && dim !== null ? PERP_ROWS.find(r => dim > r.minExcl && dim <= r.maxIncl) ?? null : null;
+  const angMatch = dim !== null && dim > 0 ? ANGULAR_ROWS.find(r => dim > r.minExcl && dim <= r.maxIncl) ?? null : null;
+
+  const angTolText = angMatch ? (linClass === 'f' || linClass === 'm' ? angMatch.fm : angMatch[linClass]) : '—';
+  const flatTol = flatnessMatch ? flatnessMatch[geoClass] : null;
+  const perpTol = perpMatch ? perpMatch[geoClass] : null;
+
+  const q = searchStr.trim().toLowerCase();
+  const visibleLinearRows = LINEAR_ROWS.filter(r => !q || r.label.toLowerCase().includes(q));
+
+  const applyPreset = (d: string, lc: LinearClass, gc: GeoClass) => {
+    setDimStr(d);
+    setLinClass(lc);
+    setGeoClass(gc);
+  };
+
+  const handleReset = () => {
+    applyPreset('25', 'm', 'K');
+    setSearchStr('');
+  };
+
+  const handleCopy = async () => {
+    if (!dimLinearOk) return;
+    const text = [
+      `ISO 2768-${linClass}${geoClass} Tolerance Lookup (Nominal: ${dim} mm)`,
+      `Linear Deviation: ${linearTol !== null ? `+-${linearTol} mm` : 'N/A for class'}`,
+      `Angular Deviation: +- ${angTolText}`,
+      `Straightness & Flatness (${geoClass}): ${flatTol !== null ? `${flatTol} mm` : '—'}`,
+      `Perpendicularity (${geoClass}): ${perpTol !== null ? `${perpTol} mm` : '—'}`,
+    ].join('\n');
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const handleDownload = () => {
+    const rows = [
+      ['table', 'range', 'f_or_H', 'm_or_K', 'c_or_L', 'v'],
+      ...LINEAR_ROWS.map(r => ['ISO_2768_1_Linear', r.label, String(r.f ?? ''), String(r.m ?? ''), String(r.c ?? ''), String(r.v ?? '')]),
+      ...ANGULAR_ROWS.map(r => ['ISO_2768_1_Angular', r.label, r.fm, r.fm, r.c, r.v]),
+      ...FLATNESS_ROWS.map(r => ['ISO_2768_2_Flatness', r.label, String(r.H), String(r.K), String(r.L), '']),
+      ...PERP_ROWS.map(r => ['ISO_2768_2_Perpendicularity', r.label, String(r.H), String(r.K), String(r.L), '']),
+    ];
+    const csv = rows.map(r => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'iso-2768-general-tolerances.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <ShortcutCheatsheetClient
-      title="ISO 2768 General Tolerances"
-      subtitle="ISO 2768-1/2 general tolerances for linear dimensions, angular dimensions, and geometrical tolerances across four accuracy classes."
-      categories={CATEGORIES}
-      shortcuts={SHORTCUTS}
-      tips={TIPS}
-    />
+    <div className="space-y-8">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600">
+              <Ruler className="w-5 h-5" />
+            </div>
+            <h2 className="text-lg font-black text-slate-900 tracking-tight">Dimension &amp; Class</h2>
+          </div>
+
+          <div>
+            <div className="text-sm font-black text-slate-400 uppercase tracking-wider mb-2">Quick Presets</div>
+            <div className="grid grid-cols-1 gap-2">
+              <button
+                type="button"
+                data-testid="preset-machined-25m"
+                onClick={() => applyPreset('25', 'm', 'K')}
+                className="text-left px-3 py-2 rounded-xl text-sm font-bold bg-slate-50 hover:bg-indigo-50 text-slate-700 border border-slate-200"
+              >
+                General CNC (25 mm, ISO 2768-mK)
+              </button>
+              <button
+                type="button"
+                data-testid="preset-precision-5f"
+                onClick={() => applyPreset('5', 'f', 'H')}
+                className="text-left px-3 py-2 rounded-xl text-sm font-bold bg-slate-50 hover:bg-indigo-50 text-slate-700 border border-slate-200"
+              >
+                Fine Instrument (5 mm, ISO 2768-fH)
+              </button>
+              <button
+                type="button"
+                data-testid="preset-welded-600c"
+                onClick={() => applyPreset('600', 'c', 'L')}
+                className="text-left px-3 py-2 rounded-xl text-sm font-bold bg-slate-50 hover:bg-indigo-50 text-slate-700 border border-slate-200"
+              >
+                Coarse Weldment (600 mm, ISO 2768-cL)
+              </button>
+            </div>
+          </div>
+
+          <div>
+            <label className="text-sm font-black text-slate-500 uppercase tracking-wider block mb-1">Nominal Size (mm, 0.5–4000)</label>
+            <input
+              type="text"
+              inputMode="decimal"
+              data-testid="input-dim"
+              value={dimStr}
+              onChange={e => setDimStr(e.target.value)}
+              className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900"
+            />
+          </div>
+
+          <div>
+            <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1.5">Part 1 Linear / Angular Class</div>
+            <div className="grid grid-cols-4 gap-2">
+              {(['f', 'm', 'c', 'v'] as LinearClass[]).map(c => (
+                <button
+                  key={c}
+                  type="button"
+                  data-testid={`class-${c}`}
+                  onClick={() => setLinClass(c)}
+                  className={`py-2 rounded-xl text-sm font-black border ${
+                    linClass === c ? 'bg-indigo-600 text-white border-indigo-600' : 'bg-slate-50 text-slate-700 border-slate-200'
+                  }`}
+                >
+                  {c}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1.5">Part 2 Geometric Class</div>
+            <div className="grid grid-cols-3 gap-2">
+              {(['H', 'K', 'L'] as GeoClass[]).map(g => (
+                <button
+                  key={g}
+                  type="button"
+                  data-testid={`geo-${g}`}
+                  onClick={() => setGeoClass(g)}
+                  className={`py-2 rounded-xl text-sm font-black border ${
+                    geoClass === g ? 'bg-slate-900 text-white border-slate-900' : 'bg-slate-50 text-slate-700 border-slate-200'
+                  }`}
+                >
+                  {g}
+                </button>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">Filter Linear Table</label>
+            <div className="relative">
+              <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
+              <input
+                type="text"
+                data-testid="input-search"
+                value={searchStr}
+                onChange={e => setSearchStr(e.target.value)}
+                placeholder="e.g. 30, 400..."
+                className="w-full h-10 pl-9 pr-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-medium"
+              />
+            </div>
+          </div>
+
+          {(!dimLinearOk || dim === null) && (
+            <div data-testid="validation-error" className="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-sm font-bold flex items-start gap-2">
+              <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+              <span>Enter a nominal size from 0.5 to 4000 mm (Part 2 geometric tables cover up to 3000 mm).</span>
+            </div>
+          )}
+
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              data-testid="btn-reset"
+              onClick={handleReset}
+              className="flex-1 py-2.5 px-3 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center justify-center gap-1.5"
+            >
+              <RotateCcw className="w-4 h-4" /> Reset
+            </button>
+            <button
+              type="button"
+              data-testid="btn-copy"
+              onClick={handleCopy}
+              className="flex-1 py-2.5 px-3 rounded-xl text-sm font-bold bg-indigo-50 text-indigo-700 hover:bg-indigo-100 flex items-center justify-center gap-1.5"
+            >
+              {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+              {copied ? 'Copied' : 'Copy'}
+            </button>
+            <button
+              type="button"
+              data-testid="btn-download"
+              onClick={handleDownload}
+              className="w-full py-2.5 px-3 rounded-xl text-sm font-bold bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5"
+            >
+              <Download className="w-4 h-4" /> Export Full ISO 2768 CSV
+            </button>
+          </div>
+        </div>
+
+        <div className="lg:col-span-2 space-y-6">
+          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+            <h2 className="text-lg font-black text-slate-900 tracking-tight">
+              Lookup Result: ISO 2768-{linClass}{geoClass}
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-indigo-50 rounded-2xl p-5 border border-indigo-100">
+                <div className="text-xs font-black text-indigo-600 uppercase tracking-wider mb-1">Linear Tolerance ({linClass})</div>
+                <div className="text-3xl font-black text-indigo-900">
+                  +/-<span data-testid="result-linear">{linearTol !== null ? String(linearTol) : '—'}</span>{' '}
+                  <span className="text-base text-indigo-600">mm</span>
+                </div>
+              </div>
+
+              <div className="bg-blue-50 rounded-2xl p-5 border border-blue-100">
+                <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">Angular Tolerance ({linClass})</div>
+                <div className="text-2xl font-black text-blue-900 mt-1">
+                  +/-<span data-testid="result-angular">{angTolText}</span>
+                </div>
+              </div>
+
+              <div className="bg-emerald-50 rounded-2xl p-5 border border-emerald-100">
+                <div className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-1">Flatness / Straightness ({geoClass})</div>
+                <div className="text-3xl font-black text-emerald-900">
+                  <span data-testid="result-flatness">{flatTol !== null ? String(flatTol) : '—'}</span>{' '}
+                  <span className="text-base text-emerald-600">mm</span>
+                </div>
+              </div>
+
+              <div className="bg-orange-50 rounded-2xl p-5 border border-orange-100">
+                <div className="text-xs font-black text-orange-600 uppercase tracking-wider mb-1">Perpendicularity ({geoClass})</div>
+                <div className="text-3xl font-black text-orange-900">
+                  <span data-testid="result-perp">{perpTol !== null ? String(perpTol) : '—'}</span>{' '}
+                  <span className="text-base text-orange-600">mm</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="overflow-x-auto border border-slate-100 rounded-2xl">
+              <table className="w-full text-sm text-left">
+                <thead className="bg-slate-50 text-slate-500 font-black uppercase text-xs">
+                  <tr>
+                    <th className="px-4 py-3">ISO 2768-1 Linear Range</th>
+                    <th className="px-4 py-3 text-right">f (Fine)</th>
+                    <th className="px-4 py-3 text-right">m (Medium)</th>
+                    <th className="px-4 py-3 text-right">c (Coarse)</th>
+                    <th className="px-4 py-3 text-right">v (Very Coarse)</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  {visibleLinearRows.map(r => (
+                    <tr key={r.label} className={linearMatch?.label === r.label ? 'bg-indigo-50/70 font-bold' : ''}>
+                      <td className="px-4 py-2.5 text-slate-800">{r.label}</td>
+                      <td className="px-4 py-2.5 text-right font-mono">{r.f !== null ? `+/-${r.f}` : '—'}</td>
+                      <td className="px-4 py-2.5 text-right font-mono">{r.m !== null ? `+/-${r.m}` : '—'}</td>
+                      <td className="px-4 py-2.5 text-right font-mono">{r.c !== null ? `+/-${r.c}` : '—'}</td>
+                      <td className="px-4 py-2.5 text-right font-mono">{r.v !== null ? `+/-${r.v}` : '—'}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="overflow-x-auto border border-slate-100 rounded-2xl">
+                <table className="w-full text-xs text-left">
+                  <thead className="bg-slate-50 text-slate-500 font-black uppercase">
+                    <tr>
+                      <th className="px-3 py-2.5">ISO 2768-2 Flatness</th>
+                      <th className="px-3 py-2.5 text-right">H</th>
+                      <th className="px-3 py-2.5 text-right">K</th>
+                      <th className="px-3 py-2.5 text-right">L</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {FLATNESS_ROWS.map(r => (
+                      <tr key={r.label} className={flatnessMatch?.label === r.label ? 'bg-emerald-50/60 font-bold' : ''}>
+                        <td className="px-3 py-2">{r.label}</td>
+                        <td className="px-3 py-2 text-right font-mono">{r.H}</td>
+                        <td className="px-3 py-2 text-right font-mono">{r.K}</td>
+                        <td className="px-3 py-2 text-right font-mono">{r.L}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+
+              <div className="overflow-x-auto border border-slate-100 rounded-2xl">
+                <table className="w-full text-xs text-left">
+                  <thead className="bg-slate-50 text-slate-500 font-black uppercase">
+                    <tr>
+                      <th className="px-3 py-2.5">Perpendicularity</th>
+                      <th className="px-3 py-2.5 text-right">H</th>
+                      <th className="px-3 py-2.5 text-right">K</th>
+                      <th className="px-3 py-2.5 text-right">L</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-slate-100">
+                    {PERP_ROWS.map(r => (
+                      <tr key={r.label} className={perpMatch?.label === r.label ? 'bg-orange-50/60 font-bold' : ''}>
+                        <td className="px-3 py-2">{r.label}</td>
+                        <td className="px-3 py-2 text-right font-mono">{r.H}</td>
+                        <td className="px-3 py-2 text-right font-mono">{r.K}</td>
+                        <td className="px-3 py-2 text-right font-mono">{r.L}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <RelatedTools />
+        </div>
+      </div>
+    </div>
   );
 }

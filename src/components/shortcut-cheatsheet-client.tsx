@@ -70,7 +70,7 @@ const CROSS_DISCOVERY_MAP: Record<string, { label: string; href: string; badge: 
       label: 'Sheet Metal K-Factor Calculator',
       href: '/toolbox/k-factor-calculator',
       badge: 'Calculator',
-      desc: 'DIN 6935 neutral axis shift and flat pattern blank calculations'
+      desc: 'Empirical R/T neutral axis shift and flat pattern blank calculations'
     },
     {
       label: 'Online CAD File Compressor',

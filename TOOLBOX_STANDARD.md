@@ -181,7 +181,8 @@ flowchart LR
 | 33 | helical-gear-calculator、hertz-contact-stress-calculator、hobbing-cycle-time-calculator、hole-stackup-calculator、horizontal-curve-calculator | 0410ac28 |
 | 34 | horsepower-torque-calculator、hot-water-circulation-calculator、hvac-load-room-calculator、hydraulic-cylinder-force-calculator、hydrostatic-pressure-calculator | 39121078 |
 | 35 | ifc-element-quantity-calculator、ifc-entity-counter、impact-force-calculator、imperial-thread-reference、inductor-reactance-calculator | cb8515a5 |
-| 36 | injection-clamping-force-calculator、injection-molding-clamp-calculator、insulation-r-value-calculator、insulation-thickness-calculator、involute-gear-calculator（跳过 inventor-shortcuts-sheet） | （待填本批 commit 哈希） |
+| 36 | injection-clamping-force-calculator、injection-molding-clamp-calculator、insulation-r-value-calculator、insulation-thickness-calculator、involute-gear-calculator（跳过 inventor-shortcuts-sheet） | 0730f5c9 |
+| 37 | iso-2768-general-tolerances-reference、iso-286-limits-fits-reference、iso-metric-thread-reference、keyway-stress-calculator、k-factor-calculator | （待填本批 commit 哈希） |
 
 ---
 

@@ -1,13 +1,12 @@
 import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
-import Link from 'next/link';
 import KFactorCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'DIN 6935 Sheet Metal K-Factor & Bend Allowance Calculator',
+  title: 'Sheet Metal K-Factor & Bend Allowance Calculator',
   description:
-    'Calculate sheet metal bend allowance, bend deduction, outside setback, and flat pattern length using DIN 6935 standards with a dynamic interactive SVG diagram.',
+    'Calculate sheet metal bend allowance, bend deduction, outside setback, and flat pattern length using empirical R/T presets with a dynamic interactive SVG diagram.',
   path: '/toolbox/k-factor-calculator',
 });
 
@@ -40,7 +39,7 @@ export default function KFactorCalculatorPage() {
               Sheet Metal <span className="text-blue-400">K-Factor</span> & Bend Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate bend allowance, deduction, setback, and flat blank length based on DIN 6935 standards. Visualize the shifting neutral axis dynamically in real-time.
+              Calculate bend allowance, deduction, setback, and flat blank length based on Empirical R/T Auto standards. Visualize the shifting neutral axis dynamically in real-time.
             </p>
           </div>
         </section>
