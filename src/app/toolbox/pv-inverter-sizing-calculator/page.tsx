@@ -4,8 +4,9 @@ import type { Metadata } from 'next';
 import PVInverterSizingClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Solar PV Inverter Sizing & DC/AC Ratio Calculator — Yield & Clipping Loss',
-  description: 'Calculate solar PV array DC-to-AC sizing ratio (ILR), clipping losses, annual kWh yield, and inverter utilization per IEC 62548 and IEEE standards.',
+  title: 'Solar PV Inverter Sizing & Cold-Temp String Voc Calculator',
+  description:
+    'Calculate PV array DC rating, DC-to-AC inverter loading ratio (ILR), cold-temperature maximum open-circuit string voltage, and annual yield.',
   path: '/toolbox/pv-inverter-sizing-calculator',
 });
 
@@ -26,13 +27,13 @@ export default function PVInverterSizingPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-amber-500/10 text-amber-400 border border-amber-500/20 mb-6 uppercase tracking-[0.15em]">
-              Renewable Energy & Photovoltaics
+              Solar Array &amp; Inverter Sizing
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Solar PV Inverter <span className="text-amber-400">Sizing Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Determine DC-to-AC loading ratio (Inverter Loading Ratio / ILR), annual energy generation (MWh), and clipping trade-offs per IEC 62548.
+              Compute DC array nameplate kWp, DC/AC loading ratio (ILR), cold-weather maximum open-circuit string voltage Voc, and expected annual energy generation.
             </p>
           </div>
         </section>

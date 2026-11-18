@@ -10826,14 +10826,14 @@
   },
   "punching-force-calculator": {
     "title": "Punching Force Calculator",
-    "description": "Calculate punching and shearing force for sheet metal operations.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "F = perimeter * thickness * shear_strength",
+    "description": "Calculate sheet metal blanking/punching shear force, metric press tonnage, work done during penetration, stripping force, and recommended press capacity.",
+    "discipline": "Sheet Metal Stamping & Press Tooling Mechanics",
+    "standards": "Direct Force-Equilibrium & Shear Area Mechanics: F = L_cut × t × tau_shear; Tonnage = F / g (g = 9.80665 m/s^2)",
+    "cadContext": "Export flat-pattern cut loop perimeters directly from your CAD sheet-metal sketch and enter material shear strength, penetration percentage, and die clearance factor explicitly.",
+    "formula": "F_kn = (L_cut * t * tau) / 1000 ; Tonnage_tf = F_kn / 9.80665 ; W_J = F_kn * t * (penetration / 100)",
     "inputs": [
       {
-        "label": "Perimeter (mm)",
+        "label": "Cut Perimeter (mm)",
         "val": "100"
       },
       {
@@ -10856,88 +10856,113 @@
       },
       {
         "label": "Press Tonnage",
-        "val": "6.116 ton"
+        "val": "6.1183 tf"
       },
       {
         "label": "Work Done",
-        "val": "36.000 J"
+        "val": "36.00 J"
+      },
+      {
+        "label": "Stripping Force (8%)",
+        "val": "4.800 kN"
+      },
+      {
+        "label": "Recommended Press (SF 1.30)",
+        "val": "7.9538 tf"
       }
     ]
   },
   "pv-inverter-sizing-calculator": {
     "title": "Solar PV Inverter Sizing Calculator",
-    "description": "Calculate solar PV array DC-to-AC sizing ratio (ILR), clipping losses, annual kWh yield, and inverter utilization per IEC 62548 and IEEE standards.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "P_DC = N_modules × P_stc • DC/AC Ratio = P_DC / P_AC_inverter • V_max_cold = V_oc × [1 + β_voc × (T_min - 25°C)] (NEC Article 690)",
+    "description": "Calculate solar PV array DC capacity, DC-to-AC inverter loading ratio (ILR), cold-temperature open-circuit Voc_max, and estimated annual energy yield.",
+    "discipline": "Photovoltaic Array & Inverter Electrical Sizing",
+    "standards": "Thermodynamic Linear Temperature Coefficient Model & STC DC-to-AC Energy Balance (User-Specified Module & Inverter Ratings)",
+    "cadContext": "Verify that cold-climate open-circuit string voltage V_oc_max remains below your selected inverter DC maximum input limit before finalizing string layouts on site electrical drawings.",
+    "formula": "P_DC = (N_s * N_p * P_mod) / 1000 ; ILR = P_DC / P_AC ; V_oc_max = N_s * V_oc * [1 + (beta / 100) * (T_min - 25)]",
     "inputs": [
       {
-        "label": "Module Rating (Wp)",
+        "label": "Module Wattage (Wp)",
         "val": "550"
       },
       {
-        "label": "Module Quantity (pcs)",
-        "val": "240"
+        "label": "Series x Parallel",
+        "val": "20S x 12P"
       },
       {
         "label": "Inverter AC Power (kWac)",
         "val": "100"
       },
       {
-        "label": "Peak Sun Hours (h/day)",
-        "val": "4.3"
-      },
-      {
-        "label": "Performance Ratio PR (%)",
-        "val": "82"
-      }
-    ],
-    "outputs": []
-  },
-  "rack-pinion-calculator": {
-    "title": "Rack & Pinion Calculator",
-    "description": "Calculate rack and pinion linear speed, force, and torque conversion.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "v = pi*d*n/60, F = 2*T/d",
-    "inputs": [
-      {
-        "label": "Pinion Dia (mm)",
-        "val": "40"
-      },
-      {
-        "label": "Speed (RPM)",
-        "val": "100"
-      },
-      {
-        "label": "Torque (Nm)",
-        "val": "10"
+        "label": "Cold Temp / Peak Sun",
+        "val": "-10 C / 4.3 h/day"
       }
     ],
     "outputs": [
       {
-        "label": "Linear Speed",
+        "label": "Total DC Array Capacity",
+        "val": "132.00 kWp DC"
+      },
+      {
+        "label": "DC/AC Sizing Ratio (ILR)",
+        "val": "1.3200"
+      },
+      {
+        "label": "Cold Open-Circuit Voltage",
+        "val": "1086.64 V"
+      },
+      {
+        "label": "Estimated Annual Energy",
+        "val": "169.88 MWh/yr"
+      }
+    ]
+  },
+  "rack-pinion-calculator": {
+    "title": "Rack & Pinion Calculator",
+    "description": "Calculate rack and pinion pitch diameter, circular pitch, linear travel per revolution, linear speed, and meshing efficiency-adjusted axial thrust.",
+    "discipline": "Mechanical Drive Kinematics & Linear Actuation",
+    "standards": "Gear Pitch-Circle Kinematics: d = m * z ; v = pi * d * n / 60 ; F_x = (2 * T / d) * eta",
+    "cadContext": "Match module m and tooth count z between your CAD spur pinion sketch and linear rack profile so pitch-line velocity and axial thrust match actuator specs.",
+    "formula": "d = m * z ; L_rev = pi * d ; v = (pi * d / 1000 * n) / 60 ; F = (2000 * T / d) * (eta / 100)",
+    "inputs": [
+      {
+        "label": "Module m (mm)",
+        "val": "2"
+      },
+      {
+        "label": "Pinion Teeth z",
+        "val": "20"
+      },
+      {
+        "label": "Speed (rpm)",
+        "val": "100"
+      },
+      {
+        "label": "Torque (N*m) / Eff (%)",
+        "val": "10 / 95%"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Linear Velocity",
         "val": "0.209440 m/s"
       },
       {
-        "label": "Linear Force",
-        "val": "500.00 N"
+        "label": "Effective Rack Thrust",
+        "val": "475.000 N"
       },
       {
-        "label": "Travel per Rev",
-        "val": "125.66 mm"
+        "label": "Travel per Revolution",
+        "val": "125.6637 mm"
       }
     ]
   },
   "rainwater-harvesting-calculator": {
     "title": "Rainwater Harvesting Calculator",
-    "description": "Calculate rainwater collection volume and tank size from roof area and rainfall.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "V = A * rainfall * runoff_coeff",
+    "description": "Calculate net annual rainwater harvest, average daily yield, demand coverage, and reserve cistern capacity from catchment area and rainfall depth.",
+    "discipline": "Site Hydrology & Water-Balance Cistern Sizing",
+    "standards": "Mass-Balance Catchment Hydrology: V_yr = A_roof * (R / 1000) * C_r * eta_filter",
+    "cadContext": "Project true plan roof catchment area from site CAD geometry and verify cistern footprint clearance against dry-period reserve storage requirements.",
+    "formula": "V_yr = A * (R / 1000) * C_r * (eta_filter / 100) ; V_tank = Demand_L * Days / 1000",
     "inputs": [
       {
         "label": "Roof Area (m2)",
@@ -10948,66 +10973,70 @@
         "val": "800"
       },
       {
-        "label": "Runoff Coeff",
-        "val": "0.8"
+        "label": "Runoff Coeff / Filter Eff",
+        "val": "0.8 / 90%"
       },
       {
-        "label": "Tank Days",
-        "val": "30"
+        "label": "Demand / Reserve Days",
+        "val": "150 L/d / 30 d"
       }
     ],
     "outputs": [
       {
-        "label": "Annual Collection",
-        "val": "64.000 m3"
+        "label": "Annual Net Harvest",
+        "val": "57.6000 m^3/yr"
       },
       {
-        "label": "Tank Size",
-        "val": "5.260 m3"
+        "label": "Reserve Tank Volume",
+        "val": "4.5000 m^3"
       },
       {
-        "label": "Daily Supply",
-        "val": "175.34 L/day"
+        "label": "Average Daily Yield",
+        "val": "157.81 L/day"
       }
     ]
   },
   "reaming-dimension-calculator": {
     "title": "Reaming Hole Dimension Calculator",
-    "description": "Calculate reaming stock allowance, hole tolerance, and reamer size from target diameter.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Pre-drill = Target D - Stock(D, Material) • Reaming allowance calibrated per Machinery&#39;s Handbook specifications",
+    "description": "Calculate pre-ream drill diameter, mid-tolerance finishing target, spindle RPM, and table feed rate from target hole diameter and user-defined cutting inputs.",
+    "discipline": "CNC Holemaking & Precision Finishing",
+    "standards": "Machining Geometry & Cutting Kinematics: D_drill = D_target - Stock ; N = 1000 * Vc / (pi * D)",
+    "cadContext": "Verify pre-drill bit availability and H-band tolerance limits in CAM toolpath operations using explicit user-entered diametral reaming allowance and feed per tooth.",
+    "formula": "D_drill = D - Stock ; N_rpm = (1000 * Vc) / (pi * D) ; Feed = f_z * z * N_rpm",
     "inputs": [
       {
-        "label": "Target Dia (mm)",
+        "label": "Target Diameter (mm)",
         "val": "20"
       },
       {
-        "label": "Tolerance (mm)",
-        "val": "0.02"
+        "label": "Diametral Allowance (mm)",
+        "val": "0.22"
       },
       {
-        "label": "Material",
-        "val": "Carbon / Alloy Steel"
+        "label": "Tolerance Upper/Lower (mm)",
+        "val": "+0.021 / 0.000"
+      },
+      {
+        "label": "Vc / fz / Flutes",
+        "val": "12 m/min / 0.08 / 6"
       }
     ],
     "outputs": [
       {
-        "label": "Pre-ream Drill Dia",
-        "val": "19.780 mm"
+        "label": "Pre-Ream Drill Diameter",
+        "val": "19.7800 mm"
       },
       {
-        "label": "Finished Reamer Size",
-        "val": "20.008 mm"
+        "label": "Mid-Tolerance Target",
+        "val": "20.0105 mm"
       },
       {
-        "label": "Material Allowance (2× stock)",
-        "val": "0.220000 mm (on diameter)"
+        "label": "Spindle Speed",
+        "val": "190.99 rpm"
       },
       {
-        "label": "Recommended Reaming Speed",
-        "val": "191 RPM ( 12 m/min)"
+        "label": "Table Feed Rate",
+        "val": "91.67 mm/min"
       }
     ]
   },
