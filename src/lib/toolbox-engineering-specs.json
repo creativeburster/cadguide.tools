@@ -8237,182 +8237,118 @@
     "outputs": []
   },
   "land-survey-area-calculator": {
-    "title": "Land Survey Area Calculator",
-    "description": "Calculate land parcel area from coordinate points using the shoelace formula.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "A = 0.5*abs(sum(xi*y(i+1)-x(i+1)*yi))",
+    "title": "Land Survey Coordinate Area Calculator",
+    "description": "Calculate parcel area, perimeter, hectares, square feet, and international acres from survey vertices using the shoelace formula.",
+    "discipline": "Plane Surveying & Coordinate Geometry",
+    "standards": "Gauss Shoelace Polygon Area Theorem & International Acre / Survey Foot Equivalents",
+    "cadContext": "Paste closed boundary coordinates (Easting, Northing in meters) from site survey DWG blocks to check total parcel area and boundary perimeter before subdividing lots.",
+    "formula": "A = 0.5 * |sum(x_i*y_(i+1) - x_(i+1)*y_i)|, P = sum(hypot(dx_i, dy_i))",
     "inputs": [
       {
-        "label": "X1,Y1 (m)",
-        "val": "0,0"
-      },
-      {
-        "label": "X2,Y2 (m)",
-        "val": "100,0"
-      },
-      {
-        "label": "X3,Y3 (m)",
-        "val": "100,50"
-      },
-      {
-        "label": "X4,Y4 (m)",
-        "val": "0,50"
+        "label": "Polygon Vertices (4 pts)",
+        "val": "(0,0), (100,0), (100,50), (0,50) m"
       }
     ],
     "outputs": [
       {
-        "label": "Surface Area",
-        "val": "5000.00 m2"
-      },
-      {
-        "label": "Total Acreage",
-        "val": "1.236 acres"
-      },
-      {
-        "label": "Perimeter",
-        "val": "300.00 m"
+        "label": "Area / Perimeter",
+        "val": "5000.00 m2 (0.5000 ha / 1.2355 acres) / 300.00 m"
       }
     ]
   },
   "laser-cutting-calculator": {
-    "title": "Laser Cutting Speed Calculator",
-    "description": "Calculate laser cutting speed from power, material thickness, and absorption.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "v = P*abs / (w*t*rho*(cp*dT+Hf))",
+    "title": "Laser Cutting Speed & Cycle Time Calculator",
+    "description": "Estimate laser feedrate and total cutting cycle time from beam power, coupling efficiency, thickness, kerf width, and melting energy.",
+    "discipline": "Laser Thermal Cutting & Sheet Metal CAM Estimation",
+    "standards": "Kerf Volumetric Energy Balance",
+    "cadContext": "Estimate baseline feedrates and pierce cycle overhead before generating nesting toolpaths for 2D DXF sheet metal parts.",
+    "formula": "v = (P * eta) / (t * w_kerf * E_v), t_total = L_cut / v + N_pierce * t_pierce",
     "inputs": [
       {
-        "label": "Laser Power (W)",
-        "val": "2000"
+        "label": "Laser Power / Coupling / Thick / Kerf",
+        "val": "3000 W / 0.7 / 4 mm / 0.2 mm"
       },
       {
-        "label": "Thickness (mm)",
-        "val": "3"
-      },
-      {
-        "label": "Material",
-        "val": "Carbon Steel"
-      },
-      {
-        "label": "Absorption",
-        "val": "0.3"
+        "label": "E_v / Cut Length / Pierces",
+        "val": "45 J/mm3 / 2400 mm / 8 pierces @ 0.6 s"
       }
     ],
     "outputs": [
       {
         "label": "Cutting Speed",
-        "val": "132.42 mm/s"
+        "val": "58.33 mm/s (3.500 m/min)"
       },
       {
-        "label": "Cut Time 1m",
-        "val": "7.552 s"
+        "label": "Total Cycle Time",
+        "val": "45.94 s"
       }
     ]
   },
   "led-resistor-calculator": {
-    "title": "LED Resistor Calculator",
-    "description": "Calculate current limiting resistor value and power dissipation for LED circuits.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "R = (Vs - Vf) / I, P = I^2 * R",
+    "title": "LED Current-Limiting Resistor Calculator",
+    "description": "Calculate exact series current-limiting resistor, next standard E24 resistor value, and resistor power dissipation for LED strings.",
+    "discipline": "DC Electronic Circuits & Indicator Sizing",
+    "standards": "Ohm's Law & IEC 60063 E24 Preferred Resistor Series",
+    "cadContext": "Verify resistor thermal dissipation (P = (Vs - N*Vf)*I) and pick the next E24 standard package when laying out panel LED schematics.",
+    "formula": "R = (Vs - N * Vf) / I, P_res = (Vs - N * Vf) * I",
     "inputs": [
       {
-        "label": "Supply Voltage (V)",
-        "val": "12"
-      },
-      {
-        "label": "LED Forward V (V)",
-        "val": "3.2"
-      },
-      {
-        "label": "LED Current (mA)",
-        "val": "20"
-      },
-      {
-        "label": "Number of LEDs",
-        "val": "3"
+        "label": "Supply Vs / Series LEDs / Current",
+        "val": "12 V / 3 x 2.1 V / 20 mA"
       }
     ],
     "outputs": [
       {
-        "label": "Resistor Value",
-        "val": "120.00 ohm"
+        "label": "Exact Resistor / E24 Value",
+        "val": "285.00 Ohm / 300 Ohm"
       },
       {
-        "label": "Power Dissipation",
-        "val": "0.048000 W"
-      },
-      {
-        "label": "Total Current",
-        "val": "20.000 mA"
+        "label": "Resistor / Total Power",
+        "val": "114.00 mW / 240.00 mW"
       }
     ]
   },
   "length-unit-converter": {
     "title": "Length Unit Converter",
-    "description": "Convert between m, cm, mm, km, in, ft, yd, mile, and nautical mile.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 m = 3.281 ft = 39.37 in",
+    "description": "Convert between micrometers, millimeters, centimeters, meters, kilometers, inches, feet, yards, statute miles, and nautical miles.",
+    "discipline": "Dimensional Metrology & International Length Units",
+    "standards": "Exact International Foot / Yard / Nautical Mile Definitions (1 in = 0.0254 m)",
+    "cadContext": "Use exact international definitions (1 in = 25.4 mm, 1 ft = 0.3048 m, 1 mi = 1609.344 m) when reconciling metric millimeter CAD assemblies against US imperial drawings.",
+    "formula": "L_target = L_source * (factor_source_to_m / factor_target_to_m)",
     "inputs": [
       {
-        "label": "Value",
-        "val": "1"
-      },
-      {
-        "label": "From",
-        "val": "m"
-      },
-      {
-        "label": "To",
-        "val": "ft"
+        "label": "Input Length / Direction",
+        "val": "100 mm -> in"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "3.281"
+        "label": "Converted Value",
+        "val": "3.937008 in"
       }
     ]
   },
   "lever-mechanical-advantage-calculator": {
-    "title": "Lever Mechanical Advantage Calculator",
-    "description": "Calculate mechanical advantage and effort force for all lever classes.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "MA=Le/La, F=W/MA",
+    "title": "Lever Mechanical Advantage & Reaction Calculator",
+    "description": "Calculate ideal/actual mechanical advantage, effort force, and fulcrum reaction across Class 1, Class 2, and Class 3 levers.",
+    "discipline": "Rigid-Body Statics & Linkage Kinematics",
+    "standards": "Moment Equilibrium About Fulcrum (F_effort * L_effort = F_load * L_load / eta)",
+    "cadContext": "Check pivot pin reaction loads and linkage travel leverage before sizing fulcrum pin diameters in mechanism sketches.",
+    "formula": "MA_ideal = L_e / L_l, F_e = F_l / (MA_ideal * eta), R_fulcrum = resultant pivot load",
     "inputs": [
       {
-        "label": "Load (N)",
-        "val": "500"
-      },
-      {
-        "label": "Effort Arm (m)",
-        "val": "2"
-      },
-      {
-        "label": "Load Arm (m)",
-        "val": "0.5"
+        "label": "Class / Load / Effort Arm / Load Arm / Eff",
+        "val": "Class 1 / 200 N / 1.5 m / 0.3 m / 100%"
       }
     ],
     "outputs": [
       {
-        "label": "Mech Advantage",
-        "val": "4.000 :1"
-      },
-      {
-        "label": "Effort Force",
-        "val": "125.00 N"
+        "label": "Actual MA / Effort Force",
+        "val": "5.0000x / 40.00 N"
       },
       {
         "label": "Fulcrum Reaction",
-        "val": "625.00 N"
+        "val": "240.00 N"
       }
     ]
   },
