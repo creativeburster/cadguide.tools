@@ -10540,133 +10540,113 @@
   },
   "power-unit-converter": {
     "title": "Power Unit Converter",
-    "description": "Convert between W, kW, MW, HP, BTU/h, and tons refrigeration.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 HP = 745.7W, 1 ton = 3.517kW",
+    "description": "Converts mechanical, electrical, and thermal power across W, kW, MW, mechanical hp, metric PS, TR, Btu(IT)/h, kcal/h, and ft*lbf/s.",
+    "discipline": "Engineering Metrology & Energy Units",
+    "standards": "Wikipedia Horsepower: https://en.wikipedia.org/wiki/Horsepower | Ton of Refrigeration: https://en.wikipedia.org/wiki/Ton_of_refrigeration",
+    "cadContext": "Uses exact international definitions: 1 mechanical hp = 745.699872 W, 1 metric PS = 735.49875 W, and 1 TR = 12000 Btu(IT)/h = 3.516853 kW.",
+    "formula": "P_W = P_in * factor_in; P_out = P_W / factor_out",
     "inputs": [
       {
-        "label": "Value",
-        "val": "10"
+        "label": "Input Power",
+        "val": "10 kW"
+      },
+      {
+        "label": "Target Units",
+        "val": "Mechanical hp, Metric PS, Ton of Refrigeration"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "13.410"
+        "label": "Mechanical / Metric HP",
+        "val": "13.410221 hp | 13.596216 PS"
+      },
+      {
+        "label": "Thermal Equivalents",
+        "val": "2.843451 TR | 34121.4163 Btu(IT)/h"
       }
     ]
   },
   "press-fit-calculator": {
-    "title": "Press Fit Interference Calculator",
-    "description": "Calculate interference fit pressure and assembly force for shaft-hub.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "p = delta*E/(2*D), F = p*pi*D*L*mu",
+    "title": "Lame Interference Fit Contact Pressure & Torque Calculator",
+    "description": "Calculates shaft-hub contact pressure, axial press/slip force, slip torque capacity, and inner hub hoop stress via Lame thick-walled cylinder elasticity.",
+    "discipline": "Shaft-Hub Assembly & Continuum Elasticity",
+    "standards": "Wikipedia Interference Fit: https://en.wikipedia.org/wiki/Interference_fit | Cylinder Stress: https://en.wikipedia.org/wiki/Cylinder_stress",
+    "cadContext": "Accounts for finite hub outer diameter Do, optional hollow shaft inner bore di, distinct shaft/hub moduli E and Poisson ratios nu, and friction coefficient mu.",
+    "formula": "p = (delta/d) / (((Do^2+d^2)/(Do^2-d^2)+nuh)/Eh + ((d^2+di^2)/(d^2-di^2)-nus)/Es); F = mu*p*pi*d*L; T = F*d/2",
     "inputs": [
       {
-        "label": "Interference (mm)",
-        "val": "0.05"
+        "label": "Interference & Cylinder Geometry",
+        "val": "delta = 0.05 mm, d = 50 mm, Do = 90 mm, di = 0 mm, L = 40 mm"
       },
       {
-        "label": "Diameter (mm)",
-        "val": "50"
-      },
-      {
-        "label": "Hub Length (mm)",
-        "val": "40"
-      },
-      {
-        "label": "Youngs E (GPa)",
-        "val": "200"
-      },
-      {
-        "label": "Friction",
-        "val": "0.15"
+        "label": "Elastic & Friction Params",
+        "val": "Eh = Es = 200 GPa, nuh = nus = 0.3, mu = 0.15"
       }
     ],
     "outputs": [
       {
-        "label": "Contact Pressure",
-        "val": "100.00 MPa"
+        "label": "Contact Pressure & Assembly Force",
+        "val": "p = 69.1358 MPa | F = 65.1590 kN"
       },
       {
-        "label": "Assembly Force",
-        "val": "94.248 kN"
-      },
-      {
-        "label": "Torque Capacity",
-        "val": "2356.19 Nm"
+        "label": "Slip Torque & Hub Hoop Stress",
+        "val": "T = 1628.97 N*m | sigma_theta,hub = 130.86 MPa"
       }
     ]
   },
   "pressure-unit-converter": {
     "title": "Pressure Unit Converter",
-    "description": "Convert between Pa, kPa, MPa, bar, psi, atm, mmHg, and kg/cm2.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 bar = 100kPa = 14.5psi = 0.987atm",
+    "description": "Converts exact SI, US customary, and barometric pressures across Pa, kPa, MPa, bar, mbar, psi, atm, Torr/mmHg, kgf/cm^2, and mmH2O.",
+    "discipline": "Engineering Metrology & Fluid Units",
+    "standards": "Wikipedia Standard Atmosphere (101325 Pa): https://en.wikipedia.org/wiki/Standard_atmosphere_(unit) | Bar (100000 Pa): https://en.wikipedia.org/wiki/Bar_(unit) | PSI (6894.757 Pa): https://en.wikipedia.org/wiki/Pound_per_square_inch",
+    "cadContext": "Computes exact psi from international pound-mass (0.45359237 kg), standard gravity (9.80665 m/s^2), and exact inch (0.0254 m).",
+    "formula": "p_Pa = p_in * factor_in; 1 psi = (0.45359237*9.80665)/0.0254^2 Pa = 6894.757293 Pa",
     "inputs": [
       {
-        "label": "Value",
-        "val": "1"
+        "label": "Input Pressure",
+        "val": "1 bar (100,000 Pa)"
       },
       {
-        "label": "From",
-        "val": "bar"
-      },
-      {
-        "label": "To",
-        "val": "psi"
+        "label": "Target Units",
+        "val": "psi, atm, Torr"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "14.503"
+        "label": "Imperial & Atmosphere",
+        "val": "14.503774 psi | 0.986923 atm"
+      },
+      {
+        "label": "Torr / mmHg",
+        "val": "750.0617 Torr"
       }
     ]
   },
   "pressure-vessel-thickness-calculator": {
-    "title": "Pressure Vessel Wall Thickness Calculator",
-    "description": "Calculate minimum wall thickness for cylindrical and spherical pressure vessels per ASME BPVC Section VIII Division 1. Supports internal pressure, joint efficiency, and material selection.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "{vesselType === 'cylindrical'",
+    "title": "Pressure Vessel Shell Wall Thickness & Cylinder Stress Calculator",
+    "description": "Computes thin-walled membrane and Lame exact thick-walled shell thicknesses plus corroded hoop and axial stresses under internal pressure P (MPa).",
+    "discipline": "Continuum Shell Mechanics",
+    "standards": "Wikipedia Cylinder Stress: https://en.wikipedia.org/wiki/Cylinder_stress",
+    "cadContext": "Uses consistent MPa units for both internal pressure P and allowable stress S to avoid bar-to-MPa conversion mistakes, and reports both thin-wall and Lame shell requirements.",
+    "formula": "Cyl: t_thin = P*Di/(2*S*eta) + c; t_lame = (Di/2)*(sqrt((S*eta+P)/(S*eta-P)) - 1) + c; sigma_theta = P*Di/(2*(t_nom - c))",
     "inputs": [
       {
-        "label": "Vessel Type Cylindrical Spherical Material",
-        "val": "Carbon Steel (SA-516 Gr.70)"
+        "label": "Shell Geometry & Pressure",
+        "val": "Cylindrical, P = 1.0 MPa (10 bar), Di = 1000 mm, t_nom = 8 mm"
       },
       {
-        "label": "Inside Diameter (mm)",
-        "val": "1000"
-      },
-      {
-        "label": "Design Pressure (bar)",
-        "val": "10"
-      },
-      {
-        "label": "Joint Efficiency (E)",
-        "val": "1.0 — Full RT"
-      },
-      {
-        "label": "Corrosion Allowance (mm)",
-        "val": "1.5"
+        "label": "Stress, Efficiency & Corrosion",
+        "val": "S = 138 MPa, eta = 1.0, c = 1.5 mm"
       }
     ],
     "outputs": [
       {
-        "label": "Min. Wall Thickness",
-        "val": "37.59 mm"
+        "label": "Min Required Wall Thickness",
+        "val": "t_thin = 5.1232 mm | t_lame = 5.1364 mm"
       },
       {
-        "label": "Total Thickness",
-        "val": "39.09 mm"
+        "label": "Corroded Membrane Stresses (t_eff=6.5 mm)",
+        "val": "sigma_hoop = 76.923 MPa | sigma_axial = 38.462 MPa"
       }
     ]
   },
@@ -10681,38 +10661,26 @@
     "outputs": []
   },
   "psychrometric-calculator": {
-    "title": "Psychrometric Properties Calculator",
-    "description": "Calculate humidity ratio, enthalpy, and dew point from dry-bulb and wet-bulb temperatures.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "W=0.622*pw/(pa-pw), h=1.006*T+W*(2501+1.86*T)",
+    "title": "Moist Air Psychrometric Properties Calculator",
+    "description": "Calculates saturation pressure, vapor pressure, relative humidity, humidity ratio, specific enthalpy, and dew point from dry-bulb and wet-bulb temperatures.",
+    "discipline": "Psychrometrics & Moist Air Thermodynamics",
+    "standards": "Wikipedia Tetens Equation: https://en.wikipedia.org/wiki/Tetens_equation",
+    "cadContext": "Uses Tetens saturation vapor pressure (with Murray ice-surface branch below 0 degC) and Ferrel psychrometric vapor-pressure relation at arbitrary barometric pressure.",
+    "formula": "pws = 0.61078*exp(17.27*T/(T+237.3)); W = 0.62198*pw/(p - pw); h = 1.006*T + W*(2501 + 1.86*T)",
     "inputs": [
       {
-        "label": "Dry Bulb (C)",
-        "val": "25"
-      },
-      {
-        "label": "Wet Bulb (C)",
-        "val": "20"
-      },
-      {
-        "label": "Pressure (kPa)",
-        "val": "101.3"
+        "label": "Bulb Temperatures & Pressure",
+        "val": "Tdb = 25 degC, Twb = 20 degC, P_atm = 101.325 kPa"
       }
     ],
     "outputs": [
       {
-        "label": "Humidity Ratio",
-        "val": "12.504 g/kg"
+        "label": "Humidity Ratio & Enthalpy",
+        "val": "W = 12.4995 g/kg | h = 56.9925 kJ/kg"
       },
       {
-        "label": "Enthalpy",
-        "val": "57.004 kJ/kg"
-      },
-      {
-        "label": "Relative Humidity",
-        "val": "63.019 %"
+        "label": "RH & Dew Point",
+        "val": "RH = 63.016% | Tdp = 17.470 degC"
       }
     ]
   },
