@@ -5,7 +5,7 @@ import HeatTreatmentTimeCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Heat Treatment Soaking Time Calculator",
-  description: "Calculate soaking time for heat treatment based on section thickness and material.",
+  description: "Estimate heat treatment soaking time, heating time, and total furnace duration from section thickness and material.",
   path: '/toolbox/heat-treatment-time-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HeatTreatmentTimeCalculatorPage() {
               Heat Treatment Soaking Time <span className="text-purple-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate soaking time for heat treatment based on section thickness and material.
+              Estimate heat treatment soaking time, heating time, and total furnace duration from section thickness and material.
             </p>
           </div>
         </section>

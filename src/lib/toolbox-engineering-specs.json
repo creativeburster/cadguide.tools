@@ -7147,31 +7147,39 @@
   "harmonic-drive-calculator": {
     "title": "Harmonic Drive Ratio Calculator",
     "description": "Calculate strain wave (harmonic) drive ratio from flexspline and circular spline teeth.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "i = -zs/(zf-zs), output = input/ratio",
+    "discipline": "Mechanical Transmission, Strain Wave Gearing & Kinematics",
+    "standards": "Basic strain wave gear kinematics with circular spline teeth zs > flexspline teeth zf and user-specified mechanical efficiency eta",
+    "cadContext": "Check tooth difference (zs - zf, typically 2) against wave generator lobe geometry, specify flexspline fatigue life, and evaluate backdrivability on assembly drawings.",
+    "formula": "i = zf / (zs - zf) [flexspline out] or zs / (zs - zf) [circular spline out], T_out = eta * i * T_in",
     "inputs": [
       {
-        "label": "Circular Spline Teeth",
-        "val": "200"
+        "label": "Output Configuration",
+        "val": "Flexspline Output (Circular Spline Fixed)"
       },
       {
-        "label": "Flexspline Teeth",
-        "val": "198"
+        "label": "Circular Spline Teeth (zs)",
+        "val": "202"
+      },
+      {
+        "label": "Flexspline Teeth (zf)",
+        "val": "200"
       },
       {
         "label": "Input Speed (RPM)",
         "val": "3000"
       },
       {
-        "label": "Input Torque (Nm)",
+        "label": "Input Torque (N*m)",
         "val": "5"
+      },
+      {
+        "label": "Efficiency (%)",
+        "val": "85"
       }
     ],
     "outputs": [
       {
-        "label": "Ratio",
+        "label": "Reduction Ratio",
         "val": "100.00 :1"
       },
       {
@@ -7180,18 +7188,26 @@
       },
       {
         "label": "Output Torque",
-        "val": "425.00 Nm"
+        "val": "425.00 N*m"
+      },
+      {
+        "label": "Output Power",
+        "val": "1.335 kW"
       }
     ]
   },
   "heat-exchanger-calculator": {
     "title": "Heat Exchanger Duty Calculator",
-    "description": "Calculate heat exchanger duty, LMTD, and UA from hot and cold fluid temperatures.",
+    "description": "Calculate heat exchanger duty, counterflow/parallel-flow LMTD, UA, and required surface area from fluid temperatures.",
     "discipline": "Thermodynamics, Heat Transfer & Thermal Management",
-    "standards": "TEMA Standards (Tubular Exchanger Manufacturers Association), ASME PTC 12.5, Incropera & DeWitt Fundamentals of Heat and Mass Transfer",
-    "cadContext": "Account for surface fouling resistances, contact interface thermal resistance, and temperature-dependent fluid thermophysical properties when translating baseline calculations into detailed thermal CAD designs.",
-    "formula": "Q = m*cp*dT, LMTD = (dT1-dT2)/ln(dT1/dT2)",
+    "standards": "Log Mean Temperature Difference (LMTD) energy balance for steady-state counterflow and parallel-flow heat exchangers",
+    "cadContext": "Apply shell-and-tube LMTD correction factor F when flow deviates from pure counterflow or parallel flow, and provide tube-bundle withdrawal clearance in piping layout.",
+    "formula": "Q = m_h * cp_h * (T_hi - T_ho), LMTD = (dT1 - dT2) / ln(dT1 / dT2), UA = Q / LMTD, A = (Q * 1000) / (U * LMTD)",
     "inputs": [
+      {
+        "label": "Flow Arrangement",
+        "val": "Counterflow"
+      },
       {
         "label": "Hot Inlet (C)",
         "val": "80"
@@ -7213,13 +7229,17 @@
         "val": "2"
       },
       {
-        "label": "Cp Hot (kJ/kgK)",
+        "label": "Cp Hot (kJ/kg*K)",
         "val": "4.18"
+      },
+      {
+        "label": "Overall U (W/m2*K)",
+        "val": "1000"
       }
     ],
     "outputs": [
       {
-        "label": "Heat Duty",
+        "label": "Heat Duty Q",
         "val": "250.80 kW"
       },
       {
@@ -7227,21 +7247,25 @@
         "val": "34.761 C"
       },
       {
-        "label": "Effectiveness",
-        "val": "0.500000"
+        "label": "Required UA",
+        "val": "7.215 kW/K"
+      },
+      {
+        "label": "Required Area A",
+        "val": "7.215 m2"
       }
     ]
   },
   "heat-transfer-conduction-calculator": {
     "title": "Conduction Heat Transfer Calculator",
-    "description": "Calculate heat transfer through walls and slabs using Fourier law.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "Q = k * A * dT / L",
+    "description": "Calculate steady-state conductive heat transfer rate, heat flux, and thermal resistance using Fourier's law.",
+    "discipline": "Thermodynamics & Steady-State Conduction Heat Transfer",
+    "standards": "One-dimensional steady-state Fourier's law of thermal conduction across a plane wall",
+    "cadContext": "Account for contact thermal resistance across bolted joints and gasket compression when assigning wall thickness and thermal breaks in CAD assemblies.",
+    "formula": "q'' = k * dT / L, Q = q'' * A, R_abs = L / (k * A), R_area = L / k",
     "inputs": [
       {
-        "label": "Thermal Conductivity k (W/mK)",
+        "label": "Thermal Conductivity k (W/m*K)",
         "val": "0.5"
       },
       {
@@ -7263,29 +7287,37 @@
     ],
     "outputs": [
       {
-        "label": "Heat Transfer",
+        "label": "Heat Transfer Rate Q",
         "val": "375.00 W"
       },
       {
-        "label": "Thermal Resistance",
-        "val": "0.040000 m2K/W"
+        "label": "Absolute Thermal Resistance",
+        "val": "0.040000 K/W"
+      },
+      {
+        "label": "Heat Flux",
+        "val": "37.50 W/m2"
+      },
+      {
+        "label": "Area Thermal Resistance",
+        "val": "0.4000 m2*K/W"
       }
     ]
   },
   "heat-transfer-convection-calculator": {
     "title": "Convective Heat Transfer Calculator",
-    "description": "Calculate convective heat transfer coefficient and heat flux from fluid and surface parameters.",
-    "discipline": "Thermodynamics, Heat Transfer & Thermal Management",
-    "standards": "TEMA Standards (Tubular Exchanger Manufacturers Association), ASME PTC 12.5, Incropera & DeWitt Fundamentals of Heat and Mass Transfer",
-    "cadContext": "Account for surface fouling resistances, contact interface thermal resistance, and temperature-dependent fluid thermophysical properties when translating baseline calculations into detailed thermal CAD designs.",
-    "formula": "Q = h * A * dT, h = Nu * k / L",
+    "description": "Calculate convective heat transfer coefficient, total heat rate, heat flux, and thermal resistance from fluid and surface parameters.",
+    "discipline": "Thermodynamics & Convective Heat Transfer",
+    "standards": "Newton's law of cooling and dimensionless Nusselt number definition",
+    "cadContext": "Distinguish total heat transfer rate Q (W) from surface heat flux q'' (W/m2) when specifying convection boundary conditions in thermal FEA and CFD simulations.",
+    "formula": "h = Nu * k / L, Q = h * A * dT, q'' = h * dT, R_conv = 1 / (h * A)",
     "inputs": [
       {
-        "label": "Nusselt Number",
+        "label": "Nusselt Number (Nu)",
         "val": "100"
       },
       {
-        "label": "Thermal Conductivity (W/mK)",
+        "label": "Fluid Thermal Conductivity (W/m*K)",
         "val": "0.026"
       },
       {
@@ -7303,22 +7335,30 @@
     ],
     "outputs": [
       {
-        "label": "Heat Transfer Coeff h",
-        "val": "2.600 W/m2K"
+        "label": "Convection Coeff h",
+        "val": "2.600 W/(m2*K)"
       },
       {
-        "label": "Heat Flux",
+        "label": "Total Heat Rate Q",
         "val": "260.00 W"
+      },
+      {
+        "label": "Heat Flux q''",
+        "val": "52.00 W/m2"
+      },
+      {
+        "label": "Convective Resistance",
+        "val": "0.076923 K/W"
       }
     ]
   },
   "heat-treatment-time-calculator": {
     "title": "Heat Treatment Soaking Time Calculator",
-    "description": "Calculate soaking time for heat treatment based on section thickness and material.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "t = thickness * time_factor per material",
+    "description": "Estimate heat treatment soaking time, heating time, and total furnace duration from section thickness and material.",
+    "discipline": "Metallurgy, Furnace Scheduling & Heat Treatment",
+    "standards": "Empirical shop-floor section-thickness heating and soaking guidelines (verify final furnace cycle with alloy datasheet)",
+    "cadContext": "Dimension the controlling heaviest section thickness on heat-treatment drawings and specify fixturing to limit quench distortion.",
+    "formula": "t_soak = base_soak(material) * (thickness / 25), t_heat = ramp_factor * (thickness / 25), t_total = t_soak + t_heat",
     "inputs": [
       {
         "label": "Section Thickness (mm)",
@@ -7330,21 +7370,25 @@
       },
       {
         "label": "Treatment",
-        "val": "Austenitize & Quench (Hardening)"
+        "val": "Hardening (Austenitize & Quench)"
       }
     ],
     "outputs": [
       {
         "label": "Soaking Time",
-        "val": "60.000 min"
+        "val": "60.0 min"
       },
       {
-        "label": "Heat Rate",
-        "val": "100.00 min"
+        "label": "Estimated Heating Time",
+        "val": "100.0 min"
+      },
+      {
+        "label": "Total Furnace Time",
+        "val": "160.0 min"
       },
       {
         "label": "Cooling Method",
-        "val": "Oil/Water Quench"
+        "val": "Oil / Water Quench"
       }
     ]
   },

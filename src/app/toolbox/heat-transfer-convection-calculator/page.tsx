@@ -5,7 +5,7 @@ import HeatTransferConvectionCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Convective Heat Transfer Calculator",
-  description: "Calculate convective heat transfer coefficient and heat flux from fluid and surface parameters.",
+  description: "Calculate convective heat transfer coefficient, total heat rate, heat flux, and thermal resistance from fluid and surface parameters.",
   path: '/toolbox/heat-transfer-convection-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HeatTransferConvectionCalculatorPage() {
               Convective Heat Transfer <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate convective heat transfer coefficient and heat flux from fluid and surface parameters.
+              Calculate convective heat transfer coefficient, total heat rate, heat flux, and thermal resistance from fluid and surface parameters.
             </p>
           </div>
         </section>

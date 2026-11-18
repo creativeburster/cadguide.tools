@@ -5,7 +5,7 @@ import HeatExchangerCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Heat Exchanger Duty Calculator",
-  description: "Calculate heat exchanger duty, LMTD, and UA from hot and cold fluid temperatures.",
+  description: "Calculate heat exchanger duty, counterflow/parallel-flow LMTD, UA, and required surface area from fluid temperatures.",
   path: '/toolbox/heat-exchanger-calculator',
 });
 
@@ -26,13 +26,13 @@ export default function HeatExchangerCalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-green-500/10 text-green-400 border border-green-500/20 mb-6 uppercase tracking-[0.15em]">
-              HVAC
+              Thermal
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Heat Exchanger Duty <span className="text-green-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate heat exchanger duty, LMTD, and UA from hot and cold fluid temperatures.
+              Calculate heat exchanger duty, counterflow/parallel-flow LMTD, UA, and required surface area from fluid temperatures.
             </p>
           </div>
         </section>

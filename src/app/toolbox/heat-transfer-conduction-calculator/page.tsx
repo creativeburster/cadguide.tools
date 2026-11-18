@@ -5,7 +5,7 @@ import HeatTransferConductionCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Conduction Heat Transfer Calculator",
-  description: "Calculate heat transfer through walls and slabs using Fourier law.",
+  description: "Calculate steady-state conductive heat transfer rate, heat flux, and thermal resistance using Fourier's law.",
   path: '/toolbox/heat-transfer-conduction-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HeatTransferConductionCalculatorPage() {
               Conduction Heat Transfer <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate heat transfer through walls and slabs using Fourier law.
+              Calculate steady-state conductive heat transfer rate, heat flux, and thermal resistance using Fourier&apos;s law.
             </p>
           </div>
         </section>
