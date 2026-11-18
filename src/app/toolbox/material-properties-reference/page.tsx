@@ -35,9 +35,8 @@ export default function MaterialPropertiesPage() {
                 Engineering Material <span className="text-teal-400">Properties</span> Reference
               </h1>
               <p className="text-xl md:text-lg text-slate-300 leading-relaxed max-w-2xl font-medium">
-                Density, yield strength, ultimate strength, elastic modulus, Poisson's ratio,
-                and thermal expansion for 40+ engineering materials — steels, aluminum, copper,
-                titanium, and plastics.
+                Density, yield strength, ultimate strength, elastic modulus, Poisson&apos;s ratio,
+                and thermal expansion for 14 core engineering grades across steels, aluminum, copper, brass, titanium, and plastics.
               </p>
             </div>
           </div>

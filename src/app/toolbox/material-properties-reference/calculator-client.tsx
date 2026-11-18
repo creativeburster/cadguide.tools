@@ -1,88 +1,279 @@
 'use client';
 
-import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
+import { useState } from 'react';
+import { RelatedTools } from '@/components/related-tools';
+import { Search, Layers, RotateCcw, Copy, Download, Check } from 'lucide-react';
 
-const CATEGORIES = [
-  { id: 'steel', name: '⚙️ Steels' },
-  { id: 'aluminum', name: '🪙 Aluminum Alloys' },
-  { id: 'copper', name: '🟤 Copper & Brass' },
-  { id: 'titanium', name: '⚪ Titanium & Nickel' },
-  { id: 'cast', name: '🔩 Cast Iron' },
-  { id: 'plastic', name: '🧱 Engineering Plastics' },
-];
+type MatCategory = 'all' | 'steel' | 'aluminum' | 'copper' | 'titanium' | 'plastic';
 
-const SHORTCUTS = [
-  // Steels
-  { keys: 'AISI 1018', command: 'ρ:7.87 · σy:370 · σu:440 · E:200 · ν:0.29 · α:11.9', category: 'steel', description: 'Low carbon mild steel. Most common general-purpose steel. Good weldability and machinability. Used for shafts, spindles, pins, rods, and general machine parts. Not for heat treatment (low carbon).' },
-  { keys: 'AISI 1045', command: 'ρ:7.87 · σy:530 · σu:665 · E:200 · ν:0.29 · α:11.7', category: 'steel', description: 'Medium carbon steel. Higher strength than 1018. Can be flame or induction hardened. Used for gears, shafts, studs, and bolts. Good machinability, moderate weldability.' },
-  { keys: 'AISI 4140', command: 'ρ:7.85 · σy:655 · σu:745 · E:200 · ν:0.29 · α:12.3', category: 'steel', description: 'Chromium-molybdenum alloy steel. High strength, good toughness, excellent fatigue resistance. Quench and temper to 28-32 HRC. Used for shafts, gears, spindles, tool holders.' },
-  { keys: 'AISI 4340', command: 'ρ:7.85 · σy:710 · σu:780 · E:200 · ν:0.29 · α:12.3', category: 'steel', description: 'Nickel-chromium-molybdenum steel. Very high strength and toughness. Deep hardenability. Used for critical shafts, gears, and aerospace components. Can be heat treated to 50+ HRC.' },
-  { keys: 'AISI 12L14', command: 'ρ:7.87 · σy:285 · σu:540 · E:200 · ν:0.29 · α:11.8', category: 'steel', description: 'Free-machining steel with lead. Excellent machinability (195% vs 1018). Lower strength and toughness. Used for high-volume turned parts where strength is not critical.' },
-  { keys: 'AISI 303', command: 'ρ:8.00 · σy:240 · σu:620 · E:193 · ν:0.29 · α:17.3', category: 'steel', description: 'Austenitic free-machining stainless. Contains sulfur for machinability. Good corrosion resistance. Not for welding. Used for fittings, fasteners, and machined parts requiring corrosion resistance.' },
-  { keys: 'AISI 304', command: 'ρ:8.00 · σy:215 · σu:505 · E:193 · ν:0.29 · α:17.3', category: 'steel', description: 'Most common stainless steel (18-8). Excellent corrosion resistance, good formability. Non-magnetic annealed. Used for food equipment, chemical tanks, fasteners, and architectural trim.' },
-  { keys: 'AISI 316', command: 'ρ:8.00 · σy:290 · σu:580 · E:193 · ν:0.29 · α:15.9', category: 'steel', description: 'Marine grade stainless with molybdenum. Superior pitting corrosion resistance vs 304. Used in marine, chemical, and medical applications. Higher cost than 304.' },
-  { keys: 'AISI 17-4 PH', command: 'ρ:7.80 · σy:1170 · σu:1310 · E:196 · ν:0.27 · α:10.8', category: 'steel', description: 'Precipitation hardening stainless. Very high strength with good corrosion resistance. Age harden at 480-620°C. Used in aerospace, nuclear, and high-strength corrosion applications.' },
-  { keys: 'AISI D2', command: 'ρ:7.70 · σy:— · σu:— · E:210 · ν:0.29 · α:11.7', category: 'steel', description: 'Tool steel, high carbon high chromium. Excellent wear resistance and compressive strength. Hardened to 60-62 HRC. Used for dies, punches, cutting tools, and forming tools.' },
-  { keys: 'Spring Steel 65Mn', command: 'ρ:7.85 · σy:430 · σu:980 · E:200 · ν:0.29 · α:11.1', category: 'steel', description: 'High carbon spring steel. Excellent elasticity and fatigue resistance. Oil quenched and tempered. Used for springs, clips, washers, and retaining rings.' },
+interface MaterialRow {
+  grade: string;
+  category: Exclude<MatCategory, 'all'>;
+  density: string;
+  yieldMpa: string;
+  utsMpa: string;
+  modulusGpa: string;
+  poisson: string;
+  cte: string;
+  notes: string;
+}
 
-  // Aluminum alloys
-  { keys: '6061-T6', command: 'ρ:2.70 · σy:276 · σu:310 · E:69 · ν:0.33 · α:23.6', category: 'aluminum', description: 'Most versatile aluminum alloy. Good strength, weldability, machinability, and corrosion resistance. Used for frames, brackets, structural sections, and general fabrication. T6 temper.' },
-  { keys: '6063-T6', command: 'ρ:2.70 · σy:215 · σu:240 · E:69 · ν:0.33 · α:23.4', category: 'aluminum', description: 'Architectural aluminum. Excellent extrudability and surface finish. Lower strength than 6061. Used for window frames, door frames, and architectural extrusions.' },
-  { keys: '7075-T6', command: 'ρ:2.81 · σy:503 · σu:572 · E:72 · ν:0.33 · α:23.6', category: 'aluminum', description: 'Aerospace aluminum. Very high strength (stronger than many steels by weight). Poor weldability. Used for aircraft structures, gears, shafts, and high-stress components.' },
-  { keys: '2024-T3', command: 'ρ:2.78 · σy:345 · σu:483 · E:73 · ν:0.33 · α:23.2', category: 'aluminum', description: 'Aerospace alloy with high fatigue resistance. Common in aircraft skin and wing structures. Poor corrosion resistance — usually clad (Alclad). Not weldable.' },
-  { keys: '5052-H32', command: 'ρ:2.68 · σy:193 · σu:228 · E:70 · ν:0.33 · α:23.8', category: 'aluminum', description: 'Marine grade aluminum. Excellent corrosion resistance, especially in saltwater. Good formability. Used for fuel tanks, marine components, and sheet metal parts.' },
-  { keys: '3003-H14', command: 'ρ:2.73 · σy:145 · σu:200 · E:69 · ν:0.33 · α:23.2', category: 'aluminum', description: 'General purpose aluminum. Excellent workability and weldability. Low strength. Used for sheet metal work, ducts, gutters, and chemical equipment.' },
-
-  // Copper and brass
-  { keys: 'Copper (C110)', command: 'ρ:8.89 · σy:69 · σu:220 · E:117 · ν:0.34 · α:17.0', category: 'copper', description: 'Pure electrolytic tough pitch copper (99.9% Cu). Excellent electrical and thermal conductivity. Used for electrical conductors, bus bars, heat exchangers, and roofing. Soft and ductile.' },
-  { keys: 'Brass (C360)', command: 'ρ:8.50 · σy:310 · σu:469 · E:97 · ν:0.33 · α:20.5', category: 'copper', description: 'Free-machining brass (60% Cu, 36% Zn, 3% Pb). Excellent machinability (100% rating). Used for screw machine parts, fittings, valves, and decorative hardware.' },
-  { keys: 'Bronze (C954)', command: 'ρ:7.50 · σy:290 · σu:655 · E:110 · ν:0.33 · α:18.0', category: 'copper', description: 'Aluminum bronze. High strength and excellent corrosion resistance. Used for bearings, bushings, marine hardware, and valve components. Good wear resistance.' },
-  { keys: 'Copper Beryllium', command: 'ρ:8.25 · σy:1100 · σu:1200 · E:130 · ν:0.30 · α:17.0', category: 'copper', description: 'High strength copper alloy (C17200). Precipitation hardened. Excellent fatigue and corrosion resistance. Used for springs, electrical contacts, and non-sparking tools.' },
-
-  // Titanium and nickel alloys
-  { keys: 'Ti-6Al-4V (Grade 5)', command: 'ρ:4.43 · σy:880 · σu:950 · E:114 · ν:0.34 · α:8.6', category: 'titanium', description: 'Most common titanium alloy (90% Ti market). Excellent strength-to-weight ratio, corrosion resistance, and biocompatibility. Used in aerospace, medical implants, and high-performance engineering.' },
-  { keys: 'Ti Grade 2 (CP)', command: 'ρ:4.51 · σy:275 · σu:345 · E:103 · ν:0.37 · α:8.6', category: 'titanium', description: 'Commercially pure titanium. Excellent corrosion resistance, especially in seawater. Lower strength than Ti-6Al-4V. Used for chemical processing, marine, and medical applications.' },
-  { keys: 'Inconel 718', command: 'ρ:8.19 · σy:1034 · σu:1241 · E:200 · ν:0.29 · α:13.0', category: 'titanium', description: 'Nickel-chromium superalloy. Excellent high-temperature strength (up to 700°C). Used in gas turbines, jet engines, nuclear reactors, and cryogenic applications. Very difficult to machine.' },
-  { keys: 'Monel 400', command: 'ρ:8.80 · σy:240 · σu:550 · E:179 · ν:0.32 · α:13.9', category: 'titanium', description: 'Nickel-copper alloy. Excellent corrosion resistance in marine and chemical environments. Used for valves, pumps, shafts, and marine fasteners. Good at sub-zero temperatures.' },
-  { keys: 'Hastelloy C-276', command: 'ρ:8.89 · σy:283 · σu:655 · E:205 · ν:0.29 · α:11.2', category: 'titanium', description: 'Nickel-molybdenum-chromium alloy. Outstanding corrosion resistance in severe chemical environments. Used in chemical processing, pollution control, and waste treatment.' },
-
-  // Cast iron
-  { keys: 'Grey Cast Iron GG25', command: 'ρ:7.30 · σy:— · σu:250 · E:110 · ν:0.26 · α:11.0', category: 'cast', description: 'Grey cast iron (EN-GJL-250). Excellent compressive strength, vibration damping, and machinability. No yield point (brittle). Used for engine blocks, machine bases, and housings.' },
-  { keys: 'Ductile Iron GGG40', command: 'ρ:7.30 · σy:250 · σu:400 · E:169 · ν:0.28 · α:12.5', category: 'cast', description: 'Ductile cast iron (EN-GJS-400-15). Has yield point and ductility (unlike grey iron). Good machinability. Used for crankshafts, gears, and pressure-containing parts.' },
-  { keys: 'Ductile Iron GGG60', command: 'ρ:7.30 · σy:380 · σu:600 · E:174 · ν:0.28 · α:11.7', category: 'cast', description: 'High-strength ductile iron (EN-GJS-600-3). Higher strength than GGG40. Used for gears, crankshafts, and high-stress cast components.' },
-  { keys: 'Malleable Iron', command: 'ρ:7.30 · σy:310 · σu:460 · E:170 · ν:0.27 · α:12.0', category: 'cast', description: 'Heat-treated cast iron with improved ductility. Used for pipe fittings, brackets, and components requiring impact resistance. Being replaced by ductile iron in many applications.' },
-
-  // Engineering plastics
-  { keys: 'Acetal (POM/Delrin)', command: 'ρ:1.41 · σy:69 · σu:72 · E:3.1 · ν:0.35 · α:85', category: 'plastic', description: 'Excellent dimensional stability, low friction, and good fatigue resistance. Used for gears, bearings, bushings, and precision parts. Easy to machine. No water absorption.' },
-  { keys: 'Nylon 6/6', command: 'ρ:1.14 · σy:55 · σu:83 · E:2.8 · ν:0.41 · α:80', category: 'plastic', description: 'High strength, toughness, and wear resistance. Absorbs moisture (affects dimensions). Used for gears, bearings, fasteners, and structural components. Glass-filled grades much stronger.' },
-  { keys: 'PEEK', command: 'ρ:1.32 · σy:100 · σu:100 · E:4.0 · ν:0.40 · α:47', category: 'plastic', description: 'High-performance thermoplastic. Excellent mechanical and chemical resistance up to 250°C. Used in aerospace, medical implants, and semiconductor equipment. Very expensive.' },
-  { keys: 'PTFE (Teflon)', command: 'ρ:2.20 · σy:12 · σu:25 · E:0.5 · ν:0.46 · α:135', category: 'plastic', description: 'Lowest friction coefficient of any solid. Excellent chemical resistance. Very low strength. Used for seals, gaskets, bearings, and non-stick surfaces. Soft and cold-flows under load.' },
-  { keys: 'Acrylic (PMMA)', command: 'ρ:1.18 · σy:72 · σu:75 · E:3.3 · ν:0.37 · α:70', category: 'plastic', description: 'Excellent optical clarity (92% light transmission). Good UV resistance. Brittle. Used for windows, lenses, display cases, and light guides. Easy to machine and polish.' },
-  { keys: 'Polycarbonate (PC)', command: 'ρ:1.20 · σy:62 · σu:70 · E:2.6 · ν:0.37 · α:65', category: 'plastic', description: 'Extremely high impact resistance (250× acrylic). Good optical clarity. Used for safety glasses, machine guards, bulletproof glass, and electronic housings. Prone to stress cracking.' },
-  { keys: 'ABS', command: 'ρ:1.05 · σy:42 · σu:45 · E:2.1 · ν:0.37 · α:95', category: 'plastic', description: 'Tough, impact-resistant, and easy to machine. Used for housings, automotive interior parts, and 3D printing. Good balance of strength, cost, and processability.' },
-  { keys: 'UHMW-PE', command: 'ρ:0.93 · σy:23 · σu:42 · E:0.7 · ν:0.46 · α:150', category: 'plastic', description: 'Ultra-high molecular weight polyethylene. Excellent abrasion and impact resistance. Very low friction. Used for wear strips, chute liners, and marine dock fenders. Difficult to bond.' },
-  { keys: 'Glass-Filled Nylon', command: 'ρ:1.50 · σy:130 · σu:180 · E:8.0 · ν:0.38 · α:40', category: 'plastic', description: 'Nylon with 30% glass fiber reinforcement. 2-3× stronger than unfilled nylon. Better dimensional stability and heat resistance. Used for structural brackets and gears under load.' },
-];
-
-const TIPS = [
-  {
-    title: 'Strength-to-weight ratio comparison',
-    content: 'By absolute strength, steel is strongest. But by strength-to-weight ratio: Ti-6Al-4V (σy/ρ = 199 MPa·cm³/g) beats 4340 steel (90), 7075-T6 aluminum (179), and 17-4 PH stainless (150). For weight-critical designs, titanium and 7075 aluminum are often better choices than steel despite higher material cost. Always consider cost: steel is ~$1/kg, aluminum ~$3/kg, titanium ~$30/kg.'
-  },
-  {
-    title: 'Thermal expansion in design',
-    content: 'Aluminum expands 2× more than steel (23.6 vs 11.9 ×10⁻⁶/K). When combining aluminum and steel in assemblies, differential thermal expansion can cause stress, loosening, or binding. Design with expansion slots, use elastomeric gaskets, or select materials with similar expansion coefficients. For precision equipment, Invar (α = 1.3 ×10⁻⁶/K) is used where dimensional stability across temperature is critical.'
-  },
+// All figures verified verbatim from Wikipedia material specs and AmesWeb CTE/density tables; unverified columns strictly '—'
+const VERIFIED_MATERIALS: MaterialRow[] = [
+  { grade: 'ASTM A36 Structural Steel', category: 'steel', density: '7.8', yieldMpa: '250', utsMpa: '400-550', modulusGpa: '200', poisson: '0.26', cte: '11.7', notes: 'Plates/shapes < 8 in: 250 MPa min yield, 400-550 MPa UTS.' },
+  { grade: 'Carbon Steel (Mild / 1020)', category: 'steel', density: '7.85', yieldMpa: '—', utsMpa: '—', modulusGpa: '200', poisson: '—', cte: '11.7', notes: 'General low-carbon structural & machining stock.' },
+  { grade: 'SAE 304 Stainless Steel', category: 'steel', density: '7.5-8.0', yieldMpa: '210', utsMpa: '—', modulusGpa: '—', poisson: '—', cte: '17.2', notes: 'Annealed tensile yield ~210 MPa; 18-20% Cr, 8-11% Ni.' },
+  { grade: 'SAE 316 Stainless Steel', category: 'steel', density: '7.5-8.0', yieldMpa: '—', utsMpa: '—', modulusGpa: '—', poisson: '—', cte: '15.9', notes: 'Austenitic stainless alloy with lower CTE than 304.' },
+  { grade: 'Aluminum 6061', category: 'aluminum', density: '2.70', yieldMpa: '270', utsMpa: '310', modulusGpa: '68', poisson: '0.33', cte: '23.6', notes: 'Typical structural values 310 MPa UTS / 270 MPa yield (min 290/240).' },
+  { grade: 'Aluminum 7075-T6', category: 'aluminum', density: '2.81', yieldMpa: '—', utsMpa: '572', modulusGpa: '71.7', poisson: '0.33', cte: '23.4', notes: 'High-strength aerospace aluminum alloy.' },
+  { grade: 'Copper (Pure / C11000 ETP)', category: 'copper', density: '8.935', yieldMpa: '—', utsMpa: '—', modulusGpa: '110-128', poisson: '0.34', cte: '17.0', notes: 'Density 8.935 g/cm3 at 20 C; high electrical/thermal conductivity.' },
+  { grade: 'Brass (C36000 Free-Cutting)', category: 'copper', density: '8.40-8.73', yieldMpa: '—', utsMpa: '—', modulusGpa: '—', poisson: '—', cte: '20.5', notes: 'Density spans 8.4 to 8.73 g/cm3 depending on Cu-Zn ratio.' },
+  { grade: 'Titanium Ti-6Al-4V', category: 'titanium', density: '4.429', yieldMpa: '880', utsMpa: '900-950', modulusGpa: '104-113', poisson: '0.31-0.37', cte: '8.6', notes: 'Density 4.429 g/cm3 min; yield 880-920 MPa; thermal cond 6.7-7.5 W/mK.' },
+  { grade: 'PEEK', category: 'plastic', density: '1.32', yieldMpa: '—', utsMpa: '90-100', modulusGpa: '3.6', poisson: '—', cte: '—', notes: 'High-temp semi-crystalline polymer (Tg 143 C, Tm 343 C).' },
+  { grade: 'Polycarbonate (PC)', category: 'plastic', density: '1.20-1.22', yieldMpa: '—', utsMpa: '55-75', modulusGpa: '2.0-2.4', poisson: '0.37', cte: '65-70', notes: 'High-impact amorphous glazing and housing polymer.' },
+  { grade: 'PTFE', category: 'plastic', density: '2.20', yieldMpa: '23', utsMpa: '—', modulusGpa: '0.5', poisson: '—', cte: '112-125', notes: 'Low friction (0.05-0.10), melting point 327 C, chemical inertness.' },
+  { grade: 'Acetal (POM)', category: 'plastic', density: '1.41-1.42', yieldMpa: '—', utsMpa: '—', modulusGpa: '—', poisson: '—', cte: '—', notes: 'Stiff engineering acetal homopolymer/copolymer (Tm 175 C).' },
+  { grade: 'Nylon 6/6', category: 'plastic', density: '1.14', yieldMpa: '—', utsMpa: '—', modulusGpa: '—', poisson: '—', cte: '—', notes: 'Engineering polyamide resin (Tm 264 C).' },
 ];
 
 export default function MaterialPropertiesClient() {
+  const [searchStr, setSearchStr] = useState('');
+  const [cat, setCat] = useState<MatCategory>('all');
+  const [copied, setCopied] = useState(false);
+
+  const q = searchStr.trim().toLowerCase();
+  const filtered = VERIFIED_MATERIALS.filter(m => {
+    if (cat !== 'all' && m.category !== cat) return false;
+    if (!q) return true;
+    return m.grade.toLowerCase().includes(q) || m.notes.toLowerCase().includes(q) || m.category.toLowerCase().includes(q);
+  });
+
+  const featured = filtered[0] ?? null;
+
+  const handleReset = () => {
+    setSearchStr('');
+    setCat('all');
+  };
+
+  const handleCopy = async () => {
+    if (filtered.length === 0) return;
+    const text = [
+      'Engineering Material Properties Reference (14 Verified Grades)',
+      ...filtered.map(
+        m => `${m.grade} | rho=${m.density} g/cm3 | Yield=${m.yieldMpa} MPa | UTS=${m.utsMpa} MPa | E=${m.modulusGpa} GPa | nu=${m.poisson} | CTE=${m.cte}`
+      ),
+    ].join('\n');
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const handleDownload = () => {
+    if (filtered.length === 0) return;
+    const rows = [
+      ['grade', 'category', 'density_g_cm3', 'yield_mpa', 'uts_mpa', 'modulus_gpa', 'poisson', 'cte_e6_per_c'],
+      ...filtered.map(m => [
+        m.grade,
+        m.category,
+        m.density,
+        m.yieldMpa === '—' ? '' : m.yieldMpa,
+        m.utsMpa === '—' ? '' : m.utsMpa,
+        m.modulusGpa === '—' ? '' : m.modulusGpa,
+        m.poisson === '—' ? '' : m.poisson,
+        m.cte === '—' ? '' : m.cte,
+      ]),
+    ];
+    const csv = rows.map(r => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'engineering-material-properties.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <ShortcutCheatsheetClient
-      title="Material Properties"
-      subtitle="Mechanical properties of 40+ engineering materials: steels, aluminum, copper, titanium, nickel alloys, cast iron, and plastics."
-      categories={CATEGORIES}
-      shortcuts={SHORTCUTS}
-      tips={TIPS}
-    />
+    <div className="space-y-8">
+      <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600">
+              <Layers className="w-5 h-5" />
+            </div>
+            <div>
+              <h2 className="text-lg font-black text-slate-900 tracking-tight">Verified Material Data Sheet</h2>
+              <p className="text-sm text-slate-500 font-medium">14 core engineering metals &amp; polymers (missing unverified fields left as —)</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              data-testid="preset-a36"
+              onClick={() => {
+                setCat('steel');
+                setSearchStr('A36');
+              }}
+              className="px-3 py-2 rounded-xl text-xs font-bold bg-slate-50 hover:bg-teal-50 text-slate-700 border border-slate-200"
+            >
+              ASTM A36 Steel
+            </button>
+            <button
+              type="button"
+              data-testid="preset-6061"
+              onClick={() => {
+                setCat('aluminum');
+                setSearchStr('6061');
+              }}
+              className="px-3 py-2 rounded-xl text-xs font-bold bg-slate-50 hover:bg-teal-50 text-slate-700 border border-slate-200"
+            >
+              Aluminum 6061
+            </button>
+            <button
+              type="button"
+              data-testid="preset-ti64"
+              onClick={() => {
+                setCat('titanium');
+                setSearchStr('Ti-6Al-4V');
+              }}
+              className="px-3 py-2 rounded-xl text-xs font-bold bg-slate-50 hover:bg-teal-50 text-slate-700 border border-slate-200"
+            >
+              Titanium Ti-6Al-4V
+            </button>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+          <div className="relative">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+            <input
+              type="text"
+              data-testid="input-search"
+              value={searchStr}
+              onChange={e => setSearchStr(e.target.value)}
+              placeholder="Search grade (e.g. 6061, A36, PEEK)..."
+              className="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900"
+            />
+          </div>
+
+          <div className="md:col-span-2 flex flex-wrap gap-1.5">
+            {(['all', 'steel', 'aluminum', 'copper', 'titanium', 'plastic'] as MatCategory[]).map(c => (
+              <button
+                key={c}
+                type="button"
+                data-testid={`filter-${c}`}
+                onClick={() => setCat(c)}
+                className={`px-3 py-2 rounded-xl text-xs font-bold capitalize border ${
+                  cat === c ? 'bg-teal-700 text-white border-teal-700' : 'bg-slate-50 text-slate-600 border-slate-200'
+                }`}
+              >
+                {c}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="bg-teal-50 rounded-2xl p-4 border border-teal-100">
+            <div className="text-xs font-black text-teal-600 uppercase tracking-wider mb-1">Matching Grades</div>
+            <div className="text-2xl font-black text-teal-900">
+              <span data-testid="result-count">{filtered.length}</span>
+            </div>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+            <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Top Match</div>
+            <div className="text-sm font-black text-slate-900 truncate">
+              <span data-testid="result-top-grade">{featured ? featured.grade : '—'}</span>
+            </div>
+          </div>
+          <div className="bg-blue-50 rounded-2xl p-4 border border-blue-100">
+            <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">Density (g/cm3)</div>
+            <div className="text-xl font-black text-blue-900">
+              <span data-testid="result-top-density">{featured ? featured.density : '—'}</span>
+            </div>
+          </div>
+          <div className="bg-emerald-50 rounded-2xl p-4 border border-emerald-100">
+            <div className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-1">Young&apos;s Modulus (GPa)</div>
+            <div className="text-xl font-black text-emerald-900">
+              <span data-testid="result-top-modulus">{featured ? featured.modulusGpa : '—'}</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          <button
+            type="button"
+            data-testid="btn-reset"
+            onClick={handleReset}
+            className="py-2.5 px-4 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5"
+          >
+            <RotateCcw className="w-4 h-4" /> Reset
+          </button>
+          <button
+            type="button"
+            data-testid="btn-copy"
+            onClick={handleCopy}
+            className="py-2.5 px-4 rounded-xl text-sm font-bold bg-teal-50 text-teal-700 hover:bg-teal-100 flex items-center gap-1.5"
+          >
+            {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+            {copied ? 'Copied' : 'Copy Visible Rows'}
+          </button>
+          <button
+            type="button"
+            data-testid="btn-download"
+            onClick={handleDownload}
+            className="py-2.5 px-4 rounded-xl text-sm font-bold bg-slate-900 text-white hover:bg-slate-800 flex items-center gap-1.5"
+          >
+            <Download className="w-4 h-4" /> Export CSV
+          </button>
+        </div>
+
+        <div className="overflow-x-auto border border-slate-100 rounded-2xl">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-slate-50 text-slate-500 font-black uppercase text-xs">
+              <tr>
+                <th className="px-4 py-3">Material Grade</th>
+                <th className="px-4 py-3 text-right">rho (g/cm3)</th>
+                <th className="px-4 py-3 text-right">Yield (MPa)</th>
+                <th className="px-4 py-3 text-right">UTS (MPa)</th>
+                <th className="px-4 py-3 text-right">E (GPa)</th>
+                <th className="px-4 py-3 text-right">nu</th>
+                <th className="px-4 py-3 text-right">CTE (10^-6/C)</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100">
+              {filtered.map(m => (
+                <tr key={m.grade} className="hover:bg-teal-50/40">
+                  <td className="px-4 py-2.5">
+                    <div className="font-bold text-slate-900">{m.grade}</div>
+                    <div className="text-xs text-slate-500">{m.notes}</div>
+                  </td>
+                  <td className="px-4 py-2.5 text-right font-mono font-bold">{m.density}</td>
+                  <td className="px-4 py-2.5 text-right font-mono">{m.yieldMpa}</td>
+                  <td className="px-4 py-2.5 text-right font-mono">{m.utsMpa}</td>
+                  <td className="px-4 py-2.5 text-right font-mono">{m.modulusGpa}</td>
+                  <td className="px-4 py-2.5 text-right font-mono">{m.poisson}</td>
+                  <td className="px-4 py-2.5 text-right font-mono">{m.cte}</td>
+                </tr>
+              ))}
+              {filtered.length === 0 && (
+                <tr>
+                  <td colSpan={7} className="px-4 py-6 text-center text-slate-400">
+                    No matching materials found.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <RelatedTools />
+    </div>
   );
 }

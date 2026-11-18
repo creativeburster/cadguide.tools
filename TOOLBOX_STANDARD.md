@@ -184,7 +184,8 @@ flowchart LR
 | 36 | injection-clamping-force-calculator、injection-molding-clamp-calculator、insulation-r-value-calculator、insulation-thickness-calculator、involute-gear-calculator（跳过 inventor-shortcuts-sheet） | 0730f5c9 |
 | 37 | iso-2768-general-tolerances-reference、iso-286-limits-fits-reference、iso-metric-thread-reference、keyway-stress-calculator、k-factor-calculator | f919acf6 |
 | 38 | land-survey-area-calculator、laser-cutting-calculator、led-resistor-calculator、length-unit-converter、lever-mechanical-advantage-calculator（跳过 kicad-shortcuts-sheet） | 162e8726 |
-| 39 | lift-force-calculator、lighting-lux-calculator、lightning-protection-calculator、limits-and-fits-calculator、liquefaction-potential-calculator | （待填本批 commit 哈希） |
+| 39 | lift-force-calculator、lighting-lux-calculator、lightning-protection-calculator、limits-and-fits-calculator、liquefaction-potential-calculator | b9fdc8c1 |
+| 40 | manifold-pressure-calculator、manometer-pressure-calculator、mass-unit-converter、material-density-calculator、material-properties-reference（跳过 mastercam-shortcuts-sheet） | （待填本批 commit 哈希） |
 
 ---
 

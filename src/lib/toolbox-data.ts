@@ -1418,12 +1418,12 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
     slug: 'material-properties-reference',
     title: 'Engineering Material Properties Reference Table',
     description: 'Mechanical properties of steel, aluminum, copper, titanium, brass, and engineering plastics: density, yield strength, elastic modulus, Poisson ratio, and thermal expansion.',
-    detailDesc: '40+ engineering materials with mechanical properties: steels (1018, 1045, 4140, 4340, 303, 304, 316, 17-4PH, D2), aluminum alloys (6061, 7075, 2024, 5052), copper/brass/bronze, titanium (Ti-6Al-4V), nickel alloys (Inconel 718, Monel), cast iron, and engineering plastics (POM, PEEK, PTFE, PC, ABS).',
+    detailDesc: '14 verified engineering materials with mechanical properties: structural/carbon/stainless steels (ASTM A36, Carbon Steel 1020, SAE 304, SAE 316), aluminum alloys (6061, 7075-T6), copper & brass (C11000, C36000), titanium (Ti-6Al-4V), and engineering plastics (PEEK, PC, PTFE, POM, Nylon 6/6).',
     category: 'cheatsheet',
     status: 'released',
     releasedDate: '2026-07-15',
     origin: 'native',
-    keywords: ['material properties', 'engineering materials', 'steel properties', 'aluminum properties', 'titanium properties', 'yield strength', 'elastic modulus', 'density', 'thermal expansion', 'material selection', 'inconel properties', 'plastic properties']
+    keywords: ['material properties', 'engineering materials', 'steel properties', 'aluminum properties', 'titanium properties', 'yield strength', 'elastic modulus', 'density', 'thermal expansion', 'material selection', 'plastic properties']
   },
   {
     slug: 'imperial-thread-reference',

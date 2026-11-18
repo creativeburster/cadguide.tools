@@ -8490,109 +8490,69 @@
   },
   "manifold-pressure-calculator": {
     "title": "Manifold Pressure Drop Calculator",
-    "description": "Calculate pressure drop in distribution manifolds with multiple outlets.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "dP = f*L/D*0.5*rho*v^2",
+    "description": "Calculate segmented Darcy-Weisbach friction pressure drop in uniform-branch distribution manifolds.",
+    "discipline": "Internal Pipe Flow & Header Hydraulics",
+    "standards": "Segmented Darcy-Weisbach Friction Summation",
+    "cadContext": "Size supply header bore diameters and outlet spacing before routing manifold branches so downstream stations receive balanced static pressure.",
+    "formula": "dP = sum(i=1..N) of f * (L_seg / D) * 0.5 * rho * v_i^2",
     "inputs": [
       {
-        "label": "Flow Rate (L/s)",
-        "val": "20"
+        "label": "Header ID / Length / Outlets",
+        "val": "50 mm / 12 m / 6 outlets"
       },
       {
-        "label": "Manifold Dia (mm)",
-        "val": "80"
-      },
-      {
-        "label": "Length (m)",
-        "val": "5"
-      },
-      {
-        "label": "Friction f",
-        "val": "0.025"
-      },
-      {
-        "label": "Density (kg/m3)",
-        "val": "1000"
+        "label": "Total Flow / Density / Friction f",
+        "val": "180 L/min / 998 kg/m3 / 0.022"
       }
     ],
     "outputs": [
       {
-        "label": "Velocity",
-        "val": "3.979 m/s"
+        "label": "Total Friction Drop",
+        "val": "2.5912 kPa (2591.22 Pa)"
       },
       {
-        "label": "Pressure Drop",
-        "val": "12.368 kPa"
-      },
-      {
-        "label": "Reynolds",
-        "val": "318310"
+        "label": "Inlet Velocity / Dynamic Pressure",
+        "val": "1.5279 m/s / 1.1649 kPa"
       }
     ]
   },
   "manometer-pressure-calculator": {
-    "title": "Manometer Pressure Calculator",
-    "description": "Calculate pressure difference from manometer fluid height difference.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "dP = (rho_fluid - rho_air) * g * h",
+    "title": "Manometer Column Pressure Calculator",
+    "description": "Convert vertical U-tube or inclined manometer liquid column readings into Pa, kPa, mbar, and mmH2O.",
+    "discipline": "Hydrostatic Pressure Measurement",
+    "standards": "Hydrostatic Column Balance (dP = rho * g * L * sin(theta))",
+    "cadContext": "Interpret inclined or U-tube gauge fluid readings during blower, HVAC duct static pressure, or benchtop hydraulic rig testing.",
+    "formula": "dP = rho * g * L * sin(theta)",
     "inputs": [
       {
-        "label": "Fluid Density (kg/m3)",
-        "val": "1000"
-      },
-      {
-        "label": "Height Diff (mm)",
-        "val": "50"
-      },
-      {
-        "label": "Manometer Type",
-        "val": "Vertical U-Tube Manometer"
-      },
-      {
-        "label": "Tube Angle (deg)",
-        "val": "0"
+        "label": "Fluid Density / Column / Angle / g",
+        "val": "998 kg/m3 / 250 mm / 90 deg / 9.80665 m/s2"
       }
     ],
     "outputs": [
       {
         "label": "Differential Pressure",
-        "val": "490.50 Pa"
-      },
-      {
-        "label": "Equivalent Water Head",
-        "val": "50.000 mmH2O"
+        "val": "2446.76 Pa (2.4468 kPa / 24.468 mbar)"
       }
     ]
   },
   "mass-unit-converter": {
-    "title": "Mass Unit Converter",
-    "description": "Convert between kg, g, mg, ton, lb, oz, slug, and quintal.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 kg = 2.205 lb, 1 ton = 1000 kg",
+    "title": "Mass & Weight Unit Converter",
+    "description": "Convert between milligrams, grams, kilograms, metric tonnes, avoirdupois ounces/pounds, US short tons, and UK long tons.",
+    "discipline": "Mass Metrology & BOM Unit Conversion",
+    "standards": "International Avoirdupois Pound Definition (1 lb = 0.45359237 kg)",
+    "cadContext": "Distinguish metric tonnes (1000 kg), US short tons (907.18474 kg), and UK long tons (1016.0469088 kg) accurately in structural and shipping BOM schedules.",
+    "formula": "m_target = m_source * (factor_source_to_kg / factor_target_to_kg)",
     "inputs": [
       {
-        "label": "Value",
-        "val": "100"
-      },
-      {
-        "label": "From",
-        "val": "kg"
-      },
-      {
-        "label": "To",
-        "val": "lb"
+        "label": "Input Mass / Direction",
+        "val": "100 kg -> lb"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "220.46"
+        "label": "Converted Mass",
+        "val": "220.4623 lb"
       }
     ]
   },
@@ -8655,54 +8615,44 @@
     ]
   },
   "material-density-calculator": {
-    "title": "Material Density and Weight Calculator",
-    "description": "Calculate weight and volume of engineering materials from dimensions.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "W = density * volume",
+    "title": "Material Density & Stock Weight Calculator",
+    "description": "Calculate volume and weight of plates, round bars, hollow tubes, and rectangular tubes from engineering dimensions.",
+    "discipline": "CAD Mass Properties & Raw Stock Estimation",
+    "standards": "Geometric Solid Volume x Verified Material Density",
+    "cadContext": "Double-check CAD assembly part masses and raw stock purchasing weights for plates, bars, and tubing against verified material densities.",
+    "formula": "Mass = Cross-Sectional Area * Length * Quantity * Density",
     "inputs": [
       {
-        "label": "Material",
-        "val": "Carbon Steel (7850 kg/m³)"
-      },
-      {
-        "label": "Width (mm)",
-        "val": "100"
-      },
-      {
-        "label": "Height (mm)",
-        "val": "50"
-      },
-      {
-        "label": "Length (m)",
-        "val": "2"
+        "label": "Steel Plate (500 x 250 x 12 mm, Qty 1)",
+        "val": "7850 kg/m3"
       }
     ],
     "outputs": [
       {
-        "label": "Volume",
-        "val": "0.010000 m3"
-      },
-      {
-        "label": "Weight",
-        "val": "78.500 kg"
-      },
-      {
-        "label": "Weight per m",
-        "val": "39.250 kg/m"
+        "label": "Total Mass / Volume",
+        "val": "11.7750 kg (25.9594 lb) / 1500.000 cm3"
       }
     ]
   },
   "material-properties-reference": {
-    "title": "Engineering Material Properties Reference",
-    "description": "Mechanical properties of steel, aluminum, copper, titanium, brass, and engineering plastics: density, yield strength, elastic modulus, Poisson ratio, and thermal expansion.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Standardized parametric evaluation for Engineering Material Properties Reference",
-    "inputs": [],
-    "outputs": []
+    "title": "Engineering Material Properties Reference Table",
+    "description": "Reference mechanical and thermal properties for 14 verified engineering steel, aluminum, copper, brass, titanium, and polymer grades.",
+    "discipline": "Structural & Mechanical Material Selection",
+    "standards": "Compiled Material Property Snapshots (Wikipedia & AmesWeb Verified Values)",
+    "cadContext": "Compare verified density, yield strength, UTS, Young's modulus, Poisson ratio, and linear thermal expansion across core metallic and polymer stock.",
+    "formula": "Searchable & filterable property lookup (density, yield, UTS, modulus, Poisson, CTE)",
+    "inputs": [
+      {
+        "label": "Verified Material Catalog",
+        "val": "14 grades (Steels, Al, Cu/Brass, Ti-6Al-4V, Polymers)"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "ASTM A36 / Aluminum 6061 / Ti-6Al-4V",
+        "val": "E=200 GPa / E=68 GPa / E=104-113 GPa"
+      }
+    ]
   },
   "mathcad-shortcuts-sheet": {
     "title": "PTC Mathcad Keyboard Shortcuts",
