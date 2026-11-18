@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 import SeismicLoadCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Seismic Base Shear Calculator ASCE 7",
+  title: "Seismic Base Shear & Lateral Force Calculator",
   description: "Calculate seismic base shear from spectral acceleration and building weight.",
   path: '/toolbox/seismic-load-calculator',
 });
@@ -13,7 +13,7 @@ export default function SeismicLoadCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Seismic Base Shear Calculator ASCE 7", path: '/toolbox/seismic-load-calculator' },
+    { name: "Seismic Base Shear & Lateral Force Calculator", path: '/toolbox/seismic-load-calculator' },
   ]);
 
   return (
@@ -29,7 +29,7 @@ export default function SeismicLoadCalculatorPage() {
               Structural
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Seismic Base Shear Calculator ASCE <span className="text-orange-400">7</span>
+              Seismic Base Shear <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
               Calculate seismic base shear from spectral acceleration and building weight.

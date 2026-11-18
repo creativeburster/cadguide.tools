@@ -1,172 +1,384 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Info } from 'lucide-react';
+import { Settings, Zap, Info, Download, ExternalLink } from 'lucide-react';
 
-type SectionType = 'rect' | 'circular' | 'ibeam' | 'box' | 'tube';
+type SectionShape = 'rect' | 'ibeam' | 'box' | 'circular' | 'tube';
 
-const SECTIONS: { id: SectionType; name: string }[] = [
-  { id: 'rect', name: 'Solid Rectangular' },
-  { id: 'circular', name: 'Solid Circular' },
-  { id: 'tube', name: 'Hollow Circular (Tube)' },
-  { id: 'box', name: 'Hollow Rectangular (Box)' },
-  { id: 'ibeam', name: 'I-Beam / H-Beam' },
-];
+interface SectionModulusResult {
+  valid: boolean;
+  error?: string;
+  areaMm2: number;
+  ixE4Mm4: number;
+  sxE3Mm3: number;
+  zxE3Mm3: number;
+  rxMm: number;
+  stressMpa: number;
+  shapeFactor: number;
+}
 
-export default function SectionModulusClient() {
-  const [section, setSection] = useState<SectionType>('rect');
-  const [b, setB] = useState(100);
-  const [h, setH] = useState(200);
-  const [d, setD] = useState(100);
-  const [tw, setTw] = useState(6);
-  const [tf, setTf] = useState(10);
+function solveSectionModulus(
+  shape: SectionShape,
+  bStr: string,
+  hStr: string,
+  twStr: string,
+  tfStr: string,
+  tStr: string,
+  momentStr: string
+): SectionModulusResult {
+  const emptyRes = (error: string): SectionModulusResult => ({
+    valid: false,
+    error,
+    areaMm2: 0,
+    ixE4Mm4: 0,
+    sxE3Mm3: 0,
+    zxE3Mm3: 0,
+    rxMm: 0,
+    stressMpa: 0,
+    shapeFactor: 0,
+  });
 
-  const result = useMemo(() => {
-    let Ix = 0, Iy = 0, A = 0;
-    const B = Math.max(1, b);
-    const H = Math.max(1, h);
-    const D = Math.max(1, d);
-    const Tw = Math.max(1, tw);
-    const Tf = Math.max(1, tf);
+  if (momentStr.trim() === '' || bStr.trim() === '') {
+    return emptyRes('Section primary dimension and bending moment inputs are required.');
+  }
+  const B = Number(bStr);
+  const M = Number(momentStr);
+  if (!Number.isFinite(B) || !Number.isFinite(M) || B <= 0 || M < 0) {
+    return emptyRes('Width/diameter must be > 0 and bending moment must be >= 0.');
+  }
 
-    if (section === 'rect') {
-      Ix = B * Math.pow(H, 3) / 12;
-      Iy = H * Math.pow(B, 3) / 12;
-      A = B * H;
-    } else if (section === 'circular') {
-      Ix = Math.PI * Math.pow(D, 4) / 64;
-      Iy = Ix;
-      A = Math.PI * D * D / 4;
-    } else if (section === 'tube') {
-      const innerD = Math.max(1, D - 2 * Tw);
-      Ix = Math.PI * (Math.pow(D, 4) - Math.pow(innerD, 4)) / 64;
-      Iy = Ix;
-      A = Math.PI * (D * D - innerD * innerD) / 4;
-    } else if (section === 'box') {
-      const innerB = Math.max(1, B - 2 * Tw);
-      const innerH = Math.max(1, H - 2 * Tw);
-      Ix = (B * Math.pow(H, 3) - innerB * Math.pow(innerH, 3)) / 12;
-      Iy = (H * Math.pow(B, 3) - innerH * Math.pow(innerB, 3)) / 12;
-      A = B * H - innerB * innerH;
-    } else if (section === 'ibeam') {
-      const innerH = Math.max(1, H - 2 * Tf);
-      Ix = (B * Math.pow(H, 3) - (B - Tw) * Math.pow(innerH, 3)) / 12;
-      Iy = (2 * Tf * Math.pow(B, 3) + innerH * Math.pow(Tw, 3)) / 12;
-      A = 2 * B * Tf + innerH * Tw;
+  let A = 0;
+  let Ix = 0;
+  let Sx = 0;
+  let Zx = 0;
+
+  if (shape === 'rect') {
+    if (hStr.trim() === '') return emptyRes('Rectangle height H is required.');
+    const H = Number(hStr);
+    if (!Number.isFinite(H) || H <= 0) return emptyRes('Rectangle height H must be > 0.');
+    A = B * H;
+    Ix = (B * Math.pow(H, 3)) / 12;
+    Sx = (B * Math.pow(H, 2)) / 6;
+    Zx = (B * Math.pow(H, 2)) / 4;
+  } else if (shape === 'ibeam') {
+    if ([hStr, twStr, tfStr].some((s) => s.trim() === '')) {
+      return emptyRes('All I-beam dimensions (B, H, tw, tf) are required.');
     }
+    const H = Number(hStr);
+    const tw = Number(twStr);
+    const tf = Number(tfStr);
+    if (![H, tw, tf].every(Number.isFinite) || H <= 0 || tw <= 0 || tf <= 0) {
+      return emptyRes('I-beam dimensions must be positive numbers.');
+    }
+    if (2 * tf >= H || tw >= B) {
+      return emptyRes('Invalid I-beam geometry: require 2*tf < H and tw < B.');
+    }
+    const hw = H - 2 * tf;
+    A = 2 * B * tf + hw * tw;
+    Ix = (B * Math.pow(H, 3) - (B - tw) * Math.pow(hw, 3)) / 12;
+    Sx = Ix / (H / 2);
+    Zx = B * tf * (H - tf) + (tw * Math.pow(hw, 2)) / 4;
+  } else if (shape === 'box') {
+    if ([hStr, tStr].some((s) => s.trim() === '')) {
+      return emptyRes('All hollow box dimensions (B, H, t) are required.');
+    }
+    const H = Number(hStr);
+    const t = Number(tStr);
+    if (![H, t].every(Number.isFinite) || H <= 0 || t <= 0) {
+      return emptyRes('Box dimensions must be positive numbers.');
+    }
+    if (2 * t >= Math.min(B, H)) {
+      return emptyRes('Invalid box wall thickness: require 2*t < min(B, H).');
+    }
+    const bi = B - 2 * t;
+    const hi = H - 2 * t;
+    A = B * H - bi * hi;
+    Ix = (B * Math.pow(H, 3) - bi * Math.pow(hi, 3)) / 12;
+    Sx = Ix / (H / 2);
+    Zx = (B * Math.pow(H, 2) - bi * Math.pow(hi, 2)) / 4;
+  } else if (shape === 'circular') {
+    const D = B;
+    A = (Math.PI * Math.pow(D, 2)) / 4;
+    Ix = (Math.PI * Math.pow(D, 4)) / 64;
+    Sx = (Math.PI * Math.pow(D, 3)) / 32;
+    Zx = Math.pow(D, 3) / 6;
+  } else {
+    if (tStr.trim() === '') return emptyRes('Tube wall thickness t is required.');
+    const D = B;
+    const t = Number(tStr);
+    if (!Number.isFinite(t) || t <= 0 || 2 * t >= D) {
+      return emptyRes('Invalid tube geometry: require t > 0 and 2*t < outer diameter.');
+    }
+    const d = D - 2 * t;
+    A = (Math.PI * (Math.pow(D, 2) - Math.pow(d, 2))) / 4;
+    Ix = (Math.PI * (Math.pow(D, 4) - Math.pow(d, 4))) / 64;
+    Sx = Ix / (D / 2);
+    Zx = (Math.pow(D, 3) - Math.pow(d, 3)) / 6;
+  }
 
-    const isRound = section === 'circular' || section === 'tube';
-    const yMax = isRound ? (D / 2) : (H / 2);
-    const xMax = isRound ? (D / 2) : (B / 2);
-    const Wx = Ix / yMax;
-    const Wy = Iy / xMax;
-    const rx = Math.sqrt(Ix / A);
-    const ry = Math.sqrt(Iy / A);
+  const rxMm = Math.sqrt(Ix / A);
+  const stressMpa = Sx > 0 ? (M * 1e6) / Sx : 0;
+  const shapeFactor = Sx > 0 ? Zx / Sx : 0;
 
-    return { Ix, Iy, Wx, Wy, A, rx, ry };
-  }, [section, b, h, d, tw, tf]);
+  return {
+    valid: true,
+    areaMm2: A,
+    ixE4Mm4: Ix / 1e4,
+    sxE3Mm3: Sx / 1e3,
+    zxE3Mm3: Zx / 1e3,
+    rxMm,
+    stressMpa,
+    shapeFactor,
+  };
+}
+
+export default function SectionModulusCalculatorClient() {
+  const [shape, setShape] = useState<SectionShape>('rect');
+  const [bStr, setBStr] = useState('100');
+  const [hStr, setHStr] = useState('200');
+  const [twStr, setTwStr] = useState('8');
+  const [tfStr, setTfStr] = useState('12');
+  const [tStr, setTStr] = useState('10');
+  const [momentStr, setMomentStr] = useState('20');
+
+  const res = solveSectionModulus(shape, bStr, hStr, twStr, tfStr, tStr, momentStr);
+
+  const downloadCsv = () => {
+    if (!res.valid) return;
+    const rows = [
+      ['Cross-Section Modulus & Flexural Stress Report', ''],
+      ['Section Profile', shape],
+      [shape === 'circular' || shape === 'tube' ? 'Outer Diameter D (mm)' : 'Width B (mm)', bStr],
+      ...(shape === 'rect' || shape === 'ibeam' || shape === 'box' ? [['Depth H (mm)', hStr]] : []),
+      ...(shape === 'ibeam' ? [['Web Thickness tw (mm)', twStr], ['Flange Thickness tf (mm)', tfStr]] : []),
+      ...(shape === 'box' || shape === 'tube' ? [['Wall Thickness t (mm)', tStr]] : []),
+      ['Applied Bending Moment M (kN*m)', momentStr],
+      ['Cross-Sectional Area A (mm^2)', res.areaMm2.toFixed(2)],
+      ['Moment of Inertia Ix (x10^4 mm^4)', res.ixE4Mm4.toFixed(3)],
+      ['Elastic Section Modulus Sx (x10^3 mm^3)', res.sxE3Mm3.toFixed(3)],
+      ['Plastic Section Modulus Zx (x10^3 mm^3)', res.zxE3Mm3.toFixed(3)],
+      ['Plastic Shape Factor (Zx/Sx)', res.shapeFactor.toFixed(4)],
+      ['Radius of Gyration rx (mm)', res.rxMm.toFixed(3)],
+      ['Maximum Elastic Bending Stress (MPa)', res.stressMpa.toFixed(3)],
+    ];
+    const csv = rows.map((r) => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `section-modulus-${shape}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
     <div className="space-y-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-cyan-50 rounded-xl flex items-center justify-center text-cyan-600">
+            <div className="w-10 h-10 bg-red-50 rounded-xl flex items-center justify-center text-red-600">
               <Settings className="w-5 h-5" />
             </div>
-            <h2 className="text-lg font-black text-slate-900 tracking-tight">Section</h2>
+            <h2 className="text-lg font-black text-slate-900 tracking-tight">Section Profile</h2>
           </div>
 
           <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Section Type</label>
-            <select value={section} onChange={e => setSection(e.target.value as SectionType)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold">
-              {SECTIONS.map(s => <option key={s.id} value={s.id}>{s.name}</option>)}
+            <label className="text-xs font-black text-slate-500 uppercase block mb-1">Cross-Section Type</label>
+            <select
+              data-testid="select-shape"
+              value={shape}
+              onChange={(e) => setShape(e.target.value as SectionShape)}
+              className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-800"
+            >
+              <option value="rect">Solid Rectangle</option>
+              <option value="ibeam">Symmetric I-Beam / H-Section</option>
+              <option value="box">Hollow Rectangular Box</option>
+              <option value="circular">Solid Circular Bar</option>
+              <option value="tube">Circular Hollow Tube</option>
             </select>
           </div>
 
-          {(section === 'rect' || section === 'box' || section === 'ibeam') && (
-            <>
-              <div>
-                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Width B (mm)</label>
-                <input type="number" value={b} onChange={e => setB(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
-              </div>
-              <div>
-                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Height H (mm)</label>
-                <input type="number" value={h} onChange={e => setH(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
-              </div>
-            </>
-          )}
-
-          {(section === 'circular' || section === 'tube') && (
+          <div className="grid grid-cols-2 gap-3">
             <div>
-              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Outer Diameter D (mm)</label>
-              <input type="number" value={d} onChange={e => setD(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
+              <label className="text-xs font-black text-slate-500 uppercase block mb-1">
+                {shape === 'circular' || shape === 'tube' ? 'Outer Dia D (mm)' : 'Width B (mm)'}
+              </label>
+              <input
+                type="text"
+                inputMode="decimal"
+                data-testid="input-b"
+                value={bStr}
+                onChange={(e) => setBStr(e.target.value)}
+                className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold"
+              />
+            </div>
+
+            {(shape === 'rect' || shape === 'ibeam' || shape === 'box') && (
+              <div>
+                <label className="text-xs font-black text-slate-500 uppercase block mb-1">Depth H (mm)</label>
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  data-testid="input-h"
+                  value={hStr}
+                  onChange={(e) => setHStr(e.target.value)}
+                  className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold"
+                />
+              </div>
+            )}
+
+            {(shape === 'box' || shape === 'tube') && (
+              <div>
+                <label className="text-xs font-black text-slate-500 uppercase block mb-1">Wall Thick t (mm)</label>
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  data-testid="input-t"
+                  value={tStr}
+                  onChange={(e) => setTStr(e.target.value)}
+                  className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold"
+                />
+              </div>
+            )}
+          </div>
+
+          {shape === 'ibeam' && (
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs font-black text-slate-500 uppercase block mb-1">Web tw (mm)</label>
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  data-testid="input-tw"
+                  value={twStr}
+                  onChange={(e) => setTwStr(e.target.value)}
+                  className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold"
+                />
+              </div>
+              <div>
+                <label className="text-xs font-black text-slate-500 uppercase block mb-1">Flange tf (mm)</label>
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  data-testid="input-tf"
+                  value={tfStr}
+                  onChange={(e) => setTfStr(e.target.value)}
+                  className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold"
+                />
+              </div>
             </div>
           )}
 
-          {(section === 'tube' || section === 'box') && (
-            <div>
-              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Wall Thickness tw (mm)</label>
-              <input type="number" value={tw} onChange={e => setTw(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
-            </div>
-          )}
+          <div>
+            <label className="text-xs font-black text-slate-500 uppercase block mb-1">Bending Moment M (kN*m)</label>
+            <input
+              type="text"
+              inputMode="decimal"
+              data-testid="input-moment"
+              value={momentStr}
+              onChange={(e) => setMomentStr(e.target.value)}
+              className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold"
+            />
+          </div>
 
-          {section === 'ibeam' && (
-            <>
-              <div>
-                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Web Thickness tw (mm)</label>
-                <input type="number" value={tw} onChange={e => setTw(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
-              </div>
-              <div>
-                <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Flange Thickness tf (mm)</label>
-                <input type="number" value={tf} onChange={e => setTf(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold" />
-              </div>
-            </>
-          )}
+          <button
+            type="button"
+            onClick={() => {
+              setShape('rect');
+              setBStr('100');
+              setHStr('200');
+              setTwStr('8');
+              setTfStr('12');
+              setTStr('10');
+              setMomentStr('20');
+            }}
+            className="w-full py-2.5 rounded-xl text-sm font-black bg-slate-100 text-slate-600 hover:bg-slate-200"
+          >
+            Reset
+          </button>
         </div>
 
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h2 className="text-lg font-black text-slate-900 tracking-tight mb-6">Section Properties</h2>
-
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-cyan-50 rounded-2xl p-6 border border-cyan-100">
-                <div className="text-base font-black text-cyan-400 uppercase tracking-wider mb-2">Moment of Inertia Ix</div>
-                <div className="text-2xl font-black text-cyan-700">{(result.Ix / 1e4).toFixed(2)}<span className="text-xl text-cyan-400"> ×10⁴ mm⁴</span></div>
-                <div className="text-base text-cyan-600 font-medium mt-1">{(result.Ix / 1e6).toFixed(4)} cm⁴</div>
+          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+            <div className="flex items-center justify-between gap-2">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <h2 className="text-lg font-black text-slate-900 tracking-tight">Section Properties &amp; Flexural Stress</h2>
               </div>
-              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Section Modulus Wx</div>
-                <div className="text-2xl font-black text-blue-700">{(result.Wx / 1e3).toFixed(2)}<span className="text-xl text-blue-400"> ×10³ mm³</span></div>
-                <div className="text-base text-blue-600 font-medium mt-1">{(result.Wx / 1e3).toFixed(2)} cm³</div>
-              </div>
+              <button
+                type="button"
+                onClick={downloadCsv}
+                disabled={!res.valid}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-black hover:bg-slate-800 disabled:opacity-50"
+              >
+                <Download className="w-3.5 h-3.5" />
+                Export CSV
+              </button>
             </div>
 
-            <div className="mt-4 grid grid-cols-4 gap-3">
-              <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                <div className="text-base font-black text-slate-400 uppercase mb-1">Iy</div>
-                <div className="text-xl font-black text-slate-700">{(result.Iy / 1e4).toFixed(2)}×10⁴</div>
+            {!res.valid ? (
+              <div data-testid="validation-error" className="rounded-2xl bg-red-50 border border-red-200 px-5 py-4 text-base font-bold text-red-700">
+                {res.error}
               </div>
-              <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                <div className="text-base font-black text-slate-400 uppercase mb-1">Wy</div>
-                <div className="text-xl font-black text-slate-700">{(result.Wy / 1e3).toFixed(2)}×10³</div>
+            ) : (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                <div className="bg-blue-50 rounded-2xl p-5 border border-blue-100">
+                  <div className="text-xs font-black text-blue-500 uppercase mb-1">Elastic Modulus Sx</div>
+                  <div className="text-2xl font-black text-blue-800" data-testid="res-sx">{res.sxE3Mm3.toFixed(2)}</div>
+                  <div className="text-xs font-bold text-blue-700 mt-1">x10^3 mm3</div>
+                </div>
+                <div className="bg-emerald-50 rounded-2xl p-5 border border-emerald-100">
+                  <div className="text-xs font-black text-emerald-500 uppercase mb-1">Plastic Modulus Zx</div>
+                  <div className="text-2xl font-black text-emerald-800" data-testid="res-zx">{res.zxE3Mm3.toFixed(2)}</div>
+                  <div className="text-xs font-bold text-emerald-700 mt-1">x10^3 mm3 (SF: {res.shapeFactor.toFixed(3)})</div>
+                </div>
+                <div className="bg-orange-50 rounded-2xl p-5 border border-orange-100">
+                  <div className="text-xs font-black text-orange-500 uppercase mb-1">Moment of Inertia Ix</div>
+                  <div className="text-2xl font-black text-orange-800" data-testid="res-ix">{res.ixE4Mm4.toFixed(2)}</div>
+                  <div className="text-xs font-bold text-orange-700 mt-1">x10^4 mm4</div>
+                </div>
+                <div className="bg-purple-50 rounded-2xl p-5 border border-purple-100">
+                  <div className="text-xs font-black text-purple-500 uppercase mb-1">Cross-Section Area</div>
+                  <div className="text-2xl font-black text-purple-800" data-testid="res-area">{res.areaMm2.toFixed(1)} mm2</div>
+                </div>
+                <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200">
+                  <div className="text-xs font-black text-slate-500 uppercase mb-1">Radius of Gyration rx</div>
+                  <div className="text-2xl font-black text-slate-800" data-testid="res-rx">{res.rxMm.toFixed(3)} mm</div>
+                </div>
+                <div className="bg-rose-50 rounded-2xl p-5 border border-rose-100">
+                  <div className="text-xs font-black text-rose-500 uppercase mb-1">Max Bending Stress</div>
+                  <div className="text-2xl font-black text-rose-800" data-testid="res-stress">{res.stressMpa.toFixed(3)} MPa</div>
+                </div>
               </div>
-              <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                <div className="text-base font-black text-slate-400 uppercase mb-1">Area</div>
-                <div className="text-xl font-black text-slate-700">{result.A.toFixed(0)} mm²</div>
-              </div>
-              <div className="bg-slate-50 rounded-xl p-3 border border-slate-100">
-                <div className="text-base font-black text-slate-400 uppercase mb-1">rx (gyr.)</div>
-                <div className="text-xl font-black text-slate-700">{result.rx.toFixed(2)} mm</div>
-              </div>
-            </div>
+            )}
 
-            <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
-                <Info className="w-4 h-4 text-slate-400" />
-                {'Rect: I = BH³/12, W = BH²/6. Circle: I = πD⁴/64, W = πD³/32. Tube: I = π(D⁴-d⁴)/64. I-beam: I = [BH³ - (B-tw)(H-2tf)³]/12. Section modulus W = I/(H/2). Bending stress σ = M/W.'}
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 space-y-2 text-xs text-slate-600">
+              <div className="flex items-start gap-2">
+                <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                <span>
+                  Elastic Sx = Ix / (H/2); Flexural Stress sigma = M / Sx; Radius of Gyration rx = sqrt(Ix / A). Plastic Zx sums first area moments on both sides of the equal-area axis.
+                </span>
+              </div>
+              <div className="flex flex-wrap gap-4 pl-6 font-semibold">
+                <a
+                  href="https://en.wikipedia.org/wiki/Section_modulus"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-blue-600 hover:underline"
+                >
+                  Wikipedia: Section modulus <ExternalLink className="w-3 h-3" />
+                </a>
+                <a
+                  href="https://en.wikipedia.org/wiki/List_of_second_moments_of_area"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 text-blue-600 hover:underline"
+                >
+                  Wikipedia: List of second moments of area <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
             </div>
           </div>

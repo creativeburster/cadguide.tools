@@ -11822,193 +11822,165 @@
   },
   "section-modulus-calculator": {
     "title": "Section Modulus Calculator",
-    "description": "Calculate section modulus, moment of inertia, radius of gyration, and cross-sectional area for rectangular, circular, I-beam, and tube sections.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "{'Rect: I = BH³/12, W = BH²/6. Circle: I = πD⁴/64, W = πD³/32. Tube: I = π(D⁴-d⁴)/64. I-beam: I = [BH³ - (B-tw)(H-2tf)³]/12. Section modulus W = I/(H/2). Bending stress σ = M/W.'}",
+    "description": "Calculate elastic and plastic section moduli, centroidal moment of inertia, radius of gyration, cross-sectional area, and extreme fiber bending stress.",
+    "discipline": "Beam Flexural Section Mechanics",
+    "standards": "Beam Flexural Geometry (Wikipedia: Section modulus & List of second moments of area)",
+    "cadContext": "Measure cross-section width, height, web/flange thicknesses, and applied bending moment from CAD structural framing profiles.",
+    "formula": "Sx = Ix / y_max ; sigma_max = M / Sx ; rx = sqrt(Ix / A) ; Shape Factor = Zx / Sx",
     "inputs": [
       {
-        "label": "Section Type",
-        "val": "Solid Rectangular"
+        "label": "Profile / Width B x Depth H (mm)",
+        "val": "Rectangle / 100 x 200"
       },
       {
-        "label": "Width B (mm)",
-        "val": "100"
-      },
-      {
-        "label": "Height H (mm)",
-        "val": "200"
+        "label": "Applied Bending Moment M (kN*m)",
+        "val": "20"
       }
     ],
     "outputs": [
       {
-        "label": "Moment of Inertia Ix",
-        "val": "6666.67 ×10⁴ mm⁴"
+        "label": "Elastic / Plastic Section Modulus",
+        "val": "666.67 / 1000.00 x10^3 mm3"
       },
       {
-        "label": "Section Modulus Wx",
-        "val": "666.67 ×10³ mm³"
+        "label": "Moment of Inertia Ix & rx",
+        "val": "6666.67 x10^4 mm4 / 57.735 mm"
+      },
+      {
+        "label": "Max Bending Stress (M=20 kN*m)",
+        "val": "30.000 MPa"
       }
     ]
   },
   "section-property-shape-calculator": {
-    "title": "Section Property Calculator",
-    "description": "Calculate area, centroid, inertia, and section modulus for common cross-sections.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "A, I, Z=I/ymax, r=sqrt(I/A)",
+    "title": "Section Property & Inertia Calculator",
+    "description": "Calculate area, biaxial centroidal moments of inertia, elastic section moduli, radii of gyration, and parallel-axis shifted moment of inertia.",
+    "discipline": "Cross-Section Inertia & Parallel-Axis Theorem",
+    "standards": "Second Moment of Area & Parallel Axis Theorem (Wikipedia: List of second moments of area)",
+    "cadContext": "Shift centroidal second moments of area from CAD sketch profiles to built-up member or bolt-group reference axes.",
+    "formula": "Ix = B*H^3/12 ; rx = sqrt(Ix/A) ; I_par = Ix + A * d_off^2",
     "inputs": [
       {
-        "label": "Shape",
-        "val": "Solid Rectangle"
+        "label": "Shape / Width B x Height H (mm)",
+        "val": "Rectangle / 100 x 200"
       },
       {
-        "label": "Width (mm)",
-        "val": "100"
-      },
-      {
-        "label": "Height (mm)",
-        "val": "200"
+        "label": "Parallel Axis Offset d_off (mm)",
+        "val": "50"
       }
     ],
     "outputs": [
       {
-        "label": "Area",
-        "val": "20000 mm2"
+        "label": "Centroidal Ix / Area A",
+        "val": "66666667 mm4 / 20000 mm2"
       },
       {
-        "label": "Inertia I",
-        "val": "66666667 mm4"
+        "label": "Section Modulus Sx / rx",
+        "val": "666667 mm3 / 57.735 mm"
       },
       {
-        "label": "Section Mod Z",
-        "val": "666667 mm3"
-      },
-      {
-        "label": "Radius Gyration",
-        "val": "57.735 mm"
+        "label": "Parallel-Axis Moment I_par",
+        "val": "116666667 mm4"
       }
     ]
   },
   "sedimentation-tank-calculator": {
-    "title": "Sedimentation Tank Design Calculator",
-    "description": "Calculate sedimentation tank surface area, detention time, and overflow rate.",
-    "discipline": "Environmental Process, Hydrology & Open-Channel Hydraulics",
-    "standards": "WEF Manual of Practice No. 8 (MOP 8), Metcalf & Eddy Wastewater Engineering, ASCE/EWRI Urban Drainage Guidelines, International Plumbing Code (IPC)",
-    "cadContext": "Check hydraulic grade line (HGL), invert elevations, freeboard clearances, and peak diurnal flow peaking factors across all connected P&ID and civil site utility profiles.",
-    "formula": "Area = Q / SOR • D = √(4A/π) • HRT = Volume / Flow (Ten States Standards for Wastewater Treatment)",
+    "title": "Sedimentation Tank & Clarifier Calculator",
+    "description": "Calculate circular sedimentation tank surface area, diameter, hydraulic volume, retention time, and peripheral weir overflow rate.",
+    "discipline": "Clarifier Surface Overflow & Hydraulic Sizing",
+    "standards": "Clarifier Hydraulic Continuity: A = Q / SOR ; HRT = 24 * V / Q ; Weir Loading = Q / (pi * D)",
+    "cadContext": "Size circular water or wastewater clarifier plan diameters, sidewater depths, and effluent launders in civil site layouts.",
+    "formula": "A = Q / SOR ; D = sqrt(4*A/pi) ; V = A * H ; HRT = 24*V/Q ; qw = Q/(pi*D)",
     "inputs": [
       {
-        "label": "Average Daily Wastewater Inflow (m³/d)",
-        "val": "12000"
+        "label": "Design Flow Q / SOR",
+        "val": "12000 m3/d / 32 m3/(m2*d)"
       },
       {
-        "label": "Surface Overflow Rate (m³/m²·d)",
-        "val": "32"
-      },
-      {
-        "label": "Side Water Depth (m)",
-        "val": "3.8"
-      },
-      {
-        "label": "Max Weir Loading Rate (m³/m·d)",
-        "val": "150"
+        "label": "Sidewater Depth / Weir Limit",
+        "val": "3.8 m / 180 m3/(m*d)"
       }
     ],
     "outputs": [
       {
-        "label": "Required Clarifier Inner Diameter",
-        "val": "21.9 m"
+        "label": "Surface Area A / Tank Dia D",
+        "val": "375.00 m2 / 21.851 m"
       },
       {
-        "label": "Hydraulic Surface Area",
-        "val": "375 m²"
-      },
-      {
-        "label": "Retention Time (HRT)",
-        "val": "2.9 hours"
+        "label": "Hydraulic Volume / HRT",
+        "val": "1425.0 m3 / 2.850 hr"
       },
       {
         "label": "Peripheral Weir Loading Rate",
-        "val": "174.8 m³/m·d"
+        "val": "174.81 m3/(m*d) (OK)"
       }
     ]
   },
   "seismic-load-calculator": {
-    "title": "Seismic Base Shear Calculator ASCE 7",
-    "description": "Calculate seismic base shear from spectral acceleration and building weight.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Cs=SDS/(R/Ie), V=Cs*W",
+    "title": "Seismic Base Shear & Lateral Force Calculator",
+    "description": "Calculate seismic response coefficient, total lateral base shear, vertical story force distribution, and base overturning moment.",
+    "discipline": "Equivalent Lateral Force & Story Shear Distribution",
+    "standards": "Equivalent Lateral Force Equilibrium: Cs = Sa * Ie / R ; V = Cs * W ; Fi = V * (wi*hi^k) / Sum(wj*hj^k)",
+    "cadContext": "Combine building story elevations and seismic weights from structural BIM models to evaluate horizontal lateral shear and base moment.",
+    "formula": "Cs = Sa*Ie/R ; V = Cs*W ; Fi = V * wi*hi^k / Sum(wj*hj^k) ; M_base = Sum(Fi*hi)",
     "inputs": [
       {
-        "label": "SDS (g)",
-        "val": "0.5"
+        "label": "Sa / R / Ie / Total Weight W",
+        "val": "0.5 g / 5 / 1.0 / 5000 kN"
       },
       {
-        "label": "Response R",
-        "val": "5"
-      },
-      {
-        "label": "Importance Ie",
-        "val": "1.0"
-      },
-      {
-        "label": "Seismic Weight (kN)",
-        "val": "5000"
+        "label": "Stories N / Story Height / k",
+        "val": "5 stories / 3.6 m / k=1.0"
       }
     ],
     "outputs": [
       {
-        "label": "Seismic Coeff",
-        "val": "0.100000"
+        "label": "Seismic Coeff Cs / Base Shear V",
+        "val": "0.1000 / 500.00 kN"
       },
       {
-        "label": "Base Shear",
-        "val": "500.00 kN"
+        "label": "Roof Level Force F_top",
+        "val": "166.67 kN"
+      },
+      {
+        "label": "Base Overturning Moment M_base",
+        "val": "6600.0 kN*m"
       }
     ]
   },
   "septic-tank-calculator": {
-    "title": "Septic Tank Size Calculator",
-    "description": "Calculate septic tank capacity from household size and wastewater generation.",
-    "discipline": "Environmental Process, Hydrology & Open-Channel Hydraulics",
-    "standards": "WEF Manual of Practice No. 8 (MOP 8), Metcalf & Eddy Wastewater Engineering, ASCE/EWRI Urban Drainage Guidelines, International Plumbing Code (IPC)",
-    "cadContext": "Check hydraulic grade line (HGL), invert elevations, freeboard clearances, and peak diurnal flow peaking factors across all connected P&ID and civil site utility profiles.",
-    "formula": "V = persons * flow_rate * retention_days",
+    "title": "Septic Tank Sizing Calculator",
+    "description": "Calculate septic tank liquid detention volume, sludge storage volume, freeboard allowance, and rectangular plan dimensions.",
+    "discipline": "Onsite Wastewater Detention & Sludge Balance",
+    "standards": "Septic Detention & Sludge Mass Balance: V_eff = P*(q*td + rs*Ty)/1000 ; W = sqrt(V_eff / (h * L:W))",
+    "cadContext": "Determine trench excavation footprint, net liquid chamber volume, and freeboard clearance on civil sanitary CAD sheets.",
+    "formula": "V_liq = P*q*td/1000 ; V_sludge = P*rs*Ty/1000 ; V_total = (V_liq + V_sludge)*(1 + fb%/100)",
     "inputs": [
       {
-        "label": "Number of Persons",
-        "val": "4"
+        "label": "Users / Flow q / Detention td",
+        "val": "4 / 150 L/(p*d) / 2 d"
       },
       {
-        "label": "Flow per Person (L/day)",
-        "val": "150"
+        "label": "Sludge rs / Interval Ty / Freeboard",
+        "val": "40 L/(p*y) / 2 yr / 20%"
       },
       {
-        "label": "Retention Days",
-        "val": "2"
-      },
-      {
-        "label": "Sludge Factor",
-        "val": "1.5"
+        "label": "Liquid Depth h / L:W Aspect Ratio",
+        "val": "1.5 m / 2.5"
       }
     ],
     "outputs": [
       {
-        "label": "Tank Volume",
-        "val": "1.800 m3"
+        "label": "Liquid / Sludge / Net Volume",
+        "val": "1.200 / 0.320 / 1.520 m3"
       },
       {
-        "label": "Tank Length",
-        "val": "1.644 m"
+        "label": "Total Tank Volume (w/ Freeboard)",
+        "val": "1.824 m3"
       },
       {
-        "label": "Tank Width",
-        "val": "0.729864 m"
+        "label": "Internal Width W x Length L",
+        "val": "0.6367 m x 1.5916 m"
       }
     ]
   },
