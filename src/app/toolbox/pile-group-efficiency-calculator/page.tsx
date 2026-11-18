@@ -4,8 +4,9 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Pile Group Efficiency Calculator (Converse-Labarre)",
-  description: "Calculate pile group efficiency and ultimate capacity using Converse-Labarre and block failure methods.",
+  title: 'Pile Group Efficiency Calculator (Converse-Labarre) | CADGuide.tools',
+  description:
+    'Calculate pile group efficiency ratio and group ultimate axial capacity using the Converse-Labarre grid spacing formula.',
   path: '/toolbox/pile-group-efficiency-calculator',
 });
 
@@ -13,7 +14,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Pile Group Efficiency Calculator (Converse-Labarre)", path: '/toolbox/pile-group-efficiency-calculator' },
+    { name: 'Pile Group Efficiency Calculator (Converse-Labarre)', path: '/toolbox/pile-group-efficiency-calculator' },
   ]);
 
   return (
@@ -26,13 +27,13 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Foundation Group Sizing
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               Pile Group Efficiency Calculator (Converse-Labarre)
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate pile group efficiency and ultimate capacity using Converse-Labarre and block failure methods.
+              Calculate pile group efficiency and ultimate capacity using the Converse-Labarre grid efficiency formula.
             </p>
           </div>
         </section>

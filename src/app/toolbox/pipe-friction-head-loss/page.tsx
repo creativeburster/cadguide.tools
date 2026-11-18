@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import PipeFrictionClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Pipe Flow Friction Head Loss (Hazen-Williams) Calculator | CADGuide.tools',
+  title: 'Pipe Friction Head Loss & Pressure Drop Calculator (Hazen-Williams & Darcy-Weisbach) | CADGuide.tools',
   description:
-    'Calculate piping flow velocity, static head loss, and pressure drop gradients in piping systems using the standard Hazen-Williams equation.',
+    'Calculate piping flow velocity, friction head loss, and static pressure drop using Hazen-Williams or Darcy-Weisbach equations with ISO 80000 standard gravity.',
   path: '/toolbox/pipe-friction-head-loss',
 });
 
@@ -14,7 +14,7 @@ export default function PipeFrictionPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Pipe Friction Loss Calculator', path: '/toolbox/pipe-friction-head-loss' },
+    { name: 'Pipe Friction Head Loss Calculator', path: '/toolbox/pipe-friction-head-loss' },
   ]);
 
   return (
@@ -31,13 +31,13 @@ export default function PipeFrictionPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Piping Hydraulic Tool
+              Piping Hydraulic Analysis
             </div>
             <h1 className="text-4xl font-black mb-6 tracking-tight leading-tight">
-              Pipe Friction Head <span className="text-blue-400">Loss & Pressure</span> Drop Calculator
+              Pipe Friction Head <span className="text-blue-400">Loss &amp; Pressure</span> Drop Calculator
             </h1>
             <p className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Determine static friction head loss in water supply and process piping using standard Hazen-Williams hydraulic models.
+              Compute pipe velocity, friction head loss, and static pressure drop in Hazen-Williams or Darcy-Weisbach hydraulic mode.
             </p>
           </div>
         </section>

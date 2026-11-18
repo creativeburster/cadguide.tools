@@ -10119,195 +10119,144 @@
     ]
   },
   "pile-capacity-calculator": {
-    "title": "Pile End Bearing Capacity Calculator",
-    "description": "Calculate pile end bearing and skin friction capacity.",
-    "discipline": "Mechanical Power Transmission & Tribology",
-    "standards": "ISO 281:2007 (Dynamic Load Ratings & Rating Life), ISO 76 (Static Load Ratings), ANSI/ABMA Std 9 & Std 11",
-    "cadContext": "Verify shaft and housing cylindrical tolerance fits (typically ISO k5/m5 shaft with H7 housing bore per ISO 286) in your 3D MCAD assembly before finalizing bearing selection.",
-    "formula": "Qb = Ap*Nc*cu, Qs = sum(As*alpha*cu)",
+    "title": "Pile Axial Capacity Calculator (Total-Stress Alpha-Method)",
+    "description": "Calculates cohesive clay pile end bearing (Qb), skin friction (Qs), ultimate capacity (Qu), and allowable working capacity (Qa = Qu / FS).",
+    "discipline": "Geotechnical / Foundation Design",
+    "standards": "Total-stress alpha-method equilibrium: Qb = Ap * Nc * cu, Qs = As * alpha * cu, Qu = Qb + Qs",
+    "cadContext": "Computes circular cross-section tip and perimeter surface areas directly from user-entered pile diameter, embedment depth, undrained shear strength, and adhesion factor alpha.",
+    "formula": "Ap = pi*D^2/4; Qb = Ap*Nc*cu; As = pi*D*L; Qs = As*alpha*cu; Qa = (Qb + Qs)/FS",
     "inputs": [
       {
-        "label": "Pile Dia (mm)",
-        "val": "600"
+        "label": "Pile Diameter & Embedded Length",
+        "val": "D = 600 mm (0.6 m), L = 15 m"
       },
       {
-        "label": "Pile Length (m)",
-        "val": "15"
-      },
-      {
-        "label": "Cu (kPa)",
-        "val": "50"
-      },
-      {
-        "label": "Nc",
-        "val": "9"
-      },
-      {
-        "label": "Adhesion a",
-        "val": "0.5"
+        "label": "Clay cu, Nc, alpha, FS",
+        "val": "cu = 50 kPa, Nc = 9, alpha = 0.5, FS = 2.5"
       }
     ],
     "outputs": [
       {
-        "label": "End Bearing",
-        "val": "127.23 kN"
+        "label": "End Bearing & Skin Friction",
+        "val": "Qb = 127.2345 kN | Qs = 706.8583 kN"
       },
       {
-        "label": "Skin Friction",
-        "val": "706.86 kN"
-      },
-      {
-        "label": "Total Capacity",
-        "val": "834.09 kN"
+        "label": "Ultimate & Allowable Capacity",
+        "val": "Qu = 834.0928 kN | Qa = 333.6371 kN"
       }
     ]
   },
   "pile-group-efficiency-calculator": {
     "title": "Pile Group Efficiency Calculator (Converse-Labarre)",
-    "description": "Calculate pile group efficiency and ultimate capacity using Converse-Labarre and block failure methods.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "η = 1 - (θ/90) · [((n-1)m + (m-1)n) / (m·n)] • θ = arctan(D/s) (Converse-Labarre Equation)",
+    "description": "Computes Converse-Labarre pile group efficiency eta, spacing-to-diameter ratio s/D, and total axial pile group ultimate capacity.",
+    "discipline": "Geotechnical / Pile Group Sizing",
+    "standards": "Converse-Labarre group efficiency formula (m rows by n columns rectangular pile array)",
+    "cadContext": "Enforces center-to-center spacing s > D and integer grid counts m, n >= 1 before calculating efficiency reduction.",
+    "formula": "theta = arctan(D/s)*(180/pi); eta = 1 - (theta/90)*((n-1)*m + (m-1)*n)/(m*n); Q_group = eta * m * n * Q_single",
     "inputs": [
       {
-        "label": "Pile Diameter D (mm)",
-        "val": "600"
+        "label": "Pile Diameter & Spacing",
+        "val": "D = 600 mm, s = 1800 mm (3.00 D)"
       },
       {
-        "label": "Center-to-Center Spacing s (mm)",
-        "val": "1800"
-      },
-      {
-        "label": "Number of Rows (m)",
-        "val": "3"
-      },
-      {
-        "label": "Number of Columns (n)",
-        "val": "3"
-      },
-      {
-        "label": "Single Pile Ultimate Capacity (kN)",
-        "val": "950"
+        "label": "Grid Dimensions & Single Pile",
+        "val": "3 rows x 3 cols (9 piles), Q_single = 950 kN"
       }
     ],
     "outputs": [
       {
-        "label": "Total Group Ultimate Capacity",
-        "val": "6215 kN"
+        "label": "Group Efficiency (eta)",
+        "val": "72.6890% (theta = 18.4349 deg)"
       },
       {
-        "label": "Converse-Labarre Efficiency (η)",
-        "val": "72.7 %"
-      },
-      {
-        "label": "Pile Spacing to Diameter Ratio (s/D)",
-        "val": "3.00 D"
-      },
-      {
-        "label": "Total Pile Count in Cluster",
-        "val": "9 piles"
+        "label": "Total Group Capacity",
+        "val": "6,214.9065 kN"
       }
     ]
   },
   "pile-lateral-capacity-calculator": {
-    "title": "Pile Lateral Capacity Calculator (Broms Method)",
-    "description": "Calculate lateral capacity and deflection of single piles using Broms method.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "H_u = 9 · c_u · D · (L - 1.5D) • H_allow = H_u / FS (Broms Method for Cohesive Soils / FHWA GEC 012)",
+    "title": "Cohesive Rigid Pile Lateral Capacity Calculator",
+    "description": "Computes closed-form rigid short-pile ultimate lateral resistance (Hu), allowable lateral load (Ha), and maximum soil bending moment (M_max) in clay.",
+    "discipline": "Geotechnical / Lateral Pile Analysis",
+    "standards": "Rigid short-pile static equilibrium assuming upper 1.5*D gap depth and uniform deep lateral resistance kc*cu*D",
+    "cadContext": "Covers both free-head moment equilibrium and fixed-head rigid translation without empirical deflection estimates.",
+    "formula": "L_eff = L - 1.5*D; Free: b1=2*e+3*D+L_eff, f=sqrt(b1^2+L_eff^2)-b1, Hu=kc*cu*D*f; Fixed: Hu=kc*cu*D*L_eff",
     "inputs": [
       {
-        "label": "Pile Diameter D (mm)",
-        "val": "800"
+        "label": "Geometry & Clay Parameters",
+        "val": "D = 800 mm, L = 6.0 m (L_eff = 4.80 m), cu = 65 kPa"
       },
       {
-        "label": "Embedded Depth L (m)",
-        "val": "14"
-      },
-      {
-        "label": "Undrained Shear Strength cu (kPa)",
-        "val": "65"
-      },
-      {
-        "label": "Pile Head Fixity",
-        "val": "Free Head (Independent Pile / Light Cap)"
+        "label": "Eccentricity, Factor kc, FS, Head",
+        "val": "e = 0.5 m, kc = 9, FS = 2.5, Free Head"
       }
     ],
     "outputs": [
       {
-        "label": "Allowable Lateral Working Load",
-        "val": "2396.2 kN"
+        "label": "Ultimate & Allowable Lateral Load",
+        "val": "Hu = 609.1389 kN | Ha = 243.6556 kN"
       },
       {
-        "label": "Ultimate Lateral Soil Resistance (Hu)",
-        "val": "5990.4 kN"
-      },
-      {
-        "label": "Ineffective Upper Zone Depth (1.5D)",
-        "val": "1.20 m"
-      },
-      {
-        "label": "Assumed Geotechnical Factor of Safety",
-        "val": "2.5 FS"
+        "label": "Peak Soil Bending Moment",
+        "val": "M_max = 1,431.9572 kN*m (f = 1.3016 m)"
       }
     ]
   },
   "pipe-flow-rate-calculator": {
-    "title": "Pipe Flow Rate Calculator",
-    "description": "Calculate flow rate and velocity in pipes from diameter and velocity/pressure.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Q = A·v • Darcy-Weisbach: h_f = f·(L/D)·(v²/2g) using Swamee-Jain Colebrook approximation",
+    "title": "Pipe Flow Rate & Darcy Friction Calculator",
+    "description": "Computes volumetric flow Q, Reynolds number, Darcy friction factor (laminar 64/Re or Swamee-Jain), and head loss per 100 m using ISO 80000 gravity.",
+    "discipline": "Hydraulics & Process Piping",
+    "standards": "Darcy Friction Factor Formulae (Swamee & Jain 1976): https://en.wikipedia.org/wiki/Darcy_friction_factor_formulae | Standard Gravity (ISO 80000): https://en.wikipedia.org/wiki/Standard_gravity",
+    "cadContext": "Exposes pipe diameter, flow velocity, absolute wall roughness, and kinematic viscosity explicitly with g = 9.80665 m/s^2.",
+    "formula": "Q = (pi*D^2/4)*v; Re = v*D/nu; f = 64/Re (Re<=2300) else 0.25/[log10(eps/(3.7*D)+5.74/Re^0.9)]^2; hf100 = f*(100/D)*(v^2/(2*g))",
     "inputs": [
       {
-        "label": "Pipe Dia (mm)",
-        "val": "100"
+        "label": "Pipe Diameter & Flow Velocity",
+        "val": "D = 100 mm, v = 2.0 m/s"
       },
       {
-        "label": "Velocity (m/s)",
-        "val": "2"
-      },
-      {
-        "label": "Roughness (mm)",
-        "val": "0.15"
+        "label": "Roughness & Kinematic Viscosity",
+        "val": "eps = 0.15 mm, nu = 1.004 cSt"
       }
     ],
     "outputs": [
       {
-        "label": "Instantaneous Flow (Q)",
-        "val": "15.708 L/s"
+        "label": "Volumetric Flow Rate",
+        "val": "15.7080 L/s (56.5487 m^3/h)"
       },
       {
-        "label": "Hourly Volume (Q_h)",
-        "val": "56.549 m³/h"
-      },
-      {
-        "label": "Friction Head Loss (per 100m)",
-        "val": "4.686 m / 100m (f= 0.022979 )"
-      },
-      {
-        "label": "Flow Internal Area",
-        "val": "78.540 cm² (Re= 199203 )"
+        "label": "Friction Factor & 100m Loss",
+        "val": "f = 0.022979 (Re = 199,203) | hf100 = 4.6864 m"
       }
     ]
   },
   "pipe-friction-head-loss": {
     "title": "Pipe Friction Head Loss & Pressure Drop Calculator",
-    "description": "Calculate piping flow velocity, static head loss, and pressure drop gradients in piping systems using the standard Hazen-Williams equation.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "h_f = f × (L / D) × (v² / 2g) (Darcy-Weisbach Equation) • 1/√f = -2 log₁₀(ε/(3.7D) + 2.51/(Re√f)) (Colebrook-White)",
+    "description": "Calculates flow velocity, friction head loss, and static pressure drop using dual Hazen-Williams (d^4.8704) and Darcy-Weisbach (Swamee-Jain) models.",
+    "discipline": "Piping Hydraulics",
+    "standards": "Hazen-Williams Equation: https://en.wikipedia.org/wiki/Hazen%E2%80%93Williams_equation | Darcy Friction Factor: https://en.wikipedia.org/wiki/Darcy_friction_factor_formulae | Standard Gravity: https://en.wikipedia.org/wiki/Standard_gravity",
+    "cadContext": "Supports direct Hazen-Williams pipe C-coefficient selection or Darcy-Weisbach roughness/viscosity calculation with ISO 80000 gravity g = 9.80665 m/s^2.",
+    "formula": "HW: hf = 10.67*L*Q^1.852 / (C^1.852 * d^4.8704); DW: hf = f*(L/d)*(v^2/(2*g)); dP = rho*g*hf/1000",
     "inputs": [
       {
-        "label": "1. Pipe Material & C-Value",
-        "val": "PVC / Plastic (Plastic/PVC)"
+        "label": "Hazen-Williams Default Pipe",
+        "val": "Q = 15 m^3/h, d = 80 mm, L = 100 m, C = 150, rho = 1000 kg/m^3"
+      },
+      {
+        "label": "Gravitational Constant",
+        "val": "g = 9.80665 m/s^2 (ISO 80000)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Velocity & Friction Head Loss",
+        "val": "v = 0.8289 m/s | hf = 0.8556 m"
+      },
+      {
+        "label": "Pressure Drop & Unit Gradient",
+        "val": "dP = 8.3908 kPa (0.083908 kPa/m)"
+      }
+    ]
   },
   "pipe-size-chart": {
     "title": "Pipe Size Chart NPS · DN · Schedule",
