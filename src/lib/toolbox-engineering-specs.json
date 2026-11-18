@@ -11650,206 +11650,175 @@
   },
   "roof-pitch-calculator": {
     "title": "Roof Pitch & Area Calculator",
-    "description": "Calculate roof pitch angle, slope factor, and total roof area from plan dimensions.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "pitch = rise/run, angle = atan(rise/run), area = plan_area/cos(angle)",
+    "description": "Calculate gable roof pitch ratio, X:12 slope, slope percentage, pitch angle, rafter multiplier, single rafter length with eave overhang, and two-slope roof area.",
+    "discipline": "Roof Framing Trigonometry & Envelope Quantities",
+    "standards": "Right-Triangle Framing Trigonometry: Pitch = Rise / (Span / 2) ; Rafter = (Run + Overhang) * sqrt(1 + Pitch^2)",
+    "cadContext": "Extract clear building span width, ridge elevation, and horizontal eave overhang from CAD roof plan sections to size rafter cut lengths and sheathing surface area.",
+    "formula": "Run = W/2 ; Pitch = Rise/Run ; Angle = atan(Pitch) ; Roof Area = 2 * L * (Run + Overhang) * sqrt(1 + Pitch^2)",
     "inputs": [
       {
-        "label": "Plan Length (m)",
-        "val": "12"
+        "label": "Plan Length / Span Width (m)",
+        "val": "12 / 8"
       },
       {
-        "label": "Plan Width (m)",
-        "val": "8"
-      },
-      {
-        "label": "Rise (m)",
-        "val": "3"
+        "label": "Ridge Rise / Eave Overhang (m)",
+        "val": "3 / 0"
       }
     ],
     "outputs": [
       {
-        "label": "Pitch Ratio",
-        "val": "0.750000"
+        "label": "Pitch Ratio / X:12 Slope",
+        "val": "0.7500 (9.00:12 / 75.00%)"
       },
       {
-        "label": "Pitch Angle",
-        "val": "36.870 deg"
+        "label": "Pitch Angle & Slope Factor",
+        "val": "36.870 deg (1.2500)"
       },
       {
-        "label": "Roof Area",
+        "label": "Single Rafter Length",
+        "val": "5.0000 m"
+      },
+      {
+        "label": "Total Two-Slope Roof Area",
         "val": "120.00 m2"
-      },
-      {
-        "label": "Rafter Length",
-        "val": "5.000 m"
       }
     ]
   },
   "room-acoustics-rt60-calculator": {
     "title": "Room Acoustics RT60 Calculator",
-    "description": "Calculate reverberation time RT60 using Sabine equation from room dimensions and surface absorption coefficients.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "RT60 = 0.161 × V / A (metric) or 0.049 × V / A (imperial), A = Σ(Sᵢ × αᵢ)",
+    "description": "Calculate room volume, equivalent absorption area, and metric Sabine & Eyring reverberation time RT60.",
+    "discipline": "Architectural Acoustics & Sabine/Eyring Reverberation",
+    "standards": "Sabine (0.1611 * V / A) & Eyring (-0.1611 * V / [S * ln(1 - alpha_bar)]) Reverberation Equations (Wikipedia: Reverberation)",
+    "cadContext": "Compute floor, ceiling, net wall, door, and window areas directly from interior CAD elevations and validate 0 < alpha < 1 surface absorption coefficients.",
+    "formula": "RT60_Sabine = 0.1611 * V / A ; RT60_Eyring = -0.1611 * V / [S * ln(1 - alpha_bar)] ; A = Sum(Si * alpha_i)",
     "inputs": [
       {
-        "label": "L ( m )",
-        "val": "10"
+        "label": "Room L x W x H (m)",
+        "val": "10 x 8 x 3"
       },
       {
-        "label": "W ( m )",
-        "val": "8"
+        "label": "Surface alpha (Floor/Ceil/Wall)",
+        "val": "0.05 / 0.10 / 0.05"
       },
       {
-        "label": "H ( m )",
-        "val": "3"
-      },
-      {
-        "label": "Floor (carpet/wood/concrete)",
-        "val": "0.05"
-      },
-      {
-        "label": "Ceiling (tile/plaster)",
-        "val": "0.10"
-      },
-      {
-        "label": "Walls (painted/block)",
-        "val": "0.05"
-      },
-      {
-        "label": "Door α",
-        "val": "0.08"
-      },
-      {
-        "label": "Door Area ( m ²)",
-        "val": "2"
+        "label": "Doors / Windows (alpha @ area)",
+        "val": "0.08 @ 2 m2 / 0.35 @ 6 m2"
       }
     ],
     "outputs": [
       {
-        "label": "Room Volume",
-        "val": "240.0 m ³"
+        "label": "Room Volume / Equivalent Absorption",
+        "val": "240.00 m3 / 19.260 m2 Sabins"
       },
       {
-        "label": "Total Absorption",
-        "val": "19.26 Sabins"
+        "label": "Sabine RT60",
+        "val": "2.0075 s"
       },
       {
-        "label": "RT60",
-        "val": "2.006 s"
-      },
-      {
-        "label": "Acoustic Rating",
-        "val": "Very Live (cathedral)"
+        "label": "Eyring RT60",
+        "val": "1.9344 s"
       }
     ]
   },
   "roundabout-capacity-calculator": {
-    "title": "Roundabout Capacity Calculator (HCM 6)",
-    "description": "Calculate roundabout entry capacity and delay per HCM 6th edition.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "c_e = A · exp(-B · v_c) • Delay = f(v/c, T) (Highway Capacity Manual HCM 6th Edition)",
+    "title": "Roundabout Capacity Calculator",
+    "description": "Calculate roundabout approach entry capacity, volume-to-capacity saturation ratio, and reserve capacity using exponential gap-acceptance parameters.",
+    "discipline": "Traffic Intersection Gap-Acceptance Analysis",
+    "standards": "Exponential Gap-Acceptance Capacity Model: Ce = A * exp(-B * Vc) with User-Calibrated Parameters",
+    "cadContext": "Specify calibrated intercept A and exponential decay parameter B alongside peak circulating and entry flow volumes from site intersection traffic studies.",
+    "formula": "Ce = A * exp(-B * Vc) ; v/c = Vd / Ce ; Reserve = Ce - Vd",
     "inputs": [
       {
-        "label": "Circulating Flow Rate V_c (veh/h)",
-        "val": "750"
+        "label": "Circulating Flow Vc / Demand Vd",
+        "val": "750 veh/h / 480 veh/h"
       },
       {
-        "label": "Roundabout Geometry Configuration",
-        "val": "Single-Lane Entry & Circulating (A=1130, B=0.0010)"
-      },
-      {
-        "label": "Approach Entry Demand Volume (veh/h)",
-        "val": "480"
+        "label": "Model Intercept A / Slope B",
+        "val": "1130 veh/h / 0.0010 h/veh"
       }
     ],
     "outputs": [
       {
-        "label": "Maximum Approach Entry Capacity",
-        "val": "534 veh/h"
+        "label": "Approach Entry Capacity Ce",
+        "val": "533.77 veh/h"
       },
       {
-        "label": "Volume to Capacity Ratio (v/c)",
-        "val": "0.90"
+        "label": "Volume-to-Capacity Ratio (v/c)",
+        "val": "0.8993"
       },
       {
-        "label": "Control Delay per Vehicle",
-        "val": "41.0 seconds"
-      },
-      {
-        "label": "HCM Level of Service (LOS)",
-        "val": "LOS D (High Delay 35-50s)"
+        "label": "Reserve Capacity",
+        "val": "53.77 veh/h"
       }
     ]
   },
   "sand-casting-yield-calculator": {
     "title": "Sand Casting Yield Calculator",
-    "description": "Calculate casting yield, pouring weight, and feed metal from part and riser weights.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Yield = part_weight / total_pour_weight * 100",
+    "description": "Calculate multi-cavity mold pour weight, sand casting process yield percentage, return scrap, and melt-loss adjusted furnace charge.",
+    "discipline": "Foundry Gating, Riser Design & Mass Balance",
+    "standards": "Foundry Mass Balance: Yield = (N_cav * M_part) / M_pour ; M_charge = M_pour / (1 - Loss%)",
+    "cadContext": "Export net CAD solid casting weights and gating/feeder pattern masses to size furnace heat charges and compare multi-cavity yield.",
+    "formula": "M_pour = N_cav * M_part + M_riser + M_gating ; Yield = (N_cav * M_part / M_pour) * 100%",
     "inputs": [
       {
-        "label": "Part Weight (kg)",
-        "val": "15"
+        "label": "Part Mass / Cavities per Mold",
+        "val": "15 kg / 1 cavity"
       },
       {
-        "label": "Riser Weight (kg)",
-        "val": "5"
+        "label": "Riser / Gating Mass (kg)",
+        "val": "5 / 2"
       },
       {
-        "label": "Gating Weight (kg)",
-        "val": "2"
-      },
-      {
-        "label": "Melting Loss (%)",
+        "label": "Furnace Melting Loss (%)",
         "val": "5"
       }
     ],
     "outputs": [
       {
-        "label": "Total Pour Weight",
-        "val": "22.000 kg"
-      },
-      {
         "label": "Casting Yield",
         "val": "68.182 %"
       },
       {
-        "label": "Metal Needed",
+        "label": "Total Poured Mass",
+        "val": "22.000 kg"
+      },
+      {
+        "label": "Furnace Charge Needed",
         "val": "23.158 kg"
       }
     ]
   },
   "screw-torque-preload-calculator": {
     "title": "Bolt Torque & Preload Tension Calculator",
-    "description": "Calculate required bolt installation tightening torque (T=KFD) and tensile preload force for standard metric bolts (grade 4.8 to 12.9).",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "Standardized parametric evaluation for Bolt Torque & Preload Tension Calculator",
+    "description": "Calculate bolt installation tightening torque (T = K * F * d), tensile preload force, and yield safety ratio for metric bolted joints.",
+    "discipline": "Fastener Torque-Preload Mechanics",
+    "standards": "Torque-Preload Relation T = K * F_pre * d (Wikipedia: Bolted joint) & M4-M20 Tensile Stress Areas (Engineering ToolBox: metric-threads-d_777.html)",
+    "cadContext": "Verify nominal bolt diameter d, tensile stress area As, material yield limit, target preload utilization, and nut friction factor K explicitly in fastener BOM tables.",
+    "formula": "F_yield = As * Rp0.2 ; F_pre = F_yield * (Pct / 100) ; T = K * F_pre * d / 1000",
     "inputs": [
       {
-        "label": "1. Bolt Size",
-        "val": "M12"
+        "label": "Metric Bolt M12 (d / As)",
+        "val": "12 mm / 84.3 mm2"
       },
       {
-        "label": "2. Bolt Grade",
-        "val": "Grade 8.8 (High strength medium carbon steel)"
-      },
-      {
-        "label": "3. Assembly surface friction condition (Friction Condition)",
-        "val": "Lubricated Oil (Oil lubrication)"
+        "label": "Yield Stress / Preload Ratio / K",
+        "val": "640 MPa / 75% / 0.15"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Required Tightening Torque T",
+        "val": "72.835 N*m"
+      },
+      {
+        "label": "Target Preload Force",
+        "val": "40.464 kN"
+      },
+      {
+        "label": "Axial Yield Capacity",
+        "val": "53.952 kN"
+      }
+    ]
   },
   "section-modulus-calculator": {
     "title": "Section Modulus Calculator",

@@ -6,7 +6,7 @@ import BoltTorqueClient from './calculator-client';
 export const metadata: Metadata = pageMetadata({
   title: 'Bolt Tightening Torque & Preload Tension Calculator | CADGuide.tools',
   description:
-    'Calculate required bolt installation tightening torque (T=KFD) and tensile preload force for standard metric bolts (grade 4.8 to 12.9).',
+    'Calculate bolt installation tightening torque (T = K * F * d), tensile preload force, and yield safety ratio for metric bolted joints.',
   path: '/toolbox/screw-torque-preload-calculator',
 });
 
@@ -37,7 +37,7 @@ export default function BoltTorquePage() {
               Bolt Torque & <span className="text-blue-400">Preload Tension</span> Calculator
             </h1>
             <p className="text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Prevent thread stripping and bolt shear failure. Calculate tightening torque standards using standard VDI 2230 guidelines.
+              Calculate tightening torque T = K * F_pre * d and tensile preload capacity using explicit bolt stress area, yield stress, and nut factor inputs.
             </p>
           </div>
         </section>

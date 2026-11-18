@@ -1,202 +1,168 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info, CheckCircle2, AlertTriangle } from 'lucide-react';
+import { Settings, Zap, Info, CheckCircle2, AlertTriangle, Download } from 'lucide-react';
 
-interface CalculationOutput {
-  primary: { label: string; val: string; unit: string };
-  secondary: Array<{ label: string; val: string; unit: string }>;
-  status?: { pass: boolean; text: string };
+interface RoundaboutResult {
+  valid: boolean;
+  error?: string;
+  entryCapacityVph: number;
+  vcRatio: number;
+  reserveCapacityVph: number;
 }
 
-const computeFn: (vals: string[]) => CalculationOutput = (vals) => {
-      const vc = parseFloat(vals[0]) || 750;
-      const lanes = vals[1] || 'single';
-      const demand = parseFloat(vals[2]) || 480;
-      const a = lanes === 'dual' ? 1420 : 1130;
-      const b = lanes === 'dual' ? 0.0009 : 0.0010;
-      const capacity = a * Math.exp(-b * vc);
-      const vcRatio = demand / Math.max(1, capacity);
-      const delay = Math.max(5, (3600 / capacity) + 900 * 0.25 * (vcRatio - 1 + Math.sqrt(Math.pow(vcRatio - 1, 2) + (8 * vcRatio) / (capacity * 0.25))));
-      let los = 'LOS A (Free Flow <10s)';
-      if (delay > 50) los = 'LOS F (Forced Flow >50s)';
-      else if (delay > 35) los = 'LOS D (High Delay 35-50s)';
-      else if (delay > 20) los = 'LOS C (Stable Flow 20-35s)';
-      else if (delay > 10) los = 'LOS B (Light Delay 10-20s)';
-      return {
-        primary: { label: 'Maximum Approach Entry Capacity', val: capacity.toFixed(0), unit: 'veh/h' },
-        secondary: [
-          { label: 'Volume to Capacity Ratio (v/c)', val: vcRatio.toFixed(2), unit: '' },
-          { label: 'Control Delay per Vehicle', val: delay.toFixed(1), unit: 'seconds' },
-          { label: 'HCM Level of Service (LOS)', val: los, unit: '' }
-        ],
-        status: { pass: vcRatio <= 0.85, text: vcRatio <= 0.85 ? 'SATISFACTORY OPERATIONS (v/c < 0.85)' : 'CONGESTED: APPROACH OVER CAPACITY' }
-      };
-    };
+function solveRoundabout(
+  circFlowStr: string,
+  demandStr: string,
+  interceptAStr: string,
+  decayBStr: string
+): RoundaboutResult {
+  if ([circFlowStr, demandStr, interceptAStr, decayBStr].some((s) => s.trim() === '')) {
+    return { valid: false, error: 'All circulating flow, approach demand, intercept A, and slope B inputs are required.', entryCapacityVph: 0, vcRatio: 0, reserveCapacityVph: 0 };
+  }
+  const vc = Number(circFlowStr);
+  const dem = Number(demandStr);
+  const A = Number(interceptAStr);
+  const B = Number(decayBStr);
 
-const DEFAULT_INPUTS = ["750","single","480"];
+  if (![vc, dem, A, B].every(Number.isFinite)) {
+    return { valid: false, error: 'All inputs must be valid finite numbers.', entryCapacityVph: 0, vcRatio: 0, reserveCapacityVph: 0 };
+  }
+  if (vc < 0 || dem < 0 || A <= 0 || B <= 0) {
+    return { valid: false, error: 'Require flows >= 0, intercept A > 0, and exponential decay B > 0.', entryCapacityVph: 0, vcRatio: 0, reserveCapacityVph: 0 };
+  }
 
-export default function CalculatorClient() {
-  const [inputs, setInputs] = useState<string[]>(DEFAULT_INPUTS);
+  const entryCapacityVph = A * Math.exp(-B * vc);
+  const vcRatio = dem / entryCapacityVph;
+  const reserveCapacityVph = entryCapacityVph - dem;
 
-  const updateInput = (idx: number, val: string) => {
-    const next = [...inputs];
-    next[idx] = val;
-    setInputs(next);
+  return { valid: true, entryCapacityVph, vcRatio, reserveCapacityVph };
+}
+
+export default function RoundaboutCapacityClient() {
+  const [vcStr, setVcStr] = useState('750');
+  const [demStr, setDemStr] = useState('480');
+  const [aStr, setAStr] = useState('1130');
+  const [bStr, setBStr] = useState('0.0010');
+
+  const res = solveRoundabout(vcStr, demStr, aStr, bStr);
+
+  const downloadCsv = () => {
+    if (!res.valid) return;
+    const rows = [
+      ['Roundabout Exponential Gap-Acceptance Capacity Report', ''],
+      ['Circulating Flow Vc (veh/h)', vcStr],
+      ['Approach Demand Vd (veh/h)', demStr],
+      ['Intercept Parameter A (veh/h)', aStr],
+      ['Exponential Decay Parameter B (h/veh)', bStr],
+      ['Entry Capacity Ce (veh/h)', res.entryCapacityVph.toFixed(2)],
+      ['Volume-to-Capacity Ratio (v/c)', res.vcRatio.toFixed(4)],
+      ['Reserve Capacity (veh/h)', res.reserveCapacityVph.toFixed(2)],
+    ];
+    const csv = rows.map((r) => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'roundabout-capacity.csv';
+    a.click();
+    URL.revokeObjectURL(url);
   };
-
-  const result = useMemo(() => {
-    try {
-      return computeFn(inputs);
-    } catch {
-      return {
-        primary: { label: 'Calculation Error', val: '—', unit: '' },
-        secondary: [],
-        status: { pass: false, text: 'Invalid Input Values' }
-      };
-    }
-  }, [inputs]);
 
   return (
     <div className="space-y-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Left Column: Parameter Inputs */}
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
               <Settings className="w-5 h-5" />
             </div>
+            <h2 className="text-lg font-black text-slate-900 tracking-tight">Gap-Acceptance Inputs</h2>
+          </div>
+
+          <div className="flex gap-2">
+            <button type="button" onClick={() => { setAStr('1130'); setBStr('0.0010'); }} className="flex-1 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-xs font-black text-slate-700">1-Lane (1130, 0.0010)</button>
+            <button type="button" onClick={() => { setAStr('1420'); setBStr('0.0009'); }} className="flex-1 py-1.5 rounded-lg bg-slate-100 hover:bg-slate-200 text-xs font-black text-slate-700">2-Lane (1420, 0.0009)</button>
+          </div>
+
+          <div>
+            <label className="text-xs font-black text-slate-500 uppercase block mb-1">Circulating Flow V_c (veh/h)</label>
+            <input type="text" inputMode="decimal" data-testid="input-vc" value={vcStr} onChange={(e) => setVcStr(e.target.value)} className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold" />
+          </div>
+
+          <div>
+            <label className="text-xs font-black text-slate-500 uppercase block mb-1">Approach Demand V_d (veh/h)</label>
+            <input type="text" inputMode="decimal" data-testid="input-demand" value={demStr} onChange={(e) => setDemStr(e.target.value)} className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold" />
+          </div>
+
+          <div className="grid grid-cols-2 gap-3">
             <div>
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs & Parameters</h2>
-              <p className="text-xs text-slate-500 font-medium">Adjust values to recalculate</p>
+              <label className="text-xs font-black text-slate-500 uppercase block mb-1">Intercept A (veh/h)</label>
+              <input type="text" inputMode="decimal" data-testid="input-a" value={aStr} onChange={(e) => setAStr(e.target.value)} className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold" />
+            </div>
+            <div>
+              <label className="text-xs font-black text-slate-500 uppercase block mb-1">Decay B (h/veh)</label>
+              <input type="text" inputMode="decimal" data-testid="input-b" value={bStr} onChange={(e) => setBStr(e.target.value)} className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold" />
             </div>
           </div>
 
-          <div className="space-y-4">
-          <div key="0">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Circulating Flow Rate V_c (veh/h)</label>
-            <input
-              type="number"
-              step="50"
-              value={inputs[0]}
-              onChange={(e) => updateInput(0, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          <div key="1">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Roundabout Geometry Configuration</label>
-            <select
-              value={inputs[1]}
-              onChange={(e) => updateInput(1, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-sm font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all cursor-pointer"
-            >
-              <option key="single" value="single">{"Single-Lane Entry & Circulating (A=1130, B=0.0010)"}</option>
-              <option key="dual" value="dual">{"Dual-Lane Entry & Multi-Lane Circulating (A=1420, B=0.0009)"}</option>
-            </select>
-          </div>
-          <div key="2">
-            <label className="text-xs font-black text-slate-400 uppercase tracking-wider block mb-2">Approach Entry Demand Volume (veh/h)</label>
-            <input
-              type="number"
-              step="20"
-              value={inputs[2]}
-              onChange={(e) => updateInput(2, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-base font-bold text-slate-800 focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          </div>
-
-          <button
-            onClick={() => setInputs(DEFAULT_INPUTS)}
-            className="w-full py-3 rounded-xl text-sm font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
-          >
-            Reset Defaults
-          </button>
+          <button type="button" onClick={() => { setVcStr('750'); setDemStr('480'); setAStr('1130'); setBStr('0.0010'); }} className="w-full py-2.5 rounded-xl text-sm font-black bg-slate-100 text-slate-600 hover:bg-slate-200">Reset</button>
         </div>
 
-        {/* Right Column: Results & Engineering Metrics */}
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-            <div className="flex items-center justify-between">
+            <div className="flex flex-wrap items-center justify-between gap-2">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
                   <Zap className="w-5 h-5" />
                 </div>
-                <h2 className="text-lg font-black text-slate-900 tracking-tight">Calculated Outputs</h2>
+                <h2 className="text-lg font-black text-slate-900 tracking-tight">Entry Capacity Results</h2>
               </div>
-              {result.status && (
-                <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-black tracking-wide uppercase border ${
-                  result.status.pass
-                    ? 'bg-emerald-50 text-emerald-700 border-emerald-200'
-                    : 'bg-amber-50 text-amber-700 border-amber-200'
-                }`}>
-                  {result.status.pass ? (
-                    <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600" />
-                  ) : (
-                    <AlertTriangle className="w-3.5 h-3.5 text-amber-600" />
-                  )}
-                  <span>{result.status.text}</span>
+              <button type="button" onClick={downloadCsv} disabled={!res.valid} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 text-white text-xs font-black hover:bg-slate-800 disabled:opacity-50">
+                <Download className="w-3.5 h-3.5" />
+                Export CSV
+              </button>
+            </div>
+
+            {!res.valid ? (
+              <div data-testid="validation-error" className="rounded-2xl bg-red-50 border border-red-200 px-5 py-4 text-base font-bold text-red-700">{res.error}</div>
+            ) : (
+              <>
+                <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-black border ${res.vcRatio <= 0.85 ? 'bg-emerald-50 text-emerald-700 border-emerald-200' : res.vcRatio <= 1.0 ? 'bg-amber-50 text-amber-700 border-amber-200' : 'bg-red-50 text-red-700 border-red-200'}`}>
+                  {res.vcRatio <= 0.85 ? <CheckCircle2 className="w-4 h-4" /> : <AlertTriangle className="w-4 h-4" />}
+                  <span>{res.vcRatio <= 0.85 ? 'Undersaturated (v/c <= 0.85)' : res.vcRatio <= 1.0 ? 'Near Capacity (0.85 < v/c <= 1.0)' : 'Oversaturated (v/c > 1.0)'}</span>
                 </div>
-              )}
-            </div>
 
-            {/* Primary Result Banner */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50/40 rounded-2xl p-6 border border-blue-100">
-              <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-2">
-                {result.primary.label}
-              </div>
-              <div className="flex items-baseline gap-2">
-                <span className="text-4xl sm:text-5xl font-black text-blue-900 tracking-tight">
-                  {result.primary.val}
-                </span>
-                {result.primary.unit && (
-                  <span className="text-lg font-bold text-blue-600">
-                    {result.primary.unit}
-                  </span>
-                )}
-              </div>
-            </div>
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50/40 rounded-2xl p-6 border border-blue-100">
+                  <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">Approach Entry Capacity Ce</div>
+                  <div className="text-4xl sm:text-5xl font-black text-blue-900" data-testid="res-ce">{res.entryCapacityVph.toFixed(2)} veh/h</div>
+                </div>
 
-            {/* Secondary Metrics Grid */}
-            {result.secondary && result.secondary.length > 0 && (
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                {result.secondary.map((metric, idx) => (
-                  <div key={idx} className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-1 line-clamp-1">
-                      {metric.label}
-                    </div>
-                    <div className="text-xl font-black text-slate-900">
-                      {metric.val}
-                      {metric.unit && <span className="text-xs font-medium text-slate-500 ml-1.5">{metric.unit}</span>}
-                    </div>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                    <div className="text-xs font-bold text-slate-500 uppercase mb-1">Volume-to-Capacity Ratio (v/c)</div>
+                    <div className="text-2xl font-black text-slate-900" data-testid="res-vc">{res.vcRatio.toFixed(4)}</div>
                   </div>
-                ))}
-              </div>
+                  <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                    <div className="text-xs font-bold text-slate-500 uppercase mb-1">Reserve Capacity (Ce - Vd)</div>
+                    <div className="text-2xl font-black text-slate-900" data-testid="res-reserve">{res.reserveCapacityVph.toFixed(2)} veh/h</div>
+                  </div>
+                </div>
+              </>
             )}
+
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 flex items-start gap-2 text-xs text-slate-600">
+              <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+              <span>
+                Exponential gap-acceptance model Ce = A * exp(-B * Vc), with user-calibrated intercept A and exponential decay slope B for local roundabout geometry.
+              </span>
+            </div>
           </div>
 
-          {/* Engineering Methodology & Formula Card */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-slate-50 rounded-xl flex items-center justify-center text-slate-600">
-                <Info className="w-5 h-5" />
-              </div>
-              <div>
-                <h3 className="text-base font-black text-slate-900 tracking-tight">Governing Engineering Formula & Standards</h3>
-                <p className="text-xs text-slate-500 font-medium">Standardized calculation procedure</p>
-              </div>
-            </div>
-            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <p className="text-xs sm:text-sm text-slate-700 font-mono font-medium leading-relaxed block break-words">
-                {"c_e = A · exp(-B · v_c) • Delay = f(v/c, T) (Highway Capacity Manual HCM 6th Edition)"}
-              </p>
-            </div>
-          </div>
+          <RelatedTools />
         </div>
       </div>
-
-      <RelatedTools />
     </div>
   );
 }

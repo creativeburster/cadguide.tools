@@ -1,352 +1,257 @@
 'use client';
 
-import { useState, useMemo } from 'react';
-import { Info, Check, AlertTriangle, Cpu, Wrench } from 'lucide-react';
+import { useState } from 'react';
 import { RelatedTools } from '@/components/related-tools';
+import { Info, Check, Copy, AlertTriangle, Wrench, Download } from 'lucide-react';
 
-const BOLT_SIZES = [
-  { name: 'M4', d: 4, As: 8.78 },
-  { name: 'M5', d: 5, As: 14.2 },
-  { name: 'M6', d: 6, As: 20.1 },
-  { name: 'M8', d: 8, As: 36.6 },
-  { name: 'M10', d: 10, As: 58.0 },
-  { name: 'M12', d: 12, As: 84.3 },
-  { name: 'M16', d: 16, As: 157.0 },
-  { name: 'M20', d: 20, As: 245.0 },
-  { name: 'M24', d: 24, As: 353.0 },
-  { name: 'M30', d: 30, As: 561.0 },
+// Metric thread tensile stress areas verified against Engineering ToolBox metric-threads-d_777.html
+const METRIC_BOLTS_PRESETS = [
+  { label: 'M4', d: '4', as: '8.78' },
+  { label: 'M5', d: '5', as: '14.2' },
+  { label: 'M6', d: '6', as: '20.1' },
+  { label: 'M8', d: '8', as: '36.6' },
+  { label: 'M10', d: '10', as: '58.0' },
+  { label: 'M12', d: '12', as: '84.3' },
+  { label: 'M16', d: '16', as: '157' },
+  { label: 'M20', d: '20', as: '245' },
 ];
 
-const BOLT_GRADES = [
-  { name: 'Grade 4.8 (Ordinary carbon steel)', yield: 320, tensile: 400 },
-  { name: 'Grade 5.8 (Low carbon alloy steel)', yield: 400, tensile: 500 },
-  { name: 'Grade 8.8 (High strength medium carbon steel)', yield: 640, tensile: 800 },
-  { name: 'Grade 10.9 (Alloy steel quenched and tempered)', yield: 900, tensile: 1000 },
-  { name: 'Grade 12.9 (Ultra-high strength alloy steel)', yield: 1080, tensile: 1200 },
+const YIELD_PRESETS = [
+  { label: '320 MPa', rp: '320' },
+  { label: '400 MPa', rp: '400' },
+  { label: '640 MPa', rp: '640' },
+  { label: '900 MPa', rp: '900' },
+  { label: '1080 MPa', rp: '1080' },
 ];
 
-const FRICTION_COEFFICIENTS = [
-  { name: 'Dry Steel (Dry non-lubricated steel surface)', K: 0.20 },
-  { name: 'Lubricated Oil (Oil lubrication)', K: 0.15},
-  { name: 'Zinc Plated (Galvanized anti-corrosion surface)', K: 0.18 },
-  { name: 'PTFE / MoS2 (Teflon/molybdenum disulfide dry film lubrication)', K: 0.10 },
+const K_PRESETS = [
+  { label: 'PTFE (0.10)', k: '0.10' },
+  { label: 'Oiled (0.15)', k: '0.15' },
+  { label: 'Plated (0.18)', k: '0.18' },
+  { label: 'Dry (0.20)', k: '0.20' },
 ];
+
+interface BoltTorqueResult {
+  valid: boolean;
+  error?: string;
+  yieldLoadKn: number;
+  preloadKn: number;
+  torqueNm: number;
+  tensileStressMpa: number;
+  pctYield: number;
+}
+
+function solveBoltTorque(
+  diaMmStr: string,
+  stressAreaStr: string,
+  yieldMpaStr: string,
+  preloadPctStr: string,
+  kFactorStr: string
+): BoltTorqueResult {
+  if ([diaMmStr, stressAreaStr, yieldMpaStr, preloadPctStr, kFactorStr].some((s) => s.trim() === '')) {
+    return { valid: false, error: 'All bolt diameter, stress area, yield strength, preload ratio, and nut factor inputs are required.', yieldLoadKn: 0, preloadKn: 0, torqueNm: 0, tensileStressMpa: 0, pctYield: 0 };
+  }
+  const d = Number(diaMmStr);
+  const As = Number(stressAreaStr);
+  const rp = Number(yieldMpaStr);
+  const pct = Number(preloadPctStr);
+  const K = Number(kFactorStr);
+
+  if (![d, As, rp, pct, K].every(Number.isFinite)) {
+    return { valid: false, error: 'All inputs must be valid finite numbers.', yieldLoadKn: 0, preloadKn: 0, torqueNm: 0, tensileStressMpa: 0, pctYield: 0 };
+  }
+  if (d <= 0 || As <= 0 || rp <= 0 || pct <= 0 || pct > 100 || K <= 0) {
+    return { valid: false, error: 'Require positive d, As, yield stress, nut factor K, and 0 < preload ratio <= 100%.', yieldLoadKn: 0, preloadKn: 0, torqueNm: 0, tensileStressMpa: 0, pctYield: 0 };
+  }
+
+  const yieldLoadN = As * rp;
+  const preloadN = yieldLoadN * (pct / 100);
+  // T = K * F_pre * d (N*mm -> /1000 for N*m)
+  const torqueNm = (K * preloadN * d) / 1000;
+  const tensileStressMpa = preloadN / As;
+
+  return {
+    valid: true,
+    yieldLoadKn: yieldLoadN / 1000,
+    preloadKn: preloadN / 1000,
+    torqueNm,
+    tensileStressMpa,
+    pctYield: pct,
+  };
+}
 
 export default function BoltTorqueClient() {
-  const [boltIdx, setBoltIdx] = useState(5); // M12
-  const [gradeIdx, setGradeIdx] = useState(2); // 8.8
-  const [frictionIdx, setFrictionIdx] = useState(1); // Oil lubricated
-  const [preloadRatio, setPreloadRatio] = useState(75); // % of yield
+  const [dStr, setDStr] = useState('12');
+  const [asStr, setAsStr] = useState('84.3');
+  const [rpStr, setRpStr] = useState('640');
+  const [pctStr, setPctStr] = useState('75');
+  const [kStr, setKStr] = useState('0.15');
   const [copied, setCopied] = useState(false);
 
-  const bolt = useMemo(() => BOLT_SIZES[boltIdx], [boltIdx]);
-  const grade = useMemo(() => BOLT_GRADES[gradeIdx], [gradeIdx]);
-  const friction = useMemo(() => FRICTION_COEFFICIENTS[frictionIdx], [frictionIdx]);
+  const res = solveBoltTorque(dStr, asStr, rpStr, pctStr, kStr);
 
-  // Calculations (F in kN, T in N·m)
-  const results = useMemo(() => {
-    const As = bolt.As; // mm²
-    const yieldStrength = grade.yield; // MPa (N/mm²)
-    const K = friction.K;
-    const d = bolt.d; // mm
-
-    // Max capacity load at yield (N)
-    const yieldLoad = As * yieldStrength;
-    
-    // Target tension preload (N)
-    const preloadForce = yieldLoad * (preloadRatio / 100);
-
-    // Tightening torque (N·mm) -> convert to N·m: T = K * F * d / 1000
-    // F in N, d in mm, T in N·mm. Divided by 1000 gives N·m.
-    const torque = (K * preloadForce * d) / 1000;
-
-    return {
-      As,
-      yieldLoad: yieldLoad / 1000, // kN
-      preloadForce: preloadForce / 1000, // kN
-      torque, // N·m
-    };
-  }, [bolt, grade, friction, preloadRatio]);
-
-  const copyToClipboard = () => {
-    const text = `--- Bolt Tightening Design Report ---
-Bolt Size: ${bolt.name} (d = ${bolt.d} mm)
-Strength Grade: ${grade.name}
-Friction Surface: ${friction.name} (K = ${friction.K})
-Preload Target: ${preloadRatio}% of yield limit
-Thread Stress Area (As): ${results.As} mm²
-Material Yield Limit: ${grade.yield} MPa
-Yield Load Limit: ${results.yieldLoad.toFixed(2)} kN
-Required Preload Tension (F): ${results.preloadForce.toFixed(2)} kN
-Required Tightening Torque (T): ${results.torque.toFixed(2)} N·m
-Generated via CADGuide.tools`;
-
-    navigator.clipboard.writeText(text);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const handleCopy = () => {
+    if (!res.valid) return;
+    const text = [
+      'Bolted Joint Torque & Preload Summary',
+      `Nominal Diameter d: ${dStr} mm | Tensile Stress Area As: ${asStr} mm2`,
+      `Yield Stress: ${rpStr} MPa | Preload Target: ${pctStr}% | Nut Factor K: ${kStr}`,
+      `Yield Load Limit: ${res.yieldLoadKn.toFixed(3)} kN`,
+      `Target Preload Force: ${res.preloadKn.toFixed(3)} kN`,
+      `Required Tightening Torque: ${res.torqueNm.toFixed(3)} N*m`,
+    ].join('\n');
+    navigator.clipboard.writeText(text).then(() => {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    }).catch(() => {});
   };
 
-  const isYieldDanger = preloadRatio >= 90;
-  const isYieldWarning = preloadRatio >= 80 && preloadRatio < 90;
-
-  // Bolt physical elongation animation offset based on preload tension ratio
-  const animStretching = useMemo(() => {
-    const ratio = preloadRatio / 100;
-    // Stretch scale between 1 and 1.05
-    return 1 + (ratio * 0.05);
-  }, [preloadRatio]);
+  const downloadCsv = () => {
+    if (!res.valid) return;
+    const rows = [
+      ['Bolt Tightening Torque & Preload Report', ''],
+      ['Nominal Diameter d (mm)', dStr],
+      ['Tensile Stress Area As (mm^2)', asStr],
+      ['Material Yield Limit (MPa)', rpStr],
+      ['Target Preload Utilization (%)', pctStr],
+      ['Nut Factor K', kStr],
+      ['Axial Yield Capacity (kN)', res.yieldLoadKn.toFixed(4)],
+      ['Target Preload Force (kN)', res.preloadKn.toFixed(4)],
+      ['Required Tightening Torque T (N*m)', res.torqueNm.toFixed(4)],
+    ];
+    const csv = rows.map((r) => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'bolt-torque-preload.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
 
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 text-slate-900">
-      {/* Parameters Panel */}
-      <div className="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-6 shadow-2xl border border-slate-800 space-y-6 print:bg-white print:text-black print:border-none print:shadow-none">
-        <div className="flex items-center justify-between pb-4 border-b border-slate-800 print:hidden">
-          <h2 className="text-lg font-black flex items-center gap-2">
+    <div className="space-y-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 text-slate-900">
+        <div className="lg:col-span-5 bg-slate-900 text-white rounded-3xl p-6 shadow-xl border border-slate-800 space-y-5">
+          <h2 className="text-lg font-black flex items-center gap-2 border-b border-slate-800 pb-3">
             <Wrench className="w-5 h-5 text-blue-400" />
-            <span>Fastening parameter design (Inputs)</span>
+            <span>Bolted Joint Inputs</span>
           </h2>
-        </div>
 
-        {/* Bolt size selection */}
-        <div className="space-y-2">
-          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
-            1. Bolt Size
-          </label>
-          <select
-            value={boltIdx}
-            onChange={(e) => setBoltIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
-          >
-            {BOLT_SIZES.map((b, i) => (
-              <option key={b.name} value={i}>
-                {b.name} (Nominal diameter: {b.d} mm / stress area: {b.As} mm²)
-              </option>
-))}
-          </select>
-          <div className="hidden print:block font-bold">
-            Bolt specification: {bolt.name}
+          <div>
+            <div className="text-xs font-black text-slate-400 uppercase mb-2">Metric Presets (M4 - M20)</div>
+            <div className="flex flex-wrap gap-1.5 mb-3">
+              {METRIC_BOLTS_PRESETS.map((b) => (
+                <button
+                  key={b.label}
+                  type="button"
+                  onClick={() => { setDStr(b.d); setAsStr(b.as); }}
+                  className={`px-2.5 py-1 rounded-lg text-xs font-black border ${dStr === b.d && asStr === b.as ? 'bg-blue-600 text-white border-blue-500' : 'bg-slate-800 text-slate-300 border-slate-700 hover:bg-slate-700'}`}
+                >
+                  {b.label}
+                </button>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs font-black text-slate-400 uppercase block mb-1">Diameter d (mm)</label>
+                <input type="text" inputMode="decimal" data-testid="input-dia" value={dStr} onChange={(e) => setDStr(e.target.value)} className="w-full h-10 px-3 rounded-xl bg-slate-800 border border-slate-700 text-sm font-bold text-white" />
+              </div>
+              <div>
+                <label className="text-xs font-black text-slate-400 uppercase block mb-1">Stress Area As (mm2)</label>
+                <input type="text" inputMode="decimal" data-testid="input-as" value={asStr} onChange={(e) => setAsStr(e.target.value)} className="w-full h-10 px-3 rounded-xl bg-slate-800 border border-slate-700 text-sm font-bold text-white" />
+              </div>
+            </div>
           </div>
-        </div>
 
-        {/* Strength Class */}
-        <div className="space-y-2">
-          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
-            2. Bolt Grade
-          </label>
-          <select
-            value={gradeIdx}
-            onChange={(e) => setGradeIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
-          >
-            {BOLT_GRADES.map((g, i) => (
-              <option key={g.name} value={i}>
-                {g.name} (Yield strength: {g.yield} MPa)
-              </option>
-))}
-          </select>
-          <div className="hidden print:block font-bold">
-            Property Class: {grade.name}
+          <div>
+            <div className="text-xs font-black text-slate-400 uppercase mb-1.5">Yield Strength Presets</div>
+            <div className="flex flex-wrap gap-1.5 mb-2">
+              {YIELD_PRESETS.map((g) => (
+                <button key={g.label} type="button" onClick={() => setRpStr(g.rp)} className="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">{g.label}</button>
+              ))}
+            </div>
+            <label className="text-xs font-black text-slate-400 uppercase block mb-1">Yield Stress (MPa)</label>
+            <input type="text" inputMode="decimal" data-testid="input-yield" value={rpStr} onChange={(e) => setRpStr(e.target.value)} className="w-full h-10 px-3 rounded-xl bg-slate-800 border border-slate-700 text-sm font-bold text-white" />
           </div>
-        </div>
 
-        {/* Friction / Surface condition */}
-        <div className="space-y-2">
-          <label className="text-base font-black text-slate-400 uppercase tracking-wider block">
-            3. Assembly surface friction condition (Friction Condition)
-          </label>
-          <select
-            value={frictionIdx}
-            onChange={(e) => setFrictionIdx(Number(e.target.value))}
-            className="w-full bg-slate-850 border border-slate-850 rounded-xl px-3.5 py-3 text-base font-bold text-white focus:outline-none print:hidden"
-          >
-            {FRICTION_COEFFICIENTS.map((f, i) => (
-              <option key={f.name} value={i}>
-                {f.name} (K = {f.K})
-              </option>
-))}
-          </select>
-          <div className="hidden print:block font-bold">
-            Friction coefficient (K): {friction.K}
+          <div>
+            <div className="text-xs font-black text-slate-400 uppercase mb-1.5">Nut Factor K Presets</div>
+            <div className="flex flex-wrap gap-1.5 mb-2">
+              {K_PRESETS.map((k) => (
+                <button key={k.label} type="button" onClick={() => setKStr(k.k)} className="px-2 py-1 rounded bg-slate-800 hover:bg-slate-700 text-xs font-bold text-slate-300">{k.label}</button>
+              ))}
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs font-black text-slate-400 uppercase block mb-1">Nut Factor K</label>
+                <input type="text" inputMode="decimal" data-testid="input-k" value={kStr} onChange={(e) => setKStr(e.target.value)} className="w-full h-10 px-3 rounded-xl bg-slate-800 border border-slate-700 text-sm font-bold text-white" />
+              </div>
+              <div>
+                <label className="text-xs font-black text-slate-400 uppercase block mb-1">Preload Ratio (%)</label>
+                <input type="text" inputMode="decimal" data-testid="input-pct" value={pctStr} onChange={(e) => setPctStr(e.target.value)} className="w-full h-10 px-3 rounded-xl bg-slate-800 border border-slate-700 text-sm font-bold text-white" />
+              </div>
+            </div>
           </div>
+
+          <button type="button" onClick={() => { setDStr('12'); setAsStr('84.3'); setRpStr('640'); setPctStr('75'); setKStr('0.15'); }} className="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-xs font-black text-slate-200">Reset</button>
         </div>
 
-        {/* Preload ratio */}
-        <div className="space-y-3 border-t border-slate-800/80 pt-5">
-          <div className="flex justify-between items-center text-base font-black">
-            <span className="text-slate-400 uppercase tracking-wider">4. Set tension ratio (Preload Rate)</span>
-            <span className={`${isYieldDanger ? 'text-red-400' : (isYieldWarning ? 'text-amber-400' : 'text-blue-400')} font-mono`}>
-              {preloadRatio}% (Yield limit)
+        <div className="lg:col-span-7 bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm space-y-6">
+          <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b border-slate-100">
+            <h3 className="text-lg font-black text-slate-900">Torque &amp; Preload Results</h3>
+            <div className="flex gap-2">
+              <button type="button" onClick={handleCopy} disabled={!res.valid} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-100 text-slate-700 hover:bg-slate-200 text-xs font-black disabled:opacity-50">
+                {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                {copied ? 'Copied' : 'Copy'}
+              </button>
+              <button type="button" onClick={downloadCsv} disabled={!res.valid} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-slate-900 text-white hover:bg-slate-800 text-xs font-black disabled:opacity-50">
+                <Download className="w-3.5 h-3.5" />
+                Export CSV
+              </button>
+            </div>
+          </div>
+
+          {!res.valid ? (
+            <div data-testid="validation-error" className="rounded-2xl bg-red-50 border border-red-200 px-5 py-4 text-base font-bold text-red-700">{res.error}</div>
+          ) : (
+            <>
+              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+                <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-1">Required Tightening Torque T = K * F_pre * d</div>
+                <div className="text-4xl sm:text-5xl font-black text-blue-900" data-testid="res-torque">{res.torqueNm.toFixed(3)} N*m</div>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                  <div className="text-xs font-bold text-slate-500 uppercase mb-1">Target Preload Force</div>
+                  <div className="text-2xl font-black text-slate-900" data-testid="res-preload">{res.preloadKn.toFixed(3)} kN</div>
+                  <div className="text-xs text-slate-500 mt-1">Axial Stress: {res.tensileStressMpa.toFixed(1)} MPa</div>
+                </div>
+                <div className="bg-slate-50 rounded-2xl p-5 border border-slate-100">
+                  <div className="text-xs font-bold text-slate-500 uppercase mb-1">Yield Load Limit</div>
+                  <div className="text-2xl font-black text-slate-900" data-testid="res-yield">{res.yieldLoadKn.toFixed(3)} kN</div>
+                </div>
+              </div>
+
+              {res.pctYield >= 85 && (
+                <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-sm">
+                  <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+                  <span>Preload ratio is {res.pctYield.toFixed(1)}% of nominal tensile yield capacity; verify torque wrench scatter margin.</span>
+                </div>
+              )}
+            </>
+          )}
+
+          <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100 flex items-start gap-2 text-xs text-slate-600">
+            <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+            <span>
+              Uses torque-preload relation T = K * F_pre * d (<a href="https://en.wikipedia.org/wiki/Bolted_joint" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline font-semibold">Wikipedia: Bolted joint</a>) and metric thread tensile stress areas M4-M20 from <a href="https://www.engineeringtoolbox.com/metric-threads-d_777.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline font-semibold">Engineering ToolBox</a>.
             </span>
           </div>
-          <input
-            type="range"
-            min="20"
-            max="100"
-            step="1"
-            value={preloadRatio}
-            onChange={(e) => setPreloadRatio(Number(e.target.value))}
-            className="w-full h-1.5 bg-slate-850 rounded-lg appearance-none cursor-pointer accent-blue-500 print:hidden"
-          />
-          <p className="text-sm text-slate-500">
-            * Mechanical engineering industry standard installation recommendations are 70% to 85% yield limit. 
-          </p>
         </div>
       </div>
 
-      {/* Right Outputs Panel */}
-      <div className="lg:col-span-7 space-y-6 flex flex-col justify-between">
-        {/* Results */}
-        <div className="bg-white rounded-3xl p-6 border border-slate-200/80 shadow-sm space-y-6">
-          <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-            <h3 className="text-md font-black text-slate-900 flex items-center gap-2">
-              <Cpu className="w-5 h-5 text-blue-500" />
-              <span>Bolt anti-loosening fastening mechanics report</span>
-            </h3>
-            <button
-              onClick={copyToClipboard}
-              className="px-3.5 py-1.5 rounded-xl bg-slate-100 text-slate-600 hover:bg-blue-600 hover:text-white transition-all text-base font-black flex items-center gap-1.5 border border-slate-200/50 print:hidden"
-            >
-              {copied ? <Check className="w-3.5 h-3.5" /> : null}
-              <span>{copied ? 'Copied' : 'Copy data'}</span>
-            </button>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-            <div className="space-y-1">
-              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
-                Target tightening torque (Torque T)
-              </span>
-              <div className="text-2xl font-black font-mono text-blue-600">
-                {results.torque.toFixed(2)} <span className="text-base text-slate-500 font-sans">N·m</span>
-              </div>
-              <p className="text-[9px] text-slate-400">
-                Torque wrench setting target value
-              </p>
-            </div>
-
-            <div className="space-y-1">
-              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
-                Required preload force (Preload Force F)
-              </span>
-              <div className="text-2xl font-black font-mono text-slate-800">
-                {results.preloadForce.toFixed(2)} <span className="text-base text-slate-500 font-sans">kN</span>
-              </div>
-              <p className="text-[9px] text-slate-400">
-                Bolt tension tensile force
-              </p>
-            </div>
-
-            <div className="space-y-1 col-span-2 md:col-span-1">
-              <span className="text-sm text-slate-400 font-bold uppercase tracking-wider">
-                ultimate yield bearing capacity
-              </span>
-              <div className="text-2xl font-black font-mono text-slate-700">
-                {results.yieldLoad.toFixed(1)} <span className="text-base text-slate-500 font-sans">kN</span>
-              </div>
-              <p className="text-[9px] text-slate-400">
-                Material tensile yield threshold
-              </p>
-            </div>
-          </div>
-
-          {/* Yield warnings */}
-          {isYieldDanger && (
-            <div className="flex gap-3 bg-red-50 border border-red-200 p-4 rounded-2xl text-red-800 text-base">
-              <AlertTriangle className="w-4 h-4 shrink-0 text-red-600 mt-0.5" />
-              <div>
-                <strong className="font-black">Bolt Yield Danger! </strong>
-                <p className="mt-0.5 text-red-700 font-medium">
-                  The tension preload force has reached {preloadRatio}%. When bearing the external dynamic load at work, (vibration or tension), Bolts are prone to permanent plastic elongation (necking) Causes preload force to collapse, or direct shearing/Tensile breaking. 
-                </p>
-              </div>
-            </div>
-)}
-
-          {isYieldWarning && !isYieldDanger && (
-            <div className="flex gap-3 bg-amber-50 border border-amber-200 p-4 rounded-2xl text-amber-800 text-base">
-              <Info className="w-4 h-4 shrink-0 text-amber-600 mt-0.5" />
-              <div>
-                <strong className="font-black">Critical Overload Warning (Overload Risk)</strong>
-                <p className="mt-0.5 text-amber-700">
-                  The preload is too high (already at the yield limit) {preloadRatio}% ). If the torque control accuracy is poor during assembly, Easy to yield locally, it is recommended to lower the assembly preload percentage. 
-                </p>
-              </div>
-            </div>
-)}
-        </div>
-
-        {/* Bolt stress visualizer */}
-        <div className="bg-slate-900 rounded-3xl p-6 border border-slate-800 shadow-xl relative overflow-hidden flex-grow flex flex-col justify-between print:bg-white print:border-slate-200">
-          <div className="flex justify-between items-center mb-3">
-            <span className="text-sm font-black text-slate-400 uppercase tracking-widest print:text-slate-500">
-              Fastening pair force tensile simulator
-            </span>
-          </div>
-
-          {/* SVG Frame */}
-          <div className="relative w-full h-[180px] bg-slate-950/80 rounded-2xl border border-slate-850 flex items-center justify-center">
-            <svg width="100%" height="100%" viewBox="0 0 400 200" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Clamping plates */}
-              <rect x="140" y="70" width="120" height="25" fill="#334155" stroke="#475569" strokeWidth="1.5" />
-              <rect x="140" y="95" width="120" height="25" fill="#1e293b" stroke="#475569" strokeWidth="1.5" />
-
-              {/* Bolt parts: Nut at top (fixed) */}
-              <rect x="175" y="45" width="50" height="25" fill="#64748b" stroke="#94a3b8" strokeWidth="1.5" rx="2" />
-              
-              {/* Bolt thread shank (stretching animation) */}
-              {/* If yielding, we shrink width slightly to show necking and color shifts to red */}
-              <g transform={`translate(200, 70) scale(${isYieldDanger ? 0.92 : 1}, ${animStretching}) translate(-200, -70)`}>
-                <rect
-                  x="188"
-                  y="70"
-                  width="24"
-                  height="50"
-                  fill={isYieldDanger ? '#ef4444' : (isYieldWarning ? '#f97316' : '#38bdf8')}
-                  stroke={isYieldDanger ? '#b91c1c' : '#475569'}
-                  strokeWidth="1.5"
-                />
-                
-                {/* Thread spirals */}
-                <line x1="188" y1="80" x2="212" y2="84" stroke="#475569" strokeWidth="1.5" />
-                <line x1="188" y1="90" x2="212" y2="94" stroke="#475569" strokeWidth="1.5" />
-                <line x1="188" y1="100" x2="212" y2="104" stroke="#475569" strokeWidth="1.5" />
-                <line x1="188" y1="110" x2="212" y2="114" stroke="#475569" strokeWidth="1.5" />
-              </g>
-
-              {/* Bottom Bolt Head */}
-              <g transform={`translate(0, ${(animStretching - 1) * 50})`}>
-                <rect x="175" y="120" width="50" height="22" fill="#64748b" stroke="#94a3b8" strokeWidth="1.5" rx="2" />
-              </g>
-
-              {/* Tensile Preload Force Arrows */}
-              <g stroke={isYieldDanger ? '#f87171' : '#60a5fa'} strokeWidth="2.5" fill="none">
-                {/* Upper Arrow pulling down on nut */}
-                <path d="M 200 20 L 200 40 M 195 35 L 200 40 L 205 35" />
-                {/* Lower Arrow pulling up on bolt head */}
-                <path d="M 200 175 L 200 150 M 195 155 L 200 150 L 205 155" />
-              </g>
-              
-              <text x="235" y="32" fill="#60a5fa" fontSize="9" fontWeight="bold">F (Tension)</text>
-              <text x="235" y="172" fill="#60a5fa" fontSize="9" fontWeight="bold">F (Preload)</text>
-
-              {/* Elongation Label if stretching */}
-              {preloadRatio > 20 && (
-                <text x="285" y="105" fill={isYieldDanger ? '#ef4444' : '#64748b'} fontSize="9.5" fontWeight="bold">
-                  {isYieldDanger ? 'Bolt necking deformation': 'Small elastic tension'}
-                </text>
-)}
-            </svg>
-          </div>
-
-          <p className="text-sm text-slate-400 leading-relaxed mt-4 print:text-slate-600">
-            * Simulation description: The tension arrow represents the tension pre-tightening inside the bolt. The blue/orange rod in the middle of the bolt changes with the slider to simulate real metal tensile elongation. When entering the limit area of more than 90%, the member is drawn with a pronounced tapering (necking simulation) To warn of the risk of plastic damage. 
-          </p>
-        </div>
-      </div>
-
-      <div className="lg:col-span-12 mt-4 print:hidden">
-        <RelatedTools />
-      </div>
+      <RelatedTools />
     </div>
-);
+  );
 }
