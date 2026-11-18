@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Batch 31 E2E Master Script: Tools 151-155
 // 151. ground-anchor-capacity-calculator
 // 152. grounding-grid-calculator

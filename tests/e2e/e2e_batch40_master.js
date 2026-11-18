@@ -1,9 +1,11 @@
-// Batch 40 E2E Master Script: Tools 196-200 (skipped mastercam-shortcuts-sheet)
+/* eslint-disable @typescript-eslint/no-require-imports */
+// Batch 40 E2E Master Script: Tools 196-200 (skipped mastercam-shortcuts-sheet) + #201 regression
 // 196. manifold-pressure-calculator
 // 197. manometer-pressure-calculator
 // 198. mass-unit-converter
-// 199. material-density-calculator
-// 200. material-properties-reference
+// 199. mat-foundation-stress-calculator
+// 200. material-density-calculator
+// 201. material-properties-reference (moved to Batch 41 #1 per review; retained in regression)
 
 const { chromium } = require('playwright');
 const assert = require('assert');
@@ -89,6 +91,12 @@ const BANNED_B40_TERMS = [
   'Inconel 718',
   'Monel 400',
   '~$1/kg',
+  'ASME Boiler',
+  'EN 13906',
+  'FKM Analytical',
+  'ACI 336.2R',
+  'differential settlement',
+  'punching shear',
 ];
 
 async function runTests() {
@@ -206,9 +214,82 @@ async function runTests() {
     console.log(`[PASS] ${label}`);
   }
 
-  // 199. material-density-calculator
+  // 199. mat-foundation-stress-calculator
   {
-    const label = '199 material-density-calculator';
+    const label = '199 mat-foundation-stress-calculator';
+    await openToolPage(page, `${BASE_URL}/toolbox/mat-foundation-stress-calculator`, '[data-testid="input-load"]');
+    const main = page.getByRole('main').last();
+    await assertZeroNumberInputs(main, label);
+    await verifyNegativeTerms(page, BANNED_B40_TERMS, label);
+
+    // Default: P=24000, L=22, W=16, t=1.2, gamma=24.5, qa=120
+    // A = 352, W_slab = 352*1.2*24.5 = 10348.8, total = 34348.8, q_net = 68.1818, q_gross = 97.5818, util = 81.3182%
+    approx(await main.locator('[data-testid="result-area"]').innerText(), 352, `${label} def area`);
+    approx(await main.locator('[data-testid="result-self-weight"]').innerText(), 10348.8, `${label} def selfWeight`);
+    approx(await main.locator('[data-testid="result-total-load"]').innerText(), 34348.8, `${label} def totalLoad`);
+    approx(await main.locator('[data-testid="result-net-pressure"]').innerText(), 68.181818, `${label} def qNet`);
+    approx(await main.locator('[data-testid="result-contact-pressure"]').innerText(), 97.581818, `${label} def qGross`);
+    approx(await main.locator('[data-testid="result-utilization"]').innerText(), 81.318182, `${label} def util`);
+    assert(
+      (await main.locator('[data-testid="badge-status"]').innerText()).includes('PASS'),
+      `${label} def pass badge`
+    );
+
+    // Preset soft-clay: P=36000, L=20, W=15, t=1.5, gamma=24.0, qa=130 -> qGross=156 (FAIL)
+    await main.locator('[data-testid="preset-soft-clay"]').click();
+    approx(await main.locator('[data-testid="result-area"]').innerText(), 300, `${label} clay area`);
+    approx(await main.locator('[data-testid="result-self-weight"]').innerText(), 10800, `${label} clay selfWeight`);
+    approx(await main.locator('[data-testid="result-total-load"]').innerText(), 46800, `${label} clay totalLoad`);
+    approx(await main.locator('[data-testid="result-contact-pressure"]').innerText(), 156, `${label} clay qGross`);
+    approx(await main.locator('[data-testid="result-utilization"]').innerText(), 120, `${label} clay util`);
+    assert(
+      (await main.locator('[data-testid="badge-status"]').innerText()).includes('FAIL'),
+      `${label} clay fail badge`
+    );
+
+    // Edit gamma_c to 25: selfWeight = 300*1.5*25 = 11250, total = 47250, qGross = 157.5, util = 121.1538%
+    await main.locator('[data-testid="input-gamma"]').fill('25');
+    approx(await main.locator('[data-testid="result-self-weight"]').innerText(), 11250, `${label} gamma25 selfWeight`);
+    approx(await main.locator('[data-testid="result-total-load"]').innerText(), 47250, `${label} gamma25 total`);
+    approx(await main.locator('[data-testid="result-contact-pressure"]').innerText(), 157.5, `${label} gamma25 qGross`);
+    approx(await main.locator('[data-testid="result-utilization"]').innerText(), 121.153846, `${label} gamma25 util`);
+
+    const [dl] = await Promise.all([page.waitForEvent('download'), main.locator('[data-testid="btn-download"]').click()]);
+    const csv = await readDownloadText(dl);
+    assertAscii(csv, `${label} csv`);
+    assert(csv.includes('concrete_unit_weight_gamma,25,kN/m3'), `${label} csv gamma`);
+    assert(csv.includes('gross_contact_pressure,157.5000,kPa'), `${label} csv qGross`);
+    assert(csv.includes('bearing_check_status,FAIL,status'), `${label} csv fail status`);
+
+    // Invalid inputs -> must display dash and no NaN
+    for (const badVal of ['', 'abc', '-5', '0']) {
+      await main.locator('[data-testid="input-gamma"]').fill(badVal);
+      assert.strictEqual(
+        (await main.locator('[data-testid="result-contact-pressure"]').innerText()).trim(),
+        '—',
+        `${label} invalid "${badVal}" contact pressure dash`
+      );
+      assert.strictEqual(
+        (await main.locator('[data-testid="result-self-weight"]').innerText()).trim(),
+        '—',
+        `${label} invalid "${badVal}" selfWeight dash`
+      );
+      await assertNoNan(main, `${label} invalid "${badVal}"`);
+    }
+
+    await main.locator('[data-testid="btn-reset"]').click();
+    approx(await main.locator('[data-testid="result-contact-pressure"]').innerText(), 97.581818, `${label} reset qGross`);
+    assert(
+      (await main.locator('[data-testid="badge-status"]').innerText()).includes('PASS'),
+      `${label} reset pass badge`
+    );
+    await assertClipboardRejectSafe(page, main, label);
+    console.log(`[PASS] ${label}`);
+  }
+
+  // 200. material-density-calculator
+  {
+    const label = '200 material-density-calculator';
     await openToolPage(page, `${BASE_URL}/toolbox/material-density-calculator`, '[data-testid="input-rho"]');
     const main = page.getByRole('main').last();
     await assertZeroNumberInputs(main, label);
@@ -237,9 +318,9 @@ async function runTests() {
     console.log(`[PASS] ${label}`);
   }
 
-  // 200. material-properties-reference
+  // 201. material-properties-reference (Batch 41 #1)
   {
-    const label = '200 material-properties-reference';
+    const label = '201 material-properties-reference';
     await openToolPage(page, `${BASE_URL}/toolbox/material-properties-reference`, '[data-testid="input-search"]');
     const main = page.getByRole('main').last();
     await assertZeroNumberInputs(main, label);

@@ -4222,14 +4222,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'mat-foundation-stress-calculator',
-    title: "Mat Foundation Stress & Settlement Calculator",
-    description: "Calculate mat foundation contact pressure, differential settlement, and required thickness.",
-    detailDesc: "contact_pressure = total_load/area. Rigidity K = E_c*I_mat/(E_s*B^4). K>0.5 rigid, else flexible. Settlement limit L/500 to L/1000. Thickness from one-way and punching shear.",
+    title: "Mat Foundation Contact Pressure Calculator",
+    description: "Calculate uniform gross and net soil contact pressure, concrete slab self-weight, and allowable bearing utilization for rigid concentric mat foundations.",
+    detailDesc: "area = L * W; slab_self_weight = gamma_c * L * W * t; q_gross = (P + slab_self_weight) / (L * W); utilization = q_gross / q_allowable under rigid concentric loading assumption.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["mat foundation calculator","raft foundation","contact pressure","differential settlement","foundation thickness","mat slab design","raft slab","finite element foundation","rigid mat","flexible mat","foundation bearing"]
+    keywords: ["mat foundation calculator","raft foundation","soil contact pressure","bearing capacity check","mat slab self-weight","rigid mat foundation","gross bearing pressure"]
   },
   {
     slug: 'soil-compaction-calculator',

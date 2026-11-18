@@ -8567,50 +8567,62 @@
     "outputs": []
   },
   "mat-foundation-stress-calculator": {
-    "title": "Mat Foundation Stress & Settlement Calculator",
-    "description": "Calculate mat foundation contact pressure, differential settlement, and required thickness.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "q_contact = (Σ P_col + W_slab) / (L × B) ≤ q_allowable (ACI 336.2R Suggested Design for Foundation Mats)",
+    "title": "Mat Foundation Contact Pressure Calculator",
+    "description": "Calculate uniform gross and net soil contact pressure, concrete slab self-weight, and allowable bearing utilization for rigid concentric mat foundations.",
+    "discipline": "Geotechnical & Shallow Foundation Engineering",
+    "standards": "Static Vertical Equilibrium & Rigid Concentric Shallow Foundation Contact Pressure Analysis",
+    "cadContext": "Extract mat slab plan dimensions (L, W) and uniform thickness (t) from structural BIM/CAD foundation drawings to cross-check average gross contact pressure before geotechnical FEA modeling.",
+    "formula": "A = L * W; W_slab = gamma_c * A * t; q_gross = (P_col + W_slab) / A <= q_allowable (rigid concentric mat assumption; gamma_c user-editable)",
     "inputs": [
       {
-        "label": "Total Superstructure Column Load (kN)",
+        "label": "Total Superstructure Column Load P (kN)",
         "val": "24000"
       },
       {
-        "label": "Raft Foundation Length (m)",
+        "label": "Mat Foundation Length L (m)",
         "val": "22"
       },
       {
-        "label": "Raft Foundation Width (m)",
+        "label": "Mat Foundation Width W (m)",
         "val": "16"
       },
       {
-        "label": "Concrete Slab Thickness (m)",
+        "label": "Concrete Slab Thickness t (m)",
         "val": "1.2"
       },
       {
-        "label": "Allowable Soil Bearing Capacity (kPa)",
+        "label": "Assumed Concrete Unit Weight γc (kN/m³)",
+        "val": "24.5"
+      },
+      {
+        "label": "Allowable Gross Soil Bearing Capacity qa (kPa)",
         "val": "120"
       }
     ],
     "outputs": [
       {
-        "label": "Net Uniform Soil Contact Pressure",
-        "val": "97.6 kPa"
+        "label": "Uniform Gross Soil Contact Pressure (q_gross)",
+        "val": "97.58 kPa"
       },
       {
-        "label": "Raft Concrete Slab Self-Weight",
-        "val": "10.3 MN"
+        "label": "Net Load Pressure (q_net)",
+        "val": "68.18 kPa"
       },
       {
-        "label": "Total Gross Vertical Burden",
-        "val": "34.3 MN"
+        "label": "Mat Footprint Area (A)",
+        "val": "352.00 m²"
       },
       {
-        "label": "Allowable Bearing Pressure Capacity",
-        "val": "120 kPa"
+        "label": "Slab Self-Weight (W_slab)",
+        "val": "10348.80 kN"
+      },
+      {
+        "label": "Total Gross Load (P + W_slab)",
+        "val": "34348.80 kN"
+      },
+      {
+        "label": "Bearing Utilization",
+        "val": "81.32 %"
       }
     ]
   },

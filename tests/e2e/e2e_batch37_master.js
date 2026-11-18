@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Batch 37 E2E Master Script: Tools 181-185
 // 181. iso-2768-general-tolerances-reference
 // 182. iso-286-limits-fits-reference

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Batch 35 E2E Master Script: Tools 171-175
 // 171. ifc-element-quantity-calculator
 // 172. ifc-entity-counter

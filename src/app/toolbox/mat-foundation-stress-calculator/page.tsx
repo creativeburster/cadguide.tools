@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Mat Foundation Stress & Settlement Calculator",
-  description: "Calculate mat foundation contact pressure, differential settlement, and required thickness.",
+  title: "Mat Foundation Contact Pressure Calculator",
+  description: "Calculate uniform gross and net soil contact pressure, concrete slab self-weight, and allowable bearing utilization for rigid concentric mat foundations.",
   path: '/toolbox/mat-foundation-stress-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Mat Foundation Stress & Settlement Calculator", path: '/toolbox/mat-foundation-stress-calculator' },
+    { name: "Mat Foundation Contact Pressure Calculator", path: '/toolbox/mat-foundation-stress-calculator' },
   ]);
 
   return (
@@ -29,10 +29,10 @@ export default function CalculatorPage() {
               Engineering Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Mat Foundation Stress & Settlement Calculator
+              Mat Foundation Contact Pressure Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate mat foundation contact pressure, differential settlement, and required thickness.
+              Calculate uniform gross and net soil contact pressure, concrete slab self-weight, and allowable bearing utilization for rigid concentric mat foundations.
             </p>
           </div>
         </section>

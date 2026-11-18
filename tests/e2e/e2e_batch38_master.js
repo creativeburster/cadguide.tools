@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Batch 38 E2E Master Script: Tools 186-190 (skipped kicad-shortcuts-sheet)
 // 186. land-survey-area-calculator
 // 187. laser-cutting-calculator

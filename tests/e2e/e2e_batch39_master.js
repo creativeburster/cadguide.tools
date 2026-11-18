@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Batch 39 E2E Master Script: Tools 191-195
 // 191. lift-force-calculator
 // 192. lighting-lux-calculator

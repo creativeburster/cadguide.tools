@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Batch 33 E2E Master Script: Tools 161-165
 // 161. helical-gear-calculator
 // 162. hertz-contact-stress-calculator

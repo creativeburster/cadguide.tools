@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Batch 32 E2E Master Script: Tools 156-160
 // 156. harmonic-drive-calculator
 // 157. heat-exchanger-calculator

@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Batch 36 E2E Master Script: Tools 176-180 (skipped inventor-shortcuts-sheet)
 // 176. injection-clamping-force-calculator
 // 177. injection-molding-clamp-calculator

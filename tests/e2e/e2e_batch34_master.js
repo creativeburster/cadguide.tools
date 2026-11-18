@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
 // Batch 34 E2E Master Script: Tools 166-170
 // 166. horsepower-torque-calculator
 // 167. hot-water-circulation-calculator
