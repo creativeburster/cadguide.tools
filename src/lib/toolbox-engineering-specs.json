@@ -7953,142 +7953,114 @@
     ]
   },
   "injection-clamping-force-calculator": {
-    "title": "Injection Molding Clamping Force Calculator",
-    "description": "Calculate the required clamping force (tons) for injection molding based on projected area, cavity count, and material cavity pressure.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "F_clamp = A_projected × P_cavity × SF / 1000 (Tonnes, SPI / Euromap Molding Standards)",
+    "title": "Injection Mold Clamping Force Calculator",
+    "description": "Calculate required injection molding machine clamp force from projected area, cavity count, runner allowance, and cavity pressure.",
+    "discipline": "Polymer Processing & Mold Tooling Mechanics",
+    "standards": "Hydrostatic Force Balance (F = A_proj * P_cav * SF)",
+    "cadContext": "Extract exact parting-plane projected area in CAD (including runner and sprue projected area) and verify safety margin before assigning press tonnage.",
+    "formula": "F_kN = N * A_part * (1 + runner/100) * P_cav * 0.1 * SF",
     "inputs": [
       {
-        "label": "Material",
-        "val": "PP (Polypropylene)"
+        "label": "Part Projected Area / Cavities / Runner",
+        "val": "120 cm2 / 4 cavities / +15%"
       },
       {
-        "label": "Projected Area per Cavity (cm²)",
-        "val": "100"
+        "label": "Avg Cavity Pressure / Safety Factor",
+        "val": "40 MPa / 1.2"
       }
     ],
     "outputs": [
       {
-        "label": "Cavity Pressure",
-        "val": "30 MPa"
-      },
-      {
         "label": "Total Projected Area",
-        "val": "100 cm²"
+        "val": "552.00 cm2"
       },
       {
-        "label": "Safety Factor",
-        "val": "1.2×"
+        "label": "Clamping Force",
+        "val": "270.18 metric tonnes (2649.60 kN / 297.83 US tons)"
       }
     ]
   },
   "injection-molding-clamp-calculator": {
-    "title": "Injection Molding Clamp Force Calculator",
-    "description": "Calculate required clamp force for injection molding from cavity pressure and projected area.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "F = P * A * safety_factor",
+    "title": "Injection Molding Machine Clamp Sizing Calculator",
+    "description": "Size clamp tonnage and evaluate L/t flow length ratio directly from rectangular or circular part dimensions.",
+    "discipline": "Injection Mold Press Sizing & Flow-Path Screening",
+    "standards": "Projected Cavity Force Balance & L/t Flow Path Ratio",
+    "cadContext": "Evaluate maximum gate-to-edge flow length L relative to nominal wall thickness t alongside total press tonnage to catch thin-wall short-shot risks early.",
+    "formula": "A_tot = N * A_geom / 100 (cm2), F_kN = A_tot * P_cav * 0.1 * SF, Ratio = L_flow / t_wall",
     "inputs": [
       {
-        "label": "Cavity Pressure (MPa)",
-        "val": "40"
+        "label": "Part Geometry (Rect 180x120 mm, t=2.2 mm, Flow=160 mm)",
+        "val": "2 cavities"
       },
       {
-        "label": "Projected Area (cm2)",
-        "val": "100"
-      },
-      {
-        "label": "Safety Factor",
-        "val": "1.2"
+        "label": "Cavity Pressure / Safety Factor",
+        "val": "42 MPa / 1.15"
       }
     ],
     "outputs": [
       {
         "label": "Clamping Force",
-        "val": "480.00 kN"
+        "val": "212.77 tonnes (2086.56 kN)"
       },
       {
-        "label": "Press Tonnage",
-        "val": "48.930 ton"
+        "label": "Total Area / L/t Ratio",
+        "val": "432.00 cm2 / 72.73 : 1"
       }
     ]
   },
   "insulation-r-value-calculator": {
-    "title": "Insulation R-Value Calculator",
-    "description": "Calculate thermal resistance for multi-layer insulation assemblies.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "R_total = sum(thickness/k), U = 1/R",
+    "title": "Wall & Roof Insulation R-Value Calculator",
+    "description": "Calculate series multi-layer thermal resistance (R-value), U-value, and steady-state heat flux.",
+    "discipline": "Steady-State Heat Transfer & Building Envelope Conduction",
+    "standards": "Fourier One-Dimensional Series Conduction & Surface Film Resistance",
+    "cadContext": "Assemble multi-layer wall or roof cross sections in mm and thermal conductivity W/mK to evaluate total R-value, U-value, and heat flux before thermal bridge detailing.",
+    "formula": "R_tot = R_si + sum(t_i / k_i) + R_se, U = 1 / R_tot, q = U * dT",
     "inputs": [
       {
-        "label": "Layer1 k (W/mK)",
-        "val": "0.04"
+        "label": "Assembly Layers",
+        "val": "Gypsum 12.5mm (0.21), Mineral Wool 120mm (0.036), Brick 105mm (0.77)"
       },
       {
-        "label": "Layer1 Thick (mm)",
-        "val": "50"
-      },
-      {
-        "label": "Layer2 k (W/mK)",
-        "val": "0.5"
-      },
-      {
-        "label": "Layer2 Thick (mm)",
-        "val": "200"
+        "label": "Surface Films R_si / R_se / dT",
+        "val": "0.13 / 0.04 m2K/W / 20 K"
       }
     ],
     "outputs": [
       {
-        "label": "R-Value Total",
-        "val": "1.650 m2K/W"
+        "label": "Total R-Value (SI / US)",
+        "val": "3.699 m2K/W (R-21.01)"
       },
       {
-        "label": "U-Value",
-        "val": "0.606061 W/m2K"
+        "label": "U-Value / Heat Flux",
+        "val": "0.2703 W/m2K / 5.41 W/m2"
       }
     ]
   },
   "insulation-thickness-calculator": {
-    "title": "Insulation Thickness Calculator",
-    "description": "Calculate required insulation thickness for target heat loss or surface temperature.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "Q = k*A*dT/(t+L_ins)",
+    "title": "Pipe Insulation Thickness Calculator",
+    "description": "Solve exact cylindrical radial conduction and exterior convection thickness for a target heat loss per meter.",
+    "discipline": "Cylindrical Pipe Thermal Insulation & Heat Transfer",
+    "standards": "Radial Cylindrical Fourier Conduction + Outer Surface Convection Balance",
+    "cadContext": "Compute minimum insulation cladding thickness around process piping to avoid clearance clashes on pipe racks while capping heat loss per meter.",
+    "formula": "R_lin(t) = ln((r1+t)/r1)/(2*pi*k) + 1/(2*pi*(r1+t)*h_out), Q = |Tp - Ta| / R_lin",
     "inputs": [
       {
-        "label": "Pipe Temp (C)",
-        "val": "150"
+        "label": "Pipe Temp / Ambient Temp / Pipe OD",
+        "val": "150 C / 25 C / 100 mm"
       },
       {
-        "label": "Ambient Temp (C)",
-        "val": "25"
-      },
-      {
-        "label": "Insulation k (W/mK)",
-        "val": "0.04"
-      },
-      {
-        "label": "Max Heat Loss (W/m)",
-        "val": "30"
-      },
-      {
-        "label": "Pipe Dia (mm)",
-        "val": "100"
+        "label": "k / h_out / Max Heat Loss",
+        "val": "0.04 W/mK / 10 W/m2K / 30 W/m"
       }
     ],
     "outputs": [
       {
-        "label": "Insulation Thickness",
-        "val": "52.360 mm"
+        "label": "Required Thickness / Outer Dia",
+        "val": "88.42 mm / 276.85 mm"
       },
       {
-        "label": "Surface Temp",
-        "val": "29.665 C"
+        "label": "Surface Temp / Solved Heat Loss",
+        "val": "28.45 C / 30.00 W/m"
       }
     ]
   },
@@ -8103,50 +8075,26 @@
     "outputs": []
   },
   "involute-gear-calculator": {
-    "title": "Involute Gear Profile Calculator",
-    "description": "Calculate involute gear profile parameters: base circle, tooth thickness, and contact ratio.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "db=d*cos(a), contact ratio = sqrt(rb2^2-rb1^2)-sqrt(ra2^2-rb2^2))/(pi*m*cos(a)",
+    "title": "Involute Gear Geometry Calculator",
+    "description": "Calculate pitch diameter, base circle diameter, center distance, and transverse contact ratio for spur gears.",
+    "discipline": "Spur Gear Kinematics & Involute Tooth Geometry",
+    "standards": "Standard Full-Depth Involute Spur Gear Relations (ha = m)",
+    "cadContext": "Verify base circle diameters, exact shaft center distance a = m*(z1+z2)/2, and transverse contact ratio epsilon_alpha >= 1.2 before generating CAD gear teeth.",
+    "formula": "db = m*z*cos(alpha), da = d + 2*m, eps = (sqrt(ra1^2-rb1^2)+sqrt(ra2^2-rb2^2)-a*sin(alpha))/(pi*m*cos(alpha))",
     "inputs": [
       {
-        "label": "Module m (mm)",
-        "val": "2"
-      },
-      {
-        "label": "Teeth z1",
-        "val": "20"
-      },
-      {
-        "label": "Teeth z2",
-        "val": "40"
-      },
-      {
-        "label": "Pressure Angle (deg)",
-        "val": "20"
+        "label": "Module / Pinion z1 / Gear z2 / Pressure Angle",
+        "val": "2 mm / 20 / 40 / 20 deg"
       }
     ],
     "outputs": [
       {
-        "label": "Base Circle d1",
-        "val": "37.588 mm"
-      },
-      {
-        "label": "Base Circle d2",
-        "val": "75.175 mm"
-      },
-      {
-        "label": "Pitch Dia d1",
-        "val": "40.000 mm"
-      },
-      {
-        "label": "Pitch Dia d2",
-        "val": "80.000 mm"
-      },
-      {
         "label": "Contact Ratio",
-        "val": "1.635"
+        "val": "1.6352"
+      },
+      {
+        "label": "Base Circles db1 / db2",
+        "val": "37.588 mm / 75.175 mm"
       }
     ]
   },

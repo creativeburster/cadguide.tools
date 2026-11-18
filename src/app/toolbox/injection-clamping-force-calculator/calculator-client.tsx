@@ -1,66 +1,111 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Download } from 'lucide-react';
+import { Gauge, RotateCcw, Copy, Download, Check, AlertTriangle } from 'lucide-react';
 
-const MATERIALS = [
-  { name: 'PP (Polypropylene)', cavityPressure: 30, color: '#3b82f6' },
-  { name: 'PE (Polyethylene)', cavityPressure: 25, color: '#10b981' },
-  { name: 'ABS', cavityPressure: 40, color: '#f59e0b' },
-  { name: 'PC (Polycarbonate)', cavityPressure: 50, color: '#ef4444' },
-  { name: 'Nylon (PA6)', cavityPressure: 45, color: '#8b5cf6' },
-  { name: 'PS (Polystyrene)', cavityPressure: 35, color: '#06b6d4' },
-  { name: 'PMMA (Acrylic)', cavityPressure: 45, color: '#ec4899' },
-  { name: 'POM (Delrin)', cavityPressure: 50, color: '#84cc16' },
-  { name: 'Custom', cavityPressure: 40, color: '#64748b' },
-];
+const POS_RE = /^(?:\d+(?:\.\d*)?|\.\d+)$/;
+const INT_RE = /^\d+$/;
 
-export default function InjectionClampingClient() {
-  const [materialIdx, setMaterialIdx] = useState(0);
-  const [customPressure, setCustomPressure] = useState(40);
-  const [projectedArea, setProjectedArea] = useState(100); // cm²
-  const [cavities, setCavities] = useState(1);
-  const [safetyFactor, setSafetyFactor] = useState(1.2);
+function parsePos(raw: string): number | null {
+  const t = raw.trim();
+  if (!POS_RE.test(t)) return null;
+  const v = Number(t);
+  return Number.isFinite(v) && v > 0 ? v : null;
+}
 
-  const cavityPressure = materialIdx === 8 ? customPressure : MATERIALS[materialIdx].cavityPressure;
+function parseNonNeg(raw: string): number | null {
+  const t = raw.trim();
+  if (!POS_RE.test(t)) return null;
+  const v = Number(t);
+  return Number.isFinite(v) && v >= 0 ? v : null;
+}
 
-  const results = useMemo(() => {
-    // F = P × A × n × SF
-    // P in MPa (bar/10), A in cm² → convert to m² (×0.0001)
-    // F (N) = P (MPa) × A (m²) × n × SF
-    // F (tons) = F (N) / 9810
-    const areaM2 = projectedArea * 0.0001 * cavities;
-    const forceN = cavityPressure * 1e6 * areaM2 * safetyFactor;
-    const forceTons = forceN / 9810;
-    const forceKN = forceN / 1000;
+function parsePosInt(raw: string): number | null {
+  const t = raw.trim();
+  if (!INT_RE.test(t)) return null;
+  const v = Number(t);
+  return Number.isInteger(v) && v >= 1 ? v : null;
+}
 
-    return {
-      forceTons: forceTons.toFixed(1),
-      forceKN: forceKN.toFixed(1),
-      areaTotal: (projectedArea * cavities).toFixed(0),
-      cavityPressure,
-    };
-  }, [cavityPressure, projectedArea, cavities, safetyFactor]);
+export default function InjectionClampingForceCalculatorClient() {
+  const [partAreaStr, setPartAreaStr] = useState('120');
+  const [cavitiesStr, setCavitiesStr] = useState('4');
+  const [runnerPctStr, setRunnerPctStr] = useState('15');
+  const [pressureStr, setPressureStr] = useState('40');
+  const [safetyStr, setSafetyStr] = useState('1.2');
+  const [copied, setCopied] = useState(false);
 
-  const downloadCsv = () => {
-    const csv = [
-      ['Injection Molding Clamping Force Report', ''],
-      ['Date', new Date().toLocaleDateString()],
-      ['Material', MATERIALS[materialIdx].name],
-      ['', ''],
-      ['Input Parameters', ''],
-      ['Projected Area per Cavity (cm²)', projectedArea],
-      ['Number of Cavities', cavities],
-      ['Cavity Pressure (MPa)', results.cavityPressure],
-      ['Safety Factor', safetyFactor],
-      ['', ''],
-      ['Calculated Results', ''],
-      ['Total Projected Area (cm²)', results.areaTotal],
-      ['Clamping Force (tons)', results.forceTons],
-      ['Clamping Force (kN)', results.forceKN],
-    ].map(r => r.join(',')).join('\n');
+  const partArea = parsePos(partAreaStr);
+  const cavities = parsePosInt(cavitiesStr);
+  const runnerPct = parseNonNeg(runnerPctStr);
+  const pressure = parsePos(pressureStr);
+  const sf = parsePos(safetyStr);
 
+  const isValid =
+    partArea !== null &&
+    cavities !== null &&
+    runnerPct !== null &&
+    pressure !== null &&
+    sf !== null &&
+    sf >= 1;
+
+  let totalAreaCm2: number | null = null;
+  let clampKn: number | null = null;
+  let clampTonnes: number | null = null;
+  let clampUsTons: number | null = null;
+
+  if (isValid && partArea !== null && cavities !== null && runnerPct !== null && pressure !== null && sf !== null) {
+    totalAreaCm2 = cavities * partArea * (1 + runnerPct / 100);
+    clampKn = totalAreaCm2 * pressure * 0.1 * sf;
+    clampTonnes = clampKn / 9.80665;
+    clampUsTons = clampKn / 8.896443230521;
+  }
+
+  const fmt = (n: number | null, dec: number) => (n !== null && Number.isFinite(n) ? n.toFixed(dec) : '—');
+
+  const applyPreset = (a: string, n: string, r: string, p: string, s: string) => {
+    setPartAreaStr(a);
+    setCavitiesStr(n);
+    setRunnerPctStr(r);
+    setPressureStr(p);
+    setSafetyStr(s);
+  };
+
+  const handleReset = () => applyPreset('120', '4', '15', '40', '1.2');
+
+  const handleCopy = async () => {
+    if (!isValid || totalAreaCm2 === null || clampKn === null || clampTonnes === null || clampUsTons === null) return;
+    const text = [
+      'Injection Mold Clamping Force Summary',
+      `Part Area: ${partArea} cm2 x ${cavities} cavities (+${runnerPct}% runner) = ${totalAreaCm2.toFixed(2)} cm2`,
+      `Cavity Pressure: ${pressure} MPa, Safety Factor: ${sf}`,
+      `Required Clamping Force: ${clampTonnes.toFixed(2)} metric tonnes (${clampKn.toFixed(2)} kN / ${clampUsTons.toFixed(2)} US tons)`,
+    ].join('\n');
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const handleDownload = () => {
+    if (!isValid || totalAreaCm2 === null || clampKn === null || clampTonnes === null || clampUsTons === null) return;
+    const rows = [
+      ['parameter', 'value', 'unit'],
+      ['part_projected_area', String(partArea), 'cm2'],
+      ['cavity_count', String(cavities), 'pcs'],
+      ['runner_allowance', String(runnerPct), '%'],
+      ['cavity_pressure', String(pressure), 'MPa'],
+      ['safety_factor', String(sf), 'ratio'],
+      ['total_projected_area', totalAreaCm2.toFixed(4), 'cm2'],
+      ['clamping_force_kn', clampKn.toFixed(4), 'kN'],
+      ['clamping_force_tonnes', clampTonnes.toFixed(4), 'tonnes'],
+      ['clamping_force_us_tons', clampUsTons.toFixed(4), 'short_tons'],
+    ];
+    const csv = rows.map(r => r.join(',')).join('\n');
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -76,115 +121,184 @@ export default function InjectionClampingClient() {
         <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
-              <Settings className="w-5 h-5" />
+              <Gauge className="w-5 h-5" />
             </div>
-            <h2 className="text-lg font-black text-slate-900 tracking-tight">Parameters</h2>
+            <h2 className="text-lg font-black text-slate-900 tracking-tight">Mold Parameters</h2>
           </div>
 
           <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Material</label>
-            <select
-              value={materialIdx}
-              onChange={e => setMaterialIdx(parseInt(e.target.value))}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all"
-            >
-              {MATERIALS.map((m, i) => <option key={m.name} value={i}>{m.name}</option>)}
-            </select>
+            <div className="text-sm font-black text-slate-400 uppercase tracking-wider mb-2">Quick Presets</div>
+            <div className="grid grid-cols-1 gap-2">
+              <button
+                type="button"
+                data-testid="preset-4cav-abs"
+                onClick={() => applyPreset('120', '4', '15', '40', '1.2')}
+                className="text-left px-3 py-2 rounded-xl text-sm font-bold bg-slate-50 hover:bg-blue-50 text-slate-700 border border-slate-200 transition-colors"
+              >
+                4-Cavity ABS Brackets (120 cm2, 40 MPa)
+              </button>
+              <button
+                type="button"
+                data-testid="preset-single-housing"
+                onClick={() => applyPreset('450', '1', '8', '45', '1.25')}
+                className="text-left px-3 py-2 rounded-xl text-sm font-bold bg-slate-50 hover:bg-blue-50 text-slate-700 border border-slate-200 transition-colors"
+              >
+                Single Large Housing (450 cm2, 45 MPa)
+              </button>
+              <button
+                type="button"
+                data-testid="preset-16cav-cap"
+                onClick={() => applyPreset('18', '16', '22', '35', '1.15')}
+                className="text-left px-3 py-2 rounded-xl text-sm font-bold bg-slate-50 hover:bg-blue-50 text-slate-700 border border-slate-200 transition-colors"
+              >
+                16-Cavity PP Caps (18 cm2, 35 MPa)
+              </button>
+            </div>
           </div>
 
-          {materialIdx === 8 && (
+          <div className="space-y-4">
             <div>
-              <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Cavity Pressure (MPa)</label>
-              <input type="number" step="1" value={customPressure} onChange={e => setCustomPressure(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
+              <label className="text-sm font-black text-slate-500 uppercase tracking-wider block mb-1">Single Part Area (cm2)</label>
+              <input
+                type="text"
+                inputMode="decimal"
+                data-testid="input-area"
+                value={partAreaStr}
+                onChange={e => setPartAreaStr(e.target.value)}
+                className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-sm font-black text-slate-500 uppercase tracking-wider block mb-1">Cavities N</label>
+                <input
+                  type="text"
+                  inputMode="numeric"
+                  data-testid="input-cavities"
+                  value={cavitiesStr}
+                  onChange={e => setCavitiesStr(e.target.value)}
+                  className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              <div>
+                <label className="text-sm font-black text-slate-500 uppercase tracking-wider block mb-1">Runner (%)</label>
+                <input
+                  type="text"
+                  inputMode="decimal"
+                  data-testid="input-runner"
+                  value={runnerPctStr}
+                  onChange={e => setRunnerPctStr(e.target.value)}
+                  className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+            </div>
+            <div>
+              <label className="text-sm font-black text-slate-500 uppercase tracking-wider block mb-1">Avg Cavity Pressure (MPa)</label>
+              <input
+                type="text"
+                inputMode="decimal"
+                data-testid="input-pressure"
+                value={pressureStr}
+                onChange={e => setPressureStr(e.target.value)}
+                className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label className="text-sm font-black text-slate-500 uppercase tracking-wider block mb-1">Safety Factor (&ge; 1.0)</label>
+              <input
+                type="text"
+                inputMode="decimal"
+                data-testid="input-safety"
+                value={safetyStr}
+                onChange={e => setSafetyStr(e.target.value)}
+                className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          {!isValid && (
+            <div data-testid="validation-error" className="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-sm font-bold flex items-start gap-2">
+              <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+              <span>Area and pressure must be &gt; 0, cavity count an integer &ge; 1, runner &ge; 0, and safety factor &ge; 1.0.</span>
             </div>
           )}
 
-          <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Projected Area per Cavity (cm²)</label>
-            <input type="number" step="1" value={projectedArea} onChange={e => setProjectedArea(parseFloat(e.target.value) || 0)} className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-blue-600/5 focus:bg-white transition-all" />
-          </div>
-
-          <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Number of Cavities</label>
-            <div className="grid grid-cols-4 gap-2">
-              {[1, 2, 4, 8].map(c => (
-                <button key={c} onClick={() => setCavities(c)} className={`h-12 rounded-xl text-lg font-black border transition-all ${cavities === c ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>{c}</button>
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Safety Factor</label>
-            <div className="flex gap-2">
-              {[1.0, 1.2, 1.5, 2.0].map(sf => (
-                <button key={sf} onClick={() => setSafetyFactor(sf)} className={`flex-1 h-10 rounded-xl text-base font-black border transition-all ${safetyFactor === sf ? 'bg-blue-600 border-blue-600 text-white' : 'bg-white border-slate-100 text-slate-600 hover:border-slate-200'}`}>{sf}×</button>
-              ))}
-            </div>
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              data-testid="btn-reset"
+              onClick={handleReset}
+              className="flex-1 py-2.5 px-3 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center justify-center gap-1.5"
+            >
+              <RotateCcw className="w-4 h-4" /> Reset
+            </button>
+            <button
+              type="button"
+              data-testid="btn-copy"
+              onClick={handleCopy}
+              className="flex-1 py-2.5 px-3 rounded-xl text-sm font-bold bg-blue-50 text-blue-700 hover:bg-blue-100 flex items-center justify-center gap-1.5"
+            >
+              {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+              {copied ? 'Copied' : 'Copy'}
+            </button>
+            <button
+              type="button"
+              data-testid="btn-download"
+              onClick={handleDownload}
+              className="w-full py-2.5 px-3 rounded-xl text-sm font-bold bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5"
+            >
+              <Download className="w-4 h-4" /> Export CSV Report
+            </button>
           </div>
         </div>
 
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center justify-between mb-6">
+          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+            <div>
               <h2 className="text-lg font-black text-slate-900 tracking-tight">Clamping Force Results</h2>
-              <button onClick={downloadCsv} className="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-base font-black bg-blue-50 text-blue-600 border border-blue-100 hover:bg-blue-100 transition-all">
-                <Download className="w-4 h-4" />
-                Export CSV
-              </button>
+              <p className="text-sm text-slate-500 font-medium mt-1">
+                F (kN) = Total Projected Area (cm2) x Cavity Pressure (MPa) x 0.1 x Safety Factor
+              </p>
             </div>
 
-            <div className="grid grid-cols-2 gap-4 mb-6">
-              <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-600 p-6 text-white">
-                <p className="text-sm font-black uppercase tracking-wider opacity-80 mb-1">Required Clamping Force</p>
-                <p className="text-4xl font-black">{results.forceTons}<span className="text-lg font-bold ml-2 opacity-80">tons</span></p>
-                <p className="text-sm mt-2 opacity-70">F = P × A × n × SF</p>
-              </div>
-              <div className="rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-6 text-white">
-                <p className="text-sm font-black uppercase tracking-wider opacity-80 mb-1">Force in kN</p>
-                <p className="text-4xl font-black">{results.forceKN}<span className="text-lg font-bold ml-2 opacity-80">kN</span></p>
-                <p className="text-sm mt-2 opacity-70">{results.areaTotal} cm² total area</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-3 gap-4">
-              {[
-                { label: 'Cavity Pressure', value: results.cavityPressure, unit: 'MPa' },
-                { label: 'Total Projected Area', value: results.areaTotal, unit: 'cm²' },
-                { label: 'Safety Factor', value: safetyFactor + '×', unit: '' },
-              ].map(item => (
-                <div key={item.label} className="rounded-2xl bg-slate-50 border border-slate-100 p-4">
-                  <p className="text-sm font-black text-slate-400 uppercase tracking-wider mb-1">{item.label}</p>
-                  <p className="text-lg font-black text-slate-900">{item.value}<span className="text-base text-slate-400 font-bold ml-1">{item.unit}</span></p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+                <div className="text-sm font-black text-blue-600 uppercase tracking-wider mb-1">Clamping Force (Metric Tonnes)</div>
+                <div className="text-3xl font-black text-blue-900">
+                  <span data-testid="result-tonnes">{fmt(clampTonnes, 2)}</span>{' '}
+                  <span className="text-lg text-blue-600">t</span>
                 </div>
-              ))}
+              </div>
+
+              <div className="bg-emerald-50 rounded-2xl p-6 border border-emerald-100">
+                <div className="text-sm font-black text-emerald-600 uppercase tracking-wider mb-1">Clamping Force (kN)</div>
+                <div className="text-3xl font-black text-emerald-900">
+                  <span data-testid="result-kn">{fmt(clampKn, 2)}</span>{' '}
+                  <span className="text-lg text-emerald-600">kN</span>
+                </div>
+              </div>
+
+              <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
+                <div className="text-sm font-black text-orange-600 uppercase tracking-wider mb-1">Total Projected Area</div>
+                <div className="text-3xl font-black text-orange-900">
+                  <span data-testid="result-total-area">{fmt(totalAreaCm2, 2)}</span>{' '}
+                  <span className="text-lg text-orange-600">cm2</span>
+                </div>
+              </div>
+
+              <div className="bg-purple-50 rounded-2xl p-6 border border-purple-100">
+                <div className="text-sm font-black text-purple-600 uppercase tracking-wider mb-1">Clamping Force (US Short Tons)</div>
+                <div className="text-3xl font-black text-purple-900">
+                  <span data-testid="result-ustons">{fmt(clampUsTons, 2)}</span>{' '}
+                  <span className="text-lg text-purple-600">tons</span>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Material Reference */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-lg font-black text-slate-900 mb-4">Cavity Pressure by Material</h3>
-            <div className="space-y-2">
-              {MATERIALS.filter(m => m.name !== 'Custom').map((m, i) => (
-                <div
-                  key={m.name}
-                  onClick={() => setMaterialIdx(i)}
-                  className={`flex items-center gap-4 p-3 rounded-xl cursor-pointer transition-all ${materialIdx === i ? 'bg-blue-50 border border-blue-200' : 'bg-slate-50 hover:bg-slate-100'}`}
-                >
-                  <span className="text-base font-bold text-slate-600 w-40">{m.name}</span>
-                  <div className="flex-1 h-6 bg-slate-100 rounded-lg overflow-hidden">
-                    <div className="h-full rounded-lg flex items-center justify-end px-2 text-sm font-black text-white" style={{ width: `${(m.cavityPressure / 60) * 100}%`, backgroundColor: m.color }}>
-                      {m.cavityPressure} MPa
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <p className="text-sm text-slate-400 mt-3 font-medium">Cavity pressures are starting recommendations. Actual values depend on melt temperature, flow length, wall thickness, and mold temperature.</p>
-          </div>
+          <RelatedTools />
         </div>
       </div>
-
-      <RelatedTools compact />
     </div>
   );
 }
