@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Roof Drain Size & Rainwater Leader Calculator (IBC)",
-  description: "Calculate roof drain count, leader/pipe size, and scupper sizing for flat roof drainage.",
+  title: "Roof Drain Size & Scupper Flow Calculator",
+  description: "Calculate effective roof catchment runoff, required primary roof drains, and emergency parapet scupper width.",
   path: '/toolbox/roof-drain-size-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Roof Drain Size & Rainwater Leader Calculator (IBC)", path: '/toolbox/roof-drain-size-calculator' },
+    { name: "Roof Drain Size & Scupper Flow Calculator", path: '/toolbox/roof-drain-size-calculator' },
   ]);
 
   return (
@@ -29,10 +29,10 @@ export default function CalculatorPage() {
               Engineering Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Roof Drain Size & Rainwater Leader Calculator (IBC)
+              Roof Drain Size &amp; Scupper Flow Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate roof drain count, leader/pipe size, and scupper sizing for flat roof drainage.
+              Calculate effective roof catchment runoff, required primary roof drains, and emergency parapet scupper width.
             </p>
           </div>
         </section>

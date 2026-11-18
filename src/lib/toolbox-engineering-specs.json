@@ -11464,36 +11464,59 @@
   },
   "revit-worksharing-wizard": {
     "title": "Revit Worksharing Diagnostic Wizard",
-    "description": "Interactive decision tree for Revit central-model problems: inaccessible central, slow sync, borrowed worksets, corrupt central recovery, and missing elements on sync — fixes sourced from Autodesk KB.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Revit Worksharing Central Model Sync Lock, Journal File Diagnostic & Element Borrowing Resolution Protocol",
-    "inputs": [],
-    "outputs": []
+    "description": "Interactive decision tree for Revit central-model problems: inaccessible central, slow sync, borrowed worksets, corrupt central recovery, and missing elements on sync — sourced from Autodesk Revit Help & KB.",
+    "discipline": "BIM Model Collaboration & Autodesk Revit Worksharing",
+    "standards": "Autodesk Official Support KB & Revit Help Guides (Central Model Access, Synchronize with Central, Editable Elements, Repair Corrupt Central Model)",
+    "cadContext": "Follow Autodesk official UNC/drive-letter path consistency, Worksharing Monitor central access verification, and Repair Central Model procedures when resolving multi-user synchronization issues.",
+    "formula": "5-Scenario Decision Tree Mapped Directly to Verified Autodesk Knowledge Base & Revit Help URLs",
+    "inputs": [
+      {
+        "label": "Worksharing Diagnostic Scenarios",
+        "val": "Central Not Accessible, Slow Sync, Borrowed Worksets, Corrupt Central, Lost Elements"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Remediation Guides & Official Links",
+        "val": "Direct links to Autodesk KB and help.autodesk.com Revit-Collaborate articles"
+      }
+    ]
   },
   "reynolds-number-calculator": {
     "title": "Reynolds Number Calculator",
-    "description": "Calculate Reynolds number for pipe flow to determine laminar, transitional, or turbulent flow regime. Supports water, air, oil, and custom fluids.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "{'Re = ρVD/μ. Laminar: Re",
+    "description": "Calculate fluid Reynolds number (Re), kinematic viscosity, hydraulic diameter (circular/rectangular), and volumetric flow rate.",
+    "discipline": "Fluid Mechanics & Internal Pipe/Duct Flow",
+    "standards": "Fluid Flow Dimensionless Analysis: Re = rho * u * Dh / mu = u * Dh / nu (Wikipedia: Reynolds number)",
+    "cadContext": "Evaluate circular pipe diameters and rectangular HVAC duct cross-sections exported from MEP routing drawings to verify laminar, transitional, or turbulent flow regimes.",
+    "formula": "Re = (rho * u * Dh) / mu ; Dh = 4 * A / P_w ; nu = mu / rho",
     "inputs": [
       {
-        "label": "Fluid",
-        "val": "Water (20°C)"
+        "label": "Fluid Density / Dynamic Viscosity",
+        "val": "998 kg/m3 / 0.001 Pa*s (Water 20C)"
       },
       {
-        "label": "Flow Velocity (m/s)",
+        "label": "Mean Velocity u (m/s)",
         "val": "2"
       },
       {
-        "label": "Pipe Diameter D (mm)",
+        "label": "Pipe Inner Diameter D (mm)",
         "val": "50"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Reynolds Number (Re)",
+        "val": "99800.0 (Turbulent)"
+      },
+      {
+        "label": "Kinematic Viscosity nu",
+        "val": "1.0020 mm2/s"
+      },
+      {
+        "label": "Volumetric Flow Rate Q",
+        "val": "3.927 L/s"
+      }
+    ]
   },
   "rhino-shortcuts-sheet": {
     "title": "Rhino 3D Keyboard Shortcuts and Commands Cheat Sheet",
@@ -11506,126 +11529,122 @@
     "outputs": []
   },
   "rigid-pavement-calculator": {
-    "title": "Rigid Pavement Thickness Calculator (PCA Method)",
-    "description": "Calculate required rigid concrete pavement thickness using PCA design method.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "AASHTO 1993 Rigid Design Equation: log10(W18) = Zr·So + 7.35·log10(D+1) + ... (PCA / AASHTO Pavement Design)",
+    "title": "Rigid Concrete Pavement Stress Calculator",
+    "description": "Calculate radius of relative stiffness, Westergaard circular wheel-load interior and edge flexural stresses, and flexural safety ratio on Winkler subgrade.",
+    "discipline": "Elastic Foundation Plate Mechanics & Pavement Stress",
+    "standards": "Westergaard Thin-Plate Bending Equations on Elastic Winkler Foundation: ell = [E*h^3 / (12*(1-nu^2)*k)]^0.25",
+    "cadContext": "Check interior and free-edge wheel-load bending stresses against concrete modulus of rupture Mr when sizing concrete slab panels over compacted subbases.",
+    "formula": "ell = [E*h^3 / (12*(1-nu^2)*k)]^0.25 ; sigma_i = [3*(1+nu)*P/(2*pi*h^2)] * [ln(ell/b)+0.6159]",
     "inputs": [
       {
-        "label": "Design Traffic ESALs (Millions)",
-        "val": "15"
+        "label": "Wheel Load P / Tire Pressure p",
+        "val": "50 kN / 700 kPa"
       },
       {
-        "label": "Modulus of Subgrade Reaction k (MPa/m)",
-        "val": "40"
+        "label": "Slab Thick h / Concrete E / nu",
+        "val": "250 mm / 30000 MPa / 0.15"
       },
       {
-        "label": "Concrete Modulus of Rupture Sc (MPa)",
-        "val": "4.5"
-      },
-      {
-        "label": "Design Reliability R (%)",
-        "val": "95% (Interstate / Major Highway)"
+        "label": "Subgrade k / Modulus of Rupture Mr",
+        "val": "40 MPa/m / 4.5 MPa"
       }
     ],
     "outputs": [
       {
-        "label": "Required Portland Cement Slab Thickness",
-        "val": "263 mm"
+        "label": "Free Edge Tensile Stress",
+        "val": "2.1531 MPa"
       },
       {
-        "label": "Max Transverse Joint Contraction Spacing",
-        "val": "5.8 m"
+        "label": "Interior Tensile Stress",
+        "val": "1.1166 MPa"
       },
       {
-        "label": "Recommended Load Transfer Dowel Bar Ø",
-        "val": "33 mm"
+        "label": "Radius of Relative Stiffness ell",
+        "val": "999.76 mm"
       },
       {
-        "label": "Equivalent Cumulative Axle Load Burden",
-        "val": "15M ESALs"
+        "label": "Flexural Safety Ratio Mr / sigma_e",
+        "val": "2.0900"
       }
     ]
   },
   "rolling-force-calculator": {
     "title": "Rolling Force Calculator",
-    "description": "Calculate rolling force and torque for flat rolling operations.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "F = sigma * L * w, L = sqrt(R*dh)",
+    "description": "Calculate flat-rolling projected contact arc, friction-adjusted separating roll force, two-roll mill torque, and drive motor power.",
+    "discipline": "Metal Forming & Flat-Rolling Mechanics",
+    "standards": "Flat Rolling Plasticity & Friction Hill Equilibrium: Lp = sqrt(R * (h0 - h1)) ; Qp = 1 + mu*Lp/(h0 + h1)",
+    "cadContext": "Verify pass-by-pass thickness reductions and roll-bite separating forces when designing rolling mill stand housings and main spindle gearboxes.",
+    "formula": "Lp = sqrt(R * dh) ; Qp = 1 + mu*Lp/(h0+h1) ; F = sigma_f * Qp * w * Lp ; M = 2 * a * F * Lp",
     "inputs": [
       {
-        "label": "Flow Stress (MPa)",
+        "label": "Mean Flow Stress (MPa)",
         "val": "300"
       },
       {
-        "label": "Roll Radius (mm)",
-        "val": "200"
+        "label": "Roll Radius R / Width w (mm)",
+        "val": "200 / 500"
       },
       {
-        "label": "Thickness Red (mm)",
-        "val": "2"
+        "label": "Entry h0 / Exit h1 (mm)",
+        "val": "10 / 8"
       },
       {
-        "label": "Width (mm)",
-        "val": "500"
+        "label": "Friction mu / Arm / RPM",
+        "val": "0.12 / 0.5 / 60 rpm"
       }
     ],
     "outputs": [
       {
-        "label": "Roll Force",
-        "val": "3000.00 kN"
+        "label": "Separating Roll Force",
+        "val": "3400.00 kN"
       },
       {
-        "label": "Contact Length",
+        "label": "Projected Contact Arc Lp",
         "val": "20.000 mm"
       },
       {
-        "label": "Roll Torque",
-        "val": "30.000 kNm"
+        "label": "Two-Roll Mill Torque",
+        "val": "68.000 kN*m"
+      },
+      {
+        "label": "Total Drive Power",
+        "val": "427.26 kW"
       }
     ]
   },
   "roof-drain-size-calculator": {
-    "title": "Roof Drain Size & Rainwater Leader Calculator (IBC)",
-    "description": "Calculate roof drain count, leader/pipe size, and scupper sizing for flat roof drainage.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "Q = (Area × Intensity) / 3600 • Drain Count = ceil(Q / Q_leader) (IPC Chapter 11 Storm Drainage)",
+    "title": "Roof Drain Size & Scupper Flow Calculator",
+    "description": "Calculate effective roof catchment runoff, required primary roof drains, and emergency parapet scupper width.",
+    "discipline": "Building Roof Catchment & Weir Spillway Hydraulics",
+    "standards": "Effective Catchment Rational Flow & Rectangular Weir Discharge: Q = A_eff * I / 3600 ; B_weir = Q / (Cw * H^1.5)",
+    "cadContext": "Extract flat roof plan areas and vertical parapet contributing wall areas from architectural site plans to size drain counts and emergency parapet overflow scuppers.",
+    "formula": "A_eff = A_roof + k_wall * A_wall ; Q_Ls = A_eff * I / 3600 ; N = ceil(Q_Ls / q_drain)",
     "inputs": [
       {
-        "label": "Tributary Roof Area (m²)",
-        "val": "1800"
+        "label": "Roof / Wall Area (k_wall = 0.5)",
+        "val": "1800 m2 / 200 m2"
       },
       {
-        "label": "100-Year 1-Hour Rainfall Intensity (mm/h)",
+        "label": "Rainfall Intensity I (mm/h)",
         "val": "75"
       },
       {
-        "label": "Primary Leader Pipe Inner Diameter",
-        "val": "100 mm (4 inch Leader - Capacity ~11.5 L/s)"
+        "label": "Leader Capacity / Scupper Head / Cw",
+        "val": "11.5 L/s / 0.10 m / 1.84"
       }
     ],
     "outputs": [
       {
-        "label": "Min Primary Roof Drains Required",
+        "label": "Primary Drains Required",
         "val": "4 drains"
       },
       {
-        "label": "Total Stormwater Runoff Influx",
-        "val": "37.5 L/s"
+        "label": "Peak Runoff Rate",
+        "val": "39.583 L/s (1900.0 m2 eff)"
       },
       {
-        "label": "Flow Capacity per Leader Pipe",
-        "val": "11.5 L/s"
-      },
-      {
-        "label": "Secondary Parapet Emergency Scupper Width",
-        "val": "32250 mm"
+        "label": "Total Rectangular Scupper Width",
+        "val": "680.3 mm (0.6803 m)"
       }
     ]
   },

@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Rigid Pavement Thickness Calculator (PCA Method)",
-  description: "Calculate required rigid concrete pavement thickness using PCA design method.",
+  title: "Rigid Concrete Pavement Stress Calculator",
+  description: "Calculate radius of relative stiffness, Westergaard circular wheel-load interior and edge flexural stresses, and flexural safety ratio on Winkler subgrade.",
   path: '/toolbox/rigid-pavement-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Rigid Pavement Thickness Calculator (PCA Method)", path: '/toolbox/rigid-pavement-calculator' },
+    { name: "Rigid Concrete Pavement Stress Calculator", path: '/toolbox/rigid-pavement-calculator' },
   ]);
 
   return (
@@ -29,10 +29,10 @@ export default function CalculatorPage() {
               Engineering Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Rigid Pavement Thickness Calculator (PCA Method)
+              Rigid Concrete Pavement Stress Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate required rigid concrete pavement thickness using PCA design method.
+              Calculate radius of relative stiffness, Westergaard circular wheel-load interior and edge flexural stresses, and flexural safety ratio on Winkler subgrade.
             </p>
           </div>
         </section>
