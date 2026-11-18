@@ -196,6 +196,16 @@ flowchart LR
 | 48 | online-step-to-obj-gltf-converter、online-step-to-stl-slicer-helper、orifice-flow-calculator、paint-coverage-calculator、paint-quantity-calculator（跳过 onshape-shortcuts-sheet） | 02144c2f（待复核，未 push，2026-11-18） |
 | 49 | parametric-3d-part-generator、parking-capacity-calculator、passing-sight-distance-calculator、pavement-thickness-calculator、pdf-plot-chinese-gibberish-resolver | a3913c08（待复核，未 push，2026-11-18） |
 | 50 | pile-capacity-calculator、pile-group-efficiency-calculator、pile-lateral-capacity-calculator、pipe-flow-rate-calculator、pipe-friction-head-loss | 9845aacb（待复核，未 push，2026-11-18） |
+| 51 | pipe-size-chart、pipe-thermal-expansion-calculator、planetary-gear-calculator、plastic-shrinkage-calculator、plate-bending-calculator | 126480a3（待复核，未 push，2026-11-18） |
+| 52 | plumbing-fixture-count-calculator、point-cloud-density-calculator、polishing-time-calculator、power-factor-calculator、power-screw-calculator | 3d45b306（待复核，未 push，2026-11-18） |
+| 53 | power-unit-converter、press-fit-calculator、pressure-unit-converter、pressure-vessel-thickness-calculator、psychrometric-calculator（跳过 progecad-shortcuts-sheet） | 78c5e49a（待复核，未 push，2026-11-18） |
+| 54 | pulley-system-calculator、pump-affinity-law-calculator、pump-head-calculator、pump-power-calculator、pump-station-design-calculator | aed4094e（待复核，未 push，2026-11-18） |
+| 55 | punching-force-calculator、pv-inverter-sizing-calculator、rack-pinion-calculator、rainwater-harvesting-calculator、reaming-dimension-calculator | 815b0cc4（待复核，未 push，2026-11-18） |
+| 56 | rebar-development-length-calculator、rebar-spacing-calculator、rebar-weight-calculator、refrigeration-cycle-calculator、reservoir-flood-routing-calculator | f2fa4c2e（待复核，未 push，2026-11-18） |
+| 57 | retaining-wall-calculator、retaining-wall-sliding-calculator、revit-family-param-calculator、revit-performance-diagnostic-wizard、revit-room-area-calculator | 2ba2cd8f（待复核，未 push，2026-11-18） |
+| 58 | revit-worksharing-wizard、reynolds-number-calculator、rigid-pavement-calculator、rolling-force-calculator、roof-drain-size-calculator（跳过 revit-shortcuts-sheet、rhino-shortcuts-sheet） | 4d56dd26（待复核，未 push，2026-11-18） |
+| 59 | roof-pitch-calculator、room-acoustics-rt60-calculator、roundabout-capacity-calculator、sand-casting-yield-calculator、screw-torque-preload-calculator | ac400be8（待复核，未 push，2026-11-18） |
+| 60 | section-modulus-calculator、section-property-shape-calculator、sedimentation-tank-calculator、seismic-load-calculator、septic-tank-calculator | 32980826（待复核，未 push，2026-11-18） |
 
 ---
 
