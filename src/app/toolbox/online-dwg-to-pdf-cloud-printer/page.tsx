@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineDwgToPdfCloudPrinterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online DWG to Vector PDF Cloud Printers Review | CADGuide.tools',
-  description: 'Compare the best online tools to batch print DWG drawings to PDF format without CAD installed. Check layout plotting and CTB style preservation.',
+  title: 'CAD Sheet Plot DPI Calculator & AutoCAD -PLOT Script Builder | CADGuide.tools',
+  description: 'Calculate CAD PDF plot pixel dimensions, uncompressed raster memory, real-world model coverage, and export pure-ASCII AutoCAD -PLOT and PDFSHX scripts.',
   path: '/toolbox/online-dwg-to-pdf-cloud-printer',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineDwgToPdfCloudPrinterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online DWG to Vector PDF Batch Cloud Printer', path: '/toolbox/online-dwg-to-pdf-cloud-printer' },
+    { name: 'CAD Sheet Plot DPI & -PLOT Script Builder', path: '/toolbox/online-dwg-to-pdf-cloud-printer' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlineDwgToPdfCloudPrinterPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Plot Preparation &amp; Automation
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online DWG to Vector PDF Batch Cloud Printer
+              CAD Sheet Plot DPI Calculator &amp; AutoCAD -PLOT Script Builder
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Compute sheet DPI pixel budgets and build deterministic `-PLOT` (`DWG To PDF.pc3`) and `PDFSHX` scripts.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlineDwgToPdfCloudPrinterPage() {
         </section>
       </main>
     </>
-);
+  );
 }

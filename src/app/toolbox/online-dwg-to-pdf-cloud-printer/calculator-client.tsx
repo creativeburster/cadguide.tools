@@ -1,126 +1,415 @@
 'use client';
 
-import CloudReferralClient from '@/components/cloud-referral-client';
+import React, { useMemo, useState } from 'react';
+import { RelatedTools } from '@/components/related-tools';
+import {
+  AlertTriangle,
+  Check,
+  Copy,
+  Download,
+  ExternalLink,
+  Info,
+  Printer,
+  RotateCcw,
+  ShieldCheck,
+} from 'lucide-react';
 
-const RECOMMENDED_TOOLS = [
+interface PaperPreset {
+  id: string;
+  label: string;
+  paperName: string;
+  widthMm: string;
+  heightMm: string;
+  scaleDenom: string;
+  dpi: string;
+  channels: '3' | '4';
+  pdfshx: '0' | '1' | '2';
+}
+
+const PRESETS: PaperPreset[] = [
   {
-    "name": "Autodesk Viewer (Official free channel)",
-    "rating": 9.9,
-    "metrics": [
-      {
-        "name": "Linewidth Fidelity",
-        "score": 5
-      },
-      {
-        "name": "Layout completeness",
-        "score": 5
-      },
-      {
-        "name": "Security Compliance",
-        "score": 4
-      }
-    ],
-    "pros": [
-      "Autodesk The official engine is absolutely the same",
-      "100% Support 3D view"
-    ],
-    "cons": [
-      "Must be logged in and loading is relatively slow"
-    ],
-    "officialUrl": "https://viewer.autodesk.com/",
-    "verdict": "Autodesk's official cloud viewer and plotter—renders DWG layouts with accurate SHX/TTF fonts and layer hierarchy."
+    id: 'a1-300dpi',
+    label: 'Preset 1: ISO A1 (841x594 mm, 1:100, 300 DPI, PDFSHX=2)',
+    paperName: 'ISO full bleed A1 (841.00 x 594.00 MM)',
+    widthMm: '841',
+    heightMm: '594',
+    scaleDenom: '100',
+    dpi: '300',
+    channels: '3',
+    pdfshx: '2',
   },
   {
-    "name": "CloudConvert DWG to PDF",
-    "rating": 9.3,
-    "metrics": [
-      {
-        "name": "Linewidth Fidelity",
-        "score": 4
-      },
-      {
-        "name": "Layout completeness",
-        "score": 4
-      },
-      {
-        "name": "Security Compliance",
-        "score": 3
-      }
-    ],
-    "pros": [
-      "Support batch script calling",
-      "Provide high-anonymity interface"
-    ],
-    "cons": [
-      "Highly complex CTB custom pen widths are not supported"
-    ],
-    "officialUrl": "https://cloudconvert.com/",
-    "verdict": "The best choice for extremely fast conversion of ordinary drawings, supporting static plane export of mainstream layers."
+    id: 'a3-600dpi',
+    label: 'Preset 2: ISO A3 (420x297 mm, 1:50, 600 DPI)',
+    paperName: 'ISO full bleed A3 (420.00 x 297.00 MM)',
+    widthMm: '420',
+    heightMm: '297',
+    scaleDenom: '50',
+    dpi: '600',
+    channels: '3',
+    pdfshx: '1',
   },
   {
-    "name": "Allinpdf DWG to PDF",
-    "rating": 9,
-    "metrics": [
-      {
-        "name": "Linewidth Fidelity",
-        "score": 3
-      },
-      {
-        "name": "Layout completeness",
-        "score": 4
-      },
-      {
-        "name": "Security Compliance",
-        "score": 3
-      }
-    ],
-    "pros": [
-      "Pure front-end drag and drop without logging in",
-      "Very fast"
-    ],
-    "cons": [
-      "For large drawings, lines may be lost"
-    ],
-    "officialUrl": "https://allinpdf.com/",
-    "verdict": "An extremely fast viewing and conversion channel suitable for temporary use by individuals. It is not recommended for large enterprises to deploy sensitive services."
-  }
+    id: 'arch-d-exact',
+    label: 'Preset 3: 508x254 mm Exact Inch Check (20x10 in @ 100 DPI = 2000x1000 px)',
+    paperName: 'Custom (508.00 x 254.00 MM)',
+    widthMm: '508',
+    heightMm: '254',
+    scaleDenom: '50',
+    dpi: '100',
+    channels: '3',
+    pdfshx: '2',
+  },
 ];
-const BEST_PRACTICES = [
-  {
-    "title": "Clean up junk entities locally",
-    "desc": "Before plotting to PDF, run `-PURGE` and `-SCALELISTEDIT` (Reset) to strip bloated annotation scale lists and keep vector PDF sizes compact."
-  },
-  {
-    "title": "Using Microsoft Print to PDF",
-    "desc": "If no CAD restrictions are installed, PDF output using Microsoft Virtual Print Driver has the highest geometric fidelity."
-  },
-  {
-    "title": "Limit external link telemetry",
-    "desc": "For sensitive files, choose a pure read-only local parsing solution that limits network access."
-  }
-];
-const FAQS = [
-  {
-    "question": "Why do all the lines in the converted PDF have the same thickness? ",
-    "answer": "This is because your .ctb print style file was not mounted correctly when converting. You can look for the 'Plot styles' option in the cloud print settings, or solidify the print style into the drawing in Monochrome mode."
-  },
-  {
-    "question": "Why do the line segments in multiple viewports overlap and become incomplete? ",
-    "answer": "This is a layout space Viewport coordinate occlusion and cropping problem. It is recommended to change the viewport in CAD before printing Shade Plot Set to As Displayed) ."
-  }
-];
+
+function parsePositive(raw: string): number {
+  const t = raw.trim();
+  if (!t) return NaN;
+  const n = Number(t);
+  return Number.isFinite(n) && n > 0 ? n : NaN;
+}
+
+function toSafeAscii(s: string): string {
+  return s.replace(/[^\x20-\x7E\r\n\t]/g, '');
+}
+
+function fmt(n: number, decimals = 4): string {
+  return Number.isFinite(n) ? n.toFixed(decimals) : 'N/A';
+}
 
 export default function OnlineDwgToPdfCloudPrinterClient() {
+  const [paperName, setPaperName] = useState(PRESETS[0].paperName);
+  const [widthMmStr, setWidthMmStr] = useState('841');
+  const [heightMmStr, setHeightMmStr] = useState('594');
+  const [scaleDenomStr, setScaleDenomStr] = useState('100');
+  const [dpiStr, setDpiStr] = useState('300');
+  const [channels, setChannels] = useState<'3' | '4'>('3');
+  const [pdfshx, setPdfshx] = useState<'0' | '1' | '2'>('2');
+  const [ctbFile, setCtbFile] = useState('monochrome.ctb');
+  const [copied, setCopied] = useState(false);
+
+  const applyPreset = (p: PaperPreset) => {
+    setPaperName(p.paperName);
+    setWidthMmStr(p.widthMm);
+    setHeightMmStr(p.heightMm);
+    setScaleDenomStr(p.scaleDenom);
+    setDpiStr(p.dpi);
+    setChannels(p.channels);
+    setPdfshx(p.pdfshx);
+  };
+
+  const resetDefaults = () => {
+    applyPreset(PRESETS[0]);
+    setCtbFile('monochrome.ctb');
+  };
+
+  const result = useMemo(() => {
+    const wMm = parsePositive(widthMmStr);
+    const hMm = parsePositive(heightMmStr);
+    const scaleDen = parsePositive(scaleDenomStr);
+    const dpi = parsePositive(dpiStr);
+    const ch = Number(channels);
+
+    if (!Number.isFinite(wMm) || !Number.isFinite(hMm) || !Number.isFinite(scaleDen) || !Number.isFinite(dpi)) {
+      return {
+        valid: false as const,
+        error: 'Sheet width, height, scale denominator, and DPI must all be positive numbers (> 0).',
+      };
+    }
+
+    const pxW = (wMm / 25.4) * dpi;
+    const pxH = (hMm / 25.4) * dpi;
+    const megapixels = (pxW * pxH) / 1e6;
+    const rawRasterMb = (pxW * pxH * ch) / (1024 * 1024);
+    const modelWidthM = (wMm * scaleDen) / 1000;
+    const modelHeightM = (hMm * scaleDen) / 1000;
+
+    const cleanPaper = toSafeAscii(paperName).trim() || 'ISO full bleed A1 (841.00 x 594.00 MM)';
+    const cleanCtb = toSafeAscii(ctbFile).trim() || 'monochrome.ctb';
+    const scriptText = [
+      '; Pure-ASCII AutoCAD -PLOT PDF Script (DWG To PDF.pc3)',
+      'CMDECHO 0',
+      `PDFSHX ${pdfshx}`,
+      '-PLOT',
+      'Y',
+      'Model',
+      'DWG To PDF.pc3',
+      cleanPaper,
+      'Millimeters',
+      'Landscape',
+      'No',
+      'Extents',
+      `1=${scaleDen}`,
+      'Center',
+      'Yes',
+      cleanCtb,
+      'Yes',
+      'As displayed',
+      'output_sheet.pdf',
+      'No',
+      'Yes',
+      'CMDECHO 1',
+    ].join('\n');
+
+    return {
+      valid: true as const,
+      pxW,
+      pxH,
+      megapixels,
+      rawRasterMb,
+      modelWidthM,
+      modelHeightM,
+      scriptText,
+    };
+  }, [paperName, widthMmStr, heightMmStr, scaleDenomStr, dpiStr, channels, pdfshx, ctbFile]);
+
+  const handleCopy = () => {
+    if (!result.valid) return;
+    navigator.clipboard
+      .writeText(result.scriptText)
+      .then(() => {
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      })
+      .catch(() => {
+        setCopied(false);
+      });
+  };
+
+  const handleDownloadScr = () => {
+    if (!result.valid) return;
+    const blob = new Blob([toSafeAscii(result.scriptText) + '\r\n'], { type: 'text/plain;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'dwg_to_pdf_plot.scr';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <CloudReferralClient
-      title="Online DWG to Vector PDF Batch Cloud Printer"
-      subtitle="Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines."
-      categoryLabel="File Parser & Converter"
-      painPointDesc="Converting DWG drawings to vector PDF without a local CAD seat often results in missing `.ctb` plot-style lineweights, unmapped SHX fonts, or clipped Paper Space viewports. Choosing an ODA- or Autodesk-backed plotting engine preserves crisp vector lineweights and searchable text."
-      riskWarning="Native DWG files contain complete model-space coordinates, blocks, and layer structures. For confidential projects, plot PDFs locally using Autodesk's free desktop DWG TrueView utility rather than uploading source DWG files to unverified third-party cloud printers."
-      recommendedTools={RECOMMENDED_TOOLS}
-      bestPractices={BEST_PRACTICES}
-      faqs={FAQS}
-    />
-);
+    <div className="space-y-8">
+      <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm flex items-start gap-3">
+        <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+        <div>
+          <span className="font-black">Plot DPI Calculator &amp; -PLOT Script Builder Only:</span> Calculates sheet raster pixel footprint, uncompressed memory budget, real-world model extents, and builds a pure-ASCII AutoCAD `-PLOT` (`DWG To PDF.pc3`) script. Actual DWG rendering executes locally in desktop CAD.
+        </div>
+      </div>
+
+      <div className="flex flex-wrap items-center gap-2">
+        {PRESETS.map((p) => (
+          <button
+            key={p.id}
+            type="button"
+            data-testid={`preset-${p.id}`}
+            onClick={() => applyPreset(p)}
+            className="px-3 py-1.5 rounded-lg text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:border-blue-400 hover:text-blue-700"
+          >
+            {p.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-100 p-6 shadow-sm space-y-4">
+          <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
+            <Printer className="w-5 h-5 text-blue-600" />
+            <h2 className="text-lg font-black text-slate-900">Plot Sheet &amp; DPI Inputs</h2>
+          </div>
+
+          <div className="grid grid-cols-2 gap-3">
+            <div>
+              <label className="text-xs font-bold text-slate-600 uppercase block mb-1">Sheet Width (mm)</label>
+              <input
+                type="text"
+                inputMode="decimal"
+                data-testid="input-width-mm"
+                value={widthMmStr}
+                onChange={(e) => setWidthMmStr(e.target.value)}
+                className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-800"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 uppercase block mb-1">Sheet Height (mm)</label>
+              <input
+                type="text"
+                inputMode="decimal"
+                data-testid="input-height-mm"
+                value={heightMmStr}
+                onChange={(e) => setHeightMmStr(e.target.value)}
+                className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-800"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 uppercase block mb-1">Plot Scale (1 : S)</label>
+              <input
+                type="text"
+                inputMode="decimal"
+                data-testid="input-scale-denom"
+                value={scaleDenomStr}
+                onChange={(e) => setScaleDenomStr(e.target.value)}
+                className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-800"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 uppercase block mb-1">Target Raster DPI</label>
+              <input
+                type="text"
+                inputMode="decimal"
+                data-testid="input-dpi"
+                value={dpiStr}
+                onChange={(e) => setDpiStr(e.target.value)}
+                className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-800"
+              />
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 uppercase block mb-1">Color Depth</label>
+              <select
+                data-testid="select-channels"
+                value={channels}
+                onChange={(e) => setChannels(e.target.value as '3' | '4')}
+                className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-800"
+              >
+                <option value="3">RGB 24-bit (3 B/px)</option>
+                <option value="4">RGBA 32-bit (4 B/px)</option>
+              </select>
+            </div>
+            <div>
+              <label className="text-xs font-bold text-slate-600 uppercase block mb-1">PDFSHX Setting</label>
+              <select
+                data-testid="select-pdfshx"
+                value={pdfshx}
+                onChange={(e) => setPdfshx(e.target.value as '0' | '1' | '2')}
+                className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-800"
+              >
+                <option value="0">0 (No SHX comments)</option>
+                <option value="1">1 (PDF comments)</option>
+                <option value="2">2 (Hidden searchable text)</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label className="text-xs font-bold text-slate-600 uppercase block mb-1">Plot Style Table (.ctb)</label>
+            <input
+              type="text"
+              data-testid="input-ctb"
+              value={ctbFile}
+              onChange={(e) => setCtbFile(e.target.value)}
+              className="w-full h-10 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-800"
+            />
+          </div>
+
+          <button
+            type="button"
+            data-testid="btn-reset"
+            onClick={resetDefaults}
+            className="w-full py-2.5 rounded-xl text-sm font-black bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center justify-center gap-2"
+          >
+            <RotateCcw className="w-4 h-4" />
+            Reset
+          </button>
+        </div>
+
+        <div className="lg:col-span-7 space-y-6">
+          <div className="bg-white rounded-3xl border border-slate-100 p-6 md:p-8 shadow-sm space-y-5">
+            <div className="flex flex-wrap items-center justify-between gap-2">
+              <h2 className="text-lg font-black text-slate-900">Raster Metrics &amp; -PLOT Script</h2>
+              <div className="flex items-center gap-2">
+                <button
+                  type="button"
+                  data-testid="btn-copy"
+                  onClick={handleCopy}
+                  disabled={!result.valid}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 disabled:opacity-50"
+                >
+                  {copied ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                  {copied ? 'Copied' : 'Copy Script'}
+                </button>
+                <button
+                  type="button"
+                  data-testid="btn-download-scr"
+                  onClick={handleDownloadScr}
+                  disabled={!result.valid}
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50"
+                >
+                  <Download className="w-3.5 h-3.5" />
+                  Download .SCR
+                </button>
+              </div>
+            </div>
+
+            {!result.valid ? (
+              <div
+                data-testid="validation-error"
+                className="p-4 rounded-2xl bg-rose-50 border border-rose-200 text-rose-800 text-sm font-bold flex items-center gap-2"
+              >
+                <AlertTriangle className="w-4 h-4 shrink-0" />
+                <span>{result.error}</span>
+              </div>
+            ) : (
+              <>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="p-4 rounded-2xl bg-blue-50 border border-blue-100">
+                    <div className="text-xs font-bold text-blue-600 uppercase">Raster Pixel Dimensions</div>
+                    <div className="text-xl font-black text-blue-900 mt-1">
+                      <span data-testid="out-px-w">{fmt(result.pxW, 2)}</span> x <span data-testid="out-px-h">{fmt(result.pxH, 2)}</span> px
+                    </div>
+                  </div>
+                  <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-100">
+                    <div className="text-xs font-bold text-emerald-600 uppercase">Uncompressed Raster Buffer</div>
+                    <div className="text-xl font-black text-emerald-900 mt-1">
+                      <span data-testid="out-raster-mb">{fmt(result.rawRasterMb)}</span> MB ({fmt(result.megapixels)} MP)
+                    </div>
+                  </div>
+                  <div className="sm:col-span-2 p-4 rounded-2xl bg-slate-50 border border-slate-200 flex items-center justify-between">
+                    <span className="text-xs font-bold uppercase text-slate-600">Model Space Real-World Span</span>
+                    <span className="text-lg font-black text-slate-900">
+                      <span data-testid="out-model-w">{fmt(result.modelWidthM)}</span> m x {fmt(result.modelHeightM)} m
+                    </span>
+                  </div>
+                </div>
+
+                <pre
+                  data-testid="out-script"
+                  className="p-4 rounded-2xl bg-slate-900 text-emerald-300 font-mono text-xs overflow-x-auto"
+                >
+                  {result.scriptText}
+                </pre>
+              </>
+            )}
+
+            <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-xs text-slate-600 space-y-2">
+              <div className="flex items-start gap-2">
+                <Info className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
+                <span>
+                  1 inch = 25.4 mm exact conversion. `-PLOT` runs command-line plotting in AutoCAD / Core Console, while `PDFSHX` controls whether SHX text objects export as PDF comments (`1`) or hidden searchable text (`2`).
+                </span>
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core/files/GUID-625E395D-143A-494F-A1EA-1BF119B927DC.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
+                >
+                  AutoCAD 2025 -PLOT Command Help <ExternalLink className="w-3 h-3" />
+                </a>
+                <a
+                  href="https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core/files/GUID-56EA988C-A1DA-4E85-8765-B3F31A01AB02.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
+                >
+                  AutoCAD 2025 PDFSHX Help <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <RelatedTools />
+        </div>
+      </div>
+    </div>
+  );
 }

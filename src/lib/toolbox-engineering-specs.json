@@ -9509,73 +9509,100 @@
     ]
   },
   "online-dwg-to-pdf-cloud-printer": {
-    "title": "Online DWG to Vector PDF Batch Cloud Printer",
-    "description": "Compare the best online tools to batch print DWG drawings to PDF format without CAD installed. Check layout plotting and CTB style preservation.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online DWG to Vector PDF Batch Cloud Printer",
+    "title": "CAD Sheet Plot DPI Calculator & AutoCAD -PLOT Script Builder",
+    "description": "Compute sheet output pixel dimensions, uncompressed raster memory, real-world model spans, and generate pure-ASCII AutoCAD -PLOT and PDFSHX scripts.",
+    "discipline": "CAD Plotting & PDF Publishing Prep",
+    "standards": "AutoCAD 2025 -PLOT Command, PDFSHX System Variable (0/1/2), and 25.4 mm/inch Conversion",
+    "cadContext": "Size target plot DPI and PDFSHX text handling prior to executing command-line -PLOT (DWG To PDF.pc3) scripts.",
+    "formula": "PixelDim = (SheetDim_mm / 25.4) * DPI; RasterBuffer_MB = (PxW * PxH * Channels) / 1048576",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Sheet Size (mm)",
+        "val": "841 x 594 (ISO A1)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
+        "label": "Scale / Target DPI",
+        "val": "1:100 / 300 DPI"
       },
       {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "PDFSHX Mode",
+        "val": "2 (Hidden Searchable Text)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Raster Dimensions",
+        "val": "9933.07 x 7015.75 px"
+      },
+      {
+        "label": "Uncompressed RGB Buffer",
+        "val": "199.3834 MB (69.6879 MP)"
+      },
+      {
+        "label": "Model Real-World Span",
+        "val": "84.1000 m x 59.4000 m"
+      }
+    ]
   },
   "online-dwg-version-downgrader-cloud": {
-    "title": "Online DWG Format Version Downgrader",
-    "description": "Benchmark and compare tools to downgrade AutoCAD DWG version code (e.g. AC1032 to AC1027). Learn how to open unsupported drawings.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online DWG Format Version Downgrader",
+    "title": "DWG Version Header Detector & EXPORTTOAUTOCAD Script Builder",
+    "description": "Read local 6-byte .dwg AC10xx headers in your browser and generate pure-ASCII EXPORTTOAUTOCAD / SAVEAS version conversion scripts.",
+    "discipline": "DWG Release Compatibility",
+    "standards": "DWG File Magic Signatures (AC1015-AC1032) & AutoCAD 2025 EXPORTTOAUTOCAD Command",
+    "cadContext": "Verify local drawing release codes before preparing headless AutoCAD EXPORTTOAUTOCAD or ODA File Converter downgrade scripts.",
+    "formula": "GenerationStep = Index(TargetFormat) - Index(SourceFormat)",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Source Format",
+        "val": "AC1032 (DWG 2018)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
+        "label": "Target Format",
+        "val": "AC1027 (DWG 2013)"
       },
       {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Drawing File",
+        "val": "civil_site_plan.dwg"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Conversion Step",
+        "val": "Downgrade (-1 format generation)"
+      },
+      {
+        "label": "Script Command",
+        "val": "-EXPORTTOAUTOCAD F 2013 O \"civil_site_plan_2013.dwg\""
+      }
+    ]
   },
   "online-dxf-text-translator-cloud": {
-    "title": "Online DXF/DWG Drawing Multi-Language Batch Translator",
-    "description": "Compare the best tools to batch translate DXF/DWG drawings text. Review vector coordinates preservation and font encoding support.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online DXF/DWG Drawing Multi-Language Batch Translator",
+    "title": "Browser DXF TEXT & MTEXT Glossary Batch Translator",
+    "description": "Parse ASCII DXF TEXT and MTEXT group-code strings locally, apply user glossary mappings, and export pure-ASCII translated DXF and CSV audit logs.",
+    "discipline": "DXF Annotation Localization & Audit",
+    "standards": "AutoCAD DXF Group Codes (1 / 3 Text String, 8 Layer Name) & TEXTFILL System Variable",
+    "cadContext": "Translate engineering title blocks and callouts deterministically using controlled glossaries without shifting DXF entity coordinates.",
+    "formula": "ReplacedEntities = count(TEXT/MTEXT strings matching >= 1 SOURCE=TARGET mapping)",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Sample DXF Text Entities",
+        "val": "3 (2 TEXT, 1 MTEXT)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Default Glossary",
+        "val": "6 DE-to-EN Engineering Rules (STAHL=STEEL, etc.)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Text Entities Parsed / Modified",
+        "val": "3 / 3"
+      },
+      {
+        "label": "Term Replacements",
+        "val": "6"
+      }
+    ]
   },
   "online-ifc-viewer-validator": {
     "title": "Online openBIM IFC Standard File Validator & Viewer",
@@ -22412,6 +22439,62 @@
       {
         "label": "Net Solid Volume",
         "val": "39395.57 mm³ (39.40 cm³)"
+      }
+    ]
+  },
+  "online-dxf-svg-nesting-tool": {
+    "title": "2D DXF & SVG Sheet Metal Automatic Nesting Tool",
+    "description": "Pack rectangular parts or imported DXF bounding boxes onto standard sheet sizes with kerf clearances and export pure-ASCII nested DXF and SVG layouts.",
+    "discipline": "Sheet Metal Nesting & CAM Preparation",
+    "standards": "AutoCAD DXF ASCII Specification (AC1027 / $INSUNITS=4 mm) & Two-Dimensional Shelf Packing",
+    "cadContext": "Evaluate material utilization percentage and export cut-ready DXF polylines anchored on the sheet origin.",
+    "formula": "Utilization(%) = (Sum(Part_W * Part_H) / (Sheet_W * Sheet_H)) * 100",
+    "inputs": [
+      {
+        "label": "Sheet Dimensions (mm)",
+        "val": "1000 x 500 (Kerf = 0 mm)"
+      },
+      {
+        "label": "Deterministic Benchmark Part",
+        "val": "4 x (250 x 200 mm)"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Material Utilization",
+        "val": "40.0000%"
+      },
+      {
+        "label": "Used Sheet Area",
+        "val": "0.2000 m^2 (200,000 mm^2)"
+      }
+    ]
+  },
+  "online-gcode-viewer-simulator": {
+    "title": "3D G-Code Viewer & CNC Toolpath Simulator",
+    "description": "Backplot RS-274 / ISO 6983-1 G0/G1/G2/G3 motion paths in 3D isometric or 2D XY projection locally and summarize feed length, rapid distance, and cutting time.",
+    "discipline": "CNC Backplotting & Toolpath Verification",
+    "standards": "ISO 6983-1 (G-code / RS-274 Numerical Control Motion Commands G0/G1/G2/G3)",
+    "cadContext": "Inspect programmed rapid plunges and feed contours prior to shop-floor DNC execution without uploading proprietary NC code.",
+    "formula": "EstCuttingTime(min) = FeedCutLength / MaxFeedRate_F",
+    "inputs": [
+      {
+        "label": "Deterministic Square Path",
+        "val": "G0 X0 Y0 Z5 + 4 G1 moves (100x50 mm rectangle)"
+      },
+      {
+        "label": "Programmed Feed Rate F",
+        "val": "600 mm/min"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Cutting / Rapid Length",
+        "val": "300.0 mm / 5.0 mm"
+      },
+      {
+        "label": "Est. Cutting Time",
+        "val": "0.5000 min"
       }
     ]
   }

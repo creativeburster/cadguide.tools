@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineDxfTextTranslatorCloudClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online DXF/DWG Multi-Language Translators Review | CADGuide.tools',
-  description: 'Compare the best tools to batch translate DXF/DWG drawings text. Review vector coordinates preservation and font encoding support.',
+  title: 'Browser DXF TEXT & MTEXT Glossary Batch Translator | CADGuide.tools',
+  description: 'Extract DXF TEXT and MTEXT group-code strings locally in your browser, apply engineering glossary mappings, and export updated ASCII DXF and CSV files.',
   path: '/toolbox/online-dxf-text-translator-cloud',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineDxfTextTranslatorCloudPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online DXF/DWG Drawing Multi-Language Batch Translator', path: '/toolbox/online-dxf-text-translator-cloud' },
+    { name: 'DXF TEXT & MTEXT Glossary Translator', path: '/toolbox/online-dxf-text-translator-cloud' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlineDxfTextTranslatorCloudPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Client-Side DXF Glossary Tool
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online DXF/DWG Drawing Multi-Language Batch Translator
+              Browser DXF TEXT &amp; MTEXT Glossary Batch Translator
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Apply custom engineering glossary mappings to ASCII DXF `TEXT`/`MTEXT` records locally with zero coordinate drift.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlineDxfTextTranslatorCloudPage() {
         </section>
       </main>
     </>
-);
+  );
 }
