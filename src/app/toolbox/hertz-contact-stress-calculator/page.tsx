@@ -5,7 +5,7 @@ import HertzContactStressCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Hertz Contact Stress Calculator",
-  description: "Calculate Hertzian contact stress between two curved surfaces.",
+  description: "Calculate Hertzian line-contact maximum pressure and contact width for parallel elastic cylinders.",
   path: '/toolbox/hertz-contact-stress-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HertzContactStressCalculatorPage() {
               Hertz Contact Stress <span className="text-blue-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate Hertzian contact stress between two curved surfaces.
+              Calculate Hertzian line-contact maximum pressure and contact width for parallel elastic cylinders.
             </p>
           </div>
         </section>

@@ -5,7 +5,7 @@ import HelicalGearCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Helical Gear Virtual Teeth & Force Calculator",
-  description: "Calculate virtual teeth, axial force, and normal module for helical gears.",
+  description: "Calculate helical gear transverse module, pitch diameter, virtual teeth, and axial/radial mesh forces.",
   path: '/toolbox/helical-gear-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HelicalGearCalculatorPage() {
               Helical Gear Virtual Teeth & Force <span className="text-blue-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate virtual teeth, axial force, and normal module for helical gears.
+              Calculate helical gear transverse module, pitch diameter, virtual teeth, and axial/radial mesh forces.
             </p>
           </div>
         </section>

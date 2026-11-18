@@ -5,7 +5,7 @@ import HobbingCycleTimeCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Gear Hobbing Cycle Time Calculator",
-  description: "Calculate gear hobbing machining time from gear specs and cutting parameters.",
+  description: "Calculate gear hobbing single-piece cutting time from gear teeth, hob starts, RPM, feed, and passes.",
   path: '/toolbox/hobbing-cycle-time-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HobbingCycleTimeCalculatorPage() {
               Gear Hobbing Cycle Time <span className="text-purple-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate gear hobbing machining time from gear specs and cutting parameters.
+              Calculate gear hobbing single-piece cutting time from gear teeth, hob starts, RPM, feed, and passes.
             </p>
           </div>
         </section>

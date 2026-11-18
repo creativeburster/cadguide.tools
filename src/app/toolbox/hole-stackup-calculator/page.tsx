@@ -5,7 +5,7 @@ import HoleStackupCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Hole Position Tolerance Stackup Calculator",
-  description: "Calculate worst-case and statistical hole position tolerance stackup.",
+  description: "Calculate worst-case and RSS statistical tolerance stackup with minimum clearance checks.",
   path: '/toolbox/hole-stackup-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HoleStackupCalculatorPage() {
               Hole Position Tolerance Stackup <span className="text-purple-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate worst-case and statistical hole position tolerance stackup.
+              Calculate worst-case and RSS statistical tolerance stackup with minimum clearance checks.
             </p>
           </div>
         </section>

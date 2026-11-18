@@ -7394,178 +7394,210 @@
   },
   "helical-gear-calculator": {
     "title": "Helical Gear Virtual Teeth & Force Calculator",
-    "description": "Calculate virtual teeth, axial force, and normal module for helical gears.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "zv=z/cos(b)^3, Fa=Ft*tan(b), mn=mt*cos(b)",
+    "description": "Calculate helical gear transverse module, pitch diameter, virtual teeth, and axial/radial mesh forces.",
+    "discipline": "Mechanical Power Transmission & Gear Geometry",
+    "standards": "Basic involute cylindrical helical gear trigonometric geometry and 3D mesh force equilibrium",
+    "cadContext": "Select a normal module m_n matching standard rack cutters, specify helix hand (left/right) and axial thrust bearing direction on gearbox drawings.",
+    "formula": "m_t = m_n / cos(beta), d = m_t * z, z_v = z / cos^3(beta), F_a = F_t * tan(beta), F_r = F_t * tan(alpha_n) / cos(beta)",
     "inputs": [
       {
-        "label": "Teeth",
+        "label": "Normal Module m_n (mm)",
+        "val": "2"
+      },
+      {
+        "label": "Teeth (z)",
         "val": "24"
       },
       {
-        "label": "Helix Angle (deg)",
+        "label": "Helix Angle beta (deg)",
         "val": "20"
       },
       {
-        "label": "Transverse Module (mm)",
-        "val": "3"
+        "label": "Normal Pressure Angle alpha_n (deg)",
+        "val": "20"
       },
       {
-        "label": "Tangential Force (N)",
+        "label": "Tangential Force Ft (N)",
         "val": "1000"
       }
     ],
     "outputs": [
       {
-        "label": "Virtual Teeth",
+        "label": "Transverse Module m_t",
+        "val": "2.1284 mm"
+      },
+      {
+        "label": "Pitch Diameter d",
+        "val": "51.081 mm"
+      },
+      {
+        "label": "Virtual Teeth z_v",
         "val": "28.924"
       },
       {
-        "label": "Axial Force",
+        "label": "Axial Thrust Force F_a",
         "val": "363.97 N"
       },
       {
-        "label": "Normal Module",
-        "val": "2.819 mm"
+        "label": "Radial Force F_r",
+        "val": "387.33 N"
       }
     ]
   },
   "hertz-contact-stress-calculator": {
     "title": "Hertz Contact Stress Calculator",
-    "description": "Calculate Hertzian contact stress between two curved surfaces.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "sigma_max = 0.918*sqrt(F*E_sum/(R_sum*L))",
+    "description": "Calculate Hertzian line-contact maximum pressure and contact width for parallel elastic cylinders.",
+    "discipline": "Contact Mechanics & Surface Fatigue Analysis",
+    "standards": "Classical Hertzian non-adhesive elastic line-contact theory for parallel cylinders",
+    "cadContext": "Specify R2 < 0 for convex roller inside concave bore, verify crowning or edge relief on CAD models, and evaluate subsurface shear depth (~0.78*b).",
+    "formula": "1/E* = (1-nu1^2)/E1 + (1-nu2^2)/E2, 1/R* = 1/R1 + 1/R2, b = sqrt(4*F*R*/(pi*L*E*)), p_max = 2*F/(pi*b*L)",
     "inputs": [
       {
-        "label": "Normal Force (N)",
+        "label": "Normal Force F (N)",
         "val": "1000"
       },
       {
-        "label": "Effective Length (mm)",
+        "label": "Contact Length L (mm)",
         "val": "10"
       },
       {
-        "label": "R1 (mm)",
+        "label": "Radius R1 (mm)",
         "val": "20"
       },
       {
-        "label": "R2 (mm)",
+        "label": "Radius R2 (mm)",
         "val": "-30"
       },
       {
-        "label": "E1 (GPa)",
-        "val": "200"
+        "label": "Modulus E1 / E2 (GPa)",
+        "val": "200 / 200"
       },
       {
-        "label": "E2 (GPa)",
-        "val": "200"
+        "label": "Poisson nu1 / nu2",
+        "val": "0.30 / 0.30"
       }
     ],
     "outputs": [
       {
-        "label": "Max Contact Stress",
-        "val": "530.01 MPa"
+        "label": "Max Contact Pressure p_max",
+        "val": "241.45 MPa"
       },
       {
-        "label": "Contact Width",
-        "val": "0.195375 mm"
+        "label": "Half Contact Width b",
+        "val": "0.2637 mm"
+      },
+      {
+        "label": "Total Contact Width 2b",
+        "val": "0.5273 mm"
+      },
+      {
+        "label": "Composite Modulus E*",
+        "val": "109.890 GPa"
       }
     ]
   },
   "hobbing-cycle-time-calculator": {
     "title": "Gear Hobbing Cycle Time Calculator",
-    "description": "Calculate gear hobbing machining time from gear specs and cutting parameters.",
-    "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "T = z*L/(n*f) + indexing time",
+    "description": "Calculate gear hobbing single-piece cutting time from gear teeth, hob starts, RPM, feed, and passes.",
+    "discipline": "CNC Gear Manufacturing & Cycle-Time Estimation",
+    "standards": "Kinematics of continuous generating gear hobbing (workpiece-to-hob synchronization ratio)",
+    "cadContext": "Check hob overtravel and adjacent shoulder clearance on gear blank drawings so the approach+overtravel allowance matches fixture constraints.",
+    "formula": "n_w = (n_hob * k_starts) / z, v_f = f_a * n_w, t_cut = passes * (b + approach) / v_f",
     "inputs": [
       {
-        "label": "Gear Teeth",
+        "label": "Gear Teeth z",
         "val": "40"
       },
       {
-        "label": "Face Width (mm)",
+        "label": "Face Width b (mm)",
         "val": "30"
+      },
+      {
+        "label": "Approach+Overtravel (mm)",
+        "val": "10"
+      },
+      {
+        "label": "Hob Starts",
+        "val": "1"
       },
       {
         "label": "Hob Speed (RPM)",
         "val": "200"
       },
       {
-        "label": "Feed (mm/rev)",
+        "label": "Feed (mm/work rev)",
         "val": "1.5"
       },
       {
-        "label": "Number of Passes",
+        "label": "Passes",
         "val": "2"
       }
     ],
     "outputs": [
       {
-        "label": "Cutting Time",
-        "val": "8.000 min"
+        "label": "Total Cutting Time",
+        "val": "10.667 min"
       },
       {
         "label": "Time per Pass",
-        "val": "4.000 min"
+        "val": "5.333 min"
+      },
+      {
+        "label": "Workpiece Speed n_w",
+        "val": "5.000 RPM"
+      },
+      {
+        "label": "Axial Feed Rate v_f",
+        "val": "7.500 mm/min"
       }
     ]
   },
   "hole-stackup-calculator": {
     "title": "Hole Position Tolerance Stackup Calculator",
-    "description": "Calculate worst-case and statistical hole position tolerance stackup.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "WC=sum(t), RSS=sqrt(sum(t^2))",
+    "description": "Calculate worst-case and RSS statistical tolerance stackup with minimum clearance checks.",
+    "discipline": "Dimensional Management & 1D Tolerance Analysis",
+    "standards": "1D arithmetic Worst-Case and Root-Sum-Square (RSS) statistical tolerance accumulation",
+    "cadContext": "Use Worst-Case stackup when 100% interchangeability is mandatory and RSS when mating contributors follow uncorrelated statistical distributions.",
+    "formula": "T_WC = sum(t_i), T_RSS = sqrt(sum(t_i^2)), C_min = C_nom - T_stack",
     "inputs": [
       {
-        "label": "Tolerance 1 (mm)",
-        "val": "0.1"
+        "label": "Nominal Clearance C_nom (mm)",
+        "val": "0.50"
       },
       {
-        "label": "Tolerance 2 (mm)",
-        "val": "0.15"
-      },
-      {
-        "label": "Tolerance 3 (mm)",
-        "val": "0.1"
-      },
-      {
-        "label": "Tolerance 4 (mm)",
-        "val": "0.05"
+        "label": "Half-Band Contributors (+/- mm)",
+        "val": "0.10, 0.15, 0.10, 0.05"
       }
     ],
     "outputs": [
       {
-        "label": "Worst Case",
-        "val": "0.400000 mm"
+        "label": "Worst-Case Stack (+/- T_WC)",
+        "val": "0.4000 mm"
       },
       {
-        "label": "RSS",
-        "val": "0.212132 mm"
+        "label": "RSS Statistical Stack (+/- T_RSS)",
+        "val": "0.2121 mm"
       },
       {
-        "label": "Statistical",
-        "val": "0.318198 mm"
+        "label": "Min Clearance (Worst-Case)",
+        "val": "0.1000 mm"
+      },
+      {
+        "label": "Min Clearance (RSS)",
+        "val": "0.2879 mm"
       }
     ]
   },
   "horizontal-curve-calculator": {
     "title": "Horizontal Curve Elements Calculator",
-    "description": "Calculate horizontal curve radius, tangent, arc length, and chord for circular curves.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "T = R·tan(Δ/2) • L = R·Δ(rad) • LC = 2R·sin(Δ/2) • E = R·(sec(Δ/2)-1) (AASHTO Green Book Highway Curves)",
+    "description": "Calculate circular horizontal curve arc length, tangent distance, long chord, external distance, and middle ordinate.",
+    "discipline": "Civil Alignment Geometry & Surveying",
+    "standards": "Euclidean circular arc geometry for simple horizontal alignment curves",
+    "cadContext": "Verify tangent runout and radial bearing continuity at PC (Point of Curvature) and PT (Point of Tangency) alignment stations in Civil 3D / CAD.",
+    "formula": "L = R * Delta_rad, T = R * tan(Delta/2), LC = 2 * R * sin(Delta/2), E = R * (sec(Delta/2) - 1), M = R * (1 - cos(Delta/2))",
     "inputs": [
       {
-        "label": "Deflection / Intersection Angle Δ (°)",
+        "label": "Deflection Angle Delta (deg)",
         "val": "36.5"
       },
       {
@@ -7575,28 +7607,24 @@
     ],
     "outputs": [
       {
-        "label": "Curve Total Arc Length (L)",
+        "label": "Curve Arc Length L",
         "val": "203.85 m"
       },
       {
-        "label": "Tangent Distance (T)",
+        "label": "Tangent Distance T",
         "val": "105.52 m"
       },
       {
-        "label": "Long Chord Length (LC)",
+        "label": "Long Chord LC",
         "val": "200.42 m"
       },
       {
-        "label": "External Distance (E)",
+        "label": "External Distance E",
         "val": "16.95 m"
       },
       {
-        "label": "Middle Ordinate (M)",
+        "label": "Middle Ordinate M",
         "val": "16.10 m"
-      },
-      {
-        "label": "Degree of Curvature (D)",
-        "val": "17.90 °"
       }
     ]
   },

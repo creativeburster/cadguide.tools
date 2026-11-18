@@ -5,7 +5,7 @@ import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Horizontal Curve Elements Calculator",
-  description: "Calculate horizontal curve radius, tangent, arc length, and chord for circular curves.",
+  description: "Calculate circular horizontal curve arc length, tangent distance, long chord, external distance, and middle ordinate.",
   path: '/toolbox/horizontal-curve-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function CalculatorPage() {
               Horizontal Curve Elements Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate horizontal curve radius, tangent, arc length, and chord for circular curves.
+              Calculate circular horizontal curve arc length, tangent distance, long chord, external distance, and middle ordinate.
             </p>
           </div>
         </section>
