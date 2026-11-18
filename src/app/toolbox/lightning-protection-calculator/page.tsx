@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Lightning Protection Risk Assessment Calculator (NFPA 780)",
-  description: "Calculate lightning strike risk and determine if LPS is required per NFPA 780.",
+  title: "Lightning Collection Area & Strike Frequency Calculator",
+  description: "Calculate equivalent collection area Ae and expected annual strike frequency Nd from structure dimensions and flash density.",
   path: '/toolbox/lightning-protection-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Lightning Protection Risk Assessment Calculator (NFPA 780)", path: '/toolbox/lightning-protection-calculator' },
+    { name: "Lightning Collection Area & Strike Frequency Calculator", path: '/toolbox/lightning-protection-calculator' },
   ]);
 
   return (
@@ -29,10 +29,10 @@ export default function CalculatorPage() {
               Engineering Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Lightning Protection Risk Assessment Calculator (NFPA 780)
+              Lightning Collection Area & Strike Frequency Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate lightning strike risk and determine if LPS is required per NFPA 780.
+              Calculate equivalent collection area Ae and expected annual strike frequency Nd from structure dimensions and flash density.
             </p>
           </div>
         </section>

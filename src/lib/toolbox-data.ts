@@ -4299,14 +4299,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'lightning-protection-calculator',
-    title: "Lightning Protection Risk Assessment Calculator (NFPA 780)",
-    description: "Calculate lightning strike risk and determine if LPS is required per NFPA 780.",
-    detailDesc: "Nd = Ng*Ae*C1. Risk Ri = Nd*C2*C3*C4*C5. If Ri > 1e-5, LPS required. Ae = L*W+2*(L+W)*H+pi*H^2. Includes ground flash density, location, occupancy, content factors.",
+    title: "Lightning Collection Area & Strike Frequency Calculator",
+    description: "Calculate equivalent collection area Ae and expected annual lightning strike frequency Nd.",
+    detailDesc: "Equivalent collection area Ae = L*W + 2*(k*H)*(L + W) + pi*(k*H)^2 and expected direct strike frequency Nd = Ng*Ae*Cd*1e-6 vs tolerable threshold Nc.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["lightning protection calculator","nfpa 780","lightning risk assessment","lightning protection system","lps design","lightning strike frequency","collection area","ground flash density","lightning risk","rolling sphere method"]
+    keywords: ["lightning protection calculator","lightning risk assessment","lightning protection system","lps design","lightning strike frequency","collection area","ground flash density","lightning risk"]
   },
   {
     slug: 'fire-hydrant-flow-calculator',

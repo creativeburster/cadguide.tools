@@ -8353,189 +8353,138 @@
     ]
   },
   "lift-force-calculator": {
-    "title": "Aerodynamic Lift Force Calculator",
-    "description": "Calculate lift force from velocity, wing area, and lift coefficient.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Fl = 0.5*rho*v^2*Cl*A",
+    "title": "Aerodynamic Lift & Drag Polar Calculator",
+    "description": "Calculate dynamic pressure, lift force, induced drag, total drag, and L/D ratio using the parabolic drag polar.",
+    "discipline": "Subsonic Aerodynamics & Wing Sizing",
+    "standards": "Incompressible Dynamic Pressure & Prandtl Lifting-Line Induced Drag",
+    "cadContext": "Evaluate cruise lift L, induced drag C_Di = C_L^2/(pi*AR*e), and overall L/D efficiency when iterating wing area S and span Aspect Ratio in conceptual CAD airframes.",
+    "formula": "q = 0.5*rho*V^2, L = q*S*C_L, C_Di = C_L^2/(pi*AR*e), D = q*S*(C_D0 + C_Di)",
     "inputs": [
       {
-        "label": "Density (kg/m3)",
-        "val": "1.225"
+        "label": "Air Density / Airspeed / Wing Area",
+        "val": "1.225 kg/m3 / 60 m/s / 16 m2"
       },
       {
-        "label": "Velocity (m/s)",
-        "val": "50"
-      },
-      {
-        "label": "Lift Cl",
-        "val": "1.2"
-      },
-      {
-        "label": "Wing Area (m2)",
-        "val": "20"
+        "label": "C_L / C_D0 / Aspect Ratio / Oswald e",
+        "val": "0.8 / 0.025 / 7.5 / 0.82"
       }
     ],
     "outputs": [
       {
-        "label": "Lift Force",
-        "val": "36750 N"
+        "label": "Lift Force L / Total Drag D",
+        "val": "28224.00 N / 2050.65 N"
       },
       {
-        "label": "L/D Ratio",
-        "val": "15.000"
+        "label": "L/D Ratio / Dynamic Pressure",
+        "val": "13.76 / 2205.00 Pa"
       }
     ]
   },
   "lighting-lux-calculator": {
     "title": "Lighting Lux Level Calculator",
-    "description": "Calculate illuminance (lux) from lumens, area, and number of fixtures.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "lux = lumens * fixtures * utilization / area",
+    "description": "Calculate maintained horizontal illuminance (lux) and lighting power density (LPD) using the lumen method.",
+    "discipline": "Architectural Interior Photometry",
+    "standards": "Zonal Cavity / Lumen Method Illuminance Calculation",
+    "cadContext": "Size luminaire counts, total connected fixture wattage, and room LPD alongside ceiling RCP grids before detailed photometric simulations.",
+    "formula": "E = (N * Phi * UF * MF) / Area, LPD = (N * W) / Area",
     "inputs": [
       {
-        "label": "Lumens per Fixture (lm)",
-        "val": "3000"
+        "label": "Area / Fixtures / Lumens / Watts",
+        "val": "60 m2 / 12 pcs / 3600 lm / 32 W"
       },
       {
-        "label": "Number of Fixtures",
-        "val": "8"
-      },
-      {
-        "label": "Room Area (m2)",
-        "val": "50"
-      },
-      {
-        "label": "Utilization Factor",
-        "val": "0.7"
-      },
-      {
-        "label": "Maintenance Factor",
-        "val": "0.8"
+        "label": "UF / MF",
+        "val": "0.72 / 0.8"
       }
     ],
     "outputs": [
       {
-        "label": "Illuminance",
-        "val": "268.80 lux"
+        "label": "Maintained Illuminance",
+        "val": "414.7 lux"
       },
       {
-        "label": "Power Density",
-        "val": "4.800 W/m2"
+        "label": "Lighting Power Density / Load",
+        "val": "6.40 W/m2 / 384.0 W"
       }
     ]
   },
   "lightning-protection-calculator": {
-    "title": "Lightning Protection Risk Assessment Calculator (NFPA 780)",
-    "description": "Calculate lightning strike risk and determine if LPS is required per NFPA 780.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "A_e = L·W + 2(L+W)H + π·H² • N_d = N_g · A_e · C1 · 10⁻⁶ (IEC 62305-2 Lightning Risk Assessment)",
+    "title": "Lightning Collection Area & Strike Frequency Calculator",
+    "description": "Calculate equivalent collection area Ae and expected annual strike frequency Nd from building dimensions and flash density.",
+    "discipline": "Facility Electrical Risk & Lightning Envelope Geometry",
+    "standards": "Geometric Collection Envelope Projection (k*H Slope Method)",
+    "cadContext": "Estimate equivalent strike collection footprint Ae across rectilinear building roofs with configurable slope multiplier k before detailed external grounding coordination.",
+    "formula": "Ae = L*W + 2*(k*H)*(L + W) + pi*(k*H)^2, Nd = Ng * Ae * Cd * 10^-6",
     "inputs": [
       {
-        "label": "Building Length (m)",
-        "val": "45"
+        "label": "L x W x H / Slope k",
+        "val": "45 x 25 x 22 m / k=3"
       },
       {
-        "label": "Building Width (m)",
-        "val": "25"
-      },
-      {
-        "label": "Building Eaves Height (m)",
-        "val": "22"
-      },
-      {
-        "label": "Ground Flash Density N_g (flashes/km²·yr)",
-        "val": "4.0"
-      },
-      {
-        "label": "Location Environment Factor C1",
-        "val": "1.0 (Average Urban Exposure)"
+        "label": "Ng / Location Factor Cd / Threshold Nc",
+        "val": "4.0 flashes/km2/yr / 1.0 / 0.0001"
       }
     ],
     "outputs": [
       {
-        "label": "Direct Lightning Strike Frequency Nd",
-        "val": "0.0229 strikes/yr"
+        "label": "Equivalent Collection Area Ae",
+        "val": "24049.8 m2 (24.050 thousand m2)"
       },
       {
-        "label": "Equivalent Lightning Collection Area Ae",
-        "val": "5.73 thousand m²"
-      },
-      {
-        "label": "Tolerable Risk Threshold Nc",
-        "val": "0.0001 strikes/yr"
-      },
-      {
-        "label": "LPS Class Requirement Determination",
-        "val": "LPS MANDATORY (Class I/II)"
+        "label": "Strike Frequency Nd",
+        "val": "0.096199 strikes/yr (EXCEEDS Nc)"
       }
     ]
   },
   "limits-and-fits-calculator": {
-    "title": "ISO 286 Limits & Fits Calculator",
-    "description": "Calculate engineering tolerances, limit deviations, and fit classifications (clearance, transition, interference) based on ISO 286 standards with a dynamic SVG tolerance band visualizer.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Standardized parametric evaluation for ISO 286 Limits & Fits Calculator",
+    "title": "ISO 286 Limits and Fits Tolerance Calculator",
+    "description": "Compute exact hole/shaft upper and lower limits and fit clearance or interference for nominal diameters 3 < D <= 400 mm.",
+    "discipline": "ISO 286 Shaft-Hole Fits & Tolerance Stackup",
+    "standards": "ISO 286 Hole & Shaft Fundamental Deviations (37 Hole Zones x 37 Shaft Zones)",
+    "cadContext": "Evaluate exact minimum/maximum metal conditions and fit classification across 37 hole and 37 shaft tolerance bands from 3 mm to 400 mm nominal diameters.",
+    "formula": "MaxClearance = ES - ei, MinClearance = EI - es",
     "inputs": [
       {
-        "label": "Hole Tolerance Band",
-        "val": "Nominal"
-      },
-      {
-        "label": "Shaft Tolerance Band",
-        "val": "Nominal"
-      }
-    ],
-    "outputs": []
-  },
-  "liquefaction-potential-calculator": {
-    "title": "Soil Liquefaction Potential Calculator (SPT Method)",
-    "description": "Calculate factor of safety against liquefaction using SPT N-values per Youd et al. (2001).",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "FS = (CRR_7.5 · MSF) / CSR • CSR = 0.65 · (a_max/g) · (σ_v/σ'_v) · r_d (NCEER / Youd et al. 2001)",
-    "inputs": [
-      {
-        "label": "Peak Ground Acceleration a_max (g)",
-        "val": "0.35"
-      },
-      {
-        "label": "Earthquake Moment Magnitude M_w",
-        "val": "M 7.5 (Standard Reference MSF = 1.00)"
-      },
-      {
-        "label": "Corrected Clean Sand SPT (N1)60",
-        "val": "15"
-      },
-      {
-        "label": "Effective Overburden Stress σ'_v (kPa)",
-        "val": "85"
+        "label": "Nominal Diameter / Hole / Shaft",
+        "val": "30 mm / H7 / g6"
       }
     ],
     "outputs": [
       {
-        "label": "Factor of Safety against Liquefaction",
-        "val": "0.61 FS"
+        "label": "Classification / Clearances",
+        "val": "Clearance Fit / Min +0.0070 mm, Max +0.0410 mm"
       },
       {
-        "label": "Cyclic Stress Ratio (CSR)",
-        "val": "0.254"
+        "label": "Hole / Shaft Limits",
+        "val": "30.0000-30.0210 mm / 29.9800-29.9930 mm"
+      }
+    ]
+  },
+  "liquefaction-potential-calculator": {
+    "title": "Soil Liquefaction Potential Calculator (SPT Method)",
+    "description": "Evaluate seismic cyclic stress ratio (CSR), cyclic resistance ratio (CRR), and factor of safety using Youd et al. (2001).",
+    "discipline": "Geotechnical Earthquake Engineering",
+    "standards": "Seed & Idriss (1971) / Youd et al. (2001) NCEER Simplified SPT Procedure",
+    "cadContext": "Screen saturated granular foundation layers against earthquake cyclic stress ratio before sizing ground improvement or deep pile foundations.",
+    "formula": "CSR = 0.65*a_max*(sigma_v/sigma_v')*r_d, CRR_7.5 = 1/(34-N1_60)+N1_60/135+50/(10*N1_60+45)^2-1/200, FS = CRR_7.5*MSF/CSR",
+    "inputs": [
+      {
+        "label": "a_max / Mw / (N1)60cs",
+        "val": "0.35 g / 7.5 / 15"
       },
       {
-        "label": "Cyclic Resistance Ratio (CRR)",
-        "val": "0.156"
+        "label": "sigma_v / sigma_v' / r_d",
+        "val": "160 kPa / 85 kPa / 0.95"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Factor of Safety FS",
+        "val": "0.3934"
       },
       {
-        "label": "Magnitude Scaling Factor (MSF)",
-        "val": "1.00"
+        "label": "CSR / CRR",
+        "val": "0.4068 / 0.1601"
       }
     ]
   },
