@@ -176,16 +176,16 @@ flowchart LR
 | 28 | gcode-quick-reference-sheet、gdt-symbol-reference-guide、gear-force-calculator、gear-module-calculator、gear-module-calculator-2 | 8a27c905（已通过复核，已 push，2026-11-18） |
 | 29 | gear-module-pitch-calculator、gear-ratio-belt-calculator、gear-ratio-bike-calculator、gear-ratio-speed-calculator、generator-sizing-calculator | 0b4a6c6a（已通过复核，已 push，2026-11-18） |
 | 30 | glazing-wind-load-calculator、gradient-grade-calculator、grease-trap-sizing-calculator、grinding-ratio-calculator、grinding-wheel-speed-calculator | 0c9b5ee8（已通过复核，已 push，2026-11-18） |
-| 31 | ground-anchor-capacity-calculator、grounding-grid-calculator、gyroscope-precession-calculator、gyroscopic-couple-calculator、hardness-converter（跳过 *-shortcuts-sheet 目录 gstarcad-shortcuts-sheet） | e1b66330（待复核） |
-| 32 | harmonic-drive-calculator、heat-exchanger-calculator、heat-transfer-conduction-calculator、heat-transfer-convection-calculator、heat-treatment-time-calculator | d1eba212（待复核） |
-| 33 | helical-gear-calculator、hertz-contact-stress-calculator、hobbing-cycle-time-calculator、hole-stackup-calculator、horizontal-curve-calculator | 0410ac28（待复核） |
-| 34 | horsepower-torque-calculator、hot-water-circulation-calculator、hvac-load-room-calculator、hydraulic-cylinder-force-calculator、hydrostatic-pressure-calculator | 39121078（待复核） |
-| 35 | ifc-element-quantity-calculator、ifc-entity-counter、impact-force-calculator、imperial-thread-reference、inductor-reactance-calculator | cb8515a5（待复核） |
-| 36 | injection-clamping-force-calculator、injection-molding-clamp-calculator、insulation-r-value-calculator、insulation-thickness-calculator、involute-gear-calculator（跳过 inventor-shortcuts-sheet） | 0730f5c9（待复核） |
-| 37 | iso-2768-general-tolerances-reference、iso-286-limits-fits-reference、iso-metric-thread-reference、keyway-stress-calculator、k-factor-calculator | f919acf6（待复核） |
-| 38 | land-survey-area-calculator、laser-cutting-calculator、led-resistor-calculator、length-unit-converter、lever-mechanical-advantage-calculator（跳过 kicad-shortcuts-sheet） | 162e8726（待复核） |
-| 39 | lift-force-calculator、lighting-lux-calculator、lightning-protection-calculator、limits-and-fits-calculator、liquefaction-potential-calculator | b9fdc8c1（待复核） |
-| 40 | manifold-pressure-calculator、manometer-pressure-calculator、mass-unit-converter、mat-foundation-stress-calculator、material-density-calculator（跳过 mastercam-shortcuts-sheet） | 94c9d740～556200c7（待复核） |
+| 31 | ground-anchor-capacity-calculator、grounding-grid-calculator、gyroscope-precession-calculator、gyroscopic-couple-calculator、hardness-converter（跳过 *-shortcuts-sheet 目录 gstarcad-shortcuts-sheet） | e1b66330（已通过复核，已 push，2026-11-18） |
+| 32 | harmonic-drive-calculator、heat-exchanger-calculator、heat-transfer-conduction-calculator、heat-transfer-convection-calculator、heat-treatment-time-calculator | d1eba212（已通过复核，已 push，2026-11-18） |
+| 33 | helical-gear-calculator、hertz-contact-stress-calculator、hobbing-cycle-time-calculator、hole-stackup-calculator、horizontal-curve-calculator | 0410ac28（已通过复核，已 push，2026-11-18） |
+| 34 | horsepower-torque-calculator、hot-water-circulation-calculator、hvac-load-room-calculator、hydraulic-cylinder-force-calculator、hydrostatic-pressure-calculator | 39121078（已通过复核，已 push，2026-11-18） |
+| 35 | ifc-element-quantity-calculator、ifc-entity-counter、impact-force-calculator、imperial-thread-reference、inductor-reactance-calculator | cb8515a5（已通过复核，已 push，2026-11-18） |
+| 36 | injection-clamping-force-calculator、injection-molding-clamp-calculator、insulation-r-value-calculator、insulation-thickness-calculator、involute-gear-calculator（跳过 inventor-shortcuts-sheet） | 0730f5c9（已通过复核，已 push，2026-11-18） |
+| 37 | iso-2768-general-tolerances-reference、iso-286-limits-fits-reference、iso-metric-thread-reference、keyway-stress-calculator、k-factor-calculator | f919acf6（已通过复核，已 push，2026-11-18） |
+| 38 | land-survey-area-calculator、laser-cutting-calculator、led-resistor-calculator、length-unit-converter、lever-mechanical-advantage-calculator（跳过 kicad-shortcuts-sheet） | 162e8726（已通过复核，已 push，2026-11-18） |
+| 39 | lift-force-calculator、lighting-lux-calculator、lightning-protection-calculator、limits-and-fits-calculator、liquefaction-potential-calculator | b9fdc8c1（已通过复核，已 push，2026-11-18） |
+| 40 | manifold-pressure-calculator、manometer-pressure-calculator、mass-unit-converter、mat-foundation-stress-calculator、material-density-calculator（跳过 mastercam-shortcuts-sheet） | 94c9d740～556200c7（已通过复核，已 push，2026-11-18） |
 | 41 | material-properties-reference（#201 已在 94c9d740 完成改造，其余 4 个工具待续） | （进行中） |
 
 ---
