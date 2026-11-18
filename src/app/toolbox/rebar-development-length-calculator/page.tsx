@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Rebar Development Length Calculator (ACI 318)",
-  description: "Calculate tension and compression development length for rebar per ACI 318 code.",
+  title: "Rebar Development & Lap Splice Calculator",
+  description: "Calculate rebar tension development length, 90-degree hook extension, and lap splice length from bond-stress equilibrium.",
   path: '/toolbox/rebar-development-length-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Rebar Development Length Calculator (ACI 318)", path: '/toolbox/rebar-development-length-calculator' },
+    { name: "Rebar Development & Lap Splice Calculator", path: '/toolbox/rebar-development-length-calculator' },
   ]);
 
   return (
@@ -29,10 +29,10 @@ export default function CalculatorPage() {
               Engineering Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Rebar Development Length Calculator (ACI 318)
+              Rebar Development &amp; Lap Splice Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate tension and compression development length for rebar per ACI 318 code.
+              Calculate rebar tension development length, 90-degree hook extension, and lap splice length from bond-stress equilibrium.
             </p>
           </div>
         </section>

@@ -11041,222 +11041,222 @@
     ]
   },
   "rebar-development-length-calculator": {
-    "title": "Rebar Development Length Calculator (ACI 318)",
-    "description": "Calculate tension and compression development length for rebar per ACI 318 code.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "L_d = [f_y · ψ_t · ψ_e · ψ_s / (2.1 · λ · √f'_c)] · d_b (ACI 318-19 Building Code Requirements)",
+    "title": "Rebar Development & Lap Splice Calculator",
+    "description": "Calculate rebar tension development length, 90-degree hook extension, and lap splice length from bond-stress equilibrium.",
+    "discipline": "Reinforced Concrete Anchorage & Force-Equilibrium Detailing",
+    "standards": "Axial Force-Bond Stress Equilibrium: Ld = (db * fy * k_pos * k_coat) / (4 * tau_b)",
+    "cadContext": "Enter user-defined design bond stress and position/coating/lap multipliers explicitly when detailing reinforcing bar development zones and splice regions on structural drawings.",
+    "formula": "Ld = (db * fy * k_pos * k_coat) / (4 * tau_b) ; Ldh = Ld * k_hook ; L_lap = Ld * k_lap",
     "inputs": [
       {
-        "label": "Bar Designation Diameter db (mm)",
+        "label": "Bar Diameter db (mm)",
         "val": "20"
       },
       {
-        "label": "Steel Yield Strength fy (MPa)",
-        "val": "Grade 60 (fy = 420 MPa)"
+        "label": "Yield Strength fy (MPa)",
+        "val": "420"
       },
       {
-        "label": "Concrete Compressive Strength f'c (MPa)",
-        "val": "30"
+        "label": "Design Bond Stress tau_b (MPa)",
+        "val": "2.5"
       },
       {
-        "label": "Bar Casting Position",
-        "val": "Bottom Bar (ψt = 1.0)"
-      },
-      {
-        "label": "Rebar Coating",
-        "val": "Black Uncoated Bar (ψe = 1.0)"
+        "label": "Factors (k_pos / k_coat / k_hook / k_lap)",
+        "val": "1.0 / 1.0 / 0.7 / 1.3"
       }
     ],
     "outputs": [
       {
-        "label": "Tension Development Length (Ld)",
-        "val": "731 mm"
+        "label": "Tension Development Length Ld",
+        "val": "840.0 mm"
       },
       {
-        "label": "Compression Development Length (Ldc)",
-        "val": "369 mm"
+        "label": "Ld / db Ratio",
+        "val": "42.00 db"
       },
       {
-        "label": "Ratio to Bar Diameter (Ld / db)",
-        "val": "36.5 db"
+        "label": "Hooked Development Length Ldh",
+        "val": "588.0 mm"
       },
       {
-        "label": "Standard 90° Hook Extension (Ldh)",
-        "val": "258 mm"
+        "label": "Tension Lap Splice Length",
+        "val": "1092.0 mm"
       }
     ]
   },
   "rebar-spacing-calculator": {
     "title": "Rebar Spacing & Quantity Calculator",
-    "description": "Calculate rebar quantity, spacing, and weight for slabs and walls.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "N = ceil(L/spacing)+1, weight = N*L*unit_weight",
+    "description": "Calculate rebar bar count, net cut length, waste allowance length, and exact circular steel mass for slab reinforcement.",
+    "discipline": "Reinforced Concrete Mesh Takeoff & Quantities",
+    "standards": "Exact Circular Bar Area Mass: w = (pi / 4) * d^2 * rho ; Span Bar Count: N = ceil((Span - 2 * cover) / spacing) + 1",
+    "cadContext": "Extract net slab dimensions and clear edge cover directly from structural plan sheets before generating bar bending schedules and tonnage estimates.",
+    "formula": "N = ceil((Span - 2 * c) / s) + 1 ; m_total = L_gross * (pi / 4) * d^2 * rho",
     "inputs": [
       {
-        "label": "Slab Length (m)",
-        "val": "10"
+        "label": "Slab Length x Width (m)",
+        "val": "10 x 5 (cover 50 mm)"
       },
       {
-        "label": "Slab Width (m)",
-        "val": "5"
+        "label": "X / Y Spacing (mm)",
+        "val": "200 / 200"
       },
       {
-        "label": "Bar Spacing (mm)",
-        "val": "200"
+        "label": "Bar Dia / Layers / Density",
+        "val": "12 mm / 1 layer / 7850 kg/m3"
       },
       {
-        "label": "Bar Dia (mm)",
-        "val": "12"
-      },
-      {
-        "label": "Direction",
-        "val": "Bidirectional Mesh (X & Y)"
+        "label": "Waste & Lap Allowance",
+        "val": "5%"
       }
     ],
     "outputs": [
       {
-        "label": "Bars Each Way",
-        "val": "77.000"
+        "label": "Total Bars (Nx + Ny)",
+        "val": "77"
       },
       {
-        "label": "Total Length",
-        "val": "515.00 m"
+        "label": "Net Cut Length",
+        "val": "507.30 m"
       },
       {
-        "label": "Total Weight",
-        "val": "457.57 kg"
+        "label": "Total Mass (incl Allowance)",
+        "val": "472.91 kg"
+      },
+      {
+        "label": "Exact Unit Mass",
+        "val": "0.8878 kg/m"
       }
     ]
   },
   "rebar-weight-calculator": {
     "title": "Rebar Weight & Spacing Calculator",
-    "description": "Calculate rebar weight per meter, total weight for slabs and walls, and spacing for given bar sizes. Supports metric and imperial bar sizes.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "{'Unit weight formula: W = d²/162 (kg/m, d in mm). Based on steel density 7850 kg/m³. Number of bars = (slab dimension / spacing) + 1. Add 10-15% for laps and waste.'}",
+    "description": "Calculate exact circular rebar unit linear mass (kg/m, lb/ft), single bar mass, and slab grid takeoff weight.",
+    "discipline": "Reinforced Concrete Steel Takeoff & Geometry",
+    "standards": "Exact Circular Cross-Sectional Mass: w_kg_m = (pi / 4) * (d / 1000)^2 * rho",
+    "cadContext": "Reconcile mill steel density rho and exact bar diameters in BOM takeoff tables without truncated divisor rules.",
+    "formula": "A = pi * d^2 / 4 ; w_kg_m = A * 1e-6 * rho ; N_span = ceil(Span / spacing) + 1",
     "inputs": [
       {
-        "label": "Bar Size",
-        "val": "Ø12 mm"
+        "label": "Bar Diameter / Density",
+        "val": "12 mm / 7850 kg/m3"
       },
       {
-        "label": "Single Bar Length (m)",
+        "label": "Single Bar Stock Length (m)",
         "val": "12"
       },
       {
-        "label": "Bar Spacing (mm)",
+        "label": "Grid Spacing (mm)",
         "val": "200"
       },
       {
-        "label": "Slab Width (m)",
-        "val": "4"
-      },
-      {
-        "label": "Slab Length (m)",
-        "val": "6"
+        "label": "Slab Width x Length (m)",
+        "val": "4 x 6 (0% waste)"
       }
     ],
     "outputs": [
       {
-        "label": "Unit Weight",
-        "val": "0.889 kg/m"
+        "label": "Unit Linear Mass",
+        "val": "0.8878 kg/m (0.5966 lb/ft)"
       },
       {
         "label": "Single Bar Weight",
-        "val": "10.67 kg"
+        "val": "10.654 kg"
+      },
+      {
+        "label": "Bidirectional Mesh Length",
+        "val": "250.00 m"
+      },
+      {
+        "label": "Bidirectional Mesh Weight",
+        "val": "221.95 kg"
       }
     ]
   },
   "refrigeration-cycle-calculator": {
     "title": "Refrigeration COP Calculator",
-    "description": "Calculate refrigeration cycle COP, refrigeration effect, and compressor work from pressures.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "COP = Qevap / Wcomp = (h1-h4)/(h2-h1)",
+    "description": "Calculate vapor-compression refrigeration COP, actual compressor discharge enthalpy, shaft work, cooling capacity, and condenser heat rejection.",
+    "discipline": "Applied Thermodynamics & Vapor-Compression Cycles",
+    "standards": "First-Law Steady-Flow Energy Balance with Isentropic Compressor Efficiency eta_is",
+    "cadContext": "Verify compressor motor sizing and condenser heat rejection loads against chiller plant P&ID schematics and refrigerant P-h state tables.",
+    "formula": "h2 = h1 + (h2s - h1) / eta_is ; q_e = h1 - h3 ; COP = q_e / (h2 - h1) ; Q_cond = Q_e + W_c",
     "inputs": [
       {
-        "label": "Evap Enthalpy h1 (kJ/kg)",
+        "label": "Evap Outlet h1 (kJ/kg)",
         "val": "400"
       },
       {
-        "label": "Cond Enthalpy h2 (kJ/kg)",
+        "label": "Isentropic Outlet h2s (kJ/kg)",
         "val": "440"
       },
       {
-        "label": "Cond Outlet h3 (kJ/kg)",
+        "label": "Condenser Outlet h3=h4 (kJ/kg)",
         "val": "250"
       },
       {
-        "label": "Mass Flow (kg/s)",
-        "val": "0.1"
+        "label": "Isentropic Eff / Mass Flow",
+        "val": "80% / 0.1 kg/s"
       }
     ],
     "outputs": [
       {
-        "label": "Refrig Effect",
-        "val": "150.00 kJ/kg"
-      },
-      {
-        "label": "Compressor Work",
-        "val": "40.000 kJ/kg"
-      },
-      {
-        "label": "COP",
-        "val": "3.750"
+        "label": "Coefficient of Performance (COP)",
+        "val": "3.000"
       },
       {
         "label": "Cooling Capacity",
         "val": "15.000 kW"
+      },
+      {
+        "label": "Actual Compressor Work",
+        "val": "50.00 kJ/kg (5.000 kW)"
+      },
+      {
+        "label": "Condenser Heat Rejection",
+        "val": "20.000 kW"
       }
     ]
   },
   "reservoir-flood-routing-calculator": {
     "title": "Reservoir Flood Routing Calculator (Modified Puls)",
-    "description": "Calculate flood routing through reservoirs using Modified Puls (level pool) method.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "I - O = dS/dt • Q_spillway = C · L · H^(3/2) (USBR Design of Small Dams / Level Pool Routing)",
+    "description": "Simulate level-pool reservoir flood attenuation using 240-step fourth-order Runge-Kutta (RK4) mass-balance integration over a spillway weir.",
+    "discipline": "Hydrology, Reservoir Storage & Spillway Hydraulics",
+    "standards": "Level-Pool Continuity ODE: dH/dt = [I(t) - Cd * Bw * H^(3/2)] / A_res (240-Step RK4)",
+    "cadContext": "Evaluate spillway crest width Bw and normal pool area A_res extracted from reservoir bathymetry CAD contours to size flood detention freeboard.",
+    "formula": "dH/dt = (I(t) - Cd * Bw * H^1.5) / A_res ; Triangular inflow peak Q_in at tp over base tb",
     "inputs": [
       {
-        "label": "Peak Inflow Discharge I_peak (m³/s)",
-        "val": "150"
+        "label": "Peak Inflow / tp / tb",
+        "val": "150 m3/s / 4 hr / 12 hr"
       },
       {
-        "label": "Reservoir Surface Area at Normal Pool (km²)",
+        "label": "Reservoir Pool Area (km2)",
         "val": "2.5"
       },
       {
-        "label": "Ogee Spillway Crest Length (m)",
+        "label": "Spillway Crest Length Bw (m)",
         "val": "20"
       },
       {
-        "label": "Spillway Discharge Coefficient C",
+        "label": "Weir Discharge Coeff Cd",
         "val": "2.15"
       }
     ],
     "outputs": [
       {
-        "label": "Peak Routed Outflow Discharge",
-        "val": "108.0 m³/s"
+        "label": "Peak Routed Outflow",
+        "val": "40.47 m3/s"
       },
       {
-        "label": "Max Surcharge Head Above Crest (H)",
-        "val": "1.85 m"
+        "label": "Peak Attenuation",
+        "val": "73.02 %"
       },
       {
-        "label": "Peak Flood Storage Absorption Volume",
-        "val": "4.62 million m³"
+        "label": "Max Surcharge Head",
+        "val": "0.9603 m"
       },
       {
-        "label": "Peak Attenuation Reduction Ratio",
-        "val": "28.0 %"
+        "label": "Peak Detention Storage",
+        "val": "2.4008 million m3"
       }
     ]
   },
