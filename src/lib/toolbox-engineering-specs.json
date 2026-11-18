@@ -10399,194 +10399,142 @@
     ]
   },
   "plumbing-fixture-count-calculator": {
-    "title": "Plumbing Fixture Count Calculator (IPC & IBC)",
-    "description": "Calculate required plumbing fixtures per IPC and IBC occupancy classifications.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Fixtures = Occupants / Code Ratio per Gender (IPC Table 403.1 Minimum Number of Required Fixtures)",
+    "title": "Plumbing Fixture Allocation Calculator",
+    "description": "Allocates occupant load and required water closets, lavatories, and drinking stations from user-editable floor area density, gender split, and fixture ratios.",
+    "discipline": "Building Services & Plumbing Layout",
+    "standards": "Parametric Occupant-Ratio Allocation: ceil(Occupants_gender / Ratio)",
+    "cadContext": "All occupant load factors (m^2/person) and per-fixture service ratios are explicitly user-editable inputs; verify local code tables prior to permit submission.",
+    "formula": "Occ = ceil(Area / Factor); WC_F = ceil(Occ_F / R_wcF); WC_M = ceil(Occ_M / R_wcM)",
     "inputs": [
       {
-        "label": "Gross Occupiable Floor Area (m²)",
-        "val": "3200"
+        "label": "Floor Area & Density Factor",
+        "val": "Area = 3200 m^2, Factor = 12 m^2/person, Female Split = 50%"
       },
       {
-        "label": "Building Occupancy Classification",
-        "val": "Business (Office / Tech) - 1:25 per 14 m²"
+        "label": "Fixture Ratios (persons/unit)",
+        "val": "Female WC = 30, Male WC = 50, Lavatory = 40, Drinking Station = 100"
       }
     ],
     "outputs": [
       {
-        "label": "Total Required Water Closets",
-        "val": "8 W.C."
+        "label": "Occupant Load & W.C.",
+        "val": "267 occupants (134F / 133M) -> Total W.C. = 8 (5F + 3M)"
       },
       {
-        "label": "Calculated Building Occupant Load",
-        "val": "267 occupants"
-      },
-      {
-        "label": "Male Restroom Closets / Urinals",
-        "val": "3 fixtures"
-      },
-      {
-        "label": "Female Restroom Water Closets",
-        "val": "5 fixtures"
-      },
-      {
-        "label": "Drinking Fountains (Hi-Lo ADA)",
-        "val": "3 stations"
+        "label": "Lavatories & Fountains",
+        "val": "8 Lavatories | 3 Drinking Stations"
       }
     ]
   },
   "point-cloud-density-calculator": {
-    "title": "Point Cloud Density Calculator",
-    "description": "Calculate point cloud density, spacing, and coverage from scan parameters.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Density = N/A, spacing = sqrt(1/density)",
+    "title": "Point Cloud Density, Spacing & Storage Calculator",
+    "description": "Calculates surface point density (pts/m^2), mean grid point spacing (mm), volumetric density (pts/m^3), Poisson spot coverage, and uncompressed storage (MiB).",
+    "discipline": "3D Laser Scanning & Spatial Metrology",
+    "standards": "Geometric Point Spacing: rho_A = N / A; s = 1000 / sqrt(rho_A)",
+    "cadContext": "Computes expected point spacing and uncompressed byte volume (e.g. 28 bytes/point) for terrestrial LiDAR scan registration planning.",
+    "formula": "rho_A = N/A; s = 1000/sqrt(rho_A); Coverage = (1 - exp(-rho_A*pi*r^2))*100; Size_MiB = N*bytes/1048576",
     "inputs": [
       {
-        "label": "Total Points",
-        "val": "5000000"
+        "label": "Point Count & Scan Envelope",
+        "val": "N = 5,000,000 pts, Area = 1000 m^2, Height = 3 m"
       },
       {
-        "label": "Area (m2)",
-        "val": "1000"
-      },
-      {
-        "label": "Scan Resolution (mm)",
-        "val": "5"
+        "label": "Spot Radius & Storage",
+        "val": "r = 5 mm, Bytes/point = 28"
       }
     ],
     "outputs": [
       {
-        "label": "Point Density",
-        "val": "5000.00 pts/m2"
+        "label": "Surface Density & Spacing",
+        "val": "5000.0 pts/m^2 | 14.1421 mm mean spacing"
       },
       {
-        "label": "Point Spacing",
-        "val": "14.142 mm"
-      },
-      {
-        "label": "Coverage",
-        "val": "32.477 %"
+        "label": "Volumetric, Coverage & Size",
+        "val": "1666.67 pts/m^3 | 32.477% | 133.51 MiB"
       }
     ]
   },
   "polishing-time-calculator": {
-    "title": "Polishing & Buffing Time Calculator",
-    "description": "Calculate polishing time and compound consumption from surface area and finish grade.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "t = A * rate_per_grade",
+    "title": "Surface Polishing Time & Compound Calculator",
+    "description": "Estimates total buffing/polishing duration, polishing compound usage, and labor cost from surface area and editable shop-floor unit time rates.",
+    "discipline": "Surface Finishing & Manufacturing Estimation",
+    "standards": "Shop-Floor Time Estimation Model: t = Area * unit_time_rate * stage_multiplier",
+    "cadContext": "Applies explicit user-calibrated unit area polishing rates (min/cm^2) and stage multipliers rather than fixed opaque material tables.",
+    "formula": "t_min = A * r_unit * k_stage; Compound = t_min * r_comp; Cost = (t_min / 60) * rate_hr",
     "inputs": [
       {
-        "label": "Surface Area (cm2)",
-        "val": "500"
+        "label": "Part Area & Rate",
+        "val": "A = 500 cm^2, Unit Rate = 0.03 min/cm^2, Stage Multiplier = 1.5"
       },
       {
-        "label": "Finish Grade",
-        "val": "Precision Fine Polish (1.5x)"
-      },
-      {
-        "label": "Polishing Rate (cm2/min)",
-        "val": "50"
+        "label": "Consumable & Labor Rate",
+        "val": "Compound = 0.5 g/min, Labor = $60/hr"
       }
     ],
     "outputs": [
       {
-        "label": "Polishing Time",
-        "val": "15.000 min"
+        "label": "Total Polishing Time",
+        "val": "22.50 min (0.375 hr)"
       },
       {
-        "label": "Compound Used",
-        "val": "7.500 g"
-      },
-      {
-        "label": "RPM Recommended",
-        "val": "2000.00"
+        "label": "Compound & Labor Cost",
+        "val": "11.25 g | $22.50"
       }
     ]
   },
   "power-factor-calculator": {
-    "title": "Power Factor Correction Calculator",
-    "description": "Calculate required capacitor size for power factor correction from current and target PF.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Qc = P*(tan(phi1)-tan(phi2))",
+    "title": "AC Power Factor Correction Calculator",
+    "description": "Computes capacitor bank reactive power Qc (kvar), apparent power before and after correction (kVA), and percentage line current reduction.",
+    "discipline": "AC Power Engineering & Circuit Analysis",
+    "standards": "Wikipedia Power Factor: https://en.wikipedia.org/wiki/Power_factor",
+    "cadContext": "Follows linear sinusoidal AC power triangle relations S = P/cos(phi) and Qc = P*(tan(phi1) - tan(phi2)).",
+    "formula": "S = P / PF; Qc = P * (tan(acos(PF1)) - tan(acos(PF2))); I_3ph = 1000*S / (sqrt(3)*V)",
     "inputs": [
       {
-        "label": "Real Power P (kW)",
-        "val": "100"
+        "label": "Load & Power Factors",
+        "val": "P = 100 kW, PF1 = 0.75, PF2 = 0.95"
       },
       {
-        "label": "Current PF",
-        "val": "0.75"
-      },
-      {
-        "label": "Target PF",
-        "val": "0.95"
+        "label": "System Voltage",
+        "val": "V_line = 400 V (3-Phase)"
       }
     ],
     "outputs": [
       {
-        "label": "Reactive Power Qc",
-        "val": "55.323 kVAR"
+        "label": "Required Reactive Bank Qc",
+        "val": "55.323 kvar"
       },
       {
-        "label": "Apparent Power Before",
-        "val": "133.33 kVA"
-      },
-      {
-        "label": "Apparent Power After",
-        "val": "105.26 kVA"
+        "label": "Apparent Power & Current Drop",
+        "val": "S1 = 133.333 kVA -> S2 = 105.263 kVA (21.05% current reduction)"
       }
     ]
   },
   "power-screw-calculator": {
-    "title": "Power Screw Torque Calculator",
-    "description": "Calculate torque to raise or lower a load with a power screw.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "T_raise = F*dm/2*(l+pi*u*dm)/(pi*dm-u*l)",
+    "title": "Power Screw & Leadscrew Torque Calculator",
+    "description": "Calculates screw raising/lowering torque (supporting square 0 deg, trapezoidal 15 deg, and collar friction), mechanical efficiency, and self-locking criterion.",
+    "discipline": "Mechanical Drive & Fastener Kinematics",
+    "standards": "Wikipedia Leadscrew: https://en.wikipedia.org/wiki/Leadscrew",
+    "cadContext": "Uses inclined-plane thread mechanics with sec(alpha) normal force factor (mu_eff = mu / cos(alpha)) to check self-locking phi_eff > lambda.",
+    "formula": "tan(lambda) = l/(pi*dm); mu_eff = mu/cos(alpha); T_raise = 0.5*F*dm*(tan(lambda)+mu_eff)/(1-mu_eff*tan(lambda)) + 0.5*F*mu_c*dc",
     "inputs": [
       {
-        "label": "Axial Load (N)",
-        "val": "5000"
+        "label": "Load & Screw Geometry",
+        "val": "F = 5000 N, dm = 20 mm, l = 5 mm, alpha = 15 deg (Trapezoidal)"
       },
       {
-        "label": "Mean Dia (mm)",
-        "val": "20"
-      },
-      {
-        "label": "Lead (mm)",
-        "val": "5"
-      },
-      {
-        "label": "Friction",
-        "val": "0.15"
+        "label": "Friction Coefficients",
+        "val": "mu = 0.15, mu_c = 0"
       }
     ],
     "outputs": [
       {
-        "label": "Torque Raise",
-        "val": "11.618 Nm"
+        "label": "Raising & Lowering Torque",
+        "val": "T_raise = 11.8904 N*m | T_lower = 3.7395 N*m"
       },
       {
-        "label": "Torque Lower",
-        "val": "3.480 Nm"
-      },
-      {
-        "label": "Efficiency",
-        "val": "34.249 %"
-      },
-      {
-        "label": "Lead Angle",
-        "val": "4.550 deg"
+        "label": "Efficiency & Self-Lock",
+        "val": "33.463% | Lead Angle 4.550 deg | Self-Locking"
       }
     ]
   },

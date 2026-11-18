@@ -4,8 +4,9 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Plumbing Fixture Count Calculator (IPC & IBC)",
-  description: "Calculate required plumbing fixtures per IPC and IBC occupancy classifications.",
+  title: 'Plumbing Fixture Count Calculator (Ratio-Based Allocation)',
+  description:
+    'Calculate required water closets, lavatories, and drinking stations from user-editable occupant load factors and fixture allocation ratios.',
   path: '/toolbox/plumbing-fixture-count-calculator',
 });
 
@@ -13,7 +14,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Plumbing Fixture Count Calculator (IPC & IBC)", path: '/toolbox/plumbing-fixture-count-calculator' },
+    { name: 'Plumbing Fixture Count Calculator', path: '/toolbox/plumbing-fixture-count-calculator' },
   ]);
 
   return (
@@ -26,13 +27,13 @@ export default function CalculatorPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-orange-500/10 text-orange-400 border border-orange-500/20 mb-6 uppercase tracking-[0.15em]">
-              Engineering Calculator
+              Parametric Fixture Estimator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Plumbing Fixture Count Calculator (IPC & IBC)
+              Plumbing Fixture Count <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate required plumbing fixtures per IPC and IBC occupancy classifications.
+              Allocate building occupant load and fixture counts using editable area-per-person factors, gender split, and per-fixture service ratios.
             </p>
           </div>
         </section>
