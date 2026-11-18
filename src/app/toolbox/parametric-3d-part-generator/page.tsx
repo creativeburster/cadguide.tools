@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import Parametric3dPartGeneratorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Online Parametric 3D Mechanical Part Generator (Gear, Flange, Bracket) | CADGuide.tools',
+  title: 'Parametric 3D Mechanical Part Generator (Gear, Flange, Bracket) | CADGuide.tools',
   description:
-    'Interactive browser-based parametric 3D CAD generator for involute spur gears, ASME/DIN bolted pipe flanges, and sheet metal brackets. Export STEP AP214, Binary STL, OBJ, and 2D DXF.',
+    'Interactive browser-based parametric 3D CAD generator for spur gears, bolted pipe flanges, and L-brackets. Export STEP AP214, Binary STL, Wavefront OBJ, and 2D DXF.',
   path: '/toolbox/parametric-3d-part-generator',
 });
 
@@ -31,13 +31,13 @@ export default function Parametric3dPartGeneratorPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Open-Source Parametric B-Rep & Mesh Modeler
+              Open-Source Parametric B-Rep &amp; Mesh Modeler
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
               Interactive 3D Parametric Mechanical Part Generator
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Configure involute spur gears, bolted pipe flanges, and structural brackets in real time and export STEP AP214, watertight Binary STL, Wavefront OBJ, or 2D laser DXF.
+              Configure spur gears, bolted pipe flanges, and L-brackets in your browser and export STEP AP214, Binary STL, Wavefront OBJ, or 2D laser DXF.
             </p>
           </div>
         </section>

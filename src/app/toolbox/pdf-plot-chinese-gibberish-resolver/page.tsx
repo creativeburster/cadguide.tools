@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import PdfFontGibberishClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD PDF Plotting Chinese Font Gibberish & Scrambled Characters Resolver',
+  title: 'CAD PDF Plotting Chinese Font & Gibberish Resolver | CADGuide.tools',
   description:
-    'Resolve AutoCAD plotting issues where Chinese characters show as scrambled letters, question marks (?), or gibberish in exported PDF files. Complete diagnostic wizard for PC3 font embedding settings.',
+    'Diagnose and fix CAD PDF plotting issues where Asian or SHX Big Font characters print as question marks (?), scrambled text, or hollow outlines using FONTALT, PDFSHX, and TEXTFILL.',
   path: '/toolbox/pdf-plot-chinese-gibberish-resolver',
 });
 
@@ -14,7 +14,7 @@ export default function PdfFontGibberishPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'PDF Plot Chinese Gibberish Resolver', path: '/toolbox/pdf-plot-chinese-gibberish-resolver' },
+    { name: 'PDF Plot Font & Gibberish Resolver', path: '/toolbox/pdf-plot-chinese-gibberish-resolver' },
   ]);
 
   return (
@@ -31,13 +31,13 @@ export default function PdfFontGibberishPage() {
           </div>
           <div className="max-w-[1200px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Plotting & Font Troubleshooter
+              Plotting &amp; Font Troubleshooter
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
               PDF Plotting <span className="text-blue-400">Chinese Font Gibberish</span> Resolver
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Repair CAD printing from the ground up PDF Chinese fonts are garbled, question marks or lines are missing. Multi-branch interactive diagnosis, one-click generation AutoLISP System variable repair configuration. 
+              Diagnose question-mark glyphs, PDF SHX comment conflicts, and hollow outline text, then export pure-ASCII AutoLISP and command scripts (`FONTALT`, `PDFSHX`, `TEXTFILL`).
             </p>
           </div>
         </section>
@@ -48,5 +48,5 @@ export default function PdfFontGibberishPage() {
         </section>
       </main>
     </>
-);
+  );
 }

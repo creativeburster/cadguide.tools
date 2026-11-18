@@ -10007,155 +10007,116 @@
     ]
   },
   "parking-capacity-calculator": {
-    "title": "Parking Lot Capacity & Stall Layout Calculator",
-    "description": "Calculate parking stall count, aisle width, and lot layout for standard, compact, and accessible spaces.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Capacity = floor(Lot_Area / Area_per_Stall) • ADA = ceil(Total / 25) (ADAAG Section 208 Parking Spaces)",
+    "title": "Parking Lot Capacity & 2010 ADA Section 208.2 Calculator",
+    "description": "Calculates gross parking capacity from net lot area and stall factor, plus minimum accessible stalls (208.2) and van-accessible bays (208.2.4).",
+    "discipline": "Civil / Site Layout",
+    "standards": "2010 ADA Standards for Accessible Design Sections 208.2 & 208.2.4: https://www.ada.gov/law-and-regs/design-standards/2010-stds/",
+    "cadContext": "Uses configurable gross area-per-stall factors (90/60/45 deg presets) and exact ADA 2010 Table 208.2 brackets with ceil(N_acc / 6) van spaces.",
+    "formula": "N_total = floor(Area / Factor); N_acc = ADA_208_2(N_total); N_van = ceil(N_acc / 6)",
     "inputs": [
       {
-        "label": "Net Pavement Lot Area (m²)",
-        "val": "4200"
+        "label": "Net Lot Area",
+        "val": "4,200 m^2"
       },
       {
-        "label": "Parking Bay Angle (°)",
-        "val": "90° Perpendicular (Most Efficient / Two-Way)"
-      },
-      {
-        "label": "Mandated ADA Ratio",
-        "val": "1 ADA Stall per 25 Stalls (Standard ADA)"
+        "label": "Area Factor per Stall",
+        "val": "27.5 m^2/stall (90 deg preset)"
       }
     ],
     "outputs": [
       {
-        "label": "Estimated Total Vehicle Stalls",
-        "val": "152 spaces"
+        "label": "Total Stalls & Regular Bays",
+        "val": "152 total stalls (146 standard)"
       },
       {
-        "label": "Required Accessible ADA Bays",
-        "val": "7 stalls"
-      },
-      {
-        "label": "Van-Accessible Stalls (with 8ft aisle)",
-        "val": "2 bays"
-      },
-      {
-        "label": "Average Area Yield Factor",
-        "val": "27.5 m²/stall"
+        "label": "Accessible & Van Bays",
+        "val": "6 accessible (208.2) incl. 1 van-accessible (208.2.4)"
       }
     ]
   },
   "passing-sight-distance-calculator": {
-    "title": "Passing Sight Distance Calculator (AASHTO)",
-    "description": "Calculate minimum passing sight distance for two-lane highways.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "PSD = d1 + d2 + d3 + d4 • d1=0.278·t1·(v_m + a·t1/2) • d2=0.278·v·t2 (AASHTO Highway Design)",
+    "title": "Passing Sight Distance Kinematics Calculator",
+    "description": "Calculates four-phase two-lane overtaking sight distance (d1 initial maneuver, d2 lane occupation, d3 clearance, d4 opposing vehicle distance) from explicit speeds and times.",
+    "discipline": "Highway / Geometric Design",
+    "standards": "Closed-form four-phase overtaking kinematics in SI units (m/s and s)",
+    "cadContext": "Explicitly exposes all phase durations and vehicle speeds so engineers can substitute national highway guideline assumptions transparently.",
+    "formula": "d1 = (Vs/3.6)*t1 + 0.5*a*t1^2; d2 = (Vp/3.6)*t2; d4 = (Vo/3.6)*t4; PSD = d1 + d2 + d3 + d4",
     "inputs": [
       {
-        "label": "Design Road Speed V (km/h)",
-        "val": "90"
+        "label": "Passing / Slow / Opposing Speeds",
+        "val": "Vp = 90 km/h, Vs = 72 km/h, Vo = 90 km/h"
       },
       {
-        "label": "Passed Vehicle Speed Differential (km/h)",
-        "val": "15"
+        "label": "Phase Durations & Clearance",
+        "val": "t1 = 4.0 s (a = 0.65 m/s^2), t2 = 10.0 s, d3 = 55.0 m, t4 = 6.6 s"
       }
     ],
     "outputs": [
       {
-        "label": "Total Required Passing Sight Distance (PSD)",
-        "val": "786 m"
+        "label": "Phase Distances",
+        "val": "d1 = 85.20 m, d2 = 250.00 m, d3 = 55.00 m, d4 = 165.00 m"
       },
       {
-        "label": "Initial Maneuver Distance (d1)",
-        "val": "118.3 m"
-      },
-      {
-        "label": "Occupation of Left Lane (d2)",
-        "val": "367.8 m"
-      },
-      {
-        "label": "Opposing Vehicle Traveled Distance (d4)",
-        "val": "245.2 m"
+        "label": "Total Passing Sight Distance",
+        "val": "555.20 m"
       }
     ]
   },
   "pavement-thickness-calculator": {
-    "title": "Pavement Thickness Calculator",
-    "description": "Calculate required flexible pavement structural number and layer thicknesses using AASHTO 1993 design method.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "AASHTO 1993: SN = a₁D₁m₁ + a₂D₂m₂ + a₃D₃m₃, solve iteratively for required SN",
+    "title": "Flexible Pavement Structural Number & Layer Calculator",
+    "description": "Computes asphalt surface and granular base SN contributions (SN = sum(a_i * m_i * D_i / 25.4)) and sizes the rounded subbase thickness D3 to meet target SN.",
+    "discipline": "Pavement / Civil Engineering",
+    "standards": "Layered structural number linear superposition (1 inch = 25.4 mm)",
+    "cadContext": "Separates surface and base thickness contributions from remaining subbase SN demand and rounds subbase depth up by construction step.",
+    "formula": "SN1 = a1*(D1/25.4); SN2 = a2*m2*(D2/25.4); D3 = ceil(((SN_req - SN1 - SN2)/(a3*m3)*25.4)/step)*step",
     "inputs": [
       {
-        "label": "ESALs (18-kip loads)",
-        "val": "500000"
+        "label": "Target SN & Step",
+        "val": "SN_req = 3.80, Step = 10 mm"
       },
       {
-        "label": "Reliability (%)",
-        "val": "90% (Collector)"
-      },
-      {
-        "label": "Standard Deviation",
-        "val": "0.45"
-      },
-      {
-        "label": "Serviceability Loss (ΔPSI)",
-        "val": "2.0"
-      },
-      {
-        "label": "Subgrade MR (MPa)",
-        "val": "30"
-      },
-      {
-        "label": "Surface (a₁) — Asphalt",
-        "val": "0.44"
-      },
-      {
-        "label": "Base (a₂) — Aggregate",
-        "val": "0.14"
-      },
-      {
-        "label": "Subbase (a₃)",
-        "val": "0.11"
+        "label": "Surface & Base Layers",
+        "val": "D1 = 100 mm (a1=0.44), D2 = 200 mm (a2=0.14, m2=1.0), a3=0.11, m3=1.0"
       }
     ],
     "outputs": [
       {
-        "label": "Required Structural Number (SN)",
-        "val": "3.68"
+        "label": "Rounded Subbase D3 & Exact",
+        "val": "230 mm design (222.91 mm exact)"
       },
       {
-        "label": "Surface D₁",
-        "val": "85.0 mm"
-      },
-      {
-        "label": "Base D₂",
-        "val": "261.0 mm"
-      },
-      {
-        "label": "Subbase D₃",
-        "val": "179.0 mm"
+        "label": "Provided Total SN & Depth",
+        "val": "SN = 3.8307 | Total Depth = 530 mm"
       }
     ]
   },
   "pdf-plot-chinese-gibberish-resolver": {
-    "title": "PDF Plotting Chinese Font Gibberish Resolver",
-    "description": "Resolve AutoCAD plotting issues where Chinese characters show as scrambled letters, question marks (?), or gibberish in exported PDF files. Complete diagnostic wizard for PC3 font embedding settings.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for PDF Plotting Chinese Font Gibberish Resolver",
+    "title": "CAD PDF Plotting Font & Gibberish Resolver",
+    "description": "Diagnoses question-mark glyphs, PDFSHX comment encoding conflicts, and TEXTFILL hollow outlines, generating pure-ASCII AutoLISP and .SCR remediation scripts.",
+    "discipline": "CAD Plotting & Font Administration",
+    "standards": "AutoCAD 2025 FONTALT / PDFSHX / TEXTFILL System Variables: https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core/files/GUID-858A8D84-5104-4A35-9C82-2094DF6F411D.htm",
+    "cadContext": "Validates pure-ASCII SHX Big Font filenames and exports safe .LSP and .SCR commands setting FONTALT, PDFSHX=0, and TEXTFILL=1.",
+    "formula": "FONTALT -> fallback .shx; PDFSHX = 0 (disable PDF SHX comments); TEXTFILL = 1 (filled TrueType plotting)",
     "inputs": [
       {
-        "label": "Alternate Big Font Name (SHX)",
-        "val": "gbcbig.shx"
+        "label": "Selected Symptom Mode",
+        "val": "Question Marks (?) / Missing SHX Big Font"
+      },
+      {
+        "label": "Fallback Font Variable",
+        "val": "FONTALT = gbcbig.shx"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Generated LISP & Script",
+        "val": "(setvar \"FONTALT\" \"gbcbig.shx\") + pure-ASCII FIXPDFFONT"
+      },
+      {
+        "label": "Additional Fixes",
+        "val": "PDFSHX = 0 (scrambled text) | TEXTFILL = 1 (hollow outlines)"
+      }
+    ]
   },
   "pile-capacity-calculator": {
     "title": "Pile End Bearing Capacity Calculator",
@@ -22546,6 +22507,34 @@
       {
         "label": "Traces / Pads / Drills",
         "val": "4 / 4 / 4"
+      }
+    ]
+  },
+  "parametric-3d-part-generator": {
+    "title": "Parametric 3D Mechanical Part Generator",
+    "description": "Generates spur gears, bolted pipe flanges, and L-brackets in-browser and exports STEP AP214, Binary STL, Wavefront OBJ, and 2D DXF files.",
+    "discipline": "MCAD / Parametric Geometry",
+    "standards": "ISO 10303-21 (STEP): https://en.wikipedia.org/wiki/ISO_10303-21 | STL Format: https://en.wikipedia.org/wiki/STL_(file_format) | Wavefront OBJ: https://en.wikipedia.org/wiki/Wavefront_.obj_file | AutoCAD DXF: https://en.wikipedia.org/wiki/AutoCAD_DXF",
+    "cadContext": "Client-side polygon extrusion kernel supporting direct binary STL (84 + 50*N_tri bytes) and ASCII STEP/OBJ/DXF generation without server upload.",
+    "formula": "d = m*z; da = d + 2*m; df = d - 2.5*m; db = d*cos(alpha); Binary STL = 84 + 50*N_tri bytes",
+    "inputs": [
+      {
+        "label": "Default Part Family",
+        "val": "Spur Gear (m = 2.5 mm, z = 24, alpha = 20 deg)"
+      },
+      {
+        "label": "Face Width & Shaft Bore",
+        "val": "b = 14 mm, Bore = 18 mm"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Pitch & Outside Diameter",
+        "val": "d = 60.00 mm, da = 65.00 mm (df = 53.75 mm)"
+      },
+      {
+        "label": "Mesh & Binary STL Size",
+        "val": "1,152 triangles (57,684 bytes)"
       }
     ]
   }
