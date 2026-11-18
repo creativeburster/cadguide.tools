@@ -1428,7 +1428,7 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'imperial-thread-reference',
     title: 'UNC/UNF Imperial Thread & Tap Drill Reference',
-    description: 'Complete UNC (coarse) and UNF (fine) thread table: #0 through 1-1/2" with TPI, tap drill sizes, clearance holes, and thread engagement data.',
+    description: 'ASME B1.1 UNC (coarse) and UNF (fine) thread table from #0 through 1-1/2" with TPI, pitch, major diameter, and tap drill sizes.',
     detailDesc: 'Searchable UNC and UNF thread reference: #0-80 through 1-1/2"-6 UNC coarse threads, #0-80 through 1-1/2"-12 UNF fine threads, clearance hole sizes (close/normal), thread tolerance classes (1A-3B), and tap drill formula.',
     category: 'cheatsheet',
     status: 'released',

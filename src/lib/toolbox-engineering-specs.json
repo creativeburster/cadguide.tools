@@ -7815,174 +7815,140 @@
   "ifc-element-quantity-calculator": {
     "title": "IFC Element Quantity Takeoff Calculator",
     "description": "Calculate material quantities for IFC building elements from dimensions.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Concrete volume, steel weight, area from standard element dimensions",
+    "discipline": "OpenBIM Quantity Takeoff & Structural Geometry",
+    "standards": "ISO 16739-1 (IFC4 OpenBIM Qto_BaseQuantities), ISO 10303-21 (STEP Physical File)",
+    "cadContext": "Verify $INSUNITS and IfcSIUnit length prefixes before extracting Qto_WallBaseQuantities, Qto_ColumnBaseQuantities, Qto_SlabBaseQuantities, and Qto_BeamBaseQuantities into project BOQ schedules.",
+    "formula": "V = L * H * t * N, A_formwork = contact perimeter * span * N, M_conc = V * rho, M_steel = V * r_rebar",
     "inputs": [
       {
         "label": "Element Type",
-        "val": "Concrete Column (2400 kg/m³)"
+        "val": "IfcWall (6 m x 3 m x 200 mm, Qty 4)"
       },
       {
-        "label": "Width (mm)",
-        "val": "400"
-      },
-      {
-        "label": "Depth (mm)",
-        "val": "400"
-      },
-      {
-        "label": "Length (m)",
-        "val": "3"
-      },
-      {
-        "label": "Quantity",
-        "val": "10"
+        "label": "Concrete Density / Rebar Ratio",
+        "val": "2400 kg/m3 / 110 kg/m3"
       }
     ],
     "outputs": [
       {
-        "label": "Total Volume",
-        "val": "4.800 m3"
+        "label": "Total Concrete Volume",
+        "val": "14.400 m3"
       },
       {
-        "label": "Total Weight",
-        "val": "11520 kg"
+        "label": "Formwork Area",
+        "val": "144.00 m2"
       },
       {
-        "label": "Surface Area",
-        "val": "48.000 m2"
+        "label": "Concrete / Rebar Mass",
+        "val": "34560.0 kg / 1584.0 kg"
       }
     ]
   },
   "ifc-entity-counter": {
     "title": "IFC Entity Counter and Validator",
     "description": "Calculate IFC file entity counts and spatial hierarchy metrics.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Count by IfcClass, check hierarchy levels",
+    "discipline": "OpenBIM Schema Inspection & STEP File Validation",
+    "standards": "ISO 16739-1 (IFC4 / IFC2x3 / IFC4X3), ISO 10303-21 (STEP Part 21 Encoding)",
+    "cadContext": "Inspect local STEP physical files in the browser to verify FILE_SCHEMA headers, check spatial hierarchy completeness (IfcProject / IfcSite / IfcBuilding / IfcBuildingStorey), and audit element counts per class.",
+    "formula": "Parse #id=IFCCLASS(...) declarations, aggregate counts per class, and inspect spatial levels",
     "inputs": [
       {
-        "label": "IfcWall",
-        "val": "500"
+        "label": "Sample IFC Model",
+        "val": "Office Annex (IFC4, 12 entities across 8 classes)"
       },
       {
-        "label": "IfcDoor",
-        "val": "80"
-      },
-      {
-        "label": "IfcWindow",
-        "val": "120"
-      },
-      {
-        "label": "IfcSlab",
-        "val": "200"
-      },
-      {
-        "label": "IfcColumn",
-        "val": "150"
+        "label": "Min Count Filter",
+        "val": "1"
       }
     ],
     "outputs": [
       {
-        "label": "Total Entities",
-        "val": "1050.00"
+        "label": "Total Entities / Unique Classes",
+        "val": "12 / 8"
       },
       {
-        "label": "Opening Ratio",
-        "val": "0.400000"
-      },
-      {
-        "label": "Structural Ratio",
-        "val": "0.809524"
+        "label": "Spatial Levels / Schema",
+        "val": "4/4 / IFC4"
       }
     ]
   },
   "impact-force-calculator": {
     "title": "Impact Force Calculator",
     "description": "Calculate impact force from drop height, mass, and stopping distance.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "F = m*g*h/d + m*g",
+    "discipline": "Rigid-Body Dynamics & Work-Energy Impact Mechanics",
+    "standards": "Classical Work-Energy Theorem, NIST Standard Gravity (g = 9.80665 m/s2)",
+    "cadContext": "Use average crush-distance force F_avg = m*g*(1 + h/d) to size shock mounts, bumper stops, and packaging cushions before running nonlinear transient FEA contact simulations.",
+    "formula": "F_avg = m * g * (1 + h / d), v = sqrt(2 * g * h), E = m * g * h",
     "inputs": [
       {
         "label": "Mass (kg)",
         "val": "100"
       },
       {
-        "label": "Drop Height (m)",
-        "val": "2"
-      },
-      {
-        "label": "Stop Distance (mm)",
-        "val": "10"
+        "label": "Drop Height (m) / Stopping Distance (m)",
+        "val": "2 / 0.05"
       }
     ],
     "outputs": [
       {
-        "label": "Impact Force",
-        "val": "197181 N"
+        "label": "Average Impact Force",
+        "val": "40.207 kN (40207.3 N)"
       },
       {
-        "label": "Impact Velocity",
-        "val": "6.264 m/s"
-      },
-      {
-        "label": "Impact Energy",
-        "val": "1962.00 J"
+        "label": "Impact Velocity / Energy",
+        "val": "6.263 m/s / 1961.3 J"
       }
     ]
   },
   "imperial-thread-reference": {
-    "title": "UNC / UNF Thread Reference Table",
-    "description": "Complete UNC (coarse) and UNF (fine) thread table: #0 through 1-1/2",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "Standardized parametric evaluation for UNC / UNF Thread Reference Table",
-    "inputs": [],
-    "outputs": []
-  },
-  "inductor-reactance-calculator": {
-    "title": "Inductor Reactance Calculator",
-    "description": "Calculate inductive reactance, RL time constant, and resonant frequency.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "Xl = 2*pi*f*L, tau = L/R, fr = 1/(2*pi*sqrt(LC))",
+    "title": "UNC / UNF Imperial Thread & Tap Drill Reference",
+    "description": "ASME B1.1 UNC (coarse) and UNF (fine) thread table from #0 through 1-1/2\" with TPI, pitch, major diameter, and tap drill sizes.",
+    "discipline": "Unified Screw Thread Metrology",
+    "standards": "ASME B1.1 (Unified Inch Screw Threads, UNC & UNF)",
+    "cadContext": "Look up exact nominal major diameters, TPI pitch, and ~75% thread engagement tap drill sizes (#0-80 UNF through 1-1/2\") when detailing inch-series tapped bosses in mechanical assemblies.",
+    "formula": "Pitch (in) = 1 / TPI, Pitch (mm) = 25.4 / TPI",
     "inputs": [
       {
-        "label": "Inductance (mH)",
-        "val": "10"
-      },
-      {
-        "label": "Frequency (Hz)",
-        "val": "50"
-      },
-      {
-        "label": "Resistance (ohm)",
-        "val": "100"
-      },
-      {
-        "label": "Capacitance (uF)",
-        "val": "100"
+        "label": "Thread Filter",
+        "val": "All (#0-80 UNF to 1-1/2-12 UNF, 47 sizes)"
       }
     ],
     "outputs": [
       {
-        "label": "Reactance Xl",
-        "val": "3.142 ohm"
+        "label": "1/4-20 UNC Tap Drill",
+        "val": "#7 (.201 in), Major 6.3500 mm"
       },
       {
-        "label": "Time Constant",
-        "val": "0.100000 ms"
+        "label": "#12-28 UNF Tap Drill",
+        "val": "#14 (.182 in), Major 5.4864 mm"
+      }
+    ]
+  },
+  "inductor-reactance-calculator": {
+    "title": "Inductor Reactance Calculator",
+    "description": "Calculate inductive reactance, RL time constant, and resonant frequency.",
+    "discipline": "AC Circuit Analysis & Power Electronics",
+    "standards": "IEC / IEEE Phasor AC Circuit Theory",
+    "cadContext": "Evaluate choke impedance |Z|, quality factor Q, RL transient step time constant tau = L/R, and parasitic self-resonant frequency f_r when selecting filter inductors on PCB layouts.",
+    "formula": "X_L = 2*pi*f*L, |Z| = sqrt(R^2 + X_L^2), tau = L/R, f_r = 1/(2*pi*sqrt(L*C))",
+    "inputs": [
+      {
+        "label": "Inductance L / Frequency f",
+        "val": "10 mH / 1000 Hz"
       },
       {
-        "label": "Resonant Freq",
-        "val": "159.15 Hz"
+        "label": "Series R / Parasitic C / V_rms",
+        "val": "2.5 Ohm / 100 pF / 12 V"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Reactance X_L / Impedance |Z|",
+        "val": "62.832 Ohm / 62.882 Ohm (87.72 deg)"
+      },
+      {
+        "label": "Time Constant tau / Self-Resonance f_r",
+        "val": "4.000 ms / 159.155 kHz"
       }
     ]
   },

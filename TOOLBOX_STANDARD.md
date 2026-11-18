@@ -179,7 +179,8 @@ flowchart LR
 | 31 | ground-anchor-capacity-calculator、grounding-grid-calculator、gyroscope-precession-calculator、gyroscopic-couple-calculator、hardness-converter（跳过 *-shortcuts-sheet 目录 gstarcad-shortcuts-sheet） | e1b66330 |
 | 32 | harmonic-drive-calculator、heat-exchanger-calculator、heat-transfer-conduction-calculator、heat-transfer-convection-calculator、heat-treatment-time-calculator | d1eba212 |
 | 33 | helical-gear-calculator、hertz-contact-stress-calculator、hobbing-cycle-time-calculator、hole-stackup-calculator、horizontal-curve-calculator | 0410ac28 |
-| 34 | horsepower-torque-calculator、hot-water-circulation-calculator、hvac-load-room-calculator、hydraulic-cylinder-force-calculator、hydrostatic-pressure-calculator | （待填本批 commit 哈希） |
+| 34 | horsepower-torque-calculator、hot-water-circulation-calculator、hvac-load-room-calculator、hydraulic-cylinder-force-calculator、hydrostatic-pressure-calculator | 39121078 |
+| 35 | ifc-element-quantity-calculator、ifc-entity-counter、impact-force-calculator、imperial-thread-reference、inductor-reactance-calculator | （待填本批 commit 哈希） |
 
 ---
 

@@ -1,114 +1,321 @@
 'use client';
 
-import ShortcutCheatsheetClient from '@/components/shortcut-cheatsheet-client';
+import { useState } from 'react';
+import { RelatedTools } from '@/components/related-tools';
+import { Search, RotateCcw, Copy, Download, Check, Wrench } from 'lucide-react';
 
-const CATEGORIES = [
-  { id: 'unc', name: '🔩 UNC (Coarse)' },
-  { id: 'unf', name: '🔩 UNF (Fine)' },
-  { id: 'clearance', name: '⭕ Clearance Holes' },
-  { id: 'data', name: '📐 Thread Specs' },
+type ThreadSeries = 'all' | 'UNC' | 'UNF';
+
+interface UnifiedThreadRow {
+  nominalSize: string;
+  designation: string;
+  series: 'UNC' | 'UNF';
+  majorIn: number;
+  majorMm: number;
+  tpi: number;
+  pitchIn: number;
+  pitchMm: number;
+  tapDrillCode: string;
+  tapDrillIn: string;
+}
+
+// Verified verbatim against ASME B1.1 / Unified Thread Standard reference data
+const UNIFIED_THREADS: UnifiedThreadRow[] = [
+  { nominalSize: '#0', designation: '#0-80', series: 'UNF', majorIn: 0.0600, majorMm: 1.5240, tpi: 80, pitchIn: 0.012500, pitchMm: 0.3175, tapDrillCode: '3/64"', tapDrillIn: '.047' },
+  { nominalSize: '#1', designation: '#1-64', series: 'UNC', majorIn: 0.0730, majorMm: 1.8542, tpi: 64, pitchIn: 0.015625, pitchMm: 0.3969, tapDrillCode: '#53', tapDrillIn: '.060' },
+  { nominalSize: '#1', designation: '#1-72', series: 'UNF', majorIn: 0.0730, majorMm: 1.8542, tpi: 72, pitchIn: 0.013889, pitchMm: 0.3528, tapDrillCode: '#53', tapDrillIn: '.060' },
+  { nominalSize: '#2', designation: '#2-56', series: 'UNC', majorIn: 0.0860, majorMm: 2.1844, tpi: 56, pitchIn: 0.017857, pitchMm: 0.4536, tapDrillCode: '#50', tapDrillIn: '.070' },
+  { nominalSize: '#2', designation: '#2-64', series: 'UNF', majorIn: 0.0860, majorMm: 2.1844, tpi: 64, pitchIn: 0.015625, pitchMm: 0.3969, tapDrillCode: '#50', tapDrillIn: '.070' },
+  { nominalSize: '#3', designation: '#3-48', series: 'UNC', majorIn: 0.0990, majorMm: 2.5146, tpi: 48, pitchIn: 0.020833, pitchMm: 0.5292, tapDrillCode: '#47', tapDrillIn: '.079' },
+  { nominalSize: '#3', designation: '#3-56', series: 'UNF', majorIn: 0.0990, majorMm: 2.5146, tpi: 56, pitchIn: 0.017857, pitchMm: 0.4536, tapDrillCode: '#45', tapDrillIn: '.082' },
+  { nominalSize: '#4', designation: '#4-40', series: 'UNC', majorIn: 0.1120, majorMm: 2.8448, tpi: 40, pitchIn: 0.025000, pitchMm: 0.6350, tapDrillCode: '#43', tapDrillIn: '.089' },
+  { nominalSize: '#4', designation: '#4-48', series: 'UNF', majorIn: 0.1120, majorMm: 2.8448, tpi: 48, pitchIn: 0.020833, pitchMm: 0.5292, tapDrillCode: '#42', tapDrillIn: '.094' },
+  { nominalSize: '#5', designation: '#5-40', series: 'UNC', majorIn: 0.1250, majorMm: 3.1750, tpi: 40, pitchIn: 0.025000, pitchMm: 0.6350, tapDrillCode: '#38', tapDrillIn: '.102' },
+  { nominalSize: '#5', designation: '#5-44', series: 'UNF', majorIn: 0.1250, majorMm: 3.1750, tpi: 44, pitchIn: 0.022727, pitchMm: 0.5773, tapDrillCode: '#37', tapDrillIn: '.104' },
+  { nominalSize: '#6', designation: '#6-32', series: 'UNC', majorIn: 0.1380, majorMm: 3.5052, tpi: 32, pitchIn: 0.031250, pitchMm: 0.7938, tapDrillCode: '#36', tapDrillIn: '.107' },
+  { nominalSize: '#6', designation: '#6-40', series: 'UNF', majorIn: 0.1380, majorMm: 3.5052, tpi: 40, pitchIn: 0.025000, pitchMm: 0.6350, tapDrillCode: '#33', tapDrillIn: '.113' },
+  { nominalSize: '#8', designation: '#8-32', series: 'UNC', majorIn: 0.1640, majorMm: 4.1656, tpi: 32, pitchIn: 0.031250, pitchMm: 0.7938, tapDrillCode: '#29', tapDrillIn: '.136' },
+  { nominalSize: '#8', designation: '#8-36', series: 'UNF', majorIn: 0.1640, majorMm: 4.1656, tpi: 36, pitchIn: 0.027778, pitchMm: 0.7056, tapDrillCode: '#29', tapDrillIn: '.136' },
+  { nominalSize: '#10', designation: '#10-24', series: 'UNC', majorIn: 0.1900, majorMm: 4.8260, tpi: 24, pitchIn: 0.041667, pitchMm: 1.0583, tapDrillCode: '#25', tapDrillIn: '.150' },
+  { nominalSize: '#10', designation: '#10-32', series: 'UNF', majorIn: 0.1900, majorMm: 4.8260, tpi: 32, pitchIn: 0.031250, pitchMm: 0.7938, tapDrillCode: '#21', tapDrillIn: '.159' },
+  { nominalSize: '#12', designation: '#12-24', series: 'UNC', majorIn: 0.2160, majorMm: 5.4864, tpi: 24, pitchIn: 0.041667, pitchMm: 1.0583, tapDrillCode: '#16', tapDrillIn: '.177' },
+  { nominalSize: '#12', designation: '#12-28', series: 'UNF', majorIn: 0.2160, majorMm: 5.4864, tpi: 28, pitchIn: 0.035714, pitchMm: 0.9071, tapDrillCode: '#14', tapDrillIn: '.182' },
+  { nominalSize: '1/4', designation: '1/4-20', series: 'UNC', majorIn: 0.2500, majorMm: 6.3500, tpi: 20, pitchIn: 0.050000, pitchMm: 1.2700, tapDrillCode: '#7', tapDrillIn: '.201' },
+  { nominalSize: '1/4', designation: '1/4-28', series: 'UNF', majorIn: 0.2500, majorMm: 6.3500, tpi: 28, pitchIn: 0.035714, pitchMm: 0.9071, tapDrillCode: '#3', tapDrillIn: '.213' },
+  { nominalSize: '5/16', designation: '5/16-18', series: 'UNC', majorIn: 0.3125, majorMm: 7.9375, tpi: 18, pitchIn: 0.055556, pitchMm: 1.4111, tapDrillCode: 'F', tapDrillIn: '.257' },
+  { nominalSize: '5/16', designation: '5/16-24', series: 'UNF', majorIn: 0.3125, majorMm: 7.9375, tpi: 24, pitchIn: 0.041667, pitchMm: 1.0583, tapDrillCode: 'I', tapDrillIn: '.272' },
+  { nominalSize: '3/8', designation: '3/8-16', series: 'UNC', majorIn: 0.3750, majorMm: 9.5250, tpi: 16, pitchIn: 0.062500, pitchMm: 1.5875, tapDrillCode: '5/16"', tapDrillIn: '.313' },
+  { nominalSize: '3/8', designation: '3/8-24', series: 'UNF', majorIn: 0.3750, majorMm: 9.5250, tpi: 24, pitchIn: 0.041667, pitchMm: 1.0583, tapDrillCode: 'Q', tapDrillIn: '.332' },
+  { nominalSize: '7/16', designation: '7/16-14', series: 'UNC', majorIn: 0.4375, majorMm: 11.1125, tpi: 14, pitchIn: 0.071429, pitchMm: 1.8143, tapDrillCode: 'U', tapDrillIn: '.368' },
+  { nominalSize: '7/16', designation: '7/16-20', series: 'UNF', majorIn: 0.4375, majorMm: 11.1125, tpi: 20, pitchIn: 0.050000, pitchMm: 1.2700, tapDrillCode: '25/64"', tapDrillIn: '.391' },
+  { nominalSize: '1/2', designation: '1/2-13', series: 'UNC', majorIn: 0.5000, majorMm: 12.7000, tpi: 13, pitchIn: 0.076923, pitchMm: 1.9538, tapDrillCode: '27/64"', tapDrillIn: '.422' },
+  { nominalSize: '1/2', designation: '1/2-20', series: 'UNF', majorIn: 0.5000, majorMm: 12.7000, tpi: 20, pitchIn: 0.050000, pitchMm: 1.2700, tapDrillCode: '29/64"', tapDrillIn: '.453' },
+  { nominalSize: '9/16', designation: '9/16-12', series: 'UNC', majorIn: 0.5625, majorMm: 14.2875, tpi: 12, pitchIn: 0.083333, pitchMm: 2.1167, tapDrillCode: '31/64"', tapDrillIn: '.484' },
+  { nominalSize: '9/16', designation: '9/16-18', series: 'UNF', majorIn: 0.5625, majorMm: 14.2875, tpi: 18, pitchIn: 0.055556, pitchMm: 1.4111, tapDrillCode: '1/2"', tapDrillIn: '.500' },
+  { nominalSize: '5/8', designation: '5/8-11', series: 'UNC', majorIn: 0.6250, majorMm: 15.8750, tpi: 11, pitchIn: 0.090909, pitchMm: 2.3091, tapDrillCode: '17/32"', tapDrillIn: '.531' },
+  { nominalSize: '5/8', designation: '5/8-18', series: 'UNF', majorIn: 0.6250, majorMm: 15.8750, tpi: 18, pitchIn: 0.055556, pitchMm: 1.4111, tapDrillCode: '9/16"', tapDrillIn: '.563' },
+  { nominalSize: '3/4', designation: '3/4-10', series: 'UNC', majorIn: 0.7500, majorMm: 19.0500, tpi: 10, pitchIn: 0.100000, pitchMm: 2.5400, tapDrillCode: '21/32"', tapDrillIn: '.656' },
+  { nominalSize: '3/4', designation: '3/4-16', series: 'UNF', majorIn: 0.7500, majorMm: 19.0500, tpi: 16, pitchIn: 0.062500, pitchMm: 1.5875, tapDrillCode: '11/16"', tapDrillIn: '.688' },
+  { nominalSize: '7/8', designation: '7/8-9', series: 'UNC', majorIn: 0.8750, majorMm: 22.2250, tpi: 9, pitchIn: 0.111111, pitchMm: 2.8222, tapDrillCode: '49/64"', tapDrillIn: '.766' },
+  { nominalSize: '7/8', designation: '7/8-14', series: 'UNF', majorIn: 0.8750, majorMm: 22.2250, tpi: 14, pitchIn: 0.071429, pitchMm: 1.8143, tapDrillCode: '51/64"', tapDrillIn: '.797' },
+  { nominalSize: '1"', designation: '1-8', series: 'UNC', majorIn: 1.0000, majorMm: 25.4000, tpi: 8, pitchIn: 0.125000, pitchMm: 3.1750, tapDrillCode: '7/8"', tapDrillIn: '.875' },
+  { nominalSize: '1"', designation: '1-12', series: 'UNF', majorIn: 1.0000, majorMm: 25.4000, tpi: 12, pitchIn: 0.083333, pitchMm: 2.1167, tapDrillCode: '59/64"', tapDrillIn: '.922' },
+  { nominalSize: '1-1/8', designation: '1-1/8-7', series: 'UNC', majorIn: 1.1250, majorMm: 28.5750, tpi: 7, pitchIn: 0.142857, pitchMm: 3.6286, tapDrillCode: '—', tapDrillIn: '—' },
+  { nominalSize: '1-1/8', designation: '1-1/8-12', series: 'UNF', majorIn: 1.1250, majorMm: 28.5750, tpi: 12, pitchIn: 0.083333, pitchMm: 2.1167, tapDrillCode: '—', tapDrillIn: '—' },
+  { nominalSize: '1-1/4', designation: '1-1/4-7', series: 'UNC', majorIn: 1.2500, majorMm: 31.7500, tpi: 7, pitchIn: 0.142857, pitchMm: 3.6286, tapDrillCode: '—', tapDrillIn: '—' },
+  { nominalSize: '1-1/4', designation: '1-1/4-12', series: 'UNF', majorIn: 1.2500, majorMm: 31.7500, tpi: 12, pitchIn: 0.083333, pitchMm: 2.1167, tapDrillCode: '—', tapDrillIn: '—' },
+  { nominalSize: '1-3/8', designation: '1-3/8-6', series: 'UNC', majorIn: 1.3750, majorMm: 34.9250, tpi: 6, pitchIn: 0.166667, pitchMm: 4.2333, tapDrillCode: '—', tapDrillIn: '—' },
+  { nominalSize: '1-3/8', designation: '1-3/8-12', series: 'UNF', majorIn: 1.3750, majorMm: 34.9250, tpi: 12, pitchIn: 0.083333, pitchMm: 2.1167, tapDrillCode: '—', tapDrillIn: '—' },
+  { nominalSize: '1-1/2', designation: '1-1/2-6', series: 'UNC', majorIn: 1.5000, majorMm: 38.1000, tpi: 6, pitchIn: 0.166667, pitchMm: 4.2333, tapDrillCode: '—', tapDrillIn: '—' },
+  { nominalSize: '1-1/2', designation: '1-1/2-12', series: 'UNF', majorIn: 1.5000, majorMm: 38.1000, tpi: 12, pitchIn: 0.083333, pitchMm: 2.1167, tapDrillCode: '—', tapDrillIn: '—' },
 ];
 
-const SHORTCUTS = [
-  // UNC threads (coarse)
-  { keys: '#0-80', command: 'Ø0.060" · 80 TPI · Tap #56 (0.0465")', category: 'unc', description: 'Smallest UNC thread. Used in miniature instruments, electronics, and watchmaking. Tap drill #56 = 1.181mm. Very delicate — use care when tapping.' },
-  { keys: '#1-64', command: 'Ø0.073" · 64 TPI · Tap #53 (0.0595")', category: 'unc', description: 'Small UNC thread. Used in precision instruments and small assemblies. Tap drill #53 = 1.511mm.' },
-  { keys: '#2-56', command: 'Ø0.086" · 56 TPI · Tap #50 (0.070")', category: 'unc', description: 'Very common small thread in US. Used in electronics, model making, and small hardware. Tap drill #50 = 1.778mm.' },
-  { keys: '#3-48', command: 'Ø0.099" · 48 TPI · Tap #47 (0.0785")', category: 'unc', description: 'Small UNC thread. Less common than #2-56 or #4-40. Tap drill #47 = 1.994mm.' },
-  { keys: '#4-40', command: 'Ø0.112" · 40 TPI · Tap #43 (0.089")', category: 'unc', description: 'Most common small US thread. Used everywhere in electronics, consumer products, and small hardware. Tap drill #43 = 2.261mm.' },
-  { keys: '#5-40', command: 'Ø0.125" · 40 TPI · Tap #38 (0.1015")', category: 'unc', description: 'Less common size. Used in specialized hardware. Tap drill #38 = 2.578mm. Close to 1/8" diameter.' },
-  { keys: '#6-32', command: 'Ø0.138" · 32 TPI · Tap #36 (0.1065")', category: 'unc', description: 'Extremely common in US. Used in electrical boxes, computers, and general hardware. Tap drill #36 = 2.705mm. Sheet metal screw equivalent available.' },
-  { keys: '#8-32', command: 'Ø0.164" · 32 TPI · Tap #29 (0.136")', category: 'unc', description: 'Very common medium-small thread. Used in electronics, machinery, and consumer products. Tap drill #29 = 3.454mm.' },
-  { keys: '#10-24', command: 'Ø0.190" · 24 TPI · Tap #25 (0.1495")', category: 'unc', description: 'Common medium thread. Used in general hardware, brackets, and machinery. Tap drill #25 = 3.797mm. Coarse version of #10.' },
-  { keys: '#12-24', command: 'Ø0.216" · 24 TPI · Tap #16 (0.177")', category: 'unc', description: 'Less common size between #10 and 1/4. Used in specialized hardware. Tap drill #16 = 4.496mm.' },
-  { keys: '1/4-20', command: 'Ø0.250" · 20 TPI · Tap #7 (0.201")', category: 'unc', description: 'One of the most common US threads. Used in machinery, automotive, and construction. Tap drill #7 = 5.105mm. Close to M6 in size.' },
-  { keys: '5/16-18', command: 'Ø0.3125" · 18 TPI · Tap F (0.257")', category: 'unc', description: 'Common structural thread. Used in machinery, automotive, and structural connections. Tap drill F = 6.528mm. Close to M8 in size.' },
-  { keys: '3/8-16', command: 'Ø0.375" · 16 TPI · Tap 5/16" (0.3125")', category: 'unc', description: 'Very common heavy-duty thread. Used in machinery, automotive, and construction. Tap drill 5/16" = 7.938mm. Close to M10 in size.' },
-  { keys: '7/16-14', command: 'Ø0.4375" · 14 TPI · Tap U (0.368")', category: 'unc', description: 'Heavy machinery thread. Tap drill U = 9.347mm. Used in automotive and heavy equipment.' },
-  { keys: '1/2-13', command: 'Ø0.500" · 13 TPI · Tap 27/64" (0.4219")', category: 'unc', description: 'Major structural thread. Used in construction, machinery, and heavy equipment. Tap drill 27/64" = 10.716mm. Close to M12 in size.' },
-  { keys: '9/16-12', command: 'Ø0.5625" · 12 TPI · Tap 31/64" (0.4844")', category: 'unc', description: 'Heavy structural thread. Less common than 1/2-13. Tap drill 31/64" = 12.303mm.' },
-  { keys: '5/8-11', command: 'Ø0.625" · 11 TPI · Tap 17/32" (0.5313")', category: 'unc', description: 'Heavy-duty structural thread. Used in construction and heavy machinery. Tap drill 17/32" = 13.494mm. Close to M16 in size.' },
-  { keys: '3/4-10', command: 'Ø0.750" · 10 TPI · Tap 21/32" (0.6563")', category: 'unc', description: 'Major structural thread. Used in heavy construction, machinery, and pressure vessels. Tap drill 21/32" = 16.669mm.' },
-  { keys: '7/8-9', command: 'Ø0.875" · 9 TPI · Tap 49/64" (0.7656")', category: 'unc', description: 'Very heavy structural thread. Tap drill 49/64" = 19.447mm. Used in heavy machinery and structural connections.' },
-  { keys: '1-8', command: 'Ø1.000" · 8 TPI · Tap 7/8" (0.875")', category: 'unc', description: 'Large structural thread. Tap drill 7/8" = 22.225mm. Used in heavy construction and large machinery.' },
-  { keys: '1-1/8-7', command: 'Ø1.125" · 7 TPI · Tap 63/64" (0.9844")', category: 'unc', description: 'Very large thread. Tap drill 63/64" = 25.003mm. Used in heavy structural and industrial applications.' },
-  { keys: '1-1/4-7', command: 'Ø1.250" · 7 TPI · Tap 1-7/64" (1.1094")', category: 'unc', description: 'Large structural thread. Tap drill 1-7/64" = 28.179mm. Used in heavy construction and large equipment.' },
-  { keys: '1-1/2-6', command: 'Ø1.500" · 6 TPI · Tap 1-11/32" (1.3438")', category: 'unc', description: 'Largest commonly used UNC thread. Tap drill 1-11/32" = 34.131mm. Used in heavy structural connections.' },
+export default function ImperialThreadReferenceClient() {
+  const [searchStr, setSearchStr] = useState('');
+  const [series, setSeries] = useState<ThreadSeries>('all');
+  const [copied, setCopied] = useState(false);
 
-  // UNF threads (fine)
-  { keys: '#0-80', command: 'Ø0.060" · 80 TPI · Tap #56 (0.0465")', category: 'unf', description: 'Same as UNC for #0 — only one thread series at this size. 80 TPI is the standard for #0.' },
-  { keys: '#1-72', command: 'Ø0.073" · 72 TPI · Tap #53 (0.0595")', category: 'unf', description: 'Fine thread version of #1. More TPI than #1-64. Used where finer adjustment or better locking needed. Tap drill #53.' },
-  { keys: '#2-64', command: 'Ø0.086" · 64 TPI · Tap #50 (0.070")', category: 'unf', description: 'Fine thread version of #2. 64 TPI vs 56 TPI (UNC). Tap drill #50 = 1.778mm.' },
-  { keys: '#3-56', command: 'Ø0.099" · 56 TPI · Tap #45 (0.082")', category: 'unf', description: 'Fine thread version of #3. 56 TPI vs 48 TPI (UNC). Tap drill #45 = 2.083mm.' },
-  { keys: '#4-48', command: 'Ø0.112" · 48 TPI · Tap #42 (0.0935")', category: 'unf', description: 'Fine thread version of #4. 48 TPI vs 40 TPI (UNC). Used in precision instruments. Tap drill #42 = 2.375mm.' },
-  { keys: '#5-44', command: 'Ø0.125" · 44 TPI · Tap #37 (0.104")', category: 'unf', description: 'Fine thread version of #5. 44 TPI vs 40 TPI (UNC). Tap drill #37 = 2.642mm.' },
-  { keys: '#6-40', command: 'Ø0.138" · 40 TPI · Tap #33 (0.113")', category: 'unf', description: 'Fine thread version of #6. 40 TPI vs 32 TPI (UNC). Used where vibration resistance matters. Tap drill #33 = 2.870mm.' },
-  { keys: '#8-36', command: 'Ø0.164" · 36 TPI · Tap #29 (0.136")', category: 'unf', description: 'Fine thread version of #8. 36 TPI vs 32 TPI (UNC). Used in precision assemblies. Tap drill #29 = 3.454mm.' },
-  { keys: '#10-32', command: 'Ø0.190" · 32 TPI · Tap #21 (0.159")', category: 'unf', description: 'Very common fine thread. Used in electronics, machinery, and precision hardware. 32 TPI vs 24 TPI (UNC). Tap drill #21 = 4.039mm.' },
-  { keys: '#12-28', command: 'Ø0.216" · 28 TPI · Tap #16 (0.177")', category: 'unf', description: 'Fine thread version of #12. 28 TPI vs 24 TPI (UNC). Less common. Tap drill #16 = 4.496mm.' },
-  { keys: '1/4-28', command: 'Ø0.250" · 28 TPI · Tap #3 (0.213")', category: 'unf', description: 'Common fine thread. Used in hydraulic fittings, precision instruments, and automotive. 28 TPI vs 20 TPI (UNC). Tap drill #3 = 5.410mm.' },
-  { keys: '5/16-24', command: 'Ø0.3125" · 24 TPI · Tap I (0.272")', category: 'unf', description: 'Fine thread for 5/16". Used in hydraulic fittings and precision assemblies. 24 TPI vs 18 TPI (UNC). Tap drill I = 6.909mm.' },
-  { keys: '3/8-24', command: 'Ø0.375" · 24 TPI · Tap Q (0.332")', category: 'unf', description: 'Common fine thread. Used in hydraulic fittings, automotive, and precision machinery. 24 TPI vs 16 TPI (UNC). Tap drill Q = 8.433mm.' },
-  { keys: '7/16-20', command: 'Ø0.4375" · 20 TPI · Tap 25/64" (0.3906")', category: 'unf', description: 'Fine thread for 7/16". 20 TPI vs 14 TPI (UNC). Tap drill 25/64" = 9.922mm. Used in automotive and hydraulic applications.' },
-  { keys: '1/2-20', command: 'Ø0.500" · 20 TPI · Tap 29/64" (0.4531")', category: 'unf', description: 'Fine thread for 1/2". Very common in hydraulic fittings (JIC). 20 TPI vs 13 TPI (UNC). Tap drill 29/64" = 11.509mm.' },
-  { keys: '9/16-18', command: 'Ø0.5625" · 18 TPI · Tap 33/64" (0.5156")', category: 'unf', description: 'Fine thread for 9/16". 18 TPI vs 12 TPI (UNC). Tap drill 33/64" = 13.097mm. Used in heavy hydraulic systems.' },
-  { keys: '5/8-18', command: 'Ø0.625" · 18 TPI · Tap 37/64" (0.5781")', category: 'unf', description: 'Fine thread for 5/8". Common in hydraulic fittings. 18 TPI vs 11 TPI (UNC). Tap drill 37/64" = 14.684mm.' },
-  { keys: '3/4-16', command: 'Ø0.750" · 16 TPI · Tap 11/16" (0.6875")', category: 'unf', description: 'Fine thread for 3/4". Used in hydraulic and high-pressure applications. 16 TPI vs 10 TPI (UNC). Tap drill 11/16" = 17.463mm.' },
-  { keys: '7/8-14', command: 'Ø0.875" · 14 TPI · Tap 49/64" (0.7656")', category: 'unf', description: 'Fine thread for 7/8". 14 TPI vs 9 TPI (UNC). Tap drill 49/64" = 19.447mm. Used in heavy machinery.' },
-  { keys: '1-12', command: 'Ø1.000" · 12 TPI · Tap 59/64" (0.9219")', category: 'unf', description: 'Fine thread for 1". 12 TPI vs 8 TPI (UNC). Tap drill 59/64" = 23.416mm. Used in precision heavy machinery.' },
-  { keys: '1-1/8-12', command: 'Ø1.125" · 12 TPI · Tap 1-3/64" (1.0469")', category: 'unf', description: 'Fine thread for 1-1/8". 12 TPI vs 7 TPI (UNC). Tap drill 1-3/64" = 26.591mm.' },
-  { keys: '1-1/4-12', command: 'Ø1.250" · 12 TPI · Tap 1-11/64" (1.1719")', category: 'unf', description: 'Fine thread for 1-1/4". 12 TPI vs 7 TPI (UNC). Tap drill 1-11/64" = 29.769mm.' },
-  { keys: '1-1/2-12', command: 'Ø1.500" · 12 TPI · Tap 1-23/64" (1.3594")', category: 'unf', description: 'Fine thread for 1-1/2". 12 TPI vs 6 TPI (UNC). Tap drill 1-23/64" = 34.528mm. Used in large precision assemblies.' },
+  const q = searchStr.trim().toLowerCase();
+  const filtered = UNIFIED_THREADS.filter(row => {
+    if (series !== 'all' && row.series !== series) return false;
+    if (!q) return true;
+    return (
+      row.designation.toLowerCase().includes(q) ||
+      row.nominalSize.toLowerCase().includes(q) ||
+      row.tapDrillCode.toLowerCase().includes(q) ||
+      row.series.toLowerCase().includes(q)
+    );
+  });
 
-  // Clearance holes
-  { keys: '#4 Close', command: 'Ø 0.125" (1/8")', category: 'clearance', description: 'Close fit clearance for #4 screw. 1/8" = 3.175mm. Used where precise alignment is required.' },
-  { keys: '#4 Normal', command: 'Ø 0.1406" (9/64")', category: 'clearance', description: 'Normal fit clearance for #4 screw. 9/64" = 3.572mm. Standard clearance for general use.' },
-  { keys: '#6 Close', command: 'Ø 0.1406" (9/64")', category: 'clearance', description: 'Close fit clearance for #6 screw. 9/64" = 3.572mm.' },
-  { keys: '#6 Normal', command: 'Ø 0.1563" (5/32")', category: 'clearance', description: 'Normal fit clearance for #6 screw. 5/32" = 3.969mm.' },
-  { keys: '#8 Close', command: 'Ø 0.1563" (5/32")', category: 'clearance', description: 'Close fit clearance for #8 screw. 5/32" = 3.969mm.' },
-  { keys: '#8 Normal', command: 'Ø 0.1875" (3/16")', category: 'clearance', description: 'Normal fit clearance for #8 screw. 3/16" = 4.763mm.' },
-  { keys: '#10 Close', command: 'Ø 0.1875" (3/16")', category: 'clearance', description: 'Close fit clearance for #10 screw. 3/16" = 4.763mm.' },
-  { keys: '#10 Normal', command: 'Ø 0.2188" (7/32")', category: 'clearance', description: 'Normal fit clearance for #10 screw. 7/32" = 5.556mm.' },
-  { keys: '1/4 Close', command: 'Ø 0.250" (1/4")', category: 'clearance', description: 'Close fit clearance for 1/4" bolt. Exact size — requires precise drilling. 6.350mm.' },
-  { keys: '1/4 Normal', command: 'Ø 0.2813" (9/32")', category: 'clearance', description: 'Normal fit clearance for 1/4" bolt. 9/32" = 7.144mm.' },
-  { keys: '5/16 Close', command: 'Ø 0.3125" (5/16")', category: 'clearance', description: 'Close fit clearance for 5/16" bolt. Exact size. 7.938mm.' },
-  { keys: '5/16 Normal', command: 'Ø 0.3438" (11/32")', category: 'clearance', description: 'Normal fit clearance for 5/16" bolt. 11/32" = 8.731mm.' },
-  { keys: '3/8 Close', command: 'Ø 0.375" (3/8")', category: 'clearance', description: 'Close fit clearance for 3/8" bolt. Exact size. 9.525mm.' },
-  { keys: '3/8 Normal', command: 'Ø 0.4063" (13/32")', category: 'clearance', description: 'Normal fit clearance for 3/8" bolt. 13/32" = 10.319mm.' },
-  { keys: '1/2 Close', command: 'Ø 0.500" (1/2")', category: 'clearance', description: 'Close fit clearance for 1/2" bolt. Exact size. 12.700mm.' },
-  { keys: '1/2 Normal', command: 'Ø 0.5313" (17/32")', category: 'clearance', description: 'Normal fit clearance for 1/2" bolt. 17/32" = 13.494mm.' },
-  { keys: '5/8 Close', command: 'Ø 0.625" (5/8")', category: 'clearance', description: 'Close fit clearance for 5/8" bolt. Exact size. 15.875mm.' },
-  { keys: '5/8 Normal', command: 'Ø 0.6563" (21/32")', category: 'clearance', description: 'Normal fit clearance for 5/8" bolt. 21/32" = 16.669mm.' },
-  { keys: '3/4 Close', command: 'Ø 0.750" (3/4")', category: 'clearance', description: 'Close fit clearance for 3/4" bolt. Exact size. 19.050mm.' },
-  { keys: '3/4 Normal', command: 'Ø 0.8125" (13/16")', category: 'clearance', description: 'Normal fit clearance for 3/4" bolt. 13/16" = 20.638mm.' },
+  const featured = filtered[0] ?? null;
 
-  // Thread specifications
-  { keys: 'Class 2A/2B', command: 'Standard External/Internal', category: 'data', description: 'Most common tolerance class for general applications. 2A = external (bolt), 2B = internal (nut). Provides reasonable fit with manufacturing economy. Default for commercial fasteners.' },
-  { keys: 'Class 3A/3B', command: 'Precision Tolerance', category: 'data', description: 'Tighter tolerance for precision applications. 3A = external, 3B = internal. Used in aerospace, instrumentation, and where precise fit is critical. No allowance for plating.' },
-  { keys: 'Class 1A/1B', command: 'Rough Tolerance', category: 'data', description: 'Wide tolerance for rough applications. 1A = external, 1B = internal. Used for quick assembly where fit is not critical. Rare in modern practice.' },
-  { keys: '75% Engagement', command: 'Standard Tap Drill', category: 'data', description: '75% thread engagement is standard for UNC/UNF tapping. Balances strength and ease of tapping. Tap drill formula: Major Ø − (1/TPI). Example: 1/4-20 → 0.250 − 0.050 = 0.200" → #7 drill.' },
-  { keys: '50% Engagement', command: 'Reduced Tap Drill', category: 'data', description: '50% thread engagement for hard or tough materials. Easier tapping, less tap breakage. Acceptable for most non-critical applications. Use one drill size larger than 75%.' },
-];
+  const handleReset = () => {
+    setSearchStr('');
+    setSeries('all');
+  };
 
-const TIPS = [
-  {
-    title: 'UNC vs UNF — when to use which',
-    content: 'UNC (coarse) is the default for general fastening — stronger threads, easier assembly, less prone to cross-threading, and better for soft or brittle materials. UNF (fine) is used for: (1) thin walls where thread depth is limited, (2) adjustment and locking applications (finer pitch = more friction), (3) vibration resistance (finer threads resist loosening), (4) hydraulic and pressure fittings (more thread engagement per unit length). Most US automotive and machinery uses UNC; aerospace uses more UNF.'
-  },
-  {
-    title: 'Tap drill formula for imperial threads',
-    content: 'For UNC/UNF threads, tap drill = Major Diameter − (1/TPI). Example: 1/4-20 UNC → 0.250 − (1/20) = 0.250 − 0.050 = 0.200" → use #7 drill (0.201"). For 10-32 UNF → 0.190 − (1/32) = 0.190 − 0.03125 = 0.159" → use #21 drill (0.159"). This gives approximately 75% thread engagement. For hard materials, use one size larger for easier tapping.'
-  },
-];
+  const handleCopy = async () => {
+    if (filtered.length === 0) return;
+    const text = [
+      'ASME B1.1 UNC / UNF Imperial Thread Reference',
+      ...filtered.slice(0, 15).map(
+        r => `${r.designation} (${r.series}) | Major: ${r.majorIn.toFixed(4)} in (${r.majorMm.toFixed(3)} mm) | TPI: ${r.tpi} | Tap Drill: ${r.tapDrillCode} (${r.tapDrillIn} in)`
+      ),
+    ].join('\n');
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
 
-export default function ImperialThreadClient() {
+  const handleDownload = () => {
+    if (filtered.length === 0) return;
+    const rows = [
+      ['designation', 'series', 'major_in', 'major_mm', 'tpi', 'pitch_in', 'pitch_mm', 'tap_drill_code', 'tap_drill_in'],
+      ...filtered.map(r => [
+        r.designation,
+        r.series,
+        r.majorIn.toFixed(4),
+        r.majorMm.toFixed(4),
+        String(r.tpi),
+        r.pitchIn.toFixed(6),
+        r.pitchMm.toFixed(4),
+        r.tapDrillCode === '—' ? '' : r.tapDrillCode.replace(/"/g, 'in'),
+        r.tapDrillIn === '—' ? '' : r.tapDrillIn,
+      ]),
+    ];
+    const csv = rows.map(r => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'imperial-unc-unf-threads.csv';
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   return (
-    <ShortcutCheatsheetClient
-      title="UNC/UNF Imperial Thread"
-      subtitle="Complete UNC (coarse) and UNF (fine) thread reference: #0 through 1-1/2 in. with TPI, tap drill sizes, clearance holes, and thread specifications."
-      categories={CATEGORIES}
-      shortcuts={SHORTCUTS}
-      tips={TIPS}
-    />
+    <div className="space-y-8">
+      <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center text-amber-600">
+              <Wrench className="w-5 h-5" />
+            </div>
+            <div>
+              <h2 className="text-lg font-black text-slate-900 tracking-tight">ASME B1.1 Thread Lookup</h2>
+              <p className="text-sm text-slate-500 font-medium">Filter #0 through 1-1/2&quot; UNC coarse and UNF fine sizes</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              data-testid="preset-1-4-20"
+              onClick={() => {
+                setSeries('UNC');
+                setSearchStr('1/4-20');
+              }}
+              className="px-3 py-2 rounded-xl text-xs font-bold bg-slate-50 hover:bg-amber-50 text-slate-700 border border-slate-200"
+            >
+              1/4-20 UNC
+            </button>
+            <button
+              type="button"
+              data-testid="preset-12-28"
+              onClick={() => {
+                setSeries('UNF');
+                setSearchStr('#12-28');
+              }}
+              className="px-3 py-2 rounded-xl text-xs font-bold bg-slate-50 hover:bg-amber-50 text-slate-700 border border-slate-200"
+            >
+              #12-28 UNF
+            </button>
+            <button
+              type="button"
+              data-testid="preset-0-80"
+              onClick={() => {
+                setSeries('all');
+                setSearchStr('#0-80');
+              }}
+              className="px-3 py-2 rounded-xl text-xs font-bold bg-slate-50 hover:bg-amber-50 text-slate-700 border border-slate-200"
+            >
+              #0-80 UNF
+            </button>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+          <div className="md:col-span-2 relative">
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+            <input
+              type="text"
+              data-testid="input-search"
+              value={searchStr}
+              onChange={e => setSearchStr(e.target.value)}
+              placeholder="Search designation or drill (e.g. 1/4-20, #10-32, #0-80, 7/8)..."
+              className="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-amber-500"
+            />
+          </div>
+
+          <div className="flex gap-2">
+            {(['all', 'UNC', 'UNF'] as ThreadSeries[]).map(s => (
+              <button
+                key={s}
+                type="button"
+                data-testid={`filter-${s.toLowerCase()}`}
+                onClick={() => setSeries(s)}
+                className={`flex-1 py-2.5 rounded-xl text-sm font-bold border transition-colors ${
+                  series === s
+                    ? 'bg-slate-900 text-white border-slate-900'
+                    : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                }`}
+              >
+                {s === 'all' ? 'All' : s}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="bg-amber-50 rounded-2xl p-4 border border-amber-100">
+            <div className="text-xs font-black text-amber-600 uppercase tracking-wider mb-1">Matching Sizes</div>
+            <div className="text-2xl font-black text-amber-900">
+              <span data-testid="result-count">{filtered.length}</span>
+            </div>
+          </div>
+          <div className="bg-slate-50 rounded-2xl p-4 border border-slate-200">
+            <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Top Match</div>
+            <div className="text-xl font-black text-slate-900">
+              <span data-testid="result-top-designation">{featured ? featured.designation : '—'}</span>
+            </div>
+          </div>
+          <div className="bg-blue-50 rounded-2xl p-4 border border-blue-100">
+            <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">Tap Drill (~75%)</div>
+            <div className="text-xl font-black text-blue-900">
+              <span data-testid="result-top-drill">{featured ? featured.tapDrillCode : '—'}</span>
+            </div>
+          </div>
+          <div className="bg-emerald-50 rounded-2xl p-4 border border-emerald-100">
+            <div className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-1">Major Diameter</div>
+            <div className="text-xl font-black text-emerald-900">
+              <span data-testid="result-top-major-mm">{featured ? featured.majorMm.toFixed(4) : '—'}</span>{' '}
+              <span className="text-sm text-emerald-600">mm</span>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex flex-wrap gap-3">
+          <button
+            type="button"
+            data-testid="btn-reset"
+            onClick={handleReset}
+            className="py-2.5 px-4 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center gap-1.5"
+          >
+            <RotateCcw className="w-4 h-4" /> Reset
+          </button>
+          <button
+            type="button"
+            data-testid="btn-copy"
+            onClick={handleCopy}
+            className="py-2.5 px-4 rounded-xl text-sm font-bold bg-amber-50 text-amber-800 hover:bg-amber-100 flex items-center gap-1.5"
+          >
+            {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+            {copied ? 'Copied' : 'Copy Visible Rows'}
+          </button>
+          <button
+            type="button"
+            data-testid="btn-download"
+            onClick={handleDownload}
+            className="py-2.5 px-4 rounded-xl text-sm font-bold bg-slate-900 text-white hover:bg-slate-800 flex items-center gap-1.5"
+          >
+            <Download className="w-4 h-4" /> Export CSV
+          </button>
+        </div>
+
+        <div className="overflow-x-auto border border-slate-100 rounded-2xl">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-slate-50 text-slate-500 font-black uppercase text-xs">
+              <tr>
+                <th className="px-4 py-3">Designation</th>
+                <th className="px-4 py-3">Series</th>
+                <th className="px-4 py-3 text-right">Major (in)</th>
+                <th className="px-4 py-3 text-right">Major (mm)</th>
+                <th className="px-4 py-3 text-right">TPI</th>
+                <th className="px-4 py-3 text-right">Pitch (mm)</th>
+                <th className="px-4 py-3 text-right">Tap Drill</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-slate-100">
+              {filtered.map(r => (
+                <tr key={r.designation} className="hover:bg-amber-50/40">
+                  <td className="px-4 py-2.5 font-mono font-bold text-slate-900">{r.designation}</td>
+                  <td className="px-4 py-2.5 font-bold text-slate-600">{r.series}</td>
+                  <td className="px-4 py-2.5 text-right font-mono">{r.majorIn.toFixed(4)}</td>
+                  <td className="px-4 py-2.5 text-right font-mono">{r.majorMm.toFixed(4)}</td>
+                  <td className="px-4 py-2.5 text-right font-bold">{r.tpi}</td>
+                  <td className="px-4 py-2.5 text-right font-mono">{r.pitchMm.toFixed(4)}</td>
+                  <td className="px-4 py-2.5 text-right font-bold text-amber-800">
+                    {r.tapDrillCode === '—' ? '—' : `${r.tapDrillCode} (${r.tapDrillIn} in)`}
+                  </td>
+                </tr>
+              ))}
+              {filtered.length === 0 && (
+                <tr>
+                  <td colSpan={7} className="px-4 py-8 text-center text-slate-400 font-medium">
+                    No matching UNC or UNF thread sizes found.
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <RelatedTools />
+    </div>
   );
 }

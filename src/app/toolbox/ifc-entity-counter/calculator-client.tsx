@@ -1,250 +1,384 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useRef } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info, UploadCloud, Download, Building2 } from 'lucide-react';
-import { getSampleIfcText } from '@/lib/open-source-cad-engines';
+import { FileCode2, Upload, RotateCcw, Copy, Download, Check, AlertTriangle } from 'lucide-react';
+
+const INT0_RE = /^\d+$/;
+
+function parseNonNegInt(raw: string): number | null {
+  const t = raw.trim();
+  if (!INT0_RE.test(t)) return null;
+  const v = Number(t);
+  return Number.isInteger(v) && v >= 0 ? v : null;
+}
+
+const DEFAULT_IFC_SAMPLE = `ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView_V2.0]'),'2;1');
+FILE_NAME('sample_office.ifc','2026-01-15T10:00:00',('Architect'),('BIM Studio'),'IfcEngine','CAD Export','');
+FILE_SCHEMA(('IFC4'));
+ENDSEC;
+DATA;
+#1=IFCPROJECT('0G2x9A',#2,'Office Annex',$,$,$,$,(#10),#11);
+#2=IFCSITE('1K8p2B',#2,'Site A',$,$,#12,$,$,.ELEMENT.,$,$,$,$,$);
+#3=IFCBUILDING('2M4q8C',#2,'Main Block',$,$,#13,$,$,.ELEMENT.,$,$,$);
+#4=IFCBUILDINGSTOREY('3P1r7D',#2,'Level 01',$,$,#14,$,$,.ELEMENT.,0.0);
+#5=IFCWALLSTANDARDCASE('4A101',#2,'Exterior Wall North',$,$,#20,#21,'W-01');
+#6=IFCWALLSTANDARDCASE('4A102',#2,'Exterior Wall South',$,$,#22,#23,'W-02');
+#7=IFCWALLSTANDARDCASE('4A103',#2,'Core Partition',$,$,#24,#25,'W-03');
+#8=IFCSLAB('5B201',#2,'Ground Slab S1',$,$,#30,#31,'S-01',.FLOOR.);
+#9=IFCDOOR('6C301',#2,'Entry Door D1',$,$,#40,#41,'D-01',2100.,1000.);
+#10=IFCDOOR('6C302',#2,'Office Door D2',$,$,#42,#43,'D-02',2100.,900.);
+#11=IFCWINDOW('7D401',#2,'Facade Glazing W1',$,$,#50,#51,'GL-01',1500.,1800.);
+#12=IFCWINDOW('7D402',#2,'Facade Glazing W2',$,$,#52,#53,'GL-02',1500.,1800.);
+ENDSEC;
+END-ISO-10303-21;`;
+
+const STRUCTURAL_IFC_SAMPLE = `ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [ReferenceView_V1.2]'),'2;1');
+FILE_NAME('steel_bay.ifc','2026-01-16T09:00:00',('StructEng'),('FrameWorks'),'IfcOpenShell','','');
+FILE_SCHEMA(('IFC4X3_ADD2'));
+ENDSEC;
+DATA;
+#1=IFCPROJECT('1001',#2,'Steel Frame Bay',$,$,$,$,$,$);
+#2=IFCSITE('1002',#2,'Plant North',$,$,$,$,$,.ELEMENT.,$,$,$,$,$);
+#3=IFCBUILDING('1003',#2,'Warehouse Bay',$,$,$,$,$,.ELEMENT.,$,$,$);
+#4=IFCBUILDINGSTOREY('1004',#2,'Ground Elevation',$,$,$,$,$,.ELEMENT.,0.);
+#10=IFCCOLUMN('2001',#2,'Column C1',$,$,$,$,'COL-A1');
+#11=IFCCOLUMN('2002',#2,'Column C2',$,$,$,$,'COL-A2');
+#12=IFCBEAM('3001',#2,'Girder B1',$,$,$,$,'BM-01');
+#13=IFCBEAM('3002',#2,'Girder B2',$,$,$,$,'BM-02');
+#14=IFCFOOTING('4001',#2,'Pad Footing F1',$,$,$,$,'FTG-1',.PAD_FOOTING.);
+ENDSEC;
+END-ISO-10303-21;`;
+
+const ARCHITECTURAL_TINY_IFC = `ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('ViewDefinition [CoordinationView]'),'2;1');
+FILE_NAME('pavilion.ifc','2026-01-17T12:00:00',('Studio'),('BIM'),'Export','','');
+FILE_SCHEMA(('IFC2X3'));
+ENDSEC;
+DATA;
+#1=IFCPROJECT('A1',#2,'Pavilion',$,$,$,$,$,$);
+#2=IFCSITE('A2',#2,'Park',$,$,$,$,$,.ELEMENT.,$,$,$,$,$);
+#3=IFCBUILDING('A3',#2,'Pavilion Shell',$,$,$,$,$,.ELEMENT.,$,$,$);
+#4=IFCWALL('A4',#2,'Brick Wall',$,$,$,$,'BW-1');
+#5=IFCROOF('A5',#2,'Timber Roof',$,$,$,$,'RF-1',.FLAT_ROOF.);
+#6=IFCDOOR('A6',#2,'Main Entry',$,$,$,$,'DR-1',2200.,1200.);
+ENDSEC;
+END-ISO-10303-21;`;
+
+interface EntityStats {
+  schemaVersion: string;
+  totalEntities: number;
+  uniqueClasses: number;
+  spatialHierarchyCount: number;
+  counts: { name: string; count: number }[];
+}
+
+function parseIfcEntities(text: string): EntityStats {
+  const schemaMatch = text.match(/FILE_SCHEMA\s*\(\s*\(\s*'([^']+)'/i);
+  const schemaVersion = schemaMatch ? schemaMatch[1] : 'UNKNOWN';
+
+  const countMap = new Map<string, number>();
+  const entityRegex = /^#\d+\s*=\s*(IFC[A-Z0-9_]+)\s*\(/gim;
+  let match: RegExpExecArray | null;
+  let totalEntities = 0;
+
+  while ((match = entityRegex.exec(text)) !== null) {
+    const cls = match[1].toUpperCase();
+    totalEntities += 1;
+    countMap.set(cls, (countMap.get(cls) ?? 0) + 1);
+  }
+
+  const spatialKeys = ['IFCPROJECT', 'IFCSITE', 'IFCBUILDING', 'IFCBUILDINGSTOREY'];
+  let spatialHierarchyCount = 0;
+  for (const k of spatialKeys) {
+    if ((countMap.get(k) ?? 0) > 0) spatialHierarchyCount += 1;
+  }
+
+  const counts = Array.from(countMap.entries())
+    .map(([name, count]) => ({ name, count }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+
+  return {
+    schemaVersion,
+    totalEntities,
+    uniqueClasses: counts.length,
+    spatialHierarchyCount,
+    counts,
+  };
+}
 
 export default function IfcEntityCounterClient() {
-  const [inputs, setInputs] = useState(['500', '80', '120', '200', '150']);
-  const [ifcFileName, setIfcFileName] = useState<string>('');
-  const [parsedElements, setParsedElements] = useState<
-    { id: string; ifcClass: string; guid: string; name: string }[]
-  >([]);
+  const [ifcText, setIfcText] = useState(DEFAULT_IFC_SAMPLE);
+  const [filterStr, setFilterStr] = useState('');
+  const [minCountStr, setMinCountStr] = useState('1');
+  const [copied, setCopied] = useState(false);
+  const [fileError, setFileError] = useState<string | null>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
 
-  const updateInput = (idx: number, val: string) => {
-    const next = [...inputs];
-    next[idx] = val;
-    setInputs(next);
-  };
+  const minCount = parseNonNegInt(minCountStr);
+  const hasIfcText = ifcText.trim().length > 0;
+  const parsed = hasIfcText ? parseIfcEntities(ifcText) : null;
+  const isValid = parsed !== null && parsed.totalEntities > 0 && minCount !== null;
 
-  const parseIfcContent = (text: string, name: string) => {
-    setIfcFileName(name);
-    let wall = 0,
-      door = 0,
-      win = 0,
-      slab = 0,
-      col = 0;
-    const elements: { id: string; ifcClass: string; guid: string; name: string }[] = [];
-    const re = /^#(\d+)\s*=\s*(IFC[A-Z0-9_]+)\s*\(([^;]*)\);/gm;
-    let m: RegExpExecArray | null;
-    while ((m = re.exec(text)) !== null) {
-      const cls = m[2].toUpperCase();
-      if (cls === 'IFCWALL' || cls === 'IFCWALLSTANDARDCASE') wall++;
-      else if (cls === 'IFCDOOR') door++;
-      else if (cls === 'IFCWINDOW') win++;
-      else if (cls === 'IFCSLAB') slab++;
-      else if (cls === 'IFCCOLUMN') col++;
+  const filteredCounts =
+    parsed && minCount !== null
+      ? parsed.counts.filter(
+          item =>
+            item.count >= minCount &&
+            (filterStr.trim() === '' || item.name.toLowerCase().includes(filterStr.trim().toLowerCase()))
+        )
+      : [];
 
-      if (/^IFC(WALL|WALLSTANDARDCASE|SLAB|COLUMN|BEAM|DOOR|WINDOW|SPACE|BUILDINGSTOREY)$/.test(cls)) {
-        const parts = m[3].split(',').map((s) => s.trim().replace(/^'|'$/g, ''));
-        elements.push({
-          id: `#${m[1]}`,
-          ifcClass: cls,
-          guid: parts[0] || '—',
-          name: parts[2] || '(Unnamed)',
-        });
-      }
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (file.size > 15 * 1024 * 1024) {
+      setFileError('File exceeds 15 MB browser limit.');
+      return;
     }
-    setInputs([String(wall), String(door), String(win), String(slab), String(col)]);
-    setParsedElements(elements);
+    setFileError(null);
+    const content = await file.text();
+    setIfcText(content);
   };
 
-  const result = useMemo(() => {
-    const wall = parseFloat(inputs[0]) || 0;
-    const door = parseFloat(inputs[1]) || 0;
-    const win = parseFloat(inputs[2]) || 0;
-    const slab = parseFloat(inputs[3]) || 0;
-    const col = parseFloat(inputs[4]) || 0;
-    const total = wall + door + win + slab + col;
-    const ratio = wall > 0 ? (door + win) / wall : 0;
-    const structRatio = total > 0 ? (wall + slab + col) / total : 0;
-    return { total, ratio, structRatio };
-  }, [inputs]);
+  const handleReset = () => {
+    setIfcText(DEFAULT_IFC_SAMPLE);
+    setFilterStr('');
+    setMinCountStr('1');
+    setFileError(null);
+  };
 
-  const formatNum = (n: number) => {
-    if (isNaN(n) || !isFinite(n)) return '—';
-    if (Math.abs(n) >= 10000) return n.toFixed(0);
-    if (Math.abs(n) >= 100) return n.toFixed(2);
-    if (Math.abs(n) >= 1) return n.toFixed(3);
-    return n.toFixed(4);
+  const handleCopy = async () => {
+    if (!isValid || !parsed) return;
+    const summary = [
+      `IFC Entity Summary (Schema: ${parsed.schemaVersion})`,
+      `Total Entities: ${parsed.totalEntities}`,
+      `Unique Classes: ${parsed.uniqueClasses}`,
+      `Spatial Levels Present: ${parsed.spatialHierarchyCount}/4`,
+      ...filteredCounts.map(c => `${c.name}: ${c.count}`),
+    ].join('\n');
+    try {
+      await navigator.clipboard.writeText(summary);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1800);
+    } catch {
+      setCopied(false);
+    }
+  };
+
+  const handleDownload = () => {
+    if (!isValid || !parsed) return;
+    const rows = [
+      ['ifc_class', 'count', 'schema'],
+      ...filteredCounts.map(c => [c.name, String(c.count), parsed.schemaVersion]),
+    ];
+    const csv = rows.map(r => r.join(',')).join('\n');
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'ifc-entity-counts.csv';
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   return (
     <div className="space-y-8">
-      {/* Local .IFC STEP File Parser Banner */}
-      <div className="bg-white rounded-3xl border border-slate-200/90 p-6 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-11 h-11 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">
-            <Building2 className="w-6 h-6" />
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-indigo-50 rounded-xl flex items-center justify-center text-indigo-600">
+              <FileCode2 className="w-5 h-5" />
+            </div>
+            <h2 className="text-lg font-black text-slate-900 tracking-tight">STEP / IFC Input</h2>
           </div>
+
           <div>
-            <h2 className="text-base font-black text-slate-900">
-              Drop or Load an openBIM .IFC File for Automatic QTO Entity Counting
-            </h2>
-            <p className="text-xs text-slate-500 font-semibold">
-              {ifcFileName
-                ? `Parsed ${ifcFileName} (${parsedElements.length} spatial & building entities extracted locally)`
-                : 'Parses IFC2x3 / IFC4 STEP physical files 100% locally in your browser.'}
-            </p>
+            <div className="text-sm font-black text-slate-400 uppercase tracking-wider mb-2">Quick Sample Models</div>
+            <div className="grid grid-cols-1 gap-2">
+              <button
+                type="button"
+                data-testid="preset-office-ifc"
+                onClick={() => {
+                  setIfcText(DEFAULT_IFC_SAMPLE);
+                  setFileError(null);
+                }}
+                className="text-left px-3 py-2 rounded-xl text-sm font-bold bg-slate-50 hover:bg-indigo-50 text-slate-700 border border-slate-200 transition-colors"
+              >
+                Office Annex (12 IFC4 Entities)
+              </button>
+              <button
+                type="button"
+                data-testid="preset-structural-ifc"
+                onClick={() => {
+                  setIfcText(STRUCTURAL_IFC_SAMPLE);
+                  setFileError(null);
+                }}
+                className="text-left px-3 py-2 rounded-xl text-sm font-bold bg-slate-50 hover:bg-indigo-50 text-slate-700 border border-slate-200 transition-colors"
+              >
+                Steel Frame Bay (9 IFC4X3 Entities)
+              </button>
+              <button
+                type="button"
+                data-testid="preset-pavilion-ifc"
+                onClick={() => {
+                  setIfcText(ARCHITECTURAL_TINY_IFC);
+                  setFileError(null);
+                }}
+                className="text-left px-3 py-2 rounded-xl text-sm font-bold bg-slate-50 hover:bg-indigo-50 text-slate-700 border border-slate-200 transition-colors"
+              >
+                Timber Pavilion (6 IFC2X3 Entities)
+              </button>
+            </div>
           </div>
-        </div>
-        <div className="flex flex-wrap gap-2">
-          <label className="px-4 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-black cursor-pointer flex items-center gap-1.5">
-            <UploadCloud className="w-4 h-4" />
-            <span>Load .IFC File</span>
-            <input
-              type="file"
-              accept=".ifc"
-              className="hidden"
-              onChange={(e) => {
-                const f = e.target.files?.[0];
-                if (!f) return;
-                f.text().then((txt) => parseIfcContent(txt, f.name));
-              }}
-            />
-          </label>
+
+          <input ref={fileRef} type="file" accept=".ifc,.stp,.step,.txt" onChange={handleFileUpload} className="hidden" />
           <button
             type="button"
-            onClick={() => parseIfcContent(getSampleIfcText(), 'Sample-Office-Core-IFC4.ifc')}
-            className="px-3.5 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs font-black"
+            onClick={() => fileRef.current?.click()}
+            className="w-full py-2.5 px-4 rounded-xl border-2 border-dashed border-slate-200 hover:border-indigo-400 text-sm font-bold text-slate-600 flex items-center justify-center gap-2 transition-colors"
           >
-            Load Sample IFC4 Model
+            <Upload className="w-4 h-4" /> Upload Local .IFC File
           </button>
-        </div>
-      </div>
+          {fileError && <div className="text-xs font-bold text-red-600">{fileError}</div>}
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-teal-50 rounded-xl flex items-center justify-center text-teal-600">
-              <Settings className="w-5 h-5" />
+          <div>
+            <label className="text-sm font-black text-slate-500 uppercase tracking-wider block mb-1">
+              Minimum Entity Count Filter
+            </label>
+            <input
+              type="text"
+              inputMode="numeric"
+              data-testid="input-min-count"
+              value={minCountStr}
+              onChange={e => setMinCountStr(e.target.value)}
+              className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
+
+          <div>
+            <label className="text-sm font-black text-slate-500 uppercase tracking-wider block mb-1">
+              Class Name Filter (e.g. WALL, DOOR)
+            </label>
+            <input
+              type="text"
+              data-testid="input-filter"
+              value={filterStr}
+              onChange={e => setFilterStr(e.target.value)}
+              placeholder="All classes..."
+              className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-medium text-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
+
+          <div>
+            <label className="text-sm font-black text-slate-500 uppercase tracking-wider block mb-1">
+              Raw STEP / IFC Text
+            </label>
+            <textarea
+              data-testid="input-ifc-text"
+              value={ifcText}
+              onChange={e => setIfcText(e.target.value)}
+              rows={6}
+              className="w-full p-3 rounded-xl bg-slate-50 border border-slate-200 text-xs font-mono text-slate-800 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            />
+          </div>
+
+          {!isValid && (
+            <div data-testid="validation-error" className="p-3 rounded-xl bg-amber-50 border border-amber-200 text-amber-800 text-sm font-bold flex items-start gap-2">
+              <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5" />
+              <span>Provide valid ISO 10303-21 #id=IFC... entity lines and a non-negative integer threshold (&ge; 0).</span>
             </div>
-            <h2 className="text-lg font-black text-slate-900 tracking-tight">IFC Class Counts</h2>
-          </div>
+          )}
 
-          <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">IfcWall</label>
-            <input
-              type="text"
-              value={inputs[0]}
-              onChange={(e) => updateInput(0, e.target.value)}
-              placeholder="500"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-teal-600/5 focus:bg-white transition-all"
-            />
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              data-testid="btn-reset"
+              onClick={handleReset}
+              className="flex-1 py-2.5 px-3 rounded-xl text-sm font-bold bg-slate-100 text-slate-700 hover:bg-slate-200 flex items-center justify-center gap-1.5"
+            >
+              <RotateCcw className="w-4 h-4" /> Reset
+            </button>
+            <button
+              type="button"
+              data-testid="btn-copy"
+              onClick={handleCopy}
+              className="flex-1 py-2.5 px-3 rounded-xl text-sm font-bold bg-indigo-50 text-indigo-700 hover:bg-indigo-100 flex items-center justify-center gap-1.5"
+            >
+              {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+              {copied ? 'Copied' : 'Copy'}
+            </button>
+            <button
+              type="button"
+              data-testid="btn-download"
+              onClick={handleDownload}
+              className="w-full py-2.5 px-3 rounded-xl text-sm font-bold bg-slate-900 text-white hover:bg-slate-800 flex items-center justify-center gap-1.5"
+            >
+              <Download className="w-4 h-4" /> Export Entity CSV
+            </button>
           </div>
-          <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">IfcDoor</label>
-            <input
-              type="text"
-              value={inputs[1]}
-              onChange={(e) => updateInput(1, e.target.value)}
-              placeholder="80"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-teal-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">IfcWindow</label>
-            <input
-              type="text"
-              value={inputs[2]}
-              onChange={(e) => updateInput(2, e.target.value)}
-              placeholder="120"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-teal-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">IfcSlab</label>
-            <input
-              type="text"
-              value={inputs[3]}
-              onChange={(e) => updateInput(3, e.target.value)}
-              placeholder="200"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-teal-600/5 focus:bg-white transition-all"
-            />
-          </div>
-          <div>
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">IfcColumn</label>
-            <input
-              type="text"
-              value={inputs[4]}
-              onChange={(e) => updateInput(4, e.target.value)}
-              placeholder="150"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-teal-600/5 focus:bg-white transition-all"
-            />
-          </div>
-
-          <button
-            onClick={() => {
-              setInputs(['500', '80', '120', '200', '150']);
-              setParsedElements([]);
-              setIfcFileName('');
-            }}
-            className="w-full py-3 rounded-xl text-base font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all"
-          >
-            Reset Defaults
-          </button>
         </div>
 
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
-                <Zap className="w-5 h-5" />
-              </div>
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">QTO & Density Ratios</h2>
-            </div>
+          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+            <h2 className="text-lg font-black text-slate-900 tracking-tight">Parsed Entity Breakdown</h2>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-2">Total Entities</div>
-                <div className="text-3xl font-black text-blue-700">{formatNum(result.total)}</div>
-              </div>
-              <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-xs font-black text-green-600 uppercase tracking-wider mb-2">Opening / Wall Ratio</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.ratio)}</div>
-              </div>
-              <div className="bg-orange-50 rounded-2xl p-6 border border-orange-100">
-                <div className="text-xs font-black text-orange-500 uppercase tracking-wider mb-2">Structural Ratio</div>
-                <div className="text-3xl font-black text-orange-700">{formatNum(result.structRatio)}</div>
-              </div>
-            </div>
-
-            {parsedElements.length > 0 && (
-              <div className="mt-6 border border-slate-200 rounded-2xl overflow-hidden">
-                <div className="bg-slate-50 px-4 py-2.5 border-b border-slate-200 text-xs font-black text-slate-700">
-                  Extracted IFC Elements ({parsedElements.length})
-                </div>
-                <div className="max-h-56 overflow-y-auto">
-                  <table className="w-full text-left text-xs">
-                    <thead className="bg-slate-50/60 text-slate-500 font-bold border-b border-slate-100">
-                      <tr>
-                        <th className="py-2 px-3">ID</th>
-                        <th className="py-2 px-3">Class</th>
-                        <th className="py-2 px-3">GlobalId</th>
-                        <th className="py-2 px-3">Name</th>
-                      </tr>
-                    </thead>
-                    <tbody className="divide-y divide-slate-100">
-                      {parsedElements.map((el) => (
-                        <tr key={el.id}>
-                          <td className="py-1.5 px-3 font-mono text-slate-500">{el.id}</td>
-                          <td className="py-1.5 px-3 font-black text-blue-700">{el.ifcClass}</td>
-                          <td className="py-1.5 px-3 font-mono text-[11px] text-slate-500">{el.guid}</td>
-                          <td className="py-1.5 px-3 font-semibold text-slate-800">{el.name}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div className="bg-indigo-50 rounded-2xl p-5 border border-indigo-100">
+                <div className="text-xs font-black text-indigo-500 uppercase tracking-wider mb-1">Total Entities</div>
+                <div className="text-3xl font-black text-indigo-900">
+                  <span data-testid="result-total">{isValid && parsed ? parsed.totalEntities : '—'}</span>
                 </div>
               </div>
-            )}
-
-            <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-sm text-slate-500 font-medium">
-                <Info className="w-4 h-4 text-slate-400" />
-                Count by IfcClass, check hierarchy levels, or drop any .IFC file above.
+              <div className="bg-blue-50 rounded-2xl p-5 border border-blue-100">
+                <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-1">Unique Classes</div>
+                <div className="text-3xl font-black text-blue-900">
+                  <span data-testid="result-unique">{isValid && parsed ? parsed.uniqueClasses : '—'}</span>
+                </div>
               </div>
+              <div className="bg-emerald-50 rounded-2xl p-5 border border-emerald-100">
+                <div className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-1">Spatial Levels</div>
+                <div className="text-3xl font-black text-emerald-900">
+                  <span data-testid="result-spatial">{isValid && parsed ? `${parsed.spatialHierarchyCount}/4` : '—'}</span>
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">IFC Schema</div>
+                <div className="text-xl font-black text-slate-900 mt-1">
+                  <span data-testid="result-schema">{isValid && parsed ? parsed.schemaVersion : '—'}</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="overflow-x-auto border border-slate-100 rounded-2xl">
+              <table className="w-full text-sm text-left">
+                <thead className="bg-slate-50 text-slate-500 font-black uppercase text-xs">
+                  <tr>
+                    <th className="px-4 py-3">IFC Entity Class</th>
+                    <th className="px-4 py-3 text-right">Count</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-slate-100">
+                  {filteredCounts.map(row => (
+                    <tr key={row.name} className="hover:bg-slate-50">
+                      <td className="px-4 py-2.5 font-mono font-bold text-slate-800">{row.name}</td>
+                      <td className="px-4 py-2.5 text-right font-bold text-indigo-700">{row.count}</td>
+                    </tr>
+                  ))}
+                  {filteredCounts.length === 0 && (
+                    <tr>
+                      <td colSpan={2} className="px-4 py-6 text-center text-slate-400 font-medium">
+                        No matching entities for current filter settings.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
             </div>
           </div>
 
