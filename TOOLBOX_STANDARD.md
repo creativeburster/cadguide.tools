@@ -186,7 +186,16 @@ flowchart LR
 | 38 | land-survey-area-calculator、laser-cutting-calculator、led-resistor-calculator、length-unit-converter、lever-mechanical-advantage-calculator（跳过 kicad-shortcuts-sheet） | 162e8726（已通过复核，已 push，2026-11-18） |
 | 39 | lift-force-calculator、lighting-lux-calculator、lightning-protection-calculator、limits-and-fits-calculator、liquefaction-potential-calculator | b9fdc8c1（已通过复核，已 push，2026-11-18） |
 | 40 | manifold-pressure-calculator、manometer-pressure-calculator、mass-unit-converter、mat-foundation-stress-calculator、material-density-calculator（跳过 mastercam-shortcuts-sheet） | 94c9d740～556200c7（已通过复核，已 push，2026-11-18） |
-| 41 | material-properties-reference（#201 已在 94c9d740 完成改造，其余 4 个工具待续） | （进行中） |
+| 41 | material-properties-reference、milling-mrr-calculator、missing-font-shx-resolver、missing-regapp-cleaner-batch、mohr-circle-calculator（跳过 mathcad-shortcuts-sheet、matlab-shortcuts-sheet、microstation-shortcuts-sheet） | 94c9d740～36abab15（待复核，未 push，2026-11-18） |
+| 42 | moment-inertia-shape-calculator、mortar-quantity-calculator、motor-efficiency-calculator、motor-starting-current-calculator、mrr-calculator | 963f6c60（待复核，未 push，2026-11-18） |
+| 43 | natural-frequency-calculator、notch-stress-calculator、oee-calculator、ohms-law-calculator、online-3d-cad-viewer-collaborator（跳过 nanocad-shortcuts-sheet、nx-shortcuts-sheet） | 6134a12b（待复核，未 push，2026-11-18） |
+| 44 | online-cad-license-audit-shield、online-dgn-to-dwg-converter、online-dwg-compare-diff-viewer、online-dwg-layer-splitter-cloud、online-dwg-to-dxf-batch-converter | 93ae0ac4（待复核，未 push，2026-11-18） |
+| 45 | online-dwg-to-pdf-cloud-printer、online-dwg-version-downgrader-cloud、online-dxf-svg-nesting-tool、online-dxf-text-translator-cloud、online-gcode-viewer-simulator | 1eaf6a7b（待复核，未 push，2026-11-18） |
+| 46 | online-gerber-pcb-viewer、online-ifc-viewer-validator、online-image-jpg-to-dxf-vectorizer、online-lisp-script-compiler-protector、online-pdf-to-dwg-converter | 55fb8699（待复核，未 push，2026-11-18） |
+| 47 | online-point-cloud-las-to-dxf-contour、online-point-cloud-to-mesh-converter、online-revit-family-checker-audit、online-skp-to-fbx-cloud-converter、online-solidworks-e-drawings-cloud-viewer | c5030de2（待复核，未 push，2026-11-18） |
+| 48 | online-step-to-obj-gltf-converter、online-step-to-stl-slicer-helper、orifice-flow-calculator、paint-coverage-calculator、paint-quantity-calculator（跳过 onshape-shortcuts-sheet） | 02144c2f（待复核，未 push，2026-11-18） |
+| 49 | parametric-3d-part-generator、parking-capacity-calculator、passing-sight-distance-calculator、pavement-thickness-calculator、pdf-plot-chinese-gibberish-resolver | a3913c08（待复核，未 push，2026-11-18） |
+| 50 | pile-capacity-calculator、pile-group-efficiency-calculator、pile-lateral-capacity-calculator、pipe-flow-rate-calculator、pipe-friction-head-loss | 9845aacb（待复核，未 push，2026-11-18） |
 
 ---
 
