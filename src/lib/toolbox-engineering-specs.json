@@ -10259,184 +10259,142 @@
     ]
   },
   "pipe-size-chart": {
-    "title": "Pipe Size Chart NPS · DN · Schedule",
-    "description": "Complete pipe size chart: NPS to DN conversion, outside diameter, wall thickness for Schedule 10-160 and XS/XXS, with weight and bore data.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Standardized parametric evaluation for Pipe Size Chart NPS · DN · Schedule",
-    "inputs": [],
-    "outputs": []
-  },
-  "pipe-thermal-expansion-calculator": {
-    "title": "Pipe Thermal Expansion Calculator",
-    "description": "Calculate thermal expansion length, expansion stress, and anchor loads for piping systems per ASME B31.3.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "ΔL = α × L₀ × (T₂ - T₁) • σ_thermal = E × α × ΔT (ASME B31.3 Process Piping Flexibility Analysis)",
+    "title": "Pipe Size Chart (NPS / DN / Schedule 10-160)",
+    "description": "Reference chart for Nominal Pipe Size (NPS), ISO 6708 DN equivalence, outside diameter (OD), wall thickness across Schedule 10/40/80/160, internal bore (ID), and material-adjusted linear mass.",
+    "discipline": "Piping Layout & Mechanical Reference",
+    "standards": "Wikipedia Nominal Pipe Size (ASME B36.10M / ISO 6708): https://en.wikipedia.org/wiki/Nominal_Pipe_Size",
+    "cadContext": "Computes internal bore ID = OD - 2*t and linear pipe mass m = (pi/4)*(OD^2 - ID^2)*rho*1e-6 dynamically from user-editable material density (default 7850 kg/m^3 carbon steel).",
+    "formula": "ID = OD - 2*t; m_per_m = (pi/4)*(OD^2 - ID^2)*rho*1e-6",
     "inputs": [
       {
-        "label": "Pipe Material",
-        "val": "Carbon Steel (CS)"
+        "label": "Sample Pipe Size",
+        "val": "NPS 6\" (DN150) Sch 80: OD = 168.28 mm, t = 10.97 mm"
       },
       {
-        "label": "Pipe Length (m)",
-        "val": "10"
-      },
-      {
-        "label": "Temperature Change ΔT (°C)",
-        "val": "100"
-      },
-      {
-        "label": "Pipe OD (mm)",
-        "val": "114.3"
-      },
-      {
-        "label": "Wall Thickness (mm)",
-        "val": "6.02"
+        "label": "Material Density",
+        "val": "rho = 7850 kg/m^3 (Carbon Steel default)"
       }
     ],
     "outputs": [
       {
-        "label": "Thermal Expansion ΔL",
-        "val": "11.20 mm"
+        "label": "Inside Diameter (ID)",
+        "val": "146.34 mm"
       },
       {
-        "label": "Expansion per Meter",
-        "val": "1.120 mm/m"
+        "label": "Theoretical Linear Mass",
+        "val": "42.56 kg/m"
+      }
+    ]
+  },
+  "pipe-thermal-expansion-calculator": {
+    "title": "Pipe Thermal Expansion & Guided Leg Calculator",
+    "description": "Evaluates free thermal elongation DeltaL, fully restrained axial thermal stress and anchor load, and guided cantilever expansion loop leg length.",
+    "discipline": "Piping Thermal Stress & Flexibility Mechanics",
+    "standards": "Wikipedia Thermal Expansion: https://en.wikipedia.org/wiki/Thermal_expansion",
+    "cadContext": "All material expansion coefficients (alpha), Youngs moduli (E), and assumed allowable bending stress limits are fully user-editable rather than tied to locked code tables.",
+    "formula": "DeltaL = alpha*L*DeltaT; sigma_th = E*alpha*|DeltaT|; F_anchor = sigma_th*A_metal; L_arm = sqrt(3*E*OD*|DeltaL| / (2*sigma_allow))",
+    "inputs": [
+      {
+        "label": "Material & Length",
+        "val": "alpha = 11.2 um/(m*K), E = 200 GPa, sigma_allow = 150 MPa, L = 10 m"
       },
       {
-        "label": "Thermal Stress (restrained)",
-        "val": "224.0 MPa"
+        "label": "Thermal Shift & Section",
+        "val": "DeltaT = 100 degC, OD = 114.3 mm, t = 6.02 mm"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Linear Expansion DeltaL",
+        "val": "11.20 mm (1.120 mm/m)"
       },
       {
-        "label": "Anchor Force (restrained)",
-        "val": "458.71 kN"
-      },
-      {
-        "label": "Pipe Wall Area",
-        "val": "2048 mm²"
+        "label": "Restrained Stress / Force / Arm",
+        "val": "sigma_th = 224.0 MPa | F = 458.71 kN | L_arm = 1.600 m"
       }
     ]
   },
   "planetary-gear-calculator": {
-    "title": "Planetary Gear Set Ratio Calculator",
-    "description": "Calculate planetary gear ratios for sun, ring, and carrier configs.",
+    "title": "Planetary Gear Set Kinematics & Coaxiality Calculator",
+    "description": "Computes epicyclic transmission ratios via the Willis equation, pitch diameters, center distance, output RPM, coaxial tooth condition, and equal-spacing assembly divisibility.",
     "discipline": "Mechanical Power Transmission & Kinematics",
-    "standards": "ISO 6336 / AGMA 2001-D04 (Gear Rating), ISO 4183 / RMA IP-20 (Belt Drives), ISO 606 / ASME B29.1 (Roller Chains), ISO 3408 (Ball Screws)",
-    "cadContext": "Maintain exact center-to-center distance tolerances, backlash allowances, and shaft parallelism in your parametric CAD assembly layout to prevent premature tooth or belt wear.",
-    "formula": "Willis Equation: (ω_s - ω_c) / (ω_r - ω_c) = -z_r / z_s • Assembly condition: (z_s + z_r) / N_planets = integer",
+    "standards": "Wikipedia Epicyclic Gearing (Willis Equation): https://en.wikipedia.org/wiki/Epicyclic_gearing",
+    "cadContext": "Verifies both standard zero-profile-shift coaxial tooth geometry (zr = zs + 2*zp) and equal-angle planet assembly ((zs + zr) % Np = 0) before generating gear blank parameters.",
+    "formula": "(omega_s - omega_c)/(omega_r - omega_c) = -zr/zs; Coaxial: zr = zs + 2*zp; Assembly: (zs + zr) mod Np = 0",
     "inputs": [
       {
-        "label": "Sun Teeth",
-        "val": "20"
+        "label": "Tooth Counts & Planets",
+        "val": "zs = 20, zr = 60, zp = 20, Np = 4, m = 2 mm"
       },
       {
-        "label": "Ring Teeth",
-        "val": "60"
-      },
-      {
-        "label": "Planet Teeth",
-        "val": "20"
-      },
-      {
-        "label": "Config",
-        "val": "Ring Fixed (Sun In / Carrier Out)"
+        "label": "Input Speed & Mode",
+        "val": "n_in = 1500 rpm, Ring Fixed (Sun In / Carrier Out)"
       }
     ],
     "outputs": [
       {
-        "label": "Overall Gear Ratio",
-        "val": "4.000 :1"
+        "label": "Transmission Ratio & Output RPM",
+        "val": "4.0000 :1 | 375.00 rpm"
       },
       {
-        "label": "Planet Spin Ratio",
-        "val": "1.000 :1"
+        "label": "Pitch Diameters & Center Distance",
+        "val": "ds = 40.0 mm, dp = 40.0 mm, dr = 120.0 mm, a = 40.0 mm"
       }
     ]
   },
   "plastic-shrinkage-calculator": {
-    "title": "Plastic Injection Shrinkage Calculator",
-    "description": "Calculate plastic part shrinkage and mold dimension from material shrinkage rate.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "S = L · S_eff, where S_eff is corrected for crystalline cooling gradient & melt expansion",
+    "title": "Plastic Injection Mold Cavity Shrinkage Calculator",
+    "description": "Computes exact cold-cavity dimensions L/(1-s), linear shop approximation L*(1+s), and predicted molded part envelope across resin shrinkage min/max bounds and machining tolerances.",
+    "discipline": "Tooling & Injection Mold Design",
+    "standards": "Geometric Linear Shrinkage Inversion: L_part = L_cavity*(1 - s) => L_cavity = L_part/(1 - s)",
+    "cadContext": "Uses user-entered datasheet min/max shrinkage bounds and mold machining tolerance without hidden empirical melt/mold temperature multipliers.",
+    "formula": "s_avg = (s_min + s_max)/2; M_exact = L / (1 - s_avg); Part_min = (M_exact - tol)*(1 - s_max); Part_max = (M_exact + tol)*(1 - s_min)",
     "inputs": [
       {
-        "label": "Part Dimension (mm)",
-        "val": "100"
+        "label": "Part Target & Shrinkage Band",
+        "val": "L = 100 mm, s_min = 0.4%, s_max = 0.6% (avg 0.5%)"
       },
       {
-        "label": "Shrinkage Rate (%)",
-        "val": "0.5"
-      },
-      {
-        "label": "Mold Temp (C)",
-        "val": "60"
-      },
-      {
-        "label": "Melt Temp (C)",
-        "val": "220"
+        "label": "Mold Machining Tolerance",
+        "val": "+/- 0.05 mm"
       }
     ],
     "outputs": [
       {
-        "label": "Linear Shrinkage",
-        "val": "0.500000 mm"
+        "label": "Exact Mold Cavity & Allowance",
+        "val": "100.5025 mm (Delta = 0.5025 mm)"
       },
       {
-        "label": "Required Mold Cavity",
-        "val": "100.50 mm"
-      },
-      {
-        "label": "Effective Total Shrinkage Rate",
-        "val": "0.500000 % (adjusted for mold & melt temperatures)"
+        "label": "Predicted Part Band",
+        "val": "99.8498 mm to 100.1503 mm (Spread 0.3005 mm)"
       }
     ]
   },
   "plate-bending-calculator": {
-    "title": "Flat Plate Bending Stress Calculator",
-    "description": "Calculate bending stress and deflection of flat plates under uniform pressure.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "sigma = beta*q*a^2/t^2, w = alpha*q*a^4/(E*t^3)",
+    "title": "Kirchhoff-Love Thin Flat Plate Bending Calculator",
+    "description": "Calculates maximum bending stress and center deflection for uniformly loaded thin plates using Kirchhoff-Love flexural rigidity D = E*t^3 / (12*(1 - nu^2)).",
+    "discipline": "Solid Mechanics & Continuum Elasticity",
+    "standards": "Wikipedia Bending of Plates (Kirchhoff-Love Theory): https://en.wikipedia.org/wiki/Bending_of_plates",
+    "cadContext": "Solves Navier double-Fourier series (m,n odd up to 29) for simply supported square plates and closed-form circular clamped/simply supported plate equations.",
+    "formula": "D = E*t^3 / (12*(1 - nu^2)); Circular clamped: w = q*r^4/(64*D), sigma = 0.75*q*r^2/t^2; Navier square series for SS edges",
     "inputs": [
       {
-        "label": "Pressure q (kPa)",
-        "val": "5"
+        "label": "Square SS Plate Default",
+        "val": "q = 5 kPa, a = 500 mm, t = 10 mm, E = 200 GPa, nu = 0.3"
       },
       {
-        "label": "Plate Width a (mm)",
-        "val": "500"
-      },
-      {
-        "label": "Thickness t (mm)",
-        "val": "10"
-      },
-      {
-        "label": "Youngs E (GPa)",
-        "val": "200"
-      },
-      {
-        "label": "Beta coeff",
-        "val": "0.287"
-      },
-      {
-        "label": "Alpha coeff",
-        "val": "0.00406"
+        "label": "Flexural Rigidity D",
+        "val": "18315.02 N*m"
       }
     ],
     "outputs": [
       {
-        "label": "Bending Stress",
-        "val": "3.587 MPa"
+        "label": "Max Center Bending Stress",
+        "val": "3.5917 MPa"
       },
       {
-        "label": "Deflection",
-        "val": "0.006344 mm"
+        "label": "Max Center Deflection",
+        "val": "0.06931 mm"
       }
     ]
   },
