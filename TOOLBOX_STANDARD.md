@@ -161,21 +161,21 @@ flowchart LR
 | 13 | cloud-dwg-to-step-iges-converter、cloud-dxf-to-gcode-laser-converter、clutch-torque-calculator、cnc-cycle-time-calculator、cnc-feed-rate-calculator | 1dd07e61～8d66c030（已通过复核，已 push，2026-11-13） |
 | 14 | cnc-gcode-feed-calculator、cnc-speeds-feeds-reference、coating-thickness-calculator、color-rgb-to-aci-matchbox、column-base-plate-calculator | f3ba6876～e73a62a6（已通过复核，已 push，2026-11-13） |
 | 15 | column-buckling-calculator、composite-section-calculator、concrete-mix-design-calculator、concrete-slab-calculator、concrete-slab-volume-calculator | d2ffe43f～c26d674f（已通过复核，已 push，2026-11-13） |
-| 16 | concrete-volume-mix-calculator、concurrent-vs-named-breakeven-calculator、contour-interval-calculator、cooling-load-calculator、cooling-tower-sizing-calculator（跳过聚合路由目录 convert） | 458540d4～65aebd19（待复核） |
-| 17 | coordinate-converter-calculator、corrosion-rate-calculator、coupling-torque-calculator、crane-load-calculator、crane-sling-calculator | 65b21863（待复核） |
-| 18 | csv-to-dxf-converter、ctb-plot-style-pen-visualizer、culvert-sizing-calculator、cut-fill-volume-calculator、cutting-speed-calculator | 82ad164c～65aebd19（待复核） |
-| 19 | damping-ratio-calculator、deep-drawing-calculator、deflection-angle-calculator、density-unit-converter、die-casting-pressure-calculator | afb9cfc6（待复核） |
-| 20 | domestic-water-demand-calculator、door-schedule-quantity-calculator、drag-force-calculator、drawing-lag-performance-cleaner、drill-bit-size-chart | c4a84e1c（待复核） |
-| 21 | drilling-time-calculator、drywall-quantity-calculator、duct-pressure-loss-calculator、duct-size-friction-loss-calculator、duct-sizing-calculator | 0afcd0f1（待复核） |
-| 22 | dwg-version-checker、dxf-watermark-layer-parser、edm-material-removal-calculator、egress-width-calculator、elevator-traffic-calculator | b30e888e（待复核） |
-| 23 | embodied-carbon-calculator、energy-unit-converter、engineering-unit-converter、euler-bernoulli-beam-calculator、excavation-volume-calculator | d4cc7a87（待复核） |
-| 24 | extrusion-pressure-calculator、fan-law-calculator、fatal-error-diagnostic-wizard、fatigue-life-calculator、fillet-weld-size-calculator | 1ac5c15d（待复核） |
-| 25 | fin-efficiency-calculator、fire-hydrant-flow-calculator、fire-resistance-rating-calculator、fire-sprinkler-coverage-calculator、flexlm-concurrent-seats-queue | 0836019c～ae86b6da（待复核） |
-| 26 | flexlm-debug-log-analyzer、flexlm-error-15-debugger、flow-rate-unit-converter、flywheel-energy-calculator、force-unit-converter | db003506（待复核） |
-| 27 | forging-force-calculator、friction-force-calculator、fsw-welding-calculator、gasket-seal-calculator、gas-pipe-sizing-calculator | 70127142（待复核） |
-| 28 | gcode-quick-reference-sheet、gdt-symbol-reference-guide、gear-force-calculator、gear-module-calculator、gear-module-calculator-2 | 8a27c905（待复核） |
-| 29 | gear-module-pitch-calculator、gear-ratio-belt-calculator、gear-ratio-bike-calculator、gear-ratio-speed-calculator、generator-sizing-calculator | 0b4a6c6a（待复核） |
-| 30 | glazing-wind-load-calculator、gradient-grade-calculator、grease-trap-sizing-calculator、grinding-ratio-calculator、grinding-wheel-speed-calculator | 0c9b5ee8（待复核） |
+| 16 | concrete-volume-mix-calculator、concurrent-vs-named-breakeven-calculator、contour-interval-calculator、cooling-load-calculator、cooling-tower-sizing-calculator（跳过聚合路由目录 convert） | 458540d4～65aebd19（已通过复核，已 push，2026-11-18） |
+| 17 | coordinate-converter-calculator、corrosion-rate-calculator、coupling-torque-calculator、crane-load-calculator、crane-sling-calculator | 65b21863（已通过复核，已 push，2026-11-18） |
+| 18 | csv-to-dxf-converter、ctb-plot-style-pen-visualizer、culvert-sizing-calculator、cut-fill-volume-calculator、cutting-speed-calculator | 82ad164c～65aebd19（已通过复核，已 push，2026-11-18） |
+| 19 | damping-ratio-calculator、deep-drawing-calculator、deflection-angle-calculator、density-unit-converter、die-casting-pressure-calculator | afb9cfc6（已通过复核，已 push，2026-11-18） |
+| 20 | domestic-water-demand-calculator、door-schedule-quantity-calculator、drag-force-calculator、drawing-lag-performance-cleaner、drill-bit-size-chart | c4a84e1c（已通过复核，已 push，2026-11-18） |
+| 21 | drilling-time-calculator、drywall-quantity-calculator、duct-pressure-loss-calculator、duct-size-friction-loss-calculator、duct-sizing-calculator | 0afcd0f1（已通过复核，已 push，2026-11-18） |
+| 22 | dwg-version-checker、dxf-watermark-layer-parser、edm-material-removal-calculator、egress-width-calculator、elevator-traffic-calculator | b30e888e（已通过复核，已 push，2026-11-18） |
+| 23 | embodied-carbon-calculator、energy-unit-converter、engineering-unit-converter、euler-bernoulli-beam-calculator、excavation-volume-calculator | d4cc7a87（已通过复核，已 push，2026-11-18） |
+| 24 | extrusion-pressure-calculator、fan-law-calculator、fatal-error-diagnostic-wizard、fatigue-life-calculator、fillet-weld-size-calculator | 1ac5c15d（已通过复核，已 push，2026-11-18） |
+| 25 | fin-efficiency-calculator、fire-hydrant-flow-calculator、fire-resistance-rating-calculator、fire-sprinkler-coverage-calculator、flexlm-concurrent-seats-queue | 0836019c～ae86b6da（已通过复核，已 push，2026-11-18） |
+| 26 | flexlm-debug-log-analyzer、flexlm-error-15-debugger、flow-rate-unit-converter、flywheel-energy-calculator、force-unit-converter | db003506（已通过复核，已 push，2026-11-18） |
+| 27 | forging-force-calculator、friction-force-calculator、fsw-welding-calculator、gasket-seal-calculator、gas-pipe-sizing-calculator | 70127142（已通过复核，已 push，2026-11-18） |
+| 28 | gcode-quick-reference-sheet、gdt-symbol-reference-guide、gear-force-calculator、gear-module-calculator、gear-module-calculator-2 | 8a27c905（已通过复核，已 push，2026-11-18） |
+| 29 | gear-module-pitch-calculator、gear-ratio-belt-calculator、gear-ratio-bike-calculator、gear-ratio-speed-calculator、generator-sizing-calculator | 0b4a6c6a（已通过复核，已 push，2026-11-18） |
+| 30 | glazing-wind-load-calculator、gradient-grade-calculator、grease-trap-sizing-calculator、grinding-ratio-calculator、grinding-wheel-speed-calculator | 0c9b5ee8（已通过复核，已 push，2026-11-18） |
 
 ---
 
