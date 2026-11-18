@@ -5,7 +5,7 @@ import HydrostaticPressureCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Hydrostatic Pressure Calculator",
-  description: "Calculate hydrostatic pressure at depth in fluids.",
+  description: "Calculate gauge and absolute hydrostatic fluid pressure from fluid density, depth, gravitational acceleration, and surface pressure.",
   path: '/toolbox/hydrostatic-pressure-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HydrostaticPressureCalculatorPage() {
               Hydrostatic Pressure <span className="text-teal-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate hydrostatic pressure at depth in fluids.
+              Calculate gauge and absolute hydrostatic pressure at depth for incompressible fluids.
             </p>
           </div>
         </section>

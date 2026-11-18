@@ -5,7 +5,7 @@ import HydraulicCylinderClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: 'Hydraulic Cylinder Force Calculator (Push & Pull)',
-  description: 'Calculate hydraulic cylinder push and pull force from bore diameter, rod diameter, and pressure. Supports metric and imperial units.',
+  description: "Calculate theoretical hydraulic cylinder push and pull forces, piston and annulus areas, and retraction reduction in Metric or Imperial units.",
   path: '/toolbox/hydraulic-cylinder-force-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HydraulicCylinderPage() {
               Hydraulic Cylinder <span className="text-orange-400">Force</span> Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate push and pull force from bore diameter, rod diameter, and hydraulic pressure. Includes effective area and retraction force reduction.
+              Calculate hydraulic cylinder push/pull forces, piston/annulus areas, and retraction force reduction.
             </p>
           </div>
         </section>

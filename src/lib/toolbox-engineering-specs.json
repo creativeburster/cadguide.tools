@@ -7630,185 +7630,185 @@
   },
   "horsepower-torque-calculator": {
     "title": "Horsepower and Torque Calculator",
-    "description": "Calculate horsepower from torque and RPM.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "HP = T*RPM/5252",
+    "description": "Calculate mechanical horsepower (550 ft*lbf/s), kilowatts, and equivalent SI/Imperial torque from shaft torque and RPM.",
+    "discipline": "Rotational Mechanics & Shaft Power",
+    "standards": "NIST Special Publication 811 Appendix B.8 (mechanical horsepower: 550 ft*lbf/s = 745.6999 W; 1 ft*lbf = 1.355818 N*m)",
+    "cadContext": "Verify peak vs. continuous shaft torque ratings, keyway shear capacity, and coupling service factors when sizing motor shafts.",
+    "formula": "P_kW = T_Nm * 2 * pi * RPM / 60000, P_hp = P_W / 745.6999",
     "inputs": [
       {
-        "label": "Torque (Nm)",
-        "val": "200"
+        "label": "Input Unit",
+        "val": "SI (N*m)"
       },
       {
-        "label": "RPM",
-        "val": "3000"
+        "label": "Torque",
+        "val": "200 N*m"
+      },
+      {
+        "label": "Speed",
+        "val": "3000 RPM"
       }
     ],
     "outputs": [
       {
-        "label": "Horsepower",
-        "val": "84.265 HP"
+        "label": "Mechanical Horsepower",
+        "val": "84.259 hp"
       },
       {
         "label": "Kilowatts",
-        "val": "62.836 kW"
+        "val": "62.832 kW"
+      },
+      {
+        "label": "Equivalent Imperial Torque",
+        "val": "147.51 ft*lbf"
       }
     ]
   },
   "hot-water-circulation-calculator": {
     "title": "Hot Water Circulation Pipe & Pump Calculator",
-    "description": "Calculate hot water return pipe size, circulation pump flow, and heat loss.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Q_circ = q_loss / (ρ · c_p · ΔT) • ΔT_max = 10°C (ASPE Domestic Water Heating Design Manual)",
+    "description": "Calculate domestic hot water recirculation pump flow rate, loop heat loss, and head allowance from steady-state thermal balance.",
+    "discipline": "Hydronic Thermal Balance & Plumbing Piping",
+    "standards": "Steady-state first-law loop sensible heat balance m_dot = Q_loss / (cp * dT)",
+    "cadContext": "Size return loop balancing valves and check thermal expansion loop clearances on domestic hot water riser diagrams.",
+    "formula": "Q_loss = L * q_m, V_L/min = (Q_loss / (rho * cp * (Ts - Tr))) * 60000",
     "inputs": [
       {
-        "label": "Total Supply & Return Loop Length (m)",
-        "val": "75"
+        "label": "Loop Length L",
+        "val": "75 m"
       },
       {
-        "label": "Supply Water Temperature T_s (°C)",
-        "val": "60"
+        "label": "Supply / Return Temp",
+        "val": "60 C / 50 C"
       },
       {
-        "label": "Return Water Temperature T_r (°C)",
-        "val": "50"
+        "label": "Linear Heat Loss",
+        "val": "16 W/m"
       },
       {
-        "label": "Insulated Pipe Heat Loss Rate (W/m)",
-        "val": "16"
+        "label": "Density / Cp",
+        "val": "983 kg/m3 / 4184 J/(kg*K)"
       }
     ],
     "outputs": [
       {
-        "label": "Recirculation Pump Flow Rate",
-        "val": "1.8 L/min"
+        "label": "Required Recirculation Flow",
+        "val": "1.75 L/min"
       },
       {
-        "label": "Total Piping Thermal Emission Loss",
-        "val": "1.20 kW"
+        "label": "Total Heat Loss",
+        "val": "1.200 kW"
       },
       {
-        "label": "Estimated Circulating Head Loss",
-        "val": "2.6 m H₂O"
-      },
-      {
-        "label": "Design Temperature Differential",
-        "val": "10 °C"
+        "label": "Est. Head Allowance",
+        "val": "2.63 m H2O"
       }
     ]
   },
   "hvac-load-room-calculator": {
     "title": "HVAC Room Load Calculator",
-    "description": "Calculate heating and cooling loads for a single room.",
-    "discipline": "HVAC, Psychrometrics & Building Thermal Systems",
-    "standards": "ASHRAE Handbook — Fundamentals & HVAC Systems and Equipment, SMACNA HVAC Duct Construction Standards, ISO 6946, ASHRAE Standard 62.1 & 90.1",
-    "cadContext": "Coordinate ductwork aspect ratios, acoustic lining thickness, and ceiling plenum clearances within your federated MEP BIM model to avoid field routing clashes and excessive static pressure drops.",
-    "formula": "Q = U*A*dT + infiltration + internal gains",
+    "description": "Calculate steady-state sensible room thermal load from envelope conduction, ventilation airflow, and internal heat gains.",
+    "discipline": "Building Thermal Balance & Room Sensible Load",
+    "standards": "Steady-state sensible heat conservation (envelope transmission + ventilation air + internal occupancy/equipment gains)",
+    "cadContext": "Coordinate diffuser airflow rates, envelope glazing areas, and equipment heat rejection zones in mechanical room layouts.",
+    "formula": "Q_total = U * A_wall * dT + (V_L/s / 1000) * 1206 * dT + occ * W_occ + A * W_m2",
     "inputs": [
       {
-        "label": "Room Area (m2)",
-        "val": "30"
+        "label": "Floor Area / Exposed Wall Area",
+        "val": "30 m2 / 20 m2"
       },
       {
-        "label": "Wall U-Value (W/m2K)",
-        "val": "0.5"
+        "label": "Wall U-Value / dT",
+        "val": "0.5 W/(m2*K) / 15 C"
       },
       {
-        "label": "Wall Area (m2)",
-        "val": "20"
+        "label": "Occupants / W per person",
+        "val": "3 / 80 W"
       },
       {
-        "label": "Temp Diff (C)",
-        "val": "15"
-      },
-      {
-        "label": "Occupants",
-        "val": "3"
+        "label": "Ventilation / Equip Density",
+        "val": "15 L/s / 10 W/m2"
       }
     ],
     "outputs": [
       {
-        "label": "Transmission Loss",
-        "val": "150.00 W"
+        "label": "Total Sensible Load",
+        "val": "961.4 W"
       },
       {
-        "label": "Internal Gains",
-        "val": "540.00 W"
+        "label": "Load Density",
+        "val": "32.05 W/m2"
       },
       {
-        "label": "Total Load",
-        "val": "690.00 W"
-      },
-      {
-        "label": "Load per m2",
-        "val": "23.000 W/m2"
+        "label": "Envelope Transmission",
+        "val": "150.0 W"
       }
     ]
   },
   "hydraulic-cylinder-force-calculator": {
-    "title": "Hydraulic Cylinder Force Calculator",
-    "description": "Calculate hydraulic cylinder push and pull force from bore diameter, rod diameter, and pressure. Supports metric and imperial units.",
-    "discipline": "Fluid Mechanics, Piping Systems & Fluid Power",
-    "standards": "Crane Technical Paper No. 410 (Flow of Fluids), ASME B31.3 (Process Piping), Hydraulic Institute ANSI/HI 9.6.1 (NPSH Margin), ISO 4413 / ISO 4414",
-    "cadContext": "Include equivalent lengths for all elbows, tees, isolation valves, and reducers extracted from your 3D piping isometric routing when evaluating total system head loss and NPSHa margin.",
-    "formula": "Push force uses full piston area. Pull force uses annulus area (piston minus rod). The rod reduces effective area during retraction, resulting in lower pull force at the same pressure.",
+    "title": "Hydraulic Cylinder Force Calculator (Push & Pull)",
+    "description": "Calculate theoretical hydraulic cylinder push and pull forces, piston and annulus areas, and retraction reduction in Metric or Imperial units.",
+    "discipline": "Fluid Power Actuators & Hydrostatic Force",
+    "standards": "Pascal pressure-area relationship for double-acting single-rod hydraulic cylinders (theoretical lossless thrust)",
+    "cadContext": "Verify piston rod Euler buckling length at full stroke and clevis pin shear loads against theoretical extension force.",
+    "formula": "F_push = P * pi * D^2 / 4, F_pull = P * pi * (D^2 - d^2) / 4",
     "inputs": [
       {
-        "label": "Unit System Metric (mm, bar) Imperial (in, psi) Bore Diameter ( mm )",
-        "val": "80"
+        "label": "Unit System",
+        "val": "Metric (mm, bar)"
       },
       {
-        "label": "Rod Diameter ( mm )",
-        "val": "40"
+        "label": "Bore / Rod Diameter",
+        "val": "80 mm / 40 mm"
       },
       {
-        "label": "Pressure ( bar )",
-        "val": "200"
+        "label": "Operating Pressure",
+        "val": "200 bar"
       }
     ],
     "outputs": [
       {
-        "label": "Push Force (Extension)",
+        "label": "Push Force",
         "val": "100.53 kN"
       },
       {
-        "label": "Pull Force (Retraction)",
+        "label": "Pull Force",
         "val": "75.40 kN"
+      },
+      {
+        "label": "Full / Annulus Area",
+        "val": "50.27 / 37.70 cm2"
       }
     ]
   },
   "hydrostatic-pressure-calculator": {
     "title": "Hydrostatic Pressure Calculator",
-    "description": "Calculate hydrostatic pressure at depth in fluids.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "P = rho*g*h",
+    "description": "Calculate gauge and absolute hydrostatic fluid pressure from fluid density, depth, gravitational acceleration, and surface pressure.",
+    "discipline": "Fluid Statics & Pressure Vessel Loading",
+    "standards": "Hydrostatic equilibrium P_gauge = rho * g * h and NIST SP 811 standard gravity g_n = 9.80665 m/s2",
+    "cadContext": "Apply linear hydrostatic pressure gradients (p = rho*g*z) as non-uniform boundary loads on tank walls and submerged gates in FEA.",
+    "formula": "P_gauge = rho * g * h, P_abs = P_atm + P_gauge",
     "inputs": [
       {
-        "label": "Fluid Density (kg/m3)",
-        "val": "1000"
+        "label": "Fluid Density rho",
+        "val": "1000 kg/m3"
       },
       {
-        "label": "Depth (m)",
-        "val": "10"
+        "label": "Depth h",
+        "val": "10 m"
+      },
+      {
+        "label": "Gravity g / P_atm",
+        "val": "9.80665 m/s2 / 101.325 kPa"
       }
     ],
     "outputs": [
       {
-        "label": "Hydrostatic Pressure (kPa)",
-        "val": "98.100 kPa"
+        "label": "Gauge Pressure",
+        "val": "98.067 kPa (0.9807 bar)"
       },
       {
-        "label": "Pressure in Bars (bar)",
-        "val": "0.981000 bar"
-      },
-      {
-        "label": "Force on 1m2",
-        "val": "98.100 kN"
+        "label": "Absolute Pressure",
+        "val": "199.392 kPa"
       }
     ]
   },

@@ -5,7 +5,7 @@ import HvacLoadRoomCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "HVAC Room Load Calculator",
-  description: "Calculate heating and cooling loads for a single room.",
+  description: "Calculate steady-state sensible room thermal load from envelope conduction, ventilation airflow, and internal heat gains.",
   path: '/toolbox/hvac-load-room-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HvacLoadRoomCalculatorPage() {
               HVAC Room Load <span className="text-green-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate heating and cooling loads for a single room.
+              Calculate steady-state sensible room load from transmission, ventilation, and internal gains.
             </p>
           </div>
         </section>

@@ -5,7 +5,7 @@ import HorsepowerTorqueCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Horsepower and Torque Calculator",
-  description: "Calculate horsepower from torque and RPM.",
+  description: "Calculate mechanical horsepower (550 ft*lbf/s), kilowatts, and equivalent SI/Imperial torque from shaft torque and RPM.",
   path: '/toolbox/horsepower-torque-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function HorsepowerTorqueCalculatorPage() {
               Horsepower and Torque <span className="text-blue-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate horsepower from torque and RPM.
+              Calculate mechanical horsepower, kilowatts, and equivalent torque from shaft torque and RPM.
             </p>
           </div>
         </section>

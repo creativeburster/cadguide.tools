@@ -5,7 +5,7 @@ import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Hot Water Circulation Pipe & Pump Calculator",
-  description: "Calculate hot water return pipe size, circulation pump flow, and heat loss.",
+  description: "Calculate domestic hot water recirculation pump flow rate, loop heat loss, and head allowance from steady-state thermal balance.",
   path: '/toolbox/hot-water-circulation-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function CalculatorPage() {
               Hot Water Circulation Pipe & Pump Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate hot water return pipe size, circulation pump flow, and heat loss.
+              Calculate hot water recirculation pump flow rate, total loop heat loss, and head allowance.
             </p>
           </div>
         </section>

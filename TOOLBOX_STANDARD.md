@@ -178,7 +178,8 @@ flowchart LR
 | 30 | glazing-wind-load-calculator、gradient-grade-calculator、grease-trap-sizing-calculator、grinding-ratio-calculator、grinding-wheel-speed-calculator | 0c9b5ee8（已通过复核，已 push，2026-11-18） |
 | 31 | ground-anchor-capacity-calculator、grounding-grid-calculator、gyroscope-precession-calculator、gyroscopic-couple-calculator、hardness-converter（跳过 *-shortcuts-sheet 目录 gstarcad-shortcuts-sheet） | e1b66330 |
 | 32 | harmonic-drive-calculator、heat-exchanger-calculator、heat-transfer-conduction-calculator、heat-transfer-convection-calculator、heat-treatment-time-calculator | d1eba212 |
-| 33 | helical-gear-calculator、hertz-contact-stress-calculator、hobbing-cycle-time-calculator、hole-stackup-calculator、horizontal-curve-calculator | （待填本批 commit 哈希） |
+| 33 | helical-gear-calculator、hertz-contact-stress-calculator、hobbing-cycle-time-calculator、hole-stackup-calculator、horizontal-curve-calculator | 0410ac28 |
+| 34 | horsepower-torque-calculator、hot-water-circulation-calculator、hvac-load-room-calculator、hydraulic-cylinder-force-calculator、hydrostatic-pressure-calculator | （待填本批 commit 哈希） |
 
 ---
 
