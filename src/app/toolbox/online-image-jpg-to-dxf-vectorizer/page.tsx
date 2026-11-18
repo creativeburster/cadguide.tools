@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineImageJpgToDxfVectorizerClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online Image JPG/PNG to Vector DXF Tracers Guide | CADGuide.tools',
-  description: 'Compare image raster to vector DXF online tracers. Review vectorization accuracy, bezier arc fitting, and outline detection.',
+  title: 'Raster Underlay Calibration & DXF / IMAGEATTACH Script Builder | CADGuide.tools',
+  description: 'Calculate exact mm/px physical scaling from scan DPI and known pixel dimensions, and export pure-ASCII 1:1 calibration DXF frames and AutoCAD IMAGEATTACH scripts.',
   path: '/toolbox/online-image-jpg-to-dxf-vectorizer',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineImageJpgToDxfVectorizerPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online Image Raster (JPG/PNG) to Vector DXF Tracer', path: '/toolbox/online-image-jpg-to-dxf-vectorizer' },
+    { name: 'Raster Underlay Calibration & DXF Script Builder', path: '/toolbox/online-image-jpg-to-dxf-vectorizer' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlineImageJpgToDxfVectorizerPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              Raster Tracing Calibration
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online Image Raster (JPG/PNG) to Vector DXF Tracer
+              Raster Underlay Calibration &amp; DXF / IMAGEATTACH Script Builder
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Determine accurate mm/px underlay scaling prior to vector tracing and generate calibration frames locally.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlineImageJpgToDxfVectorizerPage() {
         </section>
       </main>
     </>
-);
+  );
 }

@@ -9605,96 +9605,116 @@
     ]
   },
   "online-ifc-viewer-validator": {
-    "title": "Online openBIM IFC Standard File Validator & Viewer",
-    "description": "Compare buildingSmart certified IFC online validators and lightweight viewers. Check geometric watertightness and properties audit.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online openBIM IFC Standard File Validator & Viewer",
+    "title": "Browser IFC-SPF Schema & Spatial Hierarchy Validator",
+    "description": "Inspect ISO 10303-21 IFC-SPF STEP headers, FILE_SCHEMA (IFC2x3/IFC4/IFC4.3), spatial containment tiers, and architectural/structural entity counts locally.",
+    "discipline": "openBIM Schema Audit & Preflight",
+    "standards": "ISO 16739-1:2024 (Industry Foundation Classes / IFC4) & ISO 10303-21 (IFC-SPF STEP-File)",
+    "cadContext": "Verify that IFCPROJECT, IFCSITE, IFCBUILDING, and IFCBUILDINGSTOREY spatial tiers are populated before federating BIM models.",
+    "formula": "SpatialTierStatus = PASS when all 4 tiers (Project, Site, Building, Storey) count >= 1",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Default IFC Sample",
+        "val": "PRJ01-ARC-ZZ-01-M3-A-0001.ifc (IFC4)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Upload Footprint",
+        "val": "0 bytes uploaded (browser-local)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "STEP Records / Elements",
+        "val": "30 / 22"
+      },
+      {
+        "label": "Spatial Tiers Status",
+        "val": "PASS (4/4)"
+      }
+    ]
   },
   "online-image-jpg-to-dxf-vectorizer": {
-    "title": "Online Image Raster (JPG/PNG) to Vector DXF Tracer",
-    "description": "Compare image raster to vector DXF online tracers. Review vectorization accuracy, bezier arc fitting, and outline detection.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online Image Raster (JPG/PNG) to Vector DXF Tracer",
+    "title": "Raster Underlay Calibration & DXF / IMAGEATTACH Script Builder",
+    "description": "Compute exact mm/px physical calibration from known image feature dimensions, build 1:1 DXF calibration boundary frames, and export AutoCAD IMAGEATTACH scripts.",
+    "discipline": "Raster Underlay Calibration & Digitizing Prep",
+    "standards": "AutoCAD 2025 IMAGEATTACH Command & DXF AC1027 Millimeter Coordinate Frame ($INSUNITS=4)",
+    "cadContext": "Scale scanned blueprints accurately against known reference lengths before digitizing geometry in CAD.",
+    "formula": "CalibratedScale(mm/px) = TrueLength_mm / RefSpan_px; SheetWidth_mm = PxWidth * CalibratedScale",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Image Dimensions",
+        "val": "4960 x 3508 px (300 nominal DPI)"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Calibration Reference",
+        "val": "1000 px = 100 mm"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Calibrated Scale",
+        "val": "0.100000 mm/px"
+      },
+      {
+        "label": "Calibrated Sheet",
+        "val": "496.0000 x 350.8000 mm"
+      }
+    ]
   },
   "online-lisp-script-compiler-protector": {
-    "title": "AutoLISP LSP Script Encryption (FAS/VLX) Online Portal",
-    "description": "Compare the best ways to encrypt AutoLISP source files (.lsp) to compiled bytecode (.fas / .vlx). Protect your CAD IPs online.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "Standardized parametric evaluation for AutoLISP LSP Script Encryption (FAS/VLX) Online Portal",
+    "title": "AutoLISP (.lsp) Static Syntax & Local Variable Linter",
+    "description": "Perform client-side static linting on AutoLISP (.lsp) routines for balanced parentheses, unclosed string quotes, and defun local \"/\" variable declarations.",
+    "discipline": "AutoLISP Automation & Static Linting",
+    "standards": "AutoCAD 2025 VLISP Command (Visual LISP / LISPSYS) & AutoLISP defun Syntax Rules",
+    "cadContext": "Detect mismatched parentheses and unintended global symbol leaks before compiling .fas or .vlx modules inside desktop AutoCAD VLISP.",
+    "formula": "SyntaxStatus = PASS iff OpenParens == CloseParens, MinDepth >= 0, UnclosedQuotes == 0",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Sample Source",
+        "val": "c:CLEANLAY + helper-add routines"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Execution Environment",
+        "val": "Browser-local static lexer (0 bytes uploaded)"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Syntax Check / Parens",
+        "val": "PASS (18 / 18)"
+      },
+      {
+        "label": "defun Count / Unscoped",
+        "val": "2 / 0"
+      }
+    ]
   },
   "online-pdf-to-dwg-converter": {
-    "title": "Online Vector PDF to CAD DWG Converter Portal",
-    "description": "Compare the best online PDF to DWG converters. Review layer fidelity, text OCR accuracy, and find safe, registry-compliant cloud conversion portals.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for Online Vector PDF to CAD DWG Converter Portal",
+    "title": "PDF Vector/Raster Preflight & AutoCAD -PDFIMPORT Script Builder",
+    "description": "Inspect local .pdf headers, page counts, and embedded raster image objects locally in the browser and generate pure-ASCII AutoCAD -PDFIMPORT scripts.",
+    "discipline": "PDF-to-CAD Preflight & Import Automation",
+    "standards": "AutoCAD 2025 -PDFIMPORT Command & Portable Document Format (%PDF-1.x) Header/Object Tokens",
+    "cadContext": "Identify whether a PDF contains vector drawing paths or raster-only scan images prior to running desktop AutoCAD -PDFIMPORT.",
+    "formula": "VectorReady when /Type/Page count >= 1, path operators > 0, and /Subtype/Image == 0",
     "inputs": [
       {
-        "label": "Target Output Schema",
-        "val": "AutoCAD 2018+ (AC1032) / IFC4 / STEP AP242"
+        "label": "Sample Vector PDF",
+        "val": "%PDF-1.7, 2 pages, 0 raster images"
       },
       {
-        "label": "Coordinate & Unit System",
-        "val": "Preserve Native File Units (mm / inch / m)"
-      },
-      {
-        "label": "Curve & Surface Tolerance",
-        "val": "High Precision (0.005 mm Chordal)"
+        "label": "Target Page / Scale",
+        "val": "Page 1 / 1.0"
       }
     ],
-    "outputs": []
+    "outputs": [
+      {
+        "label": "Stream Classification",
+        "val": "VECTOR_READY"
+      },
+      {
+        "label": "Generated Script",
+        "val": "-PDFIMPORT F \"architectural_vector.pdf\" 1 0,0 1 0"
+      }
+    ]
   },
   "online-point-cloud-las-to-dxf-contour": {
     "title": "Online Point Cloud LAS to DXF Terrain Contour Generator",
@@ -22495,6 +22515,34 @@
       {
         "label": "Est. Cutting Time",
         "val": "0.5000 min"
+      }
+    ]
+  },
+  "online-gerber-pcb-viewer": {
+    "title": "PCB Gerber RS-274X & Excellon Drill Viewer",
+    "description": "Parse Extended Gerber RS-274X aperture macros, D01/D02/D03 trace and flash coordinates, and Excellon NC drill tables locally in the browser with DXF and CSV export.",
+    "discipline": "PCB Fabrication & CAM Verification",
+    "standards": "Gerber Format RS-274X Specification (Ucamco) & Excellon NC Drill Format",
+    "cadContext": "Audit board dimensions, copper trace counts, SMD pads, and Excellon drill hole counts locally before exporting fabrication Gerbers or mechanical DXF outlines.",
+    "formula": "BoardArea(mm^2) = (maxX - minX) * (maxY - minY)",
+    "inputs": [
+      {
+        "label": "Deterministic Sample Board",
+        "val": "50 x 30 mm (%FSLAX24Y24*% / %MOMM*%)"
+      },
+      {
+        "label": "Drill Tool Setup",
+        "val": "T01 C1.000 mm (4 plated holes)"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Board Dimensions",
+        "val": "50.20 x 30.20 mm (outer copper trace envelope, 1516.04 mm^2)"
+      },
+      {
+        "label": "Traces / Pads / Drills",
+        "val": "4 / 4 / 4"
       }
     ]
   }

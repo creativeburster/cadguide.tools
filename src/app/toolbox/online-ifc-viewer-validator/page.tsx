@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineIfcViewerValidatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online openBIM IFC Validators & WebGL Viewers | CADGuide.tools',
-  description: 'Compare buildingSmart certified IFC online validators and lightweight viewers. Check geometric watertightness and properties audit.',
+  title: 'Browser IFC-SPF Schema & Spatial Hierarchy Validator | CADGuide.tools',
+  description: 'Validate ISO 10303-21 IFC2x3/IFC4 FILE_SCHEMA headers, spatial hierarchy entities (IFCPROJECT/IFCSITE/IFCBUILDING/IFCBUILDINGSTOREY), and export CSV reports locally.',
   path: '/toolbox/online-ifc-viewer-validator',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineIfcViewerValidatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Online openBIM IFC Standard File Validator & Viewer', path: '/toolbox/online-ifc-viewer-validator' },
+    { name: 'IFC-SPF Schema & Hierarchy Validator', path: '/toolbox/online-ifc-viewer-validator' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlineIfcViewerValidatorPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              openBIM IFC-SPF Preflight
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Online openBIM IFC Standard File Validator & Viewer
+              Browser IFC-SPF Schema &amp; Spatial Hierarchy Validator
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Audit `FILE_SCHEMA`, spatial containment tiers, and architectural/structural element counts directly in your browser.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlineIfcViewerValidatorPage() {
         </section>
       </main>
     </>
-);
+  );
 }

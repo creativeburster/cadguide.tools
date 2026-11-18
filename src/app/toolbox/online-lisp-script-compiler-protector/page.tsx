@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import OnlineLispScriptCompilerProtectorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Best Online AutoLISP LSP to FAS/VLX Compilers Guide | CADGuide.tools',
-  description: 'Compare the best ways to encrypt AutoLISP source files (.lsp) to compiled bytecode (.fas / .vlx). Protect your CAD IPs online.',
+  title: 'AutoLISP (.lsp) Static Syntax & Local Variable Linter | CADGuide.tools',
+  description: 'Audit AutoLISP (.lsp) routines in your browser for parenthesis balance, unclosed strings, and missing "/" local variable scope before Visual LISP VLISP compilation.',
   path: '/toolbox/online-lisp-script-compiler-protector',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineLispScriptCompilerProtectorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'AutoLISP LSP Script Encryption (FAS/VLX) Online Portal', path: '/toolbox/online-lisp-script-compiler-protector' },
+    { name: 'AutoLISP Static Syntax & Scope Linter', path: '/toolbox/online-lisp-script-compiler-protector' },
   ]);
 
   return (
@@ -30,13 +30,14 @@ export default function OnlineLispScriptCompilerProtectorPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Interactive Client-Side CAD Workbench
+              AutoLISP Pre-Compile Linter
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              AutoLISP LSP Script Encryption (FAS/VLX) Online Portal
+              AutoLISP (.lsp) Static Syntax &amp; Local Variable Linter
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Direct access to objective engineering benchmarks, local header preflight, and security compliance guidelines.</p>
+              Check parenthesis depth, string closure, and `defun` local variable scope locally prior to AutoCAD `VLISP` compilation.
+            </p>
           </div>
         </section>
 
@@ -46,5 +47,5 @@ export default function OnlineLispScriptCompilerProtectorPage() {
         </section>
       </main>
     </>
-);
+  );
 }
