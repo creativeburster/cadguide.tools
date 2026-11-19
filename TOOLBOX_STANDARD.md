@@ -206,6 +206,12 @@ flowchart LR
 | 58 | revit-worksharing-wizard、reynolds-number-calculator、rigid-pavement-calculator、rolling-force-calculator、roof-drain-size-calculator（跳过 revit-shortcuts-sheet、rhino-shortcuts-sheet） | 4d56dd26（待复核，未 push，2026-11-18） |
 | 59 | roof-pitch-calculator、room-acoustics-rt60-calculator、roundabout-capacity-calculator、sand-casting-yield-calculator、screw-torque-preload-calculator | ac400be8（待复核，未 push，2026-11-18） |
 | 60 | section-modulus-calculator、section-property-shape-calculator、sedimentation-tank-calculator、seismic-load-calculator、septic-tank-calculator | 32980826（待复核，未 push，2026-11-18） |
+| 61 | settlement-calculator、shaft-critical-speed-calculator、shaft-diameter-calculator、shaft-torsion-stress-calculator、sheet-cutting-layout-calculator | 54c6ed74（待复核，未 push，2026-11-19） |
+| 62 | sheet-metal-bend-calculator、sheet-metal-blank-calculator、short-circuit-current-calculator、shortcuts、slope-circular-stability-calculator（跳过 sketchup-shortcuts-sheet） | 68a12606（待复核，未 push，2026-11-19） |
+| 63 | slope-stability-calculator、smoke-exhaust-calculator、snow-load-calculator、soil-compaction-calculator、solar-angle-calculator | 3671ed0e（待复核，未 push，2026-11-19） |
+| 64 | solar-panel-sizing-calculator、solidworks-crash-diagnostic-wizard、sound-transmission-class-calculator、speed-unit-converter、spindle-power-calculator | 5ad5752c（待复核，未 push，2026-11-19） |
+| 65 | spot-weld-calculator、spring-design-calculator、spring-force-rate-calculator、stack-height-calculator、stair-design-calculator（跳过 solid-edge-shortcuts-sheet、solidworks-shortcuts-sheet、spaceclaim-shortcuts-sheet） | 6b6314d8（待复核，未 push，2026-11-19） |
+| 66 | steel-beam-load-calculator、steel-grade-selector、steel-section-properties-reference、steel-section-weight-calculator、steel-weight-calculator | b8f4d432（待复核，未 push，2026-11-19） |
 
 ---
 
