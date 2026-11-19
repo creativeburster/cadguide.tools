@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import SnowLoadCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Snow Load Calculator ASCE 7",
-  description: "Calculate roof snow load from ground snow and exposure factors.",
+  title: "Roof Snow Load Calculator",
+  description: "Calculate flat and sloped roof snow load from ground snow load and user-defined exposure, thermal, and slope factors.",
   path: '/toolbox/snow-load-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function SnowLoadCalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Snow Load Calculator ASCE 7", path: '/toolbox/snow-load-calculator' },
+    { name: "Roof Snow Load Calculator", path: '/toolbox/snow-load-calculator' },
   ]);
 
   return (
@@ -29,10 +29,10 @@ export default function SnowLoadCalculatorPage() {
               Structural
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Snow Load Calculator ASCE <span className="text-orange-400">7</span>
+              Roof Snow Load <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate roof snow load from ground snow and exposure factors.
+              Calculate flat and sloped roof snow load from ground snow load and multiplicative exposure, thermal, importance, and slope factors.
             </p>
           </div>
         </section>

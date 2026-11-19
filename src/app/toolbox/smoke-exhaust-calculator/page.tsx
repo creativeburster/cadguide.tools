@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Mechanical Smoke Exhaust Rate Calculator (NFPA 92)",
-  description: "Calculate required smoke exhaust rate and fan capacity for atrium smoke control.",
+  title: "Mechanical Smoke Exhaust Rate Calculator",
+  description: "Estimate axisymmetric plume mass generation and volumetric smoke exhaust rate from heat release rate and clear height.",
   path: '/toolbox/smoke-exhaust-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Mechanical Smoke Exhaust Rate Calculator (NFPA 92)", path: '/toolbox/smoke-exhaust-calculator' },
+    { name: "Mechanical Smoke Exhaust Rate Calculator", path: '/toolbox/smoke-exhaust-calculator' },
   ]);
 
   return (
@@ -29,10 +29,10 @@ export default function CalculatorPage() {
               Engineering Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Mechanical Smoke Exhaust Rate Calculator (NFPA 92)
+              Mechanical Smoke Exhaust Rate Calculator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate required smoke exhaust rate and fan capacity for atrium smoke control.
+              Estimate axisymmetric plume mass generation and volumetric smoke exhaust rate from convective heat release rate and smoke layer height.
             </p>
           </div>
         </section>

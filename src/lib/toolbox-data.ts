@@ -1878,9 +1878,9 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'snow-load-calculator',
-    title: 'Snow Load Calculator ASCE 7',
-    description: 'Calculate roof snow load from ground snow and exposure factors. Free browser-based engineering calculator.',
-    detailDesc: 'pf=0.7*Ce*Ct*Is*pg, ps=pf*Cs',
+    title: 'Roof Snow Load Calculator',
+    description: 'Calculate flat and sloped roof snow load from ground snow load and exposure, thermal, and slope factors.',
+    detailDesc: 'pf = kf * Ce * Ct * Is * pg, ps = pf * Cs (parametric multiplier with metric kPa and imperial psf outputs).',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -4321,14 +4321,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'smoke-exhaust-calculator',
-    title: "Mechanical Smoke Exhaust Rate Calculator (NFPA 92)",
-    description: "Calculate required smoke exhaust rate and fan capacity for atrium smoke control.",
-    detailDesc: "NFPA 92: V = m/(rho_smoke-rho_air). Design fire Q=5MW. Smoke layer z=10% ceiling height. V = 0.188*Q^(1/3)*z^(5/3). Includes makeup air and plugholing check.",
+    title: "Mechanical Smoke Exhaust Rate Calculator",
+    description: "Estimate axisymmetric plume mass generation and volumetric smoke exhaust rate from convective heat release rate and clear height.",
+    detailDesc: "Empirical axisymmetric plume correlation: Qc = chi_c * Q ; m = 0.071 * Qc^(1/3) * z^(5/3) + 0.0018 * Qc ; V = m / rho.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["smoke exhaust calculator","nfpa 92","smoke control","smoke management","atrium smoke","mechanical smoke exhaust","smoke layer height","design fire size","smoke fan capacity","plugholing"]
+    keywords: ["smoke exhaust calculator","smoke control","smoke management","atrium smoke","mechanical smoke exhaust","smoke layer height","design fire size","smoke fan capacity"]
   },
   {
     slug: 'gas-pipe-sizing-calculator',

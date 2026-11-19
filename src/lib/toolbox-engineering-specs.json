@@ -12392,205 +12392,169 @@
   },
   "slope-stability-calculator": {
     "title": "Slope Stability Factor of Safety Calculator",
-    "description": "Calculate factor of safety for simple slope stability using infinite slope method.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "FS = c/(g*h*sin(a)*cos(a)) + tan(phi)/tan(a)",
+    "description": "Calculate planar infinite-slope Factor of Safety using soil cohesion, friction angle, failure plane depth, and pore-pressure ratio.",
+    "discipline": "Geotechnical Slope Limit Equilibrium",
+    "standards": "Wikipedia: Slope stability analysis — Infinite slope planar equilibrium (https://en.wikipedia.org/wiki/Slope_stability_analysis)",
+    "cadContext": "Extract cut/embankment slope angle beta and failure seam depth z from Civil 3D or MicroStation terrain sections prior to preliminary stability screening.",
+    "formula": "FS = c/(gamma*z*sin(beta)*cos(beta)) + (1 - ru/cos^2(beta))*tan(phi)/tan(beta)",
     "inputs": [
       {
-        "label": "Cohesion c (kPa)",
-        "val": "15"
+        "label": "Cohesion c / Unit Wt gamma",
+        "val": "15 kPa / 18 kN/m3"
       },
       {
-        "label": "Soil Density (kN/m3)",
-        "val": "18"
-      },
-      {
-        "label": "Slope Height (m)",
+        "label": "Failure Plane Depth z (m)",
         "val": "5"
       },
       {
-        "label": "Slope Angle (deg)",
-        "val": "30"
+        "label": "Slope beta / Friction phi (deg)",
+        "val": "30 / 25"
       },
       {
-        "label": "Friction Angle (deg)",
-        "val": "25"
+        "label": "Pore Ratio ru / Target FS",
+        "val": "0 / 1.5"
       }
     ],
     "outputs": [
       {
-        "label": "Factor of Safety",
+        "label": "Factor of Safety (FS)",
         "val": "1.193"
       },
       {
-        "label": "Status",
-        "val": "Marginal"
+        "label": "Cohesion / Friction Terms",
+        "val": "0.384900 / 0.807669"
       }
     ]
   },
   "smoke-exhaust-calculator": {
-    "title": "Mechanical Smoke Exhaust Rate Calculator (NFPA 92)",
-    "description": "Calculate required smoke exhaust rate and fan capacity for atrium smoke control.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "M = 0.071 · Q_c^(1/3) · z^(5/3) • V_smoke = M / ρ_smoke (NFPA 92 Standard for Smoke Control Systems)",
+    "title": "Mechanical Smoke Exhaust Rate Calculator",
+    "description": "Estimate axisymmetric smoke plume mass generation and volumetric exhaust capacity from convective heat release rate and clear height.",
+    "discipline": "Fire Protection & Smoke Plume Fluid Mechanics",
+    "standards": "Empirical Axisymmetric Plume Correlation (Qc = chi_c * Q)",
+    "cadContext": "Size preliminary atrium/tall-hall smoke exhaust fan capacities and ductwork from architectural clear-layer height z and design heat release assumptions.",
+    "formula": "Qc = chi_c*Q ; m = 0.071*Qc^(1/3)*z^(5/3) + 0.0018*Qc ; V = m / rho",
     "inputs": [
       {
-        "label": "Design Fire Heat Release Rate Q (MW)",
-        "val": "2.5 MW (Standard Retail / Commercial)"
+        "label": "Total HRR Q / Convective Ratio chi_c",
+        "val": "2.5 MW / 0.70"
       },
       {
-        "label": "Clear Height Below Smoke Layer z (m)",
-        "val": "3.0"
+        "label": "Clear Height z / Smoke Density rho",
+        "val": "3.0 m / 1.05 kg/m3"
       },
       {
-        "label": "Number of Dedicated Exhaust Fans",
+        "label": "Operating Exhaust Fans",
         "val": "2"
       }
     ],
     "outputs": [
       {
-        "label": "Total Required Smoke Exhaust Rate",
-        "val": "20617 m³/h"
+        "label": "Total Smoke Exhaust Rate",
+        "val": "29105.7 m3/h (8.085 m3/s)"
       },
       {
-        "label": "Exhaust Rate per Operating Fan",
-        "val": "10308 m³/h"
+        "label": "Exhaust Rate per Fan",
+        "val": "14552.8 m3/h"
       },
       {
-        "label": "Smoke Plume Mass Generation Rate",
-        "val": "6.01 kg/s"
-      },
-      {
-        "label": "Volumetric Smoke Extraction Speed",
-        "val": "5.73 m³/s"
+        "label": "Plume Mass Generation Rate m",
+        "val": "8.489 kg/s"
       }
     ]
   },
   "snow-load-calculator": {
-    "title": "Snow Load Calculator ASCE 7",
-    "description": "Calculate roof snow load from ground snow and exposure factors.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "pf=0.7*Ce*Ct*Is*pg, ps=pf*Cs",
+    "title": "Roof Snow Load Calculator",
+    "description": "Calculate flat and sloped roof snow loads from ground snow load and user-defined multiplicative design factors.",
+    "discipline": "Structural Roof Gravity Loading",
+    "standards": "Parametric Roof Snow Load Multiplier Formulation",
+    "cadContext": "Compute uniform flat/sloped roof gravity snow load (kPa and psf) from structural roof pitch and local multiplicative coefficients before framing member checks.",
+    "formula": "pf = kf * Ce * Ct * Is * pg ; ps = pf * Cs ; ps_psf = ps * 20.885434",
     "inputs": [
       {
-        "label": "Ground Snow (kPa)",
+        "label": "Ground Snow Load pg (kPa)",
         "val": "1.0"
       },
       {
-        "label": "Ce",
-        "val": "1.0"
-      },
-      {
-        "label": "Ct",
-        "val": "1.0"
-      },
-      {
-        "label": "Is",
-        "val": "1.0"
-      },
-      {
-        "label": "Cs",
-        "val": "1.0"
+        "label": "Factors (kf, Ce, Ct, Is, Cs)",
+        "val": "0.70, 1.0, 1.0, 1.0, 1.0"
       }
     ],
     "outputs": [
       {
-        "label": "Flat Roof Load",
-        "val": "0.700000 kPa"
+        "label": "Flat Roof Load (pf)",
+        "val": "0.700 kPa"
       },
       {
-        "label": "Sloped Roof Load",
-        "val": "0.700000 kPa"
+        "label": "Sloped Roof Load (ps)",
+        "val": "0.700 kPa (14.620 psf)"
       }
     ]
   },
   "soil-compaction-calculator": {
     "title": "Soil Compaction & Optimum Moisture Calculator (Proctor)",
-    "description": "Calculate maximum dry density, optimum moisture content, and compaction specification.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "RC = (γ_d_field / MDD) × 100% • γ_d = γ_wet / (1 + w/100) (ASTM D698 / ASTM D1557 Proctor)",
+    "description": "Compute field dry density, Proctor relative compaction percentage, and moisture deviation from optimum moisture content.",
+    "discipline": "Geotechnical Earthwork Quality Control",
+    "standards": "Wikipedia: Proctor compaction test (https://en.wikipedia.org/wiki/Proctor_compaction_test)",
+    "cadContext": "Verify field nuclear/sand-cone dry density lifts against laboratory Proctor Maximum Dry Density (MDD) and Optimum Moisture Content (OMC) on civil grading plans.",
+    "formula": "gamma_d = gamma_wet / (1 + w/100) ; RC = (gamma_d / MDD) * 100% ; dev = w - OMC",
     "inputs": [
       {
-        "label": "Field In-Situ Wet Density (g/cm³)",
-        "val": "2.08"
+        "label": "Field Wet Density / Moisture w",
+        "val": "2.08 g/cm3 / 11.5 %"
       },
       {
-        "label": "Field Moisture Content w (%)",
-        "val": "11.5"
+        "label": "Lab MDD / OMC",
+        "val": "1.92 g/cm3 / 12.0 %"
       },
       {
-        "label": "Lab Max Dry Density MDD (g/cm³)",
-        "val": "1.92"
-      },
-      {
-        "label": "Optimum Moisture Content OMC (%)",
-        "val": "12.0"
+        "label": "Target RC / Moisture Tolerance",
+        "val": "95 % / +/- 2.0 %"
       }
     ],
     "outputs": [
       {
-        "label": "Relative Compaction Degree (RC)",
-        "val": "97.2 %"
+        "label": "Relative Compaction (RC)",
+        "val": "97.16 %"
       },
       {
-        "label": "Field In-Situ Dry Density (γ_d)",
-        "val": "1.865 g/cm³"
+        "label": "Field Dry Density (gamma_d)",
+        "val": "1.8655 g/cm3"
       },
       {
-        "label": "Deviation from Optimum Moisture",
-        "val": "-0.5% Δw"
-      },
-      {
-        "label": "Structural Target Specification",
-        "val": "95.0% Min"
+        "label": "Deviation from OMC",
+        "val": "-0.50 %"
       }
     ]
   },
   "solar-angle-calculator": {
     "title": "Solar Angle & Shading Calculator",
-    "description": "Calculate solar elevation, azimuth, and shadow length for any location and time.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "elevation = asin(sin(lat)sin(dec)+cos(lat)cos(dec)cos(hra))",
+    "description": "Compute solar declination, altitude/elevation angle, zenith angle, compass azimuth, and vertical object shadow length.",
+    "discipline": "Architectural Heliodon & Solar Geometry",
+    "standards": "Wikipedia: Solar zenith angle (https://en.wikipedia.org/wiki/Solar_zenith_angle)",
+    "cadContext": "Determine accurate shadow cast length and compass sun azimuth for BIM site massing studies, PV row spacing, and building facade shading fins.",
+    "formula": "sin(alpha_s) = sin(Phi)*sin(delta) + cos(Phi)*cos(delta)*cos(h) ; theta_s = 90 - alpha_s ; Shadow = H / tan(alpha_s)",
     "inputs": [
       {
-        "label": "Latitude (deg)",
-        "val": "40"
+        "label": "Latitude Phi / Day of Year",
+        "val": "40 deg / Day 180"
       },
       {
-        "label": "Day of Year",
-        "val": "180"
-      },
-      {
-        "label": "Hour",
-        "val": "12"
-      },
-      {
-        "label": "Object Height (m)",
-        "val": "3"
+        "label": "Local Solar Hour / Object Height",
+        "val": "12 hr / 3 m"
       }
     ],
     "outputs": [
       {
-        "label": "Solar Elevation",
+        "label": "Solar Elevation (alpha_s)",
         "val": "73.242 deg"
       },
       {
-        "label": "Shadow Length",
+        "label": "Horizontal Shadow Length",
         "val": "0.903376 m"
       },
       {
-        "label": "Azimuth",
-        "val": "0.000000 deg"
+        "label": "Compass Azimuth / Zenith",
+        "val": "180.000 deg / 16.758 deg"
       }
     ]
   },
