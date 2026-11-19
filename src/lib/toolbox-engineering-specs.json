@@ -12776,184 +12776,265 @@
   },
   "spot-weld-calculator": {
     "title": "Spot Weld Nugget Size Calculator",
-    "description": "Calculate spot weld nugget diameter, shear strength, and electrode force.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "d_n = 5·√t (AWS C1.1) • Shear Load = (π·d_n²/4)·τ • Min Spacing s = 8·d_n to prevent secondary current shunting",
+    "description": "Calculate resistance spot weld nugget diameter, cross-section shear area, shear capacity, electrode contact pressure, and minimum spacing.",
+    "discipline": "Resistance Spot Welding & Sheet Metal Joining",
+    "standards": "Parametric resistance spot weld sizing relations (dn = kn*sqrt(t), F_shear = A*tau, s_min = ks*dn) with editable kn and ks factors",
+    "cadContext": "Verify flange width clearance (>= 2*e) and center-to-center pitch s_min on sheet-metal weld assembly drawings before generating spot-weld callouts.",
+    "formula": "dn = kn*sqrt(t), A = pi*dn^2/4, F_shear = A*tau/1000, p_contact = Fe*1000/A, s_min = ks*dn",
     "inputs": [
       {
-        "label": "Sheet Thickness (mm)",
+        "label": "Sheet Thickness t (mm)",
         "val": "1.5"
       },
       {
-        "label": "Shear Strength (MPa)",
+        "label": "Weld Shear Strength tau (MPa)",
         "val": "250"
       },
       {
-        "label": "Electrode Force (kN)",
-        "val": "3"
+        "label": "Electrode Force Fe (kN)",
+        "val": "3.0"
+      },
+      {
+        "label": "Nugget Factor kn",
+        "val": "5.0"
+      },
+      {
+        "label": "Spacing Factor ks",
+        "val": "8.0"
       }
     ],
     "outputs": [
       {
-        "label": "Nugget Diameter (d_n)",
+        "label": "Nugget Diameter dn",
         "val": "6.124 mm"
       },
       {
-        "label": "Shear Load Capacity",
+        "label": "Nugget Shear Area",
+        "val": "29.452 mm2"
+      },
+      {
+        "label": "Single-Spot Shear Capacity",
         "val": "7.363 kN"
       },
       {
-        "label": "Tip Contact Pressure",
-        "val": "102.65 MPa (Face Ø 6.1 mm)"
+        "label": "Electrode Contact Stress",
+        "val": "101.86 MPa"
       },
       {
-        "label": "Anti-Shunting Pitch Spacing",
-        "val": "48.990 mm (Min 8·d_n)"
+        "label": "Min Spot Spacing s_min",
+        "val": "48.990 mm"
       }
     ]
   },
   "spring-design-calculator": {
     "title": "Spring Design & Rate Calculator",
-    "description": "Calculate spring rate, stress, and deflection for helical compression springs.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "k=G*d^4/(8*D^3*N), tau=K*8*F*D/(pi*d^3)",
+    "description": "Calculate helical compression spring stiffness rate, static deflection, spring index, and Wahl-corrected shear stress.",
+    "discipline": "Helical Compression Spring Mechanics",
+    "standards": "Wahl torsional shear stress correction and coil torsion stiffness equations (Wikipedia: Coil spring)",
+    "cadContext": "Check spring index C = D/d and Wahl-corrected torsional shear stress before finalizing wire diameter d and active coil count N in spring drawings.",
+    "formula": "C = D/d, k = (G*1000)*d^4/(8*D^3*N), delta = F/k, Kw = (4C-1)/(4C-4)+0.615/C, tau = Kw*8*F*D/(pi*d^3)",
     "inputs": [
       {
-        "label": "Wire Dia d (mm)",
+        "label": "Wire Diameter d (mm)",
         "val": "3"
       },
       {
-        "label": "Mean Dia D (mm)",
+        "label": "Mean Coil Diameter D (mm)",
         "val": "20"
       },
       {
-        "label": "Active Coils N",
+        "label": "Active Coils N (-)",
         "val": "10"
       },
       {
-        "label": "Force F (N)",
+        "label": "Axial Load F (N)",
         "val": "100"
       },
       {
-        "label": "Shear Mod G (GPa)",
+        "label": "Shear Modulus G (GPa)",
         "val": "79.3"
       }
     ],
     "outputs": [
       {
-        "label": "Spring Rate",
-        "val": "10036406 N/mm"
+        "label": "Spring Rate k",
+        "val": "10.036 N/mm"
       },
       {
-        "label": "Deflection",
-        "val": "0.000010 mm"
+        "label": "Deflection delta",
+        "val": "9.964 mm"
       },
       {
-        "label": "Shear Stress",
+        "label": "Shear Stress tau",
         "val": "230.99 MPa"
+      },
+      {
+        "label": "Spring Index C",
+        "val": "6.667"
+      },
+      {
+        "label": "Wahl Factor Kw",
+        "val": "1.225"
       }
     ]
   },
   "spring-force-rate-calculator": {
-    "title": "Helical Compression Spring Force & Rate Calculator",
-    "description": "Calculate helical compression spring stiffness rate, solid height, allowable deflection limits, and reactive forces using standard mechanical equations.",
-    "discipline": "Solid Mechanics, Fatigue & Pressure Vessel Analysis",
-    "standards": "ASME Boiler & Pressure Vessel Code (BPVC Section VIII Div. 1), EN 13906 (Cylindrical Helical Springs), ASTM E8 / ISO 6892-1, FKM Analytical Strength Guideline",
-    "cadContext": "Cross-validate analytical closed-form stress results against finite element analysis (FEA) mesh convergence studies, paying special attention to boundary constraint stiffness and local fillet singularities.",
-    "formula": "k = (G × d⁴) / (8 × D_m³ × N_a) • F = k × Δx • τ = K_w × (8 × F × D_m) / (π × d³) (Wahl Factor, EN 13906-1)",
+    "title": "Helical Compression Spring Rate & Force Calculator",
+    "description": "Calculate spring stiffness, solid height, free travel, load force, and Wahl-corrected shear stress with interactive geometry preview.",
+    "discipline": "Helical Compression Spring Mechanics",
+    "standards": "Torsion coil spring mechanics (Wikipedia: Coil spring), Wahl stress correction, standard gravity g = 9.80665 m/s2",
+    "cadContext": "Validate working deflection against free travel s_max = L0 - Hs and confirm shear stress margin relative to your user allowable wire shear stress limit.",
+    "formula": "D = OD - d, k = G*d^4/(8*D^3*Na), Hs = d*(Na+2), F = k*s, tau = Kw*8*F*D/(pi*d^3)",
     "inputs": [
       {
-        "label": "1. Spring wire material modulus (Wire Material)",
-        "val": "Music Wire / ASTM A228 (High frequency spring piano wire)"
-      }
-    ],
-    "outputs": []
-  },
-  "stack-height-calculator": {
-    "title": "Chimney Stack Height Calculator",
-    "description": "Calculate required chimney height for natural draft and dispersion.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "H = draft / (rho*g*(1/Tamb-1/Tstack))",
-    "inputs": [
-      {
-        "label": "Required Draft (Pa)",
-        "val": "50"
+        "label": "Wire Diameter d (mm)",
+        "val": "2.0"
       },
       {
-        "label": "Stack Temp (C)",
-        "val": "300"
+        "label": "Outer Diameter OD (mm)",
+        "val": "20.0"
       },
       {
-        "label": "Ambient Temp (C)",
-        "val": "25"
+        "label": "Active Coils Na (-)",
+        "val": "10"
       },
       {
-        "label": "Flue Gas Density (kg/m3)",
-        "val": "1.3"
+        "label": "Free Height L0 (mm)",
+        "val": "80"
+      },
+      {
+        "label": "Compression delta (mm)",
+        "val": "15"
+      },
+      {
+        "label": "Shear Modulus G (MPa)",
+        "val": "79300"
+      },
+      {
+        "label": "Allowable Shear Stress (MPa)",
+        "val": "650"
       }
     ],
     "outputs": [
       {
-        "label": "Stack Height",
-        "val": "2434.42 m"
+        "label": "Load Force F",
+        "val": "40.792 N (4.160 kgf)"
       },
       {
-        "label": "Natural Draft",
-        "val": "50.000 Pa"
+        "label": "Spring Rate k",
+        "val": "2.719 N/mm"
+      },
+      {
+        "label": "Solid Height Hs",
+        "val": "24.00 mm"
+      },
+      {
+        "label": "Max Travel s_max",
+        "val": "56.00 mm"
+      },
+      {
+        "label": "Shear Stress tau",
+        "val": "271.60 MPa (41.79%)"
+      }
+    ]
+  },
+  "stack-height-calculator": {
+    "title": "Chimney Stack Height Calculator",
+    "description": "Calculate required chimney stack height for natural thermal draft using ideal-gas air and flue density difference.",
+    "discipline": "Natural Draught & Chimney Buoyancy Physics",
+    "standards": "Engineering ToolBox Natural Draught Ventilation equation dp = g*(rho_o - rho_r)*h (d_122.html) with ideal-gas density rho = P/(Rs*(T+273.15))",
+    "cadContext": "Include flue breeching pressure drops and safety margin in Required Draft dP before fixing structural chimney height H on industrial plant elevations.",
+    "formula": "rho = P/(Rs*(T+273.15)), dpm = (rho_o - rho_r)*9.80665, H = dP / dpm",
+    "inputs": [
+      {
+        "label": "Required Draft dP (Pa)",
+        "val": "50"
+      },
+      {
+        "label": "Flue Gas Temp Ts (deg C)",
+        "val": "300"
+      },
+      {
+        "label": "Ambient Air Temp Ta (deg C)",
+        "val": "25"
+      },
+      {
+        "label": "Atmospheric Pressure P (Pa)",
+        "val": "101325"
+      },
+      {
+        "label": "Gas Constant Rs (J/(kg*K))",
+        "val": "287.058"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Required Stack Height H",
+        "val": "8.976 m"
+      },
+      {
+        "label": "Draft Gradient dP/m",
+        "val": "5.571 Pa/m"
+      },
+      {
+        "label": "Ambient Density rho_o",
+        "val": "1.184 kg/m3"
+      },
+      {
+        "label": "Flue Density rho_r",
+        "val": "0.616 kg/m3"
       }
     ]
   },
   "stair-design-calculator": {
-    "title": "Stair Design Calculator",
-    "description": "Calculate stair riser height, tread count, total run, stair angle, and check IBC code compliance for comfortable stair design.",
-    "discipline": "Civil, Concrete & Architectural Building Engineering",
-    "standards": "ACI 318-19 (Building Code Requirements for Structural Concrete), Eurocode 2 (EN 1992-1-1), IBC 2024 / ASCE 7-22, ADA 2010 Standards for Accessible Design",
-    "cadContext": "Verify clear concrete cover, rebar lap splice lengths, and dimensional construction tolerances directly on your BIM sheets and shop drawings before issuing for site fabrication.",
-    "formula": "risers = ceil(rise / ideal), tread = risers − 1, angle = atan(riser / tread), 2R+T comfort rule",
+    "title": "Stair Design Calculator (Rise, Run, Tread & Angle)",
+    "description": "Calculate stair riser height, tread count, total horizontal run, pitch angle, Blondel proportion (2R+T), and diagonal stringer length.",
+    "discipline": "Architectural Stair Geometry & Ergonomics",
+    "standards": "Nicolas-Francois Blondel step rule 2R+T (Cours d'architecture, 1675-1683; Wikipedia: Stairs) with user-editable riser/tread limits",
+    "cadContext": "Adjust the customizable Max Riser and Min Tread inputs to verify compliance with your applicable local building code before dimensioning stair stringer sections.",
+    "formula": "nR = ceil(rise/idealR), R = rise/nR, nT = nR-1, run = nT*T, angle = atan(R/T), stringer = hypot(rise,run)",
     "inputs": [
       {
-        "label": "Total Rise ( mm )",
+        "label": "Total Rise (mm)",
         "val": "2800"
       },
       {
-        "label": "Ideal Riser Height ( mm )",
+        "label": "Target Ideal Riser (mm)",
         "val": "175"
       },
       {
-        "label": "Tread Depth ( mm )",
+        "label": "Tread Run Depth T (mm)",
         "val": "280"
+      },
+      {
+        "label": "Max Riser Limit (mm)",
+        "val": "190"
+      },
+      {
+        "label": "Min Tread Limit (mm)",
+        "val": "250"
       }
     ],
     "outputs": [
       {
-        "label": "Risers",
-        "val": "16"
+        "label": "Actual Riser Height R",
+        "val": "175.000 mm (16 risers)"
       },
       {
-        "label": "Riser Height",
-        "val": "175.0 mm"
+        "label": "Total Horizontal Run",
+        "val": "4200.00 mm (15 treads)"
       },
       {
-        "label": "Treads",
-        "val": "15"
+        "label": "Pitch Angle",
+        "val": "32.005 deg"
       },
       {
-        "label": "Total Run",
-        "val": "4200 mm"
+        "label": "Blondel Step (2R + T)",
+        "val": "630.000 mm"
       },
       {
-        "label": "Stair Angle",
-        "val": "32.01 °"
-      },
-      {
-        "label": "2R + T",
-        "val": "630.0 mm"
+        "label": "Stringer Length",
+        "val": "5047.77 mm"
       }
     ]
   },

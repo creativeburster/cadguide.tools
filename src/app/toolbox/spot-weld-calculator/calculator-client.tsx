@@ -2,10 +2,27 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info } from 'lucide-react';
+import { Settings, Zap, Info, RotateCcw, Download } from 'lucide-react';
+
+function parseFinite(val: string): number | null {
+  const trimmed = val.trim();
+  if (!trimmed) return null;
+  const n = Number(trimmed);
+  return Number.isFinite(n) ? n : null;
+}
+
+function formatNum(n: number): string {
+  if (!Number.isFinite(n)) return '—';
+  if (Math.abs(n) >= 10000) return n.toFixed(0);
+  if (Math.abs(n) >= 100) return n.toFixed(2);
+  if (Math.abs(n) >= 1) return n.toFixed(3);
+  return n.toFixed(6);
+}
+
+const DEFAULT_INPUTS = ['1.5', '250', '3.0', '5.0', '8.0'];
 
 export default function SpotWeldCalculatorClient() {
-  const [inputs, setInputs] = useState(["1.5","250","3"]);
+  const [inputs, setInputs] = useState<string[]>(DEFAULT_INPUTS);
 
   const updateInput = (idx: number, val: string) => {
     const next = [...inputs];
@@ -14,115 +31,173 @@ export default function SpotWeldCalculatorClient() {
   };
 
   const result = useMemo(() => {
-    const t = parseFloat(inputs[0]) || 1.5; // Sheet thickness in mm
-    const ss = (parseFloat(inputs[1]) || 250) * 1e6; // Shear strength in Pa
-    const FeKn = parseFloat(inputs[2]) || 3; // Electrode force in kN
-    const FeN = FeKn * 1000; // N
+    const t = parseFinite(inputs[0]);
+    const tau = parseFinite(inputs[1]);
+    const Fe = parseFinite(inputs[2]);
+    const kn = parseFinite(inputs[3]);
+    const ks = parseFinite(inputs[4]);
 
-    // Recommended nugget diameter dn = 5 * sqrt(t) (AWS C1.1 recommendation, mm)
-    const d = 5 * Math.sqrt(t);
-    const A = (Math.PI * d * d) / 4 / 1e6; // m²
+    if (t === null || tau === null || Fe === null || kn === null || ks === null) {
+      return { valid: false as const, error: 'Enter numeric values in all resistance spot weld geometry and material fields.' };
+    }
+    if (t <= 0 || tau <= 0 || Fe < 0 || kn <= 0 || ks <= 0) {
+      return { valid: false as const, error: 'Thickness t, shear strength tau, kn, and ks must be > 0; electrode force Fe >= 0.' };
+    }
 
-    // Shear failure tensile load capacity per spot weld (kN):
-    const F = (ss * A) / 1000;
+    const dn = kn * Math.sqrt(t);
+    const area = (Math.PI * dn * dn) / 4;
+    const shearLoad = (area * tau) / 1000;
+    const contactPressure = (Fe * 1000) / area;
+    const minSpacing = ks * dn;
 
-    // Minimum spot weld center-to-center pitch to avoid shunting current: s = 8 * d
-    const s = 8 * d;
-
-    // Electrode tip contact face diameter (typically de = 2*t + 3mm or dn + 1mm)
-    const de = Math.max(4, Math.round(5 * Math.sqrt(t) * 10) / 10);
-    const tipAreaMm2 = (Math.PI * de * de) / 4;
-    const contactPressureMpa = tipAreaMm2 > 0 ? FeN / tipAreaMm2 : 0;
-
-    // AWS C1.1 recommended electrode clamping force window (approx 1.5 ~ 2.5 kN per mm thickness)
-    const recMinFe = Math.round(1.6 * Math.pow(t, 1.2) * 10) / 10;
-    const recMaxFe = Math.round(2.6 * Math.pow(t, 1.2) * 10) / 10;
-    const forceStatus = FeKn < recMinFe
-      ? { pass: false, text: `LOW FORCE (Risk of severe expulsion/flash, recommend >= ${recMinFe} kN)` }
-      : FeKn > recMaxFe * 1.3
-      ? { pass: false, text: `HIGH FORCE (Risk of excessive indentation >15%, recommend <= ${recMaxFe} kN)` }
-      : { pass: true, text: `OPTIMAL CLAMPING FORCE (${recMinFe} ~ ${recMaxFe} kN)` };
-
-    return { d, F, s, contactPressureMpa, forceStatus, FeKn, de };
+    return { valid: true as const, t, tau, Fe, kn, ks, dn, area, shearLoad, contactPressure, minSpacing };
   }, [inputs]);
 
-  const formatNum = (n: number) => {
-    if (isNaN(n) || !isFinite(n)) return '—';
-    if (Math.abs(n) >= 10000) return n.toFixed(0);
-    if (Math.abs(n) >= 100) return n.toFixed(2);
-    if (Math.abs(n) >= 1) return n.toFixed(3);
-    return n.toFixed(6);
+  const downloadCsv = () => {
+    if (!result.valid) return;
+    const lines = [
+      '# Resistance Spot Weld Nugget & Shear Capacity Report',
+      '# Formulas: dn = kn*sqrt(t), A = pi*dn^2/4, F_shear = A*tau/1000, p_contact = Fe*1000/A, s_min = ks*dn',
+      'Parameter,Value,Unit',
+      `Governing Sheet Thickness t,${result.t},mm`,
+      `Weld Metal Shear Strength tau,${result.tau},MPa`,
+      `Electrode Clamping Force Fe,${result.Fe},kN`,
+      `Nugget Sizing Factor kn,${result.kn},-`,
+      `Minimum Spacing Factor ks,${result.ks},-`,
+      `Weld Nugget Diameter dn,${result.dn.toFixed(6)},mm`,
+      `Nugget Shear Cross-Section Area,${result.area.toFixed(6)},mm2`,
+      `Single-Spot Shear Load Capacity,${result.shearLoad.toFixed(6)},kN`,
+      `Mean Electrode Contact Stress,${result.contactPressure.toFixed(6)},MPa`,
+      `Minimum Spot Weld Spacing s_min,${result.minSpacing.toFixed(6)},mm`,
+    ].join('\n');
+    const blob = new Blob([lines], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'spot-weld-report.csv';
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   return (
-    <div className="space-y-8">
+    <div data-testid="calculator-client" className="space-y-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
-              <Settings className="w-5 h-5" />
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-4">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
+                <Settings className="w-5 h-5" />
+              </div>
+              <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs</h2>
             </div>
-            <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs</h2>
+            <button
+              type="button"
+              data-testid="btn-reset"
+              onClick={() => setInputs(DEFAULT_INPUTS)}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              Reset
+            </button>
           </div>
 
-          <div key="0">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Sheet Thickness (mm)</label>
-            <input type="text" value={inputs[0]} onChange={e => updateInput(0, e.target.value)} placeholder="1.5"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+          <div className="space-y-3">
+            <div>
+              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">Sheet Thickness t (mm)</label>
+              <input type="text" data-testid="input-thickness" value={inputs[0]} onChange={e => updateInput(0, e.target.value)} className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold" />
+            </div>
+            <div>
+              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">Weld Shear Strength &tau; (MPa)</label>
+              <input type="text" data-testid="input-shear" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold" />
+            </div>
+            <div>
+              <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">Electrode Clamping Force Fe (kN)</label>
+              <input type="text" data-testid="input-force" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold" />
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div>
+                <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">Nugget Factor kn</label>
+                <input type="text" data-testid="input-kn" value={inputs[3]} onChange={e => updateInput(3, e.target.value)} className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold" />
+              </div>
+              <div>
+                <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1">Spacing Factor ks</label>
+                <input type="text" data-testid="input-ks" value={inputs[4]} onChange={e => updateInput(4, e.target.value)} className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold" />
+              </div>
+            </div>
           </div>
-          <div key="1">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Shear Strength (MPa)</label>
-            <input type="text" value={inputs[1]} onChange={e => updateInput(1, e.target.value)} placeholder="250"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
-          </div>
-          <div key="2">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Electrode Force (kN)</label>
-            <input type="text" value={inputs[2]} onChange={e => updateInput(2, e.target.value)} placeholder="3"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
-          </div>
-
-          <button onClick={() => setInputs(["1.5","250","3"])}
-            className="w-full py-3 rounded-xl text-base font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
-            Reset
-          </button>
         </div>
 
         <div className="lg:col-span-2 space-y-6">
           <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
-                <Zap className="w-5 h-5" />
+            <div className="flex flex-wrap items-center justify-between gap-3 mb-6">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <h2 className="text-lg font-black text-slate-900 tracking-tight">Calculated Weld Outputs</h2>
               </div>
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">Results</h2>
+              <button
+                type="button"
+                data-testid="export-csv-btn"
+                onClick={downloadCsv}
+                disabled={!result.valid}
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-black bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-40 transition-all cursor-pointer"
+              >
+                <Download className="w-3.5 h-3.5" />
+                Export CSV
+              </button>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Nugget Diameter (d_n)</div>
-                <div className="text-3xl font-black text-blue-700">{formatNum(result.d)}<span className="text-lg text-blue-400"> mm</span></div>
+            {!result.valid && (
+              <div data-testid="validation-msg" className="mb-4 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-sm font-bold text-amber-800">
+                {result.error}
               </div>
-              <div className="bg-green-50 rounded-2xl p-6 border border-green-100">
-                <div className="text-base font-black text-green-400 uppercase tracking-wider mb-2">Shear Load Capacity</div>
-                <div className="text-3xl font-black text-green-700">{formatNum(result.F)}<span className="text-lg text-green-400"> kN</span></div>
+            )}
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className="bg-blue-50 rounded-2xl p-5 border border-blue-100">
+                <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-1">Nugget Diameter dn</div>
+                <div data-testid="output-dn" className="text-2xl font-black text-blue-800">
+                  {result.valid ? formatNum(result.dn) : '—'}
+                  {result.valid && <span className="text-base text-blue-500 ml-1">mm</span>}
+                </div>
               </div>
-              <div className="bg-purple-50 rounded-2xl p-4 border border-purple-100">
-                <div className="text-xs font-black text-purple-400 uppercase tracking-wider mb-1">Tip Contact Pressure</div>
-                <div className="text-xl font-black text-purple-700">{formatNum(result.contactPressureMpa)}<span className="text-sm font-medium text-purple-500"> MPa (Face Ø{result.de}mm)</span></div>
+              <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Nugget Shear Area</div>
+                <div data-testid="output-area" className="text-2xl font-black text-slate-800">
+                  {result.valid ? formatNum(result.area) : '—'}
+                  {result.valid && <span className="text-base text-slate-500 ml-1">mm&sup2;</span>}
+                </div>
               </div>
-              <div className="bg-orange-50 rounded-2xl p-4 border border-orange-100">
-                <div className="text-xs font-black text-orange-400 uppercase tracking-wider mb-1">Anti-Shunting Pitch Spacing</div>
-                <div className="text-xl font-black text-orange-700">{formatNum(result.s)}<span className="text-sm font-medium text-orange-500"> mm (Min 8·d_n)</span></div>
+              <div className="bg-green-50 rounded-2xl p-5 border border-green-100">
+                <div className="text-xs font-black text-green-600 uppercase tracking-wider mb-1">Shear Capacity F</div>
+                <div data-testid="output-shear" className="text-2xl font-black text-green-800">
+                  {result.valid ? formatNum(result.shearLoad) : '—'}
+                  {result.valid && <span className="text-base text-green-600 ml-1">kN</span>}
+                </div>
               </div>
-              <div className={`col-span-2 rounded-2xl p-4 border ${result.forceStatus.pass ? 'bg-emerald-50 border-emerald-100 text-emerald-800' : 'bg-amber-50 border-amber-100 text-amber-800'}`}>
-                <div className="text-xs font-black uppercase tracking-wider mb-1">AWS C1.1 Clamping Force Verification</div>
-                <div className="text-sm font-bold">{result.forceStatus.text}</div>
+              <div className="bg-orange-50 rounded-2xl p-5 border border-orange-100">
+                <div className="text-xs font-black text-orange-600 uppercase tracking-wider mb-1">Electrode Contact Stress</div>
+                <div data-testid="output-pressure" className="text-2xl font-black text-orange-800">
+                  {result.valid ? formatNum(result.contactPressure) : '—'}
+                  {result.valid && <span className="text-base text-orange-600 ml-1">MPa</span>}
+                </div>
+              </div>
+              <div className="bg-slate-50 rounded-2xl p-5 border border-slate-200 sm:col-span-2 lg:col-span-2">
+                <div className="text-xs font-black text-slate-500 uppercase tracking-wider mb-1">Minimum Spot Spacing s_min (ks &middot; dn)</div>
+                <div data-testid="output-spacing" className="text-2xl font-black text-slate-800">
+                  {result.valid ? formatNum(result.minSpacing) : '—'}
+                  {result.valid && <span className="text-base text-slate-500 ml-1">mm</span>}
+                </div>
               </div>
             </div>
 
             <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-sm text-slate-600 font-medium">
-                <Info className="w-4 h-4 text-slate-400" />
-                d_n = 5·√t (AWS C1.1) • Shear Load = (π·d_n²/4)·τ • Min Spacing s = 8·d_n to prevent secondary current shunting
+              <div className="flex items-start gap-2 text-sm text-slate-600 font-medium">
+                <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                <span>
+                  Parametric resistance spot weld model: d_n = k_n &middot; &radic;t, A = &pi;d_n&sup2;/4, shear capacity F = A &middot; &tau; / 1000 (kN), contact pressure p = Fe &middot; 1000 / A (MPa), and minimum center-to-center spacing s_min = k_s &middot; d_n. Adjust k_n, k_s, and &tau; per your welding procedure qualification.
+                </span>
               </div>
             </div>
           </div>

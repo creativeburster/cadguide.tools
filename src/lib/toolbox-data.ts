@@ -3397,8 +3397,8 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'stack-height-calculator',
     title: 'Chimney Stack Height Calculator',
-    description: 'Calculate required chimney height for natural draft and dispersion. Free browser-based engineering calculator.',
-    detailDesc: 'H = draft / (rho*g*(1/Tamb-1/Tstack))',
+    description: 'Calculate required chimney height for natural draft from flue gas and ambient air temperatures. Free browser-based engineering calculator.',
+    detailDesc: 'H = dP / ((rho_o - rho_r) * g)',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-16',
@@ -4003,13 +4003,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'stair-design-calculator',
     title: 'Stair Design Calculator (Rise, Run, Tread & Angle)',
-    description: 'Calculate stair riser height, tread count, total run, stair angle, and check IBC code compliance for comfortable stair design.',
-    detailDesc: 'Stair design calculator: number of risers = ceil(total_rise / ideal_riser), actual riser = total_rise / num_risers, number of treads = num_risers - 1, total run = treads * tread_depth, stair angle = atan(riser / tread). Validates against IBC limits (max 7-3/4" residential riser, min 10" tread) and comfort ratio (2R+T = 24-25").',
+    description: 'Calculate stair riser height, tread count, total run, stair angle, Blondel proportion (2R+T), and stringer length against customizable riser/tread limits.',
+    detailDesc: 'Stair design calculator: number of risers = ceil(total_rise / ideal_riser), actual riser = total_rise / num_risers, number of treads = num_risers - 1, total run = treads * tread_depth, pitch angle = atan(riser / tread), Blondel step = 2R + T, stringer = hypot(rise, run).',
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-17',
     origin: 'native',
-    keywords: ['stair calculator', 'stair design', 'riser height', 'tread depth', 'stair angle', 'number of steps', 'stair stringer', 'ibc stair code', 'residential stairs', 'commercial stairs', '2r+t rule', 'comfortable stair proportion']
+    keywords: ['stair calculator', 'stair design', 'riser height', 'tread depth', 'stair angle', 'number of steps', 'stair stringer', 'blondel rule', '2r+t rule', 'stair proportion']
   },
   {
     slug: 'brick-block-quantity-calculator',

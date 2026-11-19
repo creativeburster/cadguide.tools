@@ -5,7 +5,7 @@ import StairDesignCalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Stair Design Calculator (Rise, Run, Tread & Angle)",
-  description: "Calculate stair riser height, tread count, total run, stair angle, and check IBC code compliance for comfortable stair design.",
+  description: "Calculate stair riser height, tread count, total run, stair angle, Blondel step rule (2R+T), and stringer length against customizable riser/tread limits.",
   path: '/toolbox/stair-design-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function StairDesignCalculatorPage() {
               Stair Design <span className="text-orange-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate riser height, tread count, total run, stair angle, and verify IBC code compliance.
+              Calculate riser height, tread count, total run, stair angle, Blondel 2R+T proportion, and diagonal stringer length.
             </p>
           </div>
         </section>
