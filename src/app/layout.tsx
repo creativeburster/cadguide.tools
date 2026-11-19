@@ -57,7 +57,7 @@ export default function RootLayout({
                   var sw = window.screen ? window.screen.width : 0;
                   var sh = window.screen ? window.screen.height : 0;
                   var res = sw + 'x' + sh;
-                  var botScreens = { '1280x1200': 1, '1366x1366': 1, '1280x1280': 1, '1280x1600': 1, '800x600': 1 };
+                  var botScreens = { '1280x1200': 1, '1366x1366': 1, '1280x1280': 1, '1600x1600': 1, '1280x1600': 1, '1600x1200': 1, '1800x1125': 1, '800x600': 1 };
                   if (
                     navigator.webdriver === true ||
                     /HeadlessChrome|PhantomJS|Playwright|Puppeteer|SlimerJS|CasperJS/i.test(ua) ||
