@@ -30,14 +30,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   // released
   {
     slug: 'shortcuts',
-    title: 'Cross-Platform CAD Shortcuts Matrix',
-    description: 'Compare and print keyboard command shortcuts across AutoCAD, GstarCAD, ZWCAD, and DWG FastView.',
-    detailDesc: 'An interactive matrix comparing over 30 essential drafting shortcuts across major CAD packages. Includes one-click command copying and optimized Landscape style layouts for office desk cheatsheet printing.',
+    title: 'ZWCAD Keyboard Shortcuts Matrix',
+    description: 'Search, copy, export CSV, and print verified ZWCAD command aliases, function keys, and file shortcuts.',
+    detailDesc: 'A verified cheat sheet of 43 ZWCAD keyboard shortcuts, single-key command aliases, drawing mode toggles, and file management commands sourced directly from official ZWSOFT documentation, with one-click copying, CSV export, and printable layout.',
     category: 'cheatsheet',
     status: 'released',
     origin: 'native',
     releasedDate: '2026-06-04',
-    keywords: ['cad shortcuts', 'autocad cheat sheet', 'gstarcad hotkeys', 'zwcad shortcuts', 'print shortcuts']
+    keywords: ['zwcad shortcuts', 'zwcad command aliases', 'zwcad.pgp', 'reinit', 'aliasedit', 'print shortcuts']
   },
   {
     slug: 'dwg-version-checker',
@@ -4277,14 +4277,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'slope-circular-stability-calculator',
-    title: "Slope Stability Calculator (Bishop Simplified)",
-    description: "Calculate factor of safety for circular slope failures using Bishop simplified method.",
-    detailDesc: "FS = sum(c*b+(W-u*b)*tan(phi))/(sum(W*sin(alpha))*m_alpha). m_alpha = cos(alpha)+sin(alpha)*tan(phi)/FS. Iterative. Includes pore pressure, surcharge, tension crack, seismic.",
+    title: "Circular Slope Stability Calculator (Method of Slices)",
+    description: "Calculate circular slip-surface factor of safety using the Ordinary Method of Slices (Fellenius).",
+    detailDesc: "Ordinary Method of Slices (Fellenius / Swedish Circle Method): computes slice base weight, effective normal reaction with pore-pressure ratio ru, resisting shear strength, and driving shear moment across circular slip surfaces.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["slope stability bishop","bishop simplified method","circular failure","factor of safety slope","slope stability analysis","method of slices","geotechnical slope","landslide analysis","slope failure","circular slip surface"]
+    keywords: ["slope stability fellenius","ordinary method of slices","circular failure","factor of safety slope","slope stability analysis","method of slices","geotechnical slope","circular slip surface"]
   },
   {
     slug: 'cable-tray-fill-calculator',
@@ -4564,13 +4564,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'short-circuit-current-calculator',
     title: "Short Circuit Current Calculator (MVA Method)",
-    description: "Calculate three-phase and single-phase short circuit current using MVA method.",
-    detailDesc: "MVA method: SC_MVA = V^2/Z_total. I_sc = SC_MVA/(sqrt(3)*V). Includes utility source, transformer, cable, motor contribution. Compare to symmetrical/asymmetrical and X/R ratio.",
+    description: "Calculate three-phase symmetrical short circuit current using the simplified MVA impedance method.",
+    detailDesc: "MVA impedance screening method: combines upstream grid fault MVA and transformer %Z to evaluate three-phase symmetrical fault current I_sc, infinite-bus max current, and full-load rated current.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["short circuit current","mva method","fault current","three phase fault","single phase fault","transformer impedance","cable impedance","motor contribution","xr ratio","symmetrical current","protection coordination"]
+    keywords: ["short circuit current","mva method","fault current","three phase fault","transformer impedance","symmetrical current"]
   },
   {
     slug: 'grounding-grid-calculator',

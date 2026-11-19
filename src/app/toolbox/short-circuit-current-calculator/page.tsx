@@ -5,7 +5,7 @@ import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Short Circuit Current Calculator (MVA Method)",
-  description: "Calculate three-phase and single-phase short circuit current using MVA method.",
+  description: "Calculate three-phase symmetrical short circuit current using the simplified MVA impedance method.",
   path: '/toolbox/short-circuit-current-calculator',
 });
 
@@ -32,7 +32,7 @@ export default function CalculatorPage() {
               Short Circuit Current Calculator (MVA Method)
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate three-phase and single-phase short circuit current using MVA method.
+              Calculate three-phase symmetrical short circuit current using the simplified MVA impedance method.
             </p>
           </div>
         </section>

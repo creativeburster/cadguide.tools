@@ -12178,149 +12178,167 @@
   },
   "sheet-metal-bend-calculator": {
     "title": "Sheet Metal Bend Allowance Calculator",
-    "description": "Calculate bend allowance, bend deduction, and flat pattern length for sheet metal.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "BA = (a/360)*2*pi*(R+K*T), BD = 2*(R+T)-BA",
+    "description": "Calculate bend allowance, outside setback, bend deduction, and flat pattern length for sheet metal flanges.",
+    "discipline": "Sheet Metal Forming & Flat Pattern Development",
+    "standards": "Wikipedia: Bending (metalworking) (https://en.wikipedia.org/wiki/Bending_(metalworking))",
+    "cadContext": "Extract inside bend radius R, sheet thickness T, bend angle A, and outside mold-line leg lengths L1 and L2 from 3D sheet metal CAD models before laser cutting flat blanks.",
+    "formula": "BA = A*(pi/180)*(R + K*T) ; OSSB = (R + T)*tan(A/2) ; BD = 2*OSSB - BA ; FL = L1 + L2 - BD",
     "inputs": [
       {
-        "label": "Bend Angle (deg)",
+        "label": "Bend Angle A (deg)",
         "val": "90"
       },
       {
-        "label": "Inside Radius (mm)",
+        "label": "Inside Radius R (mm)",
         "val": "5"
       },
       {
-        "label": "Thickness (mm)",
+        "label": "Thickness T (mm)",
         "val": "2"
       },
       {
-        "label": "K Factor",
+        "label": "K-Factor",
         "val": "0.33"
       },
       {
-        "label": "Leg 1 (mm)",
-        "val": "50"
-      },
-      {
-        "label": "Leg 2 (mm)",
-        "val": "50"
+        "label": "Outer Legs L1 / L2 (mm)",
+        "val": "50 / 50"
       }
     ],
     "outputs": [
       {
-        "label": "Bend Allowance",
+        "label": "Bend Allowance (BA)",
         "val": "8.891 mm"
       },
       {
-        "label": "Bend Deduction",
+        "label": "Outside Setback (OSSB)",
+        "val": "7.000 mm"
+      },
+      {
+        "label": "Bend Deduction (BD)",
         "val": "5.109 mm"
       },
       {
-        "label": "Flat Length",
+        "label": "Flat Length (L1 + L2 - BD)",
         "val": "94.891 mm"
       }
     ]
   },
   "sheet-metal-blank-calculator": {
     "title": "Sheet Metal Blank Size Calculator",
-    "description": "Calculate blank development length for bent sheet metal parts.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "L = L1 + L2 + BA, BA = (angle/360)*2pi*(R+K*T)",
+    "description": "Calculate flat blank development length from straight tangent legs, bend allowance, and neutral-axis K-factor.",
+    "discipline": "Sheet Metal Forming & Flat Pattern Development",
+    "standards": "Wikipedia: Bending (metalworking) (https://en.wikipedia.org/wiki/Bending_(metalworking))",
+    "cadContext": "Sum straight tangent flange lengths from CAD bend-line tangency planes with bend allowance BA to determine total laser/shear blank length.",
+    "formula": "BA = A*(pi/180)*(R + K*T) ; Blank Length = Straight Leg 1 + Straight Leg 2 + BA",
     "inputs": [
       {
-        "label": "Leg 1 (mm)",
-        "val": "40"
+        "label": "Straight Leg 1 / Leg 2 (mm)",
+        "val": "40 / 30"
       },
       {
-        "label": "Leg 2 (mm)",
-        "val": "30"
-      },
-      {
-        "label": "Bend Angle (deg)",
+        "label": "Bend Angle A (deg)",
         "val": "90"
       },
       {
-        "label": "Inside Radius (mm)",
+        "label": "Inside Radius R (mm)",
         "val": "4"
       },
       {
-        "label": "Thickness (mm)",
-        "val": "2"
-      },
-      {
-        "label": "K Factor",
-        "val": "0.33"
+        "label": "Thickness T / K-Factor",
+        "val": "2 mm / 0.33"
       }
     ],
     "outputs": [
       {
-        "label": "Bend Allowance",
+        "label": "Bend Allowance (BA)",
         "val": "7.320 mm"
       },
       {
-        "label": "Blank Length",
+        "label": "Blank Length (L1 + L2 + BA)",
         "val": "77.320 mm"
+      },
+      {
+        "label": "Outside Setback (OSSB)",
+        "val": "6.000 mm"
+      },
+      {
+        "label": "Bend Deduction (BD)",
+        "val": "4.680 mm"
       }
     ]
   },
   "short-circuit-current-calculator": {
     "title": "Short Circuit Current Calculator (MVA Method)",
-    "description": "Calculate three-phase and single-phase short circuit current using MVA method.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "I_sc = (kVA × 1000) / (√3 · V_secondary · (%Z/100)) (IEC 60909 / IEEE 141 Red Book)",
+    "description": "Estimate three-phase symmetrical short-circuit fault current and fault MVA using the simplified scalar MVA impedance method.",
+    "discipline": "Electrical Power Distribution Sizing",
+    "standards": "Simplified Three-Phase Symmetrical Fault Current (MVA Impedance Method)",
+    "cadContext": "Screen preliminary transformer secondary fault MVA and symmetrical interrupting duty for MEP single-line diagrams prior to formal protective device coordination.",
+    "formula": "I_fl = kVA*1000/(sqrt(3)*V) ; MVA_xfmr = (kVA/1000)/(%Z/100) ; MVA_sc = 1/(1/MVA_grid + 1/MVA_xfmr) ; I_sc = MVA_sc*1e6/(sqrt(3)*V)",
     "inputs": [
       {
         "label": "Transformer Apparent Power (kVA)",
         "val": "1250"
       },
       {
-        "label": "Secondary Line-to-Line Voltage (V)",
+        "label": "Secondary Voltage (V)",
         "val": "400"
       },
       {
-        "label": "Transformer Percent Impedance (%Z)",
+        "label": "Percent Impedance (%Z)",
         "val": "5.5"
       },
       {
-        "label": "Upstream Utility Grid Fault Level (MVA)",
+        "label": "Upstream Utility Fault Level (MVA)",
         "val": "500"
       }
     ],
     "outputs": [
       {
-        "label": "Symmetrical Short Circuit Current (Isc)",
-        "val": "31.38 kA"
+        "label": "Symmetrical Short-Circuit Current (Isc)",
+        "val": "31.378 kA"
       },
       {
-        "label": "Full Load Rated Current (I_fl)",
-        "val": "1804.2 A"
+        "label": "Full-Load Rated Current (I_fl)",
+        "val": "1804.22 A"
       },
       {
-        "label": "Infinite Bus Theoretical Max (Isc_inf)",
-        "val": "32.80 kA"
+        "label": "Infinite-Bus Theoretical Max",
+        "val": "32.804 kA"
       },
       {
-        "label": "Short Circuit Apparent Power",
-        "val": "21.7 MVA"
+        "label": "Combined Short-Circuit Power",
+        "val": "21.739 MVA"
       }
     ]
   },
   "shortcuts": {
-    "title": "Cross-Platform CAD Shortcuts Matrix",
-    "description": "Search and compare essential drafting command shortcuts across AutoCAD, GstarCAD, ZWCAD, and DWG FastView. Print the optimized cheat sheet instantly.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Standardized parametric evaluation for Cross-Platform CAD Shortcuts Matrix",
-    "inputs": [],
-    "outputs": []
+    "title": "ZWCAD Keyboard Shortcuts Matrix",
+    "description": "Searchable reference of 43 ZWCAD command aliases, function keys, and file shortcuts verified against official ZWSOFT documentation.",
+    "discipline": "CAD Drafting Productivity & Command Aliases",
+    "standards": "ZWSOFT Official ZWCAD User Guide: Shortcut Keys (https://www.zwsoft.com/user-guide/shortcut-keys-of-zwcad)",
+    "cadContext": "Customize ZWCAD shortcuts via ALIASEDIT or zwcad.pgp and reload modified command aliases in-session using the REINIT command.",
+    "formula": "ZWCAD PGP Alias Format: ShortcutKey,*Command Full Name (reload via REINIT)",
+    "inputs": [
+      {
+        "label": "Verified Entries Loaded",
+        "val": "43 ZWCAD shortcuts (A-Z, F1-F12, Ctrl+)"
+      },
+      {
+        "label": "PGP Customization Commands",
+        "val": "ALIASEDIT, zwcad.pgp, REINIT"
+      }
+    ],
+    "outputs": [
+      {
+        "label": "Drawing Aliases (Category: Draw)",
+        "val": "4 (A, C, H, L)"
+      },
+      {
+        "label": "Default Example Alias",
+        "val": "L -> LINE (Draw a line.) ; C -> CIRCLE (Draw a circle.)"
+      }
+    ]
   },
   "sketchup-shortcuts-sheet": {
     "title": "SketchUp Pro Keyboard Shortcuts and Commands Cheat Sheet",
@@ -12333,50 +12351,42 @@
     "outputs": []
   },
   "slope-circular-stability-calculator": {
-    "title": "Slope Stability Calculator (Bishop Simplified)",
-    "description": "Calculate factor of safety for circular slope failures using Bishop simplified method.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "FS = (tanφ / tanβ) + [c / (γ·H·sinβ·cosβ)] (Taylor's Chart Formulation / Bishop Simplified Method)",
+    "title": "Circular Slope Stability Calculator (Method of Slices)",
+    "description": "Calculate circular slip-surface Factor of Safety using the Ordinary Method of Slices (Fellenius / Swedish Circle Method).",
+    "discipline": "Geotechnical Slope Limit Equilibrium",
+    "standards": "Wikipedia: Slope stability analysis — Ordinary method of slices (Fellenius / Swedish circle method) (https://en.wikipedia.org/wiki/Slope_stability_analysis)",
+    "cadContext": "Define embankment height H, slope angle beta, trial slip-circle center (xc, yc), pore pressure ratio ru, and slice count N directly from CAD cross-section profiles.",
+    "formula": "R = hypot(xc, yc) ; FS = Sum[c*l_i + max(0, W_i*cos(alpha_i) - ru*W_i/cos(alpha_i))*tan(phi)] / Sum[W_i*sin(alpha_i)]",
     "inputs": [
       {
-        "label": "Embankment Height H (m)",
-        "val": "8.0"
+        "label": "Slope H / Angle beta / Gamma",
+        "val": "8.0 m / 30 deg / 19.0 kN/m3"
       },
       {
-        "label": "Slope Inclination Angle β (°)",
-        "val": "30"
+        "label": "Shear Strength c / phi",
+        "val": "20 kPa / 26 deg"
       },
       {
-        "label": "Cohesion c (kPa)",
-        "val": "20"
-      },
-      {
-        "label": "Soil Friction Angle φ (°)",
-        "val": "26"
-      },
-      {
-        "label": "Soil Unit Weight γ (kN/m³)",
-        "val": "19.0"
+        "label": "Slip Center (xc, yc) / ru / Slices",
+        "val": "(4, 12) m / 0 / 10"
       }
     ],
     "outputs": [
       {
-        "label": "Slope Safety Factor (FS)",
-        "val": "1.50 FS"
+        "label": "Circular Factor of Safety (FS)",
+        "val": "2.064"
       },
       {
-        "label": "Frictional Strength Ratio",
-        "val": "0.84"
+        "label": "Slip Radius R / Exit x",
+        "val": "12.649 m / 16.000 m"
       },
       {
-        "label": "Taylor Stability Number (c/γH)",
-        "val": "0.132"
+        "label": "Total Slice Mass Weight",
+        "val": "1038.4 kN/m"
       },
       {
-        "label": "Driving Gravitational Mass",
-        "val": "1053 kN/m"
+        "label": "Sum Resisting / Driving",
+        "val": "829.8 / 402.1 kN/m"
       }
     ]
   },

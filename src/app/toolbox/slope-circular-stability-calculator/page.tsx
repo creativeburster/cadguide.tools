@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Slope Stability Calculator (Bishop Simplified)",
-  description: "Calculate factor of safety for circular slope failures using Bishop simplified method.",
+  title: "Circular Slope Stability Calculator (Method of Slices)",
+  description: "Calculate circular slip-surface factor of safety using the Ordinary Method of Slices (Fellenius).",
   path: '/toolbox/slope-circular-stability-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Slope Stability Calculator (Bishop Simplified)", path: '/toolbox/slope-circular-stability-calculator' },
+    { name: "Circular Slope Stability Calculator (Method of Slices)", path: '/toolbox/slope-circular-stability-calculator' },
   ]);
 
   return (
@@ -29,10 +29,10 @@ export default function CalculatorPage() {
               Engineering Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Slope Stability Calculator (Bishop Simplified)
+              Circular Slope Stability Calculator (Method of Slices)
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate factor of safety for circular slope failures using Bishop simplified method.
+              Calculate circular slip-surface factor of safety using the Ordinary Method of Slices (Fellenius).
             </p>
           </div>
         </section>
