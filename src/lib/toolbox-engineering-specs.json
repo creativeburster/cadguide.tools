@@ -11986,181 +11986,193 @@
   },
   "settlement-calculator": {
     "title": "Foundation Settlement Calculator",
-    "description": "Calculate immediate settlement of shallow foundations on soil.",
-    "discipline": "Geotechnical, Foundation & Transportation Civil Engineering",
-    "standards": "Eurocode 7 (EN 1997-1 Geotechnical Design), FHWA Geotechnical Engineering Circulars, ASTM D1557 / D2487, AASHTO Green Book (Geometric Design of Highways)",
-    "cadContext": "Reconcile geotechnical borehole water table elevations, soil stratum boundaries, and digital terrain model (DTM) Tin surfaces in Civil 3D or MicroStation before finalizing grading and foundation profiles.",
-    "formula": "S = q*B*(1-v^2)*Iw/E",
+    "description": "Calculate immediate elastic settlement of shallow foundations on soil.",
+    "discipline": "Geotechnical Foundation Mechanics",
+    "standards": "Boussinesq Elastic Half-Space Settlement Theory",
+    "cadContext": "Extract shallow footing width B, bearing pressure q, and elastic soil parameters (E, v, Iw) from foundation layout drawings prior to settlement checks.",
+    "formula": "S = q * B * (1 - v^2) * Iw / E",
     "inputs": [
       {
-        "label": "Pressure q (kPa)",
+        "label": "Bearing Pressure q (kPa)",
         "val": "200"
       },
       {
-        "label": "Width B (m)",
+        "label": "Foundation Width B (m)",
         "val": "2"
       },
       {
-        "label": "Poisson v",
+        "label": "Poisson Ratio v",
         "val": "0.3"
       },
       {
-        "label": "Youngs E (MPa)",
+        "label": "Elastic Modulus E (MPa)",
         "val": "20"
       },
       {
-        "label": "Influence Iw",
+        "label": "Influence Factor Iw",
         "val": "0.56"
       }
     ],
     "outputs": [
       {
-        "label": "Settlement",
+        "label": "Immediate Elastic Settlement",
         "val": "10.192 mm"
+      },
+      {
+        "label": "Settlement / Width Ratio (S/B)",
+        "val": "0.510 %"
       }
     ]
   },
   "shaft-critical-speed-calculator": {
     "title": "Shaft Critical Speed Calculator",
-    "description": "Calculate critical (resonant) speed of a rotating shaft from stiffness and mass.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "Nc = 60/(2pi)*sqrt(k/m)",
+    "description": "Calculate first lateral critical speed and natural frequency of a rotating shaft using the single-degree-of-freedom Jeffcott model.",
+    "discipline": "Rotordynamics & Machine Elements",
+    "standards": "Single-Degree-of-Freedom (Jeffcott) Rotor Critical Speed",
+    "cadContext": "Evaluate lateral shaft bending stiffness k from CAD stepped-shaft geometry and lumped rotor mass m to check operating speed separation against first critical RPM.",
+    "formula": "omega_n = sqrt(k / m) ; fn = omega_n / (2 * pi) ; Nc = 60 * fn ; delta_st = m * 9.80665 / k",
     "inputs": [
       {
-        "label": "Stiffness k (N/m)",
+        "label": "Lateral Stiffness k (N/m)",
         "val": "100000"
       },
       {
-        "label": "Mass m (kg)",
+        "label": "Effective Rotor Mass m (kg)",
         "val": "5"
       }
     ],
     "outputs": [
       {
-        "label": "Critical Speed",
+        "label": "Critical Speed (Nc)",
         "val": "1350.47 RPM"
       },
       {
-        "label": "Natural Freq",
+        "label": "Natural Frequency (fn)",
         "val": "22.508 Hz"
+      },
+      {
+        "label": "Static Deflection (delta_st)",
+        "val": "0.490332 mm"
       }
     ]
   },
   "shaft-diameter-calculator": {
     "title": "Shaft Diameter Calculator",
-    "description": "Calculate minimum shaft diameter from torque and allowable shear stress.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "d = (16*T/(pi*tau))^(1/3)",
+    "description": "Calculate minimum solid shaft diameter from transmitted torque, allowable shear stress, and keyway allowable stress factor.",
+    "discipline": "Machine Elements & Power Transmission",
+    "standards": "Engineering ToolBox: Torsion of Shafts (https://www.engineeringtoolbox.com/torsion-shafts-d_947.html)",
+    "cadContext": "Size solid cylindrical drive shafts from transmitted torque and material allowable shear stress before adding CAD keyway pockets and bearing shoulders.",
+    "formula": "d_solid = (16 * T / (pi * tau_allow))^(1/3) ; d_keyed = (16 * T / (pi * kw * tau_allow))^(1/3)",
     "inputs": [
       {
-        "label": "Torque (Nm)",
+        "label": "Transmitted Torque T (N*m)",
         "val": "500"
       },
       {
-        "label": "Shear Stress (MPa)",
+        "label": "Allowable Shear Stress (MPa)",
         "val": "40"
       },
       {
-        "label": "Keyway Factor",
+        "label": "Keyway Allowable Stress Factor kw",
         "val": "0.75"
       }
     ],
     "outputs": [
       {
-        "label": "Min Diameter",
-        "val": "54.000 mm"
+        "label": "Keyed Shaft Min Dia (Exact)",
+        "val": "43.948 mm"
       },
       {
-        "label": "Solid Shaft",
-        "val": "40.000 mm"
+        "label": "Recommended Ceiling Size",
+        "val": "44 mm"
+      },
+      {
+        "label": "Solid Shaft (kw = 1.0)",
+        "val": "39.929 mm"
       }
     ]
   },
   "shaft-torsion-stress-calculator": {
     "title": "Shaft Torsion Stress & Twist Calculator",
-    "description": "Calculate torsional shear stress and twist angle for solid and hollow circular shafts under torque loading. Includes power-speed-torque conversion.",
-    "discipline": "Machine Elements & Rotational Dynamics",
-    "standards": "ASME B106.1M (Design of Transmission Shafting), DIN 6885 / ISO 773 (Parallel Keys & Keyways), ISO 1940-1 (Balance Quality of Rigid Rotors)",
-    "cadContext": "Check fillet radii at shaft shoulders and keyway root corners in your 3D CAD model to mitigate geometric stress concentration factors (Kt) under combined bending and torsion.",
-    "formula": "Solid: J = πD⁴/32. Hollow: J = π(D⁴−d⁴)/32. Shear stress τ = T×r/J. Twist angle θ = TL/(GJ) in radians, converted to degrees. Safety factor uses distortion energy theory (0.577×yield).",
+    "description": "Calculate torsional shear stress, polar moment of inertia, and angle of twist for solid and hollow circular shafts under torque or power loading.",
+    "discipline": "Machine Elements & Mechanics of Materials",
+    "standards": "Engineering ToolBox: Torsion of Shafts (https://www.engineeringtoolbox.com/torsion-shafts-d_947.html), Wikipedia: Torsion (mechanics) (https://en.wikipedia.org/wiki/Torsion_(mechanics))",
+    "cadContext": "Verify shear stress and angular deflection across solid or hollow CAD transmission shafts under direct torque or kW/RPM drive inputs.",
+    "formula": "J_solid = pi*D^4/32 ; J_hollow = pi*(D^4-d^4)/32 ; tau = T*(D/2)/J ; theta = T*L/(G*J)",
     "inputs": [
       {
-        "label": "Shaft Type Solid Hollow Material",
-        "val": "Steel (E=200 GPa, G=77 GPa)"
+        "label": "Shaft Type / Material (G, Sy)",
+        "val": "Solid / Steel (G=77 GPa, Sy=250 MPa)"
       },
       {
-        "label": "Outer Diameter (mm)",
+        "label": "Outer Diameter D (mm)",
         "val": "40"
       },
       {
-        "label": "Length (mm)",
+        "label": "Length L (mm)",
         "val": "500"
       },
       {
-        "label": "Input Mode Torque (Nm) Power (kW) Torque (Nm)",
+        "label": "Applied Torque T (N*m)",
         "val": "100"
       }
     ],
     "outputs": [
       {
-        "label": "Shear Stress",
-        "val": "8.0 MPa"
+        "label": "Max Shear Stress",
+        "val": "7.958 MPa"
       },
       {
-        "label": "Twist Angle",
-        "val": "0.000 °"
+        "label": "Angle of Twist",
+        "val": "0.1480 deg"
+      },
+      {
+        "label": "Polar Inertia J",
+        "val": "251327.4 mm^4"
+      },
+      {
+        "label": "Safety Factor (von Mises)",
+        "val": "18.138"
       }
     ]
   },
   "sheet-cutting-layout-calculator": {
     "title": "Sheet Metal Nesting Layout Calculator",
-    "description": "Calculate optimal sheet cutting layout and material utilization for rectangular parts.",
-    "discipline": "CNC Machining, Sheet Metal Fabrication & Dimensional Metrology",
-    "standards": "ISO 286-1 / ASME B4.1 (Limits and Fits), ASME Y14.5-2018 / ISO 1101 (GD&T), DIN 6935 (Sheet Metal Cold Bending), ISO 2768 (General Tolerances)",
-    "cadContext": "Synchronize sheet metal K-factors, tool radius compensation registers (G41/G42), and GD&T datum reference frames between your 3D CAD master model, CAM post-processor, and CMM inspection plan.",
-    "formula": "Util = (n*part_area/sheet_area)*100",
+    "description": "Calculate 2D rectangular sheet nesting utilization (0 deg vs 90 deg) and 1D bar/pipe First-Fit Decreasing linear cutting stock schedules.",
+    "discipline": "Sheet Metal Nesting & Linear Stock Optimization",
+    "standards": "2D Grid Nesting & 1D First-Fit Decreasing (FFD)",
+    "cadContext": "Compare 0 deg vs 90 deg blank orientation with cutting kerf and edge margin allowances, or generate FFD cut lists for 1D bar stock.",
+    "formula": "nr = floor((W_usable + kerf) / (W_part + kerf)) ; nc = floor((L_usable + kerf) / (L_part + kerf)) ; Util = (N * A_part / A_sheet) * 100%",
     "inputs": [
       {
-        "label": "Sheet Width (mm)",
-        "val": "1000"
+        "label": "Sheet Width x Length (mm)",
+        "val": "1000 x 2000"
       },
       {
-        "label": "Sheet Length (mm)",
-        "val": "2000"
+        "label": "Part Width x Length (mm)",
+        "val": "200 x 300"
       },
       {
-        "label": "Part Width (mm)",
-        "val": "200"
-      },
-      {
-        "label": "Part Length (mm)",
-        "val": "300"
-      },
-      {
-        "label": "Kerf Width (mm)",
-        "val": "3"
+        "label": "Kerf / Edge Margin (mm)",
+        "val": "3 / 0"
       }
     ],
     "outputs": [
       {
-        "label": "Parts per Row",
-        "val": "4.000"
+        "label": "Total Parts (0 deg)",
+        "val": "24"
       },
       {
-        "label": "Rows",
-        "val": "6.000"
-      },
-      {
-        "label": "Total Parts",
-        "val": "24.000"
-      },
-      {
-        "label": "Utilization",
+        "label": "Utilization (0 deg)",
         "val": "72.000 %"
+      },
+      {
+        "label": "Rotated 90 deg Parts / Yield",
+        "val": "27 pcs / 81.00%"
+      },
+      {
+        "label": "1D Default Bar Schedule (6000 mm)",
+        "val": "4 bars / 18 pcs / 82.5%"
       }
     ]
   },

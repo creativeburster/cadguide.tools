@@ -27,6 +27,125 @@ interface BarCutPlan {
   utilization: number;
 }
 
+interface BarOptimizationResult {
+  error: string | null;
+  bars: BarCutPlan[];
+  totalBars: number;
+  totalPieces: number;
+  overallUtil: number;
+  totalScrapMm: number;
+  stockLen?: number;
+}
+
+const DEFAULT_BAR_DEMANDS: LinearPartDemand[] = [
+  { id: 'p1', label: 'Frame Upright A', lengthStr: '1850', qtyStr: '4' },
+  { id: 'p2', label: 'Cross Beam B', lengthStr: '1200', qtyStr: '6' },
+  { id: 'p3', label: 'Gusset Strut C', lengthStr: '650', qtyStr: '8' },
+];
+
+function computeBarOptimization(
+  stockLengthStr: string,
+  sawKerfStr: string,
+  barTrimStr: string,
+  demands: LinearPartDemand[]
+): BarOptimizationResult | null {
+  const stockLen = parseNum(stockLengthStr);
+  const kerf = parseNum(sawKerfStr);
+  const trim = parseNum(barTrimStr);
+  if (stockLen === null || kerf === null || trim === null || stockLen <= 0 || kerf < 0 || trim < 0) {
+    return null;
+  }
+  const usableStock = stockLen - trim;
+  if (usableStock <= 0) return null;
+
+  const pieces: { label: string; length: number }[] = [];
+  let oversizedPart: string | null = null;
+
+  for (const d of demands) {
+    const len = parseNum(d.lengthStr);
+    const qty = parseNum(d.qtyStr);
+    if (len === null || qty === null || len <= 0 || qty <= 0) continue;
+    if (len > usableStock) {
+      oversizedPart = `${d.label} (${len} mm > usable stock ${usableStock} mm)`;
+      break;
+    }
+    const safeQty = Math.min(200, Math.floor(qty));
+    for (let i = 0; i < safeQty; i++) {
+      pieces.push({ label: d.label || 'Part', length: len });
+    }
+  }
+
+  if (oversizedPart) {
+    return {
+      error: `Part exceeds usable stock length: ${oversizedPart}`,
+      bars: [],
+      totalBars: 0,
+      totalPieces: 0,
+      overallUtil: 0,
+      totalScrapMm: 0,
+    };
+  }
+
+  if (pieces.length === 0) {
+    return { error: null, bars: [], totalBars: 0, totalPieces: 0, overallUtil: 0, totalScrapMm: 0 };
+  }
+
+  // First-Fit Decreasing (FFD) 1D Cutting Stock Algorithm
+  pieces.sort((a, b) => b.length - a.length);
+
+  const rawBars: { cuts: { label: string; length: number }[]; usedNet: number; kerfTotal: number }[] = [];
+
+  for (const piece of pieces) {
+    let placed = false;
+    for (const bar of rawBars) {
+      const neededKerf = bar.cuts.length > 0 ? kerf : 0;
+      if (bar.usedNet + bar.kerfTotal + neededKerf + piece.length <= usableStock) {
+        bar.cuts.push(piece);
+        bar.usedNet += piece.length;
+        bar.kerfTotal += neededKerf;
+        placed = true;
+        break;
+      }
+    }
+    if (!placed) {
+      rawBars.push({
+        cuts: [piece],
+        usedNet: piece.length,
+        kerfTotal: 0,
+      });
+    }
+  }
+
+  const bars: BarCutPlan[] = rawBars.map((b, idx) => {
+    const remnant = Math.max(0, stockLen - trim - b.usedNet - b.kerfTotal);
+    const utilization = (b.usedNet / stockLen) * 100;
+    return {
+      barIndex: idx + 1,
+      cuts: b.cuts,
+      usedLength: b.usedNet,
+      kerfLoss: b.kerfTotal + trim,
+      remnant,
+      utilization,
+    };
+  });
+
+  const totalBars = bars.length;
+  const totalStockMm = totalBars * stockLen;
+  const totalUsedMm = bars.reduce((acc, b) => acc + b.usedLength, 0);
+  const totalScrapMm = bars.reduce((acc, b) => acc + b.remnant, 0);
+  const overallUtil = totalStockMm > 0 ? (totalUsedMm / totalStockMm) * 100 : 0;
+
+  return {
+    error: null,
+    bars,
+    totalBars,
+    totalPieces: pieces.length,
+    overallUtil,
+    totalScrapMm,
+    stockLen,
+  };
+}
+
 export default function SheetCuttingLayoutCalculatorClient() {
   const [mode, setMode] = useState<'2d-sheet' | '1d-bar'>('2d-sheet');
 
@@ -61,11 +180,10 @@ export default function SheetCuttingLayoutCalculatorClient() {
         nr: 0, nc: 0, N: 0, util: 0, scrapPct: 100,
         rotNr: 0, rotNc: 0, rotN: 0, rotUtil: 0,
         bestOrientation: 'standard' as const,
-        sw, sl, pw, pl, kerf, margin, usableW, usableL
+        sw, sl, pw, pl, kerf, margin, usableW, usableL,
       };
     }
 
-    // Standard orientation (0 deg): Part Width along Sheet Width, Part Length along Sheet Length
     const nr = Math.max(0, Math.floor((usableW + kerf) / (pw + kerf)));
     const nc = Math.max(0, Math.floor((usableL + kerf) / (pl + kerf)));
     const N = nr * nc;
@@ -74,7 +192,6 @@ export default function SheetCuttingLayoutCalculatorClient() {
     const util = (N * partArea / sheetArea) * 100;
     const scrapPct = Math.max(0, 100 - util);
 
-    // Rotated orientation (90 deg): Part Length along Sheet Width, Part Width along Sheet Length
     const rotNr = Math.max(0, Math.floor((usableW + kerf) / (pl + kerf)));
     const rotNc = Math.max(0, Math.floor((usableL + kerf) / (pw + kerf)));
     const rotN = rotNr * rotNc;
@@ -86,7 +203,7 @@ export default function SheetCuttingLayoutCalculatorClient() {
       nr, nc, N, util, scrapPct,
       rotNr, rotNc, rotN, rotUtil,
       bestOrientation,
-      sw, sl, pw, pl, kerf, margin, usableW, usableL
+      sw, sl, pw, pl, kerf, margin, usableW, usableL,
     };
   }, [sheetWidthStr, sheetLengthStr, partWidthStr, partLengthStr, kerfStr, marginStr]);
 
@@ -109,12 +226,12 @@ export default function SheetCuttingLayoutCalculatorClient() {
       '# 2D Sheet Metal Nesting & Cutting Layout Report',
       '# Generated by CADGuide.tools Engineering Toolbox',
       'Parameter,Value,Unit',
-      `Sheet Width,${sheetWidthStr},mm`,
-      `Sheet Length,${sheetLengthStr},mm`,
-      `Edge Trim Margin,${marginStr},mm`,
-      `Part Width,${partWidthStr},mm`,
-      `Part Length,${partLengthStr},mm`,
-      `Cutting Kerf Width,${kerfStr},mm`,
+      `Sheet Width,${sheetResult.sw},mm`,
+      `Sheet Length,${sheetResult.sl},mm`,
+      `Edge Trim Margin,${sheetResult.margin},mm`,
+      `Part Width,${sheetResult.pw},mm`,
+      `Part Length,${sheetResult.pl},mm`,
+      `Cutting Kerf Width,${sheetResult.kerf},mm`,
       `Parts per Row (0 deg),${sheetResult.nr},pcs`,
       `Rows (0 deg),${sheetResult.nc},rows`,
       `Total Parts (0 deg),${sheetResult.N},pcs`,
@@ -135,16 +252,12 @@ export default function SheetCuttingLayoutCalculatorClient() {
   const [stockLengthStr, setStockLengthStr] = useState('6000');
   const [sawKerfStr, setSawKerfStr] = useState('3');
   const [barTrimStr, setBarTrimStr] = useState('10');
-  const [demands, setDemands] = useState<LinearPartDemand[]>([
-    { id: 'p1', label: 'Frame Upright A', lengthStr: '1850', qtyStr: '4' },
-    { id: 'p2', label: 'Cross Beam B', lengthStr: '1200', qtyStr: '6' },
-    { id: 'p3', label: 'Gusset Strut C', lengthStr: '650', qtyStr: '8' },
-  ]);
+  const [demands, setDemands] = useState<LinearPartDemand[]>(DEFAULT_BAR_DEMANDS);
 
   const addDemandRow = () => {
     setDemands(prev => [
       ...prev,
-      { id: `p-${Date.now()}`, label: `Part ${prev.length + 1}`, lengthStr: '500', qtyStr: '2' }
+      { id: `p-${Date.now()}`, label: `Part ${prev.length + 1}`, lengthStr: '500', qtyStr: '2' },
     ]);
   };
 
@@ -156,107 +269,28 @@ export default function SheetCuttingLayoutCalculatorClient() {
     setDemands(prev => prev.map(d => (d.id === id ? { ...d, [field]: val } : d)));
   };
 
-  const barOptimization = useMemo(() => {
-    const stockLen = parseNum(stockLengthStr);
-    const kerf = parseNum(sawKerfStr);
-    const trim = parseNum(barTrimStr);
-    if (stockLen === null || kerf === null || trim === null || stockLen <= 0 || kerf < 0 || trim < 0) {
-      return null;
-    }
-    const usableStock = stockLen - trim;
-    if (usableStock <= 0) return null;
+  const resetBar = () => {
+    setStockLengthStr('6000');
+    setSawKerfStr('3');
+    setBarTrimStr('10');
+    setDemands(DEFAULT_BAR_DEMANDS);
+  };
 
-    const pieces: { label: string; length: number }[] = [];
-    let oversizedPart: string | null = null;
-
-    for (const d of demands) {
-      const len = parseNum(d.lengthStr);
-      const qty = parseNum(d.qtyStr);
-      if (len === null || qty === null || len <= 0 || qty <= 0) continue;
-      if (len > usableStock) {
-        oversizedPart = `${d.label} (${len} mm > usable stock ${usableStock} mm)`;
-        break;
-      }
-      const safeQty = Math.min(200, Math.floor(qty));
-      for (let i = 0; i < safeQty; i++) {
-        pieces.push({ label: d.label || 'Part', length: len });
-      }
-    }
-
-    if (oversizedPart) {
-      return { error: `Part exceeds usable stock length: ${oversizedPart}`, bars: [] as BarCutPlan[], totalBars: 0, totalPieces: 0, overallUtil: 0, totalScrapMm: 0 };
-    }
-
-    if (pieces.length === 0) {
-      return { error: null, bars: [] as BarCutPlan[], totalBars: 0, totalPieces: 0, overallUtil: 0, totalScrapMm: 0 };
-    }
-
-    // First-Fit Decreasing (FFD) 1D Cutting Stock Algorithm
-    pieces.sort((a, b) => b.length - a.length);
-
-    const rawBars: { cuts: { label: string; length: number }[]; usedNet: number; kerfTotal: number }[] = [];
-
-    for (const piece of pieces) {
-      let placed = false;
-      for (const bar of rawBars) {
-        const neededKerf = bar.cuts.length > 0 ? kerf : 0;
-        if (bar.usedNet + bar.kerfTotal + neededKerf + piece.length <= usableStock) {
-          bar.cuts.push(piece);
-          bar.usedNet += piece.length;
-          bar.kerfTotal += neededKerf;
-          placed = true;
-          break;
-        }
-      }
-      if (!placed) {
-        rawBars.push({
-          cuts: [piece],
-          usedNet: piece.length,
-          kerfTotal: 0,
-        });
-      }
-    }
-
-    const bars: BarCutPlan[] = rawBars.map((b, idx) => {
-      const remnant = Math.max(0, stockLen - trim - b.usedNet - b.kerfTotal);
-      const utilization = (b.usedNet / stockLen) * 100;
-      return {
-        barIndex: idx + 1,
-        cuts: b.cuts,
-        usedLength: b.usedNet,
-        kerfLoss: b.kerfTotal + trim,
-        remnant,
-        utilization,
-      };
-    });
-
-    const totalBars = bars.length;
-    const totalStockMm = totalBars * stockLen;
-    const totalUsedMm = bars.reduce((acc, b) => acc + b.usedLength, 0);
-    const totalScrapMm = bars.reduce((acc, b) => acc + b.remnant, 0);
-    const overallUtil = totalStockMm > 0 ? (totalUsedMm / totalStockMm) * 100 : 0;
-
-    return {
-      error: null,
-      bars,
-      totalBars,
-      totalPieces: pieces.length,
-      overallUtil,
-      totalScrapMm,
-      stockLen,
-    };
-  }, [stockLengthStr, sawKerfStr, barTrimStr, demands]);
+  const barOptimization = useMemo(
+    () => computeBarOptimization(stockLengthStr, sawKerfStr, barTrimStr, demands),
+    [stockLengthStr, sawKerfStr, barTrimStr, demands]
+  );
 
   const downloadBarCsv = () => {
     if (!barOptimization || barOptimization.bars.length === 0) return;
     const lines = [
       '# 1D Bar / Pipe Linear Cutting Stock Schedule (FFD Optimized)',
-      `# Stock Bar Length: ${stockLengthStr} mm | Saw Kerf: ${sawKerfStr} mm | End Trim: ${barTrimStr} mm`,
+      `# Stock Bar Length: ${stockLengthStr.trim()} mm | Saw Kerf: ${sawKerfStr.trim()} mm | End Trim: ${barTrimStr.trim()} mm`,
       `# Total Stock Bars Required: ${barOptimization.totalBars} | Total Pieces: ${barOptimization.totalPieces} | Overall Yield: ${barOptimization.overallUtil.toFixed(2)}%`,
       'Bar #,Cut Pattern (mm),Net Parts Length (mm),Kerf + Trim Loss (mm),Remnant Offcut (mm),Bar Yield (%)',
       ...barOptimization.bars.map(b =>
         `Bar ${b.barIndex},"${b.cuts.map(c => `${c.label}:${c.length}`).join(' + ')}",${b.usedLength},${b.kerfLoss},${b.remnant},${b.utilization.toFixed(2)}%`
-      )
+      ),
     ];
     const blob = new Blob([lines.join('\n')], { type: 'text/csv;charset=utf-8;' });
     const url = URL.createObjectURL(blob);
@@ -269,7 +303,6 @@ export default function SheetCuttingLayoutCalculatorClient() {
 
   return (
     <div data-testid="calculator-client" className="space-y-8">
-      {/* Mode Switcher Tabs */}
       <div className="flex flex-wrap items-center justify-between gap-4 bg-white p-3 rounded-2xl border border-slate-200 shadow-sm">
         <div className="flex flex-wrap items-center gap-2">
           <button
@@ -300,22 +333,21 @@ export default function SheetCuttingLayoutCalculatorClient() {
           </button>
         </div>
         <span className="text-xs font-bold text-slate-400 px-2">
-          Zero-Server-Load • Instant Local Nesting & FFD Optimization
+          Browser-Local Nesting &amp; FFD Optimization
         </span>
       </div>
 
       {mode === '2d-sheet' ? (
         <>
-          {/* 2D Sheet Presets */}
           <div className="flex flex-wrap items-center gap-2">
-            <span className="text-xs font-black uppercase tracking-wider text-slate-400 mr-1">Standard Sheet Presets:</span>
+            <span className="text-xs font-black uppercase tracking-wider text-slate-400 mr-1">Common Sheet Presets:</span>
             <button
               type="button"
               data-testid="preset-1000x2000"
               onClick={() => applySheetPreset('1000', '2000', '200', '300', '3', '0')}
               className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-purple-50 hover:text-purple-600 text-xs font-bold text-slate-700 border border-slate-200 transition-all cursor-pointer"
             >
-              ISO 1000×2000 mm (200×300 Part, Kerf 3)
+              Metric 1000 &times; 2000 mm (200 &times; 300 Part, Kerf 3)
             </button>
             <button
               type="button"
@@ -323,7 +355,7 @@ export default function SheetCuttingLayoutCalculatorClient() {
               onClick={() => applySheetPreset('1220', '2440', '280', '450', '2', '10')}
               className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-purple-50 hover:text-purple-600 text-xs font-bold text-slate-700 border border-slate-200 transition-all cursor-pointer"
             >
-              4×8 ft (1220×2440 mm, Margin 10 mm)
+              4 &times; 8 ft (1220 &times; 2440 mm, Margin 10 mm)
             </button>
             <button
               type="button"
@@ -331,7 +363,7 @@ export default function SheetCuttingLayoutCalculatorClient() {
               onClick={() => applySheetPreset('1500', '3000', '350', '580', '1.5', '10')}
               className="px-3 py-1.5 rounded-xl bg-slate-100 hover:bg-purple-50 hover:text-purple-600 text-xs font-bold text-slate-700 border border-slate-200 transition-all cursor-pointer"
             >
-              5×10 ft Fiber Laser (1500×3000 mm, Kerf 1.5)
+              1500 &times; 3000 mm Laser Sheet (Kerf 1.5)
             </button>
           </div>
 
@@ -346,6 +378,7 @@ export default function SheetCuttingLayoutCalculatorClient() {
                 </div>
                 <button
                   type="button"
+                  data-testid="btn-reset-sheet"
                   onClick={resetSheet}
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
                 >
@@ -437,61 +470,66 @@ export default function SheetCuttingLayoutCalculatorClient() {
                     type="button"
                     data-testid="export-csv-btn"
                     onClick={downloadSheetCsv}
-                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-black bg-slate-900 text-white hover:bg-slate-800 transition-all cursor-pointer"
+                    disabled={!sheetResult}
+                    className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-black bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-40 transition-all cursor-pointer"
                   >
                     <Download className="w-3.5 h-3.5" />
                     Export Layout CSV
                   </button>
                 </div>
 
+                {!sheetResult && (
+                  <div data-testid="validation-msg" className="mb-4 p-4 rounded-2xl bg-amber-50 border border-amber-200 text-sm font-bold text-amber-800">
+                    Enter positive sheet and part dimensions (kerf and margin &ge; 0).
+                  </div>
+                )}
+
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                   <div className="bg-blue-50 rounded-2xl p-5 border border-blue-100">
                     <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-1">Parts per Row</div>
                     <div data-testid="output-nr" className="text-2xl font-black text-blue-700">
-                      {sheetResult ? sheetResult.nr.toFixed(3) : '—'}
+                      {sheetResult ? sheetResult.nr : '—'}
                     </div>
                   </div>
                   <div className="bg-green-50 rounded-2xl p-5 border border-green-100">
                     <div className="text-xs font-black text-green-600 uppercase tracking-wider mb-1">Rows</div>
                     <div data-testid="output-nc" className="text-2xl font-black text-green-700">
-                      {sheetResult ? sheetResult.nc.toFixed(3) : '—'}
+                      {sheetResult ? sheetResult.nc : '—'}
                     </div>
                   </div>
                   <div className="bg-orange-50 rounded-2xl p-5 border border-orange-100">
-                    <div className="text-xs font-black text-orange-600 uppercase tracking-wider mb-1">Total Parts</div>
+                    <div className="text-xs font-black text-orange-600 uppercase tracking-wider mb-1">Total Parts (0&deg;)</div>
                     <div data-testid="output-total-parts" className="text-2xl font-black text-orange-700">
-                      {sheetResult ? sheetResult.N.toFixed(3) : '—'}
+                      {sheetResult ? sheetResult.N : '—'}
                     </div>
                   </div>
                   <div className="bg-purple-50 rounded-2xl p-5 border border-purple-100">
-                    <div className="text-xs font-black text-purple-600 uppercase tracking-wider mb-1">Utilization</div>
+                    <div className="text-xs font-black text-purple-600 uppercase tracking-wider mb-1">Utilization (0&deg;)</div>
                     <div data-testid="output-utilization" className="text-2xl font-black text-purple-700">
                       {sheetResult ? `${sheetResult.util.toFixed(3)} %` : '—'}
                     </div>
                   </div>
                 </div>
 
-                {/* Orientation Comparison Banner */}
                 {sheetResult && (
                   <div className="mt-4 grid grid-cols-1 md:grid-cols-2 gap-3 text-xs">
                     <div className={`p-3.5 rounded-xl border ${sheetResult.bestOrientation === 'standard' ? 'bg-emerald-50/70 border-emerald-200 text-emerald-900' : 'bg-slate-50 border-slate-200 text-slate-600'}`}>
-                      <span className="font-black uppercase">0° Standard Orientation: </span>
-                      {sheetResult.nr} × {sheetResult.nc} = <strong>{sheetResult.N} pcs</strong> ({sheetResult.util.toFixed(2)}% yield)
+                      <span className="font-black uppercase">0&deg; Standard Orientation: </span>
+                      {sheetResult.nr} &times; {sheetResult.nc} = <strong>{sheetResult.N} pcs</strong> ({sheetResult.util.toFixed(2)}% yield)
                       {sheetResult.bestOrientation === 'standard' && <span className="ml-2 px-1.5 py-0.5 rounded bg-emerald-600 text-white text-[10px] font-black">OPTIMAL</span>}
                     </div>
-                    <div className={`p-3.5 rounded-xl border ${sheetResult.bestOrientation === 'rotated' ? 'bg-emerald-50/70 border-emerald-200 text-emerald-900' : 'bg-slate-50 border-slate-200 text-slate-600'}`}>
-                      <span className="font-black uppercase">90° Rotated Orientation: </span>
-                      {sheetResult.rotNr} × {sheetResult.rotNc} = <strong>{sheetResult.rotN} pcs</strong> ({sheetResult.rotUtil.toFixed(2)}% yield)
+                    <div data-testid="output-rot-summary" className={`p-3.5 rounded-xl border ${sheetResult.bestOrientation === 'rotated' ? 'bg-emerald-50/70 border-emerald-200 text-emerald-900' : 'bg-slate-50 border-slate-200 text-slate-600'}`}>
+                      <span className="font-black uppercase">90&deg; Rotated Orientation: </span>
+                      {sheetResult.rotNr} &times; {sheetResult.rotNc} = <strong data-testid="output-rot-total">{sheetResult.rotN} pcs</strong> (<span data-testid="output-rot-util">{sheetResult.rotUtil.toFixed(2)}%</span> yield)
                       {sheetResult.bestOrientation === 'rotated' && <span className="ml-2 px-1.5 py-0.5 rounded bg-emerald-600 text-white text-[10px] font-black">BETTER (+{sheetResult.rotN - sheetResult.N} pcs)</span>}
                     </div>
                   </div>
                 )}
 
-                {/* Visual SVG Sheet Nesting Preview */}
                 {sheetResult && sheetResult.N > 0 && sheetResult.N <= 400 && (
                   <div className="mt-6 bg-slate-900 rounded-2xl p-5 border border-slate-800">
                     <div className="flex items-center justify-between text-xs text-slate-400 font-bold mb-3">
-                      <span>2D NESTING VISUALIZATION ({sheetResult.sw} × {sheetResult.sl} mm Sheet)</span>
+                      <span>2D NESTING VISUALIZATION ({sheetResult.sw} &times; {sheetResult.sl} mm Sheet)</span>
                       <span>Scrap / Offcut: {sheetResult.scrapPct.toFixed(1)}%</span>
                     </div>
                     <div className="w-full flex justify-center overflow-hidden">
@@ -500,7 +538,6 @@ export default function SheetCuttingLayoutCalculatorClient() {
                         className="w-full max-h-64 bg-slate-800 rounded border border-slate-700"
                         preserveAspectRatio="xMidYMid meet"
                       >
-                        {/* Usable Margin Boundary */}
                         {sheetResult.margin > 0 && (
                           <rect
                             x={sheetResult.margin}
@@ -513,7 +550,6 @@ export default function SheetCuttingLayoutCalculatorClient() {
                             strokeWidth={Math.max(2, sheetResult.sw * 0.003)}
                           />
                         )}
-                        {/* Nested Parts */}
                         {Array.from({ length: Math.min(sheetResult.nc, 25) }).map((_, colIdx) =>
                           Array.from({ length: Math.min(sheetResult.nr, 25) }).map((__, rowIdx) => {
                             const x = sheetResult.margin + colIdx * (sheetResult.pl + sheetResult.kerf);
@@ -544,7 +580,7 @@ export default function SheetCuttingLayoutCalculatorClient() {
                     <span>
                       Formula: <code className="font-mono font-bold">nr = floor((W_usable + kerf) / (W_part + kerf))</code>,{' '}
                       <code className="font-mono font-bold">nc = floor((L_usable + kerf) / (L_part + kerf))</code>,{' '}
-                      <code className="font-mono font-bold">Util = (N × A_part / A_sheet) × 100%</code>
+                      <code className="font-mono font-bold">Util = (N &times; A_part / A_sheet) &times; 100%</code>
                     </span>
                   </div>
                 </div>
@@ -555,7 +591,6 @@ export default function SheetCuttingLayoutCalculatorClient() {
           </div>
         </>
       ) : (
-        /* ==================== 1D Bar / Pipe Linear Cutting Optimizer UI ==================== */
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
             <div className="flex items-center justify-between">
@@ -563,8 +598,17 @@ export default function SheetCuttingLayoutCalculatorClient() {
                 <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
                   <Scissors className="w-5 h-5" />
                 </div>
-                <h2 className="text-lg font-black text-slate-900 tracking-tight">1D Stock & Cut List</h2>
+                <h2 className="text-lg font-black text-slate-900 tracking-tight">1D Stock &amp; Cut List</h2>
               </div>
+              <button
+                type="button"
+                data-testid="btn-reset-bar"
+                onClick={resetBar}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
+              >
+                <RotateCcw className="w-3.5 h-3.5" />
+                Reset
+              </button>
             </div>
 
             <div>
@@ -599,6 +643,7 @@ export default function SheetCuttingLayoutCalculatorClient() {
                 <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">Saw Blade Kerf (mm)</label>
                 <input
                   type="text"
+                  data-testid="input-saw-kerf"
                   value={sawKerfStr}
                   onChange={e => setSawKerfStr(e.target.value)}
                   className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold"
@@ -608,6 +653,7 @@ export default function SheetCuttingLayoutCalculatorClient() {
                 <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">End Trim Loss (mm)</label>
                 <input
                   type="text"
+                  data-testid="input-bar-trim"
                   value={barTrimStr}
                   onChange={e => setBarTrimStr(e.target.value)}
                   className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold"
@@ -678,8 +724,10 @@ export default function SheetCuttingLayoutCalculatorClient() {
                 </div>
                 <button
                   type="button"
+                  data-testid="export-bar-csv-btn"
                   onClick={downloadBarCsv}
-                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-black bg-slate-900 text-white hover:bg-slate-800 transition-all cursor-pointer"
+                  disabled={!barOptimization || barOptimization.bars.length === 0}
+                  className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-black bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-40 transition-all cursor-pointer"
                 >
                   <Download className="w-3.5 h-3.5" />
                   Export Cut List CSV
@@ -701,13 +749,13 @@ export default function SheetCuttingLayoutCalculatorClient() {
                     </div>
                     <div className="bg-blue-50 rounded-2xl p-5 border border-blue-100">
                       <div className="text-xs font-black text-blue-600 uppercase tracking-wider mb-1">Total Cut Pieces</div>
-                      <div className="text-2xl font-black text-blue-700">
+                      <div data-testid="output-bar-pieces" className="text-2xl font-black text-blue-700">
                         {barOptimization ? `${barOptimization.totalPieces} pcs` : '—'}
                       </div>
                     </div>
                     <div className="bg-emerald-50 rounded-2xl p-5 border border-emerald-100">
                       <div className="text-xs font-black text-emerald-600 uppercase tracking-wider mb-1">Overall Material Yield</div>
-                      <div className="text-2xl font-black text-emerald-700">
+                      <div data-testid="output-bar-yield" className="text-2xl font-black text-emerald-700">
                         {barOptimization ? `${barOptimization.overallUtil.toFixed(1)}%` : '—'}
                       </div>
                     </div>
@@ -719,13 +767,12 @@ export default function SheetCuttingLayoutCalculatorClient() {
                     </div>
                   </div>
 
-                  {/* Bar-by-Bar Visual Cutting Diagram */}
                   <div className="space-y-3">
                     {barOptimization?.bars.map(bar => (
                       <div key={bar.barIndex} className="p-4 rounded-2xl bg-slate-50 border border-slate-200 space-y-2">
                         <div className="flex flex-wrap items-center justify-between text-xs font-bold text-slate-700">
                           <span>
-                            <strong>Stock Bar #{bar.barIndex}</strong> ({barOptimization.stockLen} mm) — Yield: {bar.utilization.toFixed(1)}%
+                            <strong>Stock Bar #{bar.barIndex}</strong> ({barOptimization.stockLen} mm) &mdash; Yield: {bar.utilization.toFixed(1)}%
                           </span>
                           <span className="text-slate-500">
                             Used: {bar.usedLength} mm | Kerf/Trim: {bar.kerfLoss} mm | Offcut Remnant: <strong>{bar.remnant} mm</strong>
