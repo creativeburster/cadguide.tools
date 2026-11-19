@@ -3904,13 +3904,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'speed-unit-converter',
     title: 'Speed Unit Converter',
-    description: 'Convert between m/s, km/h, mph, ft/s, knot, and mach. Free online engineering unit converter.',
-    detailDesc: '1 m/s = 3.6 km/h = 2.237 mph',
+    description: 'Convert between m/s, km/h, mph, knot, ft/s, mm/s, and m/min. Free online engineering unit converter.',
+    detailDesc: '1 m/s = 3.6 km/h, 1 mph = 0.44704 m/s, 1 knot = 1852 m/h',
     category: 'converter',
     status: 'released',
     releasedDate: '2026-07-16',
     origin: 'native',
-    keywords: ["Convert","between","m/s","km/h","mph","ft/s","knot","and","mach."]
+    keywords: ["Convert","between","m/s","km/h","mph","knot","ft/s","speed"]
   },
   {
     slug: 'mass-unit-converter',
@@ -4113,13 +4113,13 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   {
     slug: 'sound-transmission-class-calculator',
     title: "Sound Transmission Class (STC) Calculator",
-    description: "Calculate STC rating for wall and floor assemblies from material layers, mass, and air gap.",
-    detailDesc: "STC: TL = 20*log10(f*m) - 47 (mass law). Composite: 1/R_total = sum(1/R_i). Double wall adds 5-10 dB with air gap. Single 13mm gypsum ~33 STC, double+insulation ~50 STC.",
+    description: "Estimate wall acoustic transmission loss (TL) and mass-law attenuation across 63–8000 Hz octave bands from surface mass density.",
+    detailDesc: "Mass Law: TL = 20*log10(m*f) - 47.3 dB across 63 to 8000 Hz octave bands using surface mass density and frequency attenuation corrections.",
     category: 'calculator',
     status: 'released',
     releasedDate: '2026-07-20',
     origin: 'native',
-    keywords: ["stc calculator","sound transmission class","stc rating","wall soundproofing","transmission loss","mass law","acoustic insulation","noise isolation","party wall stc","astm e90","soundproofing"]
+    keywords: ["stc calculator","sound transmission class","transmission loss","mass law","acoustic attenuation","surface density","sound insulation","wall acoustics"]
   },
   {
     slug: 'elevator-traffic-calculator',

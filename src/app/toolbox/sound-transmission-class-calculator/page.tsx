@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import CalculatorClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: "Sound Transmission Class (STC) Calculator",
-  description: "Calculate STC rating for wall and floor assemblies from material layers, mass, and air gap.",
+  title: "Sound Transmission Loss & STC Mass-Law Estimator",
+  description: "Estimate acoustic transmission loss across massive walls and floors from surface mass density, frequency, and octave corrections.",
   path: '/toolbox/sound-transmission-class-calculator',
 });
 
@@ -13,7 +13,7 @@ export default function CalculatorPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: "Sound Transmission Class (STC) Calculator", path: '/toolbox/sound-transmission-class-calculator' },
+    { name: "Sound Transmission Loss & STC Mass-Law Estimator", path: '/toolbox/sound-transmission-class-calculator' },
   ]);
 
   return (
@@ -29,10 +29,10 @@ export default function CalculatorPage() {
               Engineering Calculator
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Sound Transmission Class (STC) Calculator
+              Sound Transmission Loss &amp; STC Mass-Law Estimator
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate STC rating for wall and floor assemblies from material layers, mass, and air gap.
+              Estimate diffuse-field acoustic transmission loss across massive partitions from surface mass density and octave frequency corrections.
             </p>
           </div>
         </section>

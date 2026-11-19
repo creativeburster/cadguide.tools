@@ -12560,26 +12560,26 @@
   },
   "solar-panel-sizing-calculator": {
     "title": "Solar Panel Sizing Calculator",
-    "description": "Calculate solar panel array size and battery bank for off-grid systems.",
-    "discipline": "Electrical Power Systems, NEC Compliance & Electronics",
-    "standards": "NFPA 70 (National Electrical Code / NEC), IEC 60364 / IEC 60909 (Short-Circuit Currents), IEEE Std 1584 (Arc-Flash Hazard), IPC-2221 / IPC-2152 (PCB Design)",
-    "cadContext": "Apply ambient temperature derating factors, conduit fill grouping adjustments, and continuous-load multipliers (125% per NEC) when documenting single-line diagrams and panel schedules.",
-    "formula": "Panel = E/(sun*eff), Battery = E*days/(V*DoD)",
+    "description": "Calculate off-grid solar PV array size, module count, and battery bank capacity in Wh and Ah.",
+    "discipline": "Off-Grid Electrical Sizing & Energy Balance",
+    "standards": "Standard energy balance equations for off-grid PV arrays and battery banks (user-adjustable efficiency eta and Depth of Discharge DoD)",
+    "cadContext": "Adjust system efficiency eta and maximum Depth of Discharge (DoD) to match site-specific inverter/wiring losses and battery chemistry datasheet limits on single-line schematics.",
+    "formula": "P_array = E / (sun * eta), N_p = ceil(P_array / P_w), C_Wh = (E * days) / (DoD * eta), C_Ah = C_Wh / V",
     "inputs": [
       {
-        "label": "Daily Energy (Wh)",
+        "label": "Daily Load Energy (Wh/day)",
         "val": "3000"
       },
       {
-        "label": "Sun Hours (h)",
+        "label": "Peak Sun Hours (h/day)",
         "val": "5"
       },
       {
-        "label": "System Voltage (V)",
+        "label": "Battery Voltage (V)",
         "val": "48"
       },
       {
-        "label": "Panel Watt (W)",
+        "label": "Panel Wattage (W)",
         "val": "400"
       },
       {
@@ -12587,22 +12587,30 @@
         "val": "2"
       },
       {
-        "label": "System Eff",
+        "label": "System Efficiency (eta)",
         "val": "0.75"
+      },
+      {
+        "label": "Battery DoD",
+        "val": "0.80"
       }
     ],
     "outputs": [
       {
         "label": "Panel Count",
-        "val": "2.000"
+        "val": "2 panels"
       },
       {
-        "label": "Array Power",
+        "label": "Required Array Power",
         "val": "800.00 W"
       },
       {
-        "label": "Battery Ah",
+        "label": "Required Battery Capacity",
         "val": "208.33 Ah"
+      },
+      {
+        "label": "Total Battery Energy",
+        "val": "10000 Wh"
       }
     ]
   },
@@ -12618,11 +12626,11 @@
   },
   "solidworks-crash-diagnostic-wizard": {
     "title": "SolidWorks Crash Diagnostic Wizard",
-    "description": "Diagnose SolidWorks crashes, freezes, and instability by walking through common causes and step-by-step fixes.",
-    "discipline": "CAD Interoperability, Additive Manufacturing & BIM Standards",
-    "standards": "ISO 10303-21 (STEP AP214/AP242), ISO 16739-1 (IFC4 OpenBIM), ISO/ASTM 52900 (Additive Manufacturing), AIA CAD Layer Guidelines / ISO 19650",
-    "cadContext": "Validate unit system headers ($INSUNITS in DWG/DXF, FILE_SCHEMA in STEP/IFC) and enforce watertight manifold topology before dispatching files to downstream CAM, 3D printing, or BIM coordination.",
-    "formula": "Standardized parametric evaluation for SolidWorks Crash Diagnostic Wizard",
+    "description": "Interactive SOLIDWORKS crash, graphics, large-assembly, and maintenance triage checklist grounded in official SOLIDWORKS Rx and Performance guides.",
+    "discipline": "SOLIDWORKS Stability Diagnostics & Rx Workflow",
+    "standards": "SOLIDWORKS Rx Safe Modes (OpenGL / Diagnostics / Problem Capture), SpeedPak Large Assembly Tips, SOLIDWORKS Graphics Optimization Guide",
+    "cadContext": "Use SOLIDWORKS Rx Safe Mode ('Launch SOLIDWORKS in OpenGL mode') to isolate graphics driver crashes, clean temporary data folders, and enable SpeedPak configurations on heavy assemblies.",
+    "formula": "Symptom-to-Rx isolation checklist across 4 official SOLIDWORKS troubleshooting workflows (graphics/OpenGL, large assembly, temp cleanup, Rx problem capture)",
     "inputs": [],
     "outputs": []
   },
@@ -12638,41 +12646,37 @@
   },
   "sound-transmission-class-calculator": {
     "title": "Sound Transmission Class (STC) Calculator",
-    "description": "Calculate STC rating for wall and floor assemblies from material layers, mass, and air gap.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "STC_est = Base_Mass_STC + Bonus_Insulation + Bonus_Decoupling (ASTM E90 / ASTM E413 Acoustic Ratings)",
+    "description": "Estimate wall acoustic transmission loss (TL) and mass-law attenuation across 63-8000 Hz octave bands from surface mass density.",
+    "discipline": "Building Acoustics & Mass-Law Transmission Loss",
+    "standards": "Random-Incidence Mass Law TL = 20*log10(m*f) - 47.3 dB; Octave Attenuation Correction Table (Engineering ToolBox d_1409.html)",
+    "cadContext": "Evaluate baseline single-leaf surface mass attenuation and adjust cavity/decoupling offset before specifying wall partition mass in architectural section drawings.",
+    "formula": "TL(f) = 20 * log10(m * f) - 47.3 (dB), Est_STC = TL(500 Hz) + user_offset",
     "inputs": [
       {
-        "label": "Gypsum Board Skin Configuration",
-        "val": "2 Layers One Side + 1 Layer Other Side (STC ~42)"
+        "label": "Surface Mass Density (kg/m2)",
+        "val": "240"
       },
       {
-        "label": "Cavity Sound Insulation",
-        "val": "3.5\" Fiberglass / Mineral Wool Batt (+5 dB)"
+        "label": "Evaluation Frequency (Hz)",
+        "val": "500"
       },
       {
-        "label": "Framing & Decoupling Element",
-        "val": "Resilient Channel RC-1 Decoupled (+6 dB)"
+        "label": "Cavity / Decoupling Offset (dB)",
+        "val": "0"
       }
     ],
     "outputs": [
       {
-        "label": "Estimated Assembly STC Rating",
-        "val": "53 STC"
+        "label": "Estimated Rating (500 Hz + Offset)",
+        "val": "54.28 dB"
       },
       {
-        "label": "Acoustic Privacy Classification",
-        "val": "Luxury Privacy (Loud speech inaudible)"
+        "label": "Mass-Law TL at Eval Freq f",
+        "val": "54.28 dB"
       },
       {
-        "label": "IBC Multi-Family Code Minimum",
-        "val": "STC 50 IBC 1206"
-      },
-      {
-        "label": "Expected Sound Transmission Loss (TL@500Hz)",
-        "val": "51 dB"
+        "label": "Mass-Law Mean TL (500 Hz)",
+        "val": "54.28 dB"
       }
     ]
   },
@@ -12688,65 +12692,85 @@
   },
   "speed-unit-converter": {
     "title": "Speed Unit Converter",
-    "description": "Convert between m/s, km/h, mph, ft/s, knot, and mach.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "1 m/s = 3.6 km/h = 2.237 mph",
+    "description": "Convert between m/s, km/h, mph, ft/s, knot, mm/s, and m/min with exact SI definition factors.",
+    "discipline": "Kinematics & Velocity Unit Conversion",
+    "standards": "Exact SI & International Yard/Mile/Nautical Mile Definitions (1 mph = 0.44704 m/s, 1 knot = 1852 m/h, 1 ft = 0.3048 m)",
+    "cadContext": "Convert machine tool linear feed rates (mm/s, m/min) and transport velocities consistently across multi-unit CAD/CAM drawings.",
+    "formula": "v_target = v_input * (factor_from / factor_to); 1 km/h = 1/3.6 m/s, 1 mph = 0.44704 m/s, 1 knot = 1852/3600 m/s",
     "inputs": [
       {
-        "label": "Value",
+        "label": "Speed Value",
         "val": "100"
       },
       {
-        "label": "From",
+        "label": "From Unit",
+        "val": "km/h"
+      },
+      {
+        "label": "To Unit",
         "val": "mph"
       }
     ],
     "outputs": [
       {
-        "label": "Result",
-        "val": "62.148"
+        "label": "Converted Speed (mph)",
+        "val": "62.137 mph"
+      },
+      {
+        "label": "Meters per Second",
+        "val": "27.778 m/s"
+      },
+      {
+        "label": "Knots",
+        "val": "53.996 kn"
       }
     ]
   },
   "spindle-power-calculator": {
     "title": "Spindle Power Calculator",
-    "description": "Calculate required spindle power from cutting force, speed, and efficiency.",
-    "discipline": "Fastener Engineering & Bolted Joint Mechanics",
-    "standards": "VDI 2230 (Systematic Calculation of High Duty Bolted Joints), ISO 898-1 (Mechanical Properties of Carbon & Alloy Steel Fasteners), ASME B1.1 / ISO 68-1",
-    "cadContext": "Ensure clearance hole diameters conform to ISO 273 / ASME B18.2.8 medium fit series and verify minimum thread engagement length (typically 1.0×d in steel, 2.0×d in aluminum) in your assembly BOM.",
-    "formula": "P = F*vc/(60*1000*eta)",
+    "description": "Calculate net cutting power, motor spindle power, axis feed power, and total required power from cutting forces and velocities.",
+    "discipline": "CNC Machining & Spindle Drivetrain Mechanics",
+    "standards": "Fundamental mechanical work-rate power equations (P = F * v / 60000 / eta) with explicit user-entered feed rate vf",
+    "cadContext": "Verify both main spindle motor power Pc and feed drive contribution Pf using your CAM toolpath cutting speed vc and programmed linear feed rate vf before roughing passes.",
+    "formula": "Pc_net = Fc*vc/60000, Pc = Pc_net/eta, Pf = Ff*(vf/1000)/(60000*eta), Pt = Pc + Pf",
     "inputs": [
       {
-        "label": "Cutting Force (N)",
+        "label": "Cutting Force Fc (N)",
         "val": "800"
       },
       {
-        "label": "Cutting Speed (m/min)",
+        "label": "Cutting Speed vc (m/min)",
         "val": "150"
       },
       {
-        "label": "Spindle Eff",
-        "val": "0.85"
+        "label": "Feed Force Ff (N)",
+        "val": "300"
       },
       {
-        "label": "Feed Force (N)",
+        "label": "Feed Rate vf (mm/min)",
         "val": "300"
+      },
+      {
+        "label": "Drivetrain Efficiency eta",
+        "val": "0.85"
       }
     ],
     "outputs": [
       {
-        "label": "Cutting Power",
+        "label": "Net Cutting Power Pc_net",
+        "val": "2.000 kW"
+      },
+      {
+        "label": "Spindle Power Pc",
         "val": "2.353 kW"
       },
       {
-        "label": "Feed Power",
-        "val": "0.000882 kW"
+        "label": "Axis Feed Power Pf",
+        "val": "0.001765 kW"
       },
       {
-        "label": "Total Power",
-        "val": "2.354 kW"
+        "label": "Total Required Power Pt",
+        "val": "2.355 kW"
       }
     ]
   },

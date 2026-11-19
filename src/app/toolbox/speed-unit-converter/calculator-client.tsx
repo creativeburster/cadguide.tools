@@ -2,86 +2,209 @@
 
 import { useState, useMemo } from 'react';
 import { RelatedTools } from '@/components/related-tools';
-import { Settings, Zap, Info } from 'lucide-react';
+import { Settings, Zap, Info, ArrowLeftRight, RotateCcw, Download } from 'lucide-react';
+
+interface SpeedUnitDef {
+  id: 'ms' | 'kmh' | 'mph' | 'fts' | 'knot' | 'mms' | 'mmin';
+  label: string;
+  symbol: string;
+  toMsFactor: number;
+}
+
+const SPEED_UNITS: SpeedUnitDef[] = [
+  { id: 'ms', label: 'Meters per second (m/s)', symbol: 'm/s', toMsFactor: 1 },
+  { id: 'kmh', label: 'Kilometers per hour (km/h)', symbol: 'km/h', toMsFactor: 1 / 3.6 },
+  { id: 'mph', label: 'Miles per hour (mph)', symbol: 'mph', toMsFactor: 0.44704 },
+  { id: 'fts', label: 'Feet per second (ft/s)', symbol: 'ft/s', toMsFactor: 0.3048 },
+  { id: 'knot', label: 'Knots (kn)', symbol: 'kn', toMsFactor: 1852 / 3600 },
+  { id: 'mms', label: 'Millimeters per second (mm/s)', symbol: 'mm/s', toMsFactor: 0.001 },
+  { id: 'mmin', label: 'Meters per minute (m/min)', symbol: 'm/min', toMsFactor: 1 / 60 },
+];
+
+function parseFinite(val: string): number | null {
+  const trimmed = val.trim();
+  if (!trimmed) return null;
+  const n = Number(trimmed);
+  return Number.isFinite(n) ? n : null;
+}
+
+function formatNum(n: number): string {
+  if (!Number.isFinite(n)) return '—';
+  if (Math.abs(n) >= 10000) return n.toFixed(0);
+  if (Math.abs(n) >= 100) return n.toFixed(2);
+  if (Math.abs(n) >= 1) return n.toFixed(3);
+  return n.toFixed(6);
+}
 
 export default function SpeedUnitConverterClient() {
-  const [inputs, setInputs] = useState(["100","km/h","mph"]);
-
-  const updateInput = (idx: number, val: string) => {
-    const next = [...inputs];
-    next[idx] = val;
-    setInputs(next);
-  };
+  const [valStr, setValStr] = useState('100');
+  const [fromUnit, setFromUnit] = useState<SpeedUnitDef['id']>('kmh');
+  const [toUnit, setToUnit] = useState<SpeedUnitDef['id']>('mph');
 
   const result = useMemo(() => {
-    const val=parseFloat(inputs[0]),from=inputs[1].toLowerCase().replace(/\//g,''),to=inputs[2].toLowerCase().replace(/\//g,'');const toMs={'ms':1,'kmh':0.2778,'mph':0.447,'fts':0.3048,'knot':0.5144,'mach':343} as Record<string, number>;const ms=val*(toMs[from]||1);const result=ms/(toMs[to]||1);return{result};
-  }, [inputs]);
+    const val = parseFinite(valStr);
+    if (val === null) {
+      return { valid: false as const, error: 'Enter a valid numeric speed value to convert.' };
+    }
+    const fromDef = SPEED_UNITS.find(u => u.id === fromUnit) || SPEED_UNITS[1];
+    const toDef = SPEED_UNITS.find(u => u.id === toUnit) || SPEED_UNITS[2];
+    const ms = val * fromDef.toMsFactor;
+    const converted = ms / toDef.toMsFactor;
+    const allUnits = SPEED_UNITS.map(u => ({
+      ...u,
+      value: ms / u.toMsFactor,
+    }));
 
-  const formatNum = (n: number) => {
-    if (isNaN(n) || !isFinite(n)) return '—';
-    if (Math.abs(n) >= 10000) return n.toFixed(0);
-    if (Math.abs(n) >= 100) return n.toFixed(2);
-    if (Math.abs(n) >= 1) return n.toFixed(3);
-    return n.toFixed(6);
+    return { valid: true as const, val, fromDef, toDef, ms, converted, allUnits };
+  }, [valStr, fromUnit, toUnit]);
+
+  const swapUnits = () => {
+    setFromUnit(toUnit);
+    setToUnit(fromUnit);
+  };
+
+  const resetDefaults = () => {
+    setValStr('100');
+    setFromUnit('kmh');
+    setToUnit('mph');
+  };
+
+  const downloadCsv = () => {
+    if (!result.valid) return;
+    const lines = [
+      '# Precision Speed & Machining Feed Unit Conversion Table',
+      `# Input: ${result.val} ${result.fromDef.symbol} -> ${result.converted.toFixed(6)} ${result.toDef.symbol}`,
+      'Unit,Symbol,Converted Value',
+      ...result.allUnits.map(u => `"${u.label}",${u.symbol},${u.value.toFixed(6)}`),
+    ].join('\n');
+    const blob = new Blob([lines], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'speed-unit-conversion.csv';
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   return (
-    <div className="space-y-8">
+    <div data-testid="calculator-client" className="space-y-8">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
-              <Settings className="w-5 h-5" />
+        <div className="lg:col-span-1 bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-5">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600">
+                <Settings className="w-5 h-5" />
+              </div>
+              <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs</h2>
             </div>
-            <h2 className="text-lg font-black text-slate-900 tracking-tight">Inputs</h2>
+            <button
+              type="button"
+              data-testid="btn-reset"
+              onClick={resetDefaults}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
+            >
+              <RotateCcw className="w-3.5 h-3.5" />
+              Reset
+            </button>
           </div>
 
-          <div key="0">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">Value</label>
-            <input type="text" value={inputs[0]} onChange={e => updateInput(0, e.target.value)} placeholder="100"
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all" />
+          <div>
+            <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">Speed Value</label>
+            <input type="text" data-testid="input-val" value={valStr} onChange={e => setValStr(e.target.value)} className="w-full h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-base font-bold" />
           </div>
-          <div key="1">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">From</label>
-            <select value={inputs[1]} onChange={e => updateInput(1, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
-              <option value="ms">ms</option><option value="kmh">kmh</option><option value="mph">mph</option><option value="knot">knot</option><option value="fts">fts</option>
+          <div>
+            <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">From Unit</label>
+            <select
+              data-testid="select-from"
+              value={fromUnit}
+              onChange={e => setFromUnit(e.target.value as SpeedUnitDef['id'])}
+              className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold"
+            >
+              {SPEED_UNITS.map(u => (
+                <option key={u.id} value={u.id}>{u.label}</option>
+              ))}
             </select>
           </div>
-          <div key="2">
-            <label className="text-base font-black text-slate-400 uppercase tracking-wider block mb-2">To</label>
-            <select value={inputs[2]} onChange={e => updateInput(2, e.target.value)}
-              className="w-full h-12 px-4 rounded-2xl bg-slate-50 border border-slate-100 text-lg font-bold focus:outline-none focus:ring-4 focus:ring-purple-600/5 focus:bg-white transition-all">
-              <option value="ms">ms</option><option value="kmh">kmh</option><option value="mph">mph</option><option value="knot">knot</option><option value="fts">fts</option>
+          <div className="flex justify-center">
+            <button
+              type="button"
+              data-testid="btn-swap"
+              onClick={swapUnits}
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-purple-50 text-purple-700 border border-purple-100 hover:bg-purple-100 transition-all cursor-pointer"
+            >
+              <ArrowLeftRight className="w-3.5 h-3.5" />
+              Swap Units
+            </button>
+          </div>
+          <div>
+            <label className="text-xs font-black text-slate-500 uppercase tracking-wider block mb-1.5">To Unit</label>
+            <select
+              data-testid="select-to"
+              value={toUnit}
+              onChange={e => setToUnit(e.target.value as SpeedUnitDef['id'])}
+              className="w-full h-11 px-3 rounded-xl bg-slate-50 border border-slate-200 text-sm font-bold"
+            >
+              {SPEED_UNITS.map(u => (
+                <option key={u.id} value={u.id}>{u.label}</option>
+              ))}
             </select>
           </div>
-
-          <button onClick={() => setInputs(["100","km/h","mph"])}
-            className="w-full py-3 rounded-xl text-base font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all">
-            Reset
-          </button>
         </div>
 
         <div className="lg:col-span-2 space-y-6">
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
-                <Zap className="w-5 h-5" />
+          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+            <div className="flex flex-wrap items-center justify-between gap-3">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center text-green-600">
+                  <Zap className="w-5 h-5" />
+                </div>
+                <h2 className="text-lg font-black text-slate-900 tracking-tight">Converted Results</h2>
               </div>
-              <h2 className="text-lg font-black text-slate-900 tracking-tight">Results</h2>
+              <button
+                type="button"
+                data-testid="export-csv-btn"
+                onClick={downloadCsv}
+                disabled={!result.valid}
+                className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-black bg-slate-900 text-white hover:bg-slate-800 disabled:opacity-40 transition-all cursor-pointer"
+              >
+                <Download className="w-3.5 h-3.5" />
+                Export CSV
+              </button>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
-              <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
-                <div className="text-base font-black text-blue-400 uppercase tracking-wider mb-2">Result</div>
-                <div className="text-3xl font-black text-blue-700">{formatNum(result.result)}</div>
+            {!result.valid && (
+              <div data-testid="validation-msg" className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-sm font-bold text-amber-800">
+                {result.error}
+              </div>
+            )}
+
+            <div className="bg-blue-50 rounded-2xl p-6 border border-blue-100">
+              <div className="text-xs font-black text-blue-500 uppercase tracking-wider mb-1">Primary Output</div>
+              <div data-testid="output-result" className="text-3xl font-black text-blue-800">
+                {result.valid ? formatNum(result.converted) : '—'}
+                {result.valid && <span className="text-lg text-blue-500 ml-1.5">{result.toDef.symbol}</span>}
               </div>
             </div>
 
-            <div className="mt-6 bg-slate-50 rounded-2xl p-4 border border-slate-100">
-              <div className="flex items-center gap-2 text-base text-slate-500 font-medium">
-                <Info className="w-4 h-4 text-slate-400" />
-                1 m/s = 3.6 km/h = 2.237 mph
+            {result.valid && (
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
+                {result.allUnits.map(u => (
+                  <div key={u.id} className="bg-slate-50 rounded-xl p-3.5 border border-slate-100">
+                    <div className="text-xs font-black text-slate-400 uppercase mb-1">{u.symbol}</div>
+                    <div data-testid={`output-unit-${u.id}`} className="text-base font-black text-slate-800 font-mono">
+                      {u.value.toFixed(6)}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            <div className="bg-slate-50 rounded-2xl p-4 border border-slate-100">
+              <div className="flex items-start gap-2 text-sm text-slate-600 font-medium">
+                <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                <span>
+                  Exact international definitions: 1 mph = 0.44704 m/s (Wikipedia: Miles per hour); 1 knot = 1852 m / 3600 s (Wikipedia: Knot); 1 ft/s = 0.3048 m/s; 1 km/h = 1/3.6 m/s.
+                </span>
               </div>
             </div>
           </div>

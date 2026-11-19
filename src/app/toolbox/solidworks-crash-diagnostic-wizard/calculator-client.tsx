@@ -1,280 +1,278 @@
 'use client';
 
 import { useState } from 'react';
+import { AlertTriangle, CheckCircle2, HelpCircle, RotateCcw, Copy, Check, Download, ExternalLink } from 'lucide-react';
 import { RelatedTools } from '@/components/related-tools';
-import { Copy, Check, ShieldAlert, ArrowRight, Wrench, Monitor, MemoryStick, Database, RefreshCw } from 'lucide-react';
 
-interface Issue {
+interface WizardScenario {
   id: string;
-  title: string;
-  icon: typeof Monitor;
-  symptoms: string[];
+  label: string;
+  category: string;
+  question: string;
   cause: string;
-  fixes: { step: string; detail: string; command?: string }[];
+  officialUrl: string;
+  officialLabel: string;
+  steps: { title: string; detail: string; actionNote?: string }[];
 }
 
-const ISSUES: Issue[] = [
+const SCENARIOS: WizardScenario[] = [
   {
-    id: 'graphics',
-    title: 'Graphics Driver Conflict / OpenGL Crash',
-    icon: Monitor,
-    symptoms: [
-      'SolidWorks crashes when rotating, zooming, or panning a 3D model',
-      'White screen or flickering graphics in the viewport',
-      'Crash on startup after graphics driver update',
-      'RealView graphics toggle causes immediate freeze',
-    ],
-    cause: 'SolidWorks relies heavily on OpenGL and certified graphics drivers. Non-certified consumer GPU drivers (especially NVIDIA Game Ready vs Studio) often cause instability. Laptops with hybrid GPU switching (Optimus) are particularly affected.',
-    fixes: [
+    id: 'graphics-opengl',
+    label: 'Crashes on Open / Viewport Display Glitches',
+    category: 'Graphics Driver',
+    question: 'Does SOLIDWORKS crash, hang, or show display artifacts when opening models or rotating viewports?',
+    cause: 'Hardware graphics card or driver incompatibility during accelerated viewport rendering. SOLIDWORKS Rx includes a single-session OpenGL software test mode and driver Diagnostics tab.',
+    officialUrl: 'https://blogs.solidworks.com/products/solidworks/complete-guide-using-solidworks-rx/',
+    officialLabel: 'SOLIDWORKS Blog: Complete Guide to Using SOLIDWORKS Rx',
+    steps: [
       {
-        step: 'Switch to SolidWorks Rx Software OpenGL mode',
-        detail: 'Launch SolidWorks Rx from Start Menu → Diagnostics → Safe Mode (Software OpenGL). This bypasses the GPU driver entirely to confirm the root cause.',
+        title: 'Launch SOLIDWORKS in OpenGL mode via SOLIDWORKS Rx',
+        detail: 'Close SOLIDWORKS, open SOLIDWORKS Rx from Windows Tools, and select "Click here to Launch SOLIDWORKS in OpenGL mode" to test without using your CAD video card.',
       },
       {
-        step: 'Install certified graphics driver',
-        detail: 'For NVIDIA: install the "Studio Driver" (not Game Ready). For AMD: install the "PRO Driver". Always use the version listed on the SolidWorks certified GPU list for your SW version.',
-        command: 'https://www.solidworks.com/support/hardware-certification',
-      },
-      {
-        step: 'Disable hybrid GPU switching (laptops)',
-        detail: 'In Windows Settings → System → Display → Graphics, set sldworks.exe to "High Performance" (dedicated GPU). Disable NVIDIA Optimus / AMD Switchable Graphics for SolidWorks.',
-      },
-      {
-        step: 'Clear graphics cache',
-        detail: 'Delete the contents of %TEMP%\\SolidWorks\\GraphicsCache and restart. Corrupted shader caches can cause persistent OpenGL crashes.',
-        command: 'del /q "%TEMP%\\SolidWorks\\GraphicsCache\\*"',
+        title: 'Inspect Diagnostics Tab Graphics Card Entry',
+        detail: 'Open the SOLIDWORKS Rx Diagnostics Tab to review your graphics card information and verify you are running a certified graphics driver for stability.',
+        actionNote: 'Source: SOLIDWORKS Graphic Optimization Guide & SOLIDWORKS Rx Diagnostics Tab',
       },
     ],
   },
   {
-    id: 'memory',
-    title: 'Memory Exhaustion / GDI Object Leak',
-    icon: MemoryStick,
-    symptoms: [
-      'SolidWorks becomes sluggish after 1-2 hours of use, then crashes',
-      'Task Manager shows RAM usage climbing steadily toward 8-16 GB',
-      '"Out of memory" or "GDI object limit reached" error dialog',
-      'Large assemblies (500+ parts) crash on load or during rebuild',
-    ],
-    cause: 'SolidWorks is a 64-bit application but still has internal GDI object limits inherited from legacy code. Complex assemblies with many configurations, display states, or in-context references can exhaust GDI handles. Additionally, large toolbox libraries and duplicate components inflate memory usage.',
-    fixes: [
+    id: 'large-assembly',
+    label: 'Large Assembly Lag, Freezes & Slow Rebuilds',
+    category: 'Assembly Performance',
+    question: 'Does SOLIDWORKS freeze or slow down sharply when opening or mating complex multi-level assemblies?',
+    cause: 'Opening every subassembly fully Resolved loads unnecessary solid geometry and mates into memory when lighter assembly opening modes or SpeedPak configurations would suffice.',
+    officialUrl: 'https://blogs.solidworks.com/products/solidworks/large-assembly-tips-tricks/',
+    officialLabel: 'SOLIDWORKS Blog: Large Assembly Tips & Tricks',
+    steps: [
       {
-        step: 'Enable Large Address Awareness and GDI handle optimization',
-        detail: 'In SolidWorks → Tools → Options → System Options → Performance: enable "Use Software OpenGL" temporarily, set "Level of detail" to minimum, and uncheck "Use performance settings from OS".',
+        title: 'Choose the Appropriate Assembly Opening Mode',
+        detail: 'Switch between Resolved, Lightweight, Large Assembly Mode, and Large Design Review depending on whether you need full feature editing or fast review/mating.',
       },
       {
-        step: 'Use SpeedPak for large assemblies',
-        detail: 'Create SpeedPak configurations of subassemblies. SpeedPak loads only the faces and edges referenced by mates, dramatically reducing memory footprint for large assemblies.',
-      },
-      {
-        step: 'Split toolbox into separate files',
-        detail: 'If your SolidWorks Toolbox has 10,000+ configurations in a single file, split it into smaller files. Each configuration consumes GDI handles even when not displayed.',
-      },
-      {
-        step: 'Increase Windows GDI object limit',
-        detail: 'Edit the registry to increase the per-process GDI handle limit. This is a system-wide change that requires admin rights.',
-        command: 'reg add "HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Windows" /v GDIProcessHandleQuota /t REG_DWORD /d 30000 /f',
+        title: 'Create a SpeedPak Configuration for Subassemblies',
+        detail: 'Use SpeedPak on heavy subassemblies to reduce file footprint by limiting loaded geometry to the specific faces and bodies required for mate referencing.',
       },
     ],
   },
   {
-    id: 'toolbox',
-    title: 'Corrupt Toolbox / Hole Wizard Database',
-    icon: Database,
-    symptoms: [
-      'Crash when inserting a Toolbox component (bolt, nut, washer)',
-      'Hole Wizard crashes when selecting a standard (ANSI, ISO, DIN)',
-      'SolidWorks hangs for 30+ seconds when accessing Toolbox',
-      'Error: "Toolbox database is not configured correctly"',
-    ],
-    cause: 'The SolidWorks Toolbox database (SWBrowser.sldedb) can become corrupted after version upgrades, network drive disconnections, or improper Toolbox configuration changes. The Hole Wizard shares the same database and fails similarly.',
-    fixes: [
+    id: 'temp-maintenance',
+    label: 'Unstable Repeated Sessions / Accumulated Temp Files',
+    category: 'System Maintenance',
+    question: 'Does instability appear progressively across sessions or after abrupt program exits?',
+    cause: 'Accumulated temporary files in SOLIDWORKS data folders or prior crash/reboot history can degrade startup and session reliability.',
+    officialUrl: 'https://blogs.solidworks.com/products/solidworks/complete-guide-using-solidworks-rx/',
+    officialLabel: 'SOLIDWORKS Blog: System Maintenance & Reliability Tabs',
+    steps: [
       {
-        step: 'Run SolidWorks Rx to reset Toolbox',
-        detail: 'SolidWorks Rx → Maintenance → "Reset SolidWorks Settings" → check "Reset Toolbox". This recreates the Toolbox database from the installation media.',
+        title: 'Run SOLIDWORKS Rx System Maintenance Cleaning',
+        detail: 'Use the built-in System Maintenance utility in SOLIDWORKS Rx for cleaning temporary files in SOLIDWORKS data folders through the supported GUI tool.',
       },
       {
-        step: 'Manually rebuild Toolbox database',
-        detail: 'Close SolidWorks. Navigate to the Toolbox folder (typically C:\\SOLIDWORKS Data\\browser). Rename SWBrowser.sldedb to SWBrowser.sldedb.bak. Launch SolidWorks → Tools → Options → Hole Wizard/Toolbox → reconfigure the path.',
-      },
-      {
-        step: 'Verify network drive connectivity',
-        detail: 'If Toolbox is on a network drive, verify the drive letter is persistent and accessible. Use UNC paths (\\\\server\\share) instead of mapped drive letters for reliability.',
-        command: 'net use Z: \\\\server\\SolidWorksData /persistent:yes',
+        title: 'Review Session History in the Reliability Tab',
+        detail: 'Inspect the SOLIDWORKS Rx Reliability Tab to review past sessions, reboots, and crash patterns before escalating.',
       },
     ],
   },
   {
-    id: 'registry',
-    title: 'Corrupt Registry / Settings Profile',
-    icon: RefreshCw,
-    symptoms: [
-      'SolidWorks crashes immediately on startup (before UI loads)',
-      'UI elements missing, toolbars rearranged, command manager empty',
-      'Crash after a Windows update or user profile change',
-      'Resetting settings via SolidWorks Rx does not fix the issue',
-    ],
-    cause: 'SolidWorks stores extensive user preferences, UI layouts, and add-in registrations in the Windows Registry under HKCU\\Software\\SolidWorks\\SOLIDWORKS [version]. Corruption here (from crashes, Windows updates, or profile migration) can cause startup failures.',
-    fixes: [
+    id: 'problem-capture',
+    label: 'Repeatable Crash Requiring Reseller Support Package',
+    category: 'Diagnostics & Escalation',
+    question: 'Do crashes recur on a specific workflow even after adjusting display quality or assembly modes?',
+    cause: 'Repeatable application defects or environment conflicts require a complete diagnostic capture with system settings and performance logs.',
+    officialUrl: 'https://www.solidworks.com/sw/docs/SolidWorks_Graphic_Optimization_Guide.pdf',
+    officialLabel: 'SOLIDWORKS Graphic Optimization Guide (PDF)',
+    steps: [
       {
-        step: 'Full registry reset via SolidWorks Rx',
-        detail: 'SolidWorks Rx → Maintenance → "Reset SolidWorks Settings" → select all options. This deletes and recreates all SolidWorks registry keys for the current user.',
+        title: 'Balance Performance vs. Image Quality',
+        detail: 'Review SolidWorks System options - Performance to balance 3D display performance against visual image quality for complex parts.',
       },
       {
-        step: 'Manual registry cleanup',
-        detail: 'Close SolidWorks. Open Registry Editor (regedit). Navigate to HKEY_CURRENT_USER\\Software\\SolidWorks\\SOLIDWORKS [your version]. Export the key as backup, then delete it. Restart SolidWorks to regenerate default keys.',
-        command: 'reg export "HKCU\\Software\\SolidWorks\\SOLIDWORKS 2024" "%USERPROFILE%\\Desktop\\SW_backup.reg" && reg delete "HKCU\\Software\\SolidWorks\\SOLIDWORKS 2024" /f',
-      },
-      {
-        step: 'Create a new Windows user profile',
-        detail: 'If the registry corruption persists across resets, create a new Windows user account and test SolidWorks there. If it works, the old user profile is corrupt and needs migration.',
-      },
-    ],
-  },
-  {
-    id: 'service-pack',
-    title: 'Service Pack / Version Compatibility Issue',
-    icon: Wrench,
-    symptoms: [
-      'Crash after installing a new SolidWorks service pack',
-      'Files created in a newer service pack crash in an older one',
-      'Add-ins stop working after service pack upgrade',
-      'SolidWorks Rx shows "version mismatch" warnings',
-    ],
-    cause: 'SolidWorks service packs are forward-compatible but not backward-compatible. Files saved in SP5 cannot be opened in SP3. Add-ins compiled for a specific service pack may fail after upgrade. Additionally, partial service pack installations (interrupted by antivirus) can corrupt core DLLs.',
-    fixes: [
-      {
-        step: 'Verify service pack installation integrity',
-        detail: 'In SolidWorks → Help → About SolidWorks, note the full version number. Compare with the latest service pack on the SolidWorks download portal. If the installation was interrupted, download and run the service pack installer again.',
-      },
-      {
-        step: 'Run SolidWorks Installation Manager repair',
-        detail: 'Windows Control Panel → Programs → SolidWorks → Modify → "Repair installation". This verifies and replaces any corrupted DLLs from the service pack.',
-      },
-      {
-        step: 'Update all add-ins to match service pack',
-        detail: 'Contact your add-in vendors (CAMWorks, Mastercam, SolidCAM, etc.) for service pack-compatible versions. Disable all add-ins first to confirm they are the cause: SolidWorks → Tools → Add-Ins → uncheck all.',
-      },
-      {
-        step: 'Use SolidWorks Rx to check system',
-        detail: 'SolidWorks Rx → Diagnostics → "System Diagnostics" runs a comprehensive check of your installation, including DLL versions, registry entries, and system compatibility.',
+        title: 'Complete the 3-Step SOLIDWORKS Rx Problem Capture',
+        detail: 'On the SOLIDWORKS Rx Problem Capture Tab: Step 1 Record (choose Use Current Session or reproduce), Step 2 Add More Files to Zip if needed, and Step 3 fill out the Problem Capture Details form for support.',
       },
     ],
   },
 ];
 
 export default function SolidWorksCrashClient() {
-  const [selectedId, setSelectedId] = useState<string>(ISSUES[0].id);
-  const [copiedText, setCopiedText] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string>(SCENARIOS[0].id);
+  const [checkedSteps, setCheckedSteps] = useState<Record<string, boolean>>({});
+  const [copiedId, setCopiedId] = useState<string | null>(null);
 
-  const selected = ISSUES.find(i => i.id === selectedId) || ISSUES[0];
+  const selected = SCENARIOS.find(s => s.id === selectedId) || SCENARIOS[0];
 
-  const handleCopy = (text: string, id: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedText(id);
-    setTimeout(() => setCopiedText(null), 2000);
+  const toggleStep = (key: string) => {
+    setCheckedSteps(prev => ({ ...prev, [key]: !prev[key] }));
+  };
+
+  const completedCount = selected.steps.filter((_, idx) => checkedSteps[`${selected.id}-${idx}`]).length;
+
+  const handleCopySummary = () => {
+    const text = [
+      `SOLIDWORKS Diagnostic Checklist - ${selected.label}`,
+      `Cause: ${selected.cause}`,
+      `Official Source: ${selected.officialUrl}`,
+      ...selected.steps.map((s, i) => `${i + 1}. ${s.title}: ${s.detail}`),
+    ].join('\n');
+    navigator.clipboard.writeText(text).catch(() => {});
+    setCopiedId(selected.id);
+    setTimeout(() => setCopiedId(null), 2000);
+  };
+
+  const downloadChecklistTxt = () => {
+    const text = [
+      'SOLIDWORKS Crash & Freeze Official Diagnostic Checklist',
+      `Scenario: ${selected.label} (${selected.category})`,
+      `Summary: ${selected.cause}`,
+      `Source URL: ${selected.officialUrl}`,
+      '',
+      'Action Steps:',
+      ...selected.steps.map((s, i) =>
+        `[ ${checkedSteps[`${selected.id}-${i}`] ? 'x' : ' '} ] ${i + 1}. ${s.title}\n    ${s.detail}`
+      ),
+    ].join('\n');
+    const blob = new Blob([text], { type: 'text/plain;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `solidworks-diagnostic-${selected.id}.txt`;
+    a.click();
+    URL.revokeObjectURL(url);
   };
 
   return (
-    <div className="space-y-8">
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-        {/* Issue List */}
-        <div className="lg:col-span-1 space-y-3">
-          <div className="flex items-center gap-3 mb-2">
-            <ShieldAlert className="w-6 h-6 text-blue-600" />
-            <h2 className="text-lg font-black text-slate-900 tracking-tight">Select Your Issue</h2>
+    <div data-testid="calculator-client" className="space-y-8">
+      <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
+        <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
+              <HelpCircle className="w-5 h-5" />
+            </div>
+            <div>
+              <h2 className="text-lg font-black text-slate-900 tracking-tight">Select Symptom</h2>
+              <p className="text-xs text-slate-500 font-medium">Guided by official SOLIDWORKS Rx &amp; Assembly documentation</p>
+            </div>
           </div>
-          {ISSUES.map(issue => {
-            const Icon = issue.icon;
+          <button
+            type="button"
+            data-testid="btn-reset"
+            onClick={() => {
+              setSelectedId(SCENARIOS[0].id);
+              setCheckedSteps({});
+            }}
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-black bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all cursor-pointer"
+          >
+            <RotateCcw className="w-3.5 h-3.5" />
+            Reset
+          </button>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {SCENARIOS.map(s => (
+            <button
+              key={s.id}
+              type="button"
+              data-testid={`scenario-${s.id}`}
+              onClick={() => setSelectedId(s.id)}
+              className={`text-left p-4 rounded-2xl border-2 transition-all cursor-pointer ${
+                selected.id === s.id
+                  ? 'border-blue-500 bg-blue-50/60'
+                  : 'border-slate-100 bg-slate-50 hover:border-slate-200'
+              }`}
+            >
+              <span className="text-xs font-black uppercase tracking-wider text-blue-600 block mb-1">{s.category}</span>
+              <span className="text-sm font-black text-slate-800">{s.label}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      <div data-testid="diagnostic-panel" className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm space-y-6">
+        <div className="flex flex-wrap items-start justify-between gap-4">
+          <div className="flex items-start gap-4 flex-1">
+            <div className="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center text-amber-600 shrink-0 mt-1">
+              <AlertTriangle className="w-5 h-5" />
+            </div>
+            <div>
+              <span className="text-xs font-black uppercase tracking-wider text-amber-600 block mb-1">{selected.category}</span>
+              <h3 data-testid="diag-title" className="text-xl font-black text-slate-900 mb-2">{selected.question}</h3>
+              <p className="text-sm text-slate-600 font-medium leading-relaxed">{selected.cause}</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            <button
+              type="button"
+              data-testid="copy-checklist-btn"
+              onClick={handleCopySummary}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-black bg-slate-100 text-slate-700 hover:bg-slate-200 transition-all cursor-pointer"
+            >
+              {copiedId === selected.id ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+              {copiedId === selected.id ? 'Copied' : 'Copy Steps'}
+            </button>
+            <button
+              type="button"
+              data-testid="export-txt-btn"
+              onClick={downloadChecklistTxt}
+              className="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl text-xs font-black bg-slate-900 text-white hover:bg-slate-800 transition-all cursor-pointer"
+            >
+              <Download className="w-3.5 h-3.5" />
+              Export Checklist (.txt)
+            </button>
+          </div>
+        </div>
+
+        <div className="space-y-3">
+          <div className="flex items-center justify-between text-xs font-black text-slate-400 uppercase tracking-wider">
+            <span>Official Diagnostic Steps</span>
+            <span data-testid="progress-count">{completedCount} / {selected.steps.length} checked</span>
+          </div>
+
+          {selected.steps.map((step, idx) => {
+            const key = `${selected.id}-${idx}`;
+            const checked = Boolean(checkedSteps[key]);
             return (
-              <button
-                key={issue.id}
-                onClick={() => setSelectedId(issue.id)}
-                className={`w-full flex items-start gap-3 p-4 rounded-2xl border text-left transition-all ${
-                  selectedId === issue.id
-                    ? 'bg-blue-50 border-blue-200'
-                    : 'bg-white border-slate-100 hover:border-slate-200'
+              <div
+                key={key}
+                data-testid={`step-${idx}`}
+                onClick={() => toggleStep(key)}
+                className={`p-5 rounded-2xl border-2 cursor-pointer transition-all ${
+                  checked ? 'border-emerald-200 bg-emerald-50/40' : 'border-slate-100 bg-slate-50 hover:border-slate-200'
                 }`}
               >
-                <div className={`w-10 h-10 rounded-xl flex items-center justify-center shrink-0 ${selectedId === issue.id ? 'bg-blue-600 text-white' : 'bg-slate-50 text-slate-500'}`}>
-                  <Icon className="w-5 h-5" />
+                <div className="flex items-start gap-4">
+                  <div className={`w-7 h-7 rounded-lg flex items-center justify-center shrink-0 mt-0.5 ${checked ? 'bg-emerald-500 text-white' : 'bg-white border-2 border-slate-200 text-slate-500'}`}>
+                    {checked ? <CheckCircle2 className="w-4 h-4" /> : <span className="text-xs font-black">{idx + 1}</span>}
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className={`text-sm font-black mb-1 ${checked ? 'line-through text-slate-400' : 'text-slate-900'}`}>{step.title}</h4>
+                    <p className="text-sm text-slate-600 font-medium leading-relaxed">{step.detail}</p>
+                    {step.actionNote && (
+                      <p className="mt-2 text-xs font-bold text-slate-500">{step.actionNote}</p>
+                    )}
+                  </div>
                 </div>
-                <div className="flex-1 min-w-0">
-                  <h3 className={`text-lg font-black ${selectedId === issue.id ? 'text-blue-600' : 'text-slate-900'}`}>{issue.title}</h3>
-                  <p className="text-sm text-slate-400 font-bold mt-1">{issue.symptoms.length} symptoms identified</p>
-                </div>
-              </button>
+              </div>
             );
           })}
         </div>
 
-        {/* Detail Panel */}
-        <div className="lg:col-span-2 space-y-6">
-          {/* Symptoms */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-lg font-black text-slate-900 mb-4">Common Symptoms</h3>
-            <ul className="space-y-3">
-              {selected.symptoms.map((symptom, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-base font-black shrink-0 mt-0.5">
-                    {i + 1}
-                  </div>
-                  <p className="text-lg text-slate-700 font-medium leading-relaxed">{symptom}</p>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Root Cause */}
-          <div className="bg-amber-50 border border-amber-200 rounded-3xl p-6">
-            <h3 className="text-base font-black text-amber-600 uppercase tracking-wider mb-2">Root Cause Analysis</h3>
-            <p className="text-lg text-slate-700 font-medium leading-relaxed">{selected.cause}</p>
-          </div>
-
-          {/* Fixes */}
-          <div className="bg-white rounded-3xl border border-slate-100 p-8 shadow-sm">
-            <h3 className="text-lg font-black text-slate-900 mb-4">Step-by-Step Fixes</h3>
-            <div className="space-y-4">
-              {selected.fixes.map((fix, i) => (
-                <div key={i} className="rounded-2xl bg-slate-50 border border-slate-100 p-5">
-                  <div className="flex items-start gap-3 mb-2">
-                    <div className="w-7 h-7 rounded-lg bg-blue-600 text-white flex items-center justify-center text-base font-black shrink-0">
-                      {i + 1}
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-black text-slate-900">{fix.step}</h4>
-                      <p className="text-base text-slate-600 font-medium mt-1 leading-relaxed">{fix.detail}</p>
-                    </div>
-                  </div>
-                  {fix.command && (
-                    <div className="mt-3 ml-10 flex items-center gap-2">
-                      <code className="flex-1 px-3 py-2 rounded-lg bg-slate-900 text-white text-base font-mono break-all">
-                        {fix.command}
-                      </code>
-                      <button
-                        onClick={() => handleCopy(fix.command!, `fix-${i}`)}
-                        className="px-3 py-2 rounded-lg bg-white border border-slate-200 text-base font-black text-slate-600 hover:bg-blue-50 hover:text-blue-600 transition-all shrink-0"
-                      >
-                        {copiedText === `fix-${i}` ? <Check className="w-4 h-4 text-emerald-500" /> : <Copy className="w-4 h-4" />}
-                      </button>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Next Steps */}
-          <div className="bg-blue-50 border border-blue-100 rounded-2xl p-5 flex items-center gap-3">
-            <ArrowRight className="w-5 h-5 text-blue-500 shrink-0" />
-            <p className="text-base text-slate-600 font-medium">
-              Still crashing after trying all fixes? Run <strong>SolidWorks Rx</strong> → Diagnostics → "System Diagnostics" and contact your SolidWorks reseller with the Rx report file.
-            </p>
-          </div>
+        <div className="pt-2 border-t border-slate-100 flex items-center justify-between">
+          <span className="text-xs font-bold text-slate-400">Reference Documentation</span>
+          <a
+            href={selected.officialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1.5 text-sm font-black text-blue-600 hover:underline"
+          >
+            <ExternalLink className="w-4 h-4" />
+            {selected.officialLabel}
+          </a>
         </div>
       </div>
 
-      <RelatedTools compact />
+      <RelatedTools />
     </div>
   );
 }

@@ -5,7 +5,7 @@ import SpeedUnitConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
   title: "Speed Unit Converter",
-  description: "Convert between m/s, km/h, mph, ft/s, knot, and mach.",
+  description: "Convert between m/s, km/h, mph, ft/s, knot, mm/s, and m/min with exact international SI conversion factors.",
   path: '/toolbox/speed-unit-converter',
 });
 
@@ -32,7 +32,7 @@ export default function SpeedUnitConverterPage() {
               Speed Unit <span className="text-purple-400">Converter</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Convert between m/s, km/h, mph, ft/s, knot, and mach.
+              Convert between m/s, km/h, mph, ft/s, knot, mm/s, and m/min.
             </p>
           </div>
         </section>
