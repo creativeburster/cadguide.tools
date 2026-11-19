@@ -48,7 +48,7 @@ export const SHORTCUTS_DATA: CADShortcut[] = [
   { shortcut: 'F11', command: 'F11', category: 'mode', description: 'Turn object snap tracking on/off.' },
   { shortcut: 'F12', command: 'F12', category: 'mode', description: 'Enable/disable dynamic input.' },
 
-  // Screen, Clipboard & File Management (8 verified entries)
+  // Screen, Clipboard & File Management (11 verified entries)
   { shortcut: 'Ctrl+0', command: 'CLEANSCREENON / CLEANSCREENOFF', category: 'view', description: 'Turn full screen display on/off.' },
   { shortcut: 'Ctrl+1', command: 'PROPERTIES / PROPERTIESCLOSE', category: 'view', description: 'Open/close the Properties palette.' },
   { shortcut: 'Ctrl+9', command: 'COMMANDLINE / COMMANDLINEHIDE', category: 'view', description: 'Show/hide command window.' },

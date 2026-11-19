@@ -224,15 +224,15 @@ export default function SteelSectionClient() {
             <Info className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
             <span>
               Section dimensions, areas, unit masses, moments of inertia (Ix, Iy), and section moduli (Sx, Sy) reproduced from Engineering ToolBox:{' '}
-              <a href="https://www.engineeringtoolbox.com/din-1025-i-beams-d_1317.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
+              <a href="https://www.engineeringtoolbox.com/i-flange-steel-beams-d_1317.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
                 DIN 1025 Normal Flange I-Beams (d_1317)
               </a>
               ,{' '}
-              <a href="https://www.engineeringtoolbox.com/european-wide-flange-beams-hea-d_1313.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
+              <a href="https://www.engineeringtoolbox.com/he-a-steel-beams-d_1313.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
                 DIN 1025 HE-A (d_1313)
               </a>
               , and{' '}
-              <a href="https://www.engineeringtoolbox.com/european-wide-flange-beams-heb-d_1314.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
+              <a href="https://www.engineeringtoolbox.com/he-b-steel-beams-d_1314.html" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
                 DIN 1025 HE-B (d_1314)
               </a>
               .

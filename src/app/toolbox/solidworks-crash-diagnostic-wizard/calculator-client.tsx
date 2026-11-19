@@ -80,12 +80,13 @@ const SCENARIOS: WizardScenario[] = [
     category: 'Diagnostics & Escalation',
     question: 'Do crashes recur on a specific workflow even after adjusting display quality or assembly modes?',
     cause: 'Repeatable application defects or environment conflicts require a complete diagnostic capture with system settings and performance logs.',
-    officialUrl: 'https://www.solidworks.com/sw/docs/SolidWorks_Graphic_Optimization_Guide.pdf',
-    officialLabel: 'SOLIDWORKS Graphic Optimization Guide (PDF)',
+    officialUrl: 'https://blogs.solidworks.com/products/solidworks/complete-guide-using-solidworks-rx/',
+    officialLabel: 'SOLIDWORKS Blog: Complete Guide to Using SOLIDWORKS Rx',
     steps: [
       {
         title: 'Balance Performance vs. Image Quality',
         detail: 'Review SolidWorks System options - Performance to balance 3D display performance against visual image quality for complex parts.',
+        actionNote: 'Source: SOLIDWORKS Graphic Optimization Guide (PDF), p. 4',
       },
       {
         title: 'Complete the 3-Step SOLIDWORKS Rx Problem Capture',
@@ -109,15 +110,20 @@ export default function SolidWorksCrashClient() {
   const completedCount = selected.steps.filter((_, idx) => checkedSteps[`${selected.id}-${idx}`]).length;
 
   const handleCopySummary = () => {
+    if (!navigator.clipboard?.writeText) return;
     const text = [
       `SOLIDWORKS Diagnostic Checklist - ${selected.label}`,
       `Cause: ${selected.cause}`,
       `Official Source: ${selected.officialUrl}`,
       ...selected.steps.map((s, i) => `${i + 1}. ${s.title}: ${s.detail}`),
     ].join('\n');
-    navigator.clipboard.writeText(text).catch(() => {});
-    setCopiedId(selected.id);
-    setTimeout(() => setCopiedId(null), 2000);
+    navigator.clipboard
+      .writeText(text)
+      .then(() => {
+        setCopiedId(selected.id);
+        setTimeout(() => setCopiedId(null), 2000);
+      })
+      .catch(() => {});
   };
 
   const downloadChecklistTxt = () => {

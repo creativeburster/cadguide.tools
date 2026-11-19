@@ -220,6 +220,20 @@ async function verifyNoBannedAndNoNumberInput(page, terms, label) {
     assertAscii(csv, `${label} csv`);
     assert(csv.includes('300B,DIN 1025 HE-B,300,300,11,149,117,25170,8560,1680,571'), `${label} csv row mismatch`);
 
+    const refLinks = await page.locator('main a[href*="engineeringtoolbox.com"]').evaluateAll(
+      (els) => els.map((e) => e.getAttribute('href') || '')
+    );
+    for (const expectedUrl of [
+      'https://www.engineeringtoolbox.com/i-flange-steel-beams-d_1317.html',
+      'https://www.engineeringtoolbox.com/he-a-steel-beams-d_1313.html',
+      'https://www.engineeringtoolbox.com/he-b-steel-beams-d_1314.html',
+    ]) {
+      assert(refLinks.includes(expectedUrl), `${label}: missing verified URL ${expectedUrl}`);
+    }
+    for (const oldPart of ['din-1025-i-beams-d_1317', 'european-wide-flange-beams-hea-d_1313', 'european-wide-flange-beams-heb-d_1314']) {
+      assert(!refLinks.some((h) => h.includes(oldPart)), `${label}: stale 404 URL found -> ${oldPart}`);
+    }
+
     await page.click('[data-testid="btn-reset"]');
     approx(await page.locator('[data-testid="output-count"]').innerText(), 42, `${label} reset count`);
     console.log(`[PASS] ${label}`);

@@ -175,7 +175,20 @@ async function verifyNoBannedAndNoNumberInput(page, terms, label) {
     const progText = await page.locator('[data-testid="progress-count"]').innerText();
     assert(progText.toLowerCase().includes('1 / 2 checked'), `${label} progress expected 1 / 2 checked, got "${progText}"`);
 
+    await page.evaluate(() => {
+      const mockClipboard = { writeText: () => Promise.reject(new Error('Clipboard denied')) };
+      try {
+        Object.defineProperty(navigator, 'clipboard', { configurable: true, value: mockClipboard });
+      } catch {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText = mockClipboard.writeText;
+        }
+      }
+    });
     await page.click('[data-testid="copy-checklist-btn"]');
+    await page.waitForTimeout(100);
+    const copyBtnText = await page.locator('[data-testid="copy-checklist-btn"]').innerText();
+    assert(!copyBtnText.includes('Copied') && copyBtnText.includes('Copy Steps'), `${label} clipboard reject showed Copied: "${copyBtnText}"`);
 
     const [dl] = await Promise.all([
       page.waitForEvent('download'),
@@ -184,6 +197,19 @@ async function verifyNoBannedAndNoNumberInput(page, terms, label) {
     const txt = await readDownloadText(dl);
     assertAscii(txt, `${label} txt`);
     assert(txt.includes('SpeedPak') && txt.includes('https://blogs.solidworks.com/'), `${label} txt content mismatch`);
+
+    await page.click('[data-testid="scenario-problem-capture"]');
+    const problemCaptureHref = await page.locator('[data-testid="diagnostic-panel"] a').getAttribute('href');
+    assert.strictEqual(
+      problemCaptureHref,
+      'https://blogs.solidworks.com/products/solidworks/complete-guide-using-solidworks-rx/',
+      `${label} problem-capture officialUrl mismatch: ${problemCaptureHref}`
+    );
+    const problemCaptureText = await page.locator('[data-testid="diagnostic-panel"]').innerText();
+    assert(
+      problemCaptureText.includes('Source: SOLIDWORKS Graphic Optimization Guide (PDF), p. 4'),
+      `${label} problem-capture actionNote missing`
+    );
 
     await page.click('[data-testid="btn-reset"]');
     const resetProg = await page.locator('[data-testid="progress-count"]').innerText();

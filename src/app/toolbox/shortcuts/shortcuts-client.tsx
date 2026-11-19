@@ -25,9 +25,14 @@ export default function CADShortcutsClient() {
   }, [searchTerm, activeCategory]);
 
   const handleCopy = (shortcut: string) => {
-    navigator.clipboard.writeText(shortcut).catch(() => {});
-    setCopiedShortcut(shortcut);
-    setTimeout(() => setCopiedShortcut(null), 2000);
+    if (!navigator.clipboard?.writeText) return;
+    navigator.clipboard
+      .writeText(shortcut)
+      .then(() => {
+        setCopiedShortcut(shortcut);
+        setTimeout(() => setCopiedShortcut(null), 2000);
+      })
+      .catch(() => {});
   };
 
   const handlePrint = () => {

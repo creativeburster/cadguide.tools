@@ -203,6 +203,21 @@ async function verifyNoBannedAndNoNumberInput(page, terms, label) {
     await verifyNoBannedAndNoNumberInput(page, BANNED_B62_TERMS, 'shortcuts');
     const initCount = await page.locator('[data-testid="shortcut-card"]').count();
     assert.strictEqual(initCount, 43, `shortcuts expected 43 verified cards, got ${initCount}`);
+    await page.evaluate(() => {
+      const mockClipboard = { writeText: () => Promise.reject(new Error('Clipboard denied')) };
+      try {
+        Object.defineProperty(navigator, 'clipboard', { configurable: true, value: mockClipboard });
+      } catch {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText = mockClipboard.writeText;
+        }
+      }
+    });
+    const firstCardBtn = page.locator('[data-testid="shortcut-card"] button').first();
+    await firstCardBtn.click();
+    await page.waitForTimeout(100);
+    const rejectedBtnText = await firstCardBtn.innerText();
+    assert(!rejectedBtnText.includes('Copied') && rejectedBtnText.includes('Copy'), `shortcuts clipboard reject showed Copied: "${rejectedBtnText}"`);
     await page.fill('[data-testid="input-search"]', 'CIRCLE');
     const circleCount = await page.locator('[data-testid="shortcut-card"]').count();
     assert.strictEqual(circleCount, 1, `shortcuts search CIRCLE expected 1, got ${circleCount}`);
