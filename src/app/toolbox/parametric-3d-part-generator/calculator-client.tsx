@@ -653,15 +653,75 @@ export default function Parametric3dPartGeneratorClient() {
               <div className="bg-slate-900 rounded-3xl p-6 text-white space-y-4">
                 <div className="flex flex-wrap items-center justify-between gap-2 text-xs text-slate-300 border-b border-slate-800 pb-3">
                   <span className="font-bold">Live 3D Parametric Solid Viewport</span>
-                  <div className="flex items-center gap-3">
-                    <label className="flex items-center gap-1.5">
-                      <span>Yaw</span>
-                      <input type="range" min="-180" max="180" value={yawStr} onChange={(e) => setYawStr(e.target.value)} className="w-24" />
-                    </label>
-                    <label className="flex items-center gap-1.5">
-                      <span>Pitch</span>
-                      <input type="range" min="-85" max="85" value={pitchStr} onChange={(e) => setPitchStr(e.target.value)} className="w-24" />
-                    </label>
+                  <div className="flex flex-wrap items-center gap-3">
+                    <div className="flex items-center gap-1">
+                      <span className="text-slate-400">Yaw</span>
+                      <button
+                        type="button"
+                        data-testid="btn-yaw-dec"
+                        onClick={() => {
+                          const cur = Number.isFinite(parseRangeVal(yawStr)) ? parseRangeVal(yawStr) : 36;
+                          setYawStr(String(Math.max(-180, cur - 15)));
+                        }}
+                        className="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-white font-bold"
+                      >
+                        -15
+                      </button>
+                      <input
+                        type="text"
+                        inputMode="numeric"
+                        data-testid="input-yaw"
+                        aria-label="Viewport yaw angle (deg)"
+                        value={yawStr}
+                        onChange={(e) => setYawStr(e.target.value)}
+                        className="w-14 h-6 px-1.5 rounded bg-slate-800 border border-slate-700 text-white text-center text-xs font-bold"
+                      />
+                      <button
+                        type="button"
+                        data-testid="btn-yaw-inc"
+                        onClick={() => {
+                          const cur = Number.isFinite(parseRangeVal(yawStr)) ? parseRangeVal(yawStr) : 36;
+                          setYawStr(String(Math.min(180, cur + 15)));
+                        }}
+                        className="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-white font-bold"
+                      >
+                        +15
+                      </button>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <span className="text-slate-400">Pitch</span>
+                      <button
+                        type="button"
+                        data-testid="btn-pitch-dec"
+                        onClick={() => {
+                          const cur = Number.isFinite(parseRangeVal(pitchStr)) ? parseRangeVal(pitchStr) : 30;
+                          setPitchStr(String(Math.max(-85, cur - 15)));
+                        }}
+                        className="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-white font-bold"
+                      >
+                        -15
+                      </button>
+                      <input
+                        type="text"
+                        inputMode="numeric"
+                        data-testid="input-pitch"
+                        aria-label="Viewport pitch angle (deg)"
+                        value={pitchStr}
+                        onChange={(e) => setPitchStr(e.target.value)}
+                        className="w-14 h-6 px-1.5 rounded bg-slate-800 border border-slate-700 text-white text-center text-xs font-bold"
+                      />
+                      <button
+                        type="button"
+                        data-testid="btn-pitch-inc"
+                        onClick={() => {
+                          const cur = Number.isFinite(parseRangeVal(pitchStr)) ? parseRangeVal(pitchStr) : 30;
+                          setPitchStr(String(Math.min(85, cur + 15)));
+                        }}
+                        className="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-white font-bold"
+                      >
+                        +15
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <canvas ref={canvasRef} width={640} height={340} className="w-full h-80 rounded-2xl" />

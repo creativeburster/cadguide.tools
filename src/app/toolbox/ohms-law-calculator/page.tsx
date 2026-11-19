@@ -29,10 +29,10 @@ export default function OhmsLawPage() {
               Electrical Engineering
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 tracking-tight leading-tight">
-              Ohm's Law <span className="text-yellow-400">Calculator</span>
+              Ohm&apos;s Law <span className="text-yellow-400">Calculator</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Calculate voltage (V), current (I), resistance (R), and power (P) using Ohm's law. Enter any two known values to solve for all four.
+              Calculate voltage (V), current (I), resistance (R), and power (P) using Ohm&apos;s law. Enter any two known values to solve for all four.
             </p>
           </div>
         </section>

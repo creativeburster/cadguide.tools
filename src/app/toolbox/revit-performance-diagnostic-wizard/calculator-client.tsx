@@ -55,7 +55,7 @@ const ISSUES: Issue[] = [
     fixes: [
       {
         step: 'Review and unload inactive links via Manage Links',
-        detail: 'Inspect Revit, CAD Formats, and DWF Markups tabs in Manage Links. Unload links or close dedicated link worksets when editing isolated zones.',
+        detail: 'Inspect Revit and CAD links in Manage Links to better manage individual model parts and unload inactive discipline links when working in isolated zones.',
         command: 'Manage tab -> Manage Project panel -> Manage Links',
       },
       {
@@ -73,9 +73,9 @@ const ISSUES: Issue[] = [
       'Each view recalculates separate visibility overrides without templates',
       'Wide 3D views render every element without section boxes',
     ],
-    cause: 'Excess unorganized working views and unconstrained 3D views expand the indexed view definitions and graphical recalculation scope.',
-    sourceTitle: 'Revit Help: Manage Links & View Organization',
-    sourceUrl: 'https://help.autodesk.com/cloudhelp/2019/ENU/Revit-DocumentPresent/files/GUID-A80AFF8B-F673-489C-85EC-3586D4C8B7FA.htm',
+    cause: 'Unstandardized project views expand visibility and graphic management overhead; Revit View Templates group view scale, discipline, detail level, and visibility settings for consistent control.',
+    sourceTitle: 'Revit Help: View Templates',
+    sourceUrl: 'https://help.autodesk.com/cloudhelp/2024/ENU/Revit-Customize/files/GUID-A9C36610-6853-433D-AFB5-639090BD017F.htm',
     fixes: [
       {
         step: 'Standardize view settings with View Templates',
@@ -115,26 +115,25 @@ const ISSUES: Issue[] = [
   },
   {
     id: 'dwg-imports',
-    title: 'Imported & Exploded CAD Objects',
+    title: 'Unused & Imported CAD Objects',
     iconKey: 'dwg',
     symptoms: [
-      'Model becomes heavy immediately after importing DWG drawings',
-      'Imported line patterns and subcategories appear in Object Styles',
-      'Exploded CAD blocks leave hundreds of unstructured detail lines',
+      'Project file size stays larger than expected after deleting CAD imports',
+      'Unused views, families, and other objects remain in the project',
+      'Objects that have dependencies cannot be purged until references are cleared',
     ],
-    cause: 'Importing CAD geometry directly into project files embeds all layers and patterns inside the project stream, and exploding multiplies individual element records.',
+    cause: 'Unused views, families, and other unreferenced objects remaining in the project increase file size and impact performance. Purge Unused does not allow purging objects that are currently in use or have active dependencies until those references are removed.',
     sourceTitle: 'Revit Help: Purge Unused Objects after Removing Imports',
     sourceUrl: 'https://help.autodesk.com/cloudhelp/2022/ENU/Revit-Customize/files/GUID-4EBBDE76-E019-486E-BFBF-EE326CAAE2C4.htm',
     fixes: [
       {
-        step: 'Replace direct DWG imports with Linked CAD',
-        detail: 'Remove imported CAD instances from views and re-attach them as linked references via Manage Links when reference geometry is still needed.',
-        command: 'Insert tab -> Link panel -> Link CAD',
+        step: 'Create a backup project file and ensure all worksets are open',
+        detail: 'Before purging unused objects, create a backup project file. If the project is workset-enabled, all worksets must be open to use Purge Unused.',
+        command: 'Manage tab -> Settings panel -> Purge Unused',
       },
       {
-        step: 'Run Purge Unused after clearing CAD artifacts',
-        detail: 'After deleting imported instances and stray line patterns, run Purge Unused to clear unreferenced materials and symbols.',
-        command: 'Manage tab -> Settings panel -> Purge Unused',
+        step: 'Delete imported CAD dependencies then run Purge Unused',
+        detail: 'Remove unreferenced imported instances and dependent objects from views, then click Purge Unused to delete unused views, families, and other objects from the current project.',
       },
     ],
   },

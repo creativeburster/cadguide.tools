@@ -748,14 +748,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'online-dwg-to-pdf-cloud-printer',
-    title: 'Online DWG to Vector PDF Batch Cloud Printer',
-    description: 'Objective reviews & direct portal: Batch convert DWG drawings to high-fidelity PDF sheets in the cloud without local software installations.',
-    detailDesc: 'Need to print high-resolution PDF sets from DWG files without desktop CAD? We evaluate cloud plotters that preserve CTB line weights, layout tabs, viewport scales, and support batch queues.',
+    title: 'CAD Plot DPI Estimator & Local DWG/DXF Preflight',
+    description: 'Inspect local DWG magic headers or DXF entities in-browser, calculate PDF sheet raster pixel budgets, and export AutoCAD -PLOT scripts.',
+    detailDesc: 'Run in-browser header preflight on local DWG (AC1015-AC1032) and ASCII DXF files, size plot raster DPI buffers and real-world model spans, and build pure-ASCII -PLOT (DWG To PDF.pc3) scripts.',
     category: 'converter',
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'third-party',
-    keywords: ['dwg to pdf online', 'cloud pc3 plotter', 'batch dwg printing', 'ctb vector printing']
+    keywords: ['dwg header preflight', 'cad plot dpi calculator', 'autocad -plot script', 'pdfshx ctb settings']
   },
   {
     slug: 'online-dwg-version-downgrader-cloud',
@@ -825,14 +825,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'online-point-cloud-to-mesh-converter',
-    title: 'Online Point Cloud (LAS/PTS) to Watertight Mesh Converter',
-    description: 'Objective reviews & direct portal: Convert raw LiDAR scanner coordinate points into editable watertight mesh surfaces for CAD.',
-    detailDesc: 'LiDAR scanning outputs massive coordinates lists. We evaluate cloud-scale point cloud meshing servers that convert raw LAS or PTS data into standard OBJ or DXF meshes.',
+    title: 'Point Cloud Preflight (LAS/PLY/XYZ) & Binary STL Mesh Budget',
+    description: 'Read local LAS, PLY, or XYZ point counts and bounding extents in-browser, compute volumetric density, and predict Binary STL mesh size.',
+    detailDesc: 'Inspect local point cloud headers and bounding boxes directly in browser memory (0 bytes uploaded), estimate voxel surface triangle counts, and calculate exact Binary STL byte footprints before desktop meshing.',
     category: 'converter',
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'third-party',
-    keywords: ['point cloud to mesh converter', 'las file to obj converter', 'convert scanner data online', 'dxf terrain generator']
+    keywords: ['point cloud preflight', 'las ply xyz reader', 'binary stl mesh budget', 'voxel density calculator']
   },
   {
     slug: 'cloud-dxf-to-gcode-laser-converter',
@@ -955,14 +955,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'online-image-jpg-to-dxf-vectorizer',
-    title: 'Online Image Raster (JPG/PNG) to Vector DXF Tracer',
-    description: 'Objective reviews & direct portal: Vectorize raster image plans (JPG/PNG) into CAD-ready DXF drawing curves.',
-    detailDesc: 'Review cloud tracing engines that take raster scans of plans or hand-drawn schematics, converting them into smooth bezier arcs and vector line segments in DXF formats.',
+    title: 'Local Image Inspector (PNG/JPEG/BMP) & DXF Calibration Builder',
+    description: 'Read local image pixel width, height, and embedded DPI headers in-browser, calibrate mm/px scale, and export 1:1 DXF frames and IMAGEATTACH scripts.',
+    detailDesc: 'Inspect local PNG, JPEG, or BMP pixel dimensions and DPI metadata directly in your browser without uploading, calibrate physical scale from a known segment, and export 1:1 DXF frames plus IMAGEATTACH setup scripts.',
     category: 'converter',
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'third-party',
-    keywords: ['raster to vector converter', 'jpg to dxf tracer online', 'convert blueprint to dxf', 'vectorize plan scans']
+    keywords: ['png jpeg dpi inspector', 'raster scale calibration', 'imageattach scr generator', 'dxf calibration frame']
   },
   {
     slug: 'online-step-to-obj-gltf-converter',
@@ -1010,14 +1010,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'online-skp-to-fbx-cloud-converter',
-    title: 'Online SketchUp SKP to FBX Render Mesh Converter',
-    description: 'Objective reviews & direct portal: Export SketchUp (.SKP) scenes to FBX meshes with intact texture coordinate mapping.',
-    detailDesc: 'Evaluate cloud polygonization utilities that take architectural SKP files and output render-ready FBX models with matching texture coordinates, ready for Twinmotion or Lumion rendering.',
+    title: 'Local SKP/FBX/OBJ Preflight & RGBA8 Texture VRAM Calculator',
+    description: 'Inspect local SKP, FBX binary/ASCII signatures, or OBJ vertex/triangle counts in-browser and calculate GPU geometry and RGBA8 VRAM budgets.',
+    detailDesc: 'Verify local SKP and FBX signatures or count Wavefront OBJ vertices and triangulated faces in-browser (0 bytes uploaded), then compute vertex/index buffer and uncompressed RGBA8 texture memory budgets.',
     category: 'converter',
     status: 'released',
     releasedDate: '2026-06-05',
     origin: 'third-party',
-    keywords: ['skp to fbx online', 'sketchup rendering export', 'convert skp scene to mesh', 'fbx texture mapping']
+    keywords: ['skp fbx preflight', 'obj triangle counter', 'rgba8 vram calculator', 'render mesh memory budget']
   },
 
   // ==================== NEW NATIVE CALCULATORS ====================

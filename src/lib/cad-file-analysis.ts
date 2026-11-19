@@ -1203,10 +1203,18 @@ export function parseStepIgesMeta(text: string): StepMeta | null {
 export interface GcodeMove { x1: number; y1: number; x2: number; y2: number; rapid: boolean; z: number }
 
 /** Parse G0/G1/G2/G3 moves (absolute/incremental, XY plane) into straight segments for plotting. */
-export function parseGcode(text: string): { moves: GcodeMove[]; stats: { label: string; value: string }[] } {
+export function parseGcode(text: string): {
+  moves: GcodeMove[];
+  cutLen: number;
+  rapidLen: number;
+  maxFeed: number;
+  cutTimeMin: number;
+  unit: 'in' | 'mm';
+  stats: { label: string; value: string }[];
+} {
   let x = 0, y = 0, z = 0, mode = 0, abs = true, inch = false;
   const moves: GcodeMove[] = [];
-  let cutLen = 0, rapidLen = 0, lines = 0, maxF = 0;
+  let cutLen = 0, rapidLen = 0, lines = 0, maxF = 0, curF = 0, cutTimeMin = 0;
   const tools = new Set<string>();
   for (const raw of text.split(/\r?\n/)) {
     const line = raw.replace(/\(.*?\)/g, '').replace(/;.*$/, '').toUpperCase().trim();
@@ -1227,7 +1235,12 @@ export function parseGcode(text: string): { moves: GcodeMove[]; stats: { label: 
       else if (w === 'I') i = v;
       else if (w === 'J') j = v;
       else if (w === 'R') r = v;
-      else if (w === 'F') maxF = Math.max(maxF, v);
+      else if (w === 'F') {
+        if (v > 0) {
+          curF = v;
+          maxF = Math.max(maxF, v);
+        }
+      }
       else if (w === 'T') tools.add(`T${v}`);
     }
     if (!hasMove) continue;
@@ -1242,7 +1255,8 @@ export function parseGcode(text: string): { moves: GcodeMove[]; stats: { label: 
         cy = my + (sgn * h * (nx - x)) / (d || 1);
       } else { cx = x + i; cy = y + j; }
       const rad = Math.hypot(x - cx, y - cy);
-      let a1 = Math.atan2(y - cy, x - cx), a2 = Math.atan2(ny - cy, nx - cx);
+      const a1 = Math.atan2(y - cy, x - cx);
+      let a2 = Math.atan2(ny - cy, nx - cx);
       if (mode === 2) { if (a2 >= a1 - 1e-9) a2 -= Math.PI * 2; } else if (a2 <= a1 + 1e-9) a2 += Math.PI * 2;
       const steps = Math.max(4, Math.ceil(Math.abs(a2 - a1) / (Math.PI / 36)));
       let px = x, py = y;
@@ -1252,17 +1266,29 @@ export function parseGcode(text: string): { moves: GcodeMove[]; stats: { label: 
         moves.push({ x1: px, y1: py, x2: qx, y2: qy, rapid: false, z: nz });
         px = qx; py = qy;
       }
-      cutLen += Math.abs(a2 - a1) * rad;
+      const arcLen = Math.abs(a2 - a1) * rad;
+      cutLen += arcLen;
+      if (curF > 0) cutTimeMin += arcLen / curF;
     } else {
       moves.push({ x1: x, y1: y, x2: nx, y2: ny, rapid: mode === 0, z: nz });
       const d = Math.hypot(nx - x, ny - y, nz - z);
-      if (mode === 0) rapidLen += d; else cutLen += d;
+      if (mode === 0) {
+        rapidLen += d;
+      } else {
+        cutLen += d;
+        if (curF > 0) cutTimeMin += d / curF;
+      }
     }
     x = nx; y = ny; z = nz;
   }
   const u = inch ? 'in' : 'mm';
   return {
     moves,
+    cutLen,
+    rapidLen,
+    maxFeed: maxF,
+    cutTimeMin,
+    unit: u,
     stats: [
       { label: 'Program lines', value: String(lines) },
       { label: 'Motion segments', value: String(moves.length) },

@@ -91,8 +91,8 @@ async function verifyNegativeTerms(page, terms, label) {
 }
 
 async function assertZeroNumberInputs(main, label) {
-  const cnt = await main.locator('input[type="number"]').count();
-  assert.strictEqual(cnt, 0, `${label}: found ${cnt} <input type="number">`);
+  const cnt = await main.locator('input[type="number"], input[type="range"]').count();
+  assert.strictEqual(cnt, 0, `${label}: found ${cnt} <input type="number|range">`);
 }
 
 async function assertClipboardRejectSafe(page, main, label) {
@@ -216,7 +216,35 @@ async function runTests() {
     await main.locator('[data-testid="validation-error"]').waitFor({ state: 'visible' });
     await assertNoNan(main, `${label} zero refPx`);
 
+    // Test browser-local PNG header (IHDR 2000x1000 + pHYs 7874 px/m = 200 DPI) parsing
+    const pngSig = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+    const ihdr = Buffer.alloc(25);
+    ihdr.writeUInt32BE(13, 0);
+    ihdr.write('IHDR', 4, 'ascii');
+    ihdr.writeUInt32BE(2000, 8);
+    ihdr.writeUInt32BE(1000, 12);
+    ihdr[16] = 8;
+    ihdr[17] = 2;
+    const phys = Buffer.alloc(21);
+    phys.writeUInt32BE(9, 0);
+    phys.write('pHYs', 4, 'ascii');
+    phys.writeUInt32BE(7874, 8);
+    phys.writeUInt32BE(7874, 12);
+    phys[16] = 1;
+    const iend = Buffer.from([0, 0, 0, 0, 0x49, 0x45, 0x4e, 0x44, 0, 0, 0, 0]);
+    await main.locator('[data-testid="input-local-file"]').setInputFiles({
+      name: 'floorplan_scan.png',
+      mimeType: 'image/png',
+      buffer: Buffer.concat([pngSig, ihdr, phys, iend]),
+    });
+    const pf228 = await main.locator('[data-testid="out-file-preflight"]').innerText();
+    assert(pf228.includes('PNG') && pf228.includes('2000 x 1000 px') && pf228.includes('200 DPI'), `${label} PNG preflight mismatch: ${pf228}`);
+    assert.strictEqual(await main.locator('[data-testid="input-px-w"]').inputValue(), '2000');
+    assert.strictEqual(await main.locator('[data-testid="input-px-h"]').inputValue(), '1000');
+    assert.strictEqual(await main.locator('[data-testid="input-dpi"]').inputValue(), '200');
+
     await main.locator('[data-testid="btn-reset"]').click();
+    assert.strictEqual(await main.locator('[data-testid="out-file-preflight"]').count(), 0, `${label} preflight must clear on reset`);
     approx(await main.locator('[data-testid="out-cal-w"]').innerText(), 496.0, `${label} reset`);
     const [dlDxf] = await Promise.all([
       page.waitForEvent('download'),

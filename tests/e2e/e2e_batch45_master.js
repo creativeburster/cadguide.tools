@@ -90,8 +90,8 @@ async function verifyNegativeTerms(page, terms, label) {
 }
 
 async function assertZeroNumberInputs(main, label) {
-  const cnt = await main.locator('input[type="number"]').count();
-  assert.strictEqual(cnt, 0, `${label}: found ${cnt} <input type="number">`);
+  const cnt = await main.locator('input[type="number"], input[type="range"]').count();
+  assert.strictEqual(cnt, 0, `${label}: found ${cnt} <input type="number|range">`);
 }
 
 async function assertClipboardRejectSafe(page, main, label) {
@@ -151,6 +151,19 @@ async function runTests() {
 
     await main.locator('[data-testid="btn-reset"]').click();
     approx(await main.locator('[data-testid="out-px-w"]').innerText(), 9933.0709, `${label} reset`);
+
+    await main.locator('[data-testid="input-local-file"]').setInputFiles({
+      name: 'facade_plan.dwg',
+      mimeType: 'application/octet-stream',
+      buffer: Buffer.from('AC1032\0\0\0\0\0\0\0\0\0\0'),
+    });
+    const preflight1 = await main.locator('[data-testid="out-file-preflight"]').innerText();
+    assert(preflight1.includes('DWG AC1032') && preflight1.includes('AutoCAD 2018-2026'), `${label} DWG preflight mismatch: ${preflight1}`);
+    assert((await main.locator('[data-testid="out-script"]').innerText()).includes('facade_plan.pdf'), `${label} output PDF name mismatch`);
+
+    await main.locator('[data-testid="btn-reset"]').click();
+    assert.strictEqual(await main.locator('[data-testid="out-file-preflight"]').count(), 0, `${label} preflight must clear on reset`);
+    assert((await main.locator('[data-testid="out-script"]').innerText()).includes('output_sheet.pdf'), `${label} reset script PDF name`);
     const [dl] = await Promise.all([
       page.waitForEvent('download'),
       main.locator('[data-testid="btn-download-scr"]').click(),
@@ -288,6 +301,16 @@ async function runTests() {
     approx(await main.locator('[data-testid="out-cut-len"]').innerText(), 300.0, `${label} square cutLen`);
     approx(await main.locator('[data-testid="out-rapid-len"]').innerText(), 5.0, `${label} square rapidLen`);
     approx(await main.locator('[data-testid="out-cut-time"]').innerText(), 0.5, `${label} square cutTime`);
+
+    await main.locator('[data-testid="btn-step-dec"]').click();
+    assert.strictEqual(await main.locator('[data-testid="input-step-progress"]').inputValue(), '90');
+    await main.locator('[data-testid="btn-step-inc"]').click();
+    assert.strictEqual(await main.locator('[data-testid="input-step-progress"]').inputValue(), '100');
+
+    await main.locator('[data-testid="input-gcode"]').fill('G21\nG90\nG0 X0 Y0 Z5\nG1 X100 Y0 F500\nG1 X200 Y0 F1000\nM30');
+    approx(await main.locator('[data-testid="out-cut-len"]').innerText(), 200.0, `${label} multi-F cutLen`);
+    approx(await main.locator('[data-testid="out-rapid-len"]').innerText(), 5.0, `${label} multi-F rapidLen`);
+    approx(await main.locator('[data-testid="out-cut-time"]').innerText(), 0.3, `${label} multi-F per-segment cutTime`);
 
     await main.locator('[data-testid="input-gcode"]').fill('');
     await main.locator('[data-testid="validation-error"]').waitFor({ state: 'visible' });

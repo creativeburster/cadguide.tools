@@ -12,6 +12,7 @@ import {
   Layers,
   RotateCcw,
   ShieldCheck,
+  UploadCloud,
 } from 'lucide-react';
 
 interface VramPreset {
@@ -22,6 +23,16 @@ interface VramPreset {
   texCount: string;
   texResPx: string;
   mipFactor: string;
+}
+
+interface Local3dScenePreflight {
+  fileName: string;
+  fileBytes: number;
+  format: 'FBX Binary' | 'FBX ASCII' | 'SKP' | 'OBJ' | 'Unsupported';
+  versionLabel: string;
+  vertices: number | null;
+  triangles: number | null;
+  note: string;
 }
 
 const PRESETS: VramPreset[] = [
@@ -57,6 +68,119 @@ function parseNonNegInt(raw: string): number {
   if (!/^\d+$/.test(t)) return NaN;
   const n = Number(t);
   return Number.isSafeInteger(n) ? n : NaN;
+}
+
+function toSafeAscii(s: string): string {
+  return s.replace(/[^\x20-\x7E\r\n\t]/g, '');
+}
+
+function inspectLocal3dScene(fileName: string, buf: ArrayBuffer): Local3dScenePreflight {
+  const bytes = new Uint8Array(buf);
+  const view = new DataView(buf);
+  const cleanName = toSafeAscii(fileName).trim() || 'scene_asset';
+
+  // FBX Binary header: "Kaydara FBX Binary  \0" (21 bytes) + 0x1A 0x00 + uint32 version at offset 23
+  const fbxMagic = 'Kaydara FBX Binary  ';
+  if (bytes.length >= 27) {
+    let headMatch = true;
+    for (let i = 0; i < 20; i++) {
+      if (bytes[i] !== fbxMagic.charCodeAt(i)) {
+        headMatch = false;
+        break;
+      }
+    }
+    if (headMatch && bytes[20] === 0x00) {
+      const ver = view.getUint32(23, true);
+      return {
+        fileName: cleanName,
+        fileBytes: bytes.length,
+        format: 'FBX Binary',
+        versionLabel: String(ver),
+        vertices: null,
+        triangles: null,
+        note: `Verified Kaydara FBX Binary container version ${ver} (${bytes.length} bytes).`,
+      };
+    }
+  }
+
+  // SketchUp SKP UTF-16LE signature
+  if (bytes.length >= 64) {
+    const skpNeedle = 'SketchUp Model';
+    let utf16Str = '';
+    for (let i = 0; i + 1 < Math.min(bytes.length, 160); i += 2) {
+      if (bytes[i + 1] === 0 && bytes[i] >= 32 && bytes[i] <= 126) {
+        utf16Str += String.fromCharCode(bytes[i]);
+      }
+    }
+    if (utf16Str.includes(skpNeedle)) {
+      const mVer = utf16Str.match(/(\d+\.\d+(?:\.\d+)?)/);
+      const verStr = mVer ? mVer[1] : 'Detected';
+      return {
+        fileName: cleanName,
+        fileBytes: bytes.length,
+        format: 'SKP',
+        versionLabel: verStr,
+        vertices: null,
+        triangles: null,
+        note: `Verified SketchUp Model signature (${verStr}, ${bytes.length} bytes).`,
+      };
+    }
+  }
+
+  const maxScanBytes = Math.min(bytes.length, 4 * 1024 * 1024);
+  const text = new TextDecoder('latin1').decode(bytes.subarray(0, maxScanBytes));
+
+  // FBX ASCII
+  if (text.includes('; FBX')) {
+    const verMatch = text.match(/FBXVersion:\s*(\d+)/);
+    const verStr = verMatch ? verMatch[1] : 'ASCII';
+    const vertBlocks = (text.match(/Vertices:\s*\*\d+/g) || []).length;
+    return {
+      fileName: cleanName,
+      fileBytes: bytes.length,
+      format: 'FBX ASCII',
+      versionLabel: verStr,
+      vertices: null,
+      triangles: null,
+      note: `Detected FBX ASCII (${verStr}), ${vertBlocks} Vertices blocks scanned.`,
+    };
+  }
+
+  // Wavefront OBJ scan
+  if (fileName.toLowerCase().endsWith('.obj') || /^v\s+[-+\d]/m.test(text)) {
+    const lines = text.split(/\r?\n/);
+    let verts = 0;
+    let tris = 0;
+    for (let i = 0; i < lines.length; i++) {
+      const ln = lines[i].trim();
+      if (ln.startsWith('v ')) verts += 1;
+      else if (ln.startsWith('f ')) {
+        const toks = ln.slice(2).trim().split(/\s+/).filter(Boolean);
+        if (toks.length >= 3) tris += toks.length - 2;
+      }
+    }
+    if (verts >= 1 || tris >= 1) {
+      return {
+        fileName: cleanName,
+        fileBytes: bytes.length,
+        format: 'OBJ',
+        versionLabel: 'Wavefront',
+        vertices: verts,
+        triangles: tris,
+        note: `Parsed OBJ mesh: ${verts} vertices, ${tris} triangulated faces.`,
+      };
+    }
+  }
+
+  return {
+    fileName: cleanName,
+    fileBytes: bytes.length,
+    format: 'Unsupported',
+    versionLabel: 'Unknown',
+    vertices: null,
+    triangles: null,
+    note: 'Select a valid .skp, .fbx (binary or ASCII), or .obj 3D asset file.',
+  };
 }
 
 function computeFbxSceneBudget(
@@ -109,6 +233,7 @@ export default function OnlineSkpToFbxCloudConverterClient() {
   const [texCountStr, setTexCountStr] = useState('4');
   const [texResStr, setTexResStr] = useState('1024');
   const [mipStr, setMipStr] = useState('1');
+  const [preflight, setPreflight] = useState<Local3dScenePreflight | null>(null);
   const [copied, setCopied] = useState(false);
 
   const evalRes = useMemo(
@@ -126,6 +251,18 @@ export default function OnlineSkpToFbxCloudConverterClient() {
 
   const resetDefaults = () => {
     applyPreset(PRESETS[0]);
+    setPreflight(null);
+  };
+
+  const handleLocalSceneUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    file.arrayBuffer().then((buf) => {
+      const info = inspectLocal3dScene(file.name, buf);
+      setPreflight(info);
+      if (info.vertices !== null && info.vertices >= 0) setVertsStr(String(info.vertices));
+      if (info.triangles !== null && info.triangles >= 1) setTrisStr(String(info.triangles));
+    }).catch(() => {});
   };
 
   const handleCopy = () => {
@@ -169,7 +306,7 @@ export default function OnlineSkpToFbxCloudConverterClient() {
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm flex items-start gap-3">
         <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
         <div>
-          <span className="font-black">Scene Mesh &amp; Uncompressed RGBA8 VRAM Budget Calculator:</span> Sizes vertex/index buffers and uncompressed texture memory prior to SKP-to-FBX export (`32 B/vert + 12 B/tri` and `N_tex * W * H * 4 * k_mip`). Actual binary `.skp` to `.fbx` translation executes in desktop SketchUp Pro / FBX SDK tools.
+          <span className="font-black">In-Browser SKP/FBX/OBJ Preflight &amp; RGBA8 VRAM Budget Calculator:</span> Checks local `.skp` / `.fbx` binary or ASCII signatures and counts `.obj` vertices/triangles directly in memory (`0 bytes uploaded`), then sizes vertex/index buffers (`32 B/vert + 12 B/tri`) and uncompressed RGBA8 texture memory prior to desktop SketchUp/FBX export.
         </div>
       </div>
 
@@ -189,10 +326,39 @@ export default function OnlineSkpToFbxCloudConverterClient() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-100 p-6 shadow-sm space-y-4">
-          <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-            <Layers className="w-5 h-5 text-blue-600" />
-            <h2 className="text-lg font-black text-slate-900">Mesh &amp; Texture Parameters</h2>
+          <div className="flex items-center justify-between gap-2 pb-2 border-b border-slate-100">
+            <div className="flex items-center gap-2">
+              <Layers className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-black text-slate-900">Mesh, Textures &amp; File</h2>
+            </div>
+            <label className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-black cursor-pointer flex items-center gap-1.5">
+              <UploadCloud className="w-3.5 h-3.5" />
+              <span>Inspect 3D</span>
+              <input
+                type="file"
+                accept=".skp,.fbx,.obj"
+                data-testid="input-local-file"
+                className="hidden"
+                onChange={handleLocalSceneUpload}
+              />
+            </label>
           </div>
+
+          {preflight && (
+            <div
+              data-testid="out-file-preflight"
+              className={`p-3 rounded-2xl border text-xs space-y-1 ${
+                preflight.format === 'Unsupported'
+                  ? 'bg-rose-50 border-rose-200 text-rose-800'
+                  : 'bg-blue-50 border-blue-200 text-blue-900'
+              }`}
+            >
+              <div className="font-black">
+                {preflight.fileName} — {preflight.format} ({preflight.versionLabel})
+              </div>
+              <div className="font-medium">{preflight.note}</div>
+            </div>
+          )}
 
           <div className="grid grid-cols-2 gap-3">
             <div>

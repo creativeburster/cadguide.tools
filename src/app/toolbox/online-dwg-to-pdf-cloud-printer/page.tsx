@@ -1,11 +1,11 @@
-﻿import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import OnlineDwgToPdfCloudPrinterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'CAD Sheet Plot DPI Calculator & AutoCAD -PLOT Script Builder | CADGuide.tools',
-  description: 'Calculate CAD PDF plot pixel dimensions, uncompressed raster memory, real-world model coverage, and export pure-ASCII AutoCAD -PLOT and PDFSHX scripts.',
+  title: 'CAD Sheet Plot DPI Calculator, Local DWG/DXF Preflight & -PLOT Builder | CADGuide.tools',
+  description: 'Inspect local DWG/DXF headers (0 bytes uploaded), calculate CAD PDF plot pixel dimensions and uncompressed raster memory, and export pure-ASCII AutoCAD -PLOT and PDFSHX scripts.',
   path: '/toolbox/online-dwg-to-pdf-cloud-printer',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineDwgToPdfCloudPrinterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'CAD Sheet Plot DPI & -PLOT Script Builder', path: '/toolbox/online-dwg-to-pdf-cloud-printer' },
+    { name: 'Plot DPI Calculator & Local DWG/DXF Preflight', path: '/toolbox/online-dwg-to-pdf-cloud-printer' },
   ]);
 
   return (
@@ -30,13 +30,13 @@ export default function OnlineDwgToPdfCloudPrinterPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Plot Preparation &amp; Automation
+              Local Plot Preflight &amp; Sizing
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              CAD Sheet Plot DPI Calculator &amp; AutoCAD -PLOT Script Builder
+              CAD Plot DPI Estimator, Local DWG/DXF Preflight &amp; -PLOT Builder
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Compute sheet DPI pixel budgets and build deterministic `-PLOT` (`DWG To PDF.pc3`) and `PDFSHX` scripts.
+              Verify local DWG magic headers (`AC1015`-`AC1032`) or DXF metadata in-browser, size sheet raster DPI budgets, and export deterministic `-PLOT` (`DWG To PDF.pc3`) scripts.
             </p>
           </div>
         </section>

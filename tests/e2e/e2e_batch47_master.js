@@ -87,8 +87,8 @@ async function verifyNegativeTerms(page, terms, label) {
 }
 
 async function assertZeroNumberInputs(main, label) {
-  const cnt = await main.locator('input[type="number"]').count();
-  assert.strictEqual(cnt, 0, `${label}: found ${cnt} <input type="number">`);
+  const cnt = await main.locator('input[type="number"], input[type="range"]').count();
+  assert.strictEqual(cnt, 0, `${label}: found ${cnt} <input type="number|range">`);
 }
 
 async function assertClipboardRejectSafe(page, main, label) {
@@ -189,7 +189,33 @@ async function runTests() {
     await main.locator('[data-testid="validation-error"]').waitFor({ state: 'visible' });
     await assertNoNan(main, `${label} empty voxel`);
 
+    const plyText = [
+      'ply',
+      'format ascii 1.0',
+      'element vertex 4',
+      'property float x',
+      'property float y',
+      'property float z',
+      'end_header',
+      '0 0 0',
+      '4 0 0',
+      '4 2 0',
+      '0 2 1',
+    ].join('\n');
+    await main.locator('[data-testid="input-local-file"]').setInputFiles({
+      name: 'scan_sample.ply',
+      mimeType: 'text/plain',
+      buffer: Buffer.from(plyText, 'ascii'),
+    });
+    const pf232 = await main.locator('[data-testid="out-file-preflight"]').innerText();
+    assert(pf232.includes('PLY') && pf232.includes('4 vertices'), `${label} PLY preflight mismatch: ${pf232}`);
+    assert.strictEqual(await main.locator('[data-testid="input-points"]').inputValue(), '4');
+    assert.strictEqual(await main.locator('[data-testid="input-span-x"]').inputValue(), '4');
+    assert.strictEqual(await main.locator('[data-testid="input-span-y"]').inputValue(), '2');
+    assert.strictEqual(await main.locator('[data-testid="input-span-z"]').inputValue(), '1');
+
     await main.locator('[data-testid="btn-reset"]').click();
+    assert.strictEqual(await main.locator('[data-testid="out-file-preflight"]').count(), 0, `${label} preflight must clear on reset`);
     approx(await main.locator('[data-testid="out-triangles"]').innerText(), 560000, `${label} reset`);
 
     const [dlCsv] = await Promise.all([
@@ -261,7 +287,38 @@ async function runTests() {
     await main.locator('[data-testid="validation-error"]').waitFor({ state: 'visible' });
     await assertNoNan(main, `${label} invalid tris`);
 
+    const fbxBuf = Buffer.alloc(32);
+    fbxBuf.write('Kaydara FBX Binary  ', 0, 'ascii');
+    fbxBuf[20] = 0x00;
+    fbxBuf[21] = 0x1a;
+    fbxBuf[22] = 0x00;
+    fbxBuf.writeUInt32LE(7400, 23);
+    await main.locator('[data-testid="input-local-file"]').setInputFiles({
+      name: 'interior_scene.fbx',
+      mimeType: 'application/octet-stream',
+      buffer: fbxBuf,
+    });
+    const pfFbx = await main.locator('[data-testid="out-file-preflight"]').innerText();
+    assert(pfFbx.includes('FBX Binary') && pfFbx.includes('7400'), `${label} FBX preflight mismatch: ${pfFbx}`);
+
+    const cubeObj = [
+      'v 0 0 0', 'v 1 0 0', 'v 1 1 0', 'v 0 1 0',
+      'v 0 0 1', 'v 1 0 1', 'v 1 1 1', 'v 0 1 1',
+      'f 1 2 3 4', 'f 5 6 7 8', 'f 1 2 6 5',
+      'f 2 3 7 6', 'f 3 4 8 7', 'f 4 1 5 8',
+    ].join('\n');
+    await main.locator('[data-testid="input-local-file"]').setInputFiles({
+      name: 'cube_scene.obj',
+      mimeType: 'text/plain',
+      buffer: Buffer.from(cubeObj, 'ascii'),
+    });
+    const pfObj = await main.locator('[data-testid="out-file-preflight"]').innerText();
+    assert(pfObj.includes('OBJ') && pfObj.includes('8 vertices, 12 triangulated faces'), `${label} OBJ preflight mismatch: ${pfObj}`);
+    assert.strictEqual(await main.locator('[data-testid="input-verts"]').inputValue(), '8');
+    assert.strictEqual(await main.locator('[data-testid="input-tris"]').inputValue(), '12');
+
     await main.locator('[data-testid="btn-reset"]').click();
+    assert.strictEqual(await main.locator('[data-testid="out-file-preflight"]').count(), 0, `${label} preflight must clear on reset`);
     approx(await main.locator('[data-testid="out-total-mb"]').innerText(), 20.1962, `${label} reset`);
 
     const [dlCsv] = await Promise.all([

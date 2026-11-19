@@ -12,6 +12,7 @@ import {
   Printer,
   RotateCcw,
   ShieldCheck,
+  UploadCloud,
 } from 'lucide-react';
 
 interface PaperPreset {
@@ -25,6 +26,25 @@ interface PaperPreset {
   channels: '3' | '4';
   pdfshx: '0' | '1' | '2';
 }
+
+interface LocalCadPreflight {
+  fileName: string;
+  fileBytes: number;
+  format: 'DWG' | 'DXF' | 'Unsupported';
+  versionTag: string;
+  generationLabel: string;
+  summaryNote: string;
+  suggestedPdfName: string;
+}
+
+const DWG_GENERATIONS: Record<string, string> = {
+  AC1015: 'AutoCAD 2000-2002',
+  AC1018: 'AutoCAD 2004-2006',
+  AC1021: 'AutoCAD 2007-2009',
+  AC1024: 'AutoCAD 2010-2012',
+  AC1027: 'AutoCAD 2013-2017',
+  AC1032: 'AutoCAD 2018-2026',
+};
 
 const PRESETS: PaperPreset[] = [
   {
@@ -77,6 +97,83 @@ function fmt(n: number, decimals = 4): string {
   return Number.isFinite(n) ? n.toFixed(decimals) : 'N/A';
 }
 
+function toPdfOutputName(fileName: string): string {
+  const clean = toSafeAscii(fileName).trim();
+  const base = clean.replace(/\.[^.]+$/, '').replace(/[^A-Za-z0-9._-]/g, '_');
+  return (base || 'output_sheet') + '.pdf';
+}
+
+function inspectLocalCadFile(fileName: string, buf: ArrayBuffer): LocalCadPreflight {
+  const bytes = new Uint8Array(buf);
+  const suggestedPdfName = toPdfOutputName(fileName);
+
+  if (bytes.length >= 6) {
+    let magic = '';
+    for (let i = 0; i < 6; i++) {
+      magic += String.fromCharCode(bytes[i]);
+    }
+    if (/^AC10\d{2}$/.test(magic)) {
+      return {
+        fileName: toSafeAscii(fileName) || 'drawing.dwg',
+        fileBytes: bytes.length,
+        format: 'DWG',
+        versionTag: magic,
+        generationLabel: DWG_GENERATIONS[magic] || 'Legacy / Extended DWG',
+        summaryNote: `Verified binary DWG signature ${magic} (${bytes.length} bytes).`,
+        suggestedPdfName,
+      };
+    }
+  }
+
+  const sliceLen = Math.min(bytes.length, 4 * 1024 * 1024);
+  const text = new TextDecoder('latin1').decode(bytes.subarray(0, sliceLen));
+  const lines = text.split(/\r?\n/);
+  const isDxf = fileName.toLowerCase().endsWith('.dxf') || (text.includes('SECTION') && text.includes('EOF'));
+
+  if (isDxf) {
+    let acadVer = 'Unknown';
+    let insunits = 'Unspecified';
+    let entityCount = 0;
+    let inEntities = false;
+
+    for (let i = 0; i + 1 < lines.length; i += 2) {
+      const code = lines[i].trim();
+      const val = lines[i + 1].trim();
+      if (code === '9' && val === '$ACADVER' && i + 3 < lines.length && lines[i + 2].trim() === '1') {
+        acadVer = lines[i + 3].trim();
+      } else if (code === '9' && val === '$INSUNITS' && i + 3 < lines.length && lines[i + 2].trim() === '70') {
+        insunits = lines[i + 3].trim();
+      } else if (code === '2' && val === 'ENTITIES') {
+        inEntities = true;
+      } else if (code === '0' && val === 'ENDSEC' && inEntities) {
+        inEntities = false;
+      } else if (inEntities && code === '0') {
+        entityCount += 1;
+      }
+    }
+
+    return {
+      fileName: toSafeAscii(fileName) || 'drawing.dxf',
+      fileBytes: bytes.length,
+      format: 'DXF',
+      versionTag: acadVer,
+      generationLabel: DWG_GENERATIONS[acadVer] || 'ASCII DXF Stream',
+      summaryNote: `DXF $INSUNITS=${insunits}, detected ${entityCount} ENTITIES objects.`,
+      suggestedPdfName,
+    };
+  }
+
+  return {
+    fileName: toSafeAscii(fileName) || 'unknown_file',
+    fileBytes: bytes.length,
+    format: 'Unsupported',
+    versionTag: 'Unrecognized',
+    generationLabel: 'Not a recognized AC10xx DWG or ASCII DXF file',
+    summaryNote: 'Select a valid .dwg or ASCII .dxf drawing file to run header preflight.',
+    suggestedPdfName: 'output_sheet.pdf',
+  };
+}
+
 export default function OnlineDwgToPdfCloudPrinterClient() {
   const [paperName, setPaperName] = useState(PRESETS[0].paperName);
   const [widthMmStr, setWidthMmStr] = useState('841');
@@ -86,6 +183,7 @@ export default function OnlineDwgToPdfCloudPrinterClient() {
   const [channels, setChannels] = useState<'3' | '4'>('3');
   const [pdfshx, setPdfshx] = useState<'0' | '1' | '2'>('2');
   const [ctbFile, setCtbFile] = useState('monochrome.ctb');
+  const [preflight, setPreflight] = useState<LocalCadPreflight | null>(null);
   const [copied, setCopied] = useState(false);
 
   const applyPreset = (p: PaperPreset) => {
@@ -101,6 +199,15 @@ export default function OnlineDwgToPdfCloudPrinterClient() {
   const resetDefaults = () => {
     applyPreset(PRESETS[0]);
     setCtbFile('monochrome.ctb');
+    setPreflight(null);
+  };
+
+  const handleLocalFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    file.arrayBuffer().then((buf) => {
+      setPreflight(inspectLocalCadFile(file.name, buf));
+    }).catch(() => {});
   };
 
   const result = useMemo(() => {
@@ -126,6 +233,8 @@ export default function OnlineDwgToPdfCloudPrinterClient() {
 
     const cleanPaper = toSafeAscii(paperName).trim() || 'ISO full bleed A1 (841.00 x 594.00 MM)';
     const cleanCtb = toSafeAscii(ctbFile).trim() || 'monochrome.ctb';
+    const outPdf = preflight && preflight.format !== 'Unsupported' ? preflight.suggestedPdfName : 'output_sheet.pdf';
+
     const scriptText = [
       '; Pure-ASCII AutoCAD -PLOT PDF Script (DWG To PDF.pc3)',
       'CMDECHO 0',
@@ -145,7 +254,7 @@ export default function OnlineDwgToPdfCloudPrinterClient() {
       cleanCtb,
       'Yes',
       'As displayed',
-      'output_sheet.pdf',
+      outPdf,
       'No',
       'Yes',
       'CMDECHO 1',
@@ -161,7 +270,7 @@ export default function OnlineDwgToPdfCloudPrinterClient() {
       modelHeightM,
       scriptText,
     };
-  }, [paperName, widthMmStr, heightMmStr, scaleDenomStr, dpiStr, channels, pdfshx, ctbFile]);
+  }, [paperName, widthMmStr, heightMmStr, scaleDenomStr, dpiStr, channels, pdfshx, ctbFile, preflight]);
 
   const handleCopy = () => {
     if (!result.valid) return;
@@ -192,7 +301,7 @@ export default function OnlineDwgToPdfCloudPrinterClient() {
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm flex items-start gap-3">
         <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
         <div>
-          <span className="font-black">Plot DPI Calculator &amp; -PLOT Script Builder Only:</span> Calculates sheet raster pixel footprint, uncompressed memory budget, real-world model extents, and builds a pure-ASCII AutoCAD `-PLOT` (`DWG To PDF.pc3`) script. Actual DWG rendering executes locally in desktop CAD.
+          <span className="font-black">In-Browser DWG/DXF Header Preflight &amp; Plot DPI Estimator:</span> Reads local `.dwg` version bytes (`AC1015`-`AC1032`) or ASCII `.dxf` entities directly in memory (`0 bytes uploaded`), computes sheet pixel footprint and uncompressed raster buffer, and exports an AutoCAD `-PLOT` (`DWG To PDF.pc3`) script. Actual vector PDF plotting executes locally in desktop CAD.
         </div>
       </div>
 
@@ -212,10 +321,39 @@ export default function OnlineDwgToPdfCloudPrinterClient() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-100 p-6 shadow-sm space-y-4">
-          <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-            <Printer className="w-5 h-5 text-blue-600" />
-            <h2 className="text-lg font-black text-slate-900">Plot Sheet &amp; DPI Inputs</h2>
+          <div className="flex items-center justify-between gap-2 pb-2 border-b border-slate-100">
+            <div className="flex items-center gap-2">
+              <Printer className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-black text-slate-900">Local File &amp; Plot Inputs</h2>
+            </div>
+            <label className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-black cursor-pointer flex items-center gap-1.5">
+              <UploadCloud className="w-3.5 h-3.5" />
+              <span>Inspect .DWG/.DXF</span>
+              <input
+                type="file"
+                accept=".dwg,.dxf"
+                data-testid="input-local-file"
+                className="hidden"
+                onChange={handleLocalFileChange}
+              />
+            </label>
           </div>
+
+          {preflight && (
+            <div
+              data-testid="out-file-preflight"
+              className={`p-3 rounded-2xl border text-xs space-y-1 ${
+                preflight.format === 'Unsupported'
+                  ? 'bg-rose-50 border-rose-200 text-rose-800'
+                  : 'bg-blue-50 border-blue-200 text-blue-900'
+              }`}
+            >
+              <div className="font-black">
+                {preflight.fileName} — {preflight.format} {preflight.versionTag} ({preflight.generationLabel})
+              </div>
+              <div className="font-medium">{preflight.summaryNote}</div>
+            </div>
+          )}
 
           <div className="grid grid-cols-2 gap-3">
             <div>
@@ -402,6 +540,14 @@ export default function OnlineDwgToPdfCloudPrinterClient() {
                   className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
                 >
                   AutoCAD 2025 PDFSHX Help <ExternalLink className="w-3 h-3" />
+                </a>
+                <a
+                  href="https://en.wikipedia.org/wiki/DWG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
+                >
+                  DWG Version Codes (Wikipedia) <ExternalLink className="w-3 h-3" />
                 </a>
               </div>
             </div>

@@ -44,11 +44,21 @@ function toSafeAscii(s: string): string {
   return s.replace(/[^\x20-\x7E\r\n\t]/g, '');
 }
 
+function clampStepPct(raw: string): number {
+  const t = raw.trim();
+  if (!t) return 100;
+  const n = Number(t);
+  if (!Number.isFinite(n)) return 100;
+  return Math.min(100, Math.max(1, Math.round(n)));
+}
+
 export default function OnlineGcodeViewerSimulatorClient() {
   const [gcodeText, setGcodeText] = useState<string>(DEFAULT_GCODE);
-  const [stepProgress, setStepProgress] = useState<number>(100);
+  const [stepProgressStr, setStepProgressStr] = useState<string>('100');
   const [viewMode, setViewMode] = useState<'iso3d' | 'xy2d'>('iso3d');
   const [copied, setCopied] = useState(false);
+
+  const stepProgress = clampStepPct(stepProgressStr);
 
   const summary = useMemo(() => {
     if (!gcodeText.trim()) {
@@ -62,27 +72,13 @@ export default function OnlineGcodeViewerSimulatorClient() {
       };
     }
 
-    let rapidLen = 0;
-    let cutLen = 0;
-    for (const m of parsed.moves) {
-      // 2D/3D segment lengths can be read directly from parsed moves in XY or full stats, so extract exact totals:
-      void m;
-    }
-    const cutStat = parsed.stats.find((s) => s.label === 'Feed (cutting) length')?.value || '0 mm';
-    const rapidStat = parsed.stats.find((s) => s.label === 'Rapid length')?.value || '0 mm';
-    const maxFeedStat = parsed.stats.find((s) => s.label === 'Max feed F')?.value || '0';
-    cutLen = parseFloat(cutStat) || 0;
-    rapidLen = parseFloat(rapidStat) || 0;
-    const maxFeed = parseFloat(maxFeedStat) || 0;
-    const estCutMinutes = maxFeed > 0 ? cutLen / maxFeed : 0;
-
     return {
       valid: true as const,
       parsed,
-      cutLen,
-      rapidLen,
-      maxFeed,
-      estCutMinutes,
+      cutLen: parsed.cutLen,
+      rapidLen: parsed.rapidLen,
+      maxFeed: parsed.maxFeed,
+      estCutMinutes: parsed.cutTimeMin,
       cleanStats: parsed.stats.map((s) => ({
         label: s.label,
         value: s.value === '\u2014' ? 'None' : s.value,
@@ -101,7 +97,7 @@ export default function OnlineGcodeViewerSimulatorClient() {
 
   const resetDefaults = () => {
     setGcodeText(DEFAULT_GCODE);
-    setStepProgress(100);
+    setStepProgressStr('100');
     setViewMode('iso3d');
   };
 
@@ -113,7 +109,7 @@ export default function OnlineGcodeViewerSimulatorClient() {
       `Cutting Feed Length: ${summary.cutLen.toFixed(4)}`,
       `Rapid Traverse Length: ${summary.rapidLen.toFixed(4)}`,
       `Max Feed F: ${summary.maxFeed.toFixed(4)}`,
-      `Est. Cutting Time (cutLen / F): ${summary.estCutMinutes.toFixed(4)} min`,
+      `Est. Cutting Time (Sum segment/F): ${summary.estCutMinutes.toFixed(4)} min`,
     ];
     navigator.clipboard
       .writeText(lines.join('\n'))
@@ -154,7 +150,7 @@ export default function OnlineGcodeViewerSimulatorClient() {
           data-testid="preset-bracket"
           onClick={() => {
             setGcodeText(DEFAULT_GCODE);
-            setStepProgress(100);
+            setStepProgressStr('100');
           }}
           className="px-3 py-1.5 rounded-lg text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:border-blue-400"
         >
@@ -165,7 +161,7 @@ export default function OnlineGcodeViewerSimulatorClient() {
           data-testid="preset-square"
           onClick={() => {
             setGcodeText(SQUARE_TOOLPATH_GCODE);
-            setStepProgress(100);
+            setStepProgressStr('100');
           }}
           className="px-3 py-1.5 rounded-lg text-xs font-bold bg-white border border-slate-200 text-slate-700 hover:border-blue-400"
         >
@@ -344,18 +340,37 @@ export default function OnlineGcodeViewerSimulatorClient() {
                 </svg>
 
                 <div className="space-y-1.5 pt-2">
-                  <div className="flex justify-between text-xs font-bold text-slate-300">
-                    <span>Simulation Scrubber ({visibleMoves.length} / {summary.parsed.moves.length} motion blocks)</span>
-                    <span>{stepProgress}%</span>
+                  <div className="flex flex-wrap items-center justify-between gap-2 text-xs font-bold text-slate-300">
+                    <span>Simulation Progress ({visibleMoves.length} / {summary.parsed.moves.length} motion blocks)</span>
+                    <div className="flex items-center gap-1.5">
+                      <button
+                        type="button"
+                        data-testid="btn-step-dec"
+                        onClick={() => setStepProgressStr(String(Math.max(1, stepProgress - 10)))}
+                        className="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-white"
+                      >
+                        -10%
+                      </button>
+                      <input
+                        type="text"
+                        inputMode="numeric"
+                        data-testid="input-step-progress"
+                        aria-label="Simulation progress percentage"
+                        value={stepProgressStr}
+                        onChange={(e) => setStepProgressStr(e.target.value)}
+                        className="w-12 h-6 px-1 rounded bg-slate-800 border border-slate-700 text-white text-center font-bold"
+                      />
+                      <span>%</span>
+                      <button
+                        type="button"
+                        data-testid="btn-step-inc"
+                        onClick={() => setStepProgressStr(String(Math.min(100, stepProgress + 10)))}
+                        className="px-2 py-0.5 rounded bg-slate-800 hover:bg-slate-700 text-white"
+                      >
+                        +10%
+                      </button>
+                    </div>
                   </div>
-                  <input
-                    type="range"
-                    min="1"
-                    max="100"
-                    value={stepProgress}
-                    onChange={(e) => setStepProgress(Number(e.target.value))}
-                    className="w-full"
-                  />
                 </div>
               </div>
             </>
@@ -365,7 +380,7 @@ export default function OnlineGcodeViewerSimulatorClient() {
             <div className="flex items-start gap-2">
               <Info className="w-4 h-4 text-slate-400 mt-0.5 shrink-0" />
               <span>
-                Simulates linear (`G0`/`G1`) and circular interpolation (`G2`/`G3`) RS-274 / ISO 6983-1 motion blocks locally. Estimated cutting time equals total feed length divided by active feed rate (excluding controller acceleration/deceleration dwell).
+                Simulates linear (`G0`/`G1`) and circular interpolation (`G2`/`G3`) RS-274 / ISO 6983-1 motion blocks locally. Estimated cutting time sums per-segment cutting length divided by active modal feed rate (excluding controller acceleration/deceleration dwell).
               </span>
             </div>
             <a

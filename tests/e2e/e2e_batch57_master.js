@@ -29,6 +29,9 @@ const BANNED_B57_TERMS = [
   '2 GB',
   '100+ MB',
   '5-10 worksets',
+  'GUID-A80AFF8B',
+  'Manage DWF Markup',
+  'embeds all layers and patterns',
 ];
 
 function parseNumeric(text) {
@@ -76,8 +79,8 @@ async function openToolPage(page, url, waitSelector) {
 }
 
 async function verifyNoBannedAndNoNumberInput(page, terms, label) {
-  const typeCount = await page.locator('input[type="number"]').count();
-  assert.strictEqual(typeCount, 0, `${label}: found input[type="number"]`);
+  const typeCount = await page.locator('input[type="number"], input[type="range"]').count();
+  assert.strictEqual(typeCount, 0, `${label}: found input[type="number"] or input[type="range"]`);
   const scopedText = await page.evaluate(() => {
     const mains = document.querySelectorAll('main');
     const mainEl = mains[mains.length - 1];
@@ -207,8 +210,16 @@ async function verifyNoBannedAndNoNumberInput(page, terms, label) {
     const issueIds = ['families', 'links', 'views', 'worksharing', 'dwg-imports'];
     for (const id of issueIds) {
       await page.locator(`[data-testid="issue-btn-${id}"]`).click();
+      await verifyNoBannedAndNoNumberInput(page, BANNED_B57_TERMS, `revit-performance-${id}`);
       const href = await page.locator('[data-testid="official-help-link"]').getAttribute('href');
       assert(href && href.startsWith('https://help.autodesk.com/cloudhelp/'), `revit-perf ${id} invalid href: ${href}`);
+      if (id === 'views') {
+        assert.strictEqual(
+          href,
+          'https://help.autodesk.com/cloudhelp/2024/ENU/Revit-Customize/files/GUID-A9C36610-6853-433D-AFB5-639090BD017F.htm',
+          'revit-perf views must link to Revit View Templates Help'
+        );
+      }
     }
     const [dl4] = await Promise.all([
       page.waitForEvent('download'),

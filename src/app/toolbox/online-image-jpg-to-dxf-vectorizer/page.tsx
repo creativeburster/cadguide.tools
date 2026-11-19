@@ -1,11 +1,11 @@
-﻿import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import OnlineImageJpgToDxfVectorizerClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Raster Underlay Calibration & DXF / IMAGEATTACH Script Builder | CADGuide.tools',
-  description: 'Calculate exact mm/px physical scaling from scan DPI and known pixel dimensions, and export pure-ASCII 1:1 calibration DXF frames and AutoCAD IMAGEATTACH scripts.',
+  title: 'Local Image Pixel/DPI Inspector, Raster Calibration & DXF Script Builder | CADGuide.tools',
+  description: 'Inspect local PNG/JPEG/BMP pixel width, height, and embedded DPI headers in-browser, calibrate exact mm/px physical scale, and export 1:1 DXF frames and AutoCAD IMAGEATTACH scripts.',
   path: '/toolbox/online-image-jpg-to-dxf-vectorizer',
 });
 
@@ -13,7 +13,7 @@ export default function OnlineImageJpgToDxfVectorizerPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Raster Underlay Calibration & DXF Script Builder', path: '/toolbox/online-image-jpg-to-dxf-vectorizer' },
+    { name: 'Local Raster Preflight & DXF Calibration Builder', path: '/toolbox/online-image-jpg-to-dxf-vectorizer' },
   ]);
 
   return (
@@ -30,13 +30,13 @@ export default function OnlineImageJpgToDxfVectorizerPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Raster Tracing Calibration
+              Local Raster Inspection &amp; Calibration
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Raster Underlay Calibration &amp; DXF / IMAGEATTACH Script Builder
+              Raster Underlay Preflight, Calibration &amp; DXF / IMAGEATTACH Builder
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Determine accurate mm/px underlay scaling prior to vector tracing and generate calibration frames locally.
+              Read local PNG/JPEG/BMP dimensions and DPI metadata in-browser, calibrate mm/px scaling, and generate 1:1 DXF reference frames.
             </p>
           </div>
         </section>

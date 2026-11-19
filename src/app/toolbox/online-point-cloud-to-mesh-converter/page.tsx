@@ -1,11 +1,11 @@
-﻿import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
+import { pageMetadata, siteBreadcrumbLd } from '@/lib/seo';
 import { ToolboxEngineeringGuide } from '@/components/toolbox-engineering-guide';
 import type { Metadata } from 'next';
 import OnlinePointCloudToMeshConverterClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Point Cloud Voxel Density & Binary STL Mesh Budget Calculator | CADGuide.tools',
-  description: 'Estimate point cloud volumetric density, voxel surface triangle counts, and exact Binary STL file size (84 + 50*N bytes) before surface reconstruction.',
+  title: 'Local Point Cloud Preflight (LAS/PLY/XYZ) & Binary STL Mesh Budget Calculator | CADGuide.tools',
+  description: 'Inspect local LAS, PLY, XYZ, and PTS point counts and bounding spans in-browser (0 bytes uploaded), estimate voxel surface triangles, and predict Binary STL size (84 + 50*N bytes).',
   path: '/toolbox/online-point-cloud-to-mesh-converter',
 });
 
@@ -13,7 +13,7 @@ export default function OnlinePointCloudToMeshConverterPage() {
   const breadcrumbs = siteBreadcrumbLd([
     { name: 'Home', path: '/' },
     { name: 'Toolbox', path: '/toolbox' },
-    { name: 'Point Cloud Voxel & STL Mesh Budget Calculator', path: '/toolbox/online-point-cloud-to-mesh-converter' },
+    { name: 'Local Point Cloud Preflight & STL Mesh Budget Calculator', path: '/toolbox/online-point-cloud-to-mesh-converter' },
   ]);
 
   return (
@@ -30,13 +30,13 @@ export default function OnlinePointCloudToMeshConverterPage() {
           </div>
           <div className="max-w-[1000px] mx-auto px-6 md:px-12 relative z-10 text-center">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-blue-500/10 text-blue-400 border border-blue-500/20 mb-6 uppercase tracking-[0.15em]">
-              Mesh Reconstruction Planning
+              Local Point Cloud Preflight &amp; Meshing
             </div>
             <h1 className="text-3xl md:text-4xl font-black mb-6 tracking-tight leading-tight">
-              Point Cloud Voxel Density &amp; Binary STL Mesh Budget Calculator
+              Point Cloud Preflight (LAS/PLY/XYZ) &amp; Binary STL Mesh Budget Calculator
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed max-w-2xl mx-auto font-medium">
-              Size target voxel spacing and predict Binary STL memory footprint (`84 + 50 * N` bytes) before surface meshing.
+              Read local LAS, PLY, or XYZ point counts and bounding boxes in-browser, size target voxel spacing, and estimate Binary STL footprint (`84 + 50 * N` bytes).
             </p>
           </div>
         </section>

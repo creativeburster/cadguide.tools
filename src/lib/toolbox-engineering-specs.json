@@ -9509,8 +9509,8 @@
     ]
   },
   "online-dwg-to-pdf-cloud-printer": {
-    "title": "CAD Sheet Plot DPI Calculator & AutoCAD -PLOT Script Builder",
-    "description": "Compute sheet output pixel dimensions, uncompressed raster memory, real-world model spans, and generate pure-ASCII AutoCAD -PLOT and PDFSHX scripts.",
+    "title": "CAD Plot DPI Estimator & Local DWG/DXF Preflight",
+    "description": "Inspect local DWG magic headers (AC1015-AC1032) or ASCII DXF objects in-browser, compute sheet pixel footprints and raster memory, and generate pure-ASCII AutoCAD -PLOT scripts.",
     "discipline": "CAD Plotting & PDF Publishing Prep",
     "standards": "AutoCAD 2025 -PLOT Command, PDFSHX System Variable (0/1/2), and 25.4 mm/inch Conversion",
     "cadContext": "Size target plot DPI and PDFSHX text handling prior to executing command-line -PLOT (DWG To PDF.pc3) scripts.",
@@ -9633,8 +9633,8 @@
     ]
   },
   "online-image-jpg-to-dxf-vectorizer": {
-    "title": "Raster Underlay Calibration & DXF / IMAGEATTACH Script Builder",
-    "description": "Compute exact mm/px physical calibration from known image feature dimensions, build 1:1 DXF calibration boundary frames, and export AutoCAD IMAGEATTACH scripts.",
+    "title": "Local Image Inspector (PNG/JPEG/BMP) & DXF Calibration Builder",
+    "description": "Read local PNG/JPEG/BMP pixel width, height, and DPI metadata in-browser, calibrate exact mm/px physical scale, build 1:1 DXF boundary frames, and export AutoCAD IMAGEATTACH scripts.",
     "discipline": "Raster Underlay Calibration & Digitizing Prep",
     "standards": "AutoCAD 2025 IMAGEATTACH Command & DXF AC1027 Millimeter Coordinate Frame ($INSUNITS=4)",
     "cadContext": "Scale scanned blueprints accurately against known reference lengths before digitizing geometry in CAD.",
@@ -9745,8 +9745,8 @@
     ]
   },
   "online-point-cloud-to-mesh-converter": {
-    "title": "Point Cloud Subsampling & Binary STL Mesh Budget Calculator",
-    "description": "Calculates bounding-box point density, surface voxel grid resolution, estimated triangle counts, and binary STL output file size before desktop meshing.",
+    "title": "Point Cloud Preflight (LAS/PLY/XYZ) & Binary STL Mesh Budget",
+    "description": "Inspect local LAS, PLY, and XYZ point counts and bounding extents in-browser, calculate volumetric density and voxel surface triangle estimates, and predict Binary STL size before desktop meshing.",
     "discipline": "Reality Capture / Reverse Engineering",
     "standards": "CloudCompare Documentation: https://www.cloudcompare.org/doc/wiki/index.php/Main_Page | STL File Format (Wikipedia): https://en.wikipedia.org/wiki/STL_(file_format)",
     "cadContext": "Binary STL uses an 80-byte header, 4-byte uint32 facet count, and 50 bytes per triangle; voxel size directly drives facet memory before CAD import.",
@@ -9801,8 +9801,8 @@
     ]
   },
   "online-skp-to-fbx-cloud-converter": {
-    "title": "SketchUp / FBX Mesh & Texture VRAM Budget Calculator",
-    "description": "Inspects local SKP/FBX file signatures in-browser and estimates GPU geometry buffer and uncompressed RGBA8 mipmapped texture memory before export.",
+    "title": "Local SKP/FBX/OBJ Preflight & RGBA8 VRAM Budget Calculator",
+    "description": "Inspect local SKP, FBX binary/ASCII headers, or OBJ vertex/triangle counts in-browser and estimate GPU geometry buffer and uncompressed RGBA8 mipmapped texture memory before export.",
     "discipline": "Architectural Visualization / 3D Asset Prep",
     "standards": "FBX Format Overview (Wikipedia): https://en.wikipedia.org/wiki/FBX | Khronos glTF 2.0 Specification: https://registry.khronos.org/glTF/specs/2.0/glTF-2.0.html",
     "cadContext": "Estimates GPU vertex/index buffers (32 bytes/vertex + 12 bytes/triangle) and uncompressed 32-bit RGBA texture footprint for real-time FBX/glTF viewers.",
@@ -11396,8 +11396,8 @@
     "title": "Revit Performance Diagnostic",
     "description": "Interactive checklist to troubleshoot slow Revit models, heavy families, link bloat, view templates, and Synchronize with Central delays using Autodesk Revit Help steps.",
     "discipline": "BIM Model Maintenance & Autodesk Revit Help Workflows",
-    "standards": "Autodesk Revit Official Help: Purge Unused Objects, Linking Models, Manage Links, and About Delays When Using Synchronize with Central",
-    "cadContext": "Review linked CAD/Revit references via Manage Links, purge unused project objects with open worksets, and follow Synchronize with Central recovery paths without relying on arbitrary heuristics.",
+    "standards": "Autodesk Revit Official Help: Purge Unused Objects, Linking Models, View Templates, and About Delays When Using Synchronize with Central",
+    "cadContext": "Manage linked Revit/CAD models via Manage Links, standardize visibility with View Templates, purge unused objects with all worksets open, and inspect central file access status.",
     "formula": "Interactive 5-Category Model Bottleneck Triage & Official Help Command Checklist",
     "inputs": [
       {
@@ -22214,7 +22214,7 @@
     "discipline": "CNC Backplotting & Toolpath Verification",
     "standards": "ISO 6983-1 (G-code / RS-274 Numerical Control Motion Commands G0/G1/G2/G3)",
     "cadContext": "Inspect programmed rapid plunges and feed contours prior to shop-floor DNC execution without uploading proprietary NC code.",
-    "formula": "EstCuttingTime(min) = FeedCutLength / MaxFeedRate_F",
+    "formula": "EstCuttingTime(min) = Sum(SegmentCutLen_i / ActiveFeedRate_Fi)",
     "inputs": [
       {
         "label": "Deterministic Square Path",

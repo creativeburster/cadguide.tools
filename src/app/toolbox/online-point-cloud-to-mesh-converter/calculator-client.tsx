@@ -12,6 +12,7 @@ import {
   Info,
   RotateCcw,
   ShieldCheck,
+  UploadCloud,
 } from 'lucide-react';
 
 interface MeshBudgetPreset {
@@ -23,6 +24,17 @@ interface MeshBudgetPreset {
   rawPoints: string;
   voxelM: string;
   triPerSurfaceVoxel: string;
+}
+
+interface LocalPointCloudPreflight {
+  fileName: string;
+  fileBytes: number;
+  format: 'LAS' | 'PLY' | 'XYZ/PTS' | 'Unsupported';
+  pointCount: number;
+  spanX: number | null;
+  spanY: number | null;
+  spanZ: number | null;
+  note: string;
 }
 
 const PRESETS: MeshBudgetPreset[] = [
@@ -60,6 +72,168 @@ function parsePosInt(raw: string): number {
   if (!/^\d+$/.test(t)) return NaN;
   const n = Number(t);
   return Number.isSafeInteger(n) && n >= 1 ? n : NaN;
+}
+
+function toSafeAscii(s: string): string {
+  return s.replace(/[^\x20-\x7E\r\n\t]/g, '');
+}
+
+function inspectLocalPointCloud(fileName: string, buf: ArrayBuffer): LocalPointCloudPreflight {
+  const bytes = new Uint8Array(buf);
+  const view = new DataView(buf);
+  const cleanName = toSafeAscii(fileName).trim() || 'point_cloud';
+
+  // LAS binary header
+  if (bytes.length >= 227 && bytes[0] === 0x4c && bytes[1] === 0x41 && bytes[2] === 0x53 && bytes[3] === 0x46) {
+    const verMajor = bytes[24];
+    const verMinor = bytes[25];
+    let ptCount = view.getUint32(107, true);
+    if (verMajor === 1 && verMinor >= 4 && ptCount === 0 && bytes.length >= 255) {
+      ptCount = Number(view.getBigUint64(247, true));
+    }
+    const maxX = view.getFloat64(179, true);
+    const minX = view.getFloat64(187, true);
+    const maxY = view.getFloat64(195, true);
+    const minY = view.getFloat64(203, true);
+    const maxZ = view.getFloat64(211, true);
+    const minZ = view.getFloat64(219, true);
+    const spanX = Number.isFinite(maxX - minX) && maxX > minX ? maxX - minX : null;
+    const spanY = Number.isFinite(maxY - minY) && maxY > minY ? maxY - minY : null;
+    const spanZ = Number.isFinite(maxZ - minZ) && maxZ > minZ ? maxZ - minZ : null;
+    return {
+      fileName: cleanName,
+      fileBytes: bytes.length,
+      format: 'LAS',
+      pointCount: ptCount,
+      spanX,
+      spanY,
+      spanZ,
+      note: `Detected LAS ${verMajor}.${verMinor} header (${ptCount} points).`,
+    };
+  }
+
+  const maxScanBytes = Math.min(bytes.length, 4 * 1024 * 1024);
+  const text = new TextDecoder('latin1').decode(bytes.subarray(0, maxScanBytes));
+  const lines = text.split(/\r?\n/);
+
+  // PLY header & ASCII vertices
+  if (lines[0]?.trim().toLowerCase() === 'ply') {
+    let plyFormat = 'unknown';
+    let vertexCount = 0;
+    let faceCount = 0;
+    let headerEndIdx = -1;
+
+    for (let i = 1; i < Math.min(lines.length, 200); i++) {
+      const ln = lines[i].trim();
+      if (ln.startsWith('format ')) plyFormat = ln.slice(7).trim();
+      else if (ln.startsWith('element vertex ')) {
+        const n = Number(ln.slice(15).trim());
+        if (Number.isFinite(n) && n >= 0) vertexCount = Math.round(n);
+      } else if (ln.startsWith('element face ')) {
+        const n = Number(ln.slice(13).trim());
+        if (Number.isFinite(n) && n >= 0) faceCount = Math.round(n);
+      } else if (ln === 'end_header') {
+        headerEndIdx = i;
+        break;
+      }
+    }
+
+    let minX = Infinity, maxX = -Infinity;
+    let minY = Infinity, maxY = -Infinity;
+    let minZ = Infinity, maxZ = -Infinity;
+    let sampled = 0;
+    if (headerEndIdx >= 0 && plyFormat.startsWith('ascii')) {
+      const limit = Math.min(lines.length, headerEndIdx + 1 + vertexCount);
+      for (let i = headerEndIdx + 1; i < limit; i++) {
+        const parts = lines[i].trim().split(/\s+/);
+        if (parts.length < 3) continue;
+        const x = Number(parts[0]);
+        const y = Number(parts[1]);
+        const z = Number(parts[2]);
+        if (Number.isFinite(x) && Number.isFinite(y) && Number.isFinite(z)) {
+          if (x < minX) minX = x;
+          if (x > maxX) maxX = x;
+          if (y < minY) minY = y;
+          if (y > maxY) maxY = y;
+          if (z < minZ) minZ = z;
+          if (z > maxZ) maxZ = z;
+          sampled += 1;
+        }
+      }
+    }
+
+    const spanX = sampled > 0 && maxX > minX ? maxX - minX : null;
+    const spanY = sampled > 0 && maxY > minY ? maxY - minY : null;
+    const spanZ = sampled > 0 && maxZ > minZ ? maxZ - minZ : null;
+    return {
+      fileName: cleanName,
+      fileBytes: bytes.length,
+      format: 'PLY',
+      pointCount: vertexCount,
+      spanX,
+      spanY,
+      spanZ,
+      note: `Detected PLY (${plyFormat}): ${vertexCount} vertices, ${faceCount} faces.`,
+    };
+  }
+
+  // ASCII XYZ / PTS / ASC coordinate scan
+  const ext = fileName.toLowerCase();
+  const isTextExt = ext.endsWith('.xyz') || ext.endsWith('.pts') || ext.endsWith('.asc') || ext.endsWith('.txt');
+  let pts = 0;
+  let minX = Infinity, maxX = -Infinity;
+  let minY = Infinity, maxY = -Infinity;
+  let minZ = Infinity, maxZ = -Infinity;
+  let skippedPtsCountHeader = false;
+
+  for (let i = 0; i < lines.length; i++) {
+    const ln = lines[i].trim();
+    if (!ln || ln.startsWith('#') || ln.startsWith('//')) continue;
+    const parts = ln.split(/[\s,;]+/);
+    if (!skippedPtsCountHeader && pts === 0 && parts.length === 1 && /^\d+$/.test(parts[0])) {
+      skippedPtsCountHeader = true;
+      continue;
+    }
+    if (parts.length < 3) continue;
+    const x = Number(parts[0]);
+    const y = Number(parts[1]);
+    const z = Number(parts[2]);
+    if (Number.isFinite(x) && Number.isFinite(y) && Number.isFinite(z)) {
+      if (x < minX) minX = x;
+      if (x > maxX) maxX = x;
+      if (y < minY) minY = y;
+      if (y > maxY) maxY = y;
+      if (z < minZ) minZ = z;
+      if (z > maxZ) maxZ = z;
+      pts += 1;
+    } else if (!isTextExt && pts === 0) {
+      break;
+    }
+  }
+
+  if (pts >= 1) {
+    return {
+      fileName: cleanName,
+      fileBytes: bytes.length,
+      format: 'XYZ/PTS',
+      pointCount: pts,
+      spanX: maxX > minX ? maxX - minX : null,
+      spanY: maxY > minY ? maxY - minY : null,
+      spanZ: maxZ > minZ ? maxZ - minZ : null,
+      note: `Parsed ${pts} ASCII XYZ coordinates in-browser.`,
+    };
+  }
+
+  return {
+    fileName: cleanName,
+    fileBytes: bytes.length,
+    format: 'Unsupported',
+    pointCount: 0,
+    spanX: null,
+    spanY: null,
+    spanZ: null,
+    note: 'Select a valid .las, .ply, .xyz, .pts, or .asc point cloud file.',
+  };
 }
 
 function computeMeshBudget(
@@ -114,6 +288,7 @@ export default function OnlinePointCloudToMeshConverterClient() {
   const [rawPointsStr, setRawPointsStr] = useState('1000000');
   const [voxelMStr, setVoxelMStr] = useState('0.05');
   const [triFactorStr, setTriFactorStr] = useState('2');
+  const [preflight, setPreflight] = useState<LocalPointCloudPreflight | null>(null);
   const [copied, setCopied] = useState(false);
 
   const applyPreset = (p: MeshBudgetPreset) => {
@@ -127,6 +302,22 @@ export default function OnlinePointCloudToMeshConverterClient() {
 
   const resetDefaults = () => {
     applyPreset(PRESETS[0]);
+    setPreflight(null);
+  };
+
+  const handleLocalCloudUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    file.arrayBuffer().then((buf) => {
+      const info = inspectLocalPointCloud(file.name, buf);
+      setPreflight(info);
+      if (info.format !== 'Unsupported' && info.pointCount >= 1) {
+        setRawPointsStr(String(info.pointCount));
+        if (info.spanX && info.spanX > 0) setSpanXStr(String(Number(info.spanX.toFixed(4))));
+        if (info.spanY && info.spanY > 0) setSpanYStr(String(Number(info.spanY.toFixed(4))));
+        if (info.spanZ && info.spanZ > 0) setSpanZStr(String(Number(info.spanZ.toFixed(4))));
+      }
+    }).catch(() => {});
   };
 
   const evalRes = useMemo(
@@ -180,7 +371,7 @@ export default function OnlinePointCloudToMeshConverterClient() {
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm flex items-start gap-3">
         <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
         <div>
-          <span className="font-black">Voxel Density &amp; Binary STL File Size Estimator:</span> Evaluates volumetric point density, voxel resolution grid dimensions, surface triangle estimates, and exact Binary STL byte footprint (`84 + 50 * N_tri` bytes) prior to desktop Poisson / Ball-Pivoting surface reconstruction.
+          <span className="font-black">In-Browser Point Cloud Preflight &amp; Binary STL Estimator:</span> Reads local LAS, PLY, XYZ, PTS, or ASC point counts and bounding extents directly in your browser (`0 bytes uploaded`), computes volumetric point density and surface triangle estimates, and predicts exact Binary STL size (`84 + 50 * N_tri` bytes) prior to desktop meshing.
         </div>
       </div>
 
@@ -200,10 +391,39 @@ export default function OnlinePointCloudToMeshConverterClient() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-100 p-6 shadow-sm space-y-4">
-          <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-            <Box className="w-5 h-5 text-blue-600" />
-            <h2 className="text-lg font-black text-slate-900">Bounding Box &amp; Voxel Inputs</h2>
+          <div className="flex items-center justify-between gap-2 pb-2 border-b border-slate-100">
+            <div className="flex items-center gap-2">
+              <Box className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-black text-slate-900">Bounding Box &amp; File</h2>
+            </div>
+            <label className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-black cursor-pointer flex items-center gap-1.5">
+              <UploadCloud className="w-3.5 h-3.5" />
+              <span>Inspect Cloud</span>
+              <input
+                type="file"
+                accept=".las,.ply,.xyz,.pts,.asc,.txt"
+                data-testid="input-local-file"
+                className="hidden"
+                onChange={handleLocalCloudUpload}
+              />
+            </label>
           </div>
+
+          {preflight && (
+            <div
+              data-testid="out-file-preflight"
+              className={`p-3 rounded-2xl border text-xs space-y-1 ${
+                preflight.format === 'Unsupported'
+                  ? 'bg-rose-50 border-rose-200 text-rose-800'
+                  : 'bg-blue-50 border-blue-200 text-blue-900'
+              }`}
+            >
+              <div className="font-black">
+                {preflight.fileName} — {preflight.format} ({preflight.fileBytes} bytes)
+              </div>
+              <div className="font-medium">{preflight.note}</div>
+            </div>
+          )}
 
           <div className="grid grid-cols-3 gap-2">
             <div>
@@ -361,14 +581,24 @@ export default function OnlinePointCloudToMeshConverterClient() {
                   Per binary STL format layout: 80-byte header + 4-byte triangle count + 50 bytes per triangle (`84 + 50 * N_tri`). Surface voxel count approximates the bounding envelope surface area divided by `voxel^2`.
                 </span>
               </div>
-              <a
-                href="https://en.wikipedia.org/wiki/STL_(file_format)"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
-              >
-                Binary STL File Layout Specification (Wikipedia) <ExternalLink className="w-3 h-3" />
-              </a>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://en.wikipedia.org/wiki/STL_(file_format)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
+                >
+                  Binary STL File Layout Specification (Wikipedia) <ExternalLink className="w-3 h-3" />
+                </a>
+                <a
+                  href="https://en.wikipedia.org/wiki/PLY_(file_format)"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
+                >
+                  PLY Header Specification (Wikipedia) <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
             </div>
           </div>
 

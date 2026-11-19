@@ -92,8 +92,8 @@ async function verifyNegativeTerms(page, terms, label) {
 }
 
 async function assertZeroNumberInputs(main, label) {
-  const cnt = await main.locator('input[type="number"]').count();
-  assert.strictEqual(cnt, 0, `${label}: found ${cnt} <input type="number">`);
+  const cnt = await main.locator('input[type="number"], input[type="range"]').count();
+  assert.strictEqual(cnt, 0, `${label}: found ${cnt} <input type="number|range">`);
 }
 
 async function assertClipboardRejectSafe(page, main, label) {
@@ -153,6 +153,14 @@ async function runTests() {
 
     await main.locator('[data-testid="btn-reset"]').click();
     approx(await main.locator('[data-testid="out-tris"]').innerText(), 1152, `${label} reset gear`);
+
+    await main.locator('[data-testid="btn-yaw-inc"]').click();
+    assert.strictEqual(await main.locator('[data-testid="input-yaw"]').inputValue(), '51');
+    await main.locator('[data-testid="btn-pitch-dec"]').click();
+    assert.strictEqual(await main.locator('[data-testid="input-pitch"]').inputValue(), '15');
+    await main.locator('[data-testid="input-yaw"]').fill('45');
+    await assertNoNan(main, `${label} viewport rotation`);
+    await main.locator('[data-testid="btn-reset"]').click();
 
     const [dlStl] = await Promise.all([
       page.waitForEvent('download'),

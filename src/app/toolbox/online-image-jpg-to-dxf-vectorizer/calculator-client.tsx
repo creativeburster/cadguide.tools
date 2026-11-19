@@ -12,6 +12,7 @@ import {
   Info,
   RotateCcw,
   ShieldCheck,
+  UploadCloud,
 } from 'lucide-react';
 
 interface RasterPreset {
@@ -23,6 +24,16 @@ interface RasterPreset {
   scanDpi: string;
   refLinePx: string;
   refLineMm: string;
+}
+
+interface LocalRasterPreflight {
+  fileName: string;
+  fileBytes: number;
+  format: 'PNG' | 'JPEG' | 'BMP' | 'Unsupported';
+  widthPx: number;
+  heightPx: number;
+  dpi: number | null;
+  note: string;
 }
 
 const PRESETS: RasterPreset[] = [
@@ -57,6 +68,141 @@ function parsePositive(raw: string): number {
 
 function toSafeAscii(s: string): string {
   return s.replace(/[^\x20-\x7E\r\n\t]/g, '');
+}
+
+function inspectLocalRasterImage(fileName: string, buf: ArrayBuffer): LocalRasterPreflight {
+  const bytes = new Uint8Array(buf);
+  const view = new DataView(buf);
+  const cleanName = toSafeAscii(fileName).trim() || 'scan_image';
+
+  // PNG: 8-byte signature + IHDR + optional pHYs chunk
+  if (
+    bytes.length >= 33 &&
+    bytes[0] === 0x89 &&
+    bytes[1] === 0x50 &&
+    bytes[2] === 0x4e &&
+    bytes[3] === 0x47 &&
+    bytes[4] === 0x0d &&
+    bytes[5] === 0x0a &&
+    bytes[6] === 0x1a &&
+    bytes[7] === 0x0a &&
+    bytes[12] === 0x49 &&
+    bytes[13] === 0x48 &&
+    bytes[14] === 0x44 &&
+    bytes[15] === 0x52
+  ) {
+    const widthPx = view.getUint32(16, false);
+    const heightPx = view.getUint32(20, false);
+    let dpi: number | null = null;
+    let offset = 8;
+    while (offset + 12 <= bytes.length) {
+      const len = view.getUint32(offset, false);
+      const c0 = bytes[offset + 4];
+      const c1 = bytes[offset + 5];
+      const c2 = bytes[offset + 6];
+      const c3 = bytes[offset + 7];
+      // pHYs = 0x70 0x48 0x59 0x73
+      if (c0 === 0x70 && c1 === 0x48 && c2 === 0x59 && c3 === 0x73 && len === 9 && offset + 17 <= bytes.length) {
+        const xPpu = view.getUint32(offset + 8, false);
+        const unit = bytes[offset + 16];
+        if (unit === 1 && xPpu > 0) {
+          dpi = Math.round(xPpu * 0.0254);
+        }
+        break;
+      }
+      if (c0 === 0x49 && c1 === 0x45 && c2 === 0x4e && c3 === 0x44) break;
+      const next = offset + 12 + len;
+      if (next <= offset) break;
+      offset = next;
+    }
+    return {
+      fileName: cleanName,
+      fileBytes: bytes.length,
+      format: 'PNG',
+      widthPx,
+      heightPx,
+      dpi,
+      note: dpi ? `Read PNG IHDR (${widthPx} x ${heightPx} px) and pHYs header (${dpi} DPI).` : `Read PNG IHDR (${widthPx} x ${heightPx} px); no pHYs DPI chunk.`,
+    };
+  }
+
+  // JPEG: SOI (FF D8), APP0 JFIF DPI, and SOFn dimensions
+  if (bytes.length >= 4 && bytes[0] === 0xff && bytes[1] === 0xd8) {
+    let off = 2;
+    let widthPx = 0;
+    let heightPx = 0;
+    let dpi: number | null = null;
+    while (off + 4 <= bytes.length) {
+      if (bytes[off] !== 0xff) break;
+      while (off < bytes.length && bytes[off] === 0xff) off += 1;
+      if (off >= bytes.length) break;
+      const marker = bytes[off];
+      off += 1;
+      if (marker === 0xd9 || marker === 0xda) break;
+      if (marker === 0x01 || (marker >= 0xd0 && marker <= 0xd7)) continue;
+      if (off + 2 > bytes.length) break;
+      const segLen = view.getUint16(off, false);
+      if (segLen < 2 || off + segLen > bytes.length) break;
+      if (
+        marker === 0xe0 &&
+        segLen >= 14 &&
+        bytes[off + 2] === 0x4a &&
+        bytes[off + 3] === 0x46 &&
+        bytes[off + 4] === 0x49 &&
+        bytes[off + 5] === 0x46 &&
+        bytes[off + 6] === 0x00
+      ) {
+        const units = bytes[off + 9];
+        const xDens = view.getUint16(off + 10, false);
+        if (units === 1 && xDens > 0) dpi = xDens;
+        else if (units === 2 && xDens > 0) dpi = Math.round(xDens * 2.54);
+      } else if ((marker === 0xc0 || marker === 0xc1 || marker === 0xc2 || marker === 0xc3) && segLen >= 7) {
+        heightPx = view.getUint16(off + 3, false);
+        widthPx = view.getUint16(off + 5, false);
+      }
+      off += segLen;
+    }
+    if (widthPx > 0 && heightPx > 0) {
+      return {
+        fileName: cleanName,
+        fileBytes: bytes.length,
+        format: 'JPEG',
+        widthPx,
+        heightPx,
+        dpi,
+        note: dpi ? `Read JPEG SOF (${widthPx} x ${heightPx} px) and JFIF APP0 (${dpi} DPI).` : `Read JPEG SOF (${widthPx} x ${heightPx} px); no JFIF DPI tag.`,
+      };
+    }
+  }
+
+  // BMP: 'BM' header
+  if (bytes.length >= 42 && bytes[0] === 0x42 && bytes[1] === 0x4d) {
+    const widthPx = Math.abs(view.getInt32(18, true));
+    const heightPx = Math.abs(view.getInt32(22, true));
+    const xPpm = view.getInt32(38, true);
+    const dpi = xPpm > 0 ? Math.round(xPpm * 0.0254) : null;
+    if (widthPx > 0 && heightPx > 0) {
+      return {
+        fileName: cleanName,
+        fileBytes: bytes.length,
+        format: 'BMP',
+        widthPx,
+        heightPx,
+        dpi,
+        note: dpi ? `Read BMP DIB header (${widthPx} x ${heightPx} px, ${dpi} DPI).` : `Read BMP DIB header (${widthPx} x ${heightPx} px).`,
+      };
+    }
+  }
+
+  return {
+    fileName: cleanName,
+    fileBytes: bytes.length,
+    format: 'Unsupported',
+    widthPx: 0,
+    heightPx: 0,
+    dpi: null,
+    note: 'Select a valid PNG, JPEG, or BMP raster file to read dimensions and DPI locally.',
+  };
 }
 
 function computeCalibration(
@@ -127,6 +273,7 @@ export default function OnlineImageJpgToDxfVectorizerClient() {
   const [dpiStr, setDpiStr] = useState('300');
   const [refPxStr, setRefPxStr] = useState('1000');
   const [refMmStr, setRefMmStr] = useState('100');
+  const [preflight, setPreflight] = useState<LocalRasterPreflight | null>(null);
   const [copied, setCopied] = useState(false);
 
   const applyPreset = (p: RasterPreset) => {
@@ -140,6 +287,24 @@ export default function OnlineImageJpgToDxfVectorizerClient() {
 
   const resetDefaults = () => {
     applyPreset(PRESETS[0]);
+    setPreflight(null);
+  };
+
+  const handleLocalImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    file.arrayBuffer().then((buf) => {
+      const info = inspectLocalRasterImage(file.name, buf);
+      setPreflight(info);
+      if (info.format !== 'Unsupported' && info.widthPx > 0 && info.heightPx > 0) {
+        setImageFile(info.fileName);
+        setPxWStr(String(info.widthPx));
+        setPxHStr(String(info.heightPx));
+        if (info.dpi && info.dpi > 0) {
+          setDpiStr(String(info.dpi));
+        }
+      }
+    }).catch(() => {});
   };
 
   const evalRes = useMemo(
@@ -175,7 +340,7 @@ export default function OnlineImageJpgToDxfVectorizerClient() {
       <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 text-sm flex items-start gap-3">
         <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
         <div>
-          <span className="font-black">Raster-to-DXF Scale Calibration &amp; Reference Frame Generator:</span> Computes exact mm/px physical scale calibration from a known drawing dimension, builds a `1:1` DXF calibration frame + scale bar, and exports an AutoCAD `IMAGEATTACH` setup script (`0 bytes uploaded`). Automatic contour tracing of photographs requires desktop/vectorize software.
+          <span className="font-black">Local Raster Inspector &amp; DXF Calibration Generator:</span> Reads local PNG (`IHDR` / `pHYs`), JPEG (`SOF` / `JFIF`), or BMP dimensions and DPI metadata directly in your browser (`0 bytes uploaded`), computes exact mm/px scale calibration, and exports a `1:1` DXF calibration frame + AutoCAD `IMAGEATTACH` script. Automatic vector contour tracing executes in desktop CAD/rasterize tools.
         </div>
       </div>
 
@@ -195,10 +360,39 @@ export default function OnlineImageJpgToDxfVectorizerClient() {
 
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         <div className="lg:col-span-5 bg-white rounded-3xl border border-slate-100 p-6 shadow-sm space-y-4">
-          <div className="flex items-center gap-2 pb-2 border-b border-slate-100">
-            <ImageIcon className="w-5 h-5 text-blue-600" />
-            <h2 className="text-lg font-black text-slate-900">Raster Dimensions &amp; Reference</h2>
+          <div className="flex items-center justify-between gap-2 pb-2 border-b border-slate-100">
+            <div className="flex items-center gap-2">
+              <ImageIcon className="w-5 h-5 text-blue-600" />
+              <h2 className="text-lg font-black text-slate-900">Raster Dimensions &amp; File</h2>
+            </div>
+            <label className="px-3 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white text-xs font-black cursor-pointer flex items-center gap-1.5">
+              <UploadCloud className="w-3.5 h-3.5" />
+              <span>Inspect Image</span>
+              <input
+                type="file"
+                accept=".png,.jpg,.jpeg,.bmp"
+                data-testid="input-local-file"
+                className="hidden"
+                onChange={handleLocalImageUpload}
+              />
+            </label>
           </div>
+
+          {preflight && (
+            <div
+              data-testid="out-file-preflight"
+              className={`p-3 rounded-2xl border text-xs space-y-1 ${
+                preflight.format === 'Unsupported'
+                  ? 'bg-rose-50 border-rose-200 text-rose-800'
+                  : 'bg-blue-50 border-blue-200 text-blue-900'
+              }`}
+            >
+              <div className="font-black">
+                {preflight.fileName} — {preflight.format} ({preflight.fileBytes} bytes)
+              </div>
+              <div className="font-medium">{preflight.note}</div>
+            </div>
+          )}
 
           <div>
             <label className="text-xs font-bold text-slate-600 uppercase block mb-1">Image Filename</label>
@@ -367,14 +561,24 @@ export default function OnlineImageJpgToDxfVectorizerClient() {
                   Generates an AutoCAD `IMAGEATTACH` command macro sized to the calibrated physical width and a 1:1 millimeter DXF boundary reference frame.
                 </span>
               </div>
-              <a
-                href="https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core/files/GUID-0F75E36F-6138-424C-9510-5847CE1D8852.htm"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
-              >
-                AutoCAD 2025 IMAGEATTACH Help <ExternalLink className="w-3 h-3" />
-              </a>
+              <div className="flex flex-wrap gap-4">
+                <a
+                  href="https://help.autodesk.com/cloudhelp/2025/ENU/AutoCAD-Core/files/GUID-0F75E36F-6138-424C-9510-5847CE1D8852.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
+                >
+                  AutoCAD 2025 IMAGEATTACH Help <ExternalLink className="w-3 h-3" />
+                </a>
+                <a
+                  href="https://en.wikipedia.org/wiki/PNG"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1 font-bold text-blue-600 hover:underline"
+                >
+                  PNG IHDR &amp; pHYs Chunks (Wikipedia) <ExternalLink className="w-3 h-3" />
+                </a>
+              </div>
             </div>
           </div>
 
