@@ -13040,171 +13040,201 @@
   },
   "steel-beam-load-calculator": {
     "title": "Steel Beam Load Capacity Calculator",
-    "description": "Calculate allowable load and bending stress for steel beams.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "M_cap = 0.66·fy·Z • UDL: w = 8·M / L² • Point Load: P = 4·M / L (AISC 360 ASD Allowable Stress)",
+    "description": "Calculate simply supported flexural bending moment capacity, allowable uniform load (UDL), and midspan point load using user-editable safety factor Omega.",
+    "discipline": "Structural Steel Flexural Mechanics",
+    "standards": "Fundamental simply supported beam bending strength formulas (My = fy*Zx/1000, Ma = My/Omega, w = 8*Ma/L^2, P = 4*Ma/L)",
+    "cadContext": "Verify section modulus Zx and user safety factor Omega independently from lateral-torsional buckling and serviceability deflection limits.",
+    "formula": "My = fy*Zx/1000, Ma = My/Omega, w_udl = 8*Ma/L^2, P_point = 4*Ma/L",
     "inputs": [
       {
-        "label": "Section Modulus Z (cm3)",
+        "label": "Section Modulus Zx (cm3)",
         "val": "200"
       },
       {
-        "label": "Yield Stress (MPa)",
+        "label": "Yield Strength fy (MPa)",
         "val": "250"
       },
       {
-        "label": "Span (m)",
+        "label": "Simply Supported Span L (m)",
         "val": "5"
       },
       {
-        "label": "Load Type",
-        "val": "Uniform Distributed Load (UDL, kN/m)"
+        "label": "Safety Factor Omega (-)",
+        "val": "1.67"
       }
     ],
     "outputs": [
       {
-        "label": "Moment Capacity",
-        "val": "33.000 kNm"
+        "label": "Yield Moment My",
+        "val": "50.000 kN*m"
       },
       {
-        "label": "Allowable Distributed Load (w)",
-        "val": "10.560 kN/m"
+        "label": "Allowable Moment Ma",
+        "val": "29.940 kN*m"
+      },
+      {
+        "label": "Uniform Load w_udl",
+        "val": "9.581 kN/m"
+      },
+      {
+        "label": "Midspan Point Load P",
+        "val": "23.952 kN"
       }
     ]
   },
   "steel-grade-selector": {
     "title": "Steel Grade Strength Calculator",
-    "description": "Calculate yield and tensile strength for common steel grades.",
-    "discipline": "Engineering Metrology, SI/Imperial Unit Conversion & Applied Physics",
-    "standards": "NIST Special Publication 811 (Guide for the Use of the International System of Units), ISO 80000-1 (Quantities and Units), BIPM SI Brochure (9th Edition)",
-    "cadContext": "Maintain full double-precision floating-point accuracy during intermediate engineering calculations and apply rounding only to final drawing callouts per ASME Y14.5 / ISO 80000 rules.",
-    "formula": "Properties from grade lookup table",
+    "description": "Evaluate effective yield strength, allowable normal stress, and Von Mises shear stress across verified ASTM A36 and EN 10025 structural yield tiers.",
+    "discipline": "Structural Steel Material Strength & Allowable Stress",
+    "standards": "Wikipedia A36 steel (250 MPa < 8 in, 220 MPa > 8 in) and Structural steel yield strength tiers (235, 275, 355, 420, 460 MPa)",
+    "cadContext": "Apply temperature/thickness factor kt and project safety factor SF before verifying structural member utilization against applied stress.",
+    "formula": "Fy_eff = Fy*kt, sigma_allow = Fy_eff/SF, tau_allow = Fy_eff/(sqrt(3)*SF)",
     "inputs": [
       {
-        "label": "Steel Grade",
-        "val": "Q235 (GB/T 700 - fy=235 MPa, fu=375 MPa)"
+        "label": "Nominal Yield Strength Fy (MPa)",
+        "val": "250"
       },
       {
-        "label": "Thickness (mm)",
-        "val": "16"
+        "label": "Temp / Thickness Factor kt (-)",
+        "val": "1.0"
+      },
+      {
+        "label": "Safety Factor SF (-)",
+        "val": "1.5"
+      },
+      {
+        "label": "Applied Design Stress (MPa)",
+        "val": "150"
       }
     ],
     "outputs": [
       {
-        "label": "Yield Strength",
-        "val": "235.00 MPa"
+        "label": "Effective Yield Fy_eff",
+        "val": "250.00 MPa"
       },
       {
-        "label": "Tensile Strength",
-        "val": "375.00 MPa"
+        "label": "Allowable Normal Stress",
+        "val": "166.67 MPa"
       },
       {
-        "label": "Elongation",
-        "val": "26.000 %"
+        "label": "Allowable Shear Stress",
+        "val": "96.225 MPa"
+      },
+      {
+        "label": "Stress Utilization",
+        "val": "90.00% (Adequate)"
       }
     ]
   },
   "steel-section-properties-reference": {
-    "title": "Steel Section Properties Reference",
-    "description": "European (IPE, HEA, HEB) and British (UB) steel section properties: dimensions, area, weight, moment of inertia, and section modulus.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "Standardized parametric evaluation for Steel Section Properties Reference",
-    "inputs": [],
-    "outputs": []
-  },
-  "steel-section-weight-calculator": {
-    "title": "Steel Section Weight Calculator",
-    "description": "Calculate per-meter weight, total weight, and paint surface area for steel I-beams, angles, channels, tubes, and flat bars.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "W_linear = A_cross_section × ρ_material • TotalMass = W_linear × Length × Quantity (EN 10025 / ASTM A6)",
+    "title": "DIN 1025 Steel Section Properties Reference (I-Beams, HE-A, HE-B)",
+    "description": "Verified 42-profile DIN 1025 hot-rolled steel section database covering Normal Flange I-Beams (I 80-I 500), HE-A (100A-340A), and HE-B (100B-340B).",
+    "discipline": "DIN 1025 Hot-Rolled Structural Steel Profiles",
+    "standards": "Engineering ToolBox verified tables: DIN 1025 Normal Flange I-Beams (d_1317.html), HE-A (d_1313.html), HE-B (d_1314.html)",
+    "cadContext": "Filter across DIN 1025 I-Beams, HE-A, and HE-B families to export verified dimensions, cross-sectional area, unit mass, Ix, Iy, Sx, and Sy values.",
+    "formula": "Direct tabular lookup across 42 verified DIN 1025 structural profiles (16 I-Beams, 13 HE-A, 13 HE-B)",
     "inputs": [
       {
-        "label": "Flange Width B (mm)",
-        "val": "100"
+        "label": "Series Filter",
+        "val": "ALL"
       },
       {
-        "label": "Web Thickness tw (mm)",
-        "val": "5.7"
-      },
-      {
-        "label": "Flange Thickness tf (mm)",
-        "val": "8.5"
-      },
-      {
-        "label": "Length (m)",
-        "val": "6"
-      },
-      {
-        "label": "Quantity",
-        "val": "1"
+        "label": "Search Query",
+        "val": ""
       }
     ],
     "outputs": [
       {
-        "label": "Weight per Meter",
-        "val": "21.53 kg/m"
+        "label": "Visible DIN 1025 Profiles",
+        "val": "42 sections"
+      }
+    ]
+  },
+  "steel-section-weight-calculator": {
+    "title": "Steel Section Weight & Surface Area Calculator",
+    "description": "Calculate unit weight, total mass, paint surface area, and BOM cost across 8 metal profile geometries with Engineering ToolBox alloy densities.",
+    "discipline": "Metal Fabrication Mass, Surface Area & BOM Costing",
+    "standards": "Engineering ToolBox Metal Alloys Densities (d_50.html: Steel 7850, Stainless 7480-8000, Aluminum 2712, Titanium 4500 kg/m3)",
+    "cadContext": "Accumulate multi-shape profiles into a synchronized BOM costing table and export pure-ASCII CSV with 11-column aligned TOTAL summary.",
+    "formula": "m_unit = (A_mm2/1e6)*rho, S_per_m = perimeter_mm/1000 (I-Beam/Channel: 4*b + 2*h - 2*tw)",
+    "inputs": [
+      {
+        "label": "Profile",
+        "val": "I-Beam 200x100x5.7x8.5"
       },
       {
+        "label": "Length (m) x Qty",
+        "val": "6 m x 1"
+      },
+      {
+        "label": "Steel Density (kg/m3)",
+        "val": "7850"
+      }
+    ],
+    "outputs": [
+      {
         "label": "Cross-Section Area",
-        "val": "2743 mm²"
+        "val": "2743.1 mm2"
+      },
+      {
+        "label": "Weight per Meter",
+        "val": "21.533 kg/m"
+      },
+      {
+        "label": "Total Weight",
+        "val": "129.20 kg"
       },
       {
         "label": "Surface per Meter",
-        "val": "1.1546 m²/m"
+        "val": "0.7886 m2/m"
       },
       {
         "label": "Total Surface Area",
-        "val": "6.933 m²"
+        "val": "4.737 m2"
+      },
+      {
+        "label": "Est. Material Cost",
+        "val": "$161.50"
       }
     ]
   },
   "steel-weight-calculator": {
     "title": "Steel Section Weight Calculator",
-    "description": "Calculate weight of steel sections (I-beam, channel, angle, tube) from dimensions.",
-    "discipline": "Structural Steel, Beam Mechanics & Welding Engineering",
-    "standards": "AISC 360-22 (Specification for Structural Steel Buildings), Eurocode 3 (EN 1993-1-1 & EN 1993-1-8), AWS D1.1 / ISO 5817 (Structural Welding Code), ASME B30",
-    "cadContext": "Confirm that member end-connection rotational stiffness (pinned, semi-rigid, or fixed moment connections) modeled in your structural BIM/CAD framing plan matches the effective length factor (K) assumed in calculation.",
-    "formula": "W = V * 7850 kg/m3",
+    "description": "Calculate cross-sectional area, unit weight per meter, and total section weight for steel I-beams, rectangular tubes, angles, and plates.",
+    "discipline": "Structural Steel Mass & Geometry",
+    "standards": "Engineering ToolBox Metal Alloys Densities (d_50.html: Steel 7850 kg/m3, Aluminum 2712 kg/m3, Titanium 4500 kg/m3)",
+    "cadContext": "Compute linear unit weight (kg/m) and total beam or hollow section mass before releasing fabrication cut lists.",
+    "formula": "w = (A_mm2 / 1e6) * rho [kg/m], W = w * L [kg]",
     "inputs": [
       {
-        "label": "Section Type",
-        "val": "I-Beam / Wide Flange"
+        "label": "Shape",
+        "val": "ibeam"
       },
       {
-        "label": "Height (mm)",
-        "val": "200"
+        "label": "Dimensions H x B x tw x tf (mm)",
+        "val": "200 x 100 x 8 x 10"
       },
       {
-        "label": "Flange Width (mm)",
-        "val": "100"
-      },
-      {
-        "label": "Web Thick (mm)",
-        "val": "8"
-      },
-      {
-        "label": "Flange Thick (mm)",
-        "val": "10"
-      },
-      {
-        "label": "Length (m)",
+        "label": "Length L (m)",
         "val": "6"
+      },
+      {
+        "label": "Density (kg/m3)",
+        "val": "7850"
       }
     ],
     "outputs": [
       {
-        "label": "Unit Weight",
-        "val": "27.004 kg/m"
+        "label": "Cross-Section Area",
+        "val": "34.40 cm2"
       },
       {
-        "label": "Total Weight",
-        "val": "162.02 kg"
+        "label": "Unit Weight",
+        "val": "27.0040 kg/m"
+      },
+      {
+        "label": "Total Section Weight",
+        "val": "162.024 kg"
       }
     ]
   },

@@ -1372,14 +1372,14 @@ export const TOOLBOX_DATA: ToolboxItem[] = [
   },
   {
     slug: 'steel-section-properties-reference',
-    title: 'Standard Steel Section Properties Reference (IPE/HEA/HEB/UB/UC)',
-    description: 'European (IPE, HEA, HEB, UPE) and British (UB, UC) steel section properties: dimensions, area, weight, moment of inertia, and section modulus.',
-    detailDesc: 'Searchable steel section properties database: European IPE beams (80-600), HEA/HEB wide flange sections (100-400), British Universal Beams (203-610) and Columns (152-356), and channel sections (UPE/PFC). Includes cross-sectional area, unit weight, moment of inertia (Iy), and section modulus (Wy).',
+    title: 'DIN 1025 Steel Section Properties Reference (I-Beams, HE-A, HE-B)',
+    description: 'Verified DIN 1025 structural steel section properties: Normal Flange I-Beams (I 80-I 500), HE-A (100A-340A), and HE-B (100B-340B).',
+    detailDesc: 'Searchable 42-profile DIN 1025 steel section properties reference covering Normal Flange I-Beams (I 80 to I 500), Wide Flange HE-A (100A to 340A), and HE-B (100B to 340B): dimensions, area, unit weight, Ix, Iy, Sx, and Sy.',
     category: 'cheatsheet',
     status: 'released',
     releasedDate: '2026-07-15',
     origin: 'native',
-    keywords: ['steel section properties', 'ipe beam', 'hea heb section', 'universal beam', 'universal column', 'moment of inertia', 'section modulus', 'steel profile', 'eurocode 3', 'hot rolled steel', 'ub uc section']
+    keywords: ['steel section properties', 'din 1025', 'i beam', 'hea heb section', 'moment of inertia', 'section modulus', 'hot rolled steel']
   },
   {
     slug: 'cnc-speeds-feeds-reference',

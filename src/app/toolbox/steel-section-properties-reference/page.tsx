@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import SteelSectionClient from './calculator-client';
 
 export const metadata: Metadata = pageMetadata({
-  title: 'Standard Steel Section Properties Reference (IPE/HEA/UB) | CADGuide.tools',
-  description: 'European (IPE, HEA, HEB) and British (UB) steel section properties: dimensions, area, weight, moment of inertia, and section modulus.',
+  title: 'DIN 1025 Steel Section Properties Reference (I-Beams, HE-A, HE-B) | CADGuide.tools',
+  description: 'Verified DIN 1025 hot-rolled steel section properties: Normal Flange I-Beams (I 80-I 500), HE-A (100A-340A), and HE-B (100B-340B) dimensions, area, unit weight, Ix, Iy, Sx, Sy.',
   path: '/toolbox/steel-section-properties-reference',
 });
 
@@ -29,14 +29,13 @@ export default function SteelSectionPage() {
           <div className="max-w-[1200px] mx-auto px-6 md:px-12">
             <div className="flex flex-col items-center text-center">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-base font-black bg-slate-400/10 text-slate-300 border border-slate-400/20 mb-5 uppercase tracking-[0.15em]">
-                Eurocode 3 · EN 10025
+                DIN 1025 Structural Profiles
               </div>
               <h1 className="text-4xl md:text-5xl font-black mb-4 tracking-tight leading-tight">
                 Steel Section <span className="text-slate-300">Properties</span> Reference
               </h1>
               <p className="text-xl md:text-lg text-slate-300 leading-relaxed max-w-2xl font-medium">
-                European (IPE, HEA, HEB, UPE) and British (UB, UC) hot-rolled steel sections —
-                dimensions, cross-sectional area, unit weight, moment of inertia (I), and section modulus (W).
+                Verified DIN 1025 Normal Flange I-Beams (I 80&ndash;I 500), Wide Flange HE-A (100A&ndash;340A), and HE-B (100B&ndash;340B) sections &mdash; dimensions, area, unit mass, Ix, Iy, Sx, and Sy.
               </p>
             </div>
           </div>
@@ -45,23 +44,19 @@ export default function SteelSectionPage() {
         {/* Section type guide — unique to this page */}
         <section className="bg-white border-b border-slate-100 py-6 print:hidden">
           <div className="max-w-[1200px] mx-auto px-6 md:px-12">
-            <h2 className="text-lg font-black text-slate-400 uppercase tracking-wider mb-3">Section Families</h2>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 text-lg">
+            <h2 className="text-lg font-black text-slate-400 uppercase tracking-wider mb-3">Verified Section Families</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-lg">
               <div className="bg-slate-50 rounded-xl border border-slate-100 p-3">
-                <div className="font-black text-slate-800 text-base uppercase mb-1">IPE</div>
-                <div className="text-slate-500 font-medium">European I-beams (parallel flanges)</div>
+                <div className="font-black text-slate-800 text-base uppercase mb-1">DIN 1025 I-Beams</div>
+                <div className="text-slate-500 font-medium">Normal flange I-sections (I 80 to I 500, 16 sizes)</div>
               </div>
               <div className="bg-slate-50 rounded-xl border border-slate-100 p-3">
-                <div className="font-black text-slate-800 text-base uppercase mb-1">HEA / HEB</div>
-                <div className="text-slate-500 font-medium">European H-sections (wide flange)</div>
+                <div className="font-black text-slate-800 text-base uppercase mb-1">DIN 1025 HE-A</div>
+                <div className="text-slate-500 font-medium">Wide flange HE-A beams (100A to 340A, 13 sizes)</div>
               </div>
               <div className="bg-slate-50 rounded-xl border border-slate-100 p-3">
-                <div className="font-black text-slate-800 text-base uppercase mb-1">UB / UC</div>
-                <div className="text-slate-500 font-medium">British Universal Beams / Columns</div>
-              </div>
-              <div className="bg-slate-50 rounded-xl border border-slate-100 p-3">
-                <div className="font-black text-slate-800 text-base uppercase mb-1">UPE / PFC</div>
-                <div className="text-slate-500 font-medium">European / British channels</div>
+                <div className="font-black text-slate-800 text-base uppercase mb-1">DIN 1025 HE-B</div>
+                <div className="text-slate-500 font-medium">Wide flange HE-B beams (100B to 340B, 13 sizes)</div>
               </div>
             </div>
           </div>
